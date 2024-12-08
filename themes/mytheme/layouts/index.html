@@ -1,0 +1,71 @@
+{{ define "main" }}
+<div class="page-content">
+    <nav class="navbar">
+        <div class="nav-inner">
+            <img src="{{ "images/logo.png" | relURL }}" alt="Logo" class="logo">
+            <ul>
+                <li><a href="https://www.instagram.com/lewis_a_connolly/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="{{ "/about/" | relURL }}">About Me</a></li>
+                <li><a href="{{ "/contact" | relURL }}">Contact</a></li>
+                <li><a href="https://www.youtube.com/@AdventureswithLewis" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link">
+                <img src="{{ "images/buybeer.png" | relURL }}" alt="Buy Me a Beer" class="buy-coffee">
+            </a>
+        </div>
+    </nav>
+
+    <section class="intro">
+        <p>This is the website of Lewis Connolly. I write about meaning, philosophy, spirituality, history, and psychology. I’m particularly interested in belief, because people do not act on truths; it’s their beliefs that move them.</p>
+    </section>
+
+    <div class="content-grid">
+        <div class="content-section">
+            <h2>NEWEST</h2>
+            <ul>
+                {{ range first 11 .Site.RegularPages.ByDate.Reverse }}
+                  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>POPULAR</h2>
+            <ul>
+                <li><a href="{{ "/posts/a-guide-to-active-imagination" | relURL }}">A Guide to Active Imagination</a></li>
+                <li><a href="{{ "/posts/reflecting-on-william-james" | relURL }}">Reflecting on William James</a></li>
+                <li><a href="{{ "/posts/cain-and-abel" | relURL }}">Cain & Abel</a></li>
+                <li><a href="{{ "/posts/seneca-and-nero" | relURL }}">Seneca & Nero</a></li>
+                <li><a href="{{ "/posts/britannia-marianne-and-columbia" | relURL }}">Britannia, Marianne, & Columbia</a></li>
+                <li><a href="{{ "/posts/the-giving-tree" | relURL }}">The Giving Tree</a></li>
+                <li><a href="{{ "/posts/third-sunday-of-advent-bodhi-sunday" | relURL }}">Third Sunday of Advent Bodhi Sunday</a></li>
+                <li><a href="{{ "/posts/philip-and-the-eunuch" | relURL }}">Philip and the Eunuch</a></li>
+                <li><a href="{{ "/posts/unitarians-think-quaker" | relURL }}">Unitarians Think Quaker</a></li>
+                <li><a href="{{ "/posts/alchemy-of-the-soul" | relURL }}">Alchemy of the Soul</a></li>
+                <li><a href="{{ "/posts/the-fool" | relURL }}">The Fool</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>OLDIES</h2>
+            <ul>
+                <li><a href="{{ "/posts/wotan-dormant-in-the-wood" | relURL }}">Wotan Dormant in the Wood</a></li>
+                <li><a href="{{ "/posts/algernon-blackwood-life-and-works" | relURL }}">Algernon Blackwood Life & Works</a></li>
+                <li><a href="{{ "/posts/the-alchemists-beaker" | relURL }}">The Alchemist's Beaker</a></li>
+                <li><a href="{{ "/posts/the-green-snake-and-the-beautiful-lily" | relURL }}">The Green Snake and the Beautiful Lily</a></li>
+                <li><a href="{{ "/posts/blavatsky-emerson-and-the-tree-of-knowledge" | relURL }}">Blavatsky, Emerson, and The Tree of Knowledge</a></li>
+                <li><a href="{{ "/posts/the-scythe-of-saturn" | relURL }}">The Scythe of Saturn</a></li>
+                <li><a href="{{ "/posts/radical-orthodoxy-argumentum-ad-absurdum" | relURL }}">Radical Orthodoxy argumentum ad absurdum</a></li>
+                <li><a href="{{ "/posts/a-phalanstery" | relURL }}">A Phalanstery</a></li>
+                <li><a href="{{ "/posts/pale-fire-lunar-light" | relURL }}">Pale Fire Lunar Light</a></li>
+                <li><a href="{{ "/posts/searching-in-the-rye" | relURL }}">Searching in the Rye</a></li>
+                <li><a href="{{ "/posts/what-christian-non-realism-means-to-me" | relURL }}">What Christian Non-Realism means to me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Lewis Connolly. 2015 - 2024 All Rights Reserved ┃ Copyright</p>
+    </footer>
+</div>
+{{ end }}

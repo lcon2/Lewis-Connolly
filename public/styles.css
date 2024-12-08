@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('/fonts/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Font Settings */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'EBGaramond', serif;
+    color: #eee;
+    background: #151515;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Universal Content Padding */
+.page-content, .about-content {
+    padding: 0 5%;
+}
+
+@media (min-width: 768px) {
+    .page-content, .about-content {
+        padding: 0 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-content, .about-content {
+        padding: 0 20%;
+    }
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #151515;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.logo {
+    height: 70px;
+    display: inline-block;
+}
+
+/* Nav Links */
+.nav-inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-inner ul li a {
+    border: 1px dotted #ccc;
+    padding: 0.5rem;
+    color: #eee;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Buy Me a Beer Link */
+.buy-coffee-link {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.buy-coffee {
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+    vertical-align: middle;
+}
+
+.buy-coffee:hover {
+    transform: scale(1.1);
+}
+
+/* Intro Section */
+.intro {
+    padding: 2rem 0;
+    background: none;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    background: none;
+}
+
+/* Section Headings */
+.content-section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #eee;
+    border-bottom: 1px dotted #666;
+    padding-bottom: 0.2rem;
+}
+
+/* Post Links */
+.content-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-section li {
+    margin: 0.5rem 0;
+}
+
+.content-section a {
+    color: #eee;
+    text-decoration: none;
+    border-bottom: 1px dotted #666;
+}
+
+.content-section a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-top: 1px dotted #666;
+    background: none;
+}
+
+/* Top Logo Styling */
+.top-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.logo-top {
+    width: 90px; /* Adjusted size for smaller logo */
+    display: inline-block;
+}
+
+/* About Page Specific Styling */
+.logo-small {
+    display: block;
+    margin: 20px auto;
+    width: 40px; /* Smaller logo size */
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    margin-top: 40px;
+}
+
+.about-content p, .about-content ul {
+    margin: 20px 0;
+}
+
+blockquote {
+    border-left: 4px solid #f0f0f0;
+    padding-left: 15px;
+    font-style: italic;
+    margin: 20px 0;
+}
