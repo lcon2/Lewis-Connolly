@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lewis Connolly</title>
-    <link>http://localhost:54955/posts/</link>
-    <description>Recent content in Posts on Lewis Connolly</description>
+    <title>Lewis Connolly</title>
+    <link>http://localhost:54955/</link>
+    <description>Recent content on Lewis Connolly</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:54955/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:54955/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sunk Cost, the Meaning Crisis, &amp; Taste</title>
       <link>http://localhost:54955/posts/sunk-cost-the-meaning-crisis-and-taste/</link>
@@ -238,6 +238,20 @@
       <pubDate>Sat, 06 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://localhost:54955/posts/what-christian-non-realism-means-to-me/</guid>
       <description>&lt;p&gt;Christian non-realism is essentially an approach to one’s Christian faith that interprets the ‘magical’ aspects of Christianity as metaphor. Christian non-realists reject all the supernatural elements of the faith and do not believe in an objective being or thing called God. The word ‘God’ is used in a plethora of different ways but never to describe a force beyond the laws of nature. God is not a thing or a being, but rather an experience—an experience of the subjectively impossible being actualized into our lives, an experience of finding hope in hopelessness. It is a word that articulates something of the quality of sacred space and somehow describes something beyond words.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:54955/about/</link>
+      <pubDate>Thu, 07 Dec 2000 00:00:00 +0000</pubDate>
+      <guid>http://localhost:54955/about/</guid>
+      <description>&lt;h2 id=&#34;quotes&#34;&gt;Quotes&lt;/h2&gt;&#xA;&lt;img src=&#34;http://localhost:54955/images/logo.png&#34; alt=&#34;Logo Test&#34; style=&#34;width: 100px; display: block; margin: 20px auto;&#34;&gt;&#xD;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&amp;rdquo;&lt;br&gt;&#xA;– Ralph Waldo Emerson&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Do I contradict myself? Very well, then I contradict myself, I am large, I contain multitudes.&amp;rdquo;&lt;br&gt;&#xA;– Walt Whitman&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines. With consistency a great soul has simply nothing to do…&amp;rdquo;&lt;br&gt;&#xA;– Ralph Waldo Emerson&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:54955/contact/</link>
+      <pubDate>Thu, 07 Dec 2000 00:00:00 +0000</pubDate>
+      <guid>http://localhost:54955/contact/</guid>
+      <description>&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;Feel free to reach out! Here’s how you can contact me:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:lewisconnolly88@gmail.com&#34;&gt;lewisconnolly88@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Instagram:&lt;/strong&gt; &lt;a href=&#34;https://www.instagram.com/lewis_a_connolly/&#34;&gt;@lewis_a_connolly&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;YouTube:&lt;/strong&gt; &lt;a href=&#34;https://www.youtube.com/@AdventureswithLewis&#34;&gt;Adventures with Lewis&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
