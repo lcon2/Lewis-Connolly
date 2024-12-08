@@ -1,0 +1,9 @@
+baseURL = "http://localhost:49434/"
+languageCode = "en-us"
+title = "Lewis Connolly"
+theme = "mytheme"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
