@@ -1,5 +1,5 @@
 ---
-title: "Wotan: Dormant in the Wood"
+title: "Wotan Dormant in the Wood"
 date: 2021-12-06
 draft: false
 ---
