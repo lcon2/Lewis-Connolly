@@ -157,7 +157,7 @@ body {
 .post article {
     text-align: justify; /* Justifies the blog content for a cleaner look */
     margin: 20px auto; /* Centers the article with consistent spacing */
-    max-width: 800px; /* Limits the width for readability */
+    max-width: 900px; /* Limits the width for readability */
     padding: 0 60px; /* Adds thick padding on the left and right */
     line-height: 1.8; /* Improves readability */
     font-size: 1.1em; /* Slightly increases font size for better legibility */
