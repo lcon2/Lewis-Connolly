@@ -37,3 +37,12 @@ footer {
     margin: 20px;
     font-size: 0.8em;
 }
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}

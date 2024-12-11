@@ -8,8 +8,11 @@
 </head>
 <body>
     <header>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
+            </a>
+        </div>
     </header>
     <main>
         <article>
