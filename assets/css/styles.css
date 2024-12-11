@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+header {
+    text-align: center;
+    margin: 20px;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+section {
+    width: 30%;
+}
+h2 {
+    border-bottom: 1px solid #fff;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin: 5px 0;
+}
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul li a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    margin: 20px;
+    font-size: 0.8em;
+}
