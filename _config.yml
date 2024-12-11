@@ -10,7 +10,7 @@ description: >-
   This is the website of Lewis Connolly. I write about meaning, philosophy,
   spirituality, history, and psychology. I’m particularly interested in belief,
   because people do not act on truths; it’s their beliefs that move them.
-baseurl: "" # Leave empty if your site is hosted at the root of your domain
+baseurl: "ttps://lewisconnolly.com" # Leave empty if your site is hosted at the root of your domain
 url: "" # Base URL, e.g., http://example.com
 
 # Social media
