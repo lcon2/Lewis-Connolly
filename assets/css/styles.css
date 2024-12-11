@@ -37,12 +37,17 @@ footer {
     margin: 20px;
     font-size: 0.8em;
 }
-.logo {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.logo img {
-    max-width: 200px;
-    height: auto;
-}
+    .logo {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .logo img {
+        max-width: 80px; /* Small logo size */
+        height: auto;     /* Maintain aspect ratio */
+        transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+    
+    .logo img:hover {
+        transform: scale(1.1); /* Slightly increase size on hover */
+    }
