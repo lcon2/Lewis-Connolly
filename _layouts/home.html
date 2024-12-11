@@ -6,37 +6,73 @@
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body>
-    <header>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
-    </header>
-    <main>
-        <section class="newest">
-            <h2>Newest</h2>
-            <ul>
-                {% for post in site.posts %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
+<body class="home">
+    <nav class="navbar">
+        <!-- Wrapper for Logo and Navigation Menu -->
+        <div class="navbar-content">
+            <!-- Logo -->
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-menu">
+                <li><a href="https://www.instagram.com/lewis_a_connolly/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
+                <li><a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li><a href="https://www.youtube.com/@AdventureswithLewis" target="_blank" rel="noopener noreferrer">YouTube</a></li>
             </ul>
-        </section>
-        <section class="popular">
-            <h2>Popular</h2>
-            <ul>
-                <li><a href="#">A Guide to Active Imagination</a></li>
-                <li><a href="#">Reflecting on William James</a></li>
-            </ul>
-        </section>
-        <section class="oldies">
-            <h2>Oldies</h2>
-            <ul>
-                <li><a href="#">Wotan Dormant in the Wood</a></li>
-                <li><a href="#">The Alchemist's Beaker</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-    </footer>
+        </div>
+
+        <!-- Right Section (Buy Me a Coffee) -->
+        <div class="navbar-right">
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link">
+                <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
+
+<!-- Introduction Section -->
+<section class="intro">
+    <p>  This is the website of Lewis Connolly. I write about meaning, philosophy, spirituality, history, and psychology. I’m particularly interested in belief, because people do not act on truths; it’s their beliefs that move them.</p>
+</section>
+
+<!-- Content Grid -->
+<div class="content-grid">
+    <!-- Newest Section -->
+    <div class="content-section">
+        <h2>Newest</h2>
+        <ul>
+            {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Popular Section -->
+    <div class="content-section">
+        <h2>Popular</h2>
+        <ul>
+            <li><a href="#">A Guide to Active Imagination</a></li>
+            <li><a href="#">Reflecting on William James</a></li>
+        </ul>
+    </div>
+
+    <!-- Oldies Section -->
+    <div class="content-section">
+        <h2>Oldies</h2>
+        <ul>
+            <li><a href="#">Wotan Dormant in the Wood</a></li>
+            <li><a href="#">The Alchemist's Beaker</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+</footer>
 </body>
 </html>
