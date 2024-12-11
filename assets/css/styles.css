@@ -160,37 +160,3 @@ footer {
     font-size: 0.9em;
     color: #a0a0a0;
 }
-
-/* Miscellaneous Pages (About and Contact) */
-.misc .logo img {
-    display: block;
-    margin: 0 auto;
-    max-width: 80px;
-    height: auto;
-}
-
-.misc .about-content {
-    max-width: 800px;
-    margin: 20px auto;
-    line-height: 1.8;
-    font-size: 1.1em;
-    color: #f0f0f0;
-}
-
-.misc blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    padding-left: 20px;
-    border-left: 3px solid #f0f0f0;
-    color: #dcdcdc;
-}
-
-.misc ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.misc ul li {
-    margin: 10px 0;
-}
