@@ -81,9 +81,10 @@ body {
 /* Intro Section */
 .intro {
     margin: 20px auto;
-    font-size: 1.3em; /* Matches the navigation menu font size */
+    font-size: 1.2em;
     line-height: 1.6;
     max-width: 800px;
+    text-align: center; /* Centers the text */
 }
 
 /* Content Grid */
@@ -94,7 +95,7 @@ body {
     margin: 40px auto;
     padding: 0 20px;
     max-width: 1200px;
-    font-size: 1.3em; /* Matches the font size across the homepage */
+    font-size: 1.2em; /* Matches the font size across the homepage */
 }
 
 .content-section {
@@ -104,7 +105,7 @@ body {
 }
 
 .content-section h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     border-bottom: 2px solid #f0f0f0;
     margin-bottom: 10px;
     padding-bottom: 5px;
