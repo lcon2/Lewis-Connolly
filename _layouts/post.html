@@ -6,6 +6,11 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
+<meta property="og:title" content="{{ page.title | escape }}" />
+<meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ page.og_image | absolute_url }}" />
+<meta property="og:type" content="article" />
 <body class="post">
     <header>
         <div class="logo">
