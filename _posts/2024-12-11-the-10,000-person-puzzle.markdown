@@ -8,12 +8,7 @@ og_image: /assets/images/gameart.png
 
 <img src="{{ '/assets/images/gameart.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
-<div class="dropcap-container">
-    <img src="{{ '/assets/images/S.png' | relative_url }}" alt="Dropcap S" class="dropcap">
-    <p>
-        *ilo* (2023) is a great series; it is set in a seemingly post-apocalyptic world in which 10,000 people live in a ‘silo’ or underground vault. The silo is entirely self-sustaining, across its 144 floors everything is covered, from food to electricity production, to maintenance, medical care, and security, to anything else you can think of, anything which would be necessary to keep the population self-sustained. Through carefully monitoring and sanctioning of childbearing this 10,000-population number is kept static.
-    </p>
-</div>
+*Silo* (2023) is a great series; it is set in a seemingly post-apocalyptic world in which 10,000 people live in a ‘silo’ or underground vault. The silo is entirely self-sustaining, across its 144 floors everything is covered, from food to electricity production, to maintenance, medical care, and security, to anything else you can think of, anything which would be necessary to keep the population self-sustained. Through carefully monitoring and sanctioning of childbearing this 10,000-population number is kept static.
 
 This got me thinking about how difficult it would be to maintain a stable population within a closed system. As we can see from population statistics, childbearing from one generation to the next is not at all stable. In the United States, women are having on average 1.62 children; this number has halved since the early 1960s. The replacement rate is 2.1; that is the number to replace the father and the mother, with the .1 accounting for child mortality, women who cannot reproduce, or women who die before they do so. As such, if a woman has fewer than 2.1 children, they are contributing to population decline.
 
