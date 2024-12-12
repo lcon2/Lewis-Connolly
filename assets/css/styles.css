@@ -133,6 +133,29 @@ body {
     border-bottom-color: #ff9933;
 }
 
+/* Drop Cap Container */
+.dropcap-container {
+    position: relative; /* Allows positioning of the drop cap relative to the paragraph */
+    text-align: justify; /* Ensures justified text alignment for the paragraph */
+}
+
+/* Drop Cap Image */
+.dropcap {
+    position: absolute; /* Position the image relative to the container */
+    top: 0; /* Align with the top of the container */
+    right: 10px; /* Add some space from the paragraph's right edge */
+    width: 80px; /* Adjust the size of the drop cap */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure the drop cap appears above the paragraph */
+}
+
+/* Paragraph Text Inside Drop Cap Container */
+.dropcap-container p {
+    margin: 0; /* Remove extra margin for consistent spacing */
+    padding: 10px 20px; /* Add padding for better readability */
+}
+
+
 /* Blog Post-Specific Styles */
 .post .logo img {
     display: block; /* Ensures it behaves like a block-level element */
