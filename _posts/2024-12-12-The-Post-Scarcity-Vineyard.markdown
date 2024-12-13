@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The 10,000-Person Puzzle"
-date: 2024-12-11
+title: "The Post-Scarcity Vineyard"
+date: 2024-12-12
 categories:
 og_image: /assets/images/meditation.png
 ---
