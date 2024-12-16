@@ -2,6 +2,8 @@
 layout: post
 title: "Blavatsky, Emerson, and The Tree of Knowledge"
 date: 2019-04-08
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

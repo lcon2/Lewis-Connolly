@@ -2,6 +2,8 @@
 layout: post
 title: "Fascism & Pushing the Fat Man"
 date: 2024-11-05
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

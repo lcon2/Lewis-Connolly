@@ -2,6 +2,8 @@
 layout: post
 title: "A Phalanstery"
 date: 2015-06-08
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

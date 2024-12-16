@@ -2,6 +2,8 @@
 layout: post
 title: "The Alchemist’s Beaker"
 date: 2019-02-11
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

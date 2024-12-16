@@ -2,6 +2,8 @@
 layout: post
 title: "Britannia, Marianne, & Columbia"
 date: 2019-06-24
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

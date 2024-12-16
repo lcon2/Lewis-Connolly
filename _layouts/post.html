@@ -35,7 +35,12 @@
     <main>
         <article>
             <h2>{{ page.title }}</h2>
-            <p>{{ page.date | date: "%B %d, %Y" }}</p>
+            <p class="post-meta">
+                {{ page.date | date: "%B %d, %Y" }} 
+                    <span class="author-meta">
+                        By <a href="{{ page.author_url | relative_url }}" class="author-link">{{ page.author }}</a>
+                    </span>
+                </p>
             <div>{{ content }}</div>
         </article>
     </main>

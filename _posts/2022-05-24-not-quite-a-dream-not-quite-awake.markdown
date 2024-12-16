@@ -2,6 +2,8 @@
 layout: post
 title: "Not quite a dream, not quite awake"
 date: 2022-05-24
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

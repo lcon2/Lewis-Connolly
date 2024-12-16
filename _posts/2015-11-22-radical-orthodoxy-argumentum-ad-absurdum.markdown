@@ -2,6 +2,8 @@
 layout: post
 title: "Radical Orthodoxy: argumentum ad absurdum"
 date: 2015-11-22
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

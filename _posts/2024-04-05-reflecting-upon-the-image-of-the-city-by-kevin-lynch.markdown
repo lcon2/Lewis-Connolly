@@ -2,6 +2,8 @@
 layout: post
 title: "Reflecting upon ‘The Image of The City’ by Kevin Lynch"
 date: 2024-04-05
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

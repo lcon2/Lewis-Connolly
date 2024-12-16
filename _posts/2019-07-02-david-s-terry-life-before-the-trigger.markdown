@@ -2,6 +2,8 @@
 layout: post
 title: "David S. Terry’s Life Before the Trigger was Pulled"
 date: 2019-07-02
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

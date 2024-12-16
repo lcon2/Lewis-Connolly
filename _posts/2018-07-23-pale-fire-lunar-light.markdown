@@ -2,6 +2,8 @@
 layout: post
 title: "Pale Fire: Lunar Light"
 date: 2018-07-23
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

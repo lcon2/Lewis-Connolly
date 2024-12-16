@@ -2,6 +2,8 @@
 layout: post
 title: "Alchemy of the Soul"
 date: 2018-02-28
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

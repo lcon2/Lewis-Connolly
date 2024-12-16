@@ -2,6 +2,8 @@
 layout: post
 title: "Reflecting on William James"
 date: 2018-05-14
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

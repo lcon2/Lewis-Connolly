@@ -136,8 +136,8 @@ body {
 /* Blog Post-Specific Styles */
 .post .logo img {
     display: block; /* Ensures it behaves like a block-level element */
-    margin: 10px auto; /* Centers the image horizontally and adds spacing */
-    max-width: 60px; /* Makes the logo smaller */
+    margin: 30px auto 10px; /* Adds 20px top margin, 10px bottom margin */
+    max-width: 70px; /* Makes the logo smaller */
     height: auto; /* Maintains aspect ratio */
     border-radius: 5px; /* Adds subtle rounded corners */
     transition: transform 0.3s ease; /* Adds a hover effect */
@@ -161,10 +161,32 @@ body {
     padding: 0 60px; /* Adds thick padding on the left and right */
     line-height: 1.8; /* Improves readability */
     font-size: 1.1em; /* Slightly increases font size for better legibility */
-    color: #e0e0e0; /* Keeps text color subtle */
+    color: #e0e0e0; /* Keeps text color consistent with post content */
     background-color: #181818; /* Adds a subtle background color for contrast */
     border-radius: 10px; /* Adds rounded corners to the article block */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for depth */
+}
+
+/* Date and Author Inline Styling */
+.post-meta {
+    display: flex; /* Aligns content horizontally */
+    gap: 20px; /* Adds space between date and author */
+    justify-content: flex-start; /* Aligns to the left */
+    font-size: 1em;
+    color: #ccc; /* Subtle text color */
+}
+
+/* Author Link Specific Styling with Homepage Dotted Line */
+.post-meta .author-meta a {
+    color: #e0e0e0; /* Matches post content shade of white */
+    text-decoration: none;
+    border-bottom: 1px dotted #e0e0e0; /* Adds a dotted underline */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.post-meta .author-meta a:hover {
+    color: #ff9933; /* Orange text on hover */
+    border-bottom-color: #ff9933; /* Matches dotted line color to hover text */
 }
 
 /* Blockquote Styles */
@@ -193,9 +215,9 @@ body {
 
 /* Hyperlink Styling */
 .post article a {
-    color: #ff9933;
+    color: #e0e0e0; /* Matches post content shade of white */
     text-decoration: none;
-    border-bottom: 1px dotted #ff9933;
+    border-bottom: 1px dotted #e0e0e0; /* Adds a dotted underline */
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
@@ -203,6 +225,7 @@ body {
     color: #ffa64d;
     border-bottom-color: #ffa64d;
 }
+
 /* Footer */
 footer {
     margin-top: 40px;

@@ -2,6 +2,8 @@
 layout: post
 title: "What Christian Non-Realism Means to Me"
 date: 2015-06-06
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

@@ -2,6 +2,8 @@
 layout: post
 title: "Searching in the Rye"
 date: 2015-12-06
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

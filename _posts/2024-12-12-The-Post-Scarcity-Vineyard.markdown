@@ -2,6 +2,8 @@
 layout: post
 title: "The Post-Scarcity Vineyard"
 date: 2024-12-12
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 og_image: /assets/images/meditation.png
 ---

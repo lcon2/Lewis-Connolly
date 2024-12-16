@@ -2,6 +2,8 @@
 layout: post
 title: "The Aesthetic of the Hike"
 date: 2024-03-19
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 

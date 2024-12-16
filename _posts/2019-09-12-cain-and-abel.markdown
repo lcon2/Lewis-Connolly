@@ -2,6 +2,8 @@
 layout: post
 title: "Cain & Abel"
 date: 2019-09-12
+author: "Lewis Connolly"
+author_url: "/about/"
 categories:
 ---
 
