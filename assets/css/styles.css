@@ -72,11 +72,14 @@ body {
     max-width: 180px;
     height: auto;
     transition: transform 0.3s ease;
+    position: relative;
+    top: 3px; /* Lowers the image by 3 pixels */
 }
 
 .buy-coffee:hover {
     transform: scale(1.1);
 }
+
 
 /* Intro Section */
 .intro {
@@ -165,6 +168,7 @@ body {
     background-color: #181818; /* Adds a subtle background color for contrast */
     border-radius: 10px; /* Adds rounded corners to the article block */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for depth */
+    border-bottom: 4px solid #181818; /* Thickened bottom border */
 }
 
 /* Date and Author Inline Styling */
@@ -225,6 +229,28 @@ body {
     color: #ffa64d;
     border-bottom-color: #ffa64d;
 }
+
+/* Post Navigation Styling */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding: 20px 20px 0; /* Added left and right padding */
+}
+
+.post-navigation a {
+    text-decoration: none;
+    color: #f0f0f0; /* Standard white */
+    font-family: 'EBGaramond', serif; /* Font style */
+    font-size: 1.1em; /* Slightly larger font size */
+    transition: color 0.3s ease;
+}
+
+.post-navigation a:hover {
+    color: #ff9933; /* Highlight orange */
+}
+
 
 /* Footer */
 footer {

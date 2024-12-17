@@ -23,6 +23,7 @@
     <meta property="og:image" content="{{ page.og_image | default: '/assets/images/logo.png' | absolute_url }}" />
     <meta property="og:image:alt" content="{{ page.title | escape }}" />
     <meta property="og:type" content="article" />
+
 </head>
 <body class="post">
     <header>
@@ -43,6 +44,26 @@
                 </p>
             <div>{{ content }}</div>
         </article>
+        
+        <!-- New Navigation Section -->
+        <div class="post-navigation">
+            <div class="previous-post">
+                {% if page.previous %}
+                <a href="{{ page.previous.url }}">
+                    &larr; Previous: {{ page.previous.title }}
+                </a>
+                {% endif %}
+            </div>
+            <div class="next-post">
+                {% if page.next %}
+                <a href="{{ page.next.url }}">
+                    Next: {{ page.next.title }} &rarr;
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <!-- End of Navigation Section -->
+
     </main>
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
