@@ -143,11 +143,13 @@ body {
     max-width: 70px; /* Makes the logo smaller */
     height: auto; /* Maintains aspect ratio */
     border-radius: 5px; /* Adds subtle rounded corners */
-    transition: transform 0.3s ease; /* Adds a hover effect */
+    filter: grayscale(100%) brightness(0.8); /* Greyed-out and slightly dim */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 .post .logo img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
+    filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
 }
 
 .post header {
