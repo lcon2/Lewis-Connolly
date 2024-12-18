@@ -76,3 +76,4 @@ Sparkling water, beef, beer & wine, pubs, my GeForce headphones, PC games, books
 - BA in Theology at The London School of Theology (2010)
 - PGDip in Pastoral Theology at Westcott House, Cambridge (2013)
 - MA (with distinction) in Jungian Studies, Essex University (2020)
+- [Beef Quality Assurance Certification (2024)](https://lewisconnolly.com/2024/12/18/Bovine-Chronicles-Untold/)
