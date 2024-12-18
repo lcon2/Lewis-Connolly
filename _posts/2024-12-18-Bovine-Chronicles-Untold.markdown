@@ -8,7 +8,7 @@ categories:
 og_image: /assets/images/cow.png
 ---
 
-<img src="{{ '/assets/images/cow.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/cow.png' | relative_url }}" alt="Cow" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 A few weeks back, I re-watched ‘Temple Grandin’ (2010), a great movie about its namesake, an autistic woman, who despite the odds, entered the male-dominated American cattle industry of the 1970s and revolutionized it. Her autism allowed her to perceive feedlots—where animals are fattened for slaughter— in ways, according to her own reckoning, more akin to the cattle. As such she was able to redesign these livestock handling systems in such a way as to minimize fear and resistance.
 
@@ -24,12 +24,12 @@ Also, I suspect that, like Grandin, I’m susceptible to going on hyper-focus ra
 
 This course is designed for feedyard workers, managers, and cattle producers (of which I am obviously none) to teach them about best practice when it comes to the health, safety, and welfare of cattle. Upon completion one will have demonstrated a commitment to cattle welfare and product quality. And I can now report that I am officially certified.
 
-<img src="{{ '/assets/images/certificate.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/certificate.png' | relative_url }}" alt="Certificate" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 Now, if you’ll indulge me, I’d like to share some cattle-related factoids…
 
 First, let’s cover bovine terminology: Bovine or cattle is the generic term for the species. A female bovine that has not yet given birth is called a heifer. Once she has given birth, she is called a cow. A male bovine is called a bull, and if he has been castrated, he is called a steer. The terms “cow” is often used to refer to cattle in general, but this is technically improper usage. Note these linguistic particulars were not covered in the course.
- 
+
 Metal in feedlots is a big problem. It can come from many different places. But a common source is from the grain itself; when the grain is harvested, metal debris like old fence wire, nails, and shards of old machinery get incorporated into the grain. This can be combatted with the use of magnets; you might have magnets in mills, along conveyor belts, and on feed discharge points. Magnets are even put inside cattle, inserted into their first stomach (remember cattle have four, or four distinct compartments at least), there it becomes both sentinel and scavenger. The magnet will stay there for the cow’s life, and if they manage to consume only a modest diet of metal, this solution is sufficient - it will hold it all in place. But if the metal manages to puncture some internal tissues, then this will likely lead to what is called “hardware disease”, resulting in abscesses forming, severe pain, and if no treatment is possible, death. 
 
 The course covered some interesting details about cow behavior. Despite their size, these animals aren’t prone to flashy, emotional outbursts or histrionics. Instead, cows respond predictably to their environment, guided by body positioning. With one eye on each side of their head, their binocular vision is limited, and there’s a blind spot directly behind them. Handlers learn to work within a cow’s “flight zone”—the invisible boundary that, when crossed, prompts the animal to move away instinctively. In this way handlers can guide cows in a calmer and more controlled way without having to resort to force, be that shouting or using an electric prod.
