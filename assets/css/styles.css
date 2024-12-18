@@ -263,3 +263,23 @@ footer {
     font-size: 0.9em;
     color: #a0a0a0;
 }
+
+/* Unvisited links */
+a {
+    color: #f0f0f0; /* White text */
+    text-decoration: none; /* Removes underline */
+    border-bottom: 1px dotted #f0f0f0; /* Optional: dotted underline */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover state */
+a:hover {
+    color: #ff9933; /* Orange text on hover */
+    border-bottom-color: #ff9933; /* Matches underline color to hover text */
+}
+
+/* Visited links */
+a:visited {
+    color: #f0f0f0; /* White text for visited links */
+    border-bottom-color: #f0f0f0; /* Matches underline color */
+}
