@@ -44,6 +44,10 @@ body {
 }
 
 .home .navbar-menu a {
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+}
+
+.home .navbar-menu a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: 1.3em; /* Increased font size for navigation menu */
