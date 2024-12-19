@@ -139,7 +139,7 @@ body {
 /* Blog Post-Specific Styles */
 .post .logo img {
     display: block; /* Ensures it behaves like a block-level element */
-    margin: 30px auto 10px; /* Adds 20px top margin, 10px bottom margin */
+    margin: 20px auto 10px; /* Adjusts top margin */
     max-width: 70px; /* Makes the logo smaller */
     height: auto; /* Maintains aspect ratio */
     border-radius: 5px; /* Adds subtle rounded corners */
@@ -150,6 +150,22 @@ body {
 .post .logo img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
     filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
+}
+
+/* About Me and Contact Page-Specific Styles */
+.about .logo img, .contact .logo img {
+    display: block;
+    margin: 20px auto 10px; /* Matches post margins */
+    max-width: 70px; /* Matches post size */
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.about .logo img:hover, .contact .logo img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1.2);
 }
 
 header {
@@ -282,4 +298,16 @@ footer {
 .about a:visited {
     color: inherit; /* Ensures visited links match other states */
     border-bottom-color: currentColor; /* Matches underline color to text */
+}
+
+.about a, .contact a {
+    color: inherit; /* Matches text color */
+    text-decoration: none; /* Removes underline */
+    border-bottom: 1px dotted currentColor; /* Consistent underline */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.about a:hover, .contact a:hover {
+    color: #ff9933; /* Turns orange on hover */
+    border-bottom-color: #ff9933; /* Changes underline color */
 }
