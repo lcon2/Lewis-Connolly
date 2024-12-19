@@ -80,7 +80,6 @@ body {
     transform: scale(1.1);
 }
 
-
 /* Intro Section */
 .intro {
     margin: 20px auto;
@@ -269,7 +268,6 @@ header {
     color: #ff9933; /* Highlight orange */
 }
 
-
 /* Footer */
 footer {
     margin-top: 40px;
@@ -310,4 +308,46 @@ footer {
 .about a:hover, .contact a:hover {
     color: #ff9933; /* Turns orange on hover */
     border-bottom-color: #ff9933; /* Changes underline color */
+}
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .home .navbar {
+        flex-direction: column; /* Stacks logo and navigation vertically */
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .home .navbar-content {
+        flex-direction: column;
+        gap: 10px; /* Reduces spacing between elements */
+    }
+
+    .home .logo {
+        max-width: 60px; /* Reduces logo size */
+    }
+
+    .home .navbar-menu {
+        flex-direction: column; /* Stacks menu items vertically */
+        gap: 10px;
+        width: 100%; /* Makes menu span the screen */
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr; /* Single-column layout */
+        padding: 0 10px;
+    }
+
+    .post article {
+        padding: 0 20px; /* Reduces padding for better readability on small screens */
+    }
+
+    .post-navigation {
+        flex-direction: column; /* Stacks navigation links vertically */
+        gap: 10px; /* Adds spacing between links */
+    }
+
+    footer {
+        font-size: 0.8em; /* Reduces footer font size */
+    }
 }
