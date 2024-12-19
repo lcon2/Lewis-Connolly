@@ -137,7 +137,7 @@ body {
 }
 
 /* Blog Post-Specific Styles */
-.post .logo img {
+.logo img {
     display: block; /* Ensures it behaves like a block-level element */
     margin: 30px auto 10px; /* Adds 20px top margin, 10px bottom margin */
     max-width: 70px; /* Makes the logo smaller */
@@ -147,7 +147,7 @@ body {
     transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-.post .logo img:hover {
+.logo img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
     filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
 }
@@ -265,7 +265,7 @@ footer {
 }
 
 /* Unvisited links */
-a {
+.about-a {
     color: inherit; /* Inherit color from parent if overriding is needed */
     text-decoration: none; /* Removes underline */
     border-bottom: 1px dotted currentColor; /* Use current text color for underline */
@@ -273,13 +273,13 @@ a {
 }
 
 /* Hover state */
-a:hover {
+.about-a:hover {
     color: #ff9933; /* Orange text on hover */
     border-bottom-color: #ff9933; /* Matches underline color to hover text */
 }
 
 /* Visited links */
-a:visited {
+.about-a:visited {
     color: inherit; /* Ensures visited links match other states */
     border-bottom-color: currentColor; /* Matches underline color to text */
 }
