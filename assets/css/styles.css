@@ -152,7 +152,7 @@ body {
     filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
 }
 
-.post header {
+header {
     margin-bottom: 30px; /* Adds space below the header */
     text-align: center; /* Centers the header content */
     font-size: 1.5em; /* Increases font size for title */
@@ -265,7 +265,7 @@ footer {
 }
 
 /* Unvisited links */
-.about-a {
+.about a {
     color: inherit; /* Inherit color from parent if overriding is needed */
     text-decoration: none; /* Removes underline */
     border-bottom: 1px dotted currentColor; /* Use current text color for underline */
@@ -273,13 +273,13 @@ footer {
 }
 
 /* Hover state */
-.about-a:hover {
+.about a:hover {
     color: #ff9933; /* Orange text on hover */
     border-bottom-color: #ff9933; /* Matches underline color to hover text */
 }
 
 /* Visited links */
-.about-a:visited {
+.about a:visited {
     color: inherit; /* Ensures visited links match other states */
     border-bottom-color: currentColor; /* Matches underline color to text */
 }
