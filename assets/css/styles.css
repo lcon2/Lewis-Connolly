@@ -137,7 +137,7 @@ body {
 }
 
 /* Blog Post-Specific Styles */
-.logo img {
+.about .logo img {
     display: block; /* Ensures it behaves like a block-level element */
     margin: 30px auto 10px; /* Adds 20px top margin, 10px bottom margin */
     max-width: 70px; /* Makes the logo smaller */
