@@ -266,9 +266,9 @@ footer {
 
 /* Unvisited links */
 .logo a {
-    color: #f0f0f0; /* White text */
+    color: inherit; /* Inherit color from parent if overriding is needed */
     text-decoration: none; /* Removes underline */
-    border-bottom: 1px dotted #f0f0f0; /* Optional: dotted underline */
+    border-bottom: 1px dotted currentColor; /* Use current text color for underline */
     transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition */
 }
 
@@ -280,6 +280,6 @@ footer {
 
 /* Visited links */
 .logo a:visited {
-    color: #f0f0f0; /* White text for visited links */
-    border-bottom-color: #f0f0f0; /* Matches underline color */
+    color: inherit; /* Ensures visited links match other states */
+    border-bottom-color: currentColor; /* Matches underline color to text */
 }
