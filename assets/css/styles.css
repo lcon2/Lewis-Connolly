@@ -265,7 +265,7 @@ footer {
 }
 
 /* Unvisited links */
-.logo a {
+a {
     color: inherit; /* Inherit color from parent if overriding is needed */
     text-decoration: none; /* Removes underline */
     border-bottom: 1px dotted currentColor; /* Use current text color for underline */
@@ -273,13 +273,13 @@ footer {
 }
 
 /* Hover state */
-.logo a:hover {
+a:hover {
     color: #ff9933; /* Orange text on hover */
     border-bottom-color: #ff9933; /* Matches underline color to hover text */
 }
 
 /* Visited links */
-.logo a:visited {
+a:visited {
     color: inherit; /* Ensures visited links match other states */
     border-bottom-color: currentColor; /* Matches underline color to text */
 }
