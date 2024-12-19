@@ -10,15 +10,24 @@
     <header>
         <div class="logo">
             <a href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" style="display: block; margin: 0 auto; max-width: 80px; height: auto;">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
             </a>
         </div>
     </header>
-    <main style="max-width: 800px; margin: 20px auto; line-height: 1.8; font-size: 1.1em; color: #f0f0f0;">
-        {{ content }}
+    <main>
+        <div style="max-width: 800px; margin: 20px auto; line-height: 1.8; font-size: 1.1em; color: #f0f0f0;">
+            {{ content }}
+        </div>
     </main>
-    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
-        <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
+    <footer>
+        <div style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+            <p>© Lewis Connolly. 2015 - <span id="current-year"></span> All Rights Reserved ┃ Copyright</p>
+        </div>
     </footer>
+
+    <script>
+        // Update footer with current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
