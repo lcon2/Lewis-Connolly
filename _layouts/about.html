@@ -5,61 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    <style>
-        /* Inline fallback styles in case CSS doesn't load */
-        body {
-            background-color: #000; /* Default dark background */
-            color: #f0f0f0; /* Default light text color */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header, footer {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .logo img {
-            max-width: 100px; /* Slightly larger default size */
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.8;
-            font-size: 1.1em;
-        }
-
-        footer {
-            margin-top: 20px;
-            width: 100%;
-            border-top: 1px solid #ccc;
-            padding: 10px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" style="display: block; margin: 0 auto; max-width: 80px; height: auto;">
             </a>
         </div>
     </header>
-    <main>
+    <main style="max-width: 800px; margin: 20px auto; line-height: 1.8; font-size: 1.1em; color: #f0f0f0;">
         {{ content }}
     </main>
-    <footer>
-        <p>© Lewis Connolly. 2015 - <span id="current-year"></span> All Rights Reserved ┃ Copyright</p>
+    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+        <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
-    <script>
-        // Set the current year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
