@@ -137,7 +137,7 @@ body {
 }
 
 /* Blog Post-Specific Styles */
-.about .logo img {
+.post .logo img {
     display: block; /* Ensures it behaves like a block-level element */
     margin: 30px auto 10px; /* Adds 20px top margin, 10px bottom margin */
     max-width: 70px; /* Makes the logo smaller */
@@ -147,7 +147,7 @@ body {
     transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-.logo img:hover {
+.post .logo img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
     filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
 }
