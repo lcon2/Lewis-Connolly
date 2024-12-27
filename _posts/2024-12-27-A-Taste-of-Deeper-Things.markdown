@@ -11,7 +11,6 @@ og_image: /assets/images/taste.png
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/taste.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
     <!-- Blog content here -->
 </div>
