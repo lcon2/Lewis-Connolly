@@ -366,3 +366,177 @@ footer {
 .post {
     position: relative; /* Makes the audio player positioning relative to the post container */
 }
+
+/* Default styling for the audio player */
+.audio-player {
+    margin: 10px auto;
+    display: block;
+}
+
+/* Adjust layout for screens smaller than 768px (more sensitive) */
+@media (max-width: 768px) {
+    .post {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .audio-player {
+        order: 3; /* Moves audio below title, date, and author */
+        width: 100%; /* Ensures it spans the container */
+        margin: 80px 0; /* Adds space between the title and audio */
+    }
+
+    /* Ensure proper spacing for title, date, and author */
+    .post > h1, /* Assuming title is an <h1> */
+    .post > .metadata { /* Assuming date and author are wrapped in a metadata div */
+        order: 1; /* Keep these at the top */
+        margin-bottom: 15px; /* Add more space below */
+    }
+}
+
+/* Additional adjustment for very narrow screens */
+@media (max-width: 480px) {
+    .audio-player {
+        margin-top: 30px; /* Push audio further down on very small screens */
+    }
+}
+
+/* Archive Page-Specific Styles */
+
+/* Logo Styling */
+.archive .logo img {
+    display: block;
+    margin: 20px auto 10px;
+    max-width: 70px;
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.archive .logo img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1.2);
+}
+
+/* Archive Content Styling */
+.archive .archive-content {
+    font-family: 'EBGaramond', serif; /* Matches homepage font */
+    font-size: 22px; /* Slightly larger font size */
+    line-height: 1.4; /* Tighter line spacing */
+    color: #f0f0f0;
+    margin-top: 20px;
+}
+
+/* Year Title */
+.archive .year-title {
+    font-size: 26px; /* Slightly larger text for the year */
+    margin-bottom: 5px; /* Reduced space below the year */
+    text-align: right;
+    color: #f0f0f0;
+}
+
+/* Month Categories */
+.archive .month-category h3 {
+    font-size: 22px; /* Slightly larger text for the month */
+    font-weight: normal;
+    margin-top: 15px; /* Reduced space above the month */
+    color: #f0f0f0;
+    border-bottom: 1px solid #555; /* Single underline for the month */
+    padding-bottom: 5px; /* Adjusted spacing for padding */
+}
+
+/* Blog List Styling with Custom Bullet */
+.archive .month-category ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.archive .month-category ul li {
+    margin: 5px 0; /* Tighter spacing between blog titles */
+    font-size: 22px; /* Matches larger text size */
+    display: flex; /* Allows bullet image and text to align */
+    align-items: center;
+}
+
+/* Blog Title Links */
+.archive .month-category ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: 1px dotted #f0f0f0; /* Dotted underline for blog titles */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.archive .month-category ul li a:hover {
+    color: #ffa500; /* Changes text to orange on hover */
+    border-bottom-color: #ffa500; /* Dotted underline also changes to orange */
+}
+
+/* Month Category Spacing */
+.archive .month-category {
+    margin-bottom: 25px; /* Adds space below each month's section */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 17%; /* Slightly narrower */
+    padding: 20px; /* Compact spacing */
+    background-color: #202020; /* Lighter greyscale background */
+    border: 1px solid #f0f0f0; /* Single-pixel white border */
+    box-sizing: border-box; /* Consistent padding and borders */
+    height: auto; /* Dynamically adjusts to content height */
+    margin-top: 132px; /* Brings the box down */
+    margin-right: 4%; /* Spacing between sidebar and main content */
+    position: relative; /* Natural flow without forcing sticky behavior */
+}
+
+/* Year and Month Lists */
+.sidebar ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul > li {
+    margin-bottom: 8px; /* Reduced space between years */
+}
+
+.sidebar ul > li > a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px; /* Year font size */
+    transition: color 0.3s ease;
+}
+
+.sidebar ul > li > a:hover {
+    color: #ffa500; /* Orange hover effect */
+}
+
+.sidebar ul > li ul {
+    margin-top: 5px; /* Reduced spacing between year and months */
+    margin-left: 15px; /* Indented for month list */
+}
+
+.sidebar ul > li ul > li {
+    margin-bottom: -10px; /* Reduced space between months */
+}
+
+.sidebar ul > li ul > li > a {
+    color: #aaa;
+    font-size: 16px; /* Month font size */
+    line-height: 1; /* Reduced line spacing */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul > li ul > li > a:hover {
+    color: #ffa500; /* Orange hover effect */
+}
+
+/* Media Query to Hide Sidebar on Mobile */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hides the sidebar on narrower screens */
+    }
+}
