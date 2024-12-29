@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Third Sunday of Advent: Bodhi Sunday"
+title: "Bodhi Sunday in Advent"
 date: 2016-12-14
 author: "Lewis Connolly"
 author_url: "/about/"
