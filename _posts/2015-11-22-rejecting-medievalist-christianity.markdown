@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Radical Orthodoxy: argumentum ad absurdum"
+title: "Rejecting Medievalist Christianity"
 date: 2015-11-22
 author: "Lewis Connolly"
 author_url: "/about/"
