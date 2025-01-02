@@ -247,8 +247,8 @@ header {
     max-width: 900px; /* Limits the width for readability */
     padding: 0 60px; /* Adds thick padding on the left and right */
     line-height: 1.8; /* Improves readability */
-    font-size: 1.1em; /* Slightly increases font size for better legibility */
-    color: #e0e0e0; /* Keeps text color consistent with post content */
+    font-size: 1.3em; /* Slightly increases font size for better legibility */
+    color: #FFFFFF; /* Keeps text color consistent with post content */
     background-color: #181818; /* Adds a subtle background color for contrast */
     border-radius: 10px; /* Adds rounded corners to the article block */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for depth */
