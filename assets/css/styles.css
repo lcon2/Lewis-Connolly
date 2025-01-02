@@ -244,10 +244,10 @@ header {
 .post article {
     text-align: justify; /* Justifies the blog content for a cleaner look */
     margin: 20px auto; /* Centers the article with consistent spacing */
-    max-width: 900px; /* Limits the width for readability */
+    max-width: 1050px; /* Limits the width for readability */
     padding: 0 60px; /* Adds thick padding on the left and right */
     line-height: 1.8; /* Improves readability */
-    font-size: 1.3em; /* Slightly increases font size for better legibility */
+    font-size: 1.25em; /* Slightly increases font size for better legibility */
     color: #FFFFFF; /* Keeps text color consistent with post content */
     background-color: #181818; /* Adds a subtle background color for contrast */
     border-radius: 10px; /* Adds rounded corners to the article block */
