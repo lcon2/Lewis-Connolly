@@ -20,7 +20,8 @@ So, the calculation would be 10,000 / 2 = 5000 women. 5000 women / 77 ≈ 65 wom
 
 This would be a good idea for a computer game. Many games are based on exploration, base building, and resource exploitation, but what about a game in which all of that is already done, and the objective is just to maintain the population, optimize for genetic traits, educate and deploy individuals to work within a closed system of this kind.
 
----
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ### Game Design Document
 
