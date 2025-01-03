@@ -44,4 +44,4 @@ I have not been there personally. Given that it’s private property, it is a di
 
 Amen.
 
-Postscript This sermon, “Home, Individuation, and the Tower,” was cited in the book ‘The Art of Czech Animation: A History of Political Dissent and Allegory’ (2022) by Adam Whybray.
+Postscript: This sermon, “Home, Individuation, and the Tower,” was cited in the book ‘The Art of Czech Animation: A History of Political Dissent and Allegory’ (2022) by Dr. Adam Whybray.
