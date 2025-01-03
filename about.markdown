@@ -15,7 +15,8 @@ permalink: /about/
 > "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines. With consistency a great soul has simply nothing to do…"  
 > – Ralph Waldo Emerson
 
----
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ## Profile
 
@@ -37,7 +38,8 @@ I’m married. My wife, Catherine Connolly, was in the process of becoming a pri
 
 We have kids, and I now spend most of my time running after them.
 
----
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ## I Like…
 
@@ -50,23 +52,15 @@ We have kids, and I now spend most of my time running after them.
 **Other:**  
 Sparkling water, beef, beer & wine, pubs, my GeForce headphones, PC games, bookshelves, Dr. Pepper, America (controversial, I know), walking around cities, walking in general, music (folk rock, bluesy Americana, soul, indie folk, etc.), comedy, true crime podcasts, interior design, Zillow, thinking about politics, investing, rabbit holes, and writing (hence this website).
 
----
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ## I Don’t Like…
 
-- C.S. Lewis (overrated)
-- Small talk
-- Running (but I do it occasionally)
-- Waiting
-- Driving (self-driving cars, please!)
-- Jackie Kennedy
-- Cold weather
-- Anime (I don’t get it)
-- Being told what to do
-- Apple Inc.
-- Classism
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.S. Lewis (overrated), Jackie Kennedy (the paragon of vapidity), anime (I don’t get it), running (but I do it occasionally), paper straws, small talk, coffee, waiting, cold weather, being told what to do, Apple Inc., driving (self-driving cars, please!), classism, dogmatism.
 
----
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ## Qualifications & Accolades
 
