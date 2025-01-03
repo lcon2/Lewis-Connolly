@@ -372,6 +372,10 @@ footer {
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
+.about {
+    font-size: 1.15em; /* Increased font size for better readability */
+}
+
 .about a:hover, .contact a:hover {
     color: #ff9933; /* Turns orange on hover */
     border-bottom-color: #ff9933; /* Changes underline color */

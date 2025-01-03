@@ -14,8 +14,9 @@ permalink: /about/
 
 > "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines. With consistency a great soul has simply nothing to do…"  
 > – Ralph Waldo Emerson
-
+<div style="margin-top: 20px;"></div>
 ---
+<div style="margin-top: 20px;"></div>
 
 ## Profile
 
@@ -33,32 +34,33 @@ I was a Unitarian minister for five years, primarily serving at the Ipswich Unit
 
 I subsequently moved to the United States.
 
-I’m married. My wife, Catherine Connolly, was in the process of becoming a priest while I was in the process of leaving the priesthood. She is now an Episcopalian priest here in the United States.
+I’m married. My wife, [Catherine Connolly](https://www.catconnolly.com/), was in the process of becoming a priest while I was in the process of leaving the priesthood. She is now an Episcopalian priest here in the United States.
 
-We have kids, and I now spend most of my time running after them.
+We have kids, and I now spend most of my time running around after them.
 
+<div style="margin-top: 30px;"></div>
 <img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
+<div style="margin-bottom: 20px;"></div>
 
 ## I Like…
 
 **Films:**  
-This is basically an impossible list: These are some that really stuck with me…. *There Will Be Blood* (2007), *The Good Shepherd* (2006), *Memento* (2000), *12 Angry Men* (1957), *Fight Club* (1999), *American Beauty* (1999), *Mystic River* (2003), *Donnie Darko* (2001), *Her* (2013), *The Truman Show* (1998), *Interstellar* (2014), *2001: A Space Odyssey* (1968), *Sideways* (2004), *Mass* (2021), *Calvary* (2014), *The Devil All the Time* (2020), *Nocturnal Animals* (2016), *Ex Machina* (2015), *A Time to Kill* (1996), *Midnight in the Garden of Good and Evil* (1997), *Back to the Future* (1985), *Being John Malkovich* (1999), *The Fountain* (2006), *The Family Man* (2000) – and loads more…
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is basically an impossible list: These are some that stuck with me…. *There Will Be Blood* (2007), *The Good Shepherd* (2006), *Memento* (2000), *12 Angry Men* (1957), *Fight Club* (1999), *American Beauty* (1999), *Mystic River* (2003), *Donnie Darko* (2001), *Her* (2013), *The Truman Show* (1998), *Interstellar* (2014), *2001: A Space Odyssey* (1968), *Sideways* (2004), *Mass* (2021), *Calvary* (2014), *The Devil All the Time* (2020), *Nocturnal Animals* (2016), *Ex Machina* (2015), *A Time to Kill* (1996), *Midnight in the Garden of Good and Evil* (1997), *Back to the Future* (1985), *Being John Malkovich* (1999), *The Fountain* (2006), *The Family Man* (2000) – and loads more…
+<div style="margin-top: 20px;"></div>
 **Books:**  
-[*The Rings of Saturn* by W.G. Sebald](https://lewisconnolly.com/2024/12/27/A-Taste-of-Deeper-Things/#rings-of-saturn), *The Catcher in the Rye* by J.D. Salinger, *The Picture of Dorian Gray* by Oscar Wilde, *The Singularity Is Near* by Ray Kurzweil, *The Prince* by Niccolò Machiavelli, *The Portable Nietzsche* (edited by Walter Kaufmann), *Madness, Rack, and Honey* by Mary Ruefle, *Be Here Now* by Ram Dass, *Honest to God* by John Robinson, *Leaves of Grass* by Walt Whitman, *Crow* by Ted Hughes, *Memories, Dreams, Reflections* by C.G. Jung, and books on American history.
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [*The Rings of Saturn* by W.G. Sebald](https://lewisconnolly.com/2024/12/27/A-Taste-of-Deeper-Things/#rings-of-saturn), *The Catcher in the Rye* by J.D. Salinger, *The Picture of Dorian Gray* by Oscar Wilde, *The Singularity Is Near* by Ray Kurzweil, *The Prince* by Niccolò Machiavelli, *The Portable Nietzsche* (edited by Walter Kaufmann), *Madness, Rack, and Honey* by Mary Ruefle, *Be Here Now* by Ram Dass, *Honest to God* by John Robinson, *Leaves of Grass* by Walt Whitman, *Crow* by Ted Hughes, *Memories, Dreams, Reflections* by C.G. Jung, and books on American history.
+<div style="margin-top: 20px;"></div>
 **Other:**  
-Sparkling water, beef, beer & wine, pubs, my GeForce headphones, PC games, bookshelves, Dr. Pepper, America (controversial, I know), Savannah, walking around cities, walking in general, music (folk rock, bluesy Americana, soul, indie folk, etc.), comedy, true crime podcasts, interior design, Zillow, thinking about politics, investing, rabbit holes, and writing (hence this website).
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sparkling water, beef, beer & wine, pubs, my GeForce headphones, PC games, bookshelves, Dr. Pepper, America (controversial, I know), Savannah, walking around cities, walking in general, music (folk rock, bluesy Americana, soul, indie folk, etc.), comedy, true crime podcasts, interior design, Zillow, thinking about politics, investing, rabbit holes, and writing (hence this website).
+<div style="margin-top: 20px;"></div>
 ---
-
+<div style="margin-top: 20px;"></div>
 ## I Don’t Like…
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.S. Lewis (overrated), Jackie Kennedy (the paragon of vapidity), anime (I don’t get it), running (but I do it occasionally), paper straws, small talk, coffee, waiting, cold weather, being told what to do, Apple Inc., driving (self-driving cars, please!), classism, dogmatism.
-
+<div style="margin-top: 20px;"></div>
 ---
-
+<div style="margin-top: 20px;"></div>
 ## Qualifications & Accolades
 
 - Winner of the Bookmark-Making Competition at Alford Primary School, Aberdeenshire, Scotland (1994)
