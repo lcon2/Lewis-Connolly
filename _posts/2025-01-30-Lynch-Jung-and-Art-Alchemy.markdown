@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lynch, Jung, and the Alchemy of Art"
+title: "Lynch, Jung, and Art Alchemy"
 date: 2025-01-30
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -55,5 +55,6 @@ og_image: /assets/images/paintinggod.png
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I’ll give Bono the last word, from his U2 song, ‘I Still Haven’t Found What I’m Looking For’ (1987), though I prefer the cover version from Sarah Jarosz, “I believe in the kingdom come, then all the colors will bleed into one. Bleed into one.”
 
-**Bibliography**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Bibliography**
+
 Jung, C. G. (1966). The Collected Works of C. G. Jung, Volume 15: Spirit in Man, Art, and Literature. Princeton University Press.
