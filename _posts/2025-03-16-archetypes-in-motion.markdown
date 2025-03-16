@@ -8,10 +8,16 @@ categories:
 og_image: /assets/images/running.png
 ---
 
+<div class="post">
+    <audio class="audio-player" controls>
+        <source src="/assets/audio/running.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Blog content here -->
+</div>
+
 <img src="{{ '/assets/images/running.png' | relative_url }}" alt="Taste" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Archetypes in Motion
-I’ve recently renewed my running passion. And of course when I’m into something, I’m into it obsessively. When I’m not running, I’m thinking about running, I’m planning my next run, or I’m eating to run, and now I guess I’m writing about running.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I’ve recently renewed my running passion. And of course when I’m into something, I’m into it obsessively. When I’m not running, I’m thinking about running, I’m planning my next run, or I’m eating to run, and now I guess I’m writing about running.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Human beings are “designed” to run. We’re not the fastest animals in the world over short distances, but over longer distances, we are number one. It’s our ability to sweat efficiently which makes us the best. Over a one-mile distance there is a bunch of animals which are faster than us - cheetahs, horses, dogs, etc. - but once you exceed distances of about 20 miles, there is nothing that can beat us. We evolved this ability in order to hunt; we would spear an animal in open grassland terrain, and then we would run it down, that is until we domesticated animals and running became a whole lot less important.
 
