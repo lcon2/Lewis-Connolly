@@ -28,7 +28,7 @@
     transition: opacity 0.8s ease-out;
   }
   
-  /* ---------- begin button ---------- */
+  /* ---------- begin / "Drift" button ---------- */
   #beginBtn {
     position: fixed;
     left: 50%;
@@ -37,25 +37,27 @@
     padding: 0.75rem 3rem;
     font-size: 2.2rem;
     font-family: 'Great Vibes', 'Brush Script MT', cursive;
-    color: #f4f4f4;
+    color: #FFD54F;                     /* sun‑yellow text */
     background: rgba(0, 0, 0, 0.55);
-    border: 2px solid #f4f4f4;
-    border-radius: 1.25rem; /* gently curved corners */
+    border: 2px solid #FFD54F;         /* matching sun‑yellow border */
+    border-radius: 1.25rem;            /* gently curved corners */
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.8s ease-out, background 0.3s;
-    animation: fadeIn 1s forwards 3s; /* show after 3 s */
+    transition: opacity 0.8s ease-out, background 0.3s, transform 0.3s;
+    animation: fadeIn 1s forwards 3s;  /* show after 3 s */
   }
   
+  /* full‑button interactive hover */
   #beginBtn:hover {
     background: rgba(255, 255, 255, 0.12);
+    transform: scale(1.05);
   }
   
   @keyframes fadeIn {
     to {
       opacity: 1;
-      pointer-events: auto;
+      pointer-events: auto;            /* enable clicks only after fade‑in */
     }
   }
   

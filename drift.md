@@ -24,8 +24,8 @@ permalink: /drift/
   <!-- intro still -->
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="Spanish‑moss oaks">
 
-  <!-- begin button -->
-  <button id="beginBtn">Begin</button>
+<!-- begin button -->
+<button id="beginBtn">Drift</button>
 
   <!-- video -->
   <div id="video-container">
