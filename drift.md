@@ -58,13 +58,24 @@ permalink: /drift/
     const video     = document.getElementById('driftVideo');
     const choices   = document.getElementById('choices');
 
-    // ensure low volume and attempt playback on load
-    document.addEventListener('DOMContentLoaded', () => {
+    /* -------------------------------------------------- */
+    /*  helper: try to start audio, fallback to user event */
+    /* -------------------------------------------------- */
+    function startBgAudio(){
+      if(!bgAudio.paused) return;           // already playing
       bgAudio.volume = 0.15;
-      bgAudio.play().catch(() => {/* autoplay might be blocked; will start after first user interaction */});
-    });
+      bgAudio.play().catch(() => {/* silent fail — will try again on next user event */});
+    }
 
-    // ----- start experience & fade audio out -----
+    // attempt at page load
+    document.addEventListener('DOMContentLoaded', startBgAudio);
+
+    // if autoplay was blocked, start on first user gesture anywhere on the page
+    ['click','keydown','mousemove','touchstart','scroll'].forEach(evt =>
+      document.addEventListener(evt, startBgAudio, { once:true, passive:true })
+    );
+
+    /* -------------------- main button click -------------------- */
     beginBtn.addEventListener('click', () => {
       // fade out cello pad over 1 s
       const fadeDuration = 1000; // ms
@@ -90,12 +101,12 @@ permalink: /drift/
       video.play();
     });
 
-    // show archetype fork when intro video ends
+    /*  show archetype fork when intro video ends  */
     video.addEventListener('ended', () => {
       choices.style.display = 'flex';
     });
 
-    // branch loader
+    /*  branch loader  */
     function loadVideo(path){
       video.src = `{{ '/videos/' | relative_url }}${path}.mp4`;
       choices.style.display = 'none';
