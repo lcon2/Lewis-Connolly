@@ -23,7 +23,7 @@ permalink: /drift/
 <body>
   <!-- quietly looping cello pad (autoplays muted, then unmutes after first pointer movement) -->
   <audio id="bgAudio"
-         src="{{ '/audio/cello.mp3' | relative_url }}"
+         src="{{ '/assets/audio/cello.mp3' | relative_url }}"
          preload="auto" loop muted playsinline></audio>
 
   <!-- intro still image -->
