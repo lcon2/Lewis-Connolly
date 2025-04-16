@@ -29,19 +29,20 @@
     z-index: 0; /* sits at the bottom of the stack */
   }
   
-  /* ---------- "Drift" button ---------- */
-  #beginBtn {
+/* ---------- "Drift" button ---------- */
+#beginBtn {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 0.75rem 3rem;
+    padding: calc(0.75rem + 1px) 3rem calc(0.75rem - 1px); /* nudged text down 1 px */
     font-size: 2.2rem;
     font-family: 'Great Vibes', 'Brush Script MT', cursive;
     color: #FFD54F;                  /* sun‑yellow text */
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid #FFD54F;       /* matching sun‑yellow border */
     border-radius: 1.25rem;          /* gently curved corners */
+    text-indent: -2px;               /* nudge text 2 px left */
     cursor: pointer;
     opacity: 0;
     pointer-events: none;            /* enabled after fade‑in */
