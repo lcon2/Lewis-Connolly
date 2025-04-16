@@ -21,7 +21,7 @@ permalink: /drift/
 </head>
 
 <body>
-  <!-- quietly looping cello pad (autoplays muted, then unmutes after first user gesture) -->
+  <!-- quietly looping cello pad (autoplays muted, then unmutes after first pointer movement) -->
   <audio id="bgAudio"
          src="{{ '/assets/music/cello.mp3' | relative_url }}"
          preload="auto" loop muted playsinline></audio>
@@ -59,16 +59,16 @@ permalink: /drift/
     const choices   = document.getElementById('choices');
 
     /* -------------------------------------------------- */
-    /*  Attempt autoplay muted, unmute on first gesture   */
+    /*  Autoplay muted, un‑mute on first pointer movement */
     /* -------------------------------------------------- */
 
     document.addEventListener('DOMContentLoaded', () => {
-      bgAudio.volume = 0;      // start silent (muted=true)
-      bgAudio.play().catch(()=>{/* ignore autoplay failure */});
+      bgAudio.volume = 0;
+      bgAudio.play().catch(()=>{/* muted autoplay often allowed */});
     });
 
     function unmuteAndFadeIn(){
-      if(!bgAudio.muted) return; // already handled
+      if(!bgAudio.muted) return;           // already unmuted
       bgAudio.muted = false;
       const targetVol = 0.18;
       const steps = 18;
@@ -76,19 +76,12 @@ permalink: /drift/
       const fade = setInterval(() => {
         step++;
         bgAudio.volume = (targetVol/steps)*step;
-        if(step>=steps){
-          clearInterval(fade);
-        }
+        if(step>=steps) clearInterval(fade);
       }, 60);
-      // clean up listeners so it only fires once
-      ['pointerdown','keydown','mousemove','touchstart','scroll'].forEach(evt=>
-        document.removeEventListener(evt, unmuteAndFadeIn)
-      );
     }
 
-    ['pointerdown','keydown','mousemove','touchstart','scroll'].forEach(evt =>
-      document.addEventListener(evt, unmuteAndFadeIn, { passive:true })
-    );
+    // single pointer movement counts as user gesture in all major browsers
+    document.addEventListener('pointermove', unmuteAndFadeIn, { once:true, passive:true });
 
     /* -------------------- main button click -------------------- */
     beginBtn.addEventListener('click', () => {
