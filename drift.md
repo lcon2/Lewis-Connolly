@@ -23,11 +23,11 @@ permalink: /drift/
 <body>
   <!-- quietly looping cello pad (autoplays muted, then unmutes after first pointer movement) -->
   <audio id="bgAudio"
-         src="{{ '/assets/music/cello.mp3' | relative_url }}"
+         src="{{ '/audio/cello.mp3' | relative_url }}"
          preload="auto" loop muted playsinline></audio>
 
   <!-- intro still image -->
-  <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="Spanish‑moss‑draped oaks">
+  <img id="introImage" src="{{ '/images/trees.png' | relative_url }}" alt="Spanish‑moss‑draped oaks">
 
   <!-- primary entry button -->
   <button id="beginBtn">Drift</button>
@@ -35,7 +35,7 @@ permalink: /drift/
   <!-- intro & branch videos -->
   <div id="video-container">
     <video id="driftVideo" muted playsinline>
-      <source src="{{ '/assets/videos/intro.mp4' | relative_url }}" type="video/mp4">
+      <source src="{{ '/videos/intro.mp4' | relative_url }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -43,10 +43,10 @@ permalink: /drift/
   <!-- archetype choices -->
   <div id="choices">
     <div class="choice" onclick="loadVideo('longing')">
-      <img src="{{ '/assets/images/longing.jpg' | relative_url }}" alt="Longing" style="width:200px;height:auto">
+      <img src="{{ '/images/longing.jpg' | relative_url }}" alt="Longing" style="width:200px;height:auto">
     </div>
     <div class="choice" onclick="loadVideo('stillness')">
-      <img src="{{ '/assets/images/stillness.jpg' | relative_url }}" alt="Stillness" style="width:200px;height:auto">
+      <img src="{{ '/images/stillness.jpg' | relative_url }}" alt="Stillness" style="width:200px;height:auto">
     </div>
   </div>
 
@@ -116,7 +116,7 @@ permalink: /drift/
 
     /*  branch loader  */
     function loadVideo(path){
-      video.src = `{{ '/assets/videos/' | relative_url }}${path}.mp4`;
+      video.src = `{{ '/videos/' | relative_url }}${path}.mp4`;
       choices.style.display = 'none';
       video.play();
     }
