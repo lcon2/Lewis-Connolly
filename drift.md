@@ -21,10 +21,10 @@ permalink: /drift/
 </head>
 
 <body>
-  <!-- quietly looping cello pad (auto‑plays on load) -->
+  <!-- quietly looping cello pad (autoplays muted, then unmutes after first user gesture) -->
   <audio id="bgAudio"
          src="{{ '/assets/music/cello.mp3' | relative_url }}"
-         preload="auto" loop autoplay playsinline></audio>
+         preload="auto" loop muted playsinline></audio>
 
   <!-- intro still image -->
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="Spanish‑moss‑draped oaks">
@@ -59,20 +59,35 @@ permalink: /drift/
     const choices   = document.getElementById('choices');
 
     /* -------------------------------------------------- */
-    /*  helper: try to start audio, fallback to user event */
+    /*  Attempt autoplay muted, unmute on first gesture   */
     /* -------------------------------------------------- */
-    function startBgAudio(){
-      if(!bgAudio.paused) return;           // already playing
-      bgAudio.volume = 0.15;
-      bgAudio.play().catch(() => {/* silent fail — will try again on next user event */});
+
+    document.addEventListener('DOMContentLoaded', () => {
+      bgAudio.volume = 0;      // start silent (muted=true)
+      bgAudio.play().catch(()=>{/* ignore autoplay failure */});
+    });
+
+    function unmuteAndFadeIn(){
+      if(!bgAudio.muted) return; // already handled
+      bgAudio.muted = false;
+      const targetVol = 0.18;
+      const steps = 18;
+      let step = 0;
+      const fade = setInterval(() => {
+        step++;
+        bgAudio.volume = (targetVol/steps)*step;
+        if(step>=steps){
+          clearInterval(fade);
+        }
+      }, 60);
+      // clean up listeners so it only fires once
+      ['pointerdown','keydown','mousemove','touchstart','scroll'].forEach(evt=>
+        document.removeEventListener(evt, unmuteAndFadeIn)
+      );
     }
 
-    // attempt at page load
-    document.addEventListener('DOMContentLoaded', startBgAudio);
-
-    // if autoplay was blocked, start on first user gesture anywhere on the page
-    ['click','keydown','mousemove','touchstart','scroll'].forEach(evt =>
-      document.addEventListener(evt, startBgAudio, { once:true, passive:true })
+    ['pointerdown','keydown','mousemove','touchstart','scroll'].forEach(evt =>
+      document.addEventListener(evt, unmuteAndFadeIn, { passive:true })
     );
 
     /* -------------------- main button click -------------------- */
