@@ -42,7 +42,7 @@
     background: rgba(0, 0, 0, 0.55);
     border: 2px solid #FFD54F;       /* matching sun‑yellow border */
     border-radius: 1.25rem;          /* gently curved corners */
-    text-indent: -2px;               /* nudge text 2 px left */
+    text-indent: -5px;               /* nudge text 5 px left */
     cursor: pointer;
     opacity: 0;
     pointer-events: none;            /* enabled after fade‑in */
