@@ -21,8 +21,10 @@ permalink: /drift/
 </head>
 
 <body>
-  <!-- quietly looping cello pad (starts muted; unmuted on first interaction) -->
-  <audio id="bgAudio" src="{{ '/assets/music/cello.mp3' | relative_url }}" preload="auto" loop muted></audio>
+  <!-- quietly looping cello pad (auto‑plays on load) -->
+  <audio id="bgAudio"
+         src="{{ '/assets/music/cello.mp3' | relative_url }}"
+         preload="auto" loop autoplay playsinline></audio>
 
   <!-- intro still image -->
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="Spanish‑moss‑draped oaks">
@@ -56,19 +58,36 @@ permalink: /drift/
     const video     = document.getElementById('driftVideo');
     const choices   = document.getElementById('choices');
 
-    // ----- start experience -----
+    // ensure low volume and attempt playback on load
+    document.addEventListener('DOMContentLoaded', () => {
+      bgAudio.volume = 0.15;
+      bgAudio.play().catch(() => {/* autoplay might be blocked; will start after first user interaction */});
+    });
+
+    // ----- start experience & fade audio out -----
     beginBtn.addEventListener('click', () => {
+      // fade out cello pad over 1 s
+      const fadeDuration = 1000; // ms
+      const fadeSteps = 20;
+      const stepTime = fadeDuration / fadeSteps;
+      let currentStep = 0;
+      const initialVol = bgAudio.volume;
+      const fade = setInterval(() => {
+        currentStep++;
+        bgAudio.volume = initialVol * (1 - currentStep / fadeSteps);
+        if (currentStep >= fadeSteps) {
+          clearInterval(fade);
+          bgAudio.pause();
+          bgAudio.currentTime = 0;
+        }
+      }, stepTime);
+
       introImg.style.opacity  = '0';
       beginBtn.style.opacity  = '0';
       beginBtn.style.pointerEvents = 'none';
 
       videoWrap.style.opacity = '1';
       video.play();
-
-      // unmute and play background cello softly
-      bgAudio.muted  = false;
-      bgAudio.volume = 0.15; // ~15% volume
-      bgAudio.play().catch(() => {/* ignore autoplay failures */});
     });
 
     // show archetype fork when intro video ends
