@@ -48,19 +48,15 @@ permalink: /drift/
   </div>
 
 <script>
-  /* ------------------------------------------------------------------ */
-  /*  Audio: autoplay muted, un‑mute on first pointer movement           */
-  /* ------------------------------------------------------------------ */
   const bgAudio   = document.getElementById('bgAudio');
   document.addEventListener('DOMContentLoaded', () => {
     bgAudio.volume = 0;
-    bgAudio.play().catch(() => {}); // muted autoplay is usually allowed
+    bgAudio.play().catch(() => {});
   });
-
   function unmuteAndFadeIn(){
     if(!bgAudio.muted) return;
     bgAudio.muted = false;
-    let step = 0, steps = 18, target = 0.18;
+    let step=0, steps=18, target=0.18;
     const fade = setInterval(()=>{
       step++; bgAudio.volume = target*step/steps;
       if(step>=steps) clearInterval(fade);
@@ -68,56 +64,44 @@ permalink: /drift/
   }
   document.addEventListener('pointermove', unmuteAndFadeIn, { once:true, passive:true });
 
-  /* ------------------------------------------------------------------ */
-  /*  YouTube IFrame API setup                                          */
-  /* ------------------------------------------------------------------ */
+  /* YouTube IFrame API */
   let ytPlayer;
   function onYouTubeIframeAPIReady(){
     ytPlayer = new YT.Player('driftYT',{
       width:'100%', height:'100%', videoId:'RmKkHZ-7rcY',
       playerVars:{autoplay:0, controls:0, modestbranding:1, rel:0, playsinline:1},
-      events:{
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
+      events:{'onReady': onPlayerReady,'onStateChange': onPlayerStateChange}
     });
   }
-  function onPlayerReady(){ /* no‑op until button click */ }
-  function onPlayerStateChange(event){
-    // 0 = ended
-    if(event.data === 0){
-      document.getElementById('choices').style.display = 'flex';
-    }
+  function onPlayerReady(event){
+    // initialize video-container layout for 16:9
+    const vc = document.getElementById('video-container');
+    vc.style.paddingTop = '56.25%';
+    vc.style.position = 'relative';
+    document.getElementById('driftYT').style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
   }
+  function onPlayerStateChange(event){ if(event.data===0) document.getElementById('choices').style.display='flex'; }
 
-  /* ------------------------------------------------------------------ */
-  /*  Button click: fade out still + audio, reveal player, play video    */
-  /* ------------------------------------------------------------------ */
-  const introImg  = document.getElementById('introImage');
-  const beginBtn  = document.getElementById('beginBtn');
-  const videoWrap = document.getElementById('video-container');
-
-  beginBtn.addEventListener('click', ()=>{
-    // fade out audio
+  /* Button click to reveal and play intro */
+  const introImg = document.getElementById('introImage');
+  const beginBtn = document.getElementById('beginBtn');
+  const videoWrap= document.getElementById('video-container');
+  beginBtn.addEventListener('click',()=>{
     let steps=20, cur=0, iv=setInterval(()=>{
-      cur++; bgAudio.volume = bgAudio.volume*(1-(cur/steps));
+      cur++; bgAudio.volume=bgAudio.volume*(1-(cur/steps));
       if(cur>=steps){ clearInterval(iv); bgAudio.pause(); bgAudio.currentTime=0; }
     },50);
-
     introImg.style.opacity='0';
     beginBtn.style.opacity='0'; beginBtn.style.pointerEvents='none';
     videoWrap.style.opacity='1';
-
     ytPlayer.playVideo();
   });
 
-  /* ------------------------------------------------------------------ */
-  /*  Branch loader (local mp4s)                                         */
-  /* ------------------------------------------------------------------ */
+  /* Branch loader (local MP4s) */
   function loadVideo(path){
-    ytPlayer.destroy(); // stop intro player
-    const videoWrap = document.getElementById('video-container');
-    videoWrap.innerHTML = `<video id="branchVid" controls autoplay playsinline style="width:100%;height:auto"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
+    ytPlayer.destroy();
+    const vc=document.getElementById('video-container');
+    vc.innerHTML=`<video id="branchVid" controls autoplay playsinline style="width:100%;height:auto"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
     document.getElementById('choices').style.display='none';
   }
 </script>
