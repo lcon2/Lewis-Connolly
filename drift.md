@@ -18,13 +18,13 @@ permalink: /drift/
 
   <!-- project‑specific stylesheet -->
   <link href="{{ '/assets/css/drift.css' | relative_url }}" rel="stylesheet">
-</head>
 
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+</head>
 <body>
   <!-- quietly looping cello pad (autoplays muted, then unmutes after first pointer movement) -->
-  <audio id="bgAudio"
-         src="{{ '/assets/audio/cello.mp3' | relative_url }}"
-         preload="auto" loop muted playsinline></audio>
+  <audio id="bgAudio" src="{{ '/assets/audio/cello.mp3' | relative_url }}" preload="auto" loop muted playsinline></audio>
 
   <!-- intro still image -->
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="Spanish‑moss‑draped oaks">
@@ -32,12 +32,9 @@ permalink: /drift/
   <!-- primary entry button -->
   <button id="beginBtn">Drift</button>
 
-  <!-- intro & branch videos -->
+  <!-- intro video via YouTube embed -->
   <div id="video-container">
-    <video id="driftVideo" muted playsinline>
-      <source src="{{ '/assets/videos/intro.mp4' | relative_url }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div id="driftYT"></div>
   </div>
 
   <!-- archetype choices -->
@@ -50,76 +47,79 @@ permalink: /drift/
     </div>
   </div>
 
-  <script>
-    const bgAudio   = document.getElementById('bgAudio');
-    const introImg  = document.getElementById('introImage');
-    const beginBtn  = document.getElementById('beginBtn');
+<script>
+  /* ------------------------------------------------------------------ */
+  /*  Audio: autoplay muted, un‑mute on first pointer movement           */
+  /* ------------------------------------------------------------------ */
+  const bgAudio   = document.getElementById('bgAudio');
+  document.addEventListener('DOMContentLoaded', () => {
+    bgAudio.volume = 0;
+    bgAudio.play().catch(() => {}); // muted autoplay is usually allowed
+  });
+
+  function unmuteAndFadeIn(){
+    if(!bgAudio.muted) return;
+    bgAudio.muted = false;
+    let step = 0, steps = 18, target = 0.18;
+    const fade = setInterval(()=>{
+      step++; bgAudio.volume = target*step/steps;
+      if(step>=steps) clearInterval(fade);
+    },60);
+  }
+  document.addEventListener('pointermove', unmuteAndFadeIn, { once:true, passive:true });
+
+  /* ------------------------------------------------------------------ */
+  /*  YouTube IFrame API setup                                          */
+  /* ------------------------------------------------------------------ */
+  let ytPlayer;
+  function onYouTubeIframeAPIReady(){
+    ytPlayer = new YT.Player('driftYT',{
+      width:'100%', height:'100%', videoId:'RmKkHZ-7rcY',
+      playerVars:{autoplay:0, controls:0, modestbranding:1, rel:0, playsinline:1},
+      events:{
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+  function onPlayerReady(){ /* no‑op until button click */ }
+  function onPlayerStateChange(event){
+    // 0 = ended
+    if(event.data === 0){
+      document.getElementById('choices').style.display = 'flex';
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /*  Button click: fade out still + audio, reveal player, play video    */
+  /* ------------------------------------------------------------------ */
+  const introImg  = document.getElementById('introImage');
+  const beginBtn  = document.getElementById('beginBtn');
+  const videoWrap = document.getElementById('video-container');
+
+  beginBtn.addEventListener('click', ()=>{
+    // fade out audio
+    let steps=20, cur=0, iv=setInterval(()=>{
+      cur++; bgAudio.volume = bgAudio.volume*(1-(cur/steps));
+      if(cur>=steps){ clearInterval(iv); bgAudio.pause(); bgAudio.currentTime=0; }
+    },50);
+
+    introImg.style.opacity='0';
+    beginBtn.style.opacity='0'; beginBtn.style.pointerEvents='none';
+    videoWrap.style.opacity='1';
+
+    ytPlayer.playVideo();
+  });
+
+  /* ------------------------------------------------------------------ */
+  /*  Branch loader (local mp4s)                                         */
+  /* ------------------------------------------------------------------ */
+  function loadVideo(path){
+    ytPlayer.destroy(); // stop intro player
     const videoWrap = document.getElementById('video-container');
-    const video     = document.getElementById('driftVideo');
-    const choices   = document.getElementById('choices');
-
-    /* -------------------------------------------------- */
-    /*  Autoplay muted, un‑mute on first pointer movement */
-    /* -------------------------------------------------- */
-
-    document.addEventListener('DOMContentLoaded', () => {
-      bgAudio.volume = 0;
-      bgAudio.play().catch(()=>{/* muted autoplay often allowed */});
-    });
-
-    function unmuteAndFadeIn(){
-      if(!bgAudio.muted) return;           // already unmuted
-      bgAudio.muted = false;
-      const targetVol = 0.18;
-      const steps = 18;
-      let step = 0;
-      const fade = setInterval(() => {
-        step++;
-        bgAudio.volume = (targetVol/steps)*step;
-        if(step>=steps) clearInterval(fade);
-      }, 60);
-    }
-
-    // single pointer movement counts as user gesture in all major browsers
-    document.addEventListener('pointermove', unmuteAndFadeIn, { once:true, passive:true });
-
-    /* -------------------- main button click -------------------- */
-    beginBtn.addEventListener('click', () => {
-      // fade out cello pad over 1 s
-      const fadeDuration = 1000; // ms
-      const fadeSteps = 20;
-      const stepTime = fadeDuration / fadeSteps;
-      let currentStep = 0;
-      const initialVol = bgAudio.volume;
-      const fade = setInterval(() => {
-        currentStep++;
-        bgAudio.volume = initialVol * (1 - currentStep / fadeSteps);
-        if (currentStep >= fadeSteps) {
-          clearInterval(fade);
-          bgAudio.pause();
-          bgAudio.currentTime = 0;
-        }
-      }, stepTime);
-
-      introImg.style.opacity  = '0';
-      beginBtn.style.opacity  = '0';
-      beginBtn.style.pointerEvents = 'none';
-
-      videoWrap.style.opacity = '1';
-      video.play();
-    });
-
-    /*  show archetype fork when intro video ends  */
-    video.addEventListener('ended', () => {
-      choices.style.display = 'flex';
-    });
-
-    /*  branch loader  */
-    function loadVideo(path){
-      video.src = `{{ '/assets/videos/' | relative_url }}${path}.mp4`;
-      choices.style.display = 'none';
-      video.play();
-    }
-  </script>
+    videoWrap.innerHTML = `<video id="branchVid" controls autoplay playsinline style="width:100%;height:auto"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
+    document.getElementById('choices').style.display='none';
+  }
+</script>
 </body>
 </html>
