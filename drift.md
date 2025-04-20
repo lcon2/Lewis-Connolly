@@ -73,10 +73,10 @@ layout: null
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       opacity: 0;
-      z-index: 2;
+      z-index: 3;
       transition: opacity 2s ease;
       pointer-events: none;
     }
@@ -90,7 +90,7 @@ layout: null
       transform: translateX(-50%);
       object-fit: cover;
       opacity: 0;
-      z-index: 3;
+      z-index: 4;
       transition: opacity 2s ease;
       pointer-events: none;
     }
@@ -99,7 +99,7 @@ layout: null
       display: none;
       position: fixed;
       inset: 0;
-      z-index: 4;
+      z-index: 5;
       justify-content: center;
       align-items: center;
     }
@@ -113,11 +113,11 @@ layout: null
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="">
   <button id="beginBtn">Drift</button>
 
-  <!-- Overlay images -->
+  <!-- Overlays -->
   <img id="blackOverlay" src="{{ '/assets/images/black.png' | relative_url }}" alt="Black Overlay">
   <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors Overlay">
 
-  <!-- YouTube container -->
+  <!-- YouTube container goes *behind* overlays -->
   <div id="video-container"></div>
 
   <!-- Choices overlay -->
