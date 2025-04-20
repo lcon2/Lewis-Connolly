@@ -18,8 +18,26 @@ layout: null
 
   <!-- YouTube IFrame API -->
   <script src="https://www.youtube.com/iframe_api" defer></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #video-container, #driftYT, iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
-<body style="margin:0;overflow:hidden;">
+<body>
   <!-- Background audio -->
   <audio id="bgAudio" src="{{ '/assets/audio/cello.mp3' | relative_url }}" preload="auto" loop muted playsinline></audio>
 
@@ -28,7 +46,7 @@ layout: null
   <button id="beginBtn" style="z-index:2;">Drift</button>
 
   <!-- YouTube container full-screen -->
-  <div id="video-container" style="position:fixed;inset:0;opacity:0;z-index:0;">
+  <div id="video-container" style="z-index:0; opacity:0;">
     <div id="driftYT"></div>
   </div>
 
@@ -63,24 +81,36 @@ layout: null
   let ytPlayer;
   function onYouTubeIframeAPIReady(){
     ytPlayer = new YT.Player('driftYT',{
-      width:'100%',height:'100%',videoId:'RmKkHZ-7rcY',
+      width:'100%',
+      height:'100%',
+      videoId:'RmKkHZ-7rcY',
       playerVars:{autoplay:0,controls:0,modestbranding:1,rel:0,fs:0,iv_load_policy:3,playsinline:1},
       events:{onReady:onPlayerReady,onStateChange:onPlayerStateChange}
     });
   }
+
   function onPlayerReady(){
-    // full screen iframe
     const el = document.getElementById('driftYT');
     el.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
   }
-  function onPlayerStateChange(e){ if(e.data===0) document.getElementById('choices').style.display='flex'; }
+
+  function onPlayerStateChange(e){
+    if(e.data===0) document.getElementById('choices').style.display='flex';
+  }
 
   // Start intro
-  const introImg = document.getElementById('introImage'), btn=document.getElementById('beginBtn'), vidWrap=document.getElementById('video-container');
+  const introImg = document.getElementById('introImage'),
+        btn = document.getElementById('beginBtn'),
+        vidWrap = document.getElementById('video-container');
+
   btn.addEventListener('click',()=>{
-    // fade audio
-    let s=0,iv=setInterval(()=>{s++;bgAudio.volume*= (1 - s/20); if(s>=20){clearInterval(iv); bgAudio.pause();}} ,50);
-    introImg.style.opacity=0; btn.style.display='none'; vidWrap.style.opacity=1;
+    let s=0,iv=setInterval(()=>{
+      s++; bgAudio.volume*= (1 - s/20);
+      if(s>=20){clearInterval(iv); bgAudio.pause();}
+    },50);
+    introImg.style.opacity=0;
+    btn.style.display='none';
+    vidWrap.style.opacity=1;
     ytPlayer.playVideo();
   });
 
@@ -88,7 +118,7 @@ layout: null
   function loadVideo(path){
     ytPlayer.destroy();
     const vc = document.getElementById('video-container');
-    vc.innerHTML = `<video id="branchVid" autoplay playsinline style="width:100%;height:100%;"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
+    vc.innerHTML = `<video id="branchVid" autoplay playsinline style="width:100vw;height:100vh;object-fit:cover;"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
     document.getElementById('choices').style.display='none';
   }
 </script>
