@@ -51,22 +51,22 @@ layout: null
       z-index: 1;
     }
 
-#beginBtn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  font-size: 1.5rem;
-  padding: 0.75em 1.5em;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffd;
-  border: 2px solid #ffd;
-  border-radius: 12px;
-  font-family: 'Great Vibes', cursive;
-  cursor: pointer;
-  transition: opacity 0.5s ease;
-}
+    #beginBtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 1.5rem;
+      padding: 0.75em 1.5em;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffeb3b; /* sunshine yellow */
+      border: 2px solid #ffeb3b;
+      border-radius: 12px;
+      font-family: 'Great Vibes', cursive;
+      cursor: pointer;
+      transition: opacity 0.5s ease;
+    }
 
     #choices {
       display: none;
@@ -86,7 +86,7 @@ layout: null
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="">
   <button id="beginBtn">Drift</button>
 
-  <!-- Fullscreen YouTube Embed -->
+  <!-- Muted autoplay to satisfy browser -->
   <div id="video-container">
     <iframe
       src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&mute=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
@@ -108,6 +108,10 @@ layout: null
 
 <script>
   const bgAudio = document.getElementById('bgAudio');
+  const introImg = document.getElementById('introImage');
+  const btn = document.getElementById('beginBtn');
+  const vidWrap = document.getElementById('video-container');
+
   document.addEventListener('DOMContentLoaded', () => {
     bgAudio.volume = 0;
     bgAudio.play().catch(() => {});
@@ -125,11 +129,8 @@ layout: null
     }
   }, { once: true, passive: true });
 
-  const introImg = document.getElementById('introImage');
-  const btn = document.getElementById('beginBtn');
-  const vidWrap = document.getElementById('video-container');
-
   btn.addEventListener('click', () => {
+    // fade out cello
     let s = 0;
     const iv = setInterval(() => {
       s++;
@@ -142,6 +143,16 @@ layout: null
 
     introImg.style.opacity = 0;
     btn.style.display = 'none';
+
+    // replace muted iframe with unmuted iframe
+    vidWrap.innerHTML = `
+      <iframe
+        src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+    `;
     vidWrap.style.opacity = 1;
   });
 
