@@ -69,6 +69,18 @@ layout: null
       transition: opacity 0.5s ease;
     }
 
+    #blackOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 2s ease;
+      pointer-events: none;
+    }
+
     #doorsOverlay {
       position: fixed;
       top: 0;
@@ -76,9 +88,9 @@ layout: null
       width: 90vw;
       height: 100vh;
       transform: translateX(-50%);
-      object-fit: contain;
+      object-fit: cover;
       opacity: 0;
-      z-index: 2;
+      z-index: 3;
       transition: opacity 2s ease;
       pointer-events: none;
     }
@@ -87,7 +99,7 @@ layout: null
       display: none;
       position: fixed;
       inset: 0;
-      z-index: 3;
+      z-index: 4;
       justify-content: center;
       align-items: center;
     }
@@ -101,10 +113,11 @@ layout: null
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="">
   <button id="beginBtn">Drift</button>
 
-  <!-- Doors Overlay -->
-  <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors">
+  <!-- Overlay images -->
+  <img id="blackOverlay" src="{{ '/assets/images/black.png' | relative_url }}" alt="Black Overlay">
+  <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors Overlay">
 
-  <!-- Placeholder YouTube container (iframe is injected later) -->
+  <!-- YouTube container -->
   <div id="video-container"></div>
 
   <!-- Choices overlay -->
@@ -122,6 +135,7 @@ layout: null
   const introImg = document.getElementById('introImage');
   const btn = document.getElementById('beginBtn');
   const vidWrap = document.getElementById('video-container');
+  const blackOverlay = document.getElementById('blackOverlay');
   const doorsOverlay = document.getElementById('doorsOverlay');
 
   let ytPlayer;
@@ -172,7 +186,7 @@ layout: null
     `;
     vidWrap.style.opacity = 1;
 
-    // Wait a moment for iframe to be in DOM, then create YT player
+    // Wait and initialize player
     setTimeout(() => {
       ytPlayer = new YT.Player('ytPlayerFrame', {
         events: {
@@ -183,14 +197,14 @@ layout: null
   });
 
   function onPlayerReady() {
-    // Poll for current time
     const poll = setInterval(() => {
       if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
       const time = ytPlayer.getCurrentTime();
       if (time >= 56 && !window._doorsRevealed) {
         window._doorsRevealed = true;
+        blackOverlay.style.opacity = 1;
         doorsOverlay.style.opacity = 1;
-        clearInterval(poll); // optional: stop checking
+        clearInterval(poll);
       }
     }, 500);
   }
