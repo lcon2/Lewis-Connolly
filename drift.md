@@ -40,15 +40,15 @@ layout: null
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 177.78vh; /* 100 * (16/9) */
-      height: 100vh;
       transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 56.25vw; /* = 100vw * 9 / 16 */
     }
 
-    @media (min-aspect-ratio: 16/9) {
+    @media (max-aspect-ratio: 16/9) {
       #driftYT {
-        width: 100vw;
-        height: 56.25vw; /* 100 / (16/9) */
+        width: 177.78vh; /* = 100vh * 16 / 9 */
+        height: 100vh;
       }
     }
 
