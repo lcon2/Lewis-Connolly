@@ -28,12 +28,22 @@ layout: null
       overflow: hidden;
     }
 
-    #video-container, #driftYT, iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
+    #video-container {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      opacity: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #driftYT iframe {
+      width: 177.77vh; /* 100 * (16/9) */
       height: 100vh;
+      transform: scale(1.2); /* Adjust to taste */
+      transform-origin: center;
     }
   </style>
 </head>
@@ -46,7 +56,7 @@ layout: null
   <button id="beginBtn" style="z-index:2;">Drift</button>
 
   <!-- YouTube container full-screen -->
-  <div id="video-container" style="z-index:0; opacity:0;">
+  <div id="video-container">
     <div id="driftYT"></div>
   </div>
 
@@ -81,8 +91,6 @@ layout: null
   let ytPlayer;
   function onYouTubeIframeAPIReady(){
     ytPlayer = new YT.Player('driftYT',{
-      width:'100%',
-      height:'100%',
       videoId:'RmKkHZ-7rcY',
       playerVars:{autoplay:0,controls:0,modestbranding:1,rel:0,fs:0,iv_load_policy:3,playsinline:1},
       events:{onReady:onPlayerReady,onStateChange:onPlayerStateChange}
@@ -90,8 +98,7 @@ layout: null
   }
 
   function onPlayerReady(){
-    const el = document.getElementById('driftYT');
-    el.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;';
+    document.getElementById('driftYT').style.display = 'block';
   }
 
   function onPlayerStateChange(e){
@@ -105,7 +112,7 @@ layout: null
 
   btn.addEventListener('click',()=>{
     let s=0,iv=setInterval(()=>{
-      s++; bgAudio.volume*= (1 - s/20);
+      s++; bgAudio.volume *= (1 - s/20);
       if(s>=20){clearInterval(iv); bgAudio.pause();}
     },50);
     introImg.style.opacity=0;
