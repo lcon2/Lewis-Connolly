@@ -71,10 +71,12 @@ layout: null
 
     #doorsOverlay {
       position: fixed;
-      inset: 0;
-      width: 100vw;
+      top: 0;
+      left: 50%;
+      width: 90vw;
       height: 100vh;
-      object-fit: cover;
+      transform: translateX(-50%);
+      object-fit: contain;
       opacity: 0;
       z-index: 2;
       transition: opacity 2s ease;
