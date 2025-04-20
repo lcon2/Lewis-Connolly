@@ -8,15 +8,15 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drift</title>
 
-  <!-- Cursive font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Drift styles -->
+  <!-- Styles -->
   <link href="{{ '/assets/css/drift.css' | relative_url }}" rel="stylesheet">
 
-  <!-- YouTube IFrame API -->
+  <!-- YouTube API -->
   <script src="https://www.youtube.com/iframe_api" defer></script>
 
   <style>
@@ -38,23 +38,32 @@ layout: null
 
     #driftYT {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100vw;
-      height: 56.25vw; /* = 100vw * 9 / 16 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
 
-    @media (max-aspect-ratio: 16/9) {
-      #driftYT {
-        width: 177.78vh; /* = 100vh * 16 / 9 */
-        height: 100vh;
+    #driftYT iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.77vh; /* Default: wide screen */
+      height: 100vh;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      #driftYT iframe {
+        width: 100vw;
+        height: 56.25vw;
       }
     }
 
     iframe {
-      width: 100%;
-      height: 100%;
       border: none;
     }
   </style>
@@ -63,7 +72,7 @@ layout: null
   <!-- Background audio -->
   <audio id="bgAudio" src="{{ '/assets/audio/cello.mp3' | relative_url }}" preload="auto" loop muted playsinline></audio>
 
-  <!-- Entry still & button -->
+  <!-- Entry image and button -->
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="" style="position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
   <button id="beginBtn" style="z-index:2;">Drift</button>
 
@@ -89,7 +98,7 @@ layout: null
     bgAudio.play().catch(()=>{});
   });
   document.addEventListener('pointermove', () => {
-    if(bgAudio.muted){
+    if (bgAudio.muted) {
       bgAudio.muted = false;
       let step = 0;
       const fade = setInterval(() => {
