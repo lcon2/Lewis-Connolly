@@ -51,10 +51,22 @@ layout: null
       z-index: 1;
     }
 
-    #beginBtn {
-      z-index: 2;
-      position: relative;
-    }
+#beginBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 1.5rem;
+  padding: 0.75em 1.5em;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffd;
+  border: 2px solid #ffd;
+  border-radius: 12px;
+  font-family: 'Great Vibes', cursive;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
 
     #choices {
       display: none;
