@@ -15,9 +15,7 @@ layout: null
 
   <!-- Styles -->
   <link href="{{ '/assets/css/drift.css' | relative_url }}" rel="stylesheet">
-
-  <!-- YouTube IFrame API -->
-  <script src="https://www.youtube.com/iframe_api" defer></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 
   <style>
     html, body {
@@ -104,15 +102,8 @@ layout: null
   <!-- Doors Overlay -->
   <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors">
 
-  <!-- Muted iframe autoplay (replaced with unmuted on click) -->
-  <div id="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&mute=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&enablejsapi=1"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <!-- Placeholder YouTube container (iframe is injected later) -->
+  <div id="video-container"></div>
 
   <!-- Choices overlay -->
   <div id="choices">
@@ -125,32 +116,14 @@ layout: null
   </div>
 
 <script>
+  const bgAudio = document.getElementById('bgAudio');
+  const introImg = document.getElementById('introImage');
+  const btn = document.getElementById('beginBtn');
+  const vidWrap = document.getElementById('video-container');
+  const doorsOverlay = document.getElementById('doorsOverlay');
+
   let ytPlayer;
 
-  // YouTube API will call this
-  function onYouTubeIframeAPIReady() {
-    ytPlayer = new YT.Player('ytFrame', {
-      events: {
-        onReady: onPlayerReady
-      }
-    });
-  }
-
-  // Watch for timestamp to show overlay
-  function onPlayerReady() {
-    const doorsOverlay = document.getElementById('doorsOverlay');
-    setInterval(() => {
-      if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
-      const time = ytPlayer.getCurrentTime();
-      if (time >= 56 && !window._doorsRevealed) {
-        window._doorsRevealed = true;
-        doorsOverlay.style.opacity = 1;
-      }
-    }, 500);
-  }
-
-  // Background music fade-in
-  const bgAudio = document.getElementById('bgAudio');
   document.addEventListener('DOMContentLoaded', () => {
     bgAudio.volume = 0;
     bgAudio.play().catch(() => {});
@@ -168,13 +141,8 @@ layout: null
     }
   }, { once: true, passive: true });
 
-  // Start video with audio on click
-  const introImg = document.getElementById('introImage');
-  const btn = document.getElementById('beginBtn');
-  const vidWrap = document.getElementById('video-container');
-
   btn.addEventListener('click', () => {
-    // Fade out background music
+    // Fade out cello music
     let s = 0;
     const iv = setInterval(() => {
       s++;
@@ -188,21 +156,43 @@ layout: null
     introImg.style.opacity = 0;
     btn.style.display = 'none';
 
-    // Replace iframe with unmuted YouTube player
+    // Inject YouTube iframe
     vidWrap.innerHTML = `
-      <iframe
-        id="ytFrame"
-        src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&loop=1&controls=0&enablejsapi=1&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-      </iframe>
+      <div id="ytPlayerHolder">
+        <iframe
+          id="ytPlayerFrame"
+          src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&loop=1&controls=0&enablejsapi=1&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
+      </div>
     `;
-
     vidWrap.style.opacity = 1;
+
+    // Wait a moment for iframe to be in DOM, then create YT player
+    setTimeout(() => {
+      ytPlayer = new YT.Player('ytPlayerFrame', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }, 500);
   });
 
-  // Replace with video clip
+  function onPlayerReady() {
+    // Poll for current time
+    const poll = setInterval(() => {
+      if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
+      const time = ytPlayer.getCurrentTime();
+      if (time >= 56 && !window._doorsRevealed) {
+        window._doorsRevealed = true;
+        doorsOverlay.style.opacity = 1;
+        clearInterval(poll); // optional: stop checking
+      }
+    }, 500);
+  }
+
   function loadVideo(path) {
     ytPlayer?.destroy?.();
     const vc = document.getElementById('video-container');
