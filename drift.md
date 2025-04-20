@@ -16,6 +16,9 @@ layout: null
   <!-- Styles -->
   <link href="{{ '/assets/css/drift.css' | relative_url }}" rel="stylesheet">
 
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+
   <style>
     html, body {
       margin: 0;
@@ -60,12 +63,24 @@ layout: null
       font-size: 1.5rem;
       padding: 0.75em 1.5em;
       background: rgba(0, 0, 0, 0.6);
-      color: #ffeb3b; /* sunshine yellow */
+      color: #ffeb3b;
       border: 2px solid #ffeb3b;
       border-radius: 12px;
       font-family: 'Great Vibes', cursive;
       cursor: pointer;
       transition: opacity 0.5s ease;
+    }
+
+    #doorsOverlay {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 2s ease;
+      pointer-events: none;
     }
 
     #choices {
@@ -86,10 +101,13 @@ layout: null
   <img id="introImage" src="{{ '/assets/images/trees.png' | relative_url }}" alt="">
   <button id="beginBtn">Drift</button>
 
-  <!-- Muted autoplay to satisfy browser -->
+  <!-- Doors Overlay -->
+  <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors">
+
+  <!-- Muted iframe autoplay (replaced with unmuted on click) -->
   <div id="video-container">
     <iframe
-      src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&mute=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
+      src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&mute=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&enablejsapi=1"
       frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen>
@@ -107,11 +125,32 @@ layout: null
   </div>
 
 <script>
-  const bgAudio = document.getElementById('bgAudio');
-  const introImg = document.getElementById('introImage');
-  const btn = document.getElementById('beginBtn');
-  const vidWrap = document.getElementById('video-container');
+  let ytPlayer;
 
+  // YouTube API will call this
+  function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('ytFrame', {
+      events: {
+        onReady: onPlayerReady
+      }
+    });
+  }
+
+  // Watch for timestamp to show overlay
+  function onPlayerReady() {
+    const doorsOverlay = document.getElementById('doorsOverlay');
+    setInterval(() => {
+      if (!ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
+      const time = ytPlayer.getCurrentTime();
+      if (time >= 56 && !window._doorsRevealed) {
+        window._doorsRevealed = true;
+        doorsOverlay.style.opacity = 1;
+      }
+    }, 500);
+  }
+
+  // Background music fade-in
+  const bgAudio = document.getElementById('bgAudio');
   document.addEventListener('DOMContentLoaded', () => {
     bgAudio.volume = 0;
     bgAudio.play().catch(() => {});
@@ -129,8 +168,13 @@ layout: null
     }
   }, { once: true, passive: true });
 
+  // Start video with audio on click
+  const introImg = document.getElementById('introImage');
+  const btn = document.getElementById('beginBtn');
+  const vidWrap = document.getElementById('video-container');
+
   btn.addEventListener('click', () => {
-    // fade out cello
+    // Fade out background music
     let s = 0;
     const iv = setInterval(() => {
       s++;
@@ -144,19 +188,23 @@ layout: null
     introImg.style.opacity = 0;
     btn.style.display = 'none';
 
-    // replace muted iframe with unmuted iframe
+    // Replace iframe with unmuted YouTube player
     vidWrap.innerHTML = `
       <iframe
-        src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&loop=1&controls=0&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
+        id="ytFrame"
+        src="https://www.youtube.com/embed/RmKkHZ-7rcY?autoplay=1&loop=1&controls=0&enablejsapi=1&playlist=RmKkHZ-7rcY&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
         frameborder="0"
         allow="autoplay; fullscreen"
         allowfullscreen>
       </iframe>
     `;
+
     vidWrap.style.opacity = 1;
   });
 
+  // Replace with video clip
   function loadVideo(path) {
+    ytPlayer?.destroy?.();
     const vc = document.getElementById('video-container');
     vc.innerHTML = `<video id="branchVid" autoplay playsinline muted style="width:100vw;height:100vh;object-fit:cover;"><source src="${'{{ '/assets/videos/' | relative_url }}'+path+'.mp4'}" type="video/mp4"></video>`;
     document.getElementById('choices').style.display = 'none';
