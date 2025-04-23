@@ -20,7 +20,7 @@ og_image: /assets/images/Chess.png
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am not sure how useful these terms are when I think about myself. My own sense of self feels more amorphous. It shifts depending on what I’m thinking about or focused on at the time. As long as I can remember—since roughly age six or seven—I have been a computer game player, and I’ve enjoyed a broad range of genres, but probably most of all, strategy games. Zoomed out, concerned more with trajectory than granularity. We can argue chicken or egg: do I play strategy games because I’m predisposed to strategic thinking, or have the games made a strategist out of me? Probably a bit of both. So, I imagine possible futures, I see desirable outcomes and less desirable outcomes, and I seek to nudge reality toward the desirable—desirable for myself and my family. I, of course, have a conception of self in this; part of what it is to determine desirability is to know thyself. There are things that seem more or less universally desirable, some that are subjectively desirable, and some things which seem ideologically desirable. So, this framing obviously suggests that I am in Strawson’s diachronic category. As far as I’m concerned, this future person is me—and I’m doing my best to steer myself not according to the expectations of others or society, but toward what is good for me. What is the good?
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On the other hand, I do have an Eastern spirituality, non-dualist bent, though it tends to slip through my fingers when I hold it too tightly. I am particularly taken with the teachings of Rupert Spira, a British spiritual philosopher. (Incidentally, I am unaware of any kind of comparative analysis between the work of Spira and Strawson. I do feel there is a remarkable amount of similarity, though I doubt Strawson would appreciate the comparison.)[^1]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On the other hand, I do have an Eastern spirituality, non-dualist bent, though it tends to slip through my fingers when I hold it too tightly. I am particularly taken with the teachings of Rupert Spira, a British spiritual philosopher. (Incidentally, I am unaware of any kind of comparative analysis between the work of Spira and Strawson. I do feel there is a remarkable amount of similarity, though I doubt Strawson would appreciate the comparison.)<sup>[1]</sup>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spira invites us to turn attention inward—back upon the one doing the experiencing. This awareness, this seamless sense of being, seems to dissolve the coherence of Strawson’s categories. Strawson’s framing feels more concerned with the conceptual scaffolding we build on top of our experiencing self than with the immediacy of experience itself.
 
@@ -34,9 +34,9 @@ og_image: /assets/images/Chess.png
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The more one looks for a fixed self, the more it slips away. All that remains is awareness itself, watching it all unfold.
 
-[^1]: The stark difference is Strawson’s hazy use of the word “matter,” which seems less about clarity and more about distancing himself from spiritual philosophers like Spira.
 
-<div style="margin-top: 40px;"></div>
+<div style="font-size: 0.9em; margin-top: 0.5em; margin-bottom: 2em;">
+[^1]: The stark difference is Strawson’s hazy use of the word “matter,” which seems less about clarity and more about distancing himself from spiritual philosophers like Spira.
 
 📚 Bibliography
 
