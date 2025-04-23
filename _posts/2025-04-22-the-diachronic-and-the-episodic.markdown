@@ -34,8 +34,6 @@ og_image: /assets/images/Chess.png
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The more one looks for a fixed self, the more it slips away. All that remains is awareness itself, watching it all unfold.
 
-
-<div style="font-size: 0.9em; margin-top: 0.5em; margin-bottom: 2em;">
 [^1]: The stark difference is Strawson’s hazy use of the word “matter,” which seems less about clarity and more about distancing himself from spiritual philosophers like Spira.
 
 📚 Bibliography
