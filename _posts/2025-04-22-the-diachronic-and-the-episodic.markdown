@@ -42,8 +42,8 @@ og_image: /assets/images/Chess.png
 
 - Spira, Rupert. *The Essence of Non-Duality: Ego, Love, Awareness, Death & Happiness.*  
   YouTube, uploaded by Science and Nonduality.  
-  [Watch on YouTube](https://www.youtube.com/watch?v=Smqgkab8HZI)
+  <a href="https://www.youtube.com/watch?v=Smqgkab8HZI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
 
 - Strawson, Galen. *What are Selves?*  
   YouTube, uploaded by Closer To Truth.  
-  [Watch on YouTube](https://www.youtube.com/watch?v=qh0qASdSsNY)
+  <a href="https://www.youtube.com/watch?v=qh0qASdSsNY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
