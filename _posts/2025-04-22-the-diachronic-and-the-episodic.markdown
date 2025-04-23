@@ -5,10 +5,10 @@ date: 2025-04-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-og_image: /assets/images/chess.png
+og_image: /assets/images/Chess.png
 ---
 
-<img src="{{ '/assets/images/chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I recently came across the work of Galen Strawson, a British philosopher who is a professor at the University of Texas, Austin. His work generally revolves around issues like the philosophy of mind and consciousness. While I don't necessarily share his conclusions, his ideas have made me reflect on my own positions. I spent some time getting my head around his views on panpsychism, and although intriguing, I am unconvinced that his idea—that everything has consciousness, but subjectivity emerges only when matter is arranged in a particular way—solves any problem that the mainstream scientific perspective (in which consciousness emerges when a certain threshold of complexity is reached) does not.
 
@@ -35,3 +35,15 @@ og_image: /assets/images/chess.png
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The more one looks for a fixed self, the more it slips away. All that remains is awareness itself, watching it all unfold.
 
 [^1]: The stark difference is Strawson’s hazy use of the word “matter,” which seems less about clarity and more about distancing himself from spiritual philosophers like Spira.
+
+📚 Bibliography
+
+- Strawson, Galen. *Selves: An Essay in Revisionary Metaphysics.* Oxford University Press, 2009.
+
+- Spira, Rupert. *The Essence of Non-Duality: Ego, Love, Awareness, Death & Happiness.*  
+  YouTube, uploaded by Science and Nonduality.  
+  [Watch on YouTube](https://www.youtube.com/watch?v=Smqgkab8HZI)
+
+- Strawson, Galen. *What are Selves?*  
+  YouTube, uploaded by Closer To Truth.  
+  [Watch on YouTube](https://www.youtube.com/watch?v=qh0qASdSsNY)
