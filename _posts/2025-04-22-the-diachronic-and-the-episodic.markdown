@@ -36,6 +36,8 @@ og_image: /assets/images/Chess.png
 
 [^1]: The stark difference is Strawson’s hazy use of the word “matter,” which seems less about clarity and more about distancing himself from spiritual philosophers like Spira.
 
+<div style="margin-top: 40px;"></div>
+
 📚 Bibliography
 
 - Strawson, Galen. *Selves: An Essay in Revisionary Metaphysics.* Oxford University Press, 2009.
