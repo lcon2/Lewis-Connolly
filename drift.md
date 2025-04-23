@@ -117,7 +117,7 @@ layout: null
   <img id="blackOverlay" src="{{ '/assets/images/black.png' | relative_url }}" alt="Black Overlay">
   <img id="doorsOverlay" src="{{ '/assets/images/doors.png' | relative_url }}" alt="Doors Overlay">
 
-  <!-- YouTube container goes *behind* overlays -->
+  <!-- YouTube container -->
   <div id="video-container"></div>
 
   <!-- Choices overlay -->
@@ -202,8 +202,15 @@ layout: null
       const time = ytPlayer.getCurrentTime();
       if (time >= 56 && !window._doorsRevealed) {
         window._doorsRevealed = true;
-        blackOverlay.style.opacity = 1;
+
+        // Fade in doors.png immediately
         doorsOverlay.style.opacity = 1;
+
+        // Fade in black.png after 1s delay
+        setTimeout(() => {
+          blackOverlay.style.opacity = 1;
+        }, 1000);
+
         clearInterval(poll);
       }
     }, 500);
