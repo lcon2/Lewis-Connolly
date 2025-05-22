@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Frankl and the Horizon of Meaning"
-date: 2025-05-22
+date: 2025-05-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
