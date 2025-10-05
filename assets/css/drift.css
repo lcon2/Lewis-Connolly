@@ -1,0 +1,101 @@
+/* ---------- base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #111;
+    color: #f4f4f4;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* ---------- intro still image ---------- */
+  #introImage {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+    z-index: 0; /* sits at the bottom of the stack */
+  }
+  
+/* ---------- "Drift" button ---------- */
+#beginBtn {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: calc(0.75rem + 1px) 3rem calc(0.75rem - 1px); /* nudged text down 1 px */
+    font-size: 2.2rem;
+    font-family: 'Great Vibes', 'Brush Script MT', cursive;
+    color: #FFD54F;                  /* sun‑yellow text */
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid #FFD54F;       /* matching sun‑yellow border */
+    border-radius: 1.25rem;          /* gently curved corners */
+    text-indent: -5px;               /* nudge text 5 px left */
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;            /* enabled after fade‑in */
+    transition: opacity 0.8s ease-out, background 0.3s;
+    animation: fadeIn 1s forwards 3s;/* show after 3 s */
+    z-index: 10;                     /* ensure it sits above the image */
+  }
+  
+  /* hover effect — lighter background, no movement */
+  #beginBtn:hover {
+    background: rgba(255, 255, 255, 0.20); /* lighter on hover */
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
+  /* ---------- video container ---------- */
+  #video-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: 5; /* stays beneath the button until activated */
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  
+  /* ---------- choice thumbnails ---------- */
+  #choices {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+  }
+  
+  .choice {
+    background: #222;
+    border: 1px solid #444;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .choice:hover {
+    background: #333;
+  }
+  

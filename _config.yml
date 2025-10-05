@@ -1,0 +1,36 @@
+# Site settings
+title: Lewis Connolly
+email: your-email@example.com
+description: >-
+  This is the website of Lewis Connolly. I write about meaning, philosophy,
+  spirituality, history, and psychology. I’m particularly interested in belief,
+  because people do not act on truths; it’s their beliefs that move them.
+baseurl: ""  # Leave empty if your site is hosted at the root of your domain
+url: "https://lewisconnolly.com"  # Full URL of your site
+
+# Social media
+twitter_username: jekyllrb
+github_username: jekyll
+
+# Permalink settings
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Build settings
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Optional: Enable incremental builds for faster local development
+incremental: true

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVG9646266"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KVG9646266');
+    </script>
+</head>
+<body class="home">
+    <nav class="navbar">
+        <!-- Wrapper for Logo and Navigation Menu -->
+        <div class="navbar-content">
+            <!-- Logo -->
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-menu">
+                <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+                <li><a href="https://buymeacoffee.com/lewisconnolly/membership" target="_blank" rel="noopener noreferrer">Support</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section (Buy Me a Coffee) -->
+        <div class="navbar-right">
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <p>  This is the website of Lewis Connolly. I write about meaning, philosophy, spirituality, history, psychology, and technology. I’m particularly interested in belief, because people do not act on truths; it’s their beliefs that move them.</p>
+    </section>
+
+    <div class="content-grid">
+        <!-- Newest Section -->
+        <div class="content-section" id="newest">
+            <h2>NEWEST</h2>
+            <ul>
+                {% for post in site.posts limit:11 %}
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="{{ post.url }}">{{ post.title | truncate: 45 }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+<!-- Popular Section -->
+<div class="content-section" id="popular">
+    <h2>POPULAR</h2>
+    <ul>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/drift">Drift</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/09/a-guide-to-active-imagination">A Guide to Active Imagination</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/05/14/reflecting-on-william-james">Reflecting on William James</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/09/12/cain-and-abel">Cain &amp; Abel</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/03/15/seneca-and-nero">Seneca &amp; Nero</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/24/britannia-marianne-and-columbia">Britannia, Marianne, &amp; Columbia</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/06/03/the-giving-tree">The Giving Tree</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2016-12-14-bodhi-sunday-in-advent">Bodhi Sunday in Advent</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/02/21/unitarians-think-quaker">Unitarians Think Quaker</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/02/28/alchemy-of-the-soul">Alchemy of the Soul</a></li>
+        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/11/26/the-fool">The Fool</a></li>
+    </ul>
+</div>
+        
+        <!-- Oldies Section -->
+        <div class="content-section" id="oldies">
+            <h2>OLDIES</h2>
+            <ul>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/06/wotan-dormant-in-the-wood">Wotan Dormant in the Wood</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/11/04/algernon-blackwood-life-and-works">Algernon Blackwood Life and Works</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/02/11/the-alchemists-beaker">The Alchemist's Beaker</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/04/the-green-snake-and-the-beautiful-lily">The Green Snake and the Beautiful Lily</a></li>            
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/04/08/western-esotericism-lineage">Western Esotericism's Lineage</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/08/20/the-scythe-of-saturn">The Scythe of Saturn</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/11/22/rejecting-medievalist-christianity">Rejecting Medievalist Christianity</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/06/08/a-phalanstery">A Phalanstery</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/07/23/pale-fire-lunar-light">Pale Fire Lunar Light</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/12/06/searching-in-the-rye">Searching in the Rye</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/06/06/christian-non-realism">Christian Non-Realism</a></li>
+            </ul>
+        </div>
+
+    </div> <!-- Close the content-grid -->
+
+    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+        <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
+    </footer>
+</body>
+</html>
