@@ -1,5 +1,35 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# See https://git-scm.com/docs/gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env
+.env
+.env.*
+
+# Node / JS builds
+node_modules/
+.next/
+.nuxt/
+dist/
+out/
+.build/
+.cache/
+.vercel/
+.netlify/
+
+# Static site generators
+public/
+.hugo_build.lock
+
+# Misc
+coverage/
+.idea/
+.vscode/
+.sass-cache/
+*.tmp
+
