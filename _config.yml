@@ -1,0 +1,9 @@
+title: "Lewis Connolly"
+description: "Personal site of Lewis Connolly"
+baseurl: ""
+url: "https://lewisconnolly.com"
+
+# Use GitHub Pages default theme
+theme: minima
+plugins:
+  - jekyll-feed
