@@ -1,4 +1,6 @@
 ---
 layout: home
-title: Welcome to My Website
+title: "Home"
 ---
+
+Welcome to my site.
