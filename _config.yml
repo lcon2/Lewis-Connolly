@@ -20,6 +20,9 @@ plugins:
   - jekyll-feed
 
 # Build settings
+future: true  # Allow future dated posts
+
+# Build settings
 exclude:
   - .sass-cache/
   - .jekyll-cache/
