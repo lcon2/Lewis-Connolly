@@ -12,7 +12,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-KVG9646266');
     </script>
 </head>
@@ -44,37 +43,42 @@
 
     <!-- Introduction Section -->
     <section class="intro">
-        <p>  This is the website of Lewis Connolly. I write about meaning, philosophy, spirituality, history, psychology, and technology. I’m particularly interested in belief, because people do not act on truths; it’s their beliefs that move them.</p>
+        <p>This is the website of Lewis Connolly. I write about meaning, philosophy, spirituality, history, psychology, and technology. I’m particularly interested in belief, because people do not act on truths; it’s their beliefs that move them.</p>
     </section>
 
     <div class="content-grid">
-        <!-- Newest Section -->
+
+        <!-- Newest Section (fixed) -->
         <div class="content-section" id="newest">
             <h2>NEWEST</h2>
+            {% assign recent = site.posts | sort: "date" | reverse %}
             <ul>
-                {% for post in site.posts limit:30 %}
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="{{ post.url }}">{{ post.title | truncate: 45 }}</a></li>
+                {% for post in recent limit:11 %}
+                    <li>
+                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon">
+                        <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
 
-<!-- Popular Section -->
-<div class="content-section" id="popular">
-    <h2>POPULAR</h2>
-    <ul>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/drift">Drift</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/09/a-guide-to-active-imagination">A Guide to Active Imagination</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/05/14/reflecting-on-william-james">Reflecting on William James</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/09/12/cain-and-abel">Cain &amp; Abel</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/03/15/seneca-and-nero">Seneca &amp; Nero</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/24/britannia-marianne-and-columbia">Britannia, Marianne, &amp; Columbia</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/06/03/the-giving-tree">The Giving Tree</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2016-12-14-bodhi-sunday-in-advent">Bodhi Sunday in Advent</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/02/21/unitarians-think-quaker">Unitarians Think Quaker</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/02/28/alchemy-of-the-soul">Alchemy of the Soul</a></li>
-        <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/11/26/the-fool">The Fool</a></li>
-    </ul>
-</div>
+        <!-- Popular Section -->
+        <div class="content-section" id="popular">
+            <h2>POPULAR</h2>
+            <ul>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/drift">Drift</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/09/a-guide-to-active-imagination">A Guide to Active Imagination</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/05/14/reflecting-on-william-james">Reflecting on William James</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/09/12/cain-and-abel">Cain &amp; Abel</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/03/15/seneca-and-nero">Seneca &amp; Nero</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/24/britannia-marianne-and-columbia">Britannia, Marianne, &amp; Columbia</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/06/03/the-giving-tree">The Giving Tree</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2016-12-14-bodhi-sunday-in-advent">Bodhi Sunday in Advent</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/02/21/unitarians-think-quaker">Unitarians Think Quaker</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/02/28/alchemy-of-the-soul">Alchemy of the Soul</a></li>
+                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/11/26/the-fool">The Fool</a></li>
+            </ul>
+        </div>
         
         <!-- Oldies Section -->
         <div class="content-section" id="oldies">
