@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some thoughts on Intuition"
-date: 2025-19-05
+date: 2025-10-05
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
