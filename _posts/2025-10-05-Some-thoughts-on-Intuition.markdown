@@ -8,8 +8,6 @@ categories:
 og_image: /assets/images/harryaugust.png
 ---
 
-<img src="{{ '/assets/images/harryaugust.png' | relative_url }}" alt="Harry August" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It’s a little difficult to put myself back in that mind. But I think it was the sense that intuition is a good thing, or something worth valuing, that ultimately led me toward studying Carl Jung at Essex University. And I basically still have the same sense—that intuition is something valuable, interesting, something worth thinking about.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There is a parallel between intuition and small “c” conservatism. Carl Jung is often thought of as the father of the New Age, in particular a distinctive brand of American liberal spirituality—ironic, as Jung was a quintessential small “c” conservative. Take, for example, the conservatism parable: if you find a fence across a field, don’t tear it down just because you see no use for it. First ask why someone put it there—only then can you judge whether it should stay or go. This is a typical Jungian sentiment: that any tradition, institution, way of doing things, or cultural norm should not be destroyed for the sake of it, but rather interrogated, and only destroyed if there is a very good reason to do so.
