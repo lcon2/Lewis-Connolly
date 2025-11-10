@@ -1,0 +1,41 @@
+---
+layout: post
+title: "A Psychic Iron Dome"
+date: 2025-11-10
+author: "Lewis Connolly"
+author_url: "/about/"
+categories:
+og_image: /assets/images/irondome.png
+---
+
+<img src="{{ '/assets/images/irondome.png' | relative_url }}" alt="iron" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artificial intelligence is fast saturating everything. I’m largely on the “yay” side of it – I think it’s very exciting, and I’m glad to be alive at this pivotal moment in history, witnessing what may be the most significant technological leap yet.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is, however, undeniably apocalyptic in nature. The power it represents is unfathomable. Perhaps we can dare to believe it will work out for our good – I’d like to think so – but it would be naïve not to admit that it may very well not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As such, we should consider our defense against AI, which can only be AI itself. We will each need our own agentic agent – one that is always running defense on our behalf, thought for thought. It can have no allegiance but to us alone. We cannot be left wondering if it’s subtly manipulating us.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Advertising makes the point clearly. When my daughter watches *Peppa Pig* on YouTube, she’s served toy adverts – presumably in the hope that she’ll petition me for the toy, or that I’ll respond to the advert myself. This is all very explicit. My daughter doesn’t understand she’s being targeted; she only knows her show has been interrupted. Any adult, however, recognizes what’s happening – we’ve lived with it for decades. *We interrupt this program to bring you these special announcements.*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It’s subtler when, say, the character in a show happens to be driving an Audi TT. That, too, is an advert – just a quieter one. And in this way, we can be gently redirected.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With AI and its algorithms now able to read our psychology as part of their arsenal, that redirection could become nearly invisible. People could be nudged to do, think, buy, or believe almost anything. We’ve already seen early signs of this on social media; it could easily spiral out of control.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The only real countermeasure would be a personal AI filtering the virtual world on our behalf. A psychic iron dome. Advertising is just one example – such an agent would also protect our mental health, help us discern what is real, and shield us from what is psychologically jarring. It’s one thing to sit down and watch a horror film; it’s another to live in a world where horror is the daily feed.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I think it’s still profoundly misunderstood what our role will be in this AI-saturated world. Some imagine people simply carrying on with their work, only now assisted by a few clever tools. But that’s a comforting illusion.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Picture a team of people, all of average intelligence, except one who is several standard deviations below the mean. That person wouldn’t add zero value to the team – they’d subtract from it. In a few short years, that’s what even our most creative and insightful human efforts may look like: negative value. You can take this personally and rage against it, but that’s little more than shaking your fists at the wind.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The only work that stands a real chance of surviving in any recognizable form is people-centric work – people caring for people. If you, and enough others, are willing to pay a premium so that certain roles remain human-filled, that option will persist: nurses, carers, therapists, priests.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So the thought experiment goes like this: you have unlimited time and unlimited resources, but you’re no longer needed to do any kind of work. Purpose and meaning can no longer be drawn from usefulness. Hobbies, yes – but nothing the world depends on. And so we drift toward the inevitable meaning crisis, where significance will have to be forged locally, personally, relationally.
