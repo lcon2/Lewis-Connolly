@@ -5,7 +5,6 @@ date: 2025-10-05
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-og_image: /assets/images/harryaugust.png
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It’s a little difficult to put myself back in that mind. But I think it was the sense that intuition is a good thing, or something worth valuing, that ultimately led me toward studying Carl Jung at Essex University. And I basically still have the same sense—that intuition is something valuable, interesting, something worth thinking about.
