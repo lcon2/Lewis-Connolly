@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don’t Work. And Don't Try"
+title: "Don't Work. And Don't Try"
 date: 2025-11-16
 author: "Lewis Connolly"
 author_url: "/about/"

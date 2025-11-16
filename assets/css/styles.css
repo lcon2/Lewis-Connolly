@@ -202,6 +202,19 @@ body {
     border-bottom-color: #ff9933;
 }
 
+/* Ensure list item titles wrap correctly and don't get visually clipped
+   by decorative underlines or icons. Make links break if necessary and
+   limit their width so the bullet icon has space. */
+.content-section ul li {
+    white-space: normal !important;
+}
+
+.content-section ul li a {
+    display: inline-block;
+    max-width: calc(100% - 36px); /* leave room for bullet icon */
+    word-break: break-word;
+}
+
 /* Blog Post-Specific Styles */
 .post .logo img {
     display: block; /* Ensures it behaves like a block-level element */
