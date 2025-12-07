@@ -8,7 +8,7 @@ categories:
 og_image: /assets/images/feather.png
 ---
 
-<img src="{{ '/assets/images/feather.png' | relative_url }}" alt="feather" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/stairs.png' | relative_url }}" alt="stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s an idea which comes to me less as an idea and more as a memory. Not something discovered, but something quietly recalled, as if it had always been there, waiting beneath the noise.
 
