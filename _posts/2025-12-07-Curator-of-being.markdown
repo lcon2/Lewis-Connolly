@@ -10,7 +10,7 @@ og_image: /assets/images/Stairs.png
 
 <img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One does not always move through life collecting answers. Sometimes one moves by installing provisional worlds. A framework is entered the way one steps into a climate, not to remain there forever, but to feel the weather on the skin, to notice what grows easily under that sky, what withers, what becomes possible, what quietly shuts down.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a certain kind of person who is not quite a believer, not quite a skeptic, not quite a seeker either. One does not always move through life collecting answers. Sometimes one moves by installing provisional worlds. A framework is entered the way one steps into a climate, not to remain there forever, but to feel the weather on the skin, to notice what grows easily under that sky, what withers, what becomes possible, what quietly shuts down.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;They are not loyal to conclusions. They are loyal to experience under conditions.  
 
