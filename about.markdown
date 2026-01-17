@@ -4,6 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
+<img src="{{ '/assets/images/me.png' | relative_url }}" alt="Lewis Connolly" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+
 ## Quotes
 
 > "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."  
