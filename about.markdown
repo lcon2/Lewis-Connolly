@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-<img src="{{ '/assets/images/me.png' | relative_url }}" alt="Lewis Connolly" style="display: block; margin: 20px auto; max-width: 480px; height: auto;">
+<img src="{{ '/assets/images/me2.png' | relative_url }}" alt="Lewis Connolly" style="display: block; margin: 20px auto; max-width: 480px; height: auto;">
 
 ## Quotes
 
