@@ -15,13 +15,24 @@ body {
     margin: 0;
 }
 
+/* Homepage visual direction */
+.home {
+    background-color: #151515;
+    background-image:
+        radial-gradient(900px 380px at 50% -120px, rgba(255, 190, 120, 0.12), rgba(21, 21, 21, 0) 60%),
+        radial-gradient(700px 320px at 20% 30%, rgba(255, 255, 255, 0.06), rgba(21, 21, 21, 0) 65%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(21, 21, 21, 0) 28%);
+}
+
 /* Navigation Bar */
 .home .navbar {
     display: flex;
     justify-content: center; /* Center the combined logo and navigation menu */
     align-items: center;
     padding: 15px 40px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #2c2c2c;
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.95), rgba(21, 21, 21, 0.6));
+    backdrop-filter: blur(4px);
 }
 
 .home .navbar-content {
@@ -109,16 +120,19 @@ body {
 .home .navbar-menu a {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: 1.3em; /* Increased font size for navigation menu */
-    padding: 10px 20px; /* Adds padding inside the dotted squares */
-    border: 2px dotted #f0f0f0; /* Dotted border around the links */
+    font-size: 1.2em;
+    padding: 8px 18px;
+    border: 1px solid #2f2f2f;
+    border-radius: 999px;
+    background: rgba(26, 26, 26, 0.9);
     transition: all 0.3s ease;
 }
 
 .home .navbar-menu a:hover {
-    background-color: #333;
-    border-color: #ff9933; /* Changes border color on hover */
-    color: #ff9933; /* Changes text color on hover */
+    background-color: #242424;
+    border-color: #ff9933;
+    color: #ff9933;
+    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
 }
 
 /* Content Grid */
@@ -243,11 +257,14 @@ body {
 
 /* Intro Section */
 .intro {
-    margin: 20px auto;
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 800px;
-    text-align: center; /* Centers the text */
+    margin: 30px auto 10px;
+    font-size: 1.35em;
+    line-height: 1.7;
+    max-width: 900px;
+    text-align: center;
+    color: #e2ded9;
+    padding: 12px 20px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .home .intro a {
@@ -264,27 +281,33 @@ body {
 }
 
 /* Content Grid */
-.content-grid {
+.home .content-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 40px auto;
-    padding: 0 20px;
+    gap: 24px;
+    margin: 35px auto 50px;
+    padding: 0 24px;
     max-width: 1200px;
-    font-size: 1.2em; /* Matches the font size across the homepage */
+    font-size: 1.1em;
 }
 
-.content-section {
-    padding: 20px;
+.home .content-section {
+    padding: 18px 20px 16px;
     text-align: left;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(24, 24, 24, 0.7);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
-.content-section h2 {
-    font-size: 1.2em;
-    border-bottom: 2px solid #f0f0f0;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+.home .content-section h2 {
+    font-size: 0.95em;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #d8d3cd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
 }
 
 .content-section ul {
@@ -293,18 +316,19 @@ body {
     padding: 0;
 }
 
-.content-section ul li {
-    margin: 10px 0;
+.home .content-section ul li {
+    margin: 12px 0;
 }
 
-.content-section ul li a {
+.home .content-section ul li a {
     color: #f0f0f0;
     text-decoration: none;
-    border-bottom: 1px dotted #f0f0f0;
-    transition: color 0.3s ease;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+    font-size: 1.05em;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
-.content-section ul li a:hover {
+.home .content-section ul li a:hover {
     color: #ff9933;
     border-bottom-color: #ff9933;
 }
@@ -460,7 +484,7 @@ footer {
     margin-top: 40px;
     padding: 20px 0;
     text-align: center; /* Centers the footer text */
-    border-top: 1px solid #444;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 0.9em;
     color: #a0a0a0;
 }
