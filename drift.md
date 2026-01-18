@@ -1,6 +1,6 @@
 ---
 layout: null
-ai_summary: "Drift is a small, interactive meditation: a still image, a word, a doorway, then a slow descent into music and video. It is not a story so much as an atmosphere. You are invited to let the mind wander, then choose between longing and stillness. The piece is about surrender, mood, and gentle choice."
+ai_summary: "An experimental poetry and video experience, created with AI, inspired by the Lowcountry - its marshes, light, and Spanish moss."
 title: "Drift"
 ---
 

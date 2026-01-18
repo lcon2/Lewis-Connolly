@@ -158,11 +158,18 @@
           list.appendChild(li);
         }
 
+        function normalizeUrl(url) {
+          if (!url) return url;
+          return url.replace(/\/+$/, '');
+        }
+
         Array.prototype.slice.call(document.querySelectorAll('.content-section a')).forEach(function (link) {
           if (link.getAttribute('data-summary')) {
             return;
           }
-          var match = allPosts.find(function (post) { return post.url === link.getAttribute('href'); });
+          var match = allPosts.find(function (post) {
+            return normalizeUrl(post.url) === normalizeUrl(link.getAttribute('href'));
+          });
           if (match && match.summary) {
             link.setAttribute('data-summary', match.summary);
           }
