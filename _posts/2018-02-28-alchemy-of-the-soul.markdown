@@ -8,7 +8,7 @@ categories:
   - Aesthetics
   - Spirituality
   - Philosophy
-ai_summary: "Part 1 I’ll begin this morning by defining what Alchemy is. Alchemy was the ancient practice of combining matter, physical stuff, together, in such a way that you produce something with supernatural power. Amen. It was the art of transformation. You can think of the caterpillar – it goes into its cocoon, and therein undergoes a complete transformation. It does..."
+ai_summary: "I describe alchemy as the ancient art of transformation and then turn it inward. The soul is refined the way base metal is refined: through heat, loss, and slow change. Our dark nights are part of the process; they burn away dross and reveal something precious. The spiritual life is an alchemical work, carried out in suffering and grace."
 ---
 ### Part 1
 

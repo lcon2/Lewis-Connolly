@@ -8,7 +8,7 @@ categories:
   - Philosophy
   - Culture
   - History
-ai_summary: "Part 1 This morning we are in first-century Rome, with two individuals: Seneca and Nero. Seneca was a gloomy stoic philosopher, and Nero, the Emperor of Rome, was a crazed, bloodthirsty despot. Amen. They were rather different from one another—Seneca valued sobriety, reason, and moral virtue, and Nero was the exact opposite; he was a crude, self-indulgent exhibitionist who had..."
+ai_summary: "I place Seneca and Nero side by side: the stoic tutor and the violent emperor. Their relationship becomes a meditation on power, character, and the limits of reason in the face of appetite. Seneca's counsel cannot save Nero, and the story becomes a caution about who we follow and what we feed in ourselves. The prayer at the end is for serenity and wisdom."
 ---
 ### Part 1
 

@@ -8,7 +8,7 @@ categories:
   - Narrative
   - Theology
   - Psychology
-ai_summary: "The two brothers, Cain and Abel, are the first two sons of Adam and Eve. It’s an episode which appears very early on in Genesis, the first book of the Bible. Amen. In Genesis chapter 1 we have the first creation account, in chapter 2 the second creation account, in chapter 3 the whole ‘eating of the forbidden fruit’ incident,..."
+ai_summary: "I treat Cain and Abel as myth rather than history, and therefore more urgent. It is a story about resentment, comparison, and the slow birth of violence. The text asks what happens when we refuse gratitude and let the shadow rule. I end by urging attention to what is true, noble, and beautiful, because we become what we dwell on."
 ---
 The two brothers, Cain and Abel, are the first two sons of Adam and Eve. It’s an episode which appears very early on in Genesis, the first book of the Bible. In Genesis chapter 1 we have the first creation account, in chapter 2 the second creation account, in chapter 3 the whole ‘eating of the forbidden fruit’ incident, the first sin, and the couple’s subsequent expulsion from the garden of Eden. And then in chapter 4 is the story of Cain and Abel. The story goes like this: Once Adam and Eve had been expelled and were living outside of the garden of Eden, Eve bore Cain, and then she bore Abel. As far as the mythological account is concerned, Cain and Abel are therefore the first two people to be born of natural means. We’re told that Abel grew up to become a keeper of sheep, and Cain grew up to become a tiller of the ground. But for reasons we’ll get into, their relationship went sour. They became adversarial, and ultimately Cain murdered Abel.
 

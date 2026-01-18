@@ -8,7 +8,7 @@ categories:
   - Psychology
   - Consciousness
   - Meaning
-ai_summary: "Active Imagination is a technique that was developed by Carl Jung to access the unconscious in waking life. When we consider engaging the unconscious, most of us think exclusively of dream analysis - the process of taking our dreams and uncovering what they’re trying to teach us, ideally with the assistance of a trained analyst. This is done by amplifying..."
+ai_summary: "I outline Jung's active imagination as a way of dialoguing with the unconscious beyond dreams. The psyche is an inner other, and this practice lets it speak through images, writing, movement, and art. The task is to stay honest, let the material rise, and then interpret it by amplifying symbols through myth, religion, and story."
 ---
 Active Imagination is a technique that was developed by Carl Jung to access the unconscious in waking life. When we consider engaging the unconscious, most of us think exclusively of dream analysis - the process of taking our dreams and uncovering what they’re trying to teach us, ideally with the assistance of a trained analyst. Jung believed our dreams consisted of the stuff of our unconscious.
 
