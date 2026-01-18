@@ -8,6 +8,7 @@ categories:
   - Aesthetics
   - Culture
   - Meaning
+ai_summary: "The enigmatic nature of the lyrics makes ‘American Pie’ a song practically begging to be analysed. I will certainly not be the first to do so; since it was first released in 1971, it has enticed many to consider its words, even though Don McLean himself has always been reticent to give us all the definitive meaning. Amen. We’re left..."
 ---
 The enigmatic nature of the lyrics makes ‘American Pie’ a song practically begging to be analysed. I will certainly not be the first to do so; since it was first released in 1971, it has enticed many to consider its words, even though Don McLean himself has always been reticent to give us all the definitive meaning. We’re left needing to piece together the parts for ourselves. I can picture myself, quite vividly, sitting in the back of our Cherokee, looking out into the dry Texas landscape, as the music played. A long time ago, in a world so alien to my life as is now, it could almost be unreal. This simple scene epitomises my childhood nostalgia, the world I long to return to, although what that is specifically, what I long for, defies words and logic. There’s nothing specific, just a sense of things as were, a nostalgic sense. And the soundtrack of my nostalgic sense is American Pie.
 

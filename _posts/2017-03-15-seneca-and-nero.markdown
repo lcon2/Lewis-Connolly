@@ -8,6 +8,7 @@ categories:
   - Philosophy
   - Culture
   - History
+ai_summary: "Part 1 This morning we are in first-century Rome, with two individuals: Seneca and Nero. Seneca was a gloomy stoic philosopher, and Nero, the Emperor of Rome, was a crazed, bloodthirsty despot. Amen. They were rather different from one another—Seneca valued sobriety, reason, and moral virtue, and Nero was the exact opposite; he was a crude, self-indulgent exhibitionist who had..."
 ---
 ### Part 1
 

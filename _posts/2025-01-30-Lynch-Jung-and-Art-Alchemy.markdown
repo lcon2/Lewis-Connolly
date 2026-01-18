@@ -9,6 +9,7 @@ categories:
   - Psychology
   - Identity
 og_image: /assets/images/paintinggod.png
+ai_summary: "David Lynch died on January 15th. His work reminds me of abstraction in art and the role that our intuition plays in co-creating it. Princeton University Press. In a lot of movies and TV shows today, you find yourself trying to figure out how the pieces are going to come together. For those who know the language of storytelling and..."
 ---
 <div class="post">
     <audio class="audio-player" controls>

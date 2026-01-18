@@ -9,6 +9,7 @@ categories:
   - Consciousness
   - Meaning
 og_image: /assets/images/Alicepic.png
+ai_summary: "This article discusses topics related to sexual abuse. My focus will be a discussion on ‘Alice’s Last Adventure’, a short-story from the 'weird fiction' writer Thomas Ligotti. Please stop.” But her father’s abuse didn’t stop. I don’t particularly like trigger warnings. To me, if a shocking subject appears on the page, the writer should have already earned the right to..."
 ---
 <div class="post">
     <audio class="audio-player" controls>

@@ -9,6 +9,7 @@ categories:
   - Theology
   - Narrative
 og_image: /assets/images/logo.png
+ai_summary: "In this desperate world of spin, it does not matter what you say or do, it only matters how it is received by others. In a recent piece of journalism by the BBC (The British Broadcasting Corporation) the N-word was used. Is heaven made up of people that hold all your opinions\" Is heaven made up of only people with..."
 ---
 In this desperate world of spin, it does not matter what you say or do, it only matters how it is received by others. In a recent piece of journalism by the BBC (The British Broadcasting Corporation) the N-word was used. The story concerned a racially aggravated attack in Bristol. The BBC initially stated that it in effect had hemmed and hawed over the difficult decision to include the word, but had decided on balance that given their desire to accurately report the facts of the incident, as well as the BBC having the family and victim’s support, the inclusion of the word was appropriate. The story having been aired received a throng of complaints.
 

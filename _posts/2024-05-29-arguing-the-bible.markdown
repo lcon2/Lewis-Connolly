@@ -8,6 +8,7 @@ categories:
   - Theology
   - Meaning
   - History
+ai_summary: "This is not going to be particularly deep. I was prompted to write something in response to a popular YouTuber. There is a presumption baked into my reasoning here, and that presumption is that the purposes that the various texts are driving at are worthy of our attention. It doesn’t really matter who this individual is, as the observations made..."
 ---
 This is not going to be particularly deep. I was prompted to write something in response to a popular YouTuber. It doesn’t really matter who this individual is, as the observations made were not unique, just everyday atheistic observations. I come at this as someone who self-identifies as a Christian but could just as easily be described as an atheist. I realize this might sound odd, and hopefully, what I write here will clear up some confusion. If not, just buy me a beer, and I’ll happily pontificate further.
 

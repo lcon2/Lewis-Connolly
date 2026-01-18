@@ -9,6 +9,7 @@ categories:
   - History
   - Philosophy
 og_image: /assets/images/logo.png
+ai_summary: "The address is on Thomas Aikenhead, a twenty-year-old Unitarian martyr. But before I get to him, let’s talk about the weather - namely, how much colder Britain used to be. Amen. In 1845, the Reverend Richard Cobbold published his book on Margaret Catchpole, the famous Ipswich horse thief, prison breaker, and adventurer, but before she was any of those things,..."
 ---
 The address is on Thomas Aikenhead, a twenty-year-old Unitarian martyr. But before I get to him, let’s talk about the weather - namely, how much colder Britain used to be. In 1845, the Reverend Richard Cobbold published his book on Margaret Catchpole, the famous Ipswich horse thief, prison breaker, and adventurer, but before she was any of those things, she worked for the Cobbolds as a cook and carer for their children, including the Reverend Richard Cobbold himself when he was a boy. I bring this book up for one simple reason: it recounts an ordinary 18th Century winter’s day in Ipswich, in which Margaret Catchpole takes the Cobbold children to Christchurch park wrapped up in their “cloaks and muffs” to go and see the ice skaters. It reads… “Many in the busy town of Ipswich left their labours and their cares for a few hours’ recreation; fair ladies ventured to lean upon a brother’s or a lover’s arm and try the slippery ice.”
 

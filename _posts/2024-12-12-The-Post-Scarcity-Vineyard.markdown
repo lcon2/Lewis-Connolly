@@ -9,6 +9,7 @@ categories:
   - Aesthetics
   - Game
 og_image: /assets/images/meditation.png
+ai_summary: "I think we are on the cusp of a meaning crisis. Many, possibly most, derive their meaning from the work they do. The art of living well is not about doing more or achieving more—it is about being fully present, embracing life’s possibilities, and choosing, time and again, to live with intention and purpose. If they are in a specialized..."
 ---
 <img src="{{ '/assets/images/meditation.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

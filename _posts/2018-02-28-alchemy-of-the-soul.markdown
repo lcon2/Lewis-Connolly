@@ -8,6 +8,7 @@ categories:
   - Aesthetics
   - Spirituality
   - Philosophy
+ai_summary: "Part 1 I’ll begin this morning by defining what Alchemy is. Alchemy was the ancient practice of combining matter, physical stuff, together, in such a way that you produce something with supernatural power. Amen. It was the art of transformation. You can think of the caterpillar – it goes into its cocoon, and therein undergoes a complete transformation. It does..."
 ---
 ### Part 1
 

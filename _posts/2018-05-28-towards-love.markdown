@@ -9,6 +9,7 @@ categories:
   - Technology
   - Consciousness
 og_image: /assets/images/logo.png
+ai_summary: "Part 1 So, I watched Michael Curry’s wedding sermon. It was the very expressive, love-emphasising sermon I expected it to be, quoting the Bible and Martin Luther King, “we must discover the redemptive power love. Amen. Love is the only way!” There was one surprise though. Apart from quoting Martin Luther King, and the Bible at length as you would..."
 ---
 Part 1
 

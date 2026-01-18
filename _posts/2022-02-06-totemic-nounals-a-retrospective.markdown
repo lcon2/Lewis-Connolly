@@ -9,6 +9,7 @@ categories:
   - Culture
   - Meaning
 og_image: /assets/images/logo.png
+ai_summary: "Preface I’m adding this preface as it was brought to my attention that although the post concerns “Wokism” I fail to define the term. Admittedly it is somewhat difficult to define, as it does not represent a systematic socio-political position, but rather a broad set of ideas, including, but not limited to, left-wing ideas around identity politics and social justice;..."
 ---
 Preface
 

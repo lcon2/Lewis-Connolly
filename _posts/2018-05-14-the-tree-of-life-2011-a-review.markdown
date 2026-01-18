@@ -8,6 +8,7 @@ categories:
   - Film
   - Aesthetics
   - Meaning
+ai_summary: "‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7 This film takes some stamina. It is long, dense with metaphor, lacking a conventional narrative arc, and somewhat mystifying. All in all, I value this Avant Garde piece of art for daring..."
 ---
 ‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7
 

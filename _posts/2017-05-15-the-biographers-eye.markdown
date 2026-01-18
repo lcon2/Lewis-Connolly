@@ -9,6 +9,7 @@ categories:
   - Aesthetics
   - Narrative
 og_image: /assets/images/logo.png
+ai_summary: "When someone reads a biography, they are not accessing the truth of a person directly. There is always an argument being made. Amen. There is always the attempt by the author to have the reader regard the subject in one way or another. This week I have been reading around the interesting figure of Ted Hughes - poet laureate, environmentalist,..."
 ---
 When someone reads a biography, they are not accessing the truth of a person directly. There is always an argument being made. There is always the attempt by the author to have the reader regard the subject in one way or another. This week I have been reading around the interesting figure of Ted Hughes - poet laureate, environmentalist, winner of the most coveted T. S. Eliot poetry prize in 1998, shortly before his death. But he’s probably most famous for the fact that his first wife was Sylvia Plath.
 

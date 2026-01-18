@@ -8,6 +8,7 @@ categories:
   - Culture
   - Consciousness
   - Spirituality
+ai_summary: "My summer holiday read was Carlos Castaneda’s first book, ‘The Teaching of Don Juan: a yaqui way of knowledge’. This is the topic of this morning’s service. Amen. We are entering into an imaginal realm. It is completely different to, and yet reminds me of, the imaginal realm of the 19th Century Irish poet, Æ. His world is of course..."
 ---
 My summer holiday read was Carlos Castaneda’s first book, ‘The Teaching of Don Juan: a yaqui way of knowledge’. This is the topic of this morning’s service. We are entering into an imaginal realm. It is completely different to, and yet reminds me of, the imaginal realm of the 19th Century Irish poet, Æ. His world is of course that of Ireland, of her trees, of her Nature, and of her folklore. Whereas Carlos Castaneda’s world is, as we will see, that of the desert. The desert of Western Mexico and Arizona, and the Native peoples of that land, the Indians, or the Native Americans. However, the ultimate repercussions of Castaneda’s spiritual journey into the desert, is, as we will see, for a lot of reasons very controversial, and so there is the added complication this morning of having to glean that of value from Castaneda’s work, while at the same time recognising and acknowledging the harm that was done.
 

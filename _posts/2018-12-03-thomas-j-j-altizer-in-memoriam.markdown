@@ -9,6 +9,7 @@ categories:
   - Meaning
   - Narrative
 og_image: /assets/images/logo.png
+ai_summary: "At the beginning of the week, it was my intention for this morning’s address to be very Advent orientated. I had actually already written most of it, all about getting ready, as Mary got ready for the coming of her son. Amen. A getting ready which began in the Hebrew Scriptures; a getting ready, not just for Jesus’ birth, but..."
 ---
 At the beginning of the week, it was my intention for this morning’s address to be very Advent orientated. I had actually already written most of it, all about getting ready, as Mary got ready for the coming of her son. A getting ready which began in the Hebrew Scriptures; a getting ready, not just for Jesus’ birth, but a getting ready in ourselves, as we prepare to live into the reality of that light coming into the world - of that Kingdom reality, present amongst us but so often undiscerned or ignored, inviting us to enter in, notice it, and inhabit it. And surely, there is an alternative reality out there in which that sermon is being preached now. However, on Thursday morning, I learned of the passing in the previous day of the theologian Thomas J. J. Altizer (he was 91 years old), and so as an act of respect, in memory to him, I knew this morning’s address had to be on him and his ideas which have impacted me so much. To my mind it’s a toss-up as to who has had more influence on me: Carl Jung, or Thomas Altizer. I think there’s probably a little bit of both of them in almost everything I say.
 

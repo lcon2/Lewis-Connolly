@@ -9,6 +9,7 @@ categories:
   - Narrative
   - History
 og_image: /assets/images/logo.png
+ai_summary: "I think the only Anglican habit that I’m still stuck with is that before embarking upon writing my address for the week, I read the lectionary – the set Bible verses for the Sunday ahead. I only occasionally like them enough, or find them challenging enough, that I run with them, but this week was such a week. So, whatever..."
 ---
 I think the only Anglican habit that I’m still stuck with is that before embarking upon writing my address for the week, I read the lectionary – the set Bible verses for the Sunday ahead. I only occasionally like them enough, or find them challenging enough, that I run with them, but this week was such a week. I think the story of the Transfiguration of Jesus would probably be a story that most progressive preachers would try and avoid, it’s got a lot of fantastical hallmarks, but where would be the fun in that"
 

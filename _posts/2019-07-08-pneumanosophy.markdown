@@ -9,6 +9,7 @@ categories:
   - Spirituality
   - Consciousness
 og_image: /assets/images/logo.png
+ai_summary: "We have before us a series of images, a series of pictures. It is almost like we are awakening some ancient memories. Amen. We have, from last week, ascension – we have the image of Jesus leaving his disciples, being taken up, and vanishing into the clouds. Now, we have the image of Pentecost, that of a rushing wind coming..."
 ---
 We have before us a series of images, a series of pictures. It is almost like we are awakening some ancient memories. We have, from last week, ascension – we have the image of Jesus leaving his disciples, being taken up, and vanishing into the clouds. Now, we have the image of Pentecost, that of a rushing wind coming from heaven, and filling the house where the disciples were sitting. We have tongues of fire appearing among them, resting upon each of them. And following that, coming from them, we have every known language being spoken, and the perplexed people looking on. If we think of all this as a series of images, as opposed to a series of concepts, it can be easier to hear what they’re trying to communicate to us. A picture carries, after all, a higher bandwidth of information. We can imagine ourselves within a picture; we can’t imagine ourselves within a concept.
 

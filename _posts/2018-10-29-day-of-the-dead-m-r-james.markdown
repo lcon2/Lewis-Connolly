@@ -9,6 +9,7 @@ categories:
   - Narrative
   - Theology
 og_image: /assets/images/logo.png
+ai_summary: "For this service I was put on to a ghost story, written by the English, Victorian ghost story writer, at the turn of the 20th century: M. R. Amen. James. He stands out amongst ghost story writers because he abandoned many of the old gothic clichés, writing stories that were more ‘realistic’ and set within contemporary settings. And we’ll be..."
 ---
 For this service I was put on to a ghost story, written by the English, Victorian ghost story writer, at the turn of the 20th century: M. R. James. He stands out amongst ghost story writers because he abandoned many of the old gothic clichés, writing stories that were more ‘realistic’ and set within contemporary settings. And we’ll be hearing one of those stories later. Although he wasn’t from Suffolk, he moved here when he was three, when his father became the rector at Great Livermere, north of Bury St Edmunds. His heart was in Suffolk, and many of his subsequent stories, including the one we’ll hear, is set in Suffolk, in Felixstowe.
 

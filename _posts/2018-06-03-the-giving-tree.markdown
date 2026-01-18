@@ -8,6 +8,7 @@ categories:
   - Psychology
   - Identity
   - Narrative
+ai_summary: "‘The Giving Tree’, published in 1964, is a minimalist American children’s book by Shel Silverstein, comprising of only 600 odd words, alongside simple black and white images drawn by the author. I was captivated by this book when I first encountered it, and it has continued to occupy my thoughts ever since. Amen. The book was the basis of the..."
 ---
 ‘The Giving Tree’, published in 1964, is a minimalist American children’s book by Shel Silverstein, comprising of only 600 odd words, alongside simple black and white images drawn by the author. I was captivated by this book when I first encountered it, and it has continued to occupy my thoughts ever since. The book was the basis of the first service I ever gave here in the Meeting House, and ever since then it has been my intention to return to its pages and consider its rich imagery afresh. The story is written in a parabolic style, and as such it seems reasonable to posit we’re working in an allegorical mode. Whatever this story is about, it’s surely not about a boy and his tree. The trouble is, the author himself always denied this. Shel Silverstein maintained that the book had no message, it was not to be interpreted, and it simply is as it appears, a story ‘about a boy and a tree’. “It’s just a relationship between two people; one gives and the other takes.” Despite the author being so matter of fact about this, I beg to differ.
 

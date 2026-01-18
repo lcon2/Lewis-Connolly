@@ -9,6 +9,7 @@ categories:
   - Narrative
   - Spirituality
 og_image: /assets/images/logo.png
+ai_summary: "This morning’s service is on the parable of the Prodigal Son, which is one of the many stories, or parables, that Jesus tells to relay, to those who would listen, his spiritual teachings. This parable of the Prodigal Son, we can find only Gospel of Luke. Amen. Simply put, the parable is about a father who welcomes back his wayward..."
 ---
 This morning’s service is on the parable of the Prodigal Son, which is one of the many stories, or parables, that Jesus tells to relay, to those who would listen, his spiritual teachings. This parable of the Prodigal Son, we can find only Gospel of Luke. Simply put, the parable is about a father who welcomes back his wayward son. And traditionally this parable has been understood as being a symbolic representation of the kind of redemptive open-armed welcoming we would receive from a loving and gracious God, afforded to us his wayward children, if only we would return to him in a contrite, cap in hand fashion. Without much effort this parable can be read and understood in that rather prescribed Calvinistic fashion, in which we are what" Sinners in the hands of an angry God"
 

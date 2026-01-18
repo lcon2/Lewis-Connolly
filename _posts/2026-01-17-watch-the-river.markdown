@@ -9,6 +9,7 @@ categories:
   - Aesthetics
   - Spirituality
 og_image: /assets/images/river.png
+ai_summary: "I toy with the idea of releasing an AI folk album, building a Rowan North persona and using Suno to spin songs from my voice and a Celtic-spiritual prompt. The whole thing leans into the fantasy of fictional bands and alternate histories, while admitting my lack of musical chops. It becomes a small meditation on play, creativity, and the odd intimacy of synthetic art."
 ---
 <img src="{{ '/assets/images/river.png' | relative_url }}" alt="Watch the River" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

@@ -8,6 +8,7 @@ categories:
   - Theology
   - Philosophy
   - Spirituality
+ai_summary: "Part 1 This week, the weekly news magazine ‘Time’ went with the front page cover caption ‘Is Truth Dead?’ as you can see. Now the story itself is, as you might imagine, all about Donald Trump’s presidency, specifically, his approach to the ‘Truth’. Amen. The article outlines a whole string of outright false claims that the president has made, from..."
 ---
 ##Part 1
 

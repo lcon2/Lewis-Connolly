@@ -9,6 +9,7 @@ categories:
   - Consciousness
   - Philosophy
 og_image: /assets/images/blueprint.png
+ai_summary: "I have been reading about prison design, specifically Panopticon prisons. A Panopticon prison is a circular prison design where a central watchtower allows guards to observe all inmates without the prisoners knowing whether they are being watched, creating a sense of constant surveillance and self-regulation. Look at that, I managed to write this whole article without mentioning Orwell. This design..."
 ---
 <div class="post">
     <audio class="audio-player" controls>

@@ -8,6 +8,7 @@ categories:
   - Culture
   - History
   - Theology
+ai_summary: "In Christian liturgy there is an often-used salutation, ‘The Lord be with you’, and the congregation responds, ‘And also with you.’ Of course, English Christian liturgy is by and large derived from the Catholic Latin liturgy. The salutation in Latin is ‘pax vobis’, meaning ‘peace to you’. Amen. The greeting is often called, simply, ‘The Pax’. The word ‘Pax’, recurs..."
 ---
 In Christian liturgy there is an often-used salutation, ‘The Lord be with you’, and the congregation responds, ‘And also with you.’ Of course, English Christian liturgy is by and large derived from the Catholic Latin liturgy. The salutation in Latin is ‘pax vobis’, meaning ‘peace to you’. The greeting is often called, simply, ‘The Pax’. The word ‘Pax’, recurs in the Latin interpretation of the Gospels, which became the standard version, and Latin the standard language of the Church during the fourth century. ‘Pax’, however, is not simply a word which invokes the concept of peace, it goes deeper than that. Pax was a Roman goddess, the Roman goddess of Peace. And so ‘Pax’ is a word which invokes the personification of peace and all that entails: in peacetime there is social harmony, there’s prosperity (because trade can be conducted freely), and ‘Pax’ is also closely associated with the feminine or maternal spirit, for in peacetime things can be nurtured into life - new life can come forth - and as such ‘Pax’ is also closely associated with the season of Spring.
 

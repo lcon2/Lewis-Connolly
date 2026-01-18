@@ -8,6 +8,7 @@ categories:
   - Spirituality
   - Narrative
   - Culture
+ai_summary: "This morning I’m returning to the world of esoteric culture, the Theosophical Society, the world of Madame Blavatsky, and the realm of exploring hidden knowledge. In particular, I want to think about Rudolf Steiner, a key figure in this world. Amen. Steiner, an Austrian born in 1861, is perhaps best known today for his experimental educational curriculum, used in Steiner..."
 ---
 This morning I’m returning to the world of esoteric culture, the Theosophical Society, the world of Madame Blavatsky, and the realm of exploring hidden knowledge. In particular, I want to think about Rudolf Steiner, a key figure in this world. Steiner, an Austrian born in 1861, is perhaps best known today for his experimental educational curriculum, used in Steiner Schools. These schools emphasize holistic, spiritual education, punctuated by exercise, movement, and creativity, aiming to foster harmony in society.
 

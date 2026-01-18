@@ -9,6 +9,7 @@ categories:
   - Theology
   - Spirituality
 og_image: /assets/images/logo.png
+ai_summary: "Part of what I identified in my previous post was our need to discover common ground, or perhaps to put it in a better way, to simply understand, or, as it were ‘put on’ the other. In this post I’m going to run with this idea and see where it takes me. If you’ve got to this end of this..."
 ---
 Part of what I identified in my previous post was our need to discover common ground, or perhaps to put it in a better way, to simply understand, or, as it were ‘put on’ the other. In this post I’m going to run with this idea and see where it takes me.
 

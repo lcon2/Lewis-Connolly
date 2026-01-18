@@ -9,6 +9,7 @@ categories:
   - Philosophy
   - Consciousness
 og_image: /assets/images/logo.png
+ai_summary: "The centenary of the Great War, The War to End All Wars. If we think back to the first world war, and the second world war, it is the carnage which comes first to mind, the death tolls, the statistics. I dream of a world set free, when war shall be overthrown… Amen. I’m sure for some of you, or..."
 ---
 The centenary of the Great War, The War to End All Wars. If we think back to the first world war, and the second world war, it is the carnage which comes first to mind, the death tolls, the statistics. I’m sure for some of you, or probably even most of you, you are aware of family members who fought, or died, or gave their lives in those wars. And so, for most of you, these wars are personal, they literally shaped the families you grew up in perhaps. As I’ve said to you all before, I have no such legacy. I am aware of no personal connection to world war one at all, and my only connection to world war two is through a grandfather, who took a dim view of the war. And as such, Remembrance Sunday creates in me something of an existential crisis.
 

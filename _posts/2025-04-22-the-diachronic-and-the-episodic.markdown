@@ -9,6 +9,7 @@ categories:
   - Identity
   - Philosophy
 og_image: /assets/images/Chess.png
+ai_summary: "Galen Strawson's distinction between diachronic and episodic selves makes me reflect on my own shape. I am strategic and future-oriented, yet drawn to non-dual teachings that dissolve the story of self. I propose several layers of 'I'--persona, interior operator, and the witnessing screen of consciousness--and suggest that the more we look for a fixed self, the more it vanishes."
 ---
 <img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
