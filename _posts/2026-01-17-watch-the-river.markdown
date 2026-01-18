@@ -28,17 +28,117 @@ To do this, I'm using the website Suno.com. I'm going to sing into a microphone 
 
 And presto! Here it is. It doesn't sound much like me at all, but that is probably a good thing. I'm going to generate a few more -- make a little mini album.
 
-<div class="post">
-    <audio class="audio-player" controls>
-        <source src="/assets/audio/stand%20and%20watch%20the%20river.mp3" type="audio/mpeg">
-    </audio>
-    <audio class="audio-player" controls>
-        <source src="/assets/audio/Holds%20Every%20Footstep.mp3" type="audio/mpeg">
-    </audio>
-    <audio class="audio-player" controls>
-        <source src="/assets/audio/Without%20Instruction.mp3" type="audio/mpeg">
-    </audio>
+<style>
+.audio-card { max-width: 600px; margin: 30px auto 40px; background: #1a1a1a; border: 1px solid #333; border-radius: 14px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.audio-header { display: flex; gap: 14px; align-items: center; }
+.audio-cover { width: 72px; height: 72px; object-fit: cover; border-radius: 10px; border: 1px solid #2a2a2a; }
+.audio-meta { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.audio-title { font-size: 1.05em; letter-spacing: 0.3px; }
+.audio-artist { color: #c9c9c9; font-size: 0.95em; }
+.audio-controls { display: flex; gap: 8px; margin-top: 6px; }
+.audio-btn { background: #222; color: #f0f0f0; border: 1px solid #3a3a3a; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+.audio-btn:hover { border-color: #ff9933; color: #ff9933; }
+.audio-list { margin-top: 14px; border-top: 1px solid #2c2c2c; padding-top: 10px; display: grid; gap: 6px; }
+.audio-track { width: 100%; text-align: left; background: #1f1f1f; color: #e6e6e6; border: 1px solid #2f2f2f; padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.audio-track:hover { border-color: #ff9933; color: #ff9933; }
+.audio-track.is-active { background: #262626; border-color: #ff9933; color: #ff9933; }
+</style>
+
+<div class="audio-card" data-player>
+  <div class="audio-header">
+    <img src="{{ '/assets/images/riverman.png' | relative_url }}" alt="Rowan North" class="audio-cover">
+    <div class="audio-meta">
+      <div class="audio-title" data-track-title>Stand and Watch the River</div>
+      <div class="audio-artist">Rowan North</div>
+      <div class="audio-controls">
+        <button class="audio-btn" type="button" data-action="prev">Prev</button>
+        <button class="audio-btn" type="button" data-action="play">Play</button>
+        <button class="audio-btn" type="button" data-action="next">Next</button>
+      </div>
+    </div>
+  </div>
+  <div class="audio-list">
+    <button class="audio-track is-active" type="button" data-index="0">Stand and Watch the River</button>
+    <button class="audio-track" type="button" data-index="1">Holds Every Footstep</button>
+    <button class="audio-track" type="button" data-index="2">Without Instruction</button>
+  </div>
+  <audio id="watch-the-river-player" preload="none"></audio>
 </div>
+
+<script>
+(function () {
+  var player = document.getElementById('watch-the-river-player');
+  if (!player) return;
+  var tracks = [
+    { title: 'Stand and Watch the River', src: '/assets/audio/stand%20and%20watch%20the%20river.mp3' },
+    { title: 'Holds Every Footstep', src: '/assets/audio/Holds%20Every%20Footstep.mp3' },
+    { title: 'Without Instruction', src: '/assets/audio/Without%20Instruction.mp3' }
+  ];
+  var titleEl = document.querySelector('[data-track-title]');
+  var playBtn = document.querySelector('[data-action="play"]');
+  var prevBtn = document.querySelector('[data-action="prev"]');
+  var nextBtn = document.querySelector('[data-action="next"]');
+  var trackButtons = Array.prototype.slice.call(document.querySelectorAll('.audio-track'));
+  var current = 0;
+
+  function setActive(index) {
+    current = index;
+    player.src = tracks[index].src;
+    if (titleEl) titleEl.textContent = tracks[index].title;
+    trackButtons.forEach(function (btn) {
+      btn.classList.toggle('is-active', Number(btn.getAttribute('data-index')) === index);
+    });
+  }
+
+  function playCurrent() {
+    player.play();
+    if (playBtn) playBtn.textContent = 'Pause';
+  }
+
+  function pauseCurrent() {
+    player.pause();
+    if (playBtn) playBtn.textContent = 'Play';
+  }
+
+  function nextTrack() {
+    var next = (current + 1) % tracks.length;
+    setActive(next);
+    playCurrent();
+  }
+
+  function prevTrack() {
+    var prev = (current - 1 + tracks.length) % tracks.length;
+    setActive(prev);
+    playCurrent();
+  }
+
+  setActive(0);
+
+  if (playBtn) {
+    playBtn.addEventListener('click', function () {
+      if (player.paused) {
+        playCurrent();
+      } else {
+        pauseCurrent();
+      }
+    });
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', prevTrack);
+  if (nextBtn) nextBtn.addEventListener('click', nextTrack);
+
+  trackButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var index = Number(btn.getAttribute('data-index'));
+      setActive(index);
+      playCurrent();
+    });
+  });
+
+  player.addEventListener('ended', nextTrack);
+})();
+</script>
+
 
 <div style="max-width: 520px; margin: 20px auto; padding: 16px 20px; border: 1px solid #444; background-color: #181818; white-space: pre-line;">
 [Verse 1]
