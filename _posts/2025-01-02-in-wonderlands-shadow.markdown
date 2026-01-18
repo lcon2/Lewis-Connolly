@@ -5,7 +5,6 @@ date: 2025-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Story
   - Imagination
   - Culture
 og_image: /assets/images/Alicepic.png

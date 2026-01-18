@@ -6,7 +6,6 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Religion
-  - Story
   - Tradition
 ---
 This morning I’m going to be getting into the weeds of Acts—the passage we heard, the encounter between Philip and the Ethiopian Eunuch. As we read the Bible, we encounter a wall of text, a text which can at times be pretty daunting and inaccessible. The Bible often assumes a lot of knowledge on the part of its readers. The New Testament assumes we’re familiar with the stories in the Hebrew Bible, St Paul’s letters assume we are broadly familiar with Jesus, his ministry, and the salient points of Christianity, and the whole biblical text, being written two thousand odd years ago, assumes we’re familiar with the cultural and social norms of first-century Palestine. There’s also the text itself. Although the Bible, with its multiple translations, has brought forth some of the most beautiful poetry and prose ever committed to paper or parchment, it is not all worthy of such acclamation. It is in parts clunky, and in parts dull, and that’s before you’ve even begun to consider some of the claims contained within its pages—those claims which are simply wrong or contradictory.

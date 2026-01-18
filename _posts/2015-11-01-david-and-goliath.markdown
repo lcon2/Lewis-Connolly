@@ -7,7 +7,6 @@ author_url: "/about/"
 categories:
   - Religion
   - Myth
-  - Story
 ---
 In my on-going thinking about Unitarian identity I read Understanding Unitarians by Phillip Hewett, who was briefly the minister here in the 1950s. He developed a model that attempts to get away from the Humanist/Christian dichotomy; a Venn Diagram, with not two but three overlapping circles. I have put the model in your order of service.
 

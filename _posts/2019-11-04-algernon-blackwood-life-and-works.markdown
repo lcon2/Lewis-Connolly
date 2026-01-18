@@ -5,7 +5,6 @@ date: 2019-11-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Story
   - Imagination
   - History
 ---

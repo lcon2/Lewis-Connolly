@@ -5,7 +5,6 @@ date: 2024-12-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Story
   - Reflection
   - Experience
 og_image: /assets/images/cow.png

@@ -5,7 +5,6 @@ date: 2019-04-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Story
   - Reflection
   - Experience
 ---

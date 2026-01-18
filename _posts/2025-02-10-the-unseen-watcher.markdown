@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Consciousness
-  - Mind
   - Self
+  - History
 og_image: /assets/images/blueprint.png
 ---
 <div class="post">
