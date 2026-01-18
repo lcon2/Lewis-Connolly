@@ -35,7 +35,7 @@
                     </span>
                 </p>
             <p class="post-meta" style="margin-top: 0;">
-                Filed under:
+                Filed under:&nbsp;
                 {% for category in page.categories %}
                     {% assign category_slug = category | slugify %}
                     <a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}" class="category-pill">{{ category }}</a>{% if forloop.last == false %} {% endif %}
