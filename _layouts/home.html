@@ -86,19 +86,7 @@
         <!-- Oldies Section -->
         <div class="content-section" id="oldies">
             <h2>OLDIES</h2>
-            <ul>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/06/wotan-dormant-in-the-wood">Wotan Dormant in the Wood</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/11/04/algernon-blackwood-life-and-works">Algernon Blackwood Life and Works</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/02/11/the-alchemists-beaker">The Alchemist's Beaker</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/04/the-green-snake-and-the-beautiful-lily">The Green Snake and the Beautiful Lily</a></li>            
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/04/08/western-esotericism-lineage">Western Esotericism's Lineage</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/08/20/the-scythe-of-saturn">The Scythe of Saturn</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/11/22/rejecting-medievalist-christianity">Rejecting Medievalist Christianity</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/06/08/a-phalanstery">A Phalanstery</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/07/23/pale-fire-lunar-light">Pale Fire Lunar Light</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/12/06/searching-in-the-rye">Searching in the Rye</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2015/06/06/christian-non-realism">Christian Non-Realism</a></li>
-            </ul>
+            <ul id="oldies-list"></ul>
         </div>
 
     </div> <!-- Close the content-grid -->
@@ -106,5 +94,46 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>(c) Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Copyright</p>
     </footer>
+    <script>
+      (function () {
+        var allPosts = [
+          {% for post in site.posts %}
+          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }} }{% if forloop.last == false %},{% endif %}
+          {% endfor %}
+        ];
+        var newestUrls = Array.prototype.slice.call(document.querySelectorAll('#newest a')).map(function (a) {
+          return a.getAttribute('href');
+        });
+        var popularUrls = Array.prototype.slice.call(document.querySelectorAll('#popular a')).map(function (a) {
+          return a.getAttribute('href');
+        });
+        var blocked = {};
+        newestUrls.concat(popularUrls).forEach(function (u) { blocked[u] = true; });
+
+        var candidates = allPosts.filter(function (p) { return !blocked[p.url]; });
+        for (var i = candidates.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = candidates[i];
+          candidates[i] = candidates[j];
+          candidates[j] = tmp;
+        }
+
+        var list = document.getElementById('oldies-list');
+        var count = Math.min(11, candidates.length);
+        for (var k = 0; k < count; k++) {
+          var li = document.createElement('li');
+          var img = document.createElement('img');
+          img.src = "{{ '/assets/images/bullet.png' | relative_url }}";
+          img.alt = "Bullet";
+          img.className = "bullet-icon";
+          var link = document.createElement('a');
+          link.href = candidates[k].url;
+          link.textContent = candidates[k].title;
+          li.appendChild(img);
+          li.appendChild(link);
+          list.appendChild(li);
+        }
+      })();
+    </script>
 </body>
 </html>
