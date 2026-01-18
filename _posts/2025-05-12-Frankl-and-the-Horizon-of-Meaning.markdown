@@ -5,9 +5,9 @@ date: 2025-05-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Meaning
-  - Suffering
-  - Philosophy
+  - Technology
+  - Theology
+  - Spirituality
 og_image: /assets/images/void.png
 ---
 <img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

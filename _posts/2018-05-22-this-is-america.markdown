@@ -5,9 +5,9 @@ date: 2018-05-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Politics
-  - Culture
-  - Power
+  - Film
+  - Theology
+  - Spirituality
 ---
 Part 1
 

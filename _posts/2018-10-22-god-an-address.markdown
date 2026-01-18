@@ -5,9 +5,9 @@ date: 2018-10-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - History
   - Theology
-  - Religion
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 God is an idea; an idea which humanity cannot let go of. Even amongst people who ‘don’t do religion’, or ‘don’t do spirituality’, they almost all without exception contend with the God question at some point. It can’t be ignored. It’s an idea that almost seems imprinted on our souls - the notion that there is something or someone that transcends my finite thoughts, my narrow conception of the world. Is there not something beyond this" Intuitively coming to terms with this sense of mystery is what religion is. All peoples of all the world contending with the mystery. And in as far as all religions, all gods, and all mythologies contend with the mysteries of the cosmos and of the human experience, they’re all true. They’re all an authentic response to the mystery we are all presented with. As the Sufi mystic says, to not recognise this, to not recognise the diffuse nature of truth, is to fail in recognising truth at all. Do not attach yourself to any particular creed exclusively, so that you may disbelieve all the rest. For, he who knows doesn’t know; he who knows he doesn’t know, knows.

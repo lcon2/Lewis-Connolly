@@ -5,9 +5,9 @@ date: 2021-12-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - History
   - Theology
-  - Faith
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 It is my sense that a belief in non-duality (which is to say a fundamental belief in the oneness of all), leads naturally to pluralism. It makes perfect sense that it would - if all is one, then irrespective of your role on the world’s stage, you are nevertheless part of the whole, part of the one. Or rather, one should probably say you are the one, as to say ‘part’ suggests you can in some sense be broken off.

@@ -5,9 +5,9 @@ date: 2025-02-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Consciousness
-  - Self
-  - History
+  - Technology
+  - Philosophy
+  - Culture
 og_image: /assets/images/blueprint.png
 ---
 <div class="post">

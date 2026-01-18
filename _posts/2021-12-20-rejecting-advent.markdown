@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Tradition
-  - Reform
+  - Spirituality
+  - Psychology
 ---
 I come to writing this essay in a melancholic mood, and as ever, I come in search of that elusive something. It is Advent 2021. Advent is the season for waiting and expectation, and I, at this moment in my life find myself waiting. Waiting somewhat against my will. Waiting for the next chapter of my life to begin.
 

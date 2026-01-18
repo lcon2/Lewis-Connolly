@@ -5,9 +5,9 @@ date: 2022-01-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Self
-  - Identity
-  - Being
+  - Theology
+  - Spirituality
+  - Philosophy
 ---
 There is no “I”.
 

@@ -5,8 +5,8 @@ date: 2022-02-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Ethics
-  - Politics
+  - Theology
+  - Philosophy
   - Culture
 ---
 Just finished watching ‘American Heretics: The Politics of the Gospel (2019)’, a very interesting and inspiring documentary, which focused ostensibly on the ministries of two social action churches, namely, the Mayflower Congregational UCC Church and All Souls Unitarian Church, both in the state of Oklahoma.

@@ -5,8 +5,9 @@ date: 2025-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Imagination
-  - Culture
+  - Technology
+  - Theology
+  - Philosophy
 og_image: /assets/images/Alicepic.png
 ---
 <div class="post">

@@ -5,8 +5,8 @@ date: 2019-01-23
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Power
-  - Authority
+  - Theology
+  - Spirituality
   - Culture
 og_image: /assets/images/logo.png
 ---

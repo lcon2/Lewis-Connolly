@@ -5,8 +5,8 @@ date: 2025-12-07
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Being
-  - Meaning
+  - Theology
+  - Spirituality
   - Philosophy
 og_image: /assets/images/curator-of-being.png
 ---

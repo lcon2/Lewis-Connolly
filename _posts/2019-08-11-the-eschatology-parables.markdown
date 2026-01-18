@@ -5,9 +5,9 @@ date: 2019-08-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Future
-  - Politics
-  - History
+  - Theology
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 “Truly I tell you, this generation will not pass away until all these things have taken place.” This morning I thought we could consider a set of parables often overlooked. We’re all familiar with the parable of the sower, the parable of the Good Samaritan, and the parable of the lost sheep. But there is a set of parables that are often passed over, known as the Eschatology parables - the parables concerned with the end of days. Much like any religious teacher, Jesus has a handful of topics he cannot help returning to time and time again. And this is reflected in the parables (the teaching stories) he tells, most of which fit into five subject areas; and those are: 1) the Kingdom of Heaven (how to recognise, see it, and hear it); 2) the journey of the lost one; 3) on love and forgiveness generally; 4) on the nature of prayer; and finally, 5) on Eschatology. And out of those five, the most prevalent, the topics which Jesus returns to most often in his parables, are the Kingdom of Heaven, and most of all, eschatology. And yet that prevalence is certainly not reflected in sermons preached subsequently throughout the world over the last two millennia.

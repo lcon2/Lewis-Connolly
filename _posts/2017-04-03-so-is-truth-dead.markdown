@@ -5,9 +5,9 @@ date: 2017-04-03
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Epistemology
+  - Theology
+  - Spirituality
   - Philosophy
-  - Modernity
 ---
 ##Part 1
 

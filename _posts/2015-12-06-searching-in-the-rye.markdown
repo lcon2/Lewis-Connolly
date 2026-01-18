@@ -5,8 +5,9 @@ date: 2015-12-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Reflection
-  - Meaning
+  - Film
+  - Game
+  - Narrative
 ---
 ‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I grew up on a diet of film; it is our generation’s first language after all, and yet, I can see why Salinger would want to set himself up in opposition to this image-driven world.
 

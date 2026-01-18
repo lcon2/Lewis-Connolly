@@ -5,9 +5,9 @@ date: 2024-11-15
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Meaning
-  - Culture
-  - Philosophy
+  - Film
+  - Game
+  - Technology
 ---
 Last night, I listened to an interview with Gwern Branwen. Since he is an anonymous online writer, his identity was concealed using a computer-generated avatar and an AI-generated voice. He got me thinking, as I’m inclined to do, so I’m going to let my thoughts wander and see what appears on the page. Branwen’s writings cover a broad range of topics, but his main focus is artificial intelligence—specifically that these models are scaling in a predictable fashion, and as such, superintelligent AI, or AGI, is just around the corner—three years away, or by 2030 at the latest. In the interview, he more or less takes this as a given and considers the implications of what living in such a world might look like and, more pertinently, what this future might mean for how we live our lives now. I am also going to take his timeframe as a given.
 

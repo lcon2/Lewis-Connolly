@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Religion
-  - Faith
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 Here is a bouquet of flowers, made beautiful in its diversity, and in its variety of colours. But also made beautiful in the fast-paced decisions we made as we entered the Meeting House this morning. As we approached the vase, we perhaps unconsciously made some snap decisions about how we would thread our flower into this bouquet; there were choices surrounding the flower we would contribute, where we would position it within the bouquet, and even how we would orientate it in relation to the other flowers already present. Whenever we arrange a bouquet, we’re making a similar set of decisions, and they’re not necessarily calculated decisions (they’re probably not), they’re decisions based on our intuition, and based on our sense of what we feel looks right. An interesting phenomenon for us to consider. We look at a bouquet in progress, and we discern what we need to do to it, the foliage we need to add, the gaps we need to fill, the clusters of sameness here or there that we need to distribute more evenly, the balance we’re trying to achieve, a balance which counter-intuitively arises out of chaos, out of the odd numbers of flowers. We arrange the bouquet much like how we arrange baubles on a Christmas tree. Slowly we add layers to the bouquet, and slowly it takes on a unique character, which nonetheless conforms to an indwelling sense of beauty. An indwelling sense which seems to be, broadly speaking at least, shared, because if it wasn’t, we wouldn’t be able to collectively distinguish between what constitutes a good or bad bouquet. And although of course there are varieties of opinion on such matters, there does seem to be a consensus of belief as well, for after all, if there was no consensus then the profession of the florist could not exist.

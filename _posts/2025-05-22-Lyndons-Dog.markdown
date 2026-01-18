@@ -5,8 +5,8 @@ date: 2025-05-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Reflection
-  - Experience
+  - Theology
+  - Spirituality
   - History
 og_image: /assets/images/dog.png
 ---

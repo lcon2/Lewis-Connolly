@@ -5,9 +5,9 @@ date: 2018-04-09
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - History
   - Theology
-  - Tradition
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 In our modern world YouTube has become wormhole upon our attention. Last year there was a collection of videos on YouTube doing the rounds. Cat videos. These particular cat videos involved the relationship between cucumbers and cats. If you’ve not seen them, I’ll explain what happens. The videos involved secretly putting cucumbers behind cats, and then filming their response as they notice the cucumbers. The reason these videos are funny is because cucumbers trigger cats’ fight or flight response. As of course cats have not evolved in environments where they would normally encounter rouge cucumbers, they perceive them as a threat, perhaps a snake or some other predator like that. In evolutionary terms, the cat’s response to the harmless cucumber is entirely understandable. It makes sense that animals – cats and humans alike – would have inbuilt responses like this. Our bodies need to be able to have immediate responses to positive and negative stimuli. Our ancestors walk through the primordial fauna. Locking eyes with a beast, the world narrows, and they run, darting through the vegetation fast. If our response was slower, more considered, it would be no use to us. For threats of this magnitude it has to be fast, and so it has to be simple. The cat is not processing masses of information. Small, round, and green equals very bad in the reactive cat’s mind. There’s no more to it. All the cat’s attention is locked on that cucumber. There is no self-reflection taking place, no musing on the significance of the cucumber after the fact. The cat lacks the mental capacity to reassess a cucumber’s threat after the fact, and learn its fight or flight response is unnecessary. The cat doesn’t learn. It cannot override its instinctual response. It cannot turn its attention inwards.

@@ -5,8 +5,8 @@ date: 2019-03-24
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Future
-  - Politics
+  - Theology
+  - Spirituality
   - History
 og_image: /assets/images/logo.png
 ---

@@ -5,9 +5,9 @@ date: 2019-04-21
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Politics
-  - History
-  - Culture
+  - Theology
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 He is risen! He is risen indeed, hallelujah! There can be no doubt that without resurrection, without that event at the heart of Christianity, there could be no Easter, there could be no Christianity, there could be no dissenters who come along down the line, and thus, there could be no Ipswich Unitarians. The temptation is, within liberal church contexts such as ours, to avoid the crux of the matter on Easter morning. No doubt in many churches today, there are liberal religious ministers taking special pains to avoid St Paul’s stark words, as he states them plainly in 1 Corinthians (15:11-15): “Now if Christ is proclaimed as raised from the dead, how can some of you say there is no resurrection of the dead"  If there is no resurrection of the dead, then Christ has not been raised; and if Christ has not been raised, then our proclamation has been in vain and your faith has been in vain. We are even found to be misrepresenting God, because we testified of God that he raised Christ.”

@@ -5,9 +5,9 @@ date: 2018-06-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Power
-  - History
-  - Culture
+  - Theology
+  - Spirituality
+  - Psychology
 og_image: /assets/images/logo.png
 ---
 The story of Abraham is the archetypal standard for the first and the second half of life. In the first half he is not called Abraham, but Abram, and he’s living not in Israel, but in a city called ‘Ur’, which (going back to last week) was a city in the orbit of Babel (in modern day Iraq). There in that pagan city, God calls Abram – ‘Leave your father’s house and go to the land that I will show you. I will make of you a great nation, and I will bless you’. Outside of the Bible itself there are many other rabbinical traditions that spring up much later on about Abraham. Here in the Bible you have the bare bones of the story of Abraham, and later writers wanted to fill in some of the blanks. Although in the Bible we are told that Abraham is called from this pagan city of Ur to journey to the place we know as Israel, there is nothing within this mythological narrative about his early years, about his life as a boy in the city of Ur. And so, in the 5th/6th Century, Jewish Rabbis told that story. The story imagines Abram as the son of a craftsman. Though, not just any craftsman, specifically an idol craftsman, to serve the needs of this bustling polytheistic city…

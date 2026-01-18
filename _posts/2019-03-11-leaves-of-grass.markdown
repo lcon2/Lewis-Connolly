@@ -5,9 +5,9 @@ date: 2019-03-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Narrative
-  - Culture
-  - Reflection
+  - Theology
+  - Spirituality
+  - Philosophy
 ---
 ##Part 1
 

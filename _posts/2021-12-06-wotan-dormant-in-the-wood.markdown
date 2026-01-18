@@ -5,9 +5,9 @@ date: 2021-12-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Myth
-  - Archetype
-  - Tradition
+  - Theology
+  - Philosophy
+  - Psychology
 ---
 My thoughts return time and again to Carl Jung’s 1936 paper *Wotan*. This paper stands out to me as being perhaps his most controversial, given its subject matter: the rise of the Third Reich. Jung’s approach towards the Third Reich is critical, but to our contemporary sensibilities, it reads as not being nearly critical enough. Much has been written on Jung’s complex relationship to the Third Reich—a relationship I will not dwell on here.
 

@@ -5,8 +5,8 @@ date: 2018-10-29
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Politics
-  - Power
+  - Theology
+  - Spirituality
   - History
 og_image: /assets/images/logo.png
 ---

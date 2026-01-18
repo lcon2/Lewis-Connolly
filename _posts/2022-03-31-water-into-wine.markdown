@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Symbol
-  - Faith
+  - Spirituality
+  - Philosophy
 ---
 In this article, I am going to discuss Jesus’ water-into-wine miracle. By way of introduction, however, I’m going to discuss the following quote by C. S. Lewis: “Either this man (Jesus) was, and is, the Son of God, or else a madman or something worse” (*Mere Christianity*, pg. 56). In this exceedingly reductive argument, Lewis gives us three options and compels us to choose one. This argument is evidently fallacious as there are not three options; there are many, many more. To name a few: perhaps the accounts we have of Jesus’ life are in some way inaccurate, perhaps the claims they make are overstated, perhaps the accounts are mythological in nature, or perhaps the claims that Jesus made of himself have been entirely misunderstood. When it comes to all the possible options, there is also the potential for some gradation—he could be divine in nature without being God, he could be God and also be mad. What does it even mean to speak of a “madman”? Was Jesus not regarded in his day as a madman?
 

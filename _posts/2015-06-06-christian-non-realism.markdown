@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Faith
-  - Philosophy
+  - Culture
+  - Meaning
 ---
 Christian non-realism is essentially an approach to one’s Christian faith that interprets the ‘magical’ aspects of Christianity as metaphor. Christian non-realists reject all the supernatural elements of the faith and do not believe in an objective being or thing called God. The word ‘God’ is used in a plethora of different ways, but never to describe a force beyond the laws of nature. God is not a thing or a being, but rather an experience—an experience of the subjectively impossible being actualized in our lives, an experience of finding hope in hopelessness, a word that articulates something of the quality of sacred space, and a word that somehow describes something beyond words.
 

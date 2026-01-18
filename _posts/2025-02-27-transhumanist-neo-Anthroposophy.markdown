@@ -5,8 +5,8 @@ date: 2025-02-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Transhumanism
   - Technology
+  - Theology
   - Spirituality
 og_image: /assets/images/pantheon.png
 ---

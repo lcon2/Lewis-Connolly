@@ -5,9 +5,9 @@ date: 2025-03-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Archetype
   - Psychology
-  - Myth
+  - History
+  - Culture
 og_image: /assets/images/running.png
 ---
 <div class="post">

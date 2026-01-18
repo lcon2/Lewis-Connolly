@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Game
-  - Politics
-  - Power
+  - Theology
+  - Spirituality
 og_image: /assets/images/logo.png
 ---
 In your order of service, as you will have seen, I have given you the reading. This short encounter between Jesus and the nameless Syrophoenician woman, which we find in both the Gospels of Mark and Matthew, is an encounter which has been subjected to much debate. An encounter which happens at a critical juncture in Jesus’ ministry, and thus warrants a close reading.

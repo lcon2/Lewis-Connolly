@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Game
-  - Politics
-  - Power
+  - Theology
+  - Spirituality
 og_image: /assets/images/logo.png
 ---
 There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District.

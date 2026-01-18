@@ -5,9 +5,9 @@ date: 2025-02-14
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Epistemology
-  - Philosophy
   - Technology
+  - Theology
+  - Philosophy
 og_image: /assets/images/AlignedAI.png
 ---
 <div class="post">

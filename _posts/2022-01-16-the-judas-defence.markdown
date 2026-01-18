@@ -5,9 +5,9 @@ date: 2022-01-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Future
-  - Politics
-  - History
+  - Theology
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 “If I were Jesus Christ. I would save Judas.”

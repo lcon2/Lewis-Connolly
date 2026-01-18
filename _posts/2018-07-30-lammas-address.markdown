@@ -5,9 +5,9 @@ date: 2018-07-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Politics
   - Theology
-  - Religion
+  - Spirituality
+  - Psychology
 og_image: /assets/images/logo.png
 ---
 When I think of Lammas-tide,

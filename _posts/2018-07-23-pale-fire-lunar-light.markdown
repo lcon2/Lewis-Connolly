@@ -5,9 +5,9 @@ date: 2018-07-23
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Narrative
-  - Image
-  - Reflection
+  - Theology
+  - Philosophy
+  - Culture
 ---
 This week, a few of us met in the upper room to discuss how we understand the person of Jesus. Our conversation circled back to the issue of interpretation a few times. How are we to interpret his parables? How are we to interpret his miracles? How are we to interpret his death upon the cross? The point was made that Christian denominations are often able to present Jesus in such a way that serves their own interests or affirms their own pre-held assumptions. We see what we want to see. It’s one of the oddities of reading the Bible: the conservative is able to uncover a conservative message and image of Jesus, and the liberal is able to uncover a liberal message and image of Jesus. And yet they’re reading the same Bible. It made me think about this question of interpretation.
 

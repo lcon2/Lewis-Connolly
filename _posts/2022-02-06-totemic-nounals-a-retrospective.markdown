@@ -5,9 +5,9 @@ date: 2022-02-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Politics
-  - Power
-  - History
+  - Theology
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 Preface

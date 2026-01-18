@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Metaphysics
-  - Epistemology
+  - Spirituality
+  - Philosophy
 ---
 Without spiritual symbols informing our lives, we are incomplete beings. The temptation is, in our hyper-rationalistic, literal world, to strip symbols of their significance, and understand everything in binary terms: as true or false, as scientifically verifiable or not, as history or myth. Most of the time this approach is preferable. My dad is a geophysicist. He calculates the probability of oil being in one place as opposed to another. This is done by sending acoustic energy into the ground, and then analysing the data collected back. Algorithms are built which take that data and turn it into sound pictures of what is beneath the surface. Oil rigs cost hundreds of millions of dollars, and so before they embark upon building one, one needs to be sure there is oil there - though 100% assurance is never possible. Growing up, as you might imagine, with all this as the backdrop upon our lives, it informed the way I thought about the world. In the same way that the oil was either there or not, I believed things could only be true or not. And it was just a case of collecting enough data and asking the right questions, and though I could never be 100% sure, if I was meticulous enough, I could be correct within a negligible margin of error. I could have a working model which was reliable.
 

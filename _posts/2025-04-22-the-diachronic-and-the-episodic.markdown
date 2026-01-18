@@ -5,8 +5,9 @@ date: 2025-04-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Self
-  - Consciousness
+  - Game
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/Chess.png
 ---
 <img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

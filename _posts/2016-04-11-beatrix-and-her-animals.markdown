@@ -5,9 +5,9 @@ date: 2016-04-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Future
-  - Power
-  - History
+  - Theology
+  - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 Part 1

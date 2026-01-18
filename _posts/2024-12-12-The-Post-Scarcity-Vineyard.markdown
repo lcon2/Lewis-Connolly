@@ -5,9 +5,9 @@ date: 2024-12-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Future
+  - Film
+  - Game
   - Technology
-  - Utopia
 og_image: /assets/images/meditation.png
 ---
 <img src="{{ '/assets/images/meditation.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
