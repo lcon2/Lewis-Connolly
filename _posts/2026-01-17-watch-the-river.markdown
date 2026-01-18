@@ -33,7 +33,7 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
 .audio-header { display: flex; gap: 14px; align-items: center; }
 .audio-cover { width: 72px; height: 72px; object-fit: cover; border-radius: 10px; border: 1px solid #2a2a2a; }
 .audio-meta { display: flex; flex-direction: column; gap: 6px; flex: 1; }
-.audio-title { font-size: 1.05em; letter-spacing: 0.3px; }
+.audio-title { font-size: 1.05em; letter-spacing: 0.3px; margin-top: 4px; }
 .audio-artist { color: #c9c9c9; font-size: 0.95em; }
 .audio-controls { display: flex; gap: 8px; margin-top: 6px; }
 .audio-btn { background: #222; color: #f0f0f0; border: 1px solid #3a3a3a; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
@@ -55,7 +55,7 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
     <img src="{{ '/assets/images/riverman.png' | relative_url }}" alt="Rowan North" class="audio-cover">
     <div class="audio-meta">
       <div class="audio-title" data-track-title>Stand and Watch the River</div>
-      <div class="audio-artist">Rowan North</div>
+      <div class="audio-artist">By Rowan North</div>
       <div class="audio-controls">
         <button class="audio-btn" type="button" data-action="prev">Prev</button>
         <button class="audio-btn" type="button" data-action="play">Play</button>
