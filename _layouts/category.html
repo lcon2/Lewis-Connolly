@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include seo.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body class="archive">
+    <header>
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
+            </a>
+        </div>
+    </header>
+    <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
+        <nav class="sidebar">
+            <ul>
+                {% assign sorted_categories = site.categories | sort %}
+                {% for category in sorted_categories %}
+                    {% assign category_name = category[0] %}
+                    <li>
+                        <a href="{{ '/categories/' | append: category_name | slugify | append: '/' | relative_url }}">{{ category_name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <main style="width: 75%; padding: 20px; line-height: 1.6; font-size: 18px; color: #f0f0f0;">
+            <h1>{{ page.title }}</h1>
+            <div class="archive-content">
+                <ul>
+                    {% assign posts_in_category = site.categories[page.category] %}
+                    {% for post in posts_in_category %}
+                        <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </main>
+    </div>
+    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+        <p>(c) Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Copyright</p>
+    </footer>
+</body>
+</html>
