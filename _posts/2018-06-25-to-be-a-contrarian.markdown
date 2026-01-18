@@ -5,9 +5,9 @@ date: 2018-06-25
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Aesthetics
   - Consciousness
   - Philosophy
+  - Culture
 og_image: /assets/images/logo.png
 ---
 One must trust in one’s own sense of things. Far too many people readily sacrifice their autonomy for a sense of belonging, opting for the cheap affirmation on offer to those who are willing to conform. A conformity comprised of selecting from the shelf of society one of the pre-packaged labels and adopting without forethought the opinions such labels demand. This is the antithesis of the examined life; this is the broad way, the wide path that most people take. A time comes though when we must go deeper, as Simon was directed to cast his net into the deep. To move beyond superficiality, to where we can be released from the fetters of others’ expectations, to no longer envy another, nor seek to imitate, but rather to furrow one’s own path. To quote Ralph Waldo Emerson, “To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” The life worth living is one in which we seek a clear and honest awareness, being present to now, seeking to know our depths, and being true to ourselves. Who is willing to follow such a path, who is willing to pay the cost"

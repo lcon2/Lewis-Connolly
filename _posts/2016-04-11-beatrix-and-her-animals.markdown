@@ -7,7 +7,7 @@ author_url: "/about/"
 categories:
   - Theology
   - Narrative
-  - Philosophy
+  - History
 og_image: /assets/images/logo.png
 ---
 Part 1

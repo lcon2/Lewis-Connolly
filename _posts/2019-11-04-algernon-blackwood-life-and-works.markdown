@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Spirituality
-  - Philosophy
   - Culture
+  - Psychology
 ---
 Algernon Blackwood was born in South-East London in 1869 and grew up in a religious household. His parents were Calvinists, which entailed an austere, narrow, and oppressive childhood. As a teenager, he was even sent to an isolated Moravian Brotherhood school in the German countryside. In a later biography, he described his life there at that time—the harsh pietism which prompted his imagination to flee into the German Black Forest, where he could discern the Germanic animistic spirits at play. Animism is the religious belief that all objects, places, and creatures are infused with some kind of spiritual essence, almost as if there is a living memory in all plants, rocks, rivers, and in the soil itself. You could even understand *The Collective Unconscious*, which I spoke about last week, as Carl Jung’s attempt to capture animism in psychological terms: this collective memory which bubbles out from unknown depths.
 
