@@ -324,7 +324,7 @@ body {
     color: #f0f0f0;
     text-decoration: none;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
-    font-size: 1.05em;
+    font-size: 1.1em;
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
@@ -484,7 +484,7 @@ footer {
     margin-top: 40px;
     padding: 20px 0;
     text-align: center; /* Centers the footer text */
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     font-size: 0.9em;
     color: #a0a0a0;
 }
