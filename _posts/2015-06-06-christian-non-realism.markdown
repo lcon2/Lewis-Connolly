@@ -5,7 +5,7 @@ date: 2015-06-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Faith
   - Philosophy
 ---

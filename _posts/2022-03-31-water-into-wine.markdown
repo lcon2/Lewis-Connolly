@@ -5,7 +5,7 @@ date: 2022-03-31
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Symbol
   - Faith
 ---

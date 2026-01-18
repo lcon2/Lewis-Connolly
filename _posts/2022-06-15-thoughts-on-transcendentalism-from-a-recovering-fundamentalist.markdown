@@ -5,8 +5,8 @@ date: 2022-06-15
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Theology
   - Philosophy
-  - Religion
   - Transcendence
 ---
 I did my first degree at a conservative Bible college. In my first year, I would have assented to *The Fundamentals* (the set of essays written from 1910 to 1915) from which “Christian fundamentalists” derive their label. In my second year, I began asking awkward questions; these questions slowly drew me away from fundamentalism (or evangelicalism) down broader avenues of inquiry. A question arises in the mind, an unknowing, an opening, and our initial impulse is to find the answer. We’re not seeking the “right” answer per se; rather, we gravitate unthinkingly towards answers that sit comfortably alongside all the other “right” answers we’ve already alighted upon. In this way, we create a constellation of beliefs that gives us our sense of the world, and a sense of ourselves within it. As I worked my way out of fundamentalism, I recognized the folly of this paradigm. How could I possibly assume that there was a natural correlation between what happens to find comfortable lodging in my mind and “reality” (whatever that is)? Indeed, my dalliance with fundamentalism proved to me that I was incapable of such an assessment. I am surely too easily swayed by my own sense of what feels right. And I therefore resolved that I would not simply cast off one set of beliefs for another.

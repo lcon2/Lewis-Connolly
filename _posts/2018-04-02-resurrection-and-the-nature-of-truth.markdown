@@ -5,7 +5,7 @@ date: 2018-04-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Metaphysics
   - Epistemology
 ---

@@ -5,7 +5,7 @@ date: 2019-08-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Metaphysics
   - Myth
 ---

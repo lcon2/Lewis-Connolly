@@ -5,6 +5,7 @@ date: 2015-11-01
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Theology
   - Religion
   - Myth
 ---

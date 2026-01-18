@@ -5,7 +5,7 @@ date: 2015-11-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Tradition
   - Reform
 ---

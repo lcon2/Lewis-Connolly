@@ -5,7 +5,7 @@ date: 2017-02-21
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Tradition
   - Culture
 ---

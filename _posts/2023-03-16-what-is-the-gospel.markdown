@@ -5,7 +5,7 @@ date: 2023-03-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Faith
   - Tradition
 ---

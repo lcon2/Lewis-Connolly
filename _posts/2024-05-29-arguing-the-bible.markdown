@@ -5,7 +5,7 @@ date: 2024-05-29
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Authority
   - Epistemology
 ---

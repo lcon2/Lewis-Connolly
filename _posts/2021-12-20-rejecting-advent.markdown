@@ -5,7 +5,7 @@ date: 2021-12-20
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Tradition
   - Reform
 ---

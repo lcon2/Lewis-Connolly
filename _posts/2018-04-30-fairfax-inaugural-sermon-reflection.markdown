@@ -5,7 +5,7 @@ date: 2018-04-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Religion
+  - Theology
   - Reflection
   - Tradition
 ---
