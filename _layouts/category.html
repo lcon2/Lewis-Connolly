@@ -20,8 +20,9 @@
                 {% assign sorted_categories = site.categories | sort %}
                 {% for category in sorted_categories %}
                     {% assign category_name = category[0] %}
+                    {% assign category_slug = category_name | slugify %}
                     <li>
-                        <a href="{{ '/categories/' | append: category_name | slugify | append: '/' | relative_url }}">{{ category_name }}</a>
+                        <a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}">{{ category_name }}</a>
                     </li>
                 {% endfor %}
             </ul>
