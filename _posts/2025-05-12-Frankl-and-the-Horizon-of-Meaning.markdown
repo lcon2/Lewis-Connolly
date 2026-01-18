@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Technology
-  - Theology
   - Spirituality
+  - Philosophy
 og_image: /assets/images/void.png
 ---
 <img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

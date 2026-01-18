@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Film
-  - Theology
   - Spirituality
+  - Philosophy
 og_image: /assets/images/logo.png
 ---
 When I think of Lammas tide,
