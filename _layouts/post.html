@@ -28,13 +28,13 @@
     <main>
         <article>
             <h2>{{ page.title }}</h2>
-            <p class="post-meta">
+            <p class="post-meta" style="margin-bottom: 0;">
                 {{ page.date | date: "%B %d, %Y" }} 
                     <span class="author-meta">
                         By <a href="{{ page.author_url | relative_url }}" class="author-link">{{ page.author }}</a>
                     </span>
                 </p>
-            <p class="post-meta">
+            <p class="post-meta" style="margin-top: 0;">
                 Filed under: {{ page.categories | join: ", " }}
             </p>
             <div>{{ content }}</div>
