@@ -5,9 +5,9 @@ date: 2022-01-13
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
   - Theology
-  - Spirituality
+  - Film
+  - Meaning
 ---
 Sat down the other night to watch the 2021 American drama Mass. I went in expecting it to be an emotionally intense experience, and it certainly was. My wife and I have a healthy film appetite; we probably get through a few a week, and although we see many good movies together, they rarely prompt in me a desire to write, to respond. But this one did.
 

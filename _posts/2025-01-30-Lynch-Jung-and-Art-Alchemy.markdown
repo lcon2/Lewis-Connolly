@@ -5,9 +5,9 @@ date: 2025-01-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
-  - Technology
-  - Theology
+  - Aesthetics
+  - Psychology
+  - Identity
 og_image: /assets/images/paintinggod.png
 ---
 <div class="post">

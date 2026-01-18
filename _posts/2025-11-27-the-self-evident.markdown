@@ -5,9 +5,9 @@ date: 2025-11-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Spirituality
+  - Meaning
+  - Identity
   - Philosophy
-  - Psychology
 og_image: /assets/images/Stairs.png
 ---
 <img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

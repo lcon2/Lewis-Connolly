@@ -5,9 +5,9 @@ date: 2023-03-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
   - Theology
-  - Spirituality
+  - Philosophy
+  - Psychology
 ---
 Here is a talk I gave at my church, Watershed Charlotte. The topic was on *What is the Gospel?* As in, what do I personally understand the Gospel (the good news) to be?
 

@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Game
-  - Philosophy
-  - Psychology
+  - Identity
+  - Aesthetics
 og_image: /assets/images/gameart.png
 ---
 <img src="{{ '/assets/images/gameart.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

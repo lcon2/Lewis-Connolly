@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
+  - Culture
   - Philosophy
-  - History
 ---
 It is no secret that I found my time training for the priesthood at Westcott House grating. There were a number of reasons for this—but the underlying issue was the degree to which my own theological opinions jarred with the ethos of the College. Now three years on I find myself in the incredibly weird situation of living once again in an Anglican training College—this time in Oxford, while my wife trains for the priesthood. As a Unitarian, my perspective on these Anglican training establishments must be quite unique.
 

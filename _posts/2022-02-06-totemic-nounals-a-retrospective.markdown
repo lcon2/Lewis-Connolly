@@ -5,9 +5,9 @@ date: 2022-02-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
   - Spirituality
-  - Philosophy
+  - Culture
+  - Meaning
 og_image: /assets/images/logo.png
 ---
 Preface

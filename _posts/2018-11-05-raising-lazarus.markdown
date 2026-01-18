@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
-  - History
+  - Consciousness
+  - Aesthetics
 og_image: /assets/images/logo.png
 ---
 Lazarus’ body is in a tomb in Judea, the Southern portion of Israel, in the town of Bethany, a little east of Jerusalem. Before what we read transpired, Jesus and the disciples discuss if they should travel south into Judea. A disciple says to Jesus, “Rabbi, the Jews were just now trying to stone you, and are you going there again"” But Jesus explains to all of them that Lazarus, whom he loved, had died, and so go he must. And so, Jesus and the disciples travel to Judea.

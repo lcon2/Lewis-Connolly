@@ -5,8 +5,8 @@ date: 2018-07-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
   - Spirituality
+  - Consciousness
   - Psychology
 og_image: /assets/images/logo.png
 ---

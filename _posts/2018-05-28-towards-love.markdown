@@ -5,9 +5,9 @@ date: 2018-05-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Technology
   - Theology
-  - Philosophy
+  - Technology
+  - Consciousness
 og_image: /assets/images/logo.png
 ---
 Part 1

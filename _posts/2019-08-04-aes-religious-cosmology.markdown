@@ -5,9 +5,9 @@ date: 2019-08-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
   - Psychology
+  - Spirituality
+  - Consciousness
 ---
 George William Russell was an Irish nationalist, poet, artist, and mystic, who went by the pseudonym Æ. Today I’ll be exploring his religious views, and his overall religious cosmology. And by ‘religious cosmology’ I mean that set of myths and narratives, through which he understood and orientated himself within the universe. Whenever we’re considering a thinker or writer, we of course gain a great deal of insight by merely learning which thinkers and writers they themselves held in high regard, and the three individuals held in high regard by Æ were Madame Blavatsky, alongside Ralph Waldo Emerson and Walt Whitman.
 

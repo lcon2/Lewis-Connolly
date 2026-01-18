@@ -5,8 +5,8 @@ date: 2018-09-17
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
   - Theology
+  - Meaning
   - Spirituality
 og_image: /assets/images/logo.png
 ---

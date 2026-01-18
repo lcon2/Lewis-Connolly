@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Psychology
-  - History
   - Culture
+  - Consciousness
 og_image: /assets/images/running.png
 ---
 <div class="post">

@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Technology
-  - Theology
   - Philosophy
+  - Psychology
 og_image: /assets/images/AlignedAI.png
 ---
 <div class="post">

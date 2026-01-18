@@ -5,7 +5,7 @@ date: 2018-02-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
+  - Aesthetics
   - Spirituality
   - Philosophy
 ---

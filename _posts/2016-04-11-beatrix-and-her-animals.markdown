@@ -6,7 +6,7 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
+  - Narrative
   - Philosophy
 og_image: /assets/images/logo.png
 ---

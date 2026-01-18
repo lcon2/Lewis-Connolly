@@ -5,8 +5,8 @@ date: 2025-04-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
-  - Spirituality
+  - Consciousness
+  - Identity
   - Philosophy
 og_image: /assets/images/Chess.png
 ---

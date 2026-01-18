@@ -5,8 +5,8 @@ date: 2018-03-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
   - Theology
+  - Meaning
   - Spirituality
 ---
 Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. For anyone who doesn’t know, these are the four houses that children are sorted into at Hogwarts School of Witchcraft and Wizardry, the wizarding school that Harry Potter attends in J. K. Rowling’s fantasy novel series. The four houses each embody certain character traits: Gryffindor for the brave at heart; Hufflepuff for the just and loyal; Ravenclaw for those of wit and learning; and Slytherin for the cunning who lead. The Harry Potter series taps into these innate universal archetypes in a big way, particularly those archetypes that are present in Christian symbolism. I could talk at length on this, so I’ll just give one example for now. Harry Potter is a magical orphan, adopted by lesser parents. Superman (who I’ve spoken about before) is the same, an orphan boy adopted by lesser parents, and Jesus is the same, an orphan boy adopted by lesser parents. And the reason this archetypical ideal chimes with us so innately is that to some extent we all have that sense, that we have our ‘real’ parents, whether they were good or bad parents, who fell short, and then there is some ideal beyond, like nature or the sacred or the unknown, which are our true parents. We were physically born of our mother, but in a more primal sense we were brought forth out of the earth, or out of this cosmic order. So in the same way certain architypes, certain characteristics, are embodied within in each of the four houses.

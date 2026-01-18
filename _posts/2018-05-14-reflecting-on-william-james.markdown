@@ -5,9 +5,9 @@ date: 2018-05-14
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
   - Philosophy
+  - Psychology
+  - Consciousness
 ---
 This week I have been thinking about the American philosopher and psychologist William James, in particular his most famous book, which was one of my birthday presents, *The Variety of Religious Experience* (published in 1902). William James was born in 1842 in New York City. His father, Henry James Sr., was a theologian who became an ardent Swedenborgian, an interesting religious movement. As the ideas of Swedenborgianism make up the backdrop upon William James’ life, being his father’s preoccupation, I’ll begin by saying a bit about the movement. 
 

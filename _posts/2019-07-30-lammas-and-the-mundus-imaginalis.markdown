@@ -5,9 +5,9 @@ date: 2019-07-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
+  - Aesthetics
   - Spirituality
-  - Philosophy
+  - Psychology
 og_image: /assets/images/logo.png
 ---
 When I think of Lammas tide,

@@ -5,9 +5,9 @@ date: 2017-02-21
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - History
   - Theology
   - Spirituality
-  - History
 ---
 In this address, I am thinking about the ‘Religious Society of Friends’, or as they are better known, the ‘Quakers’. I think in a way, it’s odd to use words to discuss them, for the obvious reason that Quakers are distinctive in that they meet primarily for ‘Silent Worship.’ It is in the silence of the Meeting that they commune with one another, cutting through the kind of knots it is easy to tie ourselves up in with words. This allows them to just simply be present one with another. 
 

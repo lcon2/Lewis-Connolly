@@ -5,9 +5,9 @@ date: 2025-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Technology
-  - Theology
-  - Philosophy
+  - Narrative
+  - Consciousness
+  - Meaning
 og_image: /assets/images/Alicepic.png
 ---
 <div class="post">

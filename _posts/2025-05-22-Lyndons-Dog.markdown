@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
   - History
+  - Culture
 og_image: /assets/images/dog.png
 ---
 <img src="{{ '/assets/images/dog.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

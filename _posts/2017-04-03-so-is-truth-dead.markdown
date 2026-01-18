@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
   - Philosophy
+  - Spirituality
 ---
 ##Part 1
 

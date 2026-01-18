@@ -5,9 +5,9 @@ date: 2015-06-08
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Philosophy
   - Culture
-  - Identity
+  - Aesthetics
+  - Philosophy
 ---
 When I was fifteen my friend Simon Poole and I had a mutual art project. We designed a communist community, a huge mega-structure in which the population of the world would live and work. We created a model of a typical living quarter, considered the average day of a person, what he/she would do, what work would consist of, and what would motivate them to participate within a society in which they could never rise above total equality.
 

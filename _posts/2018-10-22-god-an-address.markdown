@@ -5,8 +5,8 @@ date: 2018-10-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
+  - Consciousness
+  - Narrative
   - Philosophy
 og_image: /assets/images/logo.png
 ---

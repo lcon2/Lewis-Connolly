@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
-  - Philosophy
+  - Narrative
+  - Psychology
 og_image: /assets/images/logo.png
 ---
 “If I were Jesus Christ. I would save Judas.”

@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Film
-  - Theology
-  - Spirituality
+  - Aesthetics
+  - Meaning
 ---
 ‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7
 

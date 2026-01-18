@@ -5,9 +5,9 @@ date: 2019-08-26
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
-  - Theology
   - Spirituality
+  - Theology
+  - Consciousness
 og_image: /assets/images/logo.png
 ---
 I went walking in Rendlesham Forest, to escape into woodlands, to escape into Nature. I went along one of the popular trails that skirted the Woodbridge Airfield, a place with its own interesting Cold War mythology. For portions of the trail there were others in sight, families out for a walk, and at other times I found myself to be alone. At one such time, probably about a mile east of the airbase, I was struck by the quality of the silence, and so I left the dirt path and strolled into the forest a little way until I found the ideal spot. It is surprisingly difficult to find a spot such as this in Suffolk, to find yourself in thick woodland, and for the only sound to be that of the wind in the trees. A spot devoid of the traffic’s hum. I was standing amongst the tall conifers and silver birches, light reaching down to the detritus-strewn woodland floor, pines, leaves, and clusters of bracken growing, the sound of the birds singing, as I took a deep breath, and breathed in the smell of pine resin, and the wild air. That’s the spot where I simply waited. This morning, let us wait together in the wood.

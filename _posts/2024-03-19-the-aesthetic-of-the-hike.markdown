@@ -5,9 +5,9 @@ date: 2024-03-19
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
-  - Technology
-  - Philosophy
+  - Aesthetics
+  - Narrative
+  - Consciousness
 ---
 The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’
 

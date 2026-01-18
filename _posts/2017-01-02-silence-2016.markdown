@@ -7,7 +7,7 @@ author_url: "/about/"
 categories:
   - Film
   - Theology
-  - Spirituality
+  - History
 ---
 ‘The Price for your glory is their suffering’
 

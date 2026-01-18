@@ -5,9 +5,9 @@ date: 2024-12-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
-  - Technology
-  - Theology
+  - Meaning
+  - Aesthetics
+  - History
 og_image: /assets/images/taste.png
 ---
 <div class="post">

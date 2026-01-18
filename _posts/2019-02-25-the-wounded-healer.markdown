@@ -5,9 +5,9 @@ date: 2019-02-25
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
-  - Philosophy
+  - Meaning
+  - Narrative
+  - Consciousness
 og_image: /assets/images/logo.png
 ---
 This morning I am thinking about the wounded healer – coincidentally Sarah mentioned yesterday, in her charge to the congregation, the wounded healer. As we minister to a paining world, we, at the same time, minister to our own wounds. Our own wounds of alienation, separation, isolation, and loneliness. Wounds that go to the very heart of the human condition, our own state of brokenness.

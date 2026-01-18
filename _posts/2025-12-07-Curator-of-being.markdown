@@ -5,9 +5,9 @@ date: 2025-12-07
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
   - Philosophy
+  - Technology
+  - Identity
 og_image: /assets/images/curator-of-being.png
 ---
 <img src="{{ '/assets/images/curator-of-being.png' | relative_url }}" alt="Curator of Being" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

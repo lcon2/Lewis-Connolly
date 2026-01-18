@@ -5,9 +5,9 @@ date: 2019-03-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
-  - Philosophy
+  - Culture
+  - History
+  - Aesthetics
 ---
 ##Part 1
 

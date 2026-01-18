@@ -5,9 +5,9 @@ date: 2018-05-07
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
   - Philosophy
+  - Theology
+  - History
 ---
 ##Part 1
 

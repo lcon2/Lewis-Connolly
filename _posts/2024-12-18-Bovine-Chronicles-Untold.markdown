@@ -5,9 +5,9 @@ date: 2024-12-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
-  - Culture
+  - Aesthetics
   - Consciousness
+  - Film
 og_image: /assets/images/cow.png
 ---
 <img src="{{ '/assets/images/cow.png' | relative_url }}" alt="Cow" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

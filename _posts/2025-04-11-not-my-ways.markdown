@@ -5,9 +5,9 @@ date: 2025-04-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
-  - Technology
+  - Consciousness
   - Theology
+  - Technology
 og_image: /assets/images/suffering.png
 ---
 <img src="{{ '/assets/images/suffering.png' | relative_url }}" alt="suffering" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

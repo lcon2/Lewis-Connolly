@@ -6,8 +6,8 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Spirituality
-  - Philosophy
+  - Culture
+  - History
 og_image: /assets/images/logo.png
 ---
 This morning we’re thinking about the 19th Century Unitarian minister William Gaskell, and more broadly, where he fits into the wider Unitarian epic. William Gaskell is most often overshadowed by his more famous wife, the novelist Elizabeth Gaskell. When we think of William Gaskell, we think of Manchester, we think of Cross Street Chapel where he was involved for 85 years, being their minister for 56 of those years. He never ministered anywhere else. Like our Meeting House, Cross Street Chapel, or as it was known originally, The Dissenters Meeting House, was an English Presbyterian church which gradually shifted towards its Unitarian position. By the time of Gaskell it was firmly Unitarian. They first opened their doors five years before us, in 1694. William found himself ministering to the congregation from 1828 onwards, which consisted at the time of many wealthy and powerful families, who were motivated to both remove the legal limitations which continued to disadvantage nonconformists, and to improve the lot of the city’s working class, through improving educational and social conditions.

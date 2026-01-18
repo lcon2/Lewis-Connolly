@@ -5,9 +5,9 @@ date: 2018-05-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Film
-  - Theology
-  - Spirituality
+  - Culture
+  - Aesthetics
+  - Meaning
 ---
 Part 1
 

@@ -5,9 +5,9 @@ date: 2020-08-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Game
+  - Culture
   - Theology
-  - Spirituality
+  - Narrative
 og_image: /assets/images/logo.png
 ---
 In this desperate world of spin, it does not matter what you say or do, it only matters how it is received by others. In a recent piece of journalism by the BBC (The British Broadcasting Corporation) the N-word was used. The story concerned a racially aggravated attack in Bristol. The BBC initially stated that it in effect had hemmed and hawed over the difficult decision to include the word, but had decided on balance that given their desire to accurately report the facts of the incident, as well as the BBC having the family and victim’s support, the inclusion of the word was appropriate. The story having been aired received a throng of complaints.

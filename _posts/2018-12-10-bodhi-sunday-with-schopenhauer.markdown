@@ -5,9 +5,9 @@ date: 2018-12-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Theology
-  - Spirituality
   - Philosophy
+  - Consciousness
+  - History
 og_image: /assets/images/logo.png
 ---
 Our annual Bodhi Sunday service is about Buddhism, that Eastern religious tradition or philosophy which has shaped us so much. It has shaped us as individuals, and our Unitarian movement collectively, in ways we may not even be conscious of. Its influence runs deep. This morning then, I want to begin not in India, not with the historical Buddha of the 5th Century BCE as I have done in previous years, but rather begin in 19th Century Europe, as that is the point that Western thinkers began to consider for the first time the teachings of the Buddha.
