@@ -50,7 +50,7 @@ body {
 
 .home .logo-base,
 .home .logo-hover {
-    transition: opacity 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .home .logo-hover {
@@ -58,6 +58,7 @@ body {
     top: 0;
     left: 0;
     opacity: 0;
+    transform: scale(1.091);
 }
 
 .home .logo-link:hover .logo-hover,
