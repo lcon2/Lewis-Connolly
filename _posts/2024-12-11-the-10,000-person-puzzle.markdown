@@ -5,9 +5,9 @@ date: 2024-12-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Culture
-  - Civilization
   - Game
+  - Technology
+  - Civilization
 og_image: /assets/images/gameart.png
 ---
 <img src="{{ '/assets/images/gameart.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

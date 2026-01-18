@@ -7,7 +7,7 @@ author_url: "/about/"
 categories:
   - Music
   - AI
-  - Spirituality
+  - Technology
 og_image: /assets/images/river.png
 ---
 <img src="{{ '/assets/images/river.png' | relative_url }}" alt="Watch the River" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

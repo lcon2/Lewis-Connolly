@@ -214,6 +214,19 @@ body {
     text-align: center; /* Centers the text */
 }
 
+.home .intro a {
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.home .intro a:hover,
+.home .intro a:focus-visible {
+    color: #ff9933;
+    border-bottom-color: #ff9933;
+}
+
 /* Content Grid */
 .content-grid {
     display: grid;
