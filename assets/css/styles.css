@@ -35,6 +35,40 @@ body {
     height: auto;
 }
 
+.home .logo-wrap {
+    position: relative;
+    display: block;
+    max-width: 80px;
+}
+
+.home .logo-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home .logo-base,
+.home .logo-hover {
+    transition: opacity 0.3s ease;
+}
+
+.home .logo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.home .logo-link:hover .logo-hover,
+.home .logo-link:focus-visible .logo-hover {
+    opacity: 1;
+}
+
+.home .logo-link:hover .logo-base,
+.home .logo-link:focus-visible .logo-base {
+    opacity: 0;
+}
+
 .home .navbar-menu {
     display: flex;
     list-style: none;

@@ -21,7 +21,10 @@
         <div class="navbar-content">
             <!-- Logo -->
             <a href="{{ '/' | relative_url }}" class="logo-link">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo">
+                <span class="logo-wrap">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+                </span>
             </a>
 
             <!-- Navigation Menu -->
