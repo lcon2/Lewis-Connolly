@@ -280,6 +280,44 @@ body {
     border-bottom-color: #ff9933;
 }
 
+/* Article summary tooltip */
+.summary-tooltip {
+    position: fixed;
+    z-index: 9999;
+    max-width: 360px;
+    padding: 12px 14px 14px;
+    background: #1a1a1a;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    color: #e7e2dc;
+    font-size: 0.95em;
+    line-height: 1.5;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.summary-tooltip.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.summary-tooltip .summary-title {
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d0c7bf;
+    border-bottom: 1px solid #2f2f2f;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.summary-tooltip .summary-body {
+    color: #e7e2dc;
+}
+
 /* Content Grid */
 .home .content-grid {
     display: grid;

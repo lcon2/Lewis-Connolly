@@ -62,7 +62,7 @@
                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
                             <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
                         </span>
-                        <a href="{{ post.url | relative_url }}" class="bullet-link">{{ post.title | truncate: 45 }}</a>
+                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.ai_summary | escape }}">{{ post.title | truncate: 45 }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -101,7 +101,7 @@
       (function () {
         var allPosts = [
           {% for post in site.posts %}
-          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }} }{% if forloop.last == false %},{% endif %}
+          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }}, summary: {{ post.ai_summary | jsonify }} }{% if forloop.last == false %},{% endif %}
           {% endfor %}
         ];
         var newestUrls = Array.prototype.slice.call(document.querySelectorAll('#newest a')).map(function (a) {
@@ -139,13 +139,27 @@
           link.href = candidates[k].url;
           link.textContent = candidates[k].title;
           link.className = "bullet-link";
+          if (candidates[k].summary) {
+            link.setAttribute("data-summary", candidates[k].summary);
+          }
           wrap.appendChild(img);
           wrap.appendChild(img2);
           li.appendChild(wrap);
           li.appendChild(link);
           list.appendChild(li);
         }
+
+        Array.prototype.slice.call(document.querySelectorAll('.content-section a')).forEach(function (link) {
+          if (link.getAttribute('data-summary')) {
+            return;
+          }
+          var match = allPosts.find(function (post) { return post.url === link.getAttribute('href'); });
+          if (match && match.summary) {
+            link.setAttribute('data-summary', match.summary);
+          }
+        });
       })();
     </script>
+    <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
 </body>
 </html>

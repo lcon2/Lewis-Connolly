@@ -45,7 +45,7 @@
                                     {% for post in year_group.items %}
                                         <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}">{{ post.title }}</a>
                                         </li>
                                     {% endfor %}
                                 </ul>
@@ -61,5 +61,6 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>(c) Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Copyright</p>
     </footer>
+    <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
 </body>
 </html>
