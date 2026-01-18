@@ -58,8 +58,11 @@
             <ul>
                 {% for post in recent limit:11 %}
                     <li>
-                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon">
-                        <a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a>
+                        <span class="bullet-wrap">
+                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
+                            <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
+                        </span>
+                        <a href="{{ post.url | relative_url }}" class="bullet-link">{{ post.title | truncate: 45 }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -69,17 +72,17 @@
         <div class="content-section" id="popular">
             <h2>POPULAR</h2>
             <ul>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/drift">Drift</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2021/12/09/a-guide-to-active-imagination">A Guide to Active Imagination</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/05/14/reflecting-on-william-james">Reflecting on William James</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/09/12/cain-and-abel">Cain &amp; Abel</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/03/15/seneca-and-nero">Seneca &amp; Nero</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2019/06/24/britannia-marianne-and-columbia">Britannia, Marianne, &amp; Columbia</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/06/03/the-giving-tree">The Giving Tree</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2016-12-14-bodhi-sunday-in-advent">Bodhi Sunday in Advent</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2017/02/21/unitarians-think-quaker">Unitarians Think Quaker</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/02/28/alchemy-of-the-soul">Alchemy of the Soul</a></li>
-                <li><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon"> <a href="/2018/11/26/the-fool">The Fool</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/drift" class="bullet-link">Drift</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2021/12/09/a-guide-to-active-imagination" class="bullet-link">A Guide to Active Imagination</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2018/05/14/reflecting-on-william-james" class="bullet-link">Reflecting on William James</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2019/09/12/cain-and-abel" class="bullet-link">Cain &amp; Abel</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2017/03/15/seneca-and-nero" class="bullet-link">Seneca &amp; Nero</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2019/06/24/britannia-marianne-and-columbia" class="bullet-link">Britannia, Marianne, &amp; Columbia</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2018/06/03/the-giving-tree" class="bullet-link">The Giving Tree</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2016-12-14-bodhi-sunday-in-advent" class="bullet-link">Bodhi Sunday in Advent</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2017/02/21/unitarians-think-quaker" class="bullet-link">Unitarians Think Quaker</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2018/02/28/alchemy-of-the-soul" class="bullet-link">Alchemy of the Soul</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="/2018/11/26/the-fool" class="bullet-link">The Fool</a></li>
             </ul>
         </div>
         
@@ -122,14 +125,23 @@
         var count = Math.min(11, candidates.length);
         for (var k = 0; k < count; k++) {
           var li = document.createElement('li');
+          var wrap = document.createElement('span');
+          wrap.className = "bullet-wrap";
           var img = document.createElement('img');
           img.src = "{{ '/assets/images/bullet.png' | relative_url }}";
           img.alt = "Bullet";
-          img.className = "bullet-icon";
+          img.className = "bullet-icon bullet-base";
+          var img2 = document.createElement('img');
+          img2.src = "{{ '/assets/images/bullet2.png' | relative_url }}";
+          img2.alt = "Bullet";
+          img2.className = "bullet-icon bullet-hover";
           var link = document.createElement('a');
           link.href = candidates[k].url;
           link.textContent = candidates[k].title;
-          li.appendChild(img);
+          link.className = "bullet-link";
+          wrap.appendChild(img);
+          wrap.appendChild(img2);
+          li.appendChild(wrap);
           li.appendChild(link);
           list.appendChild(li);
         }

@@ -162,6 +162,41 @@ body {
     height: 22px;
 }
 
+.home .bullet-wrap {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    flex: 0 0 22px;
+}
+
+.home .bullet-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: 50% 50%;
+}
+
+.home .bullet-hover {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.home .content-section li:hover .bullet-base,
+.home .content-section li:focus-within .bullet-base {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.home .content-section li:hover .bullet-hover,
+.home .content-section li:focus-within .bullet-hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
 .content-section ul li a {
     color: #f0f0f0;
     text-decoration: none;
