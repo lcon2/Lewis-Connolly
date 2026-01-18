@@ -6,7 +6,6 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Theology
-  - Ritual
   - Tradition
 ---
 The starting point in Buddhism is the observation that we are all feeble creatures. Compared to others, or earlier iterations of ourselves, we may feel weak and feeble. But against the backdrop of the cosmos, we are all in the same boat. Our health takes an unlucky turn, a misplaced glance, an unforeseen consequence, the wrong place at the wrong time, and the book is easily closed. As was said in the first reading (*Dukkha, they say* by Elizabeth Tarbox), it is all Dukkha. There is a great impermanence to all this—it’s all flowing by, it can’t be captured, or put in a bottle, and we all kind of live for that delusion, that happiness which is momentarily dangled in front of us, only for it to fall away.

@@ -5,7 +5,6 @@ date: 2025-01-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Phenomenology
   - Experience
   - Reflection
 og_image: /assets/images/deco.png

@@ -7,7 +7,6 @@ author_url: "/about/"
 categories:
   - Experience
   - Reflection
-  - Living
 ---
 The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’
 

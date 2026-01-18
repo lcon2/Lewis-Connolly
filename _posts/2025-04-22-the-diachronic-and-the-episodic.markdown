@@ -5,7 +5,6 @@ date: 2025-04-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Time
   - Self
   - Consciousness
 og_image: /assets/images/Chess.png

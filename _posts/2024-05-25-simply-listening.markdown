@@ -5,8 +5,6 @@ date: 2024-05-25
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Attention
-  - Contemplation
   - Practice
 ---
 I recall my last sitting. I awoke the other night; my wife and daughter were fast asleep. Let me describe the experience to you. This exercise was motivated by a desire to approach this—whatever word we’re using to describe it—with more intentionality. This intentionality colors what follows.
