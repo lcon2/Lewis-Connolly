@@ -78,11 +78,12 @@ body {
 
 .post .category-pill {
     display: inline-block;
-    margin: 0 1px 1px 0;
-    padding: 0 5px;
+    margin: 0;
+    padding: 0 3px;
     border: 2px solid #f0f0f0;
     border-radius: 999px;
     color: #f0f0f0;
+    font-size: 0.85em;
     text-decoration: none;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
