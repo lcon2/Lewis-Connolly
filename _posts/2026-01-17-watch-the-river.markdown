@@ -38,10 +38,16 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
 .audio-controls { display: flex; gap: 8px; margin-top: 6px; }
 .audio-btn { background: #222; color: #f0f0f0; border: 1px solid #3a3a3a; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
 .audio-btn:hover { border-color: #ff9933; color: #ff9933; }
+.audio-volume { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.audio-volume label { font-size: 0.8em; color: #bdbdbd; }
+.audio-volume input[type="range"] { width: 120px; accent-color: #ff9933; }
 .audio-list { margin-top: 14px; border-top: 1px solid #2c2c2c; padding-top: 10px; display: grid; gap: 6px; }
-.audio-track { width: 100%; text-align: left; background: #1f1f1f; color: #e6e6e6; border: 1px solid #2f2f2f; padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.audio-track { width: 100%; text-align: left; background: #1f1f1f; color: #e6e6e6; border: 1px solid #2f2f2f; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
 .audio-track:hover { border-color: #ff9933; color: #ff9933; }
 .audio-track.is-active { background: #262626; border-color: #ff9933; color: #ff9933; }
+.track-num { width: 18px; color: #9a9a9a; font-variant-numeric: tabular-nums; }
+.track-name { flex: 1; }
+.track-time { color: #b5b5b5; font-variant-numeric: tabular-nums; }
 </style>
 
 <div class="audio-card" data-player>
@@ -56,11 +62,27 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
         <button class="audio-btn" type="button" data-action="next">Next</button>
       </div>
     </div>
+    <div class="audio-volume">
+      <label for="river-volume">Volume</label>
+      <input id="river-volume" type="range" min="0" max="1" step="0.01" value="0.8" data-action="volume">
+    </div>
   </div>
   <div class="audio-list">
-    <button class="audio-track is-active" type="button" data-index="0">Stand and Watch the River</button>
-    <button class="audio-track" type="button" data-index="1">Holds Every Footstep</button>
-    <button class="audio-track" type="button" data-index="2">Without Instruction</button>
+    <button class="audio-track is-active" type="button" data-index="0">
+      <span class="track-num">1</span>
+      <span class="track-name">Stand and Watch the River</span>
+      <span class="track-time" data-time="0">--:--</span>
+    </button>
+    <button class="audio-track" type="button" data-index="1">
+      <span class="track-num">2</span>
+      <span class="track-name">Holds Every Footstep</span>
+      <span class="track-time" data-time="1">--:--</span>
+    </button>
+    <button class="audio-track" type="button" data-index="2">
+      <span class="track-num">3</span>
+      <span class="track-name">Without Instruction</span>
+      <span class="track-time" data-time="2">--:--</span>
+    </button>
   </div>
   <audio id="watch-the-river-player" preload="none"></audio>
 </div>
@@ -78,8 +100,16 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
   var playBtn = document.querySelector('[data-action="play"]');
   var prevBtn = document.querySelector('[data-action="prev"]');
   var nextBtn = document.querySelector('[data-action="next"]');
+  var volumeSlider = document.querySelector('[data-action="volume"]');
   var trackButtons = Array.prototype.slice.call(document.querySelectorAll('.audio-track'));
+  var timeEls = Array.prototype.slice.call(document.querySelectorAll('[data-time]'));
   var current = 0;
+
+  function formatTime(seconds) {
+    var mins = Math.floor(seconds / 60) || 0;
+    var secs = Math.floor(seconds % 60) || 0;
+    return mins + ':' + (secs < 10 ? '0' : '') + secs;
+  }
 
   function setActive(index) {
     current = index;
@@ -112,7 +142,26 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
     playCurrent();
   }
 
+  function loadDurations() {
+    tracks.forEach(function (track, index) {
+      var probe = new Audio();
+      probe.preload = 'metadata';
+      probe.src = track.src;
+      probe.addEventListener('loadedmetadata', function () {
+        if (timeEls[index]) timeEls[index].textContent = formatTime(probe.duration);
+      });
+    });
+  }
+
   setActive(0);
+  player.volume = 0.8;
+  loadDurations();
+
+  if (volumeSlider) {
+    volumeSlider.addEventListener('input', function () {
+      player.volume = Number(volumeSlider.value);
+    });
+  }
 
   if (playBtn) {
     playBtn.addEventListener('click', function () {
@@ -138,6 +187,7 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
   player.addEventListener('ended', nextTrack);
 })();
 </script>
+
 
 
 <div style="max-width: 520px; margin: 20px auto; padding: 16px 20px; border: 1px solid #444; background-color: #181818; white-space: pre-line;">
