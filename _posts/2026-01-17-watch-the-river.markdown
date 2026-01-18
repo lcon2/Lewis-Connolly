@@ -40,6 +40,7 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
     </audio>
 </div>
 
+<div style="max-width: 520px; margin: 20px auto; padding: 16px 20px; border: 1px solid #444; background-color: #181818; white-space: pre-line;">
 [Verse 1]
 I used to stand and watch the river
 Thinking I was on the shore
@@ -49,10 +50,10 @@ Wondering what it flowed for
 But the water kept on moving
 Without a single thought
 And something in that simple motion
-Showed me what I’m not
+Showed me what I'm not
 
-[Refrain – soft, steady]
-I am not the one who’s looking
+[Refrain - soft, steady]
+I am not the one who's looking
 I am not the thought that tries
 I am what the world is moving in
 When the need to know grows quiet
@@ -68,13 +69,13 @@ Then leaves without regret
 Nothing here is asking anything
 And nothing is unmet
 
-[Refrain – slightly altered]
+[Refrain - slightly altered]
 I am not inside the moment
 I am not outside the day
 I am what is gently present
 As the moment slips away
 
-[Bridge – slower, more spacious]
+[Bridge - slower, more spacious]
 No distance
 Between the seeing and the seen
 No boundary
@@ -96,8 +97,11 @@ No thunder, no release
 Just the quiet understanding
 That nothing here was missing
 
-[Final Refrain – very gentle]
+[Final Refrain - very gentle]
 I am not becoming clearer
 I am not arriving home
 I am what has always been here
 While the scenes have come and gone
+
+[Outro - guitar fades, birds return]
+</div>
