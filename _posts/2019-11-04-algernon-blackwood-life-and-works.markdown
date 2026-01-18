@@ -5,8 +5,10 @@ date: 2019-11-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Story
+  - Imagination
+  - History
 ---
-
 Algernon Blackwood was born in South-East London in 1869 and grew up in a religious household. His parents were Calvinists, which entailed an austere, narrow, and oppressive childhood. As a teenager, he was even sent to an isolated Moravian Brotherhood school in the German countryside. In a later biography, he described his life there at that time—the harsh pietism which prompted his imagination to flee into the German Black Forest, where he could discern the Germanic animistic spirits at play. Animism is the religious belief that all objects, places, and creatures are infused with some kind of spiritual essence, almost as if there is a living memory in all plants, rocks, rivers, and in the soil itself. You could even understand *The Collective Unconscious*, which I spoke about last week, as Carl Jung’s attempt to capture animism in psychological terms: this collective memory which bubbles out from unknown depths.
 
 On a slight tangent, in 1936, some 40-odd years after Blackwood’s imagination wandered amongst the trees of the Black Forest, and a couple of years prior to the outbreak of World War II, Carl Jung actually wrote an essay on *The Collective Unconscious* specifically in relation to the Black Forest. In it, he argued that old Germanic folklore traditions, dormant within the depths of the Black Forest, were beginning to resurface and reassert themselves, much like dormant volcanoes becoming once again active. Namely, the German god of storm and frenzy, Wotan. A return made possible given that Christianity had receded in its dominance, leaving a vacuum to be filled. The spirit of Wotan was most apparent in the Youth movements of Germany, and in Germany’s most dominant political party at the time – the National Socialism Party, AKA the Nazis. I wonder, then, if teenage Algernon Blackwood also intuited that same animistic spirit, dormant and biding its time, in the wake of the doom it would inevitably loose upon the face of Europe.

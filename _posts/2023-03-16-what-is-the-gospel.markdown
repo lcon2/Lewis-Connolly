@@ -5,8 +5,10 @@ date: 2023-03-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Faith
+  - Tradition
 ---
-
 Here is a talk I gave at my church, Watershed Charlotte. The topic was on *What is the Gospel?* As in, what do I personally understand the Gospel (the good news) to be?
 
 The word ‘Gospel’ first conjures up for me what I consider to be the American evangelical meaning. That being, that the Gospel (the good news) is that Jesus died for you, for your sins, and that if you believe in him, you will have eternal life (which is to say you will earn your heavenly reward). It’s all about that utopia we will reach at the closing of the day—the pie in the sky when you die by and by.

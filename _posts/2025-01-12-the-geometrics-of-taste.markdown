@@ -5,9 +5,11 @@ date: 2025-01-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Phenomenology
+  - Experience
+  - Reflection
 og_image: /assets/images/deco.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/Deco.mp3" type="audio/mpeg">

@@ -5,8 +5,10 @@ date: 2021-12-20
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Tradition
+  - Reform
 ---
-
 I come to writing this essay in a melancholic mood, and as ever, I come in search of that elusive something. It is Advent 2021. Advent is the season for waiting and expectation, and I, at this moment in my life find myself waiting. Waiting somewhat against my will. Waiting for the next chapter of my life to begin.
 
 In Christian terms, Advent is when we performatively await the birth of Christ, and eschatologically wait for his second coming. This is the Christian expression of a seemingly archetypal pattern, the pattern of perpetual longing after a communion with the eternal. That feeling that seems to be a universal, that we are all intrinsically alone, and longing not to be, longing to be connected in some ultimate sense to that great totality beyond. It seems that though this longing is a universal, communion remains ever illusory. It seems that Advent is only ever glimpsed and striven for, but never realised.

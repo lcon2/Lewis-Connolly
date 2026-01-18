@@ -5,8 +5,10 @@ date: 2017-02-21
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Tradition
+  - Culture
 ---
-
 In this address, I am thinking about the ‘Religious Society of Friends’, or as they are better known, the ‘Quakers’. I think in a way, it’s odd to use words to discuss them, for the obvious reason that Quakers are distinctive in that they meet primarily for ‘Silent Worship.’ It is in the silence of the Meeting that they commune with one another, cutting through the kind of knots it is easy to tie ourselves up in with words. This allows them to just simply be present one with another. 
 
 On Wednesday I was the speaker at the Quaker’s monthly discussion group; I used the opportunity to introduce myself to them, telling them my spiritual journey, and my journey into Unitarianism. I then went on to give them my take on Unitarianism – who we are, our history, what we stand for, and some of the challenges we face as a movement. Some open-ended discussion followed my talk; an opportunity for me to learn more about them, how they understand the significance of their faith, and to learn how they perceive the similarities between our two movements. The conversations were interesting and wide-ranging. 

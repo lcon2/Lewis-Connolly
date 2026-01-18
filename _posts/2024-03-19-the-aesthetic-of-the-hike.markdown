@@ -5,8 +5,10 @@ date: 2024-03-19
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Experience
+  - Reflection
+  - Living
 ---
-
 The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’
 
 I’ll avoid the trite/clichéd answer, as the George Mallory quote goes, “because it is there!”

@@ -5,8 +5,10 @@ date: 2017-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Narrative
+  - Image
+  - Reflection
 ---
-
 ‘The Price for your glory is their suffering’
 
 Scorsese’s new epic masterpiece is theologically rich, aesthetically captivating, and emotionally raw. Based upon Endo’s 1966 historical fiction by the same name, *Silence* is a film about Portuguese priests facing persecution in 17th century Japan. This deep spiritual movie could not be more at odds with Scorsese’s previous work, *The Wolf of Wall Street* (2013), which portrayed the seedy, facile world of stock market fraud. Though antithetical, both films nonetheless point their audiences in similar directions, towards valuing the considered, devotional, moral life.

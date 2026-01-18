@@ -5,9 +5,11 @@ date: 2025-04-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Time
+  - Self
+  - Consciousness
 og_image: /assets/images/Chess.png
 ---
-
 <img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I recently came across the work of Galen Strawson, a British philosopher who is a professor at the University of Texas, Austin. His work generally revolves around issues like the philosophy of mind and consciousness. While I don't necessarily share his conclusions, his ideas have made me reflect on my own positions. I spent some time getting my head around his views on panpsychism, and although intriguing, I am unconvinced that his idea—that everything has consciousness, but subjectivity emerges only when matter is arranged in a particular way—solves any problem that the mainstream scientific perspective (in which consciousness emerges when a certain threshold of complexity is reached) does not.

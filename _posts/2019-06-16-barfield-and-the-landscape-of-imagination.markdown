@@ -5,8 +5,10 @@ date: 2019-06-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Imagination
+  - Philosophy
+  - Metaphysics
 ---
-
 So, there I am drinking a pint of beer. My life of ministry did not begin within Unitarianism, but in the Church of England. I did a curacy in the diocese of Portsmouth, which is essentially (if you don’t know) the probationary period you need to undertake before you can become a fully-fledged priest within your own parish. And the curacy part was quite enough for me to realise that the Church of England was not for me, for many reasons, but it essentially came down to my inability to be authentically me in that context, unable to roam freely across the landscape of my own curiosity. And my ability to do that, to freely explore ideas, to think about them, to talk about them, as I’m doing now, is at the heart of my vocation. It’s why I get up in the morning.
 
 So, I’m drinking my beer in a pub in Oxford. The pub’s name is ‘The Eagle and Child.’ I lived in Oxford for a year before I took up my post in Ipswich. The reason I was in Oxford is as I was trying to get out of Anglicanism, my wife Cat was herself trying to get in, and it just so happened that around the same time that I resigned from the Anglican Church, my wife was accepted to train for ministry in Oxford to become a priest herself. So, I had the very odd and strange experience of resigning from the Church of England, and immediately going to live in a college where they were training priests for the Church of England. A very strange time in my life. So, I spent much of that time reading, writing, and preparing myself for what I believed and hoped was about to follow – a ministry in the Unitarian movement. I spent some time in Oxford, particularly in this pub, ‘The Eagle and Child’, reading some books, and drinking my pint.

@@ -5,9 +5,11 @@ date: 2024-12-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Future
+  - Technology
+  - Utopia
 og_image: /assets/images/meditation.png
 ---
-
 <img src="{{ '/assets/images/meditation.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 I think we are on the cusp of a meaning crisis. Many, possibly most, derive their meaning from the work they do. If they are in a specialized profession, they have invested a great deal of time, energy, and money to arrive at where they are. They’ve gone to university, perhaps they’ve received an advanced degree, they’ve given many years of effort, sacrificed many nights away from their family, but by God have they done it!

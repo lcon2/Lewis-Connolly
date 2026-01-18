@@ -5,8 +5,10 @@ date: 2015-06-08
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Utopia
+  - Civilization
+  - Culture
 ---
-
 When I was fifteen my friend Simon Poole and I had a mutual art project. We designed a communist community, a huge mega-structure in which the population of the world would live and work. We created a model of a typical living quarter, considered the average day of a person, what he/she would do, what work would consist of, and what would motivate them to participate within a society in which they could never rise above total equality.
 
 I’ll just step over the fact that this might be quite an odd thing for a couple of teenagers to consider, and rather focus on the fact that as original as we thought we were being, a similar idea was in fact considered by the French Communist philosopher Charles Fourier (1772–1837).

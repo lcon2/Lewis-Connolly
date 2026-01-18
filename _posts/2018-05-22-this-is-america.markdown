@@ -5,8 +5,10 @@ date: 2018-05-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Politics
+  - Culture
+  - Power
 ---
-
 Part 1
 
 Public expressions of violence are not merely a matter of the number of lives lost; their impact cannot be measured in such terms. Rather their impact is shaped a great deal by the lens we view them through, through narratives already present in society. Take, for example, the Orlando shooting two years ago - the impact of that mass shooting was felt in such a way because it was very explicitly motivated by homophobia. The cultural battle lines were already in place, this shooting just heightened the stakes. Its impact was felt all the more acutely by the LGBT community, and friends of the LGBT community (hence why at the time, I felt an immediate need to respond). Or, take the ongoing violence along the Gaza strip this week, Palestinians being killed by Israelis upon the border. Again, we are all the more conscious of this event, because we are very familiar with that ongoing conflict.

@@ -5,8 +5,10 @@ date: 2019-06-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Myth
+  - Symbol
+  - Story
 ---
-
 This morning I’m returning to the world of esoteric culture, the Theosophical Society, the world of Madame Blavatsky, and the realm of exploring hidden knowledge. In particular, I want to think about Rudolf Steiner, a key figure in this world. Steiner, an Austrian born in 1861, is perhaps best known today for his experimental educational curriculum, used in Steiner Schools. These schools emphasize holistic, spiritual education, punctuated by exercise, movement, and creativity, aiming to foster harmony in society.
 
 Steiner was a polymath who traversed diverse intellectual landscapes: philosophy, literature, and German idealism. He was deeply influenced by Johann Wolfgang von Goethe, the archetypal German scholar, poet, scientist, and author of *Faust*. Steiner spent much of his early life studying and cataloguing Goethe’s works. However, his life took a radical turn in his forties when he became involved in the Theosophical Society and esoteric culture. This shift was catalyzed by an essay he wrote on Goethe’s fairy tale *The Green Snake and the Beautiful Lily*. This essay, interpreting the symbology within the story, marked the beginning of Steiner’s engagement with esoteric thought.

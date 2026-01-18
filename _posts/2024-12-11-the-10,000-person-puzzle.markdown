@@ -5,9 +5,11 @@ date: 2024-12-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Culture
+  - Civilization
+  - Reflection
 og_image: /assets/images/gameart.png
 ---
-
 <img src="{{ '/assets/images/gameart.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 *Silo* (2023) is a great series; it is set in a seemingly post-apocalyptic world in which 10,000 people live in a ‘silo’ or underground vault. The silo is entirely self-sustaining, across its 144 floors everything is covered, from food to electricity production, to maintenance, medical care, and security, to anything else you can think of, anything which would be necessary to keep the population self-sustained. Through carefully monitoring and sanctioning of childbearing this 10,000-population number is kept static.

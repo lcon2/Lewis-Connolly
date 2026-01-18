@@ -5,9 +5,11 @@ date: 2024-12-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Meaning
+  - Experience
+  - Reflection
 og_image: /assets/images/taste.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/taste.mp3" type="audio/mpeg">

@@ -5,8 +5,10 @@ date: 2016-12-14
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Ritual
+  - Tradition
 ---
-
 The starting point in Buddhism is the observation that we are all feeble creatures. Compared to others, or earlier iterations of ourselves, we may feel weak and feeble. But against the backdrop of the cosmos, we are all in the same boat. Our health takes an unlucky turn, a misplaced glance, an unforeseen consequence, the wrong place at the wrong time, and the book is easily closed. As was said in the first reading (*Dukkha, they say* by Elizabeth Tarbox), it is all Dukkha. There is a great impermanence to all this—it’s all flowing by, it can’t be captured, or put in a bottle, and we all kind of live for that delusion, that happiness which is momentarily dangled in front of us, only for it to fall away.
 
 So, this is the problem that the historical Buddha, Siddhartha Gautama, saw, as he said, “I will not leave this place until I find a way to end all sorrow.” For there he sat under the Bodhi tree. He saw the problem, but determined we were approaching it in the wrong way. For we are naturally determined to, in some sense, capture the happiness and ensure its permanence. We attempt to do this in lots of different ways. In materialist terms, we make ourselves comfortable, and separate ourselves from the dross. In religious terms, we persuade ourselves that our personal self will somehow move beyond this present age. Or move beyond us, through our legacy, through our children, through our furthering of a cause, a nation, an ideal. But all is Dukkha—all is impermanence.

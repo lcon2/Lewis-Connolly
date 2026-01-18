@@ -5,9 +5,11 @@ date: 2025-11-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Psychology
+  - Mind
+  - Self
 og_image: /assets/images/irondome.png
 ---
-
 <img src="{{ '/assets/images/irondome.png' | relative_url }}" alt="iron" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artificial intelligence is fast saturating everything. I’m largely on the “yay” side of it – I think it’s very exciting, and I’m glad to be alive at this pivotal moment in history, witnessing what may be the most significant technological leap yet.

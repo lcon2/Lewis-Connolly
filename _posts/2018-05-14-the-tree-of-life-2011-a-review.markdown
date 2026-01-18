@@ -5,8 +5,10 @@ date: 2018-05-14
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Narrative
+  - Image
+  - Reflection
 ---
-
 ‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7
 
 This film takes some stamina. It is long, dense with metaphor, lacking a conventional narrative arc, and somewhat mystifying. Its themes encompass life, the universe, and everything. The film literally spans all time, from the beginning of the universe to now. And, its message is unapologetically spiritual. The director, Terrence Malick, has clearly set out to impart some wisdom to us lesser mortals concerning the human experience, against the backdrop of nature’s majesty. His approach, his obscurantism, strays dangerously close to being somewhat pretentious. I acknowledge it is probably only down to my partiality towards the subject matter that I give the film the benefit of the doubt.

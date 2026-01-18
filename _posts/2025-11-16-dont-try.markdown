@@ -5,9 +5,11 @@ date: 2025-11-16
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Will
+  - Freedom
+  - Meaning
 og_image: /assets/images/donttry.png
 ---
-
 <img src="{{ '/assets/images/donttry.png' | relative_url }}" alt="donttry" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t work. And don’t try.  

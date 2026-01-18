@@ -5,9 +5,11 @@ date: 2025-04-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Ethics
+  - Will
+  - Freedom
 og_image: /assets/images/suffering.png
 ---
-
 <img src="{{ '/assets/images/suffering.png' | relative_url }}" alt="suffering" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Some more AI musings—basically all I think about outside of running. The word "intelligence" is a misnomer when it comes to artificial intelligence. Why? Because "intelligence" is a human attribute, and these large language models are not human. Not to say that they are not very capable; they obviously are, and increasingly so. Their domain of capability certainly overlaps with humans, but even then, "they" are not perceiving reality in the way we do—not even remotely so. It may become increasingly difficult to remember this as they stray further and further into creating competent works in what has traditionally been humanity's domain. Some of the greatest works of art, literature, and film may soon emerge through these tools. It is difficult to know what words like "intelligence" or "genius" will even signify after that.

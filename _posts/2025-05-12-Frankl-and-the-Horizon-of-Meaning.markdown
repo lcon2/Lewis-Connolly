@@ -5,9 +5,11 @@ date: 2025-05-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Meaning
+  - Suffering
+  - Philosophy
 og_image: /assets/images/void.png
 ---
-
 <img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Despite its reputation, Viktor Frankl’s ‘Man’s Search for Meaning’ never resonated with me. It’s a difficult book to critique of course. After all, it means taking issue with someone who endured one of the darkest hells imaginable. Who am I, from my place of comfort and safety, to question the conclusions he drew from his suffering? And yet I do take issue. 

@@ -5,8 +5,10 @@ date: 2019-04-08
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - History
+  - Mysticism
+  - Tradition
 ---
-
 This morning I am entering territory I have not traversed before. I’m thinking about the emergence of what we might term western esotericism, or western occultism, or modern spirituality. When we think about the emergence of an idea, or a set of ideas, it’s worth thinking about how such ideas arose. An idea does not just appear – *ex nihilo* - out of nothing. The conditions, the architecture of ideas prevalent at a particular time, the softening of prior-held precepts, these are all essential prerequisites for an idea to arise. 
 
 In general, I find academic genealogy a fascinating subject. Samuel Coleridge wrote, *“The dwarf sees farther than the giant, when he has the giant’s shoulder to mount on.”* A variant of the well-known idiom, *“We all stand on the shoulders of giants.”* We all benefit from the insights of bygone thinkers, and our progress, our discoveries, depend upon those who came before. Scholarship often consists of tracing back the intellectual lineage of particular ideas. Even thinkers we consider remarkably original, like Newton, Freud, Darwin, or Marx, all have their intellectual forerunners who preempted their work and theories to some measure, setting the stage for their advent.

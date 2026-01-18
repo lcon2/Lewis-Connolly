@@ -5,9 +5,11 @@ date: 2025-02-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Transhumanism
+  - Technology
+  - Spirituality
 og_image: /assets/images/pantheon.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/Neo-Anthroposophy.mp3" type="audio/mpeg">

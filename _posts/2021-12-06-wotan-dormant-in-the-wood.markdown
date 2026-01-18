@@ -5,8 +5,10 @@ date: 2021-12-06
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Myth
+  - Archetype
+  - Tradition
 ---
-
 My thoughts return time and again to Carl Jung’s 1936 paper *Wotan*. This paper stands out to me as being perhaps his most controversial, given its subject matter: the rise of the Third Reich. Jung’s approach towards the Third Reich is critical, but to our contemporary sensibilities, it reads as not being nearly critical enough. Much has been written on Jung’s complex relationship to the Third Reich—a relationship I will not dwell on here.
 
 My interest relates to what the paper elucidates concerning the collective unconscious. Jung’s view of the collective unconscious shifted over the course of his lifetime, and even today, it remains challenging to pin his theory down explicitly. One can regard this ambiguity as a weakness; his theories often resisted clear definition and scientific rigor. I tend, however, to view this ambiguity as a strength, as it compels us to draw upon our intuited sense of things. His theories often speak to that neglected space between art and science, a space that, in my view, lies somehow closer to the human condition.

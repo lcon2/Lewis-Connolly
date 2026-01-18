@@ -5,8 +5,10 @@ date: 2022-05-24
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Consciousness
+  - Imagination
+  - Mind
 ---
-
 I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and perhaps in America generally, are coy to reveal what human behavior transpires within; the architecture rarely offers up much of a clue. But there is a sign out front, a truly hideous and slightly pixilated sign. It looks as if some boomer back in the 90s discovered the marvels of paint on his Windows PC and allowed their Gee-Whiz-Can-Do attitude to do the rest. And why change it now? After all, it has done a perfectly fine job these past twenty-odd years. The sign reads something like, LovingJoy Ministries, or HeartFreedom Center. Something God-awful like that.
 
 The next bit is where things get a little stranger. Inside I, along with my wife, are quickly ushered onto a ride of sorts; it was kind of like a Haunted Mansion Ride. There was a whole bunch of us sitting on a platform, the platform then began a slow journey through various spaces - a drama of sorts unfolded, or perhaps a ‘mystery play’ would be a better description. It was certainly tacky in parts, the band that rotated into view here and there were a bunch of grizzly old flower-power men, Ginsberg sorts, all twanging away on their various instruments and singing badly. In the first darkened space, the Hindu goddess Kali sprung from the shadows, and my wife near leapt out of her skin. Of course, it wasn’t actually Kali – the goddess of feminine fury – it was an African American woman who was playing Kali. It was visually surprisingly good, but I’m not entirely sure what the point was. Perhaps the image was designed to invite us to reflect on our own mortality, on death. An image to sharpen our sense of things and bring us into our own present.

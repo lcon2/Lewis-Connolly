@@ -5,8 +5,10 @@ date: 2017-03-15
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - History
+  - Philosophy
+  - Power
 ---
-
 ### Part 1
 
 This morning we are in first-century Rome, with two individuals: Seneca and Nero. Seneca was a gloomy stoic philosopher, and Nero, the Emperor of Rome, was a crazed, bloodthirsty despot. They were rather different from one another—Seneca valued sobriety, reason, and moral virtue, and Nero was the exact opposite; he was a crude, self-indulgent exhibitionist who had incestuous relationships with his mother and sister, who in jealous fits of rage murdered members of his own family. During his 13-year reign as the Emperor of Rome, he brought the Empire to the edge of political and financial ruin. As dissimilar as these two people were, Seneca, the writer, thinker, and poet, was for many years the top adviser and close companion of Emperor Nero. What a truly fascinating pairing.

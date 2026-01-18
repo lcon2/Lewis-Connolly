@@ -5,8 +5,10 @@ date: 2017-04-03
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Epistemology
+  - Philosophy
+  - Modernity
 ---
-
 ##Part 1
 
 This week, the weekly news magazine ‘Time’ went with the front page cover caption ‘Is Truth Dead?’ as you can see. Now the story itself is, as you might imagine, all about Donald Trump’s presidency, specifically, his approach to the ‘Truth’. The article outlines a whole string of outright false claims that the president has made, from ‘wire tapping’ accusations, to make-believe terrorist attacks in Sweden, to massive scale voter fraud, to accusing opponents of being behind John F. Kennedy’s assassination… The list goes on and on. A list of groundless inflammatory claims. The reason for all these falsehoods, we might imagine, is misdirection. Could it be intentional misdirection, or could he really believe what he says? After all this strategy of building a haze of falsehoods is outlined in his book published in the 80s called ‘The Art of the Deal’. If you accuse a former president of espionage, the media is going to focus on that, as opposed to the finer details of any policy you’re enacting. It would be quite a clever strategy – each time a provocative claim gets made, you have a group of ill-informed people on one side making a lot of noise, saying it must be true, and another group on the other side, arguing just as ferociously that it’s of course nonsense, while all the while, what really matters, the nitty gritty policy stuff, gets very little attention at all.

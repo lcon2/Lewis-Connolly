@@ -5,8 +5,10 @@ date: 2019-02-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Metaphysics
+  - Consciousness
+  - Spirituality
 ---
-
 A quote I like from Emerson is, “Adopt the pace of nature: her secret is patience.” The German idealists, the British Romantics, and the Transcendentalists wrote in reaction against what they perceived as a creeping trend towards over-mechanisation, and the commodification of time, people, and resources, the world over, in nature, and in everyday life. And yet if we compare the pace of life as we perceive it now, to those 19th Century writers, well, there is no comparison; it’s a different world. Nature, as Emerson says, has her pace, her rhythms, and we, only the cold exactitude of a hand ticking down, as has been said, towards that final curtain. And yet ‘time’, ‘commodified time’, well, it’s not really real is it? It’s a construct. Most of our dealings in this world are to do with navigating fabricated social constructs. It’s a mirage we’re all conditioned to take seriously, it’s a convention. The word ‘convention’, comes from the Latin word ‘convenire’, meaning to come together, to agree, which in theory is good. Coming together and agreeing on things should be a good thing, but really does it not amount to the tyranny of the majority? And in the case of ‘time’, an invisible majority at that.
 
 If time for you is real, then you take it seriously, and you’re driven by time. Time is money. Right? There’s an anxiety around time, I think. The one appointment in the day: “I hope I don’t miss it, I must be on time.” It somehow drains an inordinate amount of energy, it hangs in the day, paralysing thought, and holding everything else to ransom. And that’s me being very down on time, on commodified time, on the clock face, with its twelve acute angles, purporting to express reality. And despite my being negatively disposed towards such social conventions, I reluctantly acknowledge it does have its value. It would be very difficult to gather together on Sunday mornings here in Ipswich without such conventions. But it’s important I think to remember that at this surface level, time, location and language, etc., these are all conventions, not to be taken too seriously, which sit within a great void. Within the totality.

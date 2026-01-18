@@ -5,8 +5,10 @@ date: 2024-11-05
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Politics
+  - Ethics
+  - Power
 ---
-
 Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train onto another track where there is one bystander. Do you pull the lever, sacrificing the one to save the five? From a utilitarian perspective—where the focus is on maximizing the greatest good or happiness—the answer is yes. One life lost is deemed preferable to five.
 
 To make the hypothetical more visceral, you can make the action you take more direct, more personal, instead of the dispassionate pulling of a lever. One can imagine a fat man standing on a bridge over the track. In the same way, the train is hurtling towards five people, but if you push the fat man over the side of the bridge, it will cause the train to derail, and this will give you the same result: one will die, and five will live. It’s exactly the same outcome; the only difference is you’re not so much an anonymous bystander but you’re in the fray. In theory though, if your answer was yes before, it should be yes now.

@@ -5,8 +5,10 @@ date: 2024-04-05
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Culture
+  - Civilization
+  - Modernity
 ---
-
 Published in 1959, it was the seminal work of Kevin Lynch, an MIT professor in the school of Architecture and Planning. His book is about the way cities look, or rather the mental picture that we all form in our heads of cities. His book looks at three American cities: Boston, Jersey City (part of the New York metropolitan area), and Los Angeles.
 
 So, we are surveying the city much like an artist might survey a piece of art, it brings to mind the Goethe quote that architecture is like “frozen music.” It differs, however, in that unlike the semi-quaver on the page, or paint on the canvas, cities lack such controlled parameters; they vary, being affected by time, weather, and the interactions of those who populate them.

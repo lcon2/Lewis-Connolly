@@ -5,8 +5,10 @@ date: 2018-10-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Culture
+  - Tradition
+  - Myth
 ---
-
 In 1930, an American poet and historian named John Neihart obtained the necessary permission to gain entry into the Pine Ridge Indian Reservation in South Dakota, a Native American reservation, home to the indigenous Lakota people. Dr. John Neihart was intrigued by that period in American history, of settlement across the great American plains, the European migrants who arrived on the scene, and the Indigenous American people, who were there before, and subsequently displaced. To further his research into that rich period of history, and particularly into the cultural and religious practices of the Native American people in danger of being lost to time, John sought an audience with a particular individual - a holy man of the Lakota people, an elderly medicine man named ‘Black Elk’.
 
 John Neihart sits down with Black Elk. They smoke red willow bark together, using Black Elk’s sacred pipe, or peace pipe, in so doing giving a symbolic offering to the Great Spirit. And then, Black Elk begins to recount his life story. He talks about encountering the white man for the first time when he was ten years old. They represented to him something evil and malevolent. He would play with his friends, games in which they would imagine killing white men. His earliest memories include fleeing west with his people to escape US soldiers. Much of his story is about the tribesmen’s actions and fears concerning the encroachment onto their lands. As time passes they are contained more and more, moved from the freedom of the Great Plains to the reservations on which they still reside. A dread of what was to come fills the mind of the young Black Elk. His people encounter geopolitical boundaries, and the white man’s concept of land ownership - concepts alien to the Native American people. The white men would make deals, and then break their deals.

@@ -5,8 +5,10 @@ date: 2019-05-12
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Image
+  - Mortality
+  - Reflection
 ---
-
 Last week I was in Florence, Italy, and on Friday, just as the weather began to turn, and the Tuscan sun turned to dark cloud, I visited a place I’d only read about. On the north side of the city, in the middle of a ring of traffic, there is an ‘isle of the dead’, a hill that rises out of the busy landscape, a richly green terrain furnished with marble memorials. As one passes through the gatehouse and across that threshold, you enter a curiously solitary place. On account, perhaps, of the elevation, or the canopy of trees, or some inexplicable veil that one passes through, the noise of urban life fades into the background, the present becomes all the more perceptible, and you discern yourself to now be in a thin place out of time. A forgotten place. For unlike Florence’s many tourism hot spots, in which you queue for hours to see Michelangelo’s David, or Botticelli’s The Birth of Venus, here, there is not a single other soul.
 
 This place has a few different names. It’s sometimes referred to as the ‘The English Cemetery’, and sometimes as ‘The Protestant Cemetery’. Both names are a bit misleading, as this oval graveyard does not contain exclusively either, but it is, nonetheless, predominantly protestants from the anglosphere. As one begins making one’s way up the gravelly path, beset by green hedgerow, dotted with the odd white rose, the first grave of note rises up upon your left. It’s held up by six columns; it’s a large tomb, but relatively plain, just a few embellishments, and the profile view, in marble, of a woman - her hair, a plaited bun, topped with a laurel wreath; the inscription, as minimal as possible, simply reads, E. B. B., followed by the year she died - 1861. This is the resting place of the English poet Elizabeth Barrett Browning. She died in Florence, having lived there with her husband, the poet Robert Browning, for nearly 15 years. It was during this period, living under the spell of the Renaissance capital that they were both at their most prolific.

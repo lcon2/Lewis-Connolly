@@ -5,8 +5,10 @@ date: 2019-08-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Metaphysics
+  - Myth
 ---
-
 George William Russell was an Irish nationalist, poet, artist, and mystic, who went by the pseudonym Æ. Today I’ll be exploring his religious views, and his overall religious cosmology. And by ‘religious cosmology’ I mean that set of myths and narratives, through which he understood and orientated himself within the universe. Whenever we’re considering a thinker or writer, we of course gain a great deal of insight by merely learning which thinkers and writers they themselves held in high regard, and the three individuals held in high regard by Æ were Madame Blavatsky, alongside Ralph Waldo Emerson and Walt Whitman.
 
 When it comes to the foundational principle that underlies Æ’s religious cosmology, it is, in an Emersonian fashion, Nature, the breath and pulse of Nature, infusing his imagination. But unlike Emerson, whom we imagine, between his time lecturing, reading, and writing, strolling through Concord’s surrounding natural beauty, Æ had no such luxury. His artistic endeavours were not notable enough in his day to constitute a livelihood in and of themselves, and so he was obligated to take on various clerical jobs throughout his life, working in particular for the Irish Agricultural Organisation Society, a co-operative movement in Ireland. As such, when Æ reflected on Nature, or remembered back upon those times he spent in Nature as a child, he did so in an office surrounded by heaps of paper.

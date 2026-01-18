@@ -5,8 +5,10 @@ date: 2022-06-15
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Philosophy
+  - Religion
+  - Transcendence
 ---
-
 I did my first degree at a conservative Bible college. In my first year, I would have assented to *The Fundamentals* (the set of essays written from 1910 to 1915) from which “Christian fundamentalists” derive their label. In my second year, I began asking awkward questions; these questions slowly drew me away from fundamentalism (or evangelicalism) down broader avenues of inquiry. A question arises in the mind, an unknowing, an opening, and our initial impulse is to find the answer. We’re not seeking the “right” answer per se; rather, we gravitate unthinkingly towards answers that sit comfortably alongside all the other “right” answers we’ve already alighted upon. In this way, we create a constellation of beliefs that gives us our sense of the world, and a sense of ourselves within it. As I worked my way out of fundamentalism, I recognized the folly of this paradigm. How could I possibly assume that there was a natural correlation between what happens to find comfortable lodging in my mind and “reality” (whatever that is)? Indeed, my dalliance with fundamentalism proved to me that I was incapable of such an assessment. I am surely too easily swayed by my own sense of what feels right. And I therefore resolved that I would not simply cast off one set of beliefs for another.
 
 Without knowing it at the time, my thinking was leading me down the rabbit hole of idealism—a belief that whatever “reality” is, it is inaccessible to me. As you might imagine, this is a problematic hypothesis to arrive at while studying theology at a conservative Bible college. Such a college seeks to assure its students that an inerrant reading of scripture is reasonable. Within the confines of this paradigm, one is taught that an event in the Bible is either true or false. The biblical events in question are: the virgin birth, the resurrection, walking on water, water into wine, etc. The classic liberal theological response is to attempt to demystify the event, to come up with some kind of naturalistic explanation. Fundamentalists then respond by discrediting the possibility of any such naturalistic explanation, and thus, in turn, reaffirm their inerrant reading. The true-or-false question seemed to me the wrong question.

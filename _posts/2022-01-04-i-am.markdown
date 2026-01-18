@@ -5,8 +5,10 @@ date: 2022-01-04
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Self
+  - Identity
+  - Being
 ---
-
 There is no “I”.
 
 Or

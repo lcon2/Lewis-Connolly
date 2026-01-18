@@ -5,9 +5,11 @@ date: 2024-12-18
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Story
+  - Reflection
+  - Experience
 og_image: /assets/images/cow.png
 ---
-
 <img src="{{ '/assets/images/cow.png' | relative_url }}" alt="Cow" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 A few weeks back, I re-watched ‘Temple Grandin’ (2010), a great movie about its namesake, an autistic woman, who despite the odds, entered the male-dominated American cattle industry of the 1970s and revolutionized it. Her autism allowed her to perceive feedlots—where animals are fattened for slaughter— in ways, according to her own reckoning, more akin to the cattle. As such she was able to redesign these livestock handling systems in such a way as to minimize fear and resistance.

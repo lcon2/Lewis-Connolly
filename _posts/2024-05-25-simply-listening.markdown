@@ -5,8 +5,10 @@ date: 2024-05-25
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Attention
+  - Contemplation
+  - Practice
 ---
-
 I recall my last sitting. I awoke the other night; my wife and daughter were fast asleep. Let me describe the experience to you. This exercise was motivated by a desire to approach this—whatever word we’re using to describe it—with more intentionality. This intentionality colors what follows.
 
 I chose to sit in the backroom of our house; it’s a multifunctional room, primarily the dining room, secondarily my wife’s office. I believed it was the quietest room in the house. I don’t think that anymore. When you’re really listening, just sitting for a moment, the fact that your house is in North Carolina becomes abundantly evident. You hear the cicadas, which ordinarily disappear into the background. They are undeniably present.

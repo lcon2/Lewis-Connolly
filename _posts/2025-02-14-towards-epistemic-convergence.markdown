@@ -5,9 +5,11 @@ date: 2025-02-14
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Epistemology
+  - Philosophy
+  - Technology
 og_image: /assets/images/AlignedAI.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/convergence.mp3" type="audio/mpeg">

@@ -5,8 +5,10 @@ date: 2019-07-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - History
+  - Culture
+  - Power
 ---
-
 I recently stumbled upon an article about David S. Terry, a 19th-century California judge. He was an intriguing figure, so I looked to see if there were any books written about him. There were four non-fiction texts. One, written when he was only thirty-three years old, is titled *‘Trial by the Committee of Vigilance’* (1856). This book is essentially a court transcript which details a particularly harrowing chapter in Terry’s life, which I will cover. Then there are three biographical texts. *‘Life of David S. Terry’* (1892) was published just a few years after he died by Alexander E. Wagstaff, an acquaintance of his. I read this one in full. The author claims to be writing an ‘impartial and vivid history’ of Judge Terry, and despite the author being politically and ideologically opposed to Terry, I think he more or less achieves an impartial telling, which is certainly impressive by today’s standards. Finally, there is *‘David S. Terry: The Romantic Story of a Great Texan’* (1934) and *‘David S. Terry of California: Dueling Judge’* (1956), which are the most recent treatments.
 
 There is nothing more contemporary than the 1950s, and I think there is a good reason for this. There is little redeeming in the life of David S. Terry. He was a violent, murderous, racist, pro-slavery Confederate, and these are not incidental details; they define his character and life. Despite these obvious character defects, he was elected as an Associate Justice of the Supreme Court of California, serving from 1855 to 1857, and then as Chief Justice of California from 1857 to 1859. I’m compelled to write about him not despite the fact that he was a bastard, but because he was.

@@ -5,8 +5,10 @@ date: 2018-02-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Mysticism
+  - Metaphysics
+  - Self
 ---
-
 ### Part 1
 
 I’ll begin this morning by defining what Alchemy is. Alchemy was the ancient practice of combining matter, physical stuff, together, in such a way that you produce something with supernatural power. It was the art of transformation. You can think of the caterpillar – it goes into its cocoon, and therein undergoes a complete transformation. It does not merely modify, or gain extra components, but its whole form breaks down and is reconstituted into the butterfly. So in Alchemy, the substances used are broken down into a state of chaos, from which a miraculous physical substance emerges which can produce magical results. Sometimes these magical results in alchemical books are defined, and sometimes, probably most of the time, it is left far more elusive. When they are defined, that’s where we get the famous examples like the philosopher’s stone, capable of turning any ‘base metal’ into a so-called ‘noble metal,’ such as gold. Or, the elixir of life, or elixir of immortality, which grants eternal life or eternal youth.

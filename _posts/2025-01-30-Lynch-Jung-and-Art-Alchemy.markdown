@@ -5,9 +5,11 @@ date: 2025-01-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Psychology
+  - Archetype
+  - Image
 og_image: /assets/images/paintinggod.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/Lynch.mp3" type="audio/mpeg">

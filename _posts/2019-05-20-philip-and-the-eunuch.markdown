@@ -5,8 +5,10 @@ date: 2019-05-20
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Story
+  - Tradition
 ---
-
 This morning I’m going to be getting into the weeds of Acts—the passage we heard, the encounter between Philip and the Ethiopian Eunuch. As we read the Bible, we encounter a wall of text, a text which can at times be pretty daunting and inaccessible. The Bible often assumes a lot of knowledge on the part of its readers. The New Testament assumes we’re familiar with the stories in the Hebrew Bible, St Paul’s letters assume we are broadly familiar with Jesus, his ministry, and the salient points of Christianity, and the whole biblical text, being written two thousand odd years ago, assumes we’re familiar with the cultural and social norms of first-century Palestine. There’s also the text itself. Although the Bible, with its multiple translations, has brought forth some of the most beautiful poetry and prose ever committed to paper or parchment, it is not all worthy of such acclamation. It is in parts clunky, and in parts dull, and that’s before you’ve even begun to consider some of the claims contained within its pages—those claims which are simply wrong or contradictory.
 
 But the nice thing about the passage we read, in which Philip overhears the Eunuch reading from Isaiah (one of the books in the Hebrew Bible), is that the inexplicable nature of the Bible is acknowledged. Philip asks if the Eunuch understands what he’s reading, and the Eunuch protests that he cannot without someone guiding him, thus inviting Philip to be his guide. And, if you’re going to do some biblical exegesis, who better to guide you through than one of Jesus’ own apostles? So, the scene is that this Eunuch, an important court official of the Ethiopian crown, is on his way back home to Ethiopia, sitting in the back of his chariot, reading the Hebrew Bible as he goes. And note that he’s reading the Bible aloud, otherwise Philip would have probably not even noticed what he was reading, although I suppose admittedly we are told he was prompted by the Spirit.

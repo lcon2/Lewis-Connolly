@@ -5,8 +5,10 @@ date: 2018-05-07
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Suffering
+  - Mortality
+  - Self
 ---
-
 ##Part 1
 
 I’m going to begin the morning by thinking about the apocalypse. The apocalypse, as you know, is the final destruction of the world. When we think about the apocalypse our thoughts often turn to those Christian fundamentalists who prophesy the imminent end of the world. They who believe that any day now, a series of events will unfold in such a way that it will bring about Jesus’ return and the end of everything as we know it. Apocalypticism appears initially to be a mystical worldview far removed from our own, a realm of fanaticism beyond our comprehension. I wonder though how true this is? Is apocalypticism not an integral part of modern politics, and the modern imagination? Perhaps within Christian circles, apocalypticism arises with such regularity because it is baked into the Christian narrative. Jesus was first and foremost a Jewish apocalyptic preacher who believed reality as we know it was about to pass through an event horizon, beyond which everything would be wholly transformed. Take for example Mark 13. It reads:

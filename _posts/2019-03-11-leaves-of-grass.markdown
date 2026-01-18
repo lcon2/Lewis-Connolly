@@ -5,8 +5,10 @@ date: 2019-03-11
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Narrative
+  - Culture
+  - Reflection
 ---
-
 ##Part 1
 
 In this service I’m going to be perambulating around the figure of Walt Whitman, one of the most influential American poets. And that’s American in the best sense; unlike the brutish, violent, and intolerant American we seem to hear so much about, this is the America of individualism, optimism, and plurality, all ideals expressed in Whitman’s work. I’ll begin with setting the scene in which Walt Whitman finds himself - we’re in the 19th Century. He was born in America’s infancy; American had not yet realised its manifest destiny, it had not yet reached shore to shore. He was born in New York State in 1819 to poor parents. His father was a failed farmer and a drunk. He looked back upon his childhood as a restless and unhappy time in his life. At the age of eleven, Whitman was pulled from school to work as a printer, mixing tubs of ink and fetching type, to support his family. He was therefore largely self-taught, which is remarkable, if you compare him to his notable contemporaries, Edgar Allan Poe, Ralph Waldo Emerson, Henry David Thoreau, Nathaniel Hawthorne, and Herman Melville, who all, unlike Whitman, benefited from at least some university education.

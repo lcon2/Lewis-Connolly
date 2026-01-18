@@ -5,8 +5,10 @@ date: 2018-04-30
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Reflection
+  - Tradition
 ---
-
 Anniversary services, I think, are about exploring the tone of one’s community. They’re perhaps a little more inward looking than a normal service, or at least, they’re about our calling as a community. It’s a reflection upon what we’re trying to manifest here, what we see as our purpose. Despite all the busyness I mentioned, I did get around to reading John Fairfax’s opening sermon that he delivered from this pulpit 318 years ago. It reads in this way, as a mission statement, as a proclamation of intent. And yet even from that opening sermon, Fairfax calls us not to put an undue focus on this space per se, upon this material building, beautiful though it is. He says, ‘Let us not satisfy ourselves that we have built this House for God, for his Solemn worship, where his name may be recorded. This is not our whole duty. No, tis but a small part… God expects that we prepare him another habitation, within our very hearts’. Fairfax asks us to put things into an appropriate perspective. We have this building, buts it’s not about this building; we have our rituals, but it’s not about our rituals. These things only have value in as far as they enlighten our hearts, and enable a spirit of love to make its home within us, and within this community. In as far as their admiration frustrates this end, we have lost sight of their value.
 
 When I think about ultimate concern, my thoughts turn to nature, my thoughts turn to Spring. When I think about ultimate concern, my thoughts turn to the normative state of humanity’s suffering; my thoughts turn to pain. When I think about ultimate concern, my thoughts turn to community, to Thy Kingdom Come, to a hope made manifest in community, not as a destination, but as a way of inhabiting our fragile world. When I think about ultimate concern, I think about who we are, and who we are called to be – not a social action group, but a faith, seeking earnestly after the sacred in our lives, exploring the ineffable, the mysteries which drive us on, that we fail or struggle to name.

@@ -5,9 +5,11 @@ date: 2025-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Story
+  - Imagination
+  - Culture
 og_image: /assets/images/Alicepic.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/Alice.mp3" type="audio/mpeg">

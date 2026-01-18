@@ -5,8 +5,10 @@ date: 2018-07-23
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Narrative
+  - Image
+  - Reflection
 ---
-
 This week, a few of us met in the upper room to discuss how we understand the person of Jesus. Our conversation circled back to the issue of interpretation a few times. How are we to interpret his parables? How are we to interpret his miracles? How are we to interpret his death upon the cross? The point was made that Christian denominations are often able to present Jesus in such a way that serves their own interests or affirms their own pre-held assumptions. We see what we want to see. It’s one of the oddities of reading the Bible: the conservative is able to uncover a conservative message and image of Jesus, and the liberal is able to uncover a liberal message and image of Jesus. And yet they’re reading the same Bible. It made me think about this question of interpretation.
 
 Most creedal denominations, of course, have a particular take upon such questions as they relate to Jesus, and their preachers and apologists set out to have you affirm the party line, because such denominations see inherent value in uniformity of belief. In a way, this actually makes the art of interpretation less important, as the objective is not to have you understand (that is of secondary concern, if of concern at all); rather, it is to have you, the believer, merely content with the answer on offer. The answer can’t change; only your attitude towards the answer on offer can change, and as such, we are subtly encouraged to just give over our assent. This invariably leads to an often self-imposed attitude that ‘I don’t need to understand the answer to x or y, I need only accept the answer on offer, because greater minds have given their assent, or greater authorities have directed thus.’ Indeed, if we were to persevere in our inability to understand the answer on offer, this would suggest a deficiency, not on the part of the answer given, but in our inability to understand, for lack of insight, or lack of faith. And, not wishing to entertain such a possibility, we give our assent without pause.

@@ -5,9 +5,11 @@ date: 2025-02-10
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Consciousness
+  - Mind
+  - Self
 og_image: /assets/images/blueprint.png
 ---
-
 <div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/watcher.mp3" type="audio/mpeg">

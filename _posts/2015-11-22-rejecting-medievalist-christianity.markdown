@@ -5,8 +5,10 @@ date: 2015-11-22
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Tradition
+  - Reform
 ---
-
 It is no secret that I found my time training for the priesthood at Westcott House grating. There were a number of reasons for this—but the underlying issue was the degree to which my own theological opinions jarred with the ethos of the College. Now three years on I find myself in the incredibly weird situation of living once again in an Anglican training College—this time in Oxford, while my wife trains for the priesthood. As a Unitarian, my perspective on these Anglican training establishments must be quite unique.
 
 Over the last couple of months, it seems like the Unitarian movement as a whole has been thinking more deeply about the nature of its own identity, particularly in the light of the *“A Vision for the Future”* publication which came out earlier this year. As I survey the landscape of British Unitarianism today, and consider where it has come over the last century, I cannot help but compare it to the Anglo-Catholic tradition from which I came. As you are aware, the Church of England is a broad Church, an uneasy alliance of divergent parties, maintained by a veil of ignorance.

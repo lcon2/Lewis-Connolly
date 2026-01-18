@@ -5,8 +5,10 @@ date: 2024-11-15
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Meaning
+  - Culture
+  - Philosophy
 ---
-
 Last night, I listened to an interview with Gwern Branwen. Since he is an anonymous online writer, his identity was concealed using a computer-generated avatar and an AI-generated voice. He got me thinking, as I’m inclined to do, so I’m going to let my thoughts wander and see what appears on the page. Branwen’s writings cover a broad range of topics, but his main focus is artificial intelligence—specifically that these models are scaling in a predictable fashion, and as such, superintelligent AI, or AGI, is just around the corner—three years away, or by 2030 at the latest. In the interview, he more or less takes this as a given and considers the implications of what living in such a world might look like and, more pertinently, what this future might mean for how we live our lives now. I am also going to take his timeframe as a given.
 
 Before I reflect on the content of the interview, I want to say a little about what has been called the “meaning crisis.” I think learning a new skill has, in some respects, been rendered useless. I am dyslexic, which has its positives and negatives; dyslexic people have an alternative information processing style, but it obviously makes language a challenge. I can’t say that learning a second language would be impossible, but I can say it’s definitely not going to happen. Even for a neurotypical individual, learning a second language is a challenge. Nevertheless, people do it for many reasons: to communicate with others who speak that language, to immerse themselves in different cultures, to advance their careers, to read literature, or even for love. They commit to the sunk cost in order to reap the rewards. But what if there were a shortcut that got you most of the way there—a device in the ear, for example, that perfectly and seamlessly translated every word in real time into your mother tongue and vice versa? Would the sunk cost still be worth it? If you’d already put in the effort, I doubt you would regret it, but if one were considering learning a language now, on this side of the equation with the device in hand, what then? 

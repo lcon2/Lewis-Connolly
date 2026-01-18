@@ -5,8 +5,10 @@ date: 2024-05-29
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Authority
+  - Epistemology
 ---
-
 This is not going to be particularly deep. I was prompted to write something in response to a popular YouTuber. It doesn’t really matter who this individual is, as the observations made were not unique, just everyday atheistic observations. I come at this as someone who self-identifies as a Christian but could just as easily be described as an atheist. I realize this might sound odd, and hopefully, what I write here will clear up some confusion. If not, just buy me a beer, and I’ll happily pontificate further.
 
 The YouTuber in question was getting hung up on the historicity of the Bible. Questions like, *“Did X really happen?”*, *“Did Jesus really walk out of the tomb?”*, *“Was there really an exodus of Jews from Egypt?”* His sparring partner in the conversation was equivocating hard. I can understand why. Given such questions, the desire to equivocate might arise, and I can see why someone might feel frustrated, not believing their questions were being adequately addressed. *“Yes, I get all that, but if I were to get into a time machine and go back to whenever…”* bla bla.

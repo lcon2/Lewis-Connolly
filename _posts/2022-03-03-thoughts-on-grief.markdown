@@ -5,8 +5,10 @@ date: 2022-03-03
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Grief
+  - Emotion
+  - Suffering
 ---
-
 On Halloween Day, October 31st 1998, my mother died. I was ten years old. There can be no doubt that this event shaped me unlike any other, in ways which are entirely evident to me, and in ways that remain unknowable. The death of a parent has a peculiar effect on a child; it creates an unresolvable question, an inability to know oneself apart from the grief suffered. Because of course, no ten-year-old knows who they are, they don’t know where life will take them, and they don’t know who they will become. All of which is to say, grief is a key ingredient which is baked into the person I have become.
 
 There is a close relationship between grief and wisdom. Grief affords you insights that others do not possess, an ability to see suffering as an integral part of reality. Suffering is always around us, always in the world, and yet some have become adept at avoiding it. Most of the time, when we are confronted by adversity we’re given a choice, we can either turn away from it, or towards it. Turning away from it is to perpetuate an illusion. The image which comes to mind is that of a person covering their ears and singing loudly; it’s positivity at its worst, a sickly, shallow kind of positivity. This is the antithesis of wisdom. It stunts one’s own development and spiritual growth. A grief visited is an invitation to wisdom, it joins you through an unspoken shibboleth to countless others.

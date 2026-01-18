@@ -5,9 +5,11 @@ date: 2025-11-27
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Self
+  - Identity
+  - Consciousness
 og_image: /assets/images/Stairs.png
 ---
-
 <img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s an idea which comes to me less as an idea and more as a memory. Not something discovered, but something quietly recalled, as if it had always been there, waiting beneath the noise.

@@ -5,8 +5,10 @@ date: 2022-03-31
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Religion
+  - Symbol
+  - Faith
 ---
-
 In this article, I am going to discuss Jesus’ water-into-wine miracle. By way of introduction, however, I’m going to discuss the following quote by C. S. Lewis: “Either this man (Jesus) was, and is, the Son of God, or else a madman or something worse” (*Mere Christianity*, pg. 56). In this exceedingly reductive argument, Lewis gives us three options and compels us to choose one. This argument is evidently fallacious as there are not three options; there are many, many more. To name a few: perhaps the accounts we have of Jesus’ life are in some way inaccurate, perhaps the claims they make are overstated, perhaps the accounts are mythological in nature, or perhaps the claims that Jesus made of himself have been entirely misunderstood. When it comes to all the possible options, there is also the potential for some gradation—he could be divine in nature without being God, he could be God and also be mad. What does it even mean to speak of a “madman”? Was Jesus not regarded in his day as a madman?
 
 A claim that one often hears amongst spiritually liberal people is that Jesus was not God but merely a good man or a moral teacher. It is clearly this kind of belief that Lewis was railing against, and I think rightly so; irrespective of the “reality,” to regard Jesus as merely a teacher requires disregarding a great deal of biblical material. But I can see why people are drawn down this line of reasoning. It plays out along similarly fallacious lines as Lewis’ false options model above: if not this, then this. It brings to mind Thomas Jefferson’s Bible, in which he literally took a pair of scissors and cut out of the New Testament all its miraculous claims, leaving just Jesus’ parables and a bit of exposition. Jesus’ miracles prove a great stumbling block to liberals; the question arises in the minds of the insatiably curious… “Do I really believe Jesus did X?” And on that note, let us consider his wine miracle.

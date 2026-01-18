@@ -5,8 +5,10 @@ date: 2021-12-02
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
+  - Experience
+  - Daily
+  - Reflection
 ---
-
 The path that runs behind the Publix Supermarket in South End, Charlotte, is ridiculous. For the past few weeks, I’ve been with my wife in Charlotte, North Carolina, scouting out where we plan to move to in the near future. We’re now back in England, and I have had a little time to reflect on the trip. In circumstances I assume common to most, for the past couple of years I have been living a somewhat monastic life of solitary contemplation, until this trip, which has been an explosive return to the real world, complete with actual human interaction, new senses, new tastes, and new places. A plethora of experience. My head, now thoroughly filled with all things Charlotte, has to get something down on paper. So, let’s begin with South End.
 
 South End is the trendy, young, affluent area just south of the downtown area (which in Charlotte is called ‘Uptown’). It is an area experiencing rapid growth, namely of stylish apartment blocks (where we hope to live), restaurants, boutique stores, and a thriving brewery industry. There are tons of breweries throughout South End, more breweries than anything else, and they’re all NEW. This premium brewing industry has only just erupted into existence over the last decade. It is evident that all this has completely transformed the character of South End, a change prompted by the Blue Line, a light rail which opened in 2007. Today it runs from the university in the north, down through NoDa, through Uptown, through South End, and then further south still, ending not that far from the North/South Carolina boarder. There are plans though, for the light rail to be expanded in every direction throughout Charlotte. ‘Newness’ is my overriding sense of things.
