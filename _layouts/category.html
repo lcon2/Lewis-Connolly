@@ -30,15 +30,18 @@
         <main style="width: 75%; padding: 20px; line-height: 1.6; font-size: 18px; color: #f0f0f0;">
             <h1>{{ page.title }}</h1>
             <div class="archive-content">
-                <ul>
-                    {% assign posts_in_category = site.categories[page.category] %}
-                    {% for post in posts_in_category %}
-                        <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <div class="month-category">
+                    <h3>{{ page.title }}</h3>
+                    <ul>
+                        {% assign posts_in_category = site.categories[page.category] %}
+                        {% for post in posts_in_category %}
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </main>
     </div>
