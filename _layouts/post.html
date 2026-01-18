@@ -34,6 +34,9 @@
                         By <a href="{{ page.author_url | relative_url }}" class="author-link">{{ page.author }}</a>
                     </span>
                 </p>
+            <p class="post-meta">
+                Filed under: {{ page.categories | join: ", " }}
+            </p>
             <div>{{ content }}</div>
         </article>
         
