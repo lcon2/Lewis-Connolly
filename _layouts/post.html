@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
     <!-- Google tag (gtag.js) -->
@@ -15,14 +15,6 @@
 
       gtag('config', 'G-KVG9646266');
     </script>
-
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="{{ page.title | escape }}" />
-    <meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
-    <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:image" content="{{ page.og_image | default: '/assets/images/logo.png' | absolute_url }}" />
-    <meta property="og:image:alt" content="{{ page.title | escape }}" />
-    <meta property="og:type" content="article" />
 
 </head>
 <body class="post">
