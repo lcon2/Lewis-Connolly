@@ -41,6 +41,9 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
 .audio-controls { display: flex; gap: 8px; margin-top: 6px; }
 .audio-btn { background: #222; color: #f0f0f0; border: 1px solid #3a3a3a; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
 .audio-btn:hover { border-color: #ff9933; color: #ff9933; }
+.audio-seek { display: grid; gap: 6px; margin-top: 10px; }
+.audio-seek input[type="range"] { width: 100%; accent-color: #ff9933; }
+.audio-seek-meta { display: flex; justify-content: space-between; font-size: 0.85em; color: #bdbdbd; font-variant-numeric: tabular-nums; }
 .audio-volume { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 .audio-volume label { font-size: 0.8em; color: #bdbdbd; }
 .audio-volume input[type="range"] { width: 120px; accent-color: #ff9933; }
@@ -63,6 +66,13 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
         <button class="audio-btn" type="button" data-action="prev">Prev</button>
         <button class="audio-btn" type="button" data-action="play">Play</button>
         <button class="audio-btn" type="button" data-action="next">Next</button>
+      </div>
+      <div class="audio-seek">
+        <input type="range" min="0" max="100" value="0" step="0.1" data-action="seek">
+        <div class="audio-seek-meta">
+          <span data-current-time>0:00</span>
+          <span data-duration>0:00</span>
+        </div>
       </div>
     </div>
     <div class="audio-volume">
@@ -104,9 +114,13 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
   var prevBtn = document.querySelector('[data-action="prev"]');
   var nextBtn = document.querySelector('[data-action="next"]');
   var volumeSlider = document.querySelector('[data-action="volume"]');
+  var seekSlider = document.querySelector('[data-action="seek"]');
+  var currentTimeEl = document.querySelector('[data-current-time]');
+  var durationEl = document.querySelector('[data-duration]');
   var trackButtons = Array.prototype.slice.call(document.querySelectorAll('.audio-track'));
   var timeEls = Array.prototype.slice.call(document.querySelectorAll('[data-time]'));
   var current = 0;
+  var isSeeking = false;
 
   function formatTime(seconds) {
     var mins = Math.floor(seconds / 60) || 0;
@@ -121,6 +135,9 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
     trackButtons.forEach(function (btn) {
       btn.classList.toggle('is-active', Number(btn.getAttribute('data-index')) === index);
     });
+    if (seekSlider) seekSlider.value = 0;
+    if (currentTimeEl) currentTimeEl.textContent = '0:00';
+    if (durationEl) durationEl.textContent = '0:00';
   }
 
   function playCurrent() {
@@ -166,6 +183,18 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
     });
   }
 
+  if (seekSlider) {
+    seekSlider.addEventListener('input', function () {
+      isSeeking = true;
+      if (player.duration) {
+        player.currentTime = (Number(seekSlider.value) / 100) * player.duration;
+      }
+    });
+    seekSlider.addEventListener('change', function () {
+      isSeeking = false;
+    });
+  }
+
   if (playBtn) {
     playBtn.addEventListener('click', function () {
       if (player.paused) {
@@ -185,6 +214,18 @@ And presto! Here it is. It doesn't sound much like me at all, but that is probab
       setActive(index);
       playCurrent();
     });
+  });
+
+  player.addEventListener('loadedmetadata', function () {
+    if (durationEl) durationEl.textContent = formatTime(player.duration);
+  });
+
+  player.addEventListener('timeupdate', function () {
+    if (!player.duration) return;
+    if (!isSeeking && seekSlider) {
+      seekSlider.value = (player.currentTime / player.duration) * 100;
+    }
+    if (currentTimeEl) currentTimeEl.textContent = formatTime(player.currentTime);
   });
 
   player.addEventListener('ended', nextTrack);
