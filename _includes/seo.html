@@ -32,3 +32,43 @@
 <meta name="twitter:description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}
 <meta name="twitter:image" content="{{ og_image | absolute_url }}">
+
+{%- if page.layout == 'post' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page_title | jsonify }},
+  "description": {{ description | strip_html | strip_newlines | jsonify }},
+  "image": {{ og_image | absolute_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: "Lewis Connolly" | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ "/assets/images/logo.png" | absolute_url | jsonify }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | absolute_url | jsonify }}
+  }
+}
+</script>
+{%- elsif page.url == "/" or page.layout == 'home' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": {{ site.title | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "description": {{ site.description | strip_html | strip_newlines | jsonify }}
+}
+</script>
+{%- endif -%}
