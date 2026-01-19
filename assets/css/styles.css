@@ -432,6 +432,7 @@ header {
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 
 .post main {
