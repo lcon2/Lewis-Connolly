@@ -43,12 +43,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       font-family: "Baloo 2", "Segoe UI", sans-serif;
       font-weight: 600;
       color: var(--ink);
-      background:
-        radial-gradient(120% 120% at 12% 8%, rgba(255, 245, 231, 0.9) 0%, rgba(255, 245, 231, 0) 58%),
-        radial-gradient(120% 120% at 86% 18%, rgba(226, 239, 249, 0.7) 0%, rgba(226, 239, 249, 0) 60%),
-        radial-gradient(130% 120% at 50% 92%, rgba(250, 233, 212, 0.85) 0%, rgba(250, 233, 212, 0) 62%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(246, 238, 219, 0.2) 45%, rgba(246, 238, 219, 1) 100%),
-        var(--paper);
+      background: var(--paper);
       overflow-x: hidden;
       overflow-y: scroll;
       overscroll-behavior: none;
@@ -58,6 +53,20 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     html::-webkit-scrollbar {
       width: 0;
       height: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -15%;
+      background:
+        radial-gradient(120% 120% at 10% 12%, rgba(255, 244, 229, 0.9) 0%, rgba(255, 244, 229, 0) 65%),
+        radial-gradient(130% 120% at 86% 22%, rgba(222, 237, 248, 0.75) 0%, rgba(222, 237, 248, 0) 68%),
+        radial-gradient(140% 120% at 52% 92%, rgba(249, 231, 210, 0.9) 0%, rgba(249, 231, 210, 0) 70%),
+        radial-gradient(160% 160% at 30% 60%, rgba(246, 238, 219, 0.55) 0%, rgba(246, 238, 219, 0) 72%);
+      filter: blur(45px);
+      opacity: 0.9;
+      z-index: -1;
     }
 
     .abide-header {
@@ -121,7 +130,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     #scroll-space {
-      height: 1000vh;
+      height: 1500vh;
     }
 
     .scroll-hint {
@@ -180,6 +189,38 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       transition: opacity 0.2s ease;
     }
 
+    .sequence {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .sequence-group {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35em;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .sequence-line {
+      font-size: clamp(1rem, 3.2vw, 2.4rem);
+      letter-spacing: 0.08em;
+      text-transform: none;
+      color: rgba(31, 30, 27, 0.75);
+    }
+
+    .sequence-line.is-spacer {
+      margin: 0.6em 0;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .word {
         transition: none;
@@ -202,6 +243,9 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     <div class="breath-text" data-state="in">Breath in</div>
     <div class="breath-text" data-state="out">Breath out</div>
   </div>
+  <section class="sequence" aria-hidden="true">
+    <div class="sequence-lines"></div>
+  </section>
   <div id="scroll-space" aria-hidden="true"></div>
 
   <script>
@@ -222,6 +266,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var breathIn = document.querySelector('.breath-text[data-state="in"]');
       var breathOut = document.querySelector('.breath-text[data-state="out"]');
       var header = document.querySelector(".abide-header");
+      var sequenceRoot = document.querySelector(".sequence-lines");
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -229,6 +274,34 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         el.style.color = item.color;
         stage.appendChild(el);
         return el;
+      });
+
+      var sequenceSteps = [
+        { lines: ["Notice the body.", "Breath,", "Temperature,", "Pressure,", "Contact,"] },
+        { lines: ["Notice sensation.", "Tightness.", "Ease.", "Movement.", "", "Nothing to fix.", "Nothing to improve.", "", "Just appearing."] },
+        { lines: ["Notice thought.", "A word.", "A memory.", "A plan.", "", "Arising.", "Passing.", "", "Like weather", "moving through a wider sky."] },
+        { lines: ["You are not the thought.", "You are what notices it.", "", "Still here", "before the thought.", "Still here", "after it fades."] },
+        { lines: ["Notice emotion.", "Pleasant.", "Unpleasant.", "Neutral.", "", "Let it be exactly as it is.", "No resistance.", "No grasping."] },
+        { lines: ["Everything is allowed.", "Nothing needs permission", "to arise", "or to leave."] },
+        { lines: ["Rest as awareness.", "Not focusing.", "Not drifting.", "", "Just present."] },
+        { lines: ["This moment", "is complete", "without commentary."] },
+        { lines: ["There is nowhere else to be.", "Nothing else required."] },
+        { lines: ["Just this.", "", "Breath.", "Sensation.", "Sound.", "Silence."] },
+        { lines: ["Here"] },
+        { lines: ["Abide"] }
+      ];
+
+      var sequenceGroups = sequenceSteps.map(function (step) {
+        var group = document.createElement("div");
+        group.className = "sequence-group";
+        step.lines.forEach(function (line) {
+          var lineEl = document.createElement("div");
+          lineEl.className = "sequence-line" + (line === "" ? " is-spacer" : "");
+          lineEl.textContent = line === "" ? "\u00a0" : line;
+          group.appendChild(lineEl);
+        });
+        sequenceRoot.appendChild(group);
+        return group;
       });
 
       function clamp01(value) {
@@ -248,8 +321,9 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
         var target = clamp01(window.scrollY / maxScroll);
         progress = lerp(progress, target, 0.06);
-        var wordsPortion = 0.4;
-        var breathPortion = 0.6;
+        var wordsPortion = 0.28;
+        var breathPortion = 0.42;
+        var sequencePortion = 0.3;
         var segment = wordsPortion / words.length;
         var wordsEnd = wordsPortion;
 
@@ -301,16 +375,16 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           breathIn.style.opacity = 0;
           breathOut.style.opacity = 0;
         } else {
-          var fadeIn = clamp01(breathLocal / 0.2);
-          var fadeOut = clamp01((1 - breathLocal) / 0.2);
+          var fadeIn = clamp01(breathLocal / 0.18);
+          var fadeOut = clamp01((1 - breathLocal) / 0.18);
           breathWrap.style.opacity = Math.min(1, fadeIn, fadeOut);
 
           var cycles = 2;
           var cycle = (breathLocal * cycles) % 1;
-          var inhaleEnd = 0.5;
-          var holdEnd = 0.7;
-          var minScale = 0.2;
-          var maxScale = 1.2;
+          var inhaleEnd = 0.6;
+          var holdEnd = 0.78;
+          var minScale = 0.12;
+          var maxScale = 6.0;
           var eased;
           var scale;
           var inhale = cycle < holdEnd;
@@ -338,6 +412,19 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             breathOut.style.opacity = lerp(0.2, 1, eased);
           }
         }
+
+        var sequenceLocal = clamp01((progress - (wordsPortion + breathPortion)) / sequencePortion);
+        var stepSpan = 1 / sequenceGroups.length;
+        sequenceGroups.forEach(function (group, index) {
+          var stepLocal = clamp01((sequenceLocal - index * stepSpan) / stepSpan);
+          if (stepLocal <= 0 || stepLocal >= 1) {
+            group.style.opacity = 0;
+            return;
+          }
+          var fadeIn = stepLocal < 0.2 ? stepLocal / 0.2 : 1;
+          var fadeOut = stepLocal > 0.8 ? (1 - stepLocal) / 0.2 : 1;
+          group.style.opacity = Math.min(fadeIn, fadeOut).toFixed(3);
+        });
       }
 
       function animate() {
