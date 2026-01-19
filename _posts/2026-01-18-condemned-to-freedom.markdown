@@ -90,10 +90,9 @@ The deeper problem of freedom may not be how to escape consequence, but how to r
 
 <div class="audio-card" data-player>
   <div class="audio-header">
-    <img src="{{ '/assets/images/fragmented.png' | relative_url }}" alt="Condemned to Freedom" class="audio-cover">
+    <img src="{{ '/assets/images/solitude.png' | relative_url }}" alt="Condemned to Freedom" class="audio-cover">
     <div class="audio-meta">
       <div class="audio-title" data-track-title>Rewind the Hour</div>
-      <div class="audio-artist">By Rowan North</div>
       <div class="audio-controls">
         <button class="audio-btn" type="button" data-action="play">Play</button>
       </div>
