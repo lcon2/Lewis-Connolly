@@ -56,6 +56,13 @@
             <h2>NEWEST</h2>
             {% assign recent = site.posts | sort: "date" | reverse %}
             <ul>
+                <li>
+                    <span class="bullet-wrap">
+                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
+                        <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
+                    </span>
+                    <a href="{{ '/abide' | relative_url }}" class="bullet-link" data-summary="A scroll-driven meditation where five words bloom large, then settle into the edges of the screen.">Abide</a>
+                </li>
                 {% for post in recent limit:11 %}
                     <li>
                         <span class="bullet-wrap">
