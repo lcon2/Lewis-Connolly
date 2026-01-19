@@ -423,6 +423,21 @@ header {
     color: #f0f0f0; /* Keeps the text color consistent */
 }
 
+/* Sticky logo bar on post pages */
+.post header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(21, 21, 21, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.post main {
+    padding-top: 10px;
+}
+
 .post article {
     text-align: justify; /* Justifies the blog content for a cleaner look */
     margin: 20px auto; /* Centers the article with consistent spacing */
