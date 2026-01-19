@@ -464,15 +464,17 @@ header {
     width: 101px;
     height: auto;
     transition: transform 0.3s ease;
+    filter: grayscale(20%);
 }
 
 .post .beer-text {
     margin-left: 12px;
-    font-size: 29px;
+    font-size: 23px;
     font-weight: 600;
     color: #f0f0f0;
     letter-spacing: 0.5px;
     font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
