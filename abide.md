@@ -200,25 +200,22 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     .sequence-group {
       position: absolute;
       inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35em;
-      text-align: center;
+      display: block;
       opacity: 0;
       transition: opacity 0.4s ease;
     }
 
-    .sequence-line {
-      font-size: clamp(1rem, 3.2vw, 2.4rem);
-      letter-spacing: 0.08em;
-      text-transform: none;
-      color: rgba(31, 30, 27, 0.75);
-    }
-
-    .sequence-line.is-spacer {
-      margin: 0.6em 0;
+    .sequence-word {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: clamp(1rem, 3vw, 2.6rem);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.4);
+      transition: opacity 0.25s ease;
+      text-shadow: 0 6px 24px rgba(31, 30, 27, 0.08);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -277,27 +274,132 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       });
 
       var sequenceSteps = [
-        { lines: ["Notice the body.", "Breath,", "Temperature,", "Pressure,", "Contact,"] },
-        { lines: ["Notice sensation.", "Tightness.", "Ease.", "Movement.", "", "Nothing to fix.", "Nothing to improve.", "", "Just appearing."] },
-        { lines: ["Notice thought.", "A word.", "A memory.", "A plan.", "", "Arising.", "Passing.", "", "Like weather", "moving through a wider sky."] },
-        { lines: ["You are not the thought.", "You are what notices it.", "", "Still here", "before the thought.", "Still here", "after it fades."] },
-        { lines: ["Notice emotion.", "Pleasant.", "Unpleasant.", "Neutral.", "", "Let it be exactly as it is.", "No resistance.", "No grasping."] },
-        { lines: ["Everything is allowed.", "Nothing needs permission", "to arise", "or to leave."] },
-        { lines: ["Rest as awareness.", "Not focusing.", "Not drifting.", "", "Just present."] },
-        { lines: ["This moment", "is complete", "without commentary."] },
-        { lines: ["There is nowhere else to be.", "Nothing else required."] },
-        { lines: ["Just this.", "", "Breath.", "Sensation.", "Sound.", "Silence."] },
-        { lines: ["Here"] },
-        { lines: ["Abide"] }
+        {
+          lines: [
+            { text: "Notice the body", x: 0, y: 0, scale: 1.1, role: "lead" },
+            { text: "Breath", x: -28, y: -20, scale: 0.8 },
+            { text: "Temperature", x: 24, y: -18, scale: 0.78 },
+            { text: "Pressure", x: -18, y: 22, scale: 0.82 },
+            { text: "Contact", x: 28, y: 18, scale: 0.8 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Notice sensation", x: 0, y: -6, scale: 1.05, role: "lead" },
+            { text: "Tightness", x: -32, y: 14, scale: 0.8 },
+            { text: "Ease", x: 30, y: 6, scale: 0.85 },
+            { text: "Movement", x: 0, y: 26, scale: 0.78 },
+            { text: "Nothing to fix", x: -24, y: -24, scale: 0.72 },
+            { text: "Nothing to improve", x: 26, y: -24, scale: 0.72 },
+            { text: "Just appearing", x: 0, y: 0, scale: 0.7 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Notice thought", x: 0, y: -8, scale: 1.05, role: "lead" },
+            { text: "A word", x: -26, y: 18, scale: 0.78 },
+            { text: "A memory", x: 24, y: 20, scale: 0.76 },
+            { text: "A plan", x: 0, y: 30, scale: 0.72 },
+            { text: "Arising", x: -30, y: -22, scale: 0.7 },
+            { text: "Passing", x: 28, y: -20, scale: 0.7 },
+            { text: "Like weather", x: -6, y: 2, scale: 0.7 },
+            { text: "Moving through a wider sky", x: 6, y: 10, scale: 0.66 }
+          ]
+        },
+        {
+          lines: [
+            { text: "You are not the thought", x: 0, y: -10, scale: 1.05, role: "lead" },
+            { text: "You are what notices it", x: 0, y: 10, scale: 0.88 },
+            { text: "Still here", x: -28, y: -26, scale: 0.72 },
+            { text: "Before the thought", x: 28, y: -24, scale: 0.7 },
+            { text: "Still here", x: -24, y: 26, scale: 0.72 },
+            { text: "After it fades", x: 24, y: 24, scale: 0.7 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Notice emotion", x: 0, y: -8, scale: 1.05, role: "lead" },
+            { text: "Pleasant", x: -30, y: 18, scale: 0.78 },
+            { text: "Unpleasant", x: 28, y: 14, scale: 0.78 },
+            { text: "Neutral", x: 0, y: 28, scale: 0.76 },
+            { text: "Let it be exactly as it is", x: 0, y: -26, scale: 0.7 },
+            { text: "No resistance", x: -20, y: -2, scale: 0.7 },
+            { text: "No grasping", x: 22, y: 2, scale: 0.7 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Everything is allowed", x: 0, y: -6, scale: 1.05, role: "lead" },
+            { text: "Nothing needs permission", x: 0, y: 10, scale: 0.84 },
+            { text: "To arise", x: -26, y: 24, scale: 0.74 },
+            { text: "Or to leave", x: 26, y: 24, scale: 0.74 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Rest as awareness", x: 0, y: -8, scale: 1.05, role: "lead" },
+            { text: "Not focusing", x: -26, y: 18, scale: 0.78 },
+            { text: "Not drifting", x: 26, y: 18, scale: 0.78 },
+            { text: "Just present", x: 0, y: 30, scale: 0.76 }
+          ]
+        },
+        {
+          lines: [
+            { text: "This moment", x: 0, y: -6, scale: 1.05, role: "lead" },
+            { text: "Is complete", x: -22, y: 18, scale: 0.8 },
+            { text: "Without commentary", x: 24, y: 18, scale: 0.76 }
+          ]
+        },
+        {
+          lines: [
+            { text: "There is nowhere else to be", x: 0, y: -6, scale: 1.05, role: "lead" },
+            { text: "Nothing else required", x: 0, y: 18, scale: 0.82 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Just this", x: 0, y: -8, scale: 1.05, role: "lead" },
+            { text: "Breath", x: -30, y: 18, scale: 0.78 },
+            { text: "Sensation", x: 0, y: 26, scale: 0.78 },
+            { text: "Sound", x: 26, y: 18, scale: 0.78 },
+            { text: "Silence", x: 0, y: -26, scale: 0.74 }
+          ]
+        },
+        {
+          lines: [
+            { text: "Here", x: 0, y: 0, scale: 1.1, role: "lead" }
+          ]
+        },
+        {
+          lines: [
+            { text: "Abide", x: 0, y: 0, scale: 1.2, role: "lead" }
+          ]
+        }
       ];
 
-      var sequenceGroups = sequenceSteps.map(function (step) {
+      var palette = [
+        "var(--rose)",
+        "var(--powder)",
+        "var(--sage)",
+        "var(--amber)",
+        "var(--blush)",
+        "var(--mint)",
+        "var(--sky)",
+        "var(--apricot)"
+      ];
+
+      var sequenceGroups = sequenceSteps.map(function (step, stepIndex) {
         var group = document.createElement("div");
         group.className = "sequence-group";
-        step.lines.forEach(function (line) {
+        step.lines.forEach(function (line, lineIndex) {
           var lineEl = document.createElement("div");
-          lineEl.className = "sequence-line" + (line === "" ? " is-spacer" : "");
-          lineEl.textContent = line === "" ? "\u00a0" : line;
+          lineEl.className = "sequence-word";
+          lineEl.textContent = line.text;
+          lineEl.style.color = palette[(stepIndex + lineIndex) % palette.length];
+          lineEl.dataset.x = line.x;
+          lineEl.dataset.y = line.y;
+          lineEl.dataset.scale = line.scale;
+          lineEl.dataset.role = line.role || "";
           group.appendChild(lineEl);
         });
         sequenceRoot.appendChild(group);
@@ -421,9 +523,31 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             group.style.opacity = 0;
             return;
           }
-          var fadeIn = stepLocal < 0.2 ? stepLocal / 0.2 : 1;
-          var fadeOut = stepLocal > 0.8 ? (1 - stepLocal) / 0.2 : 1;
-          group.style.opacity = Math.min(fadeIn, fadeOut).toFixed(3);
+          group.style.opacity = 1;
+          var words = group.querySelectorAll(".sequence-word");
+          var lineWindow = 0.7;
+          var perLine = lineWindow / Math.max(1, words.length);
+          var groupFadeOut = stepLocal > 0.86 ? (1 - stepLocal) / 0.14 : 1;
+          words.forEach(function (wordEl, lineIndex) {
+            var lineStart = lineIndex * perLine;
+            var lineLocal = clamp01((stepLocal - lineStart) / perLine);
+            var lineFadeIn = lineLocal < 0.4 ? lineLocal / 0.4 : 1;
+            wordEl.style.opacity = Math.min(lineFadeIn, groupFadeOut).toFixed(3);
+
+            var x = parseFloat(wordEl.dataset.x || "0");
+            var y = parseFloat(wordEl.dataset.y || "0");
+            var baseScale = parseFloat(wordEl.dataset.scale || "0.8");
+            var role = wordEl.dataset.role || "";
+            var scale = baseScale;
+            if (role === "lead") {
+              if (stepLocal < 0.35) {
+                scale = lerp(0.4, 1.6, easeInOutCubic(stepLocal / 0.35));
+              } else {
+                scale = lerp(1.6, baseScale, easeInOutCubic((stepLocal - 0.35) / 0.65));
+              }
+            }
+            wordEl.style.transform = "translate(-50%, -50%) translate(" + x + "vw, " + y + "vh) scale(" + scale + ")";
+          });
         });
       }
 
