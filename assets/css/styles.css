@@ -433,21 +433,29 @@ header {
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
     padding-top: 4px;
+    min-height: 80px;
+    display: block;
+}
+
+.post .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    min-height: 80px;
 }
 
 .post .beer-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     opacity: 0;
-    transform: translateX(30px);
+    transform: translate(calc(35px + 12px + 120px), -50%);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .post header.is-beer-visible .beer-link {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(calc(35px + 12px), -50%);
 }
 
 .post .beer-link img {
