@@ -486,14 +486,14 @@ header {
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    width: 14ch;
+    width: 13.5ch;
     opacity: 1;
-    animation: beer-type 0.9s steps(14, end);
+    animation: beer-type 0.9s steps(13, end);
 }
 
 @keyframes beer-type {
     from { width: 0; }
-    to { width: 14ch; }
+    to { width: 13.5ch; }
 }
 
 .post .beer-link:hover img,
