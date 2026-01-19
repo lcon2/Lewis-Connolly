@@ -11,7 +11,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <title>Abide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #F6EEDB;
@@ -24,6 +24,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       --sky: #CFE6F3;
       --amber: #F2C87E;
       --apricot: #F3B37A;
+      --breath-orange: #EF8E54;
     }
 
     * {
@@ -37,7 +38,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     body {
-      font-family: "Inter", "Segoe UI", sans-serif;
+      font-family: "Baloo 2", "Segoe UI", sans-serif;
       font-weight: 600;
       color: var(--ink);
       background:
@@ -71,7 +72,63 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     #scroll-space {
-      height: 600vh;
+      height: 760vh;
+    }
+
+    .scroll-hint {
+      position: fixed;
+      left: 50%;
+      bottom: 4.5vh;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-size: 0.85rem;
+      color: rgba(31, 30, 27, 0.5);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .scroll-hint::before {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: rgba(31, 30, 27, 0.35);
+    }
+
+    .breath {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .breath-ring {
+      width: 140px;
+      height: 140px;
+      border: 6px solid var(--breath-orange);
+      border-radius: 9999px;
+      box-sizing: border-box;
+      filter: drop-shadow(0 0 10px rgba(239, 142, 84, 0.25));
+      transform-origin: center;
+      opacity: 0.7;
+    }
+
+    .breath-text {
+      position: absolute;
+      font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #7b5a43;
+      opacity: 0;
+      transition: opacity 0.2s ease;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -83,6 +140,12 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 </head>
 <body>
   <main id="stage" aria-hidden="true"></main>
+  <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  <div class="breath" aria-hidden="true">
+    <div class="breath-ring"></div>
+    <div class="breath-text" data-state="in">Breath in</div>
+    <div class="breath-text" data-state="out">Breath out</div>
+  </div>
   <div id="scroll-space" aria-hidden="true"></div>
 
   <script>
@@ -97,6 +160,11 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
       var stage = document.getElementById("stage");
       var scrollSpace = document.getElementById("scroll-space");
+      var scrollHint = document.querySelector(".scroll-hint");
+      var breathWrap = document.querySelector(".breath");
+      var breathRing = document.querySelector(".breath-ring");
+      var breathIn = document.querySelector('.breath-text[data-state="in"]');
+      var breathOut = document.querySelector('.breath-text[data-state="out"]');
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -118,10 +186,13 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       }
 
+      var progress = 0;
       function update() {
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
-        var progress = clamp01(window.scrollY / maxScroll);
-        var segment = 1 / words.length;
+        var target = clamp01(window.scrollY / maxScroll);
+        progress = lerp(progress, target, 0.09);
+        var segment = 1 / (words.length + 1);
+        var wordsEnd = segment * words.length;
 
         words.forEach(function (word, i) {
           var start = i * segment;
@@ -161,22 +232,41 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
           el.style.transform = "translate(-50%, -50%) translate(" + x + "vw, " + y + "vh) scale(" + scale + ")";
         });
-      }
 
-      var ticking = false;
-      function onScroll() {
-        if (!ticking) {
-          window.requestAnimationFrame(function () {
-            update();
-            ticking = false;
-          });
-          ticking = true;
+        var hintFade = clamp01(1 - progress / 0.08);
+        scrollHint.style.opacity = hintFade.toFixed(3);
+
+        var breathLocal = clamp01((progress - wordsEnd) / segment);
+        if (breathLocal <= 0) {
+          breathWrap.style.opacity = 0;
+          breathIn.style.opacity = 0;
+          breathOut.style.opacity = 0;
+        } else {
+          var fadeIn = clamp01(breathLocal / 0.12);
+          var fadeOut = clamp01((1 - breathLocal) / 0.12);
+          breathWrap.style.opacity = Math.min(1, fadeIn, fadeOut);
+
+          var cycles = 2;
+          var cycle = (breathLocal * cycles) % 1;
+          var inhale = cycle < 0.5;
+          var phase = inhale ? cycle / 0.5 : (cycle - 0.5) / 0.5;
+          var eased = easeInOutCubic(phase);
+          var scale = inhale ? lerp(0.92, 1.08, eased) : lerp(1.08, 0.92, eased);
+          breathRing.style.transform = "scale(" + scale + ")";
+
+          var textFade = inhale ? lerp(0.2, 1, eased) : lerp(1, 0.2, eased);
+          breathIn.style.opacity = inhale ? textFade : 0;
+          breathOut.style.opacity = inhale ? 0 : textFade;
         }
       }
 
-      window.addEventListener("scroll", onScroll, { passive: true });
+      function animate() {
+        update();
+        window.requestAnimationFrame(animate);
+      }
+
       window.addEventListener("resize", update);
-      update();
+      animate();
     })();
   </script>
 </body>
