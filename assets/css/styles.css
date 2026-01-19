@@ -449,7 +449,7 @@ header {
     left: 50%;
     top: 50%;
     opacity: 0;
-    transform: translate(calc(35px + 12px + 120px), calc(-50% + 11px));
+    transform: translate(calc(35px + 12px + 112px), calc(-50% + 11px));
     transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     align-items: center;
@@ -458,7 +458,7 @@ header {
 
 .post header.is-beer-visible .beer-link {
     opacity: 1;
-    transform: translate(calc(35px + 12px), calc(-50% + 11px));
+    transform: translate(calc(35px + 8px), calc(-50% + 11px));
 }
 
 .post .beer-link img {
@@ -486,14 +486,14 @@ header {
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    width: 13ch;
+    width: 14ch;
     opacity: 1;
-    animation: beer-type 0.9s steps(13, end);
+    animation: beer-type 0.9s steps(14, end);
 }
 
 @keyframes beer-type {
     from { width: 0; }
-    to { width: 13ch; }
+    to { width: 14ch; }
 }
 
 .post .beer-link:hover img,
