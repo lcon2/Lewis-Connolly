@@ -89,20 +89,32 @@ body {
 
 .post .category-pill {
     display: inline-block;
-    margin: 0;
-    padding: 0 3px;
+    margin: 0 4px 0 0;
+    padding: 0 1px;
     border: 2px solid #f0f0f0;
     border-radius: 999px;
     color: #f0f0f0;
     font-size: 0.85em;
     text-decoration: none;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+}
+
+.post .category-pill:first-of-type {
+    margin-left: 4px;
+}
+
+.post .category-pill:last-of-type {
+    margin-right: 0;
 }
 
 .post .category-pill:hover,
 .post .category-pill:focus-visible {
     color: #ff9933;
     border-color: #ff9933;
+}
+
+.post .category-pill:active {
+    transform: scale(0.9);
 }
 
 .home .navbar-menu {
