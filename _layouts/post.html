@@ -76,6 +76,7 @@
       (function () {
         var header = document.querySelector('.post header');
         if (!header) return;
+        var beerLink = header.querySelector('.beer-link');
         var hideTimer = null;
         function onScroll() {
           var doc = document.documentElement;
@@ -84,6 +85,7 @@
           var ratio = scrollTop / max;
           if (ratio >= 0.6) {
             header.classList.add('is-beer-visible');
+            header.classList.add('is-beer-placed');
           }
           if (ratio <= 0.1 && header.classList.contains('is-beer-visible')) {
             if (hideTimer) clearTimeout(hideTimer);
@@ -93,6 +95,9 @@
               var maxNow = Math.max(1, docNow.scrollHeight - docNow.clientHeight);
               var ratioNow = scrollNow / maxNow;
               if (ratioNow <= 0.1) {
+                if (beerLink && beerLink.matches(':hover')) {
+                  return;
+                }
                 header.classList.remove('is-beer-visible');
               }
             }, 2000);

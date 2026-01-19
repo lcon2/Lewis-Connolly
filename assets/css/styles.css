@@ -456,9 +456,12 @@ header {
     text-decoration: none;
 }
 
+.post header.is-beer-placed .beer-link {
+    transform: translate(calc(35px + 8px), calc(-50% + 10px));
+}
+
 .post header.is-beer-visible .beer-link {
     opacity: 1;
-    transform: translate(calc(35px + 8px), calc(-50% + 10px));
 }
 
 .post .beer-link img {
