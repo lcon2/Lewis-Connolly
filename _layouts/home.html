@@ -120,10 +120,14 @@
           return a.getAttribute('href');
         });
         var blocked = {};
-        newestUrls.concat(popularUrls).forEach(function (u) { blocked[u] = true; });
+        newestUrls.concat(popularUrls).forEach(function (u) {
+          blocked[normalizeUrl(u)] = true;
+        });
 
         var driftUrl = "{{ '/drift' | relative_url }}";
-        var candidates = allPosts.filter(function (p) { return !blocked[p.url] && normalizeUrl(p.url) !== normalizeUrl(driftUrl); });
+        var candidates = allPosts.filter(function (p) {
+          return !blocked[normalizeUrl(p.url)] && normalizeUrl(p.url) !== normalizeUrl(driftUrl);
+        });
         for (var i = candidates.length - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
           var tmp = candidates[i];
@@ -161,7 +165,7 @@
 
         function normalizeUrl(url) {
           if (!url) return url;
-          return url.replace(/\/+$/, '');
+          return url.replace(/\/+$/, '').toLowerCase();
         }
 
         Array.prototype.slice.call(document.querySelectorAll('.content-section a')).forEach(function (link) {
