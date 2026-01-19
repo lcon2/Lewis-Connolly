@@ -468,11 +468,11 @@ header {
 
 .post .beer-text {
     margin-left: 12px;
-    font-size: 36px;
+    font-size: 29px;
     font-weight: 600;
     color: #f0f0f0;
     letter-spacing: 0.5px;
-    font-family: "EBGaramond", serif;
+    font-family: "Courier New", Courier, monospace;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
@@ -483,14 +483,14 @@ header {
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    width: 520px;
+    width: 13ch;
     opacity: 1;
-    animation: beer-type 0.9s steps(12, end);
+    animation: beer-type 0.9s steps(13, end);
 }
 
 @keyframes beer-type {
     from { width: 0; }
-    to { width: 520px; }
+    to { width: 13ch; }
 }
 
 .post .beer-link:hover img,
