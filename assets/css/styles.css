@@ -449,7 +449,7 @@ header {
     left: 50%;
     top: 50%;
     opacity: 0;
-    transform: translate(calc(35px + 12px + 120px), calc(-50% + 13px));
+    transform: translate(calc(35px + 12px + 120px), calc(-50% + 11px));
     transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     align-items: center;
@@ -457,7 +457,7 @@ header {
 
 .post header.is-beer-visible .beer-link {
     opacity: 1;
-    transform: translate(calc(35px + 12px), calc(-50% + 13px));
+    transform: translate(calc(35px + 12px), calc(-50% + 11px));
 }
 
 .post .beer-link img {
@@ -468,10 +468,11 @@ header {
 
 .post .beer-text {
     margin-left: 12px;
-    font-size: 44px;
+    font-size: 36px;
     font-weight: 600;
     color: #f0f0f0;
     letter-spacing: 0.5px;
+    font-family: "EBGaramond", serif;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
@@ -480,8 +481,8 @@ header {
     display: inline-block;
 }
 
-.post .logo:hover + .beer-link .beer-text,
-.post .logo:focus-within + .beer-link .beer-text {
+.post .beer-link:hover .beer-text,
+.post .beer-link:focus-visible .beer-text {
     width: 520px;
     opacity: 1;
     animation: beer-type 0.9s steps(12, end);
