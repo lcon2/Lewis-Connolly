@@ -76,6 +76,7 @@
       (function () {
         var header = document.querySelector('.post header');
         if (!header) return;
+        var hideTimer = null;
         function onScroll() {
           var doc = document.documentElement;
           var scrollTop = doc.scrollTop || document.body.scrollTop || 0;
@@ -85,6 +86,21 @@
             header.classList.add('is-beer-visible');
             window.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', onScroll);
+          }
+          if (ratio <= 0.1 && header.classList.contains('is-beer-visible')) {
+            if (hideTimer) clearTimeout(hideTimer);
+            hideTimer = setTimeout(function () {
+              var docNow = document.documentElement;
+              var scrollNow = docNow.scrollTop || document.body.scrollTop || 0;
+              var maxNow = Math.max(1, docNow.scrollHeight - docNow.clientHeight);
+              var ratioNow = scrollNow / maxNow;
+              if (ratioNow <= 0.1) {
+                header.classList.remove('is-beer-visible');
+              }
+            }, 2000);
+          } else if (hideTimer) {
+            clearTimeout(hideTimer);
+            hideTimer = null;
           }
         }
         window.addEventListener('scroll', onScroll, { passive: true });

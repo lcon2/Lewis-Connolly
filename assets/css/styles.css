@@ -449,7 +449,7 @@ header {
     left: 50%;
     top: 50%;
     opacity: 0;
-    transform: translate(calc(35px + 12px + 112px), calc(-50% + 11px));
+    transform: translate(calc(35px + 12px + 112px), calc(-50% + 10px));
     transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     align-items: center;
@@ -458,7 +458,7 @@ header {
 
 .post header.is-beer-visible .beer-link {
     opacity: 1;
-    transform: translate(calc(35px + 8px), calc(-50% + 11px));
+    transform: translate(calc(35px + 8px), calc(-50% + 10px));
 }
 
 .post .beer-link img {
