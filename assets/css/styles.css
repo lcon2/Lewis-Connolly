@@ -575,6 +575,21 @@ header {
     border-radius: 8px; /* Adds rounded corners */
 }
 
+img.blur-up {
+    filter: blur(12px);
+    transform: scale(1.02);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+img.blur-up.is-loaded {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+article picture {
+    display: block;
+}
+
 /* Paragraph Styling */
 .post article p {
     margin-bottom: 20px; /* Adds spacing between paragraphs */
