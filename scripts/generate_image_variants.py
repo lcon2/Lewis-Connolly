@@ -86,14 +86,14 @@ for path in SRC_DIR.rglob("*"):
     if w > 800:
         resized_path = path.with_name(f"{name}-800.{ext}")
         save_resized(img, resized_path, 800, ext)
-        fallback_srcset.append(f"{resized_path.as_posix()} 800w")
+        fallback_srcset.append(f"/{resized_path.as_posix()} 800w")
 
         resized_webp_path = path.with_name(f"{name}-800.webp")
         save_resized(img, resized_webp_path, 800, "webp", quality=80)
-        webp_srcset.append(f"{resized_webp_path.as_posix()} 800w")
+        webp_srcset.append(f"/{resized_webp_path.as_posix()} 800w")
 
-    fallback_srcset.append(f"{path.as_posix()} {w}w")
-    webp_srcset.append(f"{webp_path.as_posix()} {w}w")
+    fallback_srcset.append(f"/{path.as_posix()} {w}w")
+    webp_srcset.append(f"/{webp_path.as_posix()} {w}w")
 
     manifest[rel_path] = {
         "placeholder": "/" + str(placeholder_path.as_posix()),
