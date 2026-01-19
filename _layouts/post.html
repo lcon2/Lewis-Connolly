@@ -73,14 +73,18 @@
 
     <script>
       (function () {
-        var beerLink = document.querySelector('.beer-link');
-        if (!beerLink) return;
+        var header = document.querySelector('.post header');
+        if (!header) return;
         function onScroll() {
           var doc = document.documentElement;
           var scrollTop = doc.scrollTop || document.body.scrollTop || 0;
           var max = Math.max(1, doc.scrollHeight - doc.clientHeight);
           var ratio = scrollTop / max;
-          beerLink.classList.toggle('is-visible', ratio >= 0.6);
+          if (ratio >= 0.6) {
+            header.classList.add('is-beer-visible');
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+          }
         }
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onScroll);
