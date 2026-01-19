@@ -433,6 +433,34 @@ header {
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
     padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post .beer-link {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    opacity: 0;
+    transform: translate(120%, -50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.post .beer-link.is-visible {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+.post .beer-link img {
+    width: 48px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.post .beer-link:hover img,
+.post .beer-link:focus-visible img {
+    transform: scale(1.1);
 }
 
 .post main {

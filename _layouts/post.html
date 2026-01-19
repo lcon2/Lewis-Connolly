@@ -24,6 +24,9 @@
                 <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
             </a>
         </div>
+        <a href="https://buymeacoffee.com/lewisconnolly" class="beer-link" target="_blank" rel="noopener noreferrer" aria-label="Buy me a beer">
+            <img src="{{ '/assets/images/beer.png' | relative_url }}" alt="Buy me a beer">
+        </a>
     </header>
     <main>
         <article>
@@ -67,5 +70,22 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
+
+    <script>
+      (function () {
+        var beerLink = document.querySelector('.beer-link');
+        if (!beerLink) return;
+        function onScroll() {
+          var doc = document.documentElement;
+          var scrollTop = doc.scrollTop || document.body.scrollTop || 0;
+          var max = Math.max(1, doc.scrollHeight - doc.clientHeight);
+          var ratio = scrollTop / max;
+          beerLink.classList.toggle('is-visible', ratio >= 0.6);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        onScroll();
+      })();
+    </script>
 </body>
 </html>
