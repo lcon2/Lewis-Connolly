@@ -11,7 +11,6 @@ categories:
 og_image: /assets/images/fragmented.png
 ai_summary: "Freedom in virtual worlds becomes a design problem: when nothing binds, identity thins and meaning drains. I argue that commitment and stakes, not suffering, give choices weight. Games model this through consequence within a frame. AI-curated lives may optimize comfort while dissolving narrative gravity. Freedom without constraints risks drift; freedom with chosen limits lets the self cohere."
 ---
-Condemned to Freedom
 
 > "Freedom is what you do with what's been done to you."
 > -- Jean-Paul Sartre

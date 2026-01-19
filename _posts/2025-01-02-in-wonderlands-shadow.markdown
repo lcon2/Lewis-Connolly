@@ -9,7 +9,7 @@ categories:
   - Consciousness
   - Meaning
 og_image: /assets/images/Alicepic.png
-ai_summary: "This article discusses topics related to sexual abuse. My focus will be a discussion on ‘Alice’s Last Adventure’, a short-story from the 'weird fiction' writer Thomas Ligotti. Please stop.” But her father’s abuse didn’t stop. I don’t particularly like trigger warnings. To me, if a shocking subject appears on the page, the writer should have already earned the right to..."
+ai_summary: "I write through Thomas Ligotti's 'Alice's Last Adventure' and its shadowy dialogue with Carroll, Nabokov, and trauma. The essay circles taste, voyeurism, and the intimacy of prose, then descends into a chilling reading of Alice's story as a survivor's broken wonderland. It is less about scandal than about how abuse distorts memory, narrative, and selfhood."
 ---
 <div class="post">
     <audio class="audio-player" controls>

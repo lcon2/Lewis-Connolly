@@ -9,7 +9,7 @@ categories:
   - Psychology
   - Identity
 og_image: /assets/images/paintinggod.png
-ai_summary: "David Lynch died on January 15th. His work reminds me of abstraction in art and the role that our intuition plays in co-creating it. Princeton University Press. In a lot of movies and TV shows today, you find yourself trying to figure out how the pieces are going to come together. For those who know the language of storytelling and..."
+ai_summary: "David Lynch's death turns me toward abstraction, intuition, and the dreamlike logic of his work. I trace parallels with meditation and Jung's idea of higher art emerging from the collective unconscious, and extend the thought to AI's self-organizing patterns. Twin Peaks becomes a case study in archetype and individuation, where the shadow must be faced."
 ---
 <div class="post">
     <audio class="audio-player" controls>
