@@ -84,8 +84,6 @@
           var ratio = scrollTop / max;
           if (ratio >= 0.6) {
             header.classList.add('is-beer-visible');
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onScroll);
           }
           if (ratio <= 0.1 && header.classList.contains('is-beer-visible')) {
             if (hideTimer) clearTimeout(hideTimer);
