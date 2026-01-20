@@ -963,7 +963,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             volumeControl.classList.remove("is-active");
             spawnVolumeIcon();
           }
-        }, 2000);
+        }, 600);
       }
 
       window.addEventListener("mousemove", function (event) {
