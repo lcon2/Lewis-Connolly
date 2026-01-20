@@ -47,6 +47,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       overflow-x: hidden;
       overflow-y: scroll;
       overscroll-behavior: none;
+      position: relative;
     }
 
     body::-webkit-scrollbar,
@@ -67,6 +68,17 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       filter: blur(45px);
       opacity: 0.9;
       z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: -10%;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMjAiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg==");
+      opacity: 0.06;
+      pointer-events: none;
+      mix-blend-mode: soft-light;
+      z-index: 0;
     }
 
     .abide-header {
@@ -113,6 +125,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       display: grid;
       place-items: center;
       pointer-events: none;
+      z-index: 1;
     }
 
     .word {
@@ -148,6 +161,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       pointer-events: none;
       opacity: 1;
       transition: opacity 0.3s ease;
+      z-index: 1;
     }
 
     .scroll-hint::before {
@@ -166,6 +180,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       pointer-events: none;
       opacity: 0;
       transition: opacity 0.3s ease;
+      z-index: 1;
     }
 
     .breath-ring {
@@ -177,6 +192,18 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       filter: drop-shadow(0 0 10px rgba(239, 142, 84, 0.25));
       transform-origin: center;
       opacity: 0.7;
+    }
+
+    .breath-haze {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242, 200, 126, 0.22) 0%, rgba(242, 200, 126, 0) 70%);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 0.3s ease;
+      filter: blur(6px);
     }
 
     .breath-text {
@@ -195,6 +222,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       display: grid;
       place-items: center;
       pointer-events: none;
+      z-index: 1;
     }
 
     .sequence-group {
@@ -446,6 +474,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <main id="stage" aria-hidden="true"></main>
   <div class="scroll-hint" aria-hidden="true">Scroll</div>
   <div class="breath" aria-hidden="true">
+    <div class="breath-haze"></div>
     <div class="breath-ring"></div>
     <div class="breath-text" data-state="in">Breath in</div>
     <div class="breath-text" data-state="out">Breath Out</div>
@@ -491,6 +520,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var scrollHint = document.querySelector(".scroll-hint");
       var breathWrap = document.querySelector(".breath");
       var breathRing = document.querySelector(".breath-ring");
+      var breathHaze = document.querySelector(".breath-haze");
       var breathIn = document.querySelector('.breath-text[data-state="in"]');
       var breathOut = document.querySelector('.breath-text[data-state="out"]');
       var header = document.querySelector(".abide-header");
@@ -499,6 +529,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var endCard = document.querySelector(".end-card");
       var copyButton = document.querySelector(".end-button");
       var bgAudio = document.getElementById("bg-audio");
+      var baseVolume = 0.35;
       var volumeControl = document.querySelector(".volume-control");
       var volumeSlider = document.getElementById("volume-slider");
       var volumeIconSrc = "{{ '/assets/images/audio.png' | relative_url }}";
@@ -718,6 +749,9 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           breathWrap.style.opacity = 0;
           breathIn.style.opacity = 0;
           breathOut.style.opacity = 0;
+          if (breathHaze) {
+            breathHaze.style.opacity = 0;
+          }
         } else {
           var fadeIn = clamp01(breathLocal / 0.18);
           var fadeOut = clamp01((1 - breathLocal) / 0.18);
@@ -744,6 +778,11 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             scale = lerp(maxScale, minScale, eased);
           }
           breathRing.style.transform = "scale(" + scale + ")";
+          if (breathHaze) {
+            var hazeNorm = clamp01((scale - minScale) / (maxScale - minScale));
+            breathHaze.style.opacity = (0.15 + hazeNorm * 0.2).toFixed(3);
+            breathHaze.style.transform = "scale(" + (0.6 + hazeNorm * 1.1).toFixed(3) + ")";
+          }
 
           if (cycle < inhaleEnd) {
             breathIn.style.opacity = lerp(0.2, 1, eased);
@@ -823,6 +862,12 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
         if (endReady && endScreen) {
           endScreen.classList.add("is-visible");
+        }
+
+        if (bgAudio) {
+          var fadeStart = 0.9;
+          var fadeFactor = target < fadeStart ? 1 : (1 - (target - fadeStart) / 0.1) * 0.85 + 0.15;
+          bgAudio.volume = baseVolume * clamp01(fadeFactor);
         }
       }
 
@@ -905,7 +950,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
       function tryPlayAudio() {
         if (!bgAudio) return;
-        bgAudio.volume = 0.35;
+        baseVolume = volumeSlider ? parseFloat(volumeSlider.value) : 0.35;
+        bgAudio.volume = baseVolume;
         var playPromise = bgAudio.play();
         if (playPromise && typeof playPromise.catch === "function") {
           playPromise.catch(function () {});
@@ -917,7 +963,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
       if (volumeSlider && bgAudio) {
         volumeSlider.addEventListener("input", function () {
-          bgAudio.volume = parseFloat(volumeSlider.value);
+          baseVolume = parseFloat(volumeSlider.value);
+          bgAudio.volume = baseVolume;
         });
       }
 
