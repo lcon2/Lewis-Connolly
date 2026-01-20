@@ -321,7 +321,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       transform: translate(-50%, -50%);
       width: 28px;
       height: 28px;
-      opacity: 0.35;
+      opacity: 0.2;
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
@@ -459,9 +459,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
       </div>
     </div>
-    <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="rgba(255,255,255,0.7)" d="M4 10v4h4l5 5V5l-5 5H4z"></path>
-    </svg>
+    <img class="volume-icon" src="{{ '/assets/images/audio.png' | relative_url }}" alt="">
   </div>
   <section class="end-screen" aria-hidden="true">
     <div class="end-backdrop" data-end-backdrop="true"></div>
