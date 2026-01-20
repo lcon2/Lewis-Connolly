@@ -501,6 +501,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var bgAudio = document.getElementById("bg-audio");
       var volumeControl = document.querySelector(".volume-control");
       var volumeSlider = document.getElementById("volume-slider");
+      var volumeIconSrc = "{{ '/assets/images/audio.png' | relative_url }}";
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -921,6 +922,38 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       }
 
       var volHideTimer = null;
+      var volIconRemoveTimer = null;
+      function removeVolumeIcon() {
+        if (!volumeControl) return;
+        var icon = volumeControl.querySelector(".volume-icon");
+        if (!icon) return;
+        icon.style.opacity = "0";
+        icon.style.transform = "translate(-50%, -50%) scale(0.9)";
+        if (volIconRemoveTimer) {
+          clearTimeout(volIconRemoveTimer);
+        }
+        volIconRemoveTimer = setTimeout(function () {
+          var current = volumeControl.querySelector(".volume-icon");
+          if (current) {
+            current.remove();
+          }
+        }, 450);
+      }
+
+      function spawnVolumeIcon() {
+        if (!volumeControl) return;
+        if (volumeControl.querySelector(".volume-icon")) return;
+        var icon = document.createElement("img");
+        icon.className = "volume-icon";
+        icon.src = volumeIconSrc;
+        icon.alt = "";
+        icon.style.opacity = "0";
+        volumeControl.appendChild(icon);
+        requestAnimationFrame(function () {
+          icon.style.opacity = "0.2";
+          icon.style.transform = "translate(-50%, -50%)";
+        });
+      }
       function scheduleVolumeHide() {
         if (volHideTimer) {
           clearTimeout(volHideTimer);
@@ -928,6 +961,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         volHideTimer = setTimeout(function () {
           if (volumeControl) {
             volumeControl.classList.remove("is-active");
+            spawnVolumeIcon();
           }
         }, 2000);
       }
@@ -943,6 +977,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         var radius = 220;
         if (dist < radius) {
           volumeControl.classList.add("is-active");
+          removeVolumeIcon();
           if (volHideTimer) {
             clearTimeout(volHideTimer);
             volHideTimer = null;
@@ -951,6 +986,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           scheduleVolumeHide();
         }
       });
+
+      if (volumeControl && !volumeControl.classList.contains("is-active")) {
+        spawnVolumeIcon();
+      }
 
       if (copyButton) {
         copyButton.addEventListener("click", function () {
