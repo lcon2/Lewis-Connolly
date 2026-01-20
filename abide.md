@@ -319,8 +319,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 28px;
-      height: 28px;
+      width: 31px;
+      height: 31px;
       opacity: 0.2;
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
