@@ -229,19 +229,37 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       transform: translateY(-50%);
       width: 70px;
       height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+      z-index: 8;
+    }
+
+    .volume-control.is-active {
+      opacity: 1;
+    }
+
+    .volume-panel {
+      width: 62px;
+      height: 210px;
       border-radius: 24px;
       background: rgba(20, 20, 20, 0.88);
       padding: 14px 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.15;
-      transition: opacity 0.5s ease;
-      z-index: 8;
+      transform: translateX(36px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.6s ease, opacity 0.6s ease;
     }
 
-    .volume-control.is-active {
-      opacity: 0.6;
+    .volume-control.is-active .volume-panel {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .volume-track {
@@ -253,16 +271,6 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: translateX(36px);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.6s ease, opacity 0.6s ease;
-    }
-
-    .volume-control.is-active .volume-track {
-      transform: translateX(0);
-      opacity: 1;
-      pointer-events: auto;
     }
 
     .volume-track input[type="range"] {
@@ -308,17 +316,18 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
     .volume-icon {
       position: absolute;
-      bottom: -28px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      width: 22px;
-      height: 22px;
-      opacity: 0.45;
-      transition: opacity 0.4s ease;
+      transform: translate(-50%, -50%);
+      width: 28px;
+      height: 28px;
+      opacity: 0.35;
+      transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
     .volume-control.is-active .volume-icon {
       opacity: 0;
+      transform: translate(-50%, -50%) scale(0.9);
     }
 
     .end-screen {
@@ -445,8 +454,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     <div class="sequence-lines"></div>
   </section>
   <div class="volume-control" aria-label="Audio volume">
-    <div class="volume-track">
-      <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
+    <div class="volume-panel">
+      <div class="volume-track">
+        <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
+      </div>
     </div>
     <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
       <path fill="rgba(255,255,255,0.7)" d="M4 10v4h4l5 5V5l-5 5H4z"></path>
