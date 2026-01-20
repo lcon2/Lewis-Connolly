@@ -209,13 +209,17 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       position: absolute;
       left: 50%;
       top: 50%;
-      font-size: clamp(1rem, 3vw, 2.6rem);
+      font-size: clamp(1.4rem, 4.4vw, 3.8rem);
       letter-spacing: 0.14em;
       text-transform: uppercase;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.4);
       transition: opacity 0.25s ease;
       text-shadow: 0 6px 24px rgba(31, 30, 27, 0.08);
+    }
+
+    .sequence-word.is-lead {
+      font-size: clamp(2rem, 6.8vw, 6rem);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -393,7 +397,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         group.className = "sequence-group";
         step.lines.forEach(function (line, lineIndex) {
           var lineEl = document.createElement("div");
-          lineEl.className = "sequence-word";
+          lineEl.className = "sequence-word" + (line.role === "lead" ? " is-lead" : "");
           lineEl.textContent = line.text;
           lineEl.style.color = palette[(stepIndex + lineIndex) % palette.length];
           lineEl.dataset.x = line.x;
@@ -423,9 +427,9 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
         var target = clamp01(window.scrollY / maxScroll);
         progress = lerp(progress, target, 0.06);
-        var wordsPortion = 0.28;
-        var breathPortion = 0.42;
-        var sequencePortion = 0.3;
+        var wordsPortion = 0.24;
+        var breathPortion = 0.36;
+        var sequencePortion = 0.4;
         var segment = wordsPortion / words.length;
         var wordsEnd = wordsPortion;
 
@@ -525,7 +529,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           }
           group.style.opacity = 1;
           var words = group.querySelectorAll(".sequence-word");
-          var lineWindow = 0.7;
+          var lineWindow = 0.85;
           var perLine = lineWindow / Math.max(1, words.length);
           var groupFadeOut = stepLocal > 0.86 ? (1 - stepLocal) / 0.14 : 1;
           words.forEach(function (wordEl, lineIndex) {
@@ -540,10 +544,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             var role = wordEl.dataset.role || "";
             var scale = baseScale;
             if (role === "lead") {
-              if (stepLocal < 0.35) {
-                scale = lerp(0.4, 1.6, easeInOutCubic(stepLocal / 0.35));
+              if (stepLocal < 0.4) {
+                scale = lerp(0.4, 1.8, easeInOutCubic(stepLocal / 0.4));
               } else {
-                scale = lerp(1.6, baseScale, easeInOutCubic((stepLocal - 0.35) / 0.65));
+                scale = lerp(1.8, baseScale, easeInOutCubic((stepLocal - 0.4) / 0.6));
               }
             }
             wordEl.style.transform = "translate(-50%, -50%) translate(" + x + "vw, " + y + "vh) scale(" + scale + ")";
