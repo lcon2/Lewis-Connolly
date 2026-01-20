@@ -227,8 +227,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       right: 34px;
       top: 50%;
       transform: translateY(-50%);
-      width: 62px;
-      height: 210px;
+      width: 70px;
+      height: 240px;
       border-radius: 24px;
       background: rgba(20, 20, 20, 0.88);
       padding: 14px 12px;
@@ -240,6 +240,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       z-index: 8;
     }
 
+    .volume-control.is-active {
+      opacity: 0.6;
+    }
+
     .volume-track {
       position: relative;
       width: 38px;
@@ -249,6 +253,16 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateX(36px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .volume-control.is-active .volume-track {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .volume-track input[type="range"] {
@@ -294,12 +308,17 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
     .volume-icon {
       position: absolute;
-      bottom: 10px;
+      bottom: -28px;
       left: 50%;
       transform: translateX(-50%);
-      width: 16px;
-      height: 16px;
-      opacity: 0.55;
+      width: 22px;
+      height: 22px;
+      opacity: 0.45;
+      transition: opacity 0.4s ease;
+    }
+
+    .volume-control.is-active .volume-icon {
+      opacity: 0;
     }
 
     .end-screen {
@@ -428,10 +447,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <div class="volume-control" aria-label="Audio volume">
     <div class="volume-track">
       <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
-      <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="rgba(255,255,255,0.7)" d="M4 10v4h4l5 5V5l-5 5H4z"></path>
-      </svg>
     </div>
+    <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="rgba(255,255,255,0.7)" d="M4 10v4h4l5 5V5l-5 5H4z"></path>
+    </svg>
   </div>
   <section class="end-screen" aria-hidden="true">
     <div class="end-backdrop" data-end-backdrop="true"></div>
@@ -893,17 +912,14 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       }
 
       var volHideTimer = null;
-      function updateVolumeOpacity(value) {
-        if (!volumeControl) return;
-        volumeControl.style.opacity = value.toFixed(3);
-      }
-
-      function scheduleVolumeFade() {
+      function scheduleVolumeHide() {
         if (volHideTimer) {
           clearTimeout(volHideTimer);
         }
         volHideTimer = setTimeout(function () {
-          updateVolumeOpacity(0.15);
+          if (volumeControl) {
+            volumeControl.classList.remove("is-active");
+          }
         }, 2000);
       }
 
@@ -917,14 +933,13 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         var dist = Math.sqrt(dx * dx + dy * dy);
         var radius = 220;
         if (dist < radius) {
-          var intensity = 1 - dist / radius;
-          updateVolumeOpacity(0.15 + intensity * 0.55);
+          volumeControl.classList.add("is-active");
           if (volHideTimer) {
             clearTimeout(volHideTimer);
             volHideTimer = null;
           }
         } else {
-          scheduleVolumeFade();
+          scheduleVolumeHide();
         }
       });
 
