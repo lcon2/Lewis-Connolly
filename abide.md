@@ -133,7 +133,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       left: 50%;
       top: 50%;
       font-size: clamp(2.5rem, 10vw, 10rem);
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.2);
@@ -209,7 +209,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     .breath-text {
       position: absolute;
       font-size: clamp(1.2rem, 3.2vw, 2.4rem);
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #7b5a43;
       opacity: 0;
@@ -238,7 +238,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       left: 50%;
       top: 50%;
       font-size: clamp(1.4rem, 4.4vw, 3.8rem);
-      letter-spacing: 0.14em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.4);
@@ -248,6 +248,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
     .sequence-word.is-lead {
       font-size: clamp(2rem, 6.8vw, 6rem);
+      letter-spacing: 0.12em;
     }
 
     .volume-control {
@@ -687,6 +688,37 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       }
 
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function classifyLine(text, role, isFinal) {
+        if (reduceMotion) {
+          return "neutral";
+        }
+        if (isFinal) {
+          return "final";
+        }
+        if (role === "lead") {
+          return "instructional";
+        }
+        var sensory = {
+          "breath": true,
+          "temperature": true,
+          "pressure": true,
+          "contact": true,
+          "tightness": true,
+          "ease": true,
+          "movement": true,
+          "pleasant": true,
+          "unpleasant": true,
+          "neutral": true,
+          "sound": true,
+          "silence": true
+        };
+        if (sensory[text.toLowerCase()]) {
+          return "sensory";
+        }
+        return "neutral";
+      }
+
       var progress = 0;
       var endTimer = null;
       var endReady = false;
@@ -806,19 +838,26 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           }
           group.style.opacity = 1;
           var words = group.querySelectorAll(".sequence-word");
-          var lineWindow = 0.95;
+          var isFinal = index === sequenceGroups.length - 1;
+          var lineWindow = isFinal ? 1.05 : 0.92;
           var perLine = lineWindow / Math.max(1, words.length);
-          var groupFadeOut = stepLocal > 0.9 ? (1 - stepLocal) / 0.1 : 1;
+          var groupFadeOutStart = isFinal ? 0.96 : 0.9;
+          var groupFadeOutDur = isFinal ? 0.04 : 0.1;
+          var groupFadeOut = stepLocal > groupFadeOutStart ? (1 - stepLocal) / groupFadeOutDur : 1;
           words.forEach(function (wordEl, lineIndex) {
             var lineStart = lineIndex * perLine;
             var lineLocal = clamp01((stepLocal - lineStart) / perLine);
-            var lineFadeIn = lineLocal < 0.45 ? lineLocal / 0.45 : 1;
-            wordEl.style.opacity = Math.min(lineFadeIn, groupFadeOut).toFixed(3);
+            var role = wordEl.dataset.role || "";
+            var kind = classifyLine(wordEl.textContent || "", role, isFinal);
+            var fadeInDur = kind === "sensory" ? 0.3 : kind === "instructional" ? 0.5 : kind === "final" ? 0.6 : 0.4;
+            var lineFadeIn = lineLocal < fadeInDur ? lineLocal / fadeInDur : 1;
+            var baseOpacity = Math.min(lineFadeIn, groupFadeOut);
+            var opacityBoost = role === "lead" ? 1.06 : 0.94;
+            wordEl.style.opacity = Math.min(1, baseOpacity * opacityBoost).toFixed(3);
 
             var x = parseFloat(wordEl.dataset.x || "0");
             var y = parseFloat(wordEl.dataset.y || "0");
             var baseScale = parseFloat(wordEl.dataset.scale || "0.8");
-            var role = wordEl.dataset.role || "";
             var scale = baseScale;
             if (role === "lead") {
               if (stepLocal < 0.4) {
