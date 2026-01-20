@@ -24,8 +24,18 @@ body {
         linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(21, 21, 21, 0) 28%);
 }
 
+/* Studies visual direction */
+.studies {
+    background-color: #151515;
+    background-image:
+        radial-gradient(900px 380px at 50% -120px, rgba(255, 190, 120, 0.12), rgba(21, 21, 21, 0) 60%),
+        radial-gradient(700px 320px at 20% 30%, rgba(255, 255, 255, 0.06), rgba(21, 21, 21, 0) 65%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(21, 21, 21, 0) 28%);
+}
+
 /* Navigation Bar */
-.home .navbar {
+.home .navbar,
+.studies .navbar {
     display: flex;
     justify-content: center; /* Center the combined logo and navigation menu */
     align-items: center;
@@ -35,36 +45,43 @@ body {
     backdrop-filter: blur(4px);
 }
 
-.home .navbar-content {
+.home .navbar-content,
+.studies .navbar-content {
     display: flex;
     align-items: center; /* Vertically aligns logo and menu */
     gap: 30px; /* Expands spacing between the logo and navigation menu */
 }
 
-.home .logo {
+.home .logo,
+.studies .logo {
     max-width: 80px;
     height: auto;
 }
 
-.home .logo-wrap {
+.home .logo-wrap,
+.studies .logo-wrap {
     position: relative;
     display: block;
     max-width: 80px;
     transition: transform 0.8s ease;
 }
 
-.home .logo-wrap img {
+.home .logo-wrap img,
+.studies .logo-wrap img {
     display: block;
     width: 100%;
     height: auto;
 }
 
 .home .logo-base,
-.home .logo-hover {
+.home .logo-hover,
+.studies .logo-base,
+.studies .logo-hover {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.home .logo-hover {
+.home .logo-hover,
+.studies .logo-hover {
     position: absolute;
     top: 2px;
     left: 0;
@@ -73,17 +90,23 @@ body {
 }
 
 .home .logo-link:hover .logo-hover,
-.home .logo-link:focus-visible .logo-hover {
+.home .logo-link:focus-visible .logo-hover,
+.studies .logo-link:hover .logo-hover,
+.studies .logo-link:focus-visible .logo-hover {
     opacity: 1;
 }
 
 .home .logo-link:hover .logo-base,
-.home .logo-link:focus-visible .logo-base {
+.home .logo-link:focus-visible .logo-base,
+.studies .logo-link:hover .logo-base,
+.studies .logo-link:focus-visible .logo-base {
     opacity: 0;
 }
 
 .home .logo-link:hover .logo-wrap,
-.home .logo-link:focus-visible .logo-wrap {
+.home .logo-link:focus-visible .logo-wrap,
+.studies .logo-link:hover .logo-wrap,
+.studies .logo-link:focus-visible .logo-wrap {
     transform: scale(1.2);
 }
 
@@ -117,7 +140,8 @@ body {
     transform: scale(0.9);
 }
 
-.home .navbar-menu {
+.home .navbar-menu,
+.studies .navbar-menu {
     display: flex;
     list-style: none;
     gap: 15px;
@@ -125,11 +149,13 @@ body {
     padding: 0;
 }
 
-.home .navbar-menu a {
+.home .navbar-menu a,
+.studies .navbar-menu a {
     white-space: nowrap; /* Prevents the text from wrapping to the next line */
 }
 
-.home .navbar-menu a {
+.home .navbar-menu a,
+.studies .navbar-menu a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: 1.2em;
@@ -140,7 +166,10 @@ body {
     transition: all 0.3s ease;
 }
 
-.home .navbar-menu a:hover {
+.home .navbar-menu a:hover,
+.studies .navbar-menu a:hover,
+.home .navbar-menu a.is-active,
+.studies .navbar-menu a.is-active {
     background-color: #242424;
     border-color: #ff9933;
     color: #ff9933;
@@ -292,6 +321,12 @@ body {
     border-bottom-color: #ff9933;
 }
 
+.studies .intro a:hover,
+.studies .intro a:focus-visible {
+    color: #ff9933;
+    border-bottom-color: #ff9933;
+}
+
 /* Article summary tooltip */
 .summary-tooltip {
     position: fixed;
@@ -381,6 +416,299 @@ body {
 .home .content-section ul li a:hover {
     color: #ff9933;
     border-bottom-color: #ff9933;
+}
+
+/* Studies pages */
+.studies .studies-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px 70px;
+}
+
+.studies .studies-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+
+.studies .studies-hero-text {
+    flex: 1 1 360px;
+}
+
+.studies .studies-kicker {
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #d0c7bf;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+
+.studies .studies-hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+}
+
+.studies .studies-intro {
+    font-size: 1.2em;
+    color: #e2ded9;
+    margin-bottom: 18px;
+}
+
+.studies .studies-hero-media {
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.studies .studies-hero-image {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.studies .studies-section {
+    margin-bottom: 40px;
+}
+
+.studies .studies-section h2 {
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d8d3cd;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.studies .studies-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(24, 24, 24, 0.82);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
+    padding: 20px 24px;
+}
+
+.studies .studies-course-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.studies .studies-course-card h3 {
+    font-size: 1.4em;
+    margin: 6px 0 10px;
+}
+
+.studies .studies-course-meta {
+    color: #d8d0c9;
+    margin-bottom: 16px;
+}
+
+.studies .studies-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85em;
+    color: #e2ded9;
+    background: rgba(30, 30, 30, 0.8);
+}
+
+.studies .studies-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.studies .studies-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid #2f2f2f;
+    background: rgba(26, 26, 26, 0.9);
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.studies .studies-button:hover,
+.studies .studies-button:focus-visible {
+    border-color: #ff9933;
+    color: #ff9933;
+    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
+}
+
+.studies .studies-button.secondary {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.studies .studies-link {
+    color: #e2ded9;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.studies .studies-link:hover,
+.studies .studies-link:focus-visible {
+    color: #ff9933;
+    border-bottom-color: #ff9933;
+}
+
+.studies .studies-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.studies .studies-fact-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 14px 16px;
+    background: rgba(24, 24, 24, 0.7);
+}
+
+.studies .studies-fact-label {
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #bdb4ac;
+    margin-bottom: 6px;
+}
+
+.studies .studies-fact-value {
+    font-size: 1.05em;
+    color: #f0f0f0;
+}
+
+.studies .studies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.studies .studies-list li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #e2ded9;
+}
+
+.studies .studies-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff9933;
+}
+
+.studies .studies-syllabus {
+    display: grid;
+    gap: 16px;
+}
+
+.studies .studies-session-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(24, 24, 24, 0.75);
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.studies .studies-session-card h3 {
+    margin: 0 0 6px;
+    font-size: 1.15em;
+}
+
+.studies .studies-session-card p {
+    margin: 0;
+    color: #d8d0c9;
+}
+
+.studies .studies-session-info {
+    flex: 1 1 300px;
+}
+
+.studies .studies-donation {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 20px 24px;
+    background: rgba(20, 20, 20, 0.85);
+}
+
+.studies .studies-faq details {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+}
+
+.studies .studies-faq summary {
+    cursor: pointer;
+    font-size: 1.05em;
+}
+
+.studies .studies-faq p {
+    margin-top: 8px;
+    color: #d8d0c9;
+}
+
+.studies .studies-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+}
+
+.studies .studies-footer-nav a {
+    color: #e2ded9;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.studies .studies-footer-nav a:hover,
+.studies .studies-footer-nav a:focus-visible {
+    color: #ff9933;
+    border-bottom-color: #ff9933;
+}
+
+.studies .studies-session-nav {
+    display: flex;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.studies .studies-session-nav a,
+.studies .studies-session-nav span {
+    color: #e2ded9;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+}
+
+.studies .studies-session-nav span {
+    opacity: 0.45;
+    border-bottom-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .studies .studies-hero h1 {
+        font-size: 1.8em;
+    }
+
+    .studies .studies-hero {
+        margin-top: 10px;
+    }
 }
 
 /* Ensure list item titles wrap correctly and don't get visually clipped
@@ -677,22 +1005,26 @@ footer {
 
 /* Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
-    .home .navbar {
+    .home .navbar,
+    .studies .navbar {
         flex-direction: column; /* Stacks logo and navigation vertically */
         align-items: flex-start;
         padding: 10px 20px;
     }
 
-    .home .navbar-content {
+    .home .navbar-content,
+    .studies .navbar-content {
         flex-direction: column;
         gap: 10px; /* Reduces spacing between elements */
     }
 
-    .home .logo {
+    .home .logo,
+    .studies .logo {
         max-width: 60px; /* Reduces logo size */
     }
 
-    .home .navbar-menu {
+    .home .navbar-menu,
+    .studies .navbar-menu {
         flex-direction: column; /* Stacks menu items vertically */
         gap: 10px;
         width: 100%; /* Makes menu span the screen */
