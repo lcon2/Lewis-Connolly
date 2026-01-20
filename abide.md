@@ -222,39 +222,56 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       font-size: clamp(2rem, 6.8vw, 6rem);
     }
 
-    .end-card {
+    .end-screen {
       position: fixed;
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%, -50%);
-      width: min(460px, 78vw);
-      background: rgba(246, 238, 219, 0.92);
-      border-radius: 18px;
-      padding: 26px 28px 24px;
-      text-align: center;
+      inset: 0;
+      display: grid;
+      place-items: center;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 1.4s ease;
+      transition: opacity 1s ease-in-out;
+      z-index: 9;
     }
 
-    .end-card.is-visible {
-      opacity: 0.7;
+    .end-screen.is-visible {
+      opacity: 1;
       pointer-events: auto;
     }
 
-    .end-card p {
-      margin: 0 0 18px;
-      font-size: 0.95rem;
+    .end-backdrop {
+      position: fixed;
+      inset: 0;
+      background: transparent;
+    }
+
+    .end-card {
+      position: fixed;
+      left: 50%;
+      top: 58%;
+      transform: translate(-50%, -50%);
+      width: min(460px, 78vw);
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(12px);
+      border-radius: 22px;
+      padding: 32px 32px 28px;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+    }
+
+    .end-reflection {
+      margin: 0 0 22px;
+      font-size: 1.05rem;
       letter-spacing: 0.04em;
-      color: rgba(31, 30, 27, 0.78);
+      color: rgba(74, 58, 46, 0.88);
       font-weight: 400;
     }
 
     .end-card .end-actions {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
+      margin-bottom: 16px;
     }
 
     .end-card .end-link,
@@ -264,30 +281,42 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       padding: 0;
       font: inherit;
       font-weight: 400;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       font-size: 0.85rem;
-      color: rgba(31, 30, 27, 0.68);
+      color: rgba(74, 58, 46, 0.7);
       cursor: pointer;
-      transition: color 0.2s ease;
+      transition: color 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
       text-decoration: none;
+      border-bottom: 1px solid rgba(74, 58, 46, 0.18);
     }
 
     .end-card .end-link:hover,
     .end-card .end-link:focus-visible,
     .end-card .end-button:hover,
     .end-card .end-button:focus-visible {
-      color: rgba(31, 30, 27, 0.92);
+      color: rgba(74, 58, 46, 0.95);
+      border-color: rgba(74, 58, 46, 0.55);
+    }
+
+    .end-card .end-exit {
+      display: flex;
+      justify-content: center;
     }
 
     .end-card .end-close {
       font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      opacity: 0.8;
+      letter-spacing: 0.18em;
+      color: rgba(74, 58, 46, 0.55);
+      border-bottom-color: rgba(74, 58, 46, 0.12);
     }
 
     @media (prefers-reduced-motion: reduce) {
       .word {
+        transition: none;
+      }
+
+      .end-screen {
         transition: none;
       }
     }
@@ -312,12 +341,17 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <section class="sequence" aria-hidden="true">
     <div class="sequence-lines"></div>
   </section>
-  <section class="end-card" aria-hidden="true">
-    <p>If this was meaningful,<br>you're welcome to pass it on.</p>
-    <div class="end-actions">
-      <button class="end-button" type="button">Copy link</button>
-      <a class="end-link" href="https://buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Buy me a beer</a>
-      <a class="end-link end-close" href="{{ '/' | relative_url }}">Close</a>
+  <section class="end-screen" aria-hidden="true">
+    <div class="end-backdrop" data-end-backdrop="true"></div>
+    <div class="end-card" role="dialog" aria-modal="true" aria-labelledby="end-title" tabindex="-1">
+      <p id="end-title" class="end-reflection">If this was meaningful,<br>you're welcome to pass it on.</p>
+      <div class="end-actions">
+        <button class="end-button" type="button">COPY LINK</button>
+        <a class="end-link" href="https://buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">BUY ME A BEER</a>
+      </div>
+      <div class="end-exit">
+        <a class="end-link end-close" href="{{ '/' | relative_url }}">CLOSE</a>
+      </div>
     </div>
   </section>
   <div id="scroll-space" aria-hidden="true"></div>
@@ -341,6 +375,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var breathOut = document.querySelector('.breath-text[data-state="out"]');
       var header = document.querySelector(".abide-header");
       var sequenceRoot = document.querySelector(".sequence-lines");
+      var endScreen = document.querySelector(".end-screen");
       var endCard = document.querySelector(".end-card");
       var copyButton = document.querySelector(".end-button");
       var bgAudio = document.getElementById("bg-audio");
@@ -501,6 +536,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var progress = 0;
       var endTimer = null;
       var endReady = false;
+      var endDismissed = false;
+      var lastFocus = null;
       function update() {
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
         var target = clamp01(window.scrollY / maxScroll);
@@ -635,23 +672,34 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
         var endStart = 0.985;
         if (target < endStart) {
           endReady = false;
+          endDismissed = false;
           if (endTimer) {
             clearTimeout(endTimer);
             endTimer = null;
           }
-          endCard.classList.remove("is-visible");
+          if (endScreen) {
+            endScreen.classList.remove("is-visible");
+            endScreen.setAttribute("aria-hidden", "true");
+          }
         } else {
-          if (!endReady && !endTimer) {
+          if (!endReady && !endTimer && !endDismissed) {
             endTimer = setTimeout(function () {
               endReady = true;
-              endCard.classList.add("is-visible");
+              if (endScreen) {
+                endScreen.classList.add("is-visible");
+                endScreen.setAttribute("aria-hidden", "false");
+                lastFocus = document.activeElement;
+                if (endCard) {
+                  endCard.focus();
+                }
+              }
               endTimer = null;
-            }, 4000);
+            }, 7000);
           }
         }
 
-        if (endReady) {
-          endCard.classList.add("is-visible");
+        if (endReady && endScreen) {
+          endScreen.classList.add("is-visible");
         }
       }
 
@@ -691,6 +739,46 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       window.addEventListener("mousemove", onMouseMove);
       window.addEventListener("resize", update);
       animate();
+
+      function closeEndScreen() {
+        if (!endScreen) return;
+        endReady = false;
+        endDismissed = true;
+        endScreen.classList.remove("is-visible");
+        endScreen.setAttribute("aria-hidden", "true");
+        if (lastFocus && typeof lastFocus.focus === "function") {
+          lastFocus.focus();
+        }
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (!endScreen || !endScreen.classList.contains("is-visible")) return;
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeEndScreen();
+          return;
+        }
+        if (event.key === "Tab") {
+          var focusables = endScreen.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]');
+          if (!focusables.length) return;
+          var first = focusables[0];
+          var last = focusables[focusables.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!endScreen || !endScreen.classList.contains("is-visible")) return;
+        if (event.target && event.target.dataset && event.target.dataset.endBackdrop) {
+          closeEndScreen();
+        }
+      });
 
       function tryPlayAudio() {
         if (!bgAudio) return;
