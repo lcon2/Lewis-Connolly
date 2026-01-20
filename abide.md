@@ -11,7 +11,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <title>Abide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #F6EEDB;
@@ -130,7 +130,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     #scroll-space {
-      height: 1500vh;
+      height: 1800vh;
     }
 
     .scroll-hint {
@@ -222,6 +222,70 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       font-size: clamp(2rem, 6.8vw, 6rem);
     }
 
+    .end-card {
+      position: fixed;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      width: min(460px, 78vw);
+      background: rgba(246, 238, 219, 0.92);
+      border-radius: 18px;
+      padding: 26px 28px 24px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1.4s ease;
+    }
+
+    .end-card.is-visible {
+      opacity: 0.7;
+      pointer-events: auto;
+    }
+
+    .end-card p {
+      margin: 0 0 18px;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: rgba(31, 30, 27, 0.78);
+      font-weight: 400;
+    }
+
+    .end-card .end-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .end-card .end-link,
+    .end-card .end-button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      font: inherit;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: rgba(31, 30, 27, 0.68);
+      cursor: pointer;
+      transition: color 0.2s ease;
+      text-decoration: none;
+    }
+
+    .end-card .end-link:hover,
+    .end-card .end-link:focus-visible,
+    .end-card .end-button:hover,
+    .end-card .end-button:focus-visible {
+      color: rgba(31, 30, 27, 0.92);
+    }
+
+    .end-card .end-close {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      opacity: 0.8;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .word {
         transition: none;
@@ -242,10 +306,18 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <div class="breath" aria-hidden="true">
     <div class="breath-ring"></div>
     <div class="breath-text" data-state="in">Breath in</div>
-    <div class="breath-text" data-state="out">Breath out</div>
+    <div class="breath-text" data-state="out">Breath Out</div>
   </div>
   <section class="sequence" aria-hidden="true">
     <div class="sequence-lines"></div>
+  </section>
+  <section class="end-card" aria-hidden="true">
+    <p>If this was meaningful,<br>you're welcome to pass it on.</p>
+    <div class="end-actions">
+      <button class="end-button" type="button">Copy link</button>
+      <a class="end-link" href="https://buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Buy me a beer</a>
+      <a class="end-link end-close" href="{{ '/' | relative_url }}">Close</a>
+    </div>
   </section>
   <div id="scroll-space" aria-hidden="true"></div>
 
@@ -268,6 +340,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var breathOut = document.querySelector('.breath-text[data-state="out"]');
       var header = document.querySelector(".abide-header");
       var sequenceRoot = document.querySelector(".sequence-lines");
+      var endCard = document.querySelector(".end-card");
+      var copyButton = document.querySelector(".end-button");
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -423,13 +497,15 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       }
 
       var progress = 0;
+      var endTimer = null;
+      var endReady = false;
       function update() {
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
         var target = clamp01(window.scrollY / maxScroll);
-        progress = lerp(progress, target, 0.06);
-        var wordsPortion = 0.24;
-        var breathPortion = 0.36;
-        var sequencePortion = 0.4;
+        progress = lerp(progress, target, 0.05);
+        var wordsPortion = 0.18;
+        var breathPortion = 0.25;
+        var sequencePortion = 0.57;
         var segment = wordsPortion / words.length;
         var wordsEnd = wordsPortion;
 
@@ -529,13 +605,13 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           }
           group.style.opacity = 1;
           var words = group.querySelectorAll(".sequence-word");
-          var lineWindow = 0.85;
+          var lineWindow = 0.95;
           var perLine = lineWindow / Math.max(1, words.length);
-          var groupFadeOut = stepLocal > 0.86 ? (1 - stepLocal) / 0.14 : 1;
+          var groupFadeOut = stepLocal > 0.9 ? (1 - stepLocal) / 0.1 : 1;
           words.forEach(function (wordEl, lineIndex) {
             var lineStart = lineIndex * perLine;
             var lineLocal = clamp01((stepLocal - lineStart) / perLine);
-            var lineFadeIn = lineLocal < 0.4 ? lineLocal / 0.4 : 1;
+            var lineFadeIn = lineLocal < 0.45 ? lineLocal / 0.45 : 1;
             wordEl.style.opacity = Math.min(lineFadeIn, groupFadeOut).toFixed(3);
 
             var x = parseFloat(wordEl.dataset.x || "0");
@@ -553,6 +629,28 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             wordEl.style.transform = "translate(-50%, -50%) translate(" + x + "vw, " + y + "vh) scale(" + scale + ")";
           });
         });
+
+        var endStart = wordsPortion + breathPortion + sequencePortion;
+        if (progress < endStart) {
+          endReady = false;
+          if (endTimer) {
+            clearTimeout(endTimer);
+            endTimer = null;
+          }
+          endCard.classList.remove("is-visible");
+        } else {
+          if (!endReady && !endTimer) {
+            endTimer = setTimeout(function () {
+              endReady = true;
+              endCard.classList.add("is-visible");
+              endTimer = null;
+            }, 4000);
+          }
+        }
+
+        if (endReady) {
+          endCard.classList.add("is-visible");
+        }
       }
 
       function animate() {
@@ -591,6 +689,26 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       window.addEventListener("mousemove", onMouseMove);
       window.addEventListener("resize", update);
       animate();
+
+      if (copyButton) {
+        copyButton.addEventListener("click", function () {
+          var url = window.location.href;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).catch(function () {});
+          } else {
+            var tmp = document.createElement("textarea");
+            tmp.value = url;
+            tmp.style.position = "fixed";
+            tmp.style.left = "-9999px";
+            document.body.appendChild(tmp);
+            tmp.select();
+            try {
+              document.execCommand("copy");
+            } catch (err) {}
+            document.body.removeChild(tmp);
+          }
+        });
+      }
     })();
   </script>
 </body>
