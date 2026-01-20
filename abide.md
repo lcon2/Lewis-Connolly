@@ -301,6 +301,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       </a>
     </div>
   </header>
+  <audio id="bg-audio" src="{{ '/assets/audio/OM.mp3' | relative_url }}" autoplay loop preload="auto"></audio>
   <main id="stage" aria-hidden="true"></main>
   <div class="scroll-hint" aria-hidden="true">Scroll</div>
   <div class="breath" aria-hidden="true">
@@ -342,6 +343,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var sequenceRoot = document.querySelector(".sequence-lines");
       var endCard = document.querySelector(".end-card");
       var copyButton = document.querySelector(".end-button");
+      var bgAudio = document.getElementById("bg-audio");
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -630,8 +632,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           });
         });
 
-        var endStart = wordsPortion + breathPortion + sequencePortion;
-        if (progress < endStart) {
+        var endStart = 0.985;
+        if (target < endStart) {
           endReady = false;
           if (endTimer) {
             clearTimeout(endTimer);
@@ -689,6 +691,18 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       window.addEventListener("mousemove", onMouseMove);
       window.addEventListener("resize", update);
       animate();
+
+      function tryPlayAudio() {
+        if (!bgAudio) return;
+        bgAudio.volume = 0.35;
+        var playPromise = bgAudio.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(function () {});
+        }
+      }
+
+      tryPlayAudio();
+      window.addEventListener("pointerdown", tryPlayAudio, { once: true });
 
       if (copyButton) {
         copyButton.addEventListener("click", function () {

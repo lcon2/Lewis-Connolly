@@ -187,14 +187,6 @@
           }
         });
 
-        var popSrc = "{{ '/assets/audio/pop.mp3' | relative_url }}";
-        Array.prototype.slice.call(document.querySelectorAll('.content-section a')).forEach(function (link) {
-          link.addEventListener('mouseenter', function () {
-            var audio = new Audio(popSrc);
-            audio.volume = 0.64;
-            audio.play().catch(function () {});
-          });
-        });
       })();
     </script>
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
