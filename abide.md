@@ -222,6 +222,86 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       font-size: clamp(2rem, 6.8vw, 6rem);
     }
 
+    .volume-control {
+      position: fixed;
+      right: 34px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 62px;
+      height: 210px;
+      border-radius: 24px;
+      background: rgba(20, 20, 20, 0.88);
+      padding: 14px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.15;
+      transition: opacity 0.5s ease;
+      z-index: 8;
+    }
+
+    .volume-track {
+      position: relative;
+      width: 38px;
+      height: 170px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .volume-track input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 150px;
+      height: 28px;
+      transform: rotate(-90deg);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .volume-track input[type="range"]::-webkit-slider-runnable-track {
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .volume-track input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 10px;
+      background: #f2c87e;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      margin-top: -5px;
+    }
+
+    .volume-track input[type="range"]::-moz-range-track {
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .volume-track input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 10px;
+      background: #f2c87e;
+      border: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .volume-icon {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      opacity: 0.55;
+    }
+
     .end-screen {
       position: fixed;
       inset: 0;
@@ -247,7 +327,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     .end-card {
       position: fixed;
       left: 50%;
-      top: 58%;
+      top: 48%;
       transform: translate(-50%, -50%);
       width: min(460px, 78vw);
       background: rgba(255, 255, 255, 0.35);
@@ -319,6 +399,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       .end-screen {
         transition: none;
       }
+
+      .volume-control {
+        transition: none;
+      }
     }
   </style>
 </head>
@@ -341,6 +425,14 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <section class="sequence" aria-hidden="true">
     <div class="sequence-lines"></div>
   </section>
+  <div class="volume-control" aria-label="Audio volume">
+    <div class="volume-track">
+      <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
+      <svg class="volume-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="rgba(255,255,255,0.7)" d="M4 10v4h4l5 5V5l-5 5H4z"></path>
+      </svg>
+    </div>
+  </div>
   <section class="end-screen" aria-hidden="true">
     <div class="end-backdrop" data-end-backdrop="true"></div>
     <div class="end-card" role="dialog" aria-modal="true" aria-labelledby="end-title" tabindex="-1">
@@ -379,6 +471,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var endCard = document.querySelector(".end-card");
       var copyButton = document.querySelector(".end-button");
       var bgAudio = document.getElementById("bg-audio");
+      var volumeControl = document.querySelector(".volume-control");
+      var volumeSlider = document.getElementById("volume-slider");
       var nodes = words.map(function (item) {
         var el = document.createElement("div");
         el.className = "word";
@@ -791,6 +885,48 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
       tryPlayAudio();
       window.addEventListener("pointerdown", tryPlayAudio, { once: true });
+
+      if (volumeSlider && bgAudio) {
+        volumeSlider.addEventListener("input", function () {
+          bgAudio.volume = parseFloat(volumeSlider.value);
+        });
+      }
+
+      var volHideTimer = null;
+      function updateVolumeOpacity(value) {
+        if (!volumeControl) return;
+        volumeControl.style.opacity = value.toFixed(3);
+      }
+
+      function scheduleVolumeFade() {
+        if (volHideTimer) {
+          clearTimeout(volHideTimer);
+        }
+        volHideTimer = setTimeout(function () {
+          updateVolumeOpacity(0.15);
+        }, 2000);
+      }
+
+      window.addEventListener("mousemove", function (event) {
+        if (!volumeControl) return;
+        var rect = volumeControl.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2;
+        var cy = rect.top + rect.height / 2;
+        var dx = event.clientX - cx;
+        var dy = event.clientY - cy;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        var radius = 220;
+        if (dist < radius) {
+          var intensity = 1 - dist / radius;
+          updateVolumeOpacity(0.15 + intensity * 0.55);
+          if (volHideTimer) {
+            clearTimeout(volHideTimer);
+            volHideTimer = null;
+          }
+        } else {
+          scheduleVolumeFade();
+        }
+      });
 
       if (copyButton) {
         copyButton.addEventListener("click", function () {
