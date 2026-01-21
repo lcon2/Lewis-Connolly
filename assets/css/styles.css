@@ -1191,27 +1191,9 @@ footer {
     color: #a0a0a0;
 }
 
-/* Unvisited links */
-.about a {
-    color: inherit; /* Inherit color from parent if overriding is needed */
-    text-decoration: none; /* Removes underline */
-    border-bottom: 1px dotted currentColor; /* Use current text color for underline */
-    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transition */
-}
-
-/* Hover state */
-.about a:hover {
-    color: #ff9933; /* Orange text on hover */
-    border-bottom-color: #ff9933; /* Matches underline color to hover text */
-}
-
-/* Visited links */
-.about a:visited {
-    color: inherit; /* Ensures visited links match other states */
-    border-bottom-color: currentColor; /* Matches underline color to text */
-}
-
-.about a, .contact a {
+/* About/Contact content link styling */
+.about main a,
+.contact main a {
     color: inherit; /* Matches text color */
     text-decoration: none; /* Removes underline */
     border-bottom: 1px dotted currentColor; /* Consistent underline */
@@ -1222,9 +1204,16 @@ footer {
     font-size: 1.15em; /* Increased font size for better readability */
 }
 
-.about a:hover, .contact a:hover {
+.about main a:hover,
+.contact main a:hover {
     color: #ff9933; /* Turns orange on hover */
     border-bottom-color: #ff9933; /* Changes underline color */
+}
+
+/* Keep navbar links clean on about/contact pages */
+.about .navbar a,
+.contact .navbar a {
+    border-bottom: none;
 }
 
 /* Responsive Design for Mobile Devices */
