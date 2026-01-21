@@ -9,6 +9,7 @@ categories:
   - Theology
   - Spirituality
 ai_summary: "This address reflects on the Quakers and their practice of silent worship, and on my own journey into Unitarianism. I share what I told a Quaker group about our history, openness, and struggles. Silence becomes a discipline that cuts through the noise, and I leave with a hope for peace, humility, and service."
+description: This address reflects on the Quakers and their practice of silent worship, and on my own journey into Unitarianism. I share what I told a Quaker group about
 ---
 In this address, I am thinking about the ‘Religious Society of Friends’, or as they are better known, the ‘Quakers’. I think in a way, it’s odd to use words to discuss them, for the obvious reason that Quakers are distinctive in that they meet primarily for ‘Silent Worship.’ It is in the silence of the Meeting that they commune with one another, cutting through the kind of knots it is easy to tie ourselves up in with words. This allows them to just simply be present one with another. 
 

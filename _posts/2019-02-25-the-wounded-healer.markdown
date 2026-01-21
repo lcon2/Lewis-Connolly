@@ -10,6 +10,7 @@ categories:
   - Consciousness
 og_image: /assets/images/logo.png
 ai_summary: "This morning I am thinking about the wounded healer – coincidentally Sarah mentioned yesterday, in her charge to the congregation, the wounded healer. As we minister to a paining world, we, at the same time, minister to our own wounds. When we see clearly those cracks in our lives, why not try filling them with gold, and see what happens\"..."
+description: This morning I am thinking about the wounded healer – coincidentally Sarah mentioned yesterday, in her charge to the congregation, the wounded healer. As we
 ---
 This morning I am thinking about the wounded healer – coincidentally Sarah mentioned yesterday, in her charge to the congregation, the wounded healer. As we minister to a paining world, we, at the same time, minister to our own wounds. Our own wounds of alienation, separation, isolation, and loneliness. Wounds that go to the very heart of the human condition, our own state of brokenness.
 

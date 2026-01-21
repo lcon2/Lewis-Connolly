@@ -9,6 +9,7 @@ categories:
   - Spirituality
   - Philosophy
 ai_summary: "I describe alchemy as the ancient art of transformation and then turn it inward. The soul is refined the way base metal is refined: through heat, loss, and slow change. Our dark nights are part of the process; they burn away dross and reveal something precious. The spiritual life is an alchemical work, carried out in suffering and grace."
+description: I describe alchemy as the ancient art of transformation and then turn it inward. The soul is refined the way base metal is refined: through heat, loss, and
 ---
 ### Part 1
 

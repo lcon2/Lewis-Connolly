@@ -9,6 +9,7 @@ categories:
   - Psychology
   - Consciousness
 ai_summary: "This is a short reflection on William James and The Varieties of Religious Experience, with a nod to his Swedenborgian background. I am struck by his pragmatic openness to belief and the way inner attitudes shape lived reality. James offers a generous, psychological approach to faith that honors experience over dogma and keeps the door open to transformation."
+description: This is a short reflection on William James and The Varieties of Religious Experience, with a nod to his Swedenborgian background. I am struck by his pragmatic
 ---
 This week I have been thinking about the American philosopher and psychologist William James, in particular his most famous book, which was one of my birthday presents, *The Variety of Religious Experience* (published in 1902). William James was born in 1842 in New York City. His father, Henry James Sr., was a theologian who became an ardent Swedenborgian, an interesting religious movement. As the ideas of Swedenborgianism make up the backdrop upon William James’ life, being his father’s preoccupation, I’ll begin by saying a bit about the movement. 
 

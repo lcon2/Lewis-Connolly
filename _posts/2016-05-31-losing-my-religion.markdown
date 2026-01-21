@@ -10,6 +10,7 @@ categories:
   - Meaning
 og_image: /assets/images/logo.png
 ai_summary: "There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District. It was given the nick-name during a period of intense revival in the US, with hell and damnation being preached at huge tent revival meetings. Amen. Fuel denoted the unconverted population, those people who were receptive to hearing the..."
+description: There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District. It was given the nick-name during a period of
 ---
 There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District.
 

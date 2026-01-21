@@ -9,6 +9,7 @@ categories:
   - Consciousness
   - Meaning
 ai_summary: "The path that runs behind the Publix Supermarket in South End, Charlotte, is ridiculous. For the past few weeks, I’ve been with my wife in Charlotte, North Carolina, scouting out where we plan to move to in the near future. I wonder if those enterprising souls know just how much more in tune with the land they’re being. We’re now..."
+description: The path that runs behind the Publix Supermarket in South End, Charlotte, is ridiculous. For the past few weeks, I’ve been with my wife in Charlotte, North
 ---
 The path that runs behind the Publix Supermarket in South End, Charlotte, is ridiculous. For the past few weeks, I’ve been with my wife in Charlotte, North Carolina, scouting out where we plan to move to in the near future. We’re now back in England, and I have had a little time to reflect on the trip. In circumstances I assume common to most, for the past couple of years I have been living a somewhat monastic life of solitary contemplation, until this trip, which has been an explosive return to the real world, complete with actual human interaction, new senses, new tastes, and new places. A plethora of experience. My head, now thoroughly filled with all things Charlotte, has to get something down on paper. So, let’s begin with South End.
 

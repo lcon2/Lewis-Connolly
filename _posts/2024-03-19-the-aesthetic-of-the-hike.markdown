@@ -9,6 +9,7 @@ categories:
   - Narrative
   - Consciousness
 ai_summary: "The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’ I’ll avoid the trite/clichéd answer, as the George Mallory quote goes, “because it is there!” Instead, I will lean on my own academic of choice and quote Carl Jung, “people don’t have ideas, ideas have people.” This quote comes much closer, I think, to how I..."
+description: The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’ I’ll avoid the trite/clichéd answer, as the George Mallory quote goes,
 ---
 The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’
 

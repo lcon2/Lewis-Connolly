@@ -10,6 +10,7 @@ categories:
   - Philosophy
 og_image: /assets/images/logo.png
 ai_summary: "I remember it as if it was yesterday. I was lying on a large, very comfortable, couch. Amen. It was late, probably around midnight. I must have been eleven years old at the time. The year was 1999, and I was still living in Texas, although my remaining time in Texas was quickly drawing to an end. I had already..."
+description: I remember it as if it was yesterday. I was lying on a large, very comfortable, couch. Amen. It was late, probably around midnight. I must have been eleven
 ---
 I remember it as if it was yesterday. I was lying on a large, very comfortable, couch. It was late, probably around midnight. I must have been eleven years old at the time. The year was 1999, and I was still living in Texas, although my remaining time in Texas was quickly drawing to an end. I had already seen the prospectus for the English boarding school I was to enter later in the year. And I wasn’t very happy about leaving Texas. The years there had been (up to that point) the happiest in my life. I had my Nintendo, my horse riding that I did at weekends, my ranch house that took me out into the country, and our suburban house, which was Texas-style-large, it has a swimming pool with a diving board, and a waterfall. It seemed very unlikely to me that whatever came next would be as good. And I was mostly right about that.
 

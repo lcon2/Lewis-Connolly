@@ -10,6 +10,7 @@ categories:
   - Technology
 og_image: /assets/images/void.png
 ai_summary: "I admit my discomfort with Man's Search for Meaning, especially the way it can slide into moralism and hyper-individualism. Frankl entered the camps already formed; not everyone has that. From there I compare the Nazi camps as an event horizon to the coming AI singularity, another rupture that will test our frameworks. We need a flexible worldview for what is coming."
+description: I admit my discomfort with Man's Search for Meaning, especially the way it can slide into moralism and hyper-individualism. Frankl entered the camps already
 ---
 <img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

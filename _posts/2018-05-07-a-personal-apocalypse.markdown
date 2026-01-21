@@ -9,6 +9,7 @@ categories:
   - Theology
   - History
 ai_summary: "Part 1 I’m going to begin the morning by thinking about the apocalypse. The apocalypse, as you know, is the final destruction of the world. Amen. When we think about the apocalypse our thoughts often turn to those Christian fundamentalists who prophesy the imminent end of the world. They who believe that any day now, a series of events will..."
+description: Part 1 I’m going to begin the morning by thinking about the apocalypse. The apocalypse, as you know, is the final destruction of the world. Amen. When we think
 ---
 ##Part 1
 

@@ -9,6 +9,7 @@ categories:
   - Identity
   - Spirituality
 ai_summary: "Let us think about the spaces in this world we carve out for ourselves and live within, physical spaces, and mental spaces. There’s that Emerson quote I like (if you excuse the exclusive language), “A man is what he thinks about all day long.” To my mind that captures a reality we’re all familiar with - though we may be,..."
+description: Let us think about the spaces in this world we carve out for ourselves and live within, physical spaces, and mental spaces. There’s that Emerson quote I like
 ---
 Let us think about the spaces in this world we carve out for ourselves and live within, physical spaces, and mental spaces. There’s that Emerson quote I like (if you excuse the exclusive language), “A man is what he thinks about all day long.” To my mind that captures a reality we’re all familiar with - though we may be, geographically and physically, near another person, our worlds may in fact be poles apart. When it comes to our everyday lives, the friends we have, the company we keep, the communities of which we are a part, or when it comes to our mental space, the beliefs we have, our assumptions, our worldviews, or even our sense of the sacred in our lives, we can often discern that there is a gulf between what an edifying and affirming ideal would look like, and what the reality on the ground within our lives looks like; that drains us, or drains even our very humanity, exhausting us to the core of our being.
 

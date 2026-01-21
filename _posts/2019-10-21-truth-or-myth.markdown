@@ -10,6 +10,7 @@ categories:
   - Philosophy
 og_image: /assets/images/logo.png
 ai_summary: "I took this morning’s New Testament reading from the lectionary. It’s an interesting passage for us to consider, because it’s a passage I have heard, many times in the past, weaponised against liberal Christians. Amen. We who have abandoned so-called ‘sound doctrine’ and followed after exactly what the passage warns against (at least that would be the charge) - teachings..."
+description: I took this morning’s New Testament reading from the lectionary. It’s an interesting passage for us to consider, because it’s a passage I have heard, many
 ---
 I took this morning’s New Testament reading from the lectionary. It’s an interesting passage for us to consider, because it’s a passage I have heard, many times in the past, weaponised against liberal Christians. We who have abandoned so-called ‘sound doctrine’ and followed after exactly what the passage warns against (at least that would be the charge) - teachings that satisfy our desires, our will, teachings that take us away from the “truth” towards mere myth. I’m obviously a big fan of myth, and was interested to see it used here in 2 Timothy in the pejorative sense, meaning fairy tale or fable. I looked up the Greek word, which is pronounced “mythous”, and I learned that it appears five times in the New Testament, and the word is always used in this pejorative sense, in the sense that we have (or the author has) “the truth”, whereas those ignorant people out there have been deceived by cleverly devised myths.
 

@@ -10,6 +10,7 @@ categories:
   - Meaning
 og_image: /assets/images/logo.png
 ai_summary: "I had shut my eyes and walked backwards only a little way, trying as hard as I could to pay no heed to the loud noises about me. Someone tried to have me sign a petition, to save some Amazonian moth, but I managed to get past them. Amen. Then I stumbled through a door, and I heard a girl’s..."
+description: I had shut my eyes and walked backwards only a little way, trying as hard as I could to pay no heed to the loud noises about me. Someone tried to have me sign
 ---
 I had shut my eyes and walked backwards only a little way, trying as hard as I could to pay no heed to the loud noises about me. Someone tried to have me sign a petition, to save some Amazonian moth, but I managed to get past them. Then I stumbled through a door, and I heard a girl’s voice, and she sounded terribly bored; she tried to sell me on a cup of coffee. It was pricey, but didn’t I know that the coffee bean farmers in Ethiopia were poorly paid" I told her that I didn’t drink coffee, but she didn’t seem to care, it wasn’t about the coffee really, it wasn’t even about the farmer. It was about the brand, and what the brand said about me. But I managed to get away. I had backed up even further, and that sound, that constant noise, finally began to abate. It was still then, for a moment, as I went eyes-shut backwards along my way, before finally, in a singular backward stride, my right foot landed with a splash in some water.
 

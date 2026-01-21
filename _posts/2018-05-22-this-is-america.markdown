@@ -9,6 +9,7 @@ categories:
   - Aesthetics
   - Meaning
 ai_summary: "Part 1 Public expressions of violence are not merely a matter of the number of lives lost; their impact cannot be measured in such terms. Rather their impact is shaped a great deal by the lens we view them through, through narratives already present in society. Amen. Take, for example, the Orlando shooting two years ago - the impact of..."
+description: Part 1 Public expressions of violence are not merely a matter of the number of lives lost; their impact cannot be measured in such terms. Rather their impact
 ---
 Part 1
 

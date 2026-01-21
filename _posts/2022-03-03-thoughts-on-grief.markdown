@@ -9,6 +9,7 @@ categories:
   - Meaning
   - Philosophy
 ai_summary: "On Halloween Day, October 31st 1998, my mother died. I was ten years old. And to be. There can be no doubt that this event shaped me unlike any other, in ways which are entirely evident to me, and in ways that remain unknowable. The death of a parent has a peculiar effect on a child; it creates an unresolvable..."
+description: On Halloween Day, October 31st 1998, my mother died. I was ten years old. And to be. There can be no doubt that this event shaped me unlike any other, in ways
 ---
 On Halloween Day, October 31st 1998, my mother died. I was ten years old. There can be no doubt that this event shaped me unlike any other, in ways which are entirely evident to me, and in ways that remain unknowable. The death of a parent has a peculiar effect on a child; it creates an unresolvable question, an inability to know oneself apart from the grief suffered. Because of course, no ten-year-old knows who they are, they don’t know where life will take them, and they don’t know who they will become. All of which is to say, grief is a key ingredient which is baked into the person I have become.
 

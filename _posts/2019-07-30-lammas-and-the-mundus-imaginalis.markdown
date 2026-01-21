@@ -10,6 +10,7 @@ categories:
   - Psychology
 og_image: /assets/images/logo.png
 ai_summary: "When I think of Lammas tide, I think of one tearing the first loaf of the harvest, a move from scarcity to abundance. I think of the crops, the rain falling on blackened soil, Fields, trees, the thicket, green on green, From the highlands, to Suffolk’s Coast and Heaths, From Constable’s ‘Hay Wain’, and even further afield, my thoughts migrate..."
+description: When I think of Lammas tide, I think of one tearing the first loaf of the harvest, a move from scarcity to abundance. I think of the crops, the rain falling on
 ---
 When I think of Lammas tide,
 I think of one tearing the first loaf of the harvest,

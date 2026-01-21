@@ -10,6 +10,7 @@ categories:
   - Philosophy
 og_image: /assets/images/logo.png
 ai_summary: "We gather in a place of worship to remember. Religion is really made up of rituals and practices to help us remember; help us to remember our identity, our true identity, as children of light, as conscientious individuals, as seekers of love and justice. Amen. As we come to remember, we make a choice, not once, but every time we..."
+description: We gather in a place of worship to remember. Religion is really made up of rituals and practices to help us remember; help us to remember our identity, our
 ---
 We gather in a place of worship to remember. Religion is really made up of rituals and practices to help us remember; help us to remember our identity, our true identity, as children of light, as conscientious individuals, as seekers of love and justice. As we come to remember, we make a choice, not once, but every time we are drawn into this building. We may trick ourselves into thinking that our being here is just the way things are, but really, we choose, and choose again. We commit ourselves, weekly, daily, to the ideals which make us who we are. Given this regular choice to gather in an old Meeting House, we affirm over and over again essential components of ourselves. Why do we do this" Why have conscientious individuals been drawn to this place of worship for over 300 years"
 

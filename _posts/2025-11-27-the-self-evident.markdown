@@ -10,6 +10,7 @@ categories:
   - Philosophy
 og_image: /assets/images/Stairs.png
 ai_summary: "This piece is a refusal of the cultural demand to strive and perform. I argue there is no truer self hidden beneath effort, no purpose to construct, no identity to build. Life has its own trajectory, and when the noise quiets, what remains is enough. Step back, stay back, and let whatever arises move you."
+description: This piece is a refusal of the cultural demand to strive and perform. I argue there is no truer self hidden beneath effort, no purpose to construct, no
 ---
 <img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

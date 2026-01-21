@@ -10,6 +10,7 @@ categories:
   - Psychology
 og_image: /assets/images/logo.png
 ai_summary: "When I think of Lammas-tide, I think of bread broken in celebration, from scarcity to abundance; I think of the harvest, rain falling on blackened soil, Crops, trees, the thicket, green on green, From the highlands to Dixieland’s deserts, From Constable’s ‘Hay Wain’ to the god-haunted Central Sea, From some Austrian peak, to the very shore of Galilee, I think..."
+description: When I think of Lammas-tide, I think of bread broken in celebration, from scarcity to abundance; I think of the harvest, rain falling on blackened soil, Crops,
 ---
 When I think of Lammas-tide,
 I think of bread broken in celebration,

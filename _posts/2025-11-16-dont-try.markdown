@@ -10,6 +10,7 @@ categories:
   - Narrative
 og_image: /assets/images/donttry.png
 ai_summary: "A late-night note on impulse and exhaustion: the writing comes when it comes, not when I will it. I am tired of the religious project, tired of striving, and I want my daughters to find their passion moment by moment. The mantra is simple and Bukowski-ish: do not try, breathe, and let life arise."
+description: A late-night note on impulse and exhaustion: the writing comes when it comes, not when I will it. I am tired of the religious project, tired of striving, and I
 ---
 <img src="{{ '/assets/images/donttry.png' | relative_url }}" alt="donttry" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

@@ -9,6 +9,7 @@ categories:
   - Philosophy
   - History
 ai_summary: "Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train onto another track where there is one bystander. There will just need to be a bit more theatre, we’ll wear our complaints on our sleeves, but really, why make the fuss? Do..."
+description: Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train
 ---
 Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train onto another track where there is one bystander. Do you pull the lever, sacrificing the one to save the five? From a utilitarian perspective—where the focus is on maximizing the greatest good or happiness—the answer is yes. One life lost is deemed preferable to five.
 

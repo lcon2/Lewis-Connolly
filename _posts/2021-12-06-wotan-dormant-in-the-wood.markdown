@@ -9,6 +9,7 @@ categories:
   - Meaning
   - History
 ai_summary: "My thoughts return time and again to Carl Jung’s 1936 paper Wotan. This paper stands out to me as being perhaps his most controversial, given its subject matter: the rise of the Third Reich. Is it not more accurate to conceptualize the unconscious as layered, becoming increasingly universal the deeper one goes? Jung’s approach towards the Third Reich is critical,..."
+description: My thoughts return time and again to Carl Jung’s 1936 paper Wotan. This paper stands out to me as being perhaps his most controversial, given its subject
 ---
 My thoughts return time and again to Carl Jung’s 1936 paper *Wotan*. This paper stands out to me as being perhaps his most controversial, given its subject matter: the rise of the Third Reich. Jung’s approach towards the Third Reich is critical, but to our contemporary sensibilities, it reads as not being nearly critical enough. Much has been written on Jung’s complex relationship to the Third Reich—a relationship I will not dwell on here.
 

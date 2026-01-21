@@ -10,6 +10,7 @@ categories:
   - Psychology
 og_image: /assets/images/irondome.png
 ai_summary: "AI is thrilling and apocalyptic at once. As algorithms learn to nudge and manipulate us, I imagine a personal defensive AI, a psychic iron dome that filters ads, protects mental health, and helps us discern what is real. Beyond that lies a meaning crisis: if machines outperform us, purpose must be forged locally and relationally, not through usefulness."
+description: AI is thrilling and apocalyptic at once. As algorithms learn to nudge and manipulate us, I imagine a personal defensive AI, a psychic iron dome that filters
 ---
 <img src="{{ '/assets/images/irondome.png' | relative_url }}" alt="iron" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

@@ -9,6 +9,7 @@ categories:
   - Spirituality
   - Narrative
 ai_summary: "In 1930, an American poet and historian named John Neihart obtained the necessary permission to gain entry into the Pine Ridge Indian Reservation in South Dakota, a Native American reservation, home to the indigenous Lakota people. Dr. Amen. John Neihart was intrigued by that period in American history, of settlement across the great American plains, the European migrants who arrived..."
+description: In 1930, an American poet and historian named John Neihart obtained the necessary permission to gain entry into the Pine Ridge Indian Reservation in South
 ---
 In 1930, an American poet and historian named John Neihart obtained the necessary permission to gain entry into the Pine Ridge Indian Reservation in South Dakota, a Native American reservation, home to the indigenous Lakota people. Dr. John Neihart was intrigued by that period in American history, of settlement across the great American plains, the European migrants who arrived on the scene, and the Indigenous American people, who were there before, and subsequently displaced. To further his research into that rich period of history, and particularly into the cultural and religious practices of the Native American people in danger of being lost to time, John sought an audience with a particular individual - a holy man of the Lakota people, an elderly medicine man named ‘Black Elk’.
 

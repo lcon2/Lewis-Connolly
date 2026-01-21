@@ -9,6 +9,7 @@ categories:
   - Philosophy
   - Psychology
 ai_summary: "Here is a talk I gave at my church, Watershed Charlotte. The topic was on What is the Gospel? As can nature, art, movement, running, play, meditation, yoga, story, relationships, community, animals, music, the stars, spirituality, food, imagination, silence, and so on… The Gospel is that you should reach out to your suffering self. As in, what do I personally..."
+description: Here is a talk I gave at my church, Watershed Charlotte. The topic was on What is the Gospel? As can nature, art, movement, running, play, meditation, yoga,
 ---
 Here is a talk I gave at my church, Watershed Charlotte. The topic was on *What is the Gospel?* As in, what do I personally understand the Gospel (the good news) to be?
 

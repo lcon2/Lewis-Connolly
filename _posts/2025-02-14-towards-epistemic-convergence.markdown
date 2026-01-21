@@ -10,6 +10,7 @@ categories:
   - Psychology
 og_image: /assets/images/AlignedAI.png
 ai_summary: "To state the obvious, we are on a fast roller coaster towards really sophisticated artificial intelligence. If your job is done on a computer, especially if it is done remotely on a computer, it is short lived for this world. In the end, AI may not be a tool of control, but a force more humane even than humans. If..."
+description: To state the obvious, we are on a fast roller coaster towards really sophisticated artificial intelligence. If your job is done on a computer, especially if it
 ---
 <div class="post">
     <audio class="audio-player" controls>

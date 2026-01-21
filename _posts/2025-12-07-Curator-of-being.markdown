@@ -10,6 +10,7 @@ categories:
   - Identity
 og_image: /assets/images/curator-of-being.png
 ai_summary: "I describe a kind of person who does not cling to conclusions but inhabits worldviews as climates, learning how each rearranges the soul. This makes identity a layered city and ethics an accumulation of aftereffects rather than commandments. In a future of selectable realities and simulations, the curator becomes a tester of lived worlds, searching for those that mark and transform us."
+description: I describe a kind of person who does not cling to conclusions but inhabits worldviews as climates, learning how each rearranges the soul. This makes identity a
 ---
 <img src="{{ '/assets/images/curator-of-being.png' | relative_url }}" alt="Curator of Being" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
