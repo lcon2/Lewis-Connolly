@@ -37,6 +37,14 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+# Defaults
+defaults:
+  - scope:
+      path: "studies"
+      type: "pages"
+    values:
+      layout: studies
+
 # Ensure category pages are built
 include:
   - categories
