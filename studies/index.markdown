@@ -7,7 +7,7 @@ description: Short courses for the restless mind: read slowly, think deeply, and
 
 <header class="studies-page-header">
     <h1>Studies</h1>
-    <p>Short courses for the restless mind: read slowly, think deeply, and bring the insights back to daily life.</p>
+    <p>Short courses for the restless mind:<br>read slowly, think deeply,<br>and bring the insights back to daily life.</p>
 </header>
 
 <section class="studies-section">
