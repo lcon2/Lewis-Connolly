@@ -1216,11 +1216,6 @@ footer {
     border-bottom-color: #ff9933; /* Changes underline color */
 }
 
-/* Keep navbar links clean on about/contact pages */
-.about .navbar a,
-.contact .navbar a {
-    border-bottom: none;
-}
 
 /* Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
