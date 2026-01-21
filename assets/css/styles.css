@@ -987,6 +987,12 @@ header {
     color: #f0f0f0; /* Keeps the text color consistent */
 }
 
+/* Keep navbar sizing consistent on about/contact pages */
+.about .navbar,
+.contact .navbar {
+    font-size: 16px;
+}
+
 /* Sticky logo bar on post pages */
 .post header {
     position: sticky;
