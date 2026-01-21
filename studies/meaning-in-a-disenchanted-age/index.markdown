@@ -19,7 +19,7 @@ og_image: /assets/images/Course.png
         </div>
     </div>
     <div class="studies-hero-media">
-        <img src="{{ '/assets/images/Course.png' | relative_url }}" alt="Meaning in a Disenchanted Age course cover" class="studies-hero-image" width="1024" height="1536" loading="lazy">
+        <img src="{{ '/assets/images/Course.png' | relative_url }}" alt="Course syllabus infographic" class="course-infographic" width="1024" height="1536" loading="lazy">
     </div>
 </section>
 
