@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body class="archive">
-    <header>
-        <div class="logo">
-            <a href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <span class="logo-wrap">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+                </span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About Me</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}is-active{% endif %}">Contact</a></li>
+                <li><a href="{{ '/archive/' | relative_url }}" class="{% if page.url == '/archive/' %}is-active{% endif %}">Archive</a></li>
+                <li><a href="{{ '/studies/' | relative_url }}" class="{% if page.url contains '/studies/' %}is-active{% endif %}">Studies</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
             </a>
         </div>
-    </header>
+    </nav>
     <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
         <!-- Sidebar -->
         <nav class="sidebar">

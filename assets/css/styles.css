@@ -35,7 +35,10 @@ body {
 
 /* Navigation Bar */
 .home .navbar,
-.studies .navbar {
+.studies .navbar,
+.about .navbar,
+.contact .navbar,
+.archive .navbar {
     display: flex;
     justify-content: center; /* Center the combined logo and navigation menu */
     align-items: center;
@@ -46,20 +49,29 @@ body {
 }
 
 .home .navbar-content,
-.studies .navbar-content {
+.studies .navbar-content,
+.about .navbar-content,
+.contact .navbar-content,
+.archive .navbar-content {
     display: flex;
     align-items: center; /* Vertically aligns logo and menu */
     gap: 30px; /* Expands spacing between the logo and navigation menu */
 }
 
 .home .logo,
-.studies .logo {
+.studies .logo,
+.about .logo,
+.contact .logo,
+.archive .logo {
     max-width: 80px;
     height: auto;
 }
 
 .home .logo-wrap,
-.studies .logo-wrap {
+.studies .logo-wrap,
+.about .logo-wrap,
+.contact .logo-wrap,
+.archive .logo-wrap {
     position: relative;
     display: block;
     max-width: 80px;
@@ -67,7 +79,10 @@ body {
 }
 
 .home .logo-wrap img,
-.studies .logo-wrap img {
+.studies .logo-wrap img,
+.about .logo-wrap img,
+.contact .logo-wrap img,
+.archive .logo-wrap img {
     display: block;
     width: 100%;
     height: auto;
@@ -76,12 +91,21 @@ body {
 .home .logo-base,
 .home .logo-hover,
 .studies .logo-base,
-.studies .logo-hover {
+.studies .logo-hover,
+.about .logo-base,
+.about .logo-hover,
+.contact .logo-base,
+.contact .logo-hover,
+.archive .logo-base,
+.archive .logo-hover {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .home .logo-hover,
-.studies .logo-hover {
+.studies .logo-hover,
+.about .logo-hover,
+.contact .logo-hover,
+.archive .logo-hover {
     position: absolute;
     top: 2px;
     left: 0;
@@ -92,21 +116,39 @@ body {
 .home .logo-link:hover .logo-hover,
 .home .logo-link:focus-visible .logo-hover,
 .studies .logo-link:hover .logo-hover,
-.studies .logo-link:focus-visible .logo-hover {
+.studies .logo-link:focus-visible .logo-hover,
+.about .logo-link:hover .logo-hover,
+.about .logo-link:focus-visible .logo-hover,
+.contact .logo-link:hover .logo-hover,
+.contact .logo-link:focus-visible .logo-hover,
+.archive .logo-link:hover .logo-hover,
+.archive .logo-link:focus-visible .logo-hover {
     opacity: 1;
 }
 
 .home .logo-link:hover .logo-base,
 .home .logo-link:focus-visible .logo-base,
 .studies .logo-link:hover .logo-base,
-.studies .logo-link:focus-visible .logo-base {
+.studies .logo-link:focus-visible .logo-base,
+.about .logo-link:hover .logo-base,
+.about .logo-link:focus-visible .logo-base,
+.contact .logo-link:hover .logo-base,
+.contact .logo-link:focus-visible .logo-base,
+.archive .logo-link:hover .logo-base,
+.archive .logo-link:focus-visible .logo-base {
     opacity: 0;
 }
 
 .home .logo-link:hover .logo-wrap,
 .home .logo-link:focus-visible .logo-wrap,
 .studies .logo-link:hover .logo-wrap,
-.studies .logo-link:focus-visible .logo-wrap {
+.studies .logo-link:focus-visible .logo-wrap,
+.about .logo-link:hover .logo-wrap,
+.about .logo-link:focus-visible .logo-wrap,
+.contact .logo-link:hover .logo-wrap,
+.contact .logo-link:focus-visible .logo-wrap,
+.archive .logo-link:hover .logo-wrap,
+.archive .logo-link:focus-visible .logo-wrap {
     transform: scale(1.2);
 }
 
@@ -141,7 +183,10 @@ body {
 }
 
 .home .navbar-menu,
-.studies .navbar-menu {
+.studies .navbar-menu,
+.about .navbar-menu,
+.contact .navbar-menu,
+.archive .navbar-menu {
     display: flex;
     list-style: none;
     gap: 15px;
@@ -150,12 +195,18 @@ body {
 }
 
 .home .navbar-menu a,
-.studies .navbar-menu a {
+.studies .navbar-menu a,
+.about .navbar-menu a,
+.contact .navbar-menu a,
+.archive .navbar-menu a {
     white-space: nowrap; /* Prevents the text from wrapping to the next line */
 }
 
 .home .navbar-menu a,
-.studies .navbar-menu a {
+.studies .navbar-menu a,
+.about .navbar-menu a,
+.contact .navbar-menu a,
+.archive .navbar-menu a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: 1.2em;
@@ -169,7 +220,13 @@ body {
 .home .navbar-menu a:hover,
 .studies .navbar-menu a:hover,
 .home .navbar-menu a.is-active,
-.studies .navbar-menu a.is-active {
+.studies .navbar-menu a.is-active,
+.about .navbar-menu a:hover,
+.contact .navbar-menu a:hover,
+.archive .navbar-menu a:hover,
+.about .navbar-menu a.is-active,
+.contact .navbar-menu a.is-active,
+.archive .navbar-menu a.is-active {
     background-color: #242424;
     border-color: #ff9933;
     color: #ff9933;
@@ -1173,25 +1230,37 @@ footer {
 /* Responsive Design for Mobile Devices */
 @media screen and (max-width: 768px) {
     .home .navbar,
-    .studies .navbar {
+    .studies .navbar,
+    .about .navbar,
+    .contact .navbar,
+    .archive .navbar {
         flex-direction: column; /* Stacks logo and navigation vertically */
         align-items: flex-start;
         padding: 10px 20px;
     }
 
     .home .navbar-content,
-    .studies .navbar-content {
+    .studies .navbar-content,
+    .about .navbar-content,
+    .contact .navbar-content,
+    .archive .navbar-content {
         flex-direction: column;
         gap: 10px; /* Reduces spacing between elements */
     }
 
     .home .logo,
-    .studies .logo {
+    .studies .logo,
+    .about .logo,
+    .contact .logo,
+    .archive .logo {
         max-width: 60px; /* Reduces logo size */
     }
 
     .home .navbar-menu,
-    .studies .navbar-menu {
+    .studies .navbar-menu,
+    .about .navbar-menu,
+    .contact .navbar-menu,
+    .archive .navbar-menu {
         flex-direction: column; /* Stacks menu items vertically */
         gap: 10px;
         width: 100%; /* Makes menu span the screen */
