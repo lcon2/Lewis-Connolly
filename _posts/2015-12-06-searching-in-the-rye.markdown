@@ -9,7 +9,6 @@ categories:
   - Film
   - History
 ai_summary: "‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I know it’s crazy, but that’s the only thing I’d really like to be. I grew up on a diet of film; it is our generation’s first language after all, and yet, I can..."
-description: ‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I know it’s crazy, but
 ---
 ‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I grew up on a diet of film; it is our generation’s first language after all, and yet, I can see why Salinger would want to set himself up in opposition to this image-driven world.
 

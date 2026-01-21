@@ -9,7 +9,6 @@ categories:
   - Consciousness
   - Meaning
 ai_summary: "The picture on the front of your order of service is a kind-of ‘self-portrait’ by an Austrian physicist called Ernst Mach. He drew it in 1886. Amen. He had the clever idea of drawing the scene before him as he actually perceived it, sitting on his couch and closing his right eye. As such you can see his own body..."
-description: The picture on the front of your order of service is a kind-of ‘self-portrait’ by an Austrian physicist called Ernst Mach. He drew it in 1886. Amen. He had the
 ---
 The picture on the front of your order of service is a kind-of ‘self-portrait’ by an Austrian physicist called Ernst Mach. He drew it in 1886. He had the clever idea of drawing the scene before him as he actually perceived it, sitting on his couch and closing his right eye. As such you can see his own body lying before him; you can see the tip of his nose on the right, his brow above, and his bushy moustache below. If you see a photograph of Ernst Mach, he has one of those big Victorian beards. We only see the world through our own eyes. His subjective perception of reality is mediated through that one vantage, that one bushy bearded vantage. Most of the time, when an artist does a self-portrait, they use a mirror, and paint themselves from an imagined vantage of a few feet away. Mach is drawing himself with no mirror, and from a distance of zero, and as such we get this self-portrait with no head.
 

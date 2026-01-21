@@ -9,7 +9,6 @@ categories:
   - History
   - Aesthetics
 ai_summary: "Part 1 In this service I’m going to be perambulating around the figure of Walt Whitman, one of the most influential American poets. And that’s American in the best sense; unlike the brutish, violent, and intolerant American we seem to hear so much about, this is the America of individualism, optimism, and plurality, all ideals expressed in Whitman’s work. Amen..."
-description: Part 1 In this service I’m going to be perambulating around the figure of Walt Whitman, one of the most influential American poets. And that’s American in the
 ---
 ##Part 1
 

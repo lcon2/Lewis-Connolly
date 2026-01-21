@@ -10,7 +10,6 @@ categories:
   - Identity
 og_image: /assets/images/logo.png
 ai_summary: "So, what can we make of the walking on water miracle\" First of all, at the most basic level, whether this miracle did or did not happen cannot be proven or disproven from the texts, and as such we tend to just allow the story to confirm what we already believe to be true. If we believe in the supernatural,..."
-description: So, what can we make of the walking on water miracle\" First of all, at the most basic level, whether this miracle did or did not happen cannot be proven or
 ---
 So, what can we make of the walking on water miracle" First of all, at the most basic level, whether this miracle did or did not happen cannot be proven or disproven from the texts, and as such we tend to just allow the story to confirm what we already believe to be true. If we believe in the supernatural, this story appears to confirm that possibility, if we do not, and do not believe someone could walk on water, this story confirms to us the unreliability of the Jesus narrative. We know the laws of nature cannot be broken in this way, so how can we take the biblical narrative seriously" The scholarship response to this miracle has been two-fold: on one hand, though he appeared to walk on water, he actually didn’t, and on the other, that this story should be taken as a myth - its purpose is not to communicate to us historical events, but rather mythological truths.
 

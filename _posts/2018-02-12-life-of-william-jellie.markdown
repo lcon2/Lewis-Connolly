@@ -10,7 +10,6 @@ categories:
   - History
 og_image: /assets/images/logo.png
 ai_summary: "April 5, 1884. He began his letter, ‘Dear Rev. Blackstone Editions, 2017. James Martineau’. It was the letter of a 19 year old boy from County Down, Ireland, the son of a non-subscribing Presbyterian farmer, who was seeking to train for Unitarian ministry under Martineau, the principle of Manchester New College in London. References were sent, tests were taken, and..."
-description: April 5, 1884. He began his letter, ‘Dear Rev. Blackstone Editions, 2017. James Martineau’. It was the letter of a 19 year old boy from County Down, Ireland,
 ---
 April 5, 1884. He began his letter, ‘Dear Rev. James Martineau’. It was the letter of a 19 year old boy from County Down, Ireland, the son of a non-subscribing Presbyterian farmer, who was seeking to train for Unitarian ministry under Martineau, the principle of Manchester New College in London. References were sent, tests were taken, and he was accepted to train.
 

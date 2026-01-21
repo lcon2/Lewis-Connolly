@@ -9,7 +9,6 @@ categories:
   - Theology
   - Philosophy
 ai_summary: "Last week I was in Florence, Italy, and on Friday, just as the weather began to turn, and the Tuscan sun turned to dark cloud, I visited a place I’d only read about. On the north side of the city, in the middle of a ring of traffic, there is an ‘isle of the dead’, a hill that rises out..."
-description: Last week I was in Florence, Italy, and on Friday, just as the weather began to turn, and the Tuscan sun turned to dark cloud, I visited a place I’d only read
 ---
 Last week I was in Florence, Italy, and on Friday, just as the weather began to turn, and the Tuscan sun turned to dark cloud, I visited a place I’d only read about. On the north side of the city, in the middle of a ring of traffic, there is an ‘isle of the dead’, a hill that rises out of the busy landscape, a richly green terrain furnished with marble memorials. As one passes through the gatehouse and across that threshold, you enter a curiously solitary place. On account, perhaps, of the elevation, or the canopy of trees, or some inexplicable veil that one passes through, the noise of urban life fades into the background, the present becomes all the more perceptible, and you discern yourself to now be in a thin place out of time. A forgotten place. For unlike Florence’s many tourism hot spots, in which you queue for hours to see Michelangelo’s David, or Botticelli’s The Birth of Venus, here, there is not a single other soul.
 

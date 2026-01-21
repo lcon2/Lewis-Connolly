@@ -10,7 +10,6 @@ categories:
   - Philosophy
 og_image: /assets/images/logo.png
 ai_summary: "Winston Churchill is our celebrated war time leader, not despite his racist views, but because of them. Churchill, like all politicians, was an opportunist, and in the 1930s he could see the decline of the British Empire playing out before him, a decline most evident in India’s growing desire for self-rule. Wrongs are righted, progress is made, not through denying..."
-description: Winston Churchill is our celebrated war time leader, not despite his racist views, but because of them. Churchill, like all politicians, was an opportunist,
 ---
 Winston Churchill is our celebrated war time leader, not despite his racist views, but because of them. Churchill, like all politicians, was an opportunist, and in the 1930s he could see the decline of the British Empire playing out before him, a decline most evident in India’s growing desire for self-rule. Churchill held to a hierarchical perspective of race, he believed that white people were superior. As such he believed it was the duty of white people to rule over lesser races, such as those in Africa and India. So, for the sake of the Empire, Churchill cultivated his Victorian, reactionary, right wing ideals, ideals which brought him into direct opposition with Indian independence efforts. Ideals which shaped him into the stoic, enduring, cigar smoking, political operator who is alive today in our popular imaginations. Ideals which shaped him into the perfect war time prime minister.
 

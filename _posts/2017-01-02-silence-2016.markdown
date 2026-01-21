@@ -9,7 +9,6 @@ categories:
   - Theology
   - History
 ai_summary: "‘The Price for your glory is their suffering’ Scorsese’s new epic masterpiece is theologically rich, aesthetically captivating, and emotionally raw. Based upon Endo’s 1966 historical fiction by the same name, Silence is a film about Portuguese priests facing persecution in 17th century Japan. Keep in mind also, this film is coming from the same director who gave us the other..."
-description: ‘The Price for your glory is their suffering’ Scorsese’s new epic masterpiece is theologically rich, aesthetically captivating, and emotionally raw. Based upon
 ---
 ‘The Price for your glory is their suffering’
 

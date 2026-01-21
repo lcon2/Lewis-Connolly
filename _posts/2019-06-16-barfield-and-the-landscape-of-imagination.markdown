@@ -9,7 +9,6 @@ categories:
   - Consciousness
   - Spirituality
 ai_summary: "So, there I am drinking a pint of beer. My life of ministry did not begin within Unitarianism, but in the Church of England. Amen. I did a curacy in the diocese of Portsmouth, which is essentially (if you don’t know) the probationary period you need to undertake before you can become a fully-fledged priest within your own parish. And..."
-description: So, there I am drinking a pint of beer. My life of ministry did not begin within Unitarianism, but in the Church of England. Amen. I did a curacy in the
 ---
 So, there I am drinking a pint of beer. My life of ministry did not begin within Unitarianism, but in the Church of England. I did a curacy in the diocese of Portsmouth, which is essentially (if you don’t know) the probationary period you need to undertake before you can become a fully-fledged priest within your own parish. And the curacy part was quite enough for me to realise that the Church of England was not for me, for many reasons, but it essentially came down to my inability to be authentically me in that context, unable to roam freely across the landscape of my own curiosity. And my ability to do that, to freely explore ideas, to think about them, to talk about them, as I’m doing now, is at the heart of my vocation. It’s why I get up in the morning.
 

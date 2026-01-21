@@ -10,7 +10,6 @@ categories:
   - Culture
 og_image: /assets/images/dog.png
 ai_summary: "Reading Robert Caro on LBJ sends me down a Texas Hill Country rabbit hole: Lyndon's father, their dog named Bigham Young, and the lingering memory of Mormonism in the region. I sketch the national panic over the Mormon 'question' and trace how these cultural fragments shaped Johnson's mythology and ambition. A small anecdote becomes a window into American history."
-description: Reading Robert Caro on LBJ sends me down a Texas Hill Country rabbit hole: Lyndon's father, their dog named Bigham Young, and the lingering memory of Mormonism
 ---
 <img src="{{ '/assets/images/dog.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

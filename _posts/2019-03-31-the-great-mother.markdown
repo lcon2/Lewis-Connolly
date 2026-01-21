@@ -10,7 +10,6 @@ categories:
   - Consciousness
 og_image: /assets/images/logo.png
 ai_summary: "Every year I reflect upon the significance of Mother’s Day, and every year it brings to mind for me the fact that for many, Mother’s Day, or Mothering Sunday, conjures up a lot of pain and hurt. For many of us, the day highlights not so much joy and thankfulness, but more the loss in our own lives, the loss..."
-description: Every year I reflect upon the significance of Mother’s Day, and every year it brings to mind for me the fact that for many, Mother’s Day, or Mothering Sunday,
 ---
 Every year I reflect upon the significance of Mother’s Day, and every year it brings to mind for me the fact that for many, Mother’s Day, or Mothering Sunday, conjures up a lot of pain and hurt. For many of us, the day highlights not so much joy and thankfulness, but more the loss in our own lives, the loss of mothers, of wives, and of children, or brokenness in relationships, hurts surrounding thoughts of what could be, or what could have been. I think also, on top of that, Mother’s Day conjures up quite a narrow image of motherhood, which is not always helpful in this day and age. And so, this morning, I will be thinking less about motherhood in terms of the mother/child relationship per se, and more in archetypal terms - the collectively inherited unconscious idea of motherhood or mothering - and in this respect we can find expressions that far exceed the confines of the mother/child dynamic.
 

@@ -10,7 +10,6 @@ categories:
   - History
 og_image: /assets/images/taste.png
 ai_summary: "Lately, I can't seem to stop thinking about taste. Taste is elusive; I know what I like, but articulating why I like it is a far greater challenge. It strikes me that the future is not that dissimilar to those psychonauts of decades past – using psychedelics in the pursuit of altered states of consciousness - but these, or we,..."
-description: Lately, I can't seem to stop thinking about taste. Taste is elusive; I know what I like, but articulating why I like it is a far greater challenge. It strikes
 ---
 <div class="post">
     <audio class="audio-player" controls>

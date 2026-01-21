@@ -9,7 +9,6 @@ categories:
   - Theology
   - Culture
 ai_summary: "I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and perhaps in America generally, are coy to reveal what human behavior transpires within; the architecture rarely offers up much of a clue. I stirred, I rolled over, I found myself in the car..."
-description: I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and
 ---
 I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and perhaps in America generally, are coy to reveal what human behavior transpires within; the architecture rarely offers up much of a clue. But there is a sign out front, a truly hideous and slightly pixilated sign. It looks as if some boomer back in the 90s discovered the marvels of paint on his Windows PC and allowed their Gee-Whiz-Can-Do attitude to do the rest. And why change it now? After all, it has done a perfectly fine job these past twenty-odd years. The sign reads something like, LovingJoy Ministries, or HeartFreedom Center. Something God-awful like that.
 

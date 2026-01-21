@@ -10,7 +10,6 @@ categories:
   - Philosophy
 og_image: /assets/images/Chess.png
 ai_summary: "Using Galen Strawson's diachronic/episodic distinction, I test my own self-conception: strategic, future-oriented, yet pulled toward non-dual insight. I sketch three layers of 'I'--persona, interior operator, and the witnessing screen--and suggest the more we chase a fixed self, the more it dissolves into awareness."
-description: Using Galen Strawson's diachronic/episodic distinction, I test my own self-conception: strategic, future-oriented, yet pulled toward non-dual insight. I sketch
 ---
 <img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

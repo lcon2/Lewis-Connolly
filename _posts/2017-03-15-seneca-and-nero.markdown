@@ -9,7 +9,6 @@ categories:
   - Culture
   - History
 ai_summary: "I place Seneca and Nero side by side: the stoic tutor and the violent emperor. Their relationship becomes a meditation on power, character, and the limits of reason in the face of appetite. Seneca's counsel cannot save Nero, and the story becomes a caution about who we follow and what we feed in ourselves. The prayer at the end is for serenity and wisdom."
-description: I place Seneca and Nero side by side: the stoic tutor and the violent emperor. Their relationship becomes a meditation on power, character, and the limits of
 ---
 ### Part 1
 

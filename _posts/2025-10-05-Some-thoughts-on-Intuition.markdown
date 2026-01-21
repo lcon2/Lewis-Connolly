@@ -9,7 +9,6 @@ categories:
   - Meaning
   - Theology
 ai_summary: "I trace my attraction to intuition back to Jung and a kind of small-c conservatism that respects inherited fences. From there I pivot into politics: liberal and conservative tribes feel religious, and I sit uneasily between them. I argue for postmodern pluralism, local communities with different values, and a resistance to the universal, homogenizing project."
-description: I trace my attraction to intuition back to Jung and a kind of small-c conservatism that respects inherited fences. From there I pivot into politics: liberal
 ---
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It’s a little difficult to put myself back in that mind. But I think it was the sense that intuition is a good thing, or something worth valuing, that ultimately led me toward studying Carl Jung at Essex University. And I basically still have the same sense—that intuition is something valuable, interesting, something worth thinking about.
 

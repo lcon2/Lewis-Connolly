@@ -10,7 +10,6 @@ categories:
   - Consciousness
 og_image: /assets/images/running.png
 ai_summary: "A return to running becomes a meditation on our most primal trait. Humans evolved to run, yet modern tools have made that need obsolete, and now even our cognitive edge may be overtaken by AI. Running reactivates a warrior archetype and alters consciousness; used deliberately, archetypes reconnect us with our instinctual nature rather than seizing us. It is a small path back to ourselves."
-description: A return to running becomes a meditation on our most primal trait. Humans evolved to run, yet modern tools have made that need obsolete, and now even our
 ---
 <div class="post">
     <audio class="audio-player" controls>

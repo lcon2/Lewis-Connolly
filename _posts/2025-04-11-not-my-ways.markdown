@@ -10,7 +10,6 @@ categories:
   - Technology
 og_image: /assets/images/suffering.png
 ai_summary: "I wonder whether 'intelligence' is even the right word for AI, and draw a parallel with the way we project human terms onto God. If we cannot know another mind, how will we know machine consciousness? Imagining NPC-filled worlds, I worry about manufactured suffering and an ethics that might demand we assume consciousness by default. Perhaps suffering is baked into the dream."
-description: I wonder whether 'intelligence' is even the right word for AI, and draw a parallel with the way we project human terms onto God. If we cannot know another
 ---
 <img src="{{ '/assets/images/suffering.png' | relative_url }}" alt="suffering" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

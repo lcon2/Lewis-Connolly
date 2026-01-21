@@ -10,7 +10,6 @@ categories:
   - History
 og_image: /assets/images/logo.png
 ai_summary: "Part 1 Beatrix Potter was steeped in 19th Century Unitarianism, coming from a long line of English dissenters. Her mother and father, Helen and Rupert, were both from prosperous North Western Unitarian families that made their money in the cotton trade. Amen Beatrix’s paternal grandparents, Edmund and Jessie, were both notable Unitarians in their day. Edmund was a radical liberal..."
-description: Part 1 Beatrix Potter was steeped in 19th Century Unitarianism, coming from a long line of English dissenters. Her mother and father, Helen and Rupert, were
 ---
 Part 1
 

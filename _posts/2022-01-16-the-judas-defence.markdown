@@ -10,7 +10,6 @@ categories:
   - Psychology
 og_image: /assets/images/logo.png
 ai_summary: "“If I were Jesus Christ. I would save Judas.” Victor Hugo In my previous post, I referred to what I called the Judas Defence, that propensity amongst many Christian thinkers to argue Judas’ case. (the short form CW is used for the Collective Works). Why are so many compelled to make this case\" What underlies this impulse\" I undertake this..."
-description: “If I were Jesus Christ. I would save Judas.” Victor Hugo In my previous post, I referred to what I called the Judas Defence, that propensity amongst many
 ---
 “If I were Jesus Christ. I would save Judas.”
 Victor Hugo
