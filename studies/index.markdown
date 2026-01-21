@@ -15,7 +15,7 @@ description: Short courses for the restless mind: read slowly, think deeply, and
     <div class="studies-course-grid">
         <a class="studies-card studies-course-card studies-card-link" href="{{ '/studies/meaning-in-a-disenchanted-age/' | relative_url }}">
             <div class="studies-course-thumb">
-                <img src="{{ '/assets/images/Course.png' | relative_url }}" alt="Meaning in a Disenchanted Age course cover" width="1024" height="1536" loading="lazy">
+                <img src="{{ '/assets/images/coursebanner.png' | relative_url }}" alt="Meaning in a Disenchanted Age course banner" width="1536" height="1024" loading="lazy">
             </div>
             <p class="studies-kicker">Course</p>
             <h3>Meaning in a Disenchanted Age: Myth, Mind, and Spirituality in the 21st Century</h3>
