@@ -935,17 +935,19 @@ body {
     }
 }
 
-/* Ensure list item titles wrap correctly and don't get visually clipped
-   by decorative underlines or icons. Make links break if necessary and
-   limit their width so the bullet icon has space. */
-.content-section ul li {
-    white-space: normal !important;
+/* Home list titles should never wrap; show ellipsis instead. */
+.home .content-section ul li {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.content-section ul li a {
+.home .content-section ul li a {
     display: inline-block;
     max-width: calc(100% - 36px); /* leave room for bullet icon */
-    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
 }
 
 /* Blog Post-Specific Styles */
