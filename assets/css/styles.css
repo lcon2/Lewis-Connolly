@@ -1496,7 +1496,8 @@ footer {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    margin: 18px 0 36px;
+    margin: 18px auto 36px;
+    max-width: 520px;
 }
 
 .studies.dissertation .dissertation-meta-grid h2 {
