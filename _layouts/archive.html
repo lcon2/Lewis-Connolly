@@ -41,6 +41,11 @@
                         <a href="#year-{{ year_group.name }}">{{ year_group.name }}</a>
                         <ul>
                             {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                            {% if year_group.name == "2020" %}
+                                <li>
+                                    <a href="#month-2020-September">September</a>
+                                </li>
+                            {% endif %}
                             {% for month_group in posts_by_month %}
                                 <li>
                                     <a href="#month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">{{ month_group.name }}</a>
@@ -61,6 +66,17 @@
                             <span>{{ year_group.name }}</span>
                             <hr class="year-underline">
                         </div>
+                        {% if year_group.name == "2020" %}
+                            <div class="month-category" id="month-2020-September">
+                                <h3>September 2020</h3>
+                                <ul>
+                                    <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                                        <a href="{{ '/proustian-temporality' | relative_url }}" data-summary="This paper explores how time functions in Marcel Proust’s À la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust’s “privileged moments” of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.">Proustian Temporality (MA Dissertation)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
                         {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
                         {% for month_group in posts_by_month %}
                             <div class="month-category" id="month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">
