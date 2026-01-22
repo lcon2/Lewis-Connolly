@@ -1,4 +1,4 @@
-﻿---
+---
 layout: dissertation
 title: "Proustian Temporality (MA Dissertation)"
 display_title: "Bergson & Jung – A Consideration of Proustian Temporality"

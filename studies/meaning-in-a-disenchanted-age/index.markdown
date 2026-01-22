@@ -1,9 +1,9 @@
 ---
 layout: studies
-title: Meaning in a Disenchanted Age: Myth, Mind, and Spirituality in the 21st Century
+title: "Meaning in a Disenchanted Age: Myth, Mind, and Spirituality in the 21st Century"
 permalink: /studies/meaning-in-a-disenchanted-age/
 body_class: studies-course
-description: A guided path through modern meaning-making, blending myth, psychology, and spiritual imagination.
+description: "A guided path through modern meaning-making, blending myth, psychology, and spiritual imagination."
 og_image: /assets/images/Course.png
 ---
 

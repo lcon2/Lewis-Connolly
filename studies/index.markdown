@@ -2,7 +2,7 @@
 layout: studies
 title: Studies
 permalink: /studies/
-description: Short courses for the restless mind: read slowly, think deeply, and bring the insights back to daily life.
+description: "Short courses for the restless mind: read slowly, think deeply, and bring the insights back to daily life."
 ---
 
 <header class="studies-page-header">
