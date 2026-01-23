@@ -416,6 +416,7 @@ body {
     border-bottom: 1px solid #2f2f2f;
     padding-bottom: 6px;
     margin-bottom: 8px;
+    white-space: pre-line;
 }
 
 .summary-tooltip .summary-body {

@@ -35,7 +35,8 @@
       return;
     }
     activeLink = link;
-    titleEl.textContent = link.textContent.trim();
+    var title = link.getAttribute('data-title');
+    titleEl.textContent = title ? title.trim() : link.textContent.trim();
     bodyEl.textContent = summary.trim();
     tooltip.classList.add('is-visible');
     positionTooltip(link);
