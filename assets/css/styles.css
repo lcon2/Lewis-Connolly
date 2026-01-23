@@ -1574,7 +1574,7 @@ footer {
 }
 
 .studies.dissertation .dissertation-content {
-    font-size: 1.05em;
+    font-size: 1.1em;
     color: #f0f0f0;
     max-width: 720px;
     margin: 0 auto;
@@ -1583,7 +1583,7 @@ footer {
 
 @media screen and (max-width: 720px) {
     .studies.dissertation .dissertation-content {
-        font-size: 1.12em;
+        font-size: 1.16em;
         line-height: 1.8;
     }
 }
