@@ -6,8 +6,12 @@ permalink: /contact/
 
 # Contact
 
-Feel free to reach out! Here’s how you can contact me:
+Feel free to reach out! Here's how you can contact me:
 
-- **Email:** [lewisconnolly88@gmail.com](mailto:lewisconnolly88@gmail.com)
-- **Instagram:** [@lewis_a_connolly](https://www.instagram.com/lewis_a_connolly/)
-- **YouTube:** [Adventures with Lewis](https://www.youtube.com/@AdventureswithLewis)
+<div class="contact-card">
+  <ul class="contact-list">
+    <li><strong>Email:</strong> <a href="mailto:lewisconnolly88@gmail.com">lewisconnolly88@gmail.com</a></li>
+    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/lewis_a_connolly/">@lewis_a_connolly</a></li>
+    <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@AdventureswithLewis">Adventures with Lewis</a></li>
+  </ul>
+</div>

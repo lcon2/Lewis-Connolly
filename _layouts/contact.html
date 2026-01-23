@@ -6,7 +6,7 @@
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body class="about">
+<body class="contact">
     <nav class="navbar">
         <div class="navbar-content">
             <a href="{{ '/' | relative_url }}" class="logo-link">
@@ -30,10 +30,10 @@
             </a>
         </div>
     </nav>
-    <main style="max-width: 800px; margin: 20px auto; line-height: 1.8; font-size: 1.1em; color: #f0f0f0;">
+    <main class="contact-main">
         {{ content }}
     </main>
-    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+    <footer class="contact-footer">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
