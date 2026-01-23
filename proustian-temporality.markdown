@@ -8,6 +8,11 @@ submitted: "September 2020"
 supervisor: "Roderick Main, PhD"
 word_count: "11,285"
 permalink: /proustian-temporality/
+categories:
+  - Psychology
+  - Philosophy
+  - Narrative
+og_image: /assets/images/essay.png
 ai_summary: >-
   This paper explores how time functions in Marcel Proust's A la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust's privileged moments of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.
 ---

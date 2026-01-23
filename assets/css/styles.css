@@ -1581,6 +1581,13 @@ footer {
     line-height: 1.75;
 }
 
+@media screen and (max-width: 720px) {
+    .studies.dissertation .dissertation-content {
+        font-size: 1.12em;
+        line-height: 1.8;
+    }
+}
+
 .studies.dissertation .dissertation-content h2 {
     font-size: 1.55em;
     margin: 56px 0 16px;
