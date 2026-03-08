@@ -7,8 +7,11 @@ author_url: "/about/"
 categories:
   - Technology
 og_image: /assets/images/notetick-screenshot-1.png
-description: "A short introduction to NoteTick, a quiet desktop sticky-note app built for quick notes, checklists, and offline use."
-ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks and simple checklists without accounts, syncing, subscriptions, or feature overload. Lewis created it after finding existing sticky-note tools cluttered, dated, or overbuilt. The app focuses on movable desktop notes, checkboxes, bullet lists, text formatting, links, images, color themes, fast startup, and fully offline operation."
+og_image_width: 2559
+og_image_height: 1388
+image_alt: "NoteTick running on a desktop with several notes open at once."
+description: "Introducing NoteTick, a lightweight desktop sticky-note app for quick notes, checklists, offline use, adjustable UI scale, and an optional dyslexia-friendly font."
+ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks and simple checklists without accounts, syncing, subscriptions, or feature overload. Lewis created it after finding existing sticky-note tools cluttered, dated, or overbuilt. The app focuses on movable desktop notes, checkboxes, bullet lists, text formatting, links, images, color themes, adjustable UI scale, an optional dyslexia-friendly font, fast startup, and fully offline operation."
 ---
 
 <style>
@@ -404,6 +407,8 @@ It is simply to make the small things easier to keep track of. Something quick, 
       <li>Clickable links and local file paths</li>
       <li>Inline images when needed</li>
       <li>Color themes for organising notes visually</li>
+      <li>Adjustable UI scale</li>
+      <li>Optional dyslexia-friendly font</li>
       <li>Fast startup and fully offline operation</li>
     </ul>
   </section>

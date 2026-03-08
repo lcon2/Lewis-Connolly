@@ -6,6 +6,7 @@
   <title>{{ site_title | default: page_title }}</title>
 {%- endif -%}
 {%- assign description = page.description | default: page.excerpt | default: site.description -%}
+{%- assign image_alt = page.image_alt | default: page_title -%}
 {%- if description -%}
   <meta name="description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}
@@ -18,10 +19,22 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 {%- assign og_image = page.og_image | default: site.og_image | default: '/assets/images/logo.png' -%}
 <meta property="og:image" content="{{ og_image | absolute_url }}">
-<meta property="og:image:alt" content="{{ page_title | escape }}">
+<meta property="og:image:alt" content="{{ image_alt | escape }}">
+{%- if page.og_image_width -%}
+<meta property="og:image:width" content="{{ page.og_image_width }}">
+{%- endif -%}
+{%- if page.og_image_height -%}
+<meta property="og:image:height" content="{{ page.og_image_height }}">
+{%- endif -%}
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 {%- if page.layout == 'post' and page.date -%}
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- if page.categories and page.categories.first -%}
+<meta property="article:section" content="{{ page.categories.first | escape }}">
+{%- endif -%}
+{%- for category in page.categories -%}
+<meta property="article:tag" content="{{ category | escape }}">
+{%- endfor -%}
 {%- endif -%}
 <meta name="twitter:card" content="summary_large_image">
 {%- if site.twitter_username and site.twitter_username != "" -%}
@@ -32,6 +45,7 @@
 <meta name="twitter:description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}
 <meta name="twitter:image" content="{{ og_image | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ image_alt | escape }}">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="7f512617-d841-49ba-a78d-2b54de1aaea3"></script>
 
 {%- if page.layout == 'post' -%}
@@ -41,7 +55,17 @@
   "@type": "BlogPosting",
   "headline": {{ page_title | jsonify }},
   "description": {{ description | strip_html | strip_newlines | jsonify }},
-  "image": {{ og_image | absolute_url | jsonify }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ og_image | absolute_url | jsonify }},
+    "caption": {{ image_alt | jsonify }}
+    {%- if page.og_image_width -%},
+    "width": {{ page.og_image_width | jsonify }}
+    {%- endif -%}
+    {%- if page.og_image_height -%},
+    "height": {{ page.og_image_height | jsonify }}
+    {%- endif -%}
+  },
   "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
   "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
   "author": {
