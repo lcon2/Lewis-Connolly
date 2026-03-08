@@ -6,12 +6,139 @@ author: "Lewis Connolly"
 author_url: "/about/"
 categories:
   - Technology
-og_image: /assets/images/notetick-hero.svg
+og_image: /assets/images/notetick-screenshot-1.png
 description: "A short introduction to NoteTick, a quiet desktop sticky-note app built for quick notes, checklists, and offline use."
 ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks and simple checklists without accounts, syncing, subscriptions, or feature overload. Lewis created it after finding existing sticky-note tools cluttered, dated, or overbuilt. The app focuses on movable desktop notes, checkboxes, bullet lists, text formatting, links, images, color themes, fast startup, and fully offline operation."
 ---
 
 <style>
+.notetick-carousel {
+  margin: 24px auto 30px;
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(28, 28, 28, 0.96), rgba(15, 15, 15, 0.96));
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.32);
+}
+
+.notetick-carousel:focus-visible {
+  outline: 2px solid rgba(255, 153, 51, 0.7);
+  outline-offset: 4px;
+}
+
+.notetick-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  min-height: 420px;
+  background: rgba(10, 10, 10, 0.92);
+}
+
+.notetick-slide {
+  display: none;
+  margin: 0;
+  min-height: 420px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.notetick-slide.is-active {
+  display: flex;
+}
+
+.notetick-slide img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111;
+}
+
+.notetick-carousel-controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  pointer-events: none;
+}
+
+.notetick-carousel-btn {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.78);
+  color: #f4ede5;
+  font-size: 1.15em;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notetick-carousel-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 153, 51, 0.45);
+  background: rgba(31, 24, 18, 0.92);
+  color: #ffbf7a;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.notetick-carousel-btn:focus-visible {
+  outline: 2px solid rgba(255, 153, 51, 0.75);
+  outline-offset: 2px;
+}
+
+.notetick-carousel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.notetick-carousel-caption {
+  margin: 0;
+  color: #d2c6b9;
+  font-size: 0.92em;
+  letter-spacing: 0.02em;
+}
+
+.notetick-carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.notetick-carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.notetick-carousel-dot.is-active {
+  width: 28px;
+  background: #ff9933;
+}
+
+.notetick-carousel-dot:hover {
+  transform: scale(1.05);
+}
+
+.notetick-carousel-dot:focus-visible {
+  outline: 2px solid rgba(255, 153, 51, 0.75);
+  outline-offset: 2px;
+}
+
 .notetick-intro {
   margin: 8px auto 32px;
   padding: 24px 28px;
@@ -56,11 +183,15 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 }
 
 .notetick-panel h3 {
-  margin: 0 0 14px;
-  font-size: 0.95em;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #e9ddd0;
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.08em;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  color: #f2ebe4;
+  font-weight: 600;
 }
 
 .notetick-list {
@@ -73,7 +204,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 
 .notetick-list li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 20px;
   color: #e4ddd7;
 }
 
@@ -96,7 +227,71 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
   color: #f2ebe3;
 }
 
+.notetick-download {
+  margin: 36px auto 18px;
+  padding: 28px 24px 30px;
+  max-width: 560px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.92), rgba(18, 18, 18, 0.96));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.notetick-download p {
+  margin: 0 0 18px;
+  color: #ddd2c5;
+  font-size: 0.98em;
+  line-height: 1.7;
+}
+
+.notetick-download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 14px 26px;
+  border: 1px solid rgba(255, 153, 51, 0.3);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(46, 34, 24, 0.98), rgba(31, 23, 17, 0.98));
+  color: #f6ede4 !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.notetick-download-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 191, 122, 0.52);
+  background: linear-gradient(180deg, rgba(58, 42, 29, 0.98), rgba(36, 27, 20, 0.98));
+  color: #ffcc93 !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+}
+
+.notetick-download-link:focus-visible {
+  outline: 2px solid rgba(255, 153, 51, 0.82);
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
+  .notetick-carousel {
+    padding: 12px 12px 14px;
+  }
+
+  .notetick-carousel-viewport,
+  .notetick-slide {
+    min-height: 280px;
+  }
+
+  .notetick-carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
   .notetick-intro {
     padding: 20px;
   }
@@ -104,10 +299,43 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
   .notetick-panel {
     padding: 20px;
   }
+
+  .notetick-download {
+    padding: 24px 18px 26px;
+  }
+
+  .notetick-download-link {
+    width: 100%;
+    min-width: 0;
+  }
 }
 </style>
 
-<img src="{{ '/assets/images/notetick-hero.svg' | relative_url }}" alt="Introducing NoteTick" style="display: block; margin: 24px auto 28px; max-width: 760px; width: 100%; height: auto;">
+<div class="notetick-carousel" data-notetick-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="NoteTick screenshots">
+  <div class="notetick-carousel-viewport">
+    <figure class="notetick-slide is-active" data-caption="Desktop overview">
+      <img src="{{ '/assets/images/notetick-screenshot-1.png' | relative_url }}" alt="NoteTick running on a desktop with several notes open at once." loading="eager">
+    </figure>
+    <figure class="notetick-slide" data-caption="Checklist note">
+      <img src="{{ '/assets/images/notetick-screenshot-2.png' | relative_url }}" alt="A NoteTick to-do note with checkboxes and a clickable link." loading="lazy">
+    </figure>
+    <figure class="notetick-slide" data-caption="Notes overview">
+      <img src="{{ '/assets/images/notetick-screenshot-3.png' | relative_url }}" alt="The main NoteTick window showing multiple notes and search." loading="lazy">
+    </figure>
+    <div class="notetick-carousel-controls">
+      <button class="notetick-carousel-btn" type="button" data-carousel-prev aria-label="Previous screenshot">&larr;</button>
+      <button class="notetick-carousel-btn" type="button" data-carousel-next aria-label="Next screenshot">&rarr;</button>
+    </div>
+  </div>
+  <div class="notetick-carousel-footer">
+    <p class="notetick-carousel-caption" data-carousel-caption>Desktop overview</p>
+    <div class="notetick-carousel-dots" aria-label="Choose screenshot">
+      <button class="notetick-carousel-dot is-active" type="button" data-carousel-dot="0" aria-label="Show screenshot 1" aria-current="true"></button>
+      <button class="notetick-carousel-dot" type="button" data-carousel-dot="1" aria-label="Show screenshot 2" aria-current="false"></button>
+      <button class="notetick-carousel-dot" type="button" data-carousel-dot="2" aria-label="Show screenshot 3" aria-current="false"></button>
+    </div>
+  </div>
+</div>
 
 <div class="notetick-intro">
   <p class="notetick-kicker">Desktop notes without the noise</p>
@@ -146,7 +374,7 @@ It is simply to make the small things easier to keep track of. Something quick, 
     </ul>
   </section>
   <section class="notetick-panel notetick-panel-muted">
-    <h3>What I intentionally left out</h3>
+    <h3>What I left out on purpose</h3>
     <ul class="notetick-list">
       <li>No accounts</li>
       <li>No syncing</li>
@@ -158,3 +386,72 @@ It is simply to make the small things easier to keep track of. Something quick, 
 </div>
 
 <p class="notetick-signoff">I built NoteTick because I wanted it on my own desktop. If it ends up being useful to other people too, that is a nice bonus.</p>
+
+<section class="notetick-download" aria-label="Download NoteTick">
+  <p>If you'd like to try NoteTick on your own desktop, you can download it here.</p>
+  <a class="notetick-download-link" href="https://buymeacoffee.com/lewisconnolly/e/517926" target="_blank" rel="noopener noreferrer" aria-label="Download NoteTick, opens in a new tab">Download NoteTick</a>
+</section>
+
+<script>
+(function () {
+  var carousel = document.querySelector('[data-notetick-carousel]');
+  if (!carousel) return;
+
+  var slides = Array.prototype.slice.call(carousel.querySelectorAll('.notetick-slide'));
+  var dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-carousel-dot]'));
+  var caption = carousel.querySelector('[data-carousel-caption]');
+  var prev = carousel.querySelector('[data-carousel-prev]');
+  var next = carousel.querySelector('[data-carousel-next]');
+  var activeIndex = 0;
+
+  function setActive(index) {
+    activeIndex = (index + slides.length) % slides.length;
+
+    slides.forEach(function (slide, slideIndex) {
+      slide.classList.toggle('is-active', slideIndex === activeIndex);
+    });
+
+    dots.forEach(function (dot, dotIndex) {
+      var isActive = dotIndex === activeIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+    });
+
+    if (caption) {
+      caption.textContent = slides[activeIndex].getAttribute('data-caption') || '';
+    }
+  }
+
+  if (prev) {
+    prev.addEventListener('click', function () {
+      setActive(activeIndex - 1);
+    });
+  }
+
+  if (next) {
+    next.addEventListener('click', function () {
+      setActive(activeIndex + 1);
+    });
+  }
+
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      setActive(Number(dot.getAttribute('data-carousel-dot')));
+    });
+  });
+
+  carousel.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setActive(activeIndex - 1);
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setActive(activeIndex + 1);
+    }
+  });
+
+  setActive(0);
+})();
+</script>
