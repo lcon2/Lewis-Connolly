@@ -1,449 +1,788 @@
-﻿{
-    "root_items":  [
-                       {
-                           "title":  "blueprint",
-                           "file_name":  "blueprint.jpg",
-                           "type":  "image",
-                           "extension":  ".jpg",
-                           "path":  "/assets/private/connolly-archives/blueprint.jpg"
-                       },
-                       {
-                           "title":  "doris-connolly-book-of-remembrance",
-                           "file_name":  "doris-connolly-book-of-remembrance.pdf",
-                           "type":  "document",
-                           "extension":  ".pdf",
-                           "path":  "/assets/private/connolly-archives/doris-connolly-book-of-remembrance.pdf"
-                       },
-                       {
-                           "title":  "doris-connolly-coursebook",
-                           "file_name":  "doris-connolly-coursebook.pdf",
-                           "type":  "document",
-                           "extension":  ".pdf",
-                           "path":  "/assets/private/connolly-archives/doris-connolly-coursebook.pdf"
-                       },
-                       {
-                           "title":  "doris-gillon-cv",
-                           "file_name":  "doris-gillon-cv.pdf",
-                           "type":  "document",
-                           "extension":  ".pdf",
-                           "path":  "/assets/private/connolly-archives/doris-gillon-cv.pdf"
-                       },
-                       {
-                           "title":  "fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995",
-                           "file_name":  "fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf",
-                           "type":  "document",
-                           "extension":  ".pdf",
-                           "path":  "/assets/private/connolly-archives/fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf"
-                       },
-                       {
-                           "title":  "top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon",
-                           "file_name":  "top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg",
-                           "type":  "image",
-                           "extension":  ".jpg",
-                           "path":  "/assets/private/connolly-archives/top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg"
-                       }
-                   ],
-    "sections":  [
-                     {
-                         "title":  "camp-cayote-summer-1998",
-                         "folder_name":  "camp-cayote-summer-1998",
-                         "slug":  "camp-cayote-summer-1998",
-                         "images":  [
-                                        {
-                                            "title":  "1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda",
-                                            "file_name":  "1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg"
-                                        },
-                                        {
-                                            "title":  "1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc",
-                                            "file_name":  "1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg"
-                                        },
-                                        {
-                                            "title":  "camp",
-                                            "file_name":  "camp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/camp.jpg"
-                                        }
-                                    ],
-                         "documents":  [
-                                           {
-                                               "title":  "doris-gillon-cv",
-                                               "file_name":  "doris-gillon-cv.pdf",
-                                               "extension":  ".pdf",
-                                               "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/doris-gillon-cv.pdf"
-                                           }
-                                       ],
-                         "notes":  [
-
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     },
-                     {
-                         "title":  "doris-connolly-art-other",
-                         "folder_name":  "doris-connolly-art-other",
-                         "slug":  "doris-connolly-art-other",
-                         "images":  [
-                                        {
-                                            "title":  "pxl-20220307-021514483-mp",
-                                            "file_name":  "pxl-20220307-021514483-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021514483-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021540630",
-                                            "file_name":  "pxl-20220307-021540630.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021540630.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021558660-mp",
-                                            "file_name":  "pxl-20220307-021558660-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021558660-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021622805",
-                                            "file_name":  "pxl-20220307-021622805.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021622805.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021645434",
-                                            "file_name":  "pxl-20220307-021645434.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021645434.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021706673-mp",
-                                            "file_name":  "pxl-20220307-021706673-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021706673-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021722549",
-                                            "file_name":  "pxl-20220307-021722549.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021722549.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021745690-mp",
-                                            "file_name":  "pxl-20220307-021745690-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021745690-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021803913-mp",
-                                            "file_name":  "pxl-20220307-021803913-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021803913-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021820517-mp",
-                                            "file_name":  "pxl-20220307-021820517-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021820517-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021849547",
-                                            "file_name":  "pxl-20220307-021849547.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021849547.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021908795-mp",
-                                            "file_name":  "pxl-20220307-021908795-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021908795-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021926797-mp-copy",
-                                            "file_name":  "pxl-20220307-021926797-mp-copy.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021926797-mp-copy.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-021952939-mp-copy",
-                                            "file_name":  "pxl-20220307-021952939-mp-copy.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021952939-mp-copy.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022232598-copy",
-                                            "file_name":  "pxl-20220307-022232598-copy.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022232598-copy.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022301225",
-                                            "file_name":  "pxl-20220307-022301225.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022301225.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022420630",
-                                            "file_name":  "pxl-20220307-022420630.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022420630.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022546096",
-                                            "file_name":  "pxl-20220307-022546096.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022546096.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022615200",
-                                            "file_name":  "pxl-20220307-022615200.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022615200.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022632887",
-                                            "file_name":  "pxl-20220307-022632887.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022632887.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022727962",
-                                            "file_name":  "pxl-20220307-022727962.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022727962.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022806023",
-                                            "file_name":  "pxl-20220307-022806023.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022806023.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022844654-mp-1",
-                                            "file_name":  "pxl-20220307-022844654-mp-1.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022844654-mp-1.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022920147-mp",
-                                            "file_name":  "pxl-20220307-022920147-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022920147-mp.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220307-022954673",
-                                            "file_name":  "pxl-20220307-022954673.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022954673.jpg"
-                                        },
-                                        {
-                                            "title":  "this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore",
-                                            "file_name":  "this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg"
-                                        }
-                                    ],
-                         "documents":  [
-
-                                       ],
-                         "notes":  [
-
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     },
-                     {
-                         "title":  "doris-connolly-painted-table",
-                         "folder_name":  "doris-connolly-painted-table",
-                         "slug":  "doris-connolly-painted-table",
-                         "images":  [
-                                        {
-                                            "title":  "pxl-20220308-155009019",
-                                            "file_name":  "pxl-20220308-155009019.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155009019.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220308-155015097",
-                                            "file_name":  "pxl-20220308-155015097.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155015097.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220308-155023054",
-                                            "file_name":  "pxl-20220308-155023054.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155023054.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20220308-155028496",
-                                            "file_name":  "pxl-20220308-155028496.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155028496.jpg"
-                                        }
-                                    ],
-                         "documents":  [
-
-                                       ],
-                         "notes":  [
-                                       {
-                                           "title":  "note",
-                                           "file_name":  "note.txt",
-                                           "extension":  ".txt",
-                                           "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/note.txt",
-                                           "content":  "These pictures were taken on 08/03/2022. I believe this side table was painted as you see by Doris Connolly in the mid 1990s. (I don’t know where the piece was purchased)."
-                                       }
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     },
-                     {
-                         "title":  "dorris-connolly-personal-effects",
-                         "folder_name":  "dorris-connolly-personal-effects",
-                         "slug":  "dorris-connolly-personal-effects",
-                         "images":  [
-                                        {
-                                            "title":  "1639578832749-ce690441-f552-4939-9e70-cbd85208dd05",
-                                            "file_name":  "1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg"
-                                        },
-                                        {
-                                            "title":  "1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a",
-                                            "file_name":  "1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg"
-                                        },
-                                        {
-                                            "title":  "1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75",
-                                            "file_name":  "1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg"
-                                        },
-                                        {
-                                            "title":  "1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22",
-                                            "file_name":  "1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg"
-                                        },
-                                        {
-                                            "title":  "1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3",
-                                            "file_name":  "1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg"
-                                        },
-                                        {
-                                            "title":  "1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e",
-                                            "file_name":  "1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg"
-                                        },
-                                        {
-                                            "title":  "1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377",
-                                            "file_name":  "1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg"
-                                        },
-                                        {
-                                            "title":  "1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e",
-                                            "file_name":  "1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg"
-                                        },
-                                        {
-                                            "title":  "doris-and-paul",
-                                            "file_name":  "doris-and-paul.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/doris-and-paul.jpg"
-                                        },
-                                        {
-                                            "title":  "edgar-allan-isabella-fotheringham-mcdonald-allan",
-                                            "file_name":  "edgar-allan-isabella-fotheringham-mcdonald-allan.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/edgar-allan-isabella-fotheringham-mcdonald-allan.jpg"
-                                        },
-                                        {
-                                            "title":  "loveletter",
-                                            "file_name":  "loveletter.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/loveletter.jpg"
-                                        },
-                                        {
-                                            "title":  "paul-and-julie",
-                                            "file_name":  "paul-and-julie.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/paul-and-julie.jpg"
-                                        },
-                                        {
-                                            "title":  "pxl-20211215-145209523-mp",
-                                            "file_name":  "pxl-20211215-145209523-mp.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/pxl-20211215-145209523-mp.jpg"
-                                        }
-                                    ],
-                         "documents":  [
-
-                                       ],
-                         "notes":  [
-
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     },
-                     {
-                         "title":  "funeral-aetifacts",
-                         "folder_name":  "funeral-aetifacts",
-                         "slug":  "funeral-aetifacts",
-                         "images":  [
-                                        {
-                                            "title":  "image1",
-                                            "file_name":  "image1.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/funeral-aetifacts/image1.jpg"
-                                        },
-                                        {
-                                            "title":  "image2",
-                                            "file_name":  "image2.jpg",
-                                            "extension":  ".jpg",
-                                            "path":  "/assets/private/connolly-archives/funeral-aetifacts/image2.jpg"
-                                        }
-                                    ],
-                         "documents":  [
-
-                                       ],
-                         "notes":  [
-
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     },
-                     {
-                         "title":  "lewis-connolly-restrospective",
-                         "folder_name":  "lewis-connolly-restrospective",
-                         "slug":  "lewis-connolly-restrospective",
-                         "images":  [
-
-                                    ],
-                         "documents":  [
-                                           {
-                                               "title":  "1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5",
-                                               "file_name":  "1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf",
-                                               "extension":  ".pdf",
-                                               "path":  "/assets/private/connolly-archives/lewis-connolly-restrospective/1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf"
-                                           }
-                                       ],
-                         "notes":  [
-
-                                   ],
-                         "misc":  [
-
-                                  ]
-                     }
-                 ]
+{
+  "overview": {
+    "images": [
+      {
+        "title": "Blueprint",
+        "path": "/assets/private/connolly-archives/blueprint.jpg",
+        "extension": ".jpg",
+        "file_name": "blueprint.jpg"
+      },
+      {
+        "title": "Top (left to right): Unknown, Pat Connolly, Unknown, Nick Moore, Pete Coxon",
+        "path": "/assets/private/connolly-archives/top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg",
+        "extension": ".jpg",
+        "file_name": "top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg"
+      }
+    ],
+    "documents": [
+      {
+        "title": "Doris Connolly Coursebook",
+        "path": "/assets/private/connolly-archives/doris-connolly-coursebook.pdf",
+        "extension": ".pdf",
+        "file_name": "doris-connolly-coursebook.pdf"
+      },
+      {
+        "title": "Doris and Gillon CV",
+        "path": "/assets/private/connolly-archives/doris-gillon-cv.pdf",
+        "extension": ".pdf",
+        "file_name": "doris-gillon-cv.pdf"
+      },
+      {
+        "title": "Fussbuzz Exercise Book (1995)",
+        "path": "/assets/private/connolly-archives/fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf",
+        "extension": ".pdf",
+        "file_name": "fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "slug": "camp-cayote-summer-1998",
+      "title": "Camp Cayote, Summer 1998",
+      "description": "Recovered photographs and a CV grouped with the Camp Cayote material.",
+      "images": [
+        {
+          "title": "Camp Cayote image 1",
+          "path": "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg",
+          "extension": ".jpg",
+          "file_name": "1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg"
+        },
+        {
+          "title": "Camp Cayote image 2",
+          "path": "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg",
+          "extension": ".jpg",
+          "file_name": "1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg"
+        },
+        {
+          "title": "Camp",
+          "path": "/assets/private/connolly-archives/camp-cayote-summer-1998/camp.jpg",
+          "extension": ".jpg",
+          "file_name": "camp.jpg"
+        }
+      ],
+      "documents": [
+        {
+          "title": "Doris and Gillon CV",
+          "path": "/assets/private/connolly-archives/camp-cayote-summer-1998/doris-gillon-cv.pdf",
+          "extension": ".pdf",
+          "file_name": "doris-gillon-cv.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "slug": "doris-connolly-art-other",
+      "title": "Doris Connolly Art & Other",
+      "description": "A large image set documenting artwork and other related visual materials.",
+      "images": [
+        {
+          "title": "Artwork image 1",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021514483-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021514483-mp.jpg"
+        },
+        {
+          "title": "Artwork image 2",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021540630.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021540630.jpg"
+        },
+        {
+          "title": "Artwork image 3",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021558660-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021558660-mp.jpg"
+        },
+        {
+          "title": "Artwork image 4",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021622805.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021622805.jpg"
+        },
+        {
+          "title": "Artwork image 5",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021645434.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021645434.jpg"
+        },
+        {
+          "title": "Artwork image 6",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021706673-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021706673-mp.jpg"
+        },
+        {
+          "title": "Artwork image 7",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021722549.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021722549.jpg"
+        },
+        {
+          "title": "Artwork image 8",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021745690-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021745690-mp.jpg"
+        },
+        {
+          "title": "Artwork image 9",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021803913-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021803913-mp.jpg"
+        },
+        {
+          "title": "Artwork image 10",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021820517-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021820517-mp.jpg"
+        },
+        {
+          "title": "Artwork image 11",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021849547.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021849547.jpg"
+        },
+        {
+          "title": "Artwork image 12",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021908795-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021908795-mp.jpg"
+        },
+        {
+          "title": "Artwork image 13",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021926797-mp-copy.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021926797-mp-copy.jpg"
+        },
+        {
+          "title": "Artwork image 14",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021952939-mp-copy.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-021952939-mp-copy.jpg"
+        },
+        {
+          "title": "Artwork image 15",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022232598-copy.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022232598-copy.jpg"
+        },
+        {
+          "title": "Artwork image 16",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022301225.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022301225.jpg"
+        },
+        {
+          "title": "Artwork image 17",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022420630.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022420630.jpg"
+        },
+        {
+          "title": "Artwork image 18",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022546096.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022546096.jpg"
+        },
+        {
+          "title": "Artwork image 19",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022615200.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022615200.jpg"
+        },
+        {
+          "title": "Artwork image 20",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022632887.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022632887.jpg"
+        },
+        {
+          "title": "Artwork image 21",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022727962.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022727962.jpg"
+        },
+        {
+          "title": "Artwork image 22",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022806023.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022806023.jpg"
+        },
+        {
+          "title": "Artwork image 23",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022844654-mp-1.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022844654-mp-1.jpg"
+        },
+        {
+          "title": "Artwork image 24",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022920147-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022920147-mp.jpg"
+        },
+        {
+          "title": "Artwork image 25",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022954673.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220307-022954673.jpg"
+        },
+        {
+          "title": "Chicken t-shirt artwork",
+          "path": "/assets/private/connolly-archives/doris-connolly-art-other/this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg",
+          "extension": ".jpg",
+          "file_name": "this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg"
+        }
+      ],
+      "documents": [],
+      "notes": []
+    },
+    {
+      "slug": "doris-connolly-painted-table",
+      "title": "Doris Connolly Painted Table",
+      "description": "Photographs of the painted side table, alongside the surviving note about it.",
+      "images": [
+        {
+          "title": "Painted table image 1",
+          "path": "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155009019.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220308-155009019.jpg"
+        },
+        {
+          "title": "Painted table image 2",
+          "path": "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155015097.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220308-155015097.jpg"
+        },
+        {
+          "title": "Painted table image 3",
+          "path": "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155023054.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220308-155023054.jpg"
+        },
+        {
+          "title": "Painted table image 4",
+          "path": "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155028496.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20220308-155028496.jpg"
+        }
+      ],
+      "documents": [],
+      "notes": [
+        {
+          "title": "Note",
+          "content": "These pictures were taken on 08/03/2022. I believe this side table was painted as you see by Doris Connolly in the mid 1990s. (I don’t know where the piece was purchased)."
+        }
+      ]
+    },
+    {
+      "slug": "dorris-connolly-personal-effects",
+      "title": "Doris Connolly Personal Effects",
+      "description": "Personal photographs and related family materials grouped with Doris Connolly?s effects.",
+      "images": [
+        {
+          "title": "Personal effects image 1",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg",
+          "extension": ".jpg",
+          "file_name": "1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg"
+        },
+        {
+          "title": "Personal effects image 2",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg",
+          "extension": ".jpg",
+          "file_name": "1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg"
+        },
+        {
+          "title": "Personal effects image 3",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg",
+          "extension": ".jpg",
+          "file_name": "1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg"
+        },
+        {
+          "title": "Personal effects image 4",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg",
+          "extension": ".jpg",
+          "file_name": "1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg"
+        },
+        {
+          "title": "Personal effects image 5",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg",
+          "extension": ".jpg",
+          "file_name": "1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg"
+        },
+        {
+          "title": "Personal effects image 6",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg",
+          "extension": ".jpg",
+          "file_name": "1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg"
+        },
+        {
+          "title": "Personal effects image 7",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg",
+          "extension": ".jpg",
+          "file_name": "1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg"
+        },
+        {
+          "title": "Personal effects image 8",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg",
+          "extension": ".jpg",
+          "file_name": "1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg"
+        },
+        {
+          "title": "Doris and Paul",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/doris-and-paul.jpg",
+          "extension": ".jpg",
+          "file_name": "doris-and-paul.jpg"
+        },
+        {
+          "title": "Edgar Allan and Isabella Fotheringham McDonald Allan",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/edgar-allan-isabella-fotheringham-mcdonald-allan.jpg",
+          "extension": ".jpg",
+          "file_name": "edgar-allan-isabella-fotheringham-mcdonald-allan.jpg"
+        },
+        {
+          "title": "Love letter",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/loveletter.jpg",
+          "extension": ".jpg",
+          "file_name": "loveletter.jpg"
+        },
+        {
+          "title": "Paul and Julie",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/paul-and-julie.jpg",
+          "extension": ".jpg",
+          "file_name": "paul-and-julie.jpg"
+        },
+        {
+          "title": "Personal effects image 13",
+          "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/pxl-20211215-145209523-mp.jpg",
+          "extension": ".jpg",
+          "file_name": "pxl-20211215-145209523-mp.jpg"
+        }
+      ],
+      "documents": [],
+      "notes": []
+    },
+    {
+      "slug": "funeral-aetifacts",
+      "title": "Funeral Artefacts",
+      "description": "A small set of recovered funeral images and memorial objects.",
+      "images": [
+        {
+          "title": "Artefact 1",
+          "path": "/assets/private/connolly-archives/funeral-aetifacts/image1.jpg",
+          "extension": ".jpg",
+          "file_name": "image1.jpg"
+        },
+        {
+          "title": "Artefact 2",
+          "path": "/assets/private/connolly-archives/funeral-aetifacts/image2.jpg",
+          "extension": ".jpg",
+          "file_name": "image2.jpg"
+        }
+      ],
+      "documents": [
+        {
+          "title": "Doris Connolly Book of Remembrance",
+          "path": "/assets/private/connolly-archives/doris-connolly-book-of-remembrance.pdf",
+          "extension": ".pdf",
+          "file_name": "doris-connolly-book-of-remembrance.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "slug": "lewis-connolly-restrospective",
+      "title": "Lewis Connolly Retrospective",
+      "description": "The recovered retrospective document associated with Lewis Connolly.",
+      "images": [],
+      "documents": [
+        {
+          "title": "Note from Doris to Lewis",
+          "path": "/assets/private/connolly-archives/lewis-connolly-restrospective/1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf",
+          "extension": ".pdf",
+          "file_name": "1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "slug": "pictures-from-website",
+      "title": "Pictures from Website",
+      "description": "Recovered website-era images grouped into a dedicated archive section.",
+      "images": [
+        {
+          "title": "Website image 1",
+          "path": "/assets/private/connolly-archives/pictures-from-website/10360764-10101155364377690-9044443878224413519-n.jpg",
+          "extension": ".jpg",
+          "file_name": "10360764-10101155364377690-9044443878224413519-n.jpg"
+        },
+        {
+          "title": "Website image 2",
+          "path": "/assets/private/connolly-archives/pictures-from-website/10392260-128087086187-5200965-n.jpg",
+          "extension": ".jpg",
+          "file_name": "10392260-128087086187-5200965-n.jpg"
+        },
+        {
+          "title": "Website image 3",
+          "path": "/assets/private/connolly-archives/pictures-from-website/10398407-245165900297-1577912-n.jpg",
+          "extension": ".jpg",
+          "file_name": "10398407-245165900297-1577912-n.jpg"
+        },
+        {
+          "title": "Website image 4",
+          "path": "/assets/private/connolly-archives/pictures-from-website/1063847-10151535892779702-1704322766-o.jpg",
+          "extension": ".jpg",
+          "file_name": "1063847-10151535892779702-1704322766-o.jpg"
+        },
+        {
+          "title": "Website image 5",
+          "path": "/assets/private/connolly-archives/pictures-from-website/11082397-10206953368381268-8824730984968627945-o.jpg",
+          "extension": ".jpg",
+          "file_name": "11082397-10206953368381268-8824730984968627945-o.jpg"
+        },
+        {
+          "title": "Website image 6",
+          "path": "/assets/private/connolly-archives/pictures-from-website/178732-10151023945317290-1572478843-o.jpg",
+          "extension": ".jpg",
+          "file_name": "178732-10151023945317290-1572478843-o.jpg"
+        },
+        {
+          "title": "Website image 7",
+          "path": "/assets/private/connolly-archives/pictures-from-website/1930236-16212667289-5895-n.jpg",
+          "extension": ".jpg",
+          "file_name": "1930236-16212667289-5895-n.jpg"
+        },
+        {
+          "title": "Website image 8",
+          "path": "/assets/private/connolly-archives/pictures-from-website/30506-394246547289-2206675-n.jpg",
+          "extension": ".jpg",
+          "file_name": "30506-394246547289-2206675-n.jpg"
+        },
+        {
+          "title": "Website image 9",
+          "path": "/assets/private/connolly-archives/pictures-from-website/35418-408093357289-4474955-n.jpg",
+          "extension": ".jpg",
+          "file_name": "35418-408093357289-4474955-n.jpg"
+        },
+        {
+          "title": "Website image 10",
+          "path": "/assets/private/connolly-archives/pictures-from-website/40545-425535432289-7902711-n.jpg",
+          "extension": ".jpg",
+          "file_name": "40545-425535432289-7902711-n.jpg"
+        },
+        {
+          "title": "Website image 11",
+          "path": "/assets/private/connolly-archives/pictures-from-website/4336-78239647289-2849582-n.jpg",
+          "extension": ".jpg",
+          "file_name": "4336-78239647289-2849582-n.jpg"
+        },
+        {
+          "title": "Website image 12",
+          "path": "/assets/private/connolly-archives/pictures-from-website/477285-10150716435962290-457847392-o.jpg",
+          "extension": ".jpg",
+          "file_name": "477285-10150716435962290-457847392-o.jpg"
+        },
+        {
+          "title": "Website image 13",
+          "path": "/assets/private/connolly-archives/pictures-from-website/734749-10151216337347263-2039078251-n.jpg",
+          "extension": ".jpg",
+          "file_name": "734749-10151216337347263-2039078251-n.jpg"
+        },
+        {
+          "title": "Website image 14",
+          "path": "/assets/private/connolly-archives/pictures-from-website/905881-10152587024017290-7522851092350978942-o.jpg",
+          "extension": ".jpg",
+          "file_name": "905881-10152587024017290-7522851092350978942-o.jpg"
+        },
+        {
+          "title": "Website image 15",
+          "path": "/assets/private/connolly-archives/pictures-from-website/997077-10153258288822290-8421464733071010875-n.jpg",
+          "extension": ".jpg",
+          "file_name": "997077-10153258288822290-8421464733071010875-n.jpg"
+        },
+        {
+          "title": "Website image 16",
+          "path": "/assets/private/connolly-archives/pictures-from-website/image-asset-1.jpeg",
+          "extension": ".jpeg",
+          "file_name": "image-asset-1.jpeg"
+        },
+        {
+          "title": "Website image 17",
+          "path": "/assets/private/connolly-archives/pictures-from-website/image-asset-2.jpeg",
+          "extension": ".jpeg",
+          "file_name": "image-asset-2.jpeg"
+        },
+        {
+          "title": "Website image 18",
+          "path": "/assets/private/connolly-archives/pictures-from-website/image-asset-3.jpeg",
+          "extension": ".jpeg",
+          "file_name": "image-asset-3.jpeg"
+        },
+        {
+          "title": "Website image 19",
+          "path": "/assets/private/connolly-archives/pictures-from-website/image-asset-4.jpeg",
+          "extension": ".jpeg",
+          "file_name": "image-asset-4.jpeg"
+        },
+        {
+          "title": "Website image 20",
+          "path": "/assets/private/connolly-archives/pictures-from-website/image-asset.jpeg",
+          "extension": ".jpeg",
+          "file_name": "image-asset.jpeg"
+        },
+        {
+          "title": "Me",
+          "path": "/assets/private/connolly-archives/pictures-from-website/me.jpg",
+          "extension": ".jpg",
+          "file_name": "me.jpg"
+        }
+      ],
+      "documents": [],
+      "notes": []
+    }
+  ],
+  "writing_collections": [
+    {
+      "slug": "film-reviews",
+      "title": "Film Reviews",
+      "description": "Recovered reviews preserved from a Word document.",
+      "entries": [
+        {
+          "title": "Silence (2016)",
+          "meta": "",
+          "subtitle": "‘The Price for your glory is their suffering’(2 Jan 2007)",
+          "body": [
+            "Scorsese’s new epic masterpiece is theologically rich, aesthetically captivating, and emotionally raw. Based upon Endo’s 1966 historical fiction by the same name, Silence is a film about Portuguese priests facing persecution in 17th century Japan. This deep spiritual movie could not be more at odds with Scorsese’s previous work, The Wolf of Wall Street (2013), which portrayed the seedy, facile world of stock market fraud. Though antithetical, both films none-the-less point their audiences in similar directions, towards valuing the considered, devotional, moral life.",
+            "The primary theological question this film explores is all the issues surrounding Christian persecution. In the third century, the Roman Empire, under Emperor Decius, began persecuting anyone who was not sacrificing to the Roman gods, (i.e. Christians). This was policed by having officials issue certificates to those who did their duty, while severe punitive measures were wrought upon those who failed to comply. Some Christians acquired these certificates through duplicitous means, some Christians offered sacrifices regardless, and some refused, and as such were tortured or martyred. In other words, some Christians remained steadfast despite the consequences, and some compromised to avoid suffering. The Church subsequently had to decide what do with these turn-tail Christians. Were they now tainted? Could they be honestly forgiven?",
+            "In Silence, the same conundrum presents itself, both to the Japanese Christians, but also most arduously to the protagonist himself, Padre Rodrigues (played by Andrew Garfield). He portrays the emotionally tortured priest, his steadfast example on the one hand offering solace to the Christians, but also enabling much suffering and death as the indigenous Japanese follow his example and refuse to turn their back on Christ. Is he wrong to lead others into such suffering? Do these others even fully understand what they are suffering for? And to those who are weak, should he be forgiving them their trespasses, condoning such weakness?",
+            "This film’s namesake, Silence, arises from the silence of God: the priests’ subjective experience of God’s silence despite their great need, their great suffering. Where is God in their suffering? This is coupled with the protagonist’s ultimate acceptance of this God of silence by eschewing external religious expression, and in so doing counter intuitively becoming a true Christian, overcoming his vanity. The notion, hinted at, that the path of Jesus lies beyond establishment Christianity, and even beyond Christianity as conventionally perceived, obviously chimes deeply with my own understanding of the faith. This film is brutal, emotionally challenging, and tackles difficult questions; for three hours I was holding my breath. My only concern as this film reaches a wider audience is that it will be misunderstood as a film about Christian hardship, a dualistic conception of goodies and baddies, even though in reality the film is directly challenging such a reductionist understanding of faith. Keep in mind also, this film is coming from the same director who gave us the other religiously themed masterpiece: ‘The Last Temptation of Christ’ (1988)."
+          ]
+        },
+        {
+          "title": "The Tree of Life (2011)",
+          "meta": "21 Dec 2016",
+          "subtitle": "",
+          "body": [
+            "‘Where were you when I laid the foundations of the earth?... When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7",
+            "This film takes some stamina. It is long, dense with metaphor, lacking a conventional narrative arc, and somewhat mystifying. Its themes encompass life, the universe, and everything. The film literally spans all time, from the beginning of the universe to now. And, its message is unapologetically spiritual. The director, Terrence Malick, has clearly set out to impart some wisdom to us lesser mortals concerning the human experience, against the backdrop of nature’s majesty. His approach, his obscurantism, strays dangerously close to being somewhat pretentious. I acknowledge it is probably only down to my partiality towards the subject matter that I give the film the benefit of the doubt.",
+            "The film’s opening Bible verse really sets the context within which this whole film hangs – Job in the Old Testament is the good and righteous man who endures suffering, and questions God for allowing such evil. As the couple at the centre of this movie wrestle with the death of their nineteen-year-old son, this film asks that age old existential question: ‘Why do good people suffer?’. And, in the end, this film rehashes the unsatisfactory answer – that there is a bigger picture at stake. Crassly put, God has a greater plan in the offing. This answer can be characterised in this way: look closely at a painting, and the smudge you see may not look very inspiring, but take a step back and you will see the beauty of the picture. When it comes to beauty, the nature shots, trees against blue skies, distant nebula, dividing cells, and revolving planets, the film does an awe-inspiring job.",
+            "Malick depicts the cosmos as two competing forces, grace vs. nature, love vs. the harsh reality of a world red in tooth and claw, two forces which are in a grand cosmic dance with one another. This dance is expressed throughout the film in the imagery, in the people, and in the poetic dialogue, thus subverting the simplistic duality of good and evil, and thus reaffirming the grand narrative of purpose, even when it eludes us within our subjective present. Ultimately, my problem with the movie is a theological one. I do not believe in Malick’s God; I do not believe in his guarantor of meaning that hangs above creation and gives sense to the senseless.",
+            "Heidegger heralds the end of thinking of God in this way, the end of appealing to forces beyond the horizon of our understanding. All in all, I value this Avant Garde piece of art for daring to tackle the subject matter, and for sparking off some conversations.",
+            "For more theology in this vein check out my 2016 Advent addresses."
+          ]
+        },
+        {
+          "title": "Her (2013)",
+          "meta": "15 Dec 2016",
+          "subtitle": "",
+          "body": [
+            "‘Her’ is a film about a man who falls in love with his operating system. Not Windows, Mac OS or even Linux, but a new talking operating system with artificial intelligence called Samantha (played by Scarlett Johansson). The film is set in the not too distant future, during the technological revolution futurologists term the ‘Technological Singularity’: the point at which emergent artificial superintelligence suddenly causes a runaway up-turn in technological growth. Caught in the middle of this is the mild-mannered, socially awkward protagonist, Theodore Twombly (played by Joaquin Phoenix)",
+            "What makes this film so fascinating is the various thought experiments it poses. If superintelligent computers equate to emotionally intelligent persons, and it was not possible in effect to make a distinction between humans and artificial-intelligent beings (or OS), could emotional bonds not form, and in time become the primary relationships in our lives? During ‘Her’ we see society’s reaction to this phenomenon unfold. At first, disapproval, the idea that this bond is in some sense not real but artificial and therefore deficient, then towards being ubiquitous and therefore embraced as normative. Relationships determine human self-worth – our friends and family - they give us a consistent self-narrative through which we derive meaning and purpose.",
+            "Eros (meaning love in the non-sentimental or shallow sense) with a primary other, for most of humanity, is the pinnacle of the human experience, to have a spiritual and emotional connection with another. It doesn’t seem too much of a stretch to even equate this experience or longing with a defining characteristic of humanity. As such, what would it mean if our primary other was not a human being at all? How would we understand our sense of self if we ceased having significant relationships with other human beings?",
+            "There are many discoveries and inventions which have changed the way we live in this world. As new technologies come in there is always a minority on the peripheries which concludes the latest step, in some sense, belittles their humanity, and as such they opt out. Take the convenience of Amazon, or what Social Media has done to our relationships, or our ability to be contacted anywhere and at any time. All of these for good reason have been boycotted by some. Such actions however have always struck me as somewhat futile and superficial. Pronouncements of this kind invariably communicate how sanctimonious we are, as opposed to highlighting significant issues. ‘Do not let you left hand know what your right hand is doing’ comes to mind.",
+            "The Singularity as is depicted in ‘Her’, if it happens, will be the ultimate turning point for humanity, and will almost certainly ride in upon the same wave of inevitability. It too will have its detractors, who bemoan the demise of humanity, and they will have a point, but one overshadowed by the inescapability of change. So, like the protagonist Theodore, we will all need to come to terms with the change, however brutal and painful, because it will be unavoidable."
+          ]
+        },
+        {
+          "title": "Pi (1998)",
+          "meta": "2 Sep 2016",
+          "subtitle": "",
+          "body": [
+            "This movie is about hubris, obsession, and the search for answers, the search which like Icarus can lead us to fly too close to the sun, to throw cation to the wind. The protagonist Max Cohen is a number theorist in search of the ultimate numerical code. Plagued with migraines, and leading a life punctuated with bouts of mania, he searches for a code in which will unravel the universe of numbers that represents the global economy.",
+            "For the economy is a system, a globe-spanning organism, full of life, and therefore there must be, Max maintains, a code that underpins it. Of course the implication of such a discovery would be earth shattering, and so Max is ever on his guard, paranoid that he is being watched. But watched by who? As the film unfolds we learn of several parties who take an interest in Max or his work: a Jewish sect of Kabala inspired mystics, a Wall Street Firm, and his wise friend, Sol Robeson, who has long given up on the impossible quest himself.",
+            "The film is a character study, an exploration of Max’s interior world. Certainly a great deal of the movie happens solely in Max’s head, and distinguishing the “real” from the subjective becomes increasingly difficult as he descends into his mania. In this way, the various forces, the Jews, the capitalist, or his friend, represent distinctive drives at play - a spiritual drive, a materialist drive, a humanizing drive. But ultimately it is just sheer arrogance and self-hubris which fuels his search for knowledge, a knowledge, it transpires, which is not merely underpinning the economy, but underpinning reality itself – a number which is the very name of God. The name of God that Max feels he alone has been found worthy to possess.",
+            "Ultimately, complete madness and complete genius coalesce in his coming face to face with the divine, a truth beyond him, and so he destroys the number and his own mathematical ability to repossess such knowledge through self-mutilation. It is akin to the story of Babel, but instead of God slurring the words of humanity to thwart their efforts, Max deems himself unworthy.",
+            "The mythological underpinning of this surrealist thriller is the numerology contained in the Kabbalah – the esoteric branch of Judaism. This at its core is a means of overcoming the destructive will of the ego, represented by the self-interested parties in the movie. Instead of self-interest we should collectively seek unification with the divine, the upper force. The film acts as a parable of humanity’s unworthiness as of yet to fulfil this end; humanity’s inability to join with one another and thus overcome our petty desires, our petty hubris."
+          ]
+        },
+        {
+          "title": "Calvary (2014)",
+          "meta": "29 Aug 2016",
+          "subtitle": "",
+          "body": [
+            "Calvary is a modern-day re-telling of the Christian Gospel. A dark cerebral comedy which tackles the hard questions of guilt, sacrifice, forgiveness, and life’s meaning. The film closely mirrors the liturgical structure of Holy Week, the week in the church’s calendar which directly precedes Jesus’ death, burial, and resurrection. The protagonist of Calvary is a clear thinking, well intentioned priest, overseeing a parish of degenerates in a rural, isolated portion of Ireland. The film begins with the protagonist Father James (Brendan Gleeson) being told anonymously in a confessional that he will die for the sins of another priest, despite being a “good priest” himself.",
+            "Right from the offset his impending demise is put front and center. Again this closely parallels Jesus’s ultimate demise upon the cross. As Christians move through the landscape which makes up the liturgical Holy Week, there is ever that knowledge that it will culminate with Jesus’ death on the cross; a death which Christian mythology understands as taking place for the sins of others, in order that reconciliation with God is made possible.",
+            "In this vain, there is a sense that Father James is not dying needlessly, but sacrificially for his parishioners; that somehow the collective evil of all them, or perhaps even society itself, will be redeemed in his death. As the film unfolds, we the audience are invited to consider who we think the would-be-murderer is, though ultimately we are brought to a place where the question becomes incidental, for his act of cruelty is merely a manifestation of the pain or sickness of the age. As Jesus says upon the cross, ‘Forgive them for they know not what they do’.",
+            "Though the film strongly emphasizes the Christian narrative motif, it does so in a contemporary fashion. There is no nod to supernaturalism at all. Father James is the pastor, seeking to know his flock well, and exemplifies forgiveness even in the face of mockery, cynicism, and ultimately violence towards himself. He sums up his life’s philosophy best when he says, “I think there is too much talk about sins to be honest, and not enough talk about virtues… I think forgiveness has been highly underrated.”",
+            "His modelling of forgiveness is the ultimate expression of love, a love which is not contained, but supersedes his span of life. It is, if you like, the protagonist’s resurrection, his spirit of forgiveness is uncontainable.",
+            "I think the film is refreshing in the way it handles its Christian characters, avoiding the two pitfalls of over sentimentalizing them or, as is more often the case these days, portraying them as hypocrisy-ridden child sex abusers. A film well worth our time, and reflections."
+          ]
+        }
+      ],
+      "source_path": "/assets/private/connolly-archives/writings-source/film-reviews.docx"
+    },
+    {
+      "slug": "poetry",
+      "title": "Poetry",
+      "description": "Recovered poems and prose preserved from a Word document.",
+      "entries": [
+        {
+          "title": "Deep Contours",
+          "meta": "15 February 2023",
+          "subtitle": "",
+          "body": [
+            "I find the pursuit of platonic furniture somewhat amusing.It must be white and bright. For reasons not entirely clear.We could call it “Sacred Geometry”, a pullingof the material out from the ethereal.But it isn’t really that. It’s a performative thatIt invokes a sense of it without being it.Pieces are usually taller, thinner, with clean lines.Perfect symmetry. A kind of heavenly imagining offurniture. With angelic beings occupying crystal palacesIn Prisms. Nothing need be that sturdy. There’s littlegravity at play. And everyone is taller, I guess.Swedenborg was enraptured by such visions.This realm corresponding with that, informing ourSensibilities. Furnishings in Mormon temples. The Jeffersonmemorial. Greco-Roman architecture. The Parthenon.Mausoleums. All those graves in alignment before thegolden gate. It is unworldly. A world for the dead.But it isn’t as well. It isn’t really that. It’s an attempt toinvoke our intuitions concerning it, but no image gets itThere are no beings of flesh and blood there, no foodMaybe some marble fruit in a bowl. Perhaps it is noheavenly image at all. But rather, a kind of hell.Certainly beguiling though. It is the stuff of EmpiresA myth to die for. This is not to say however that I wouldjuxtapose this myth with anything I would call “reality”There is no truth. Or if there is, that truth is a manwho can’t even scream, suffocating in his own bloodWe need our illusions. We need good illusionsAnd that word “good” is a tricky one. Good for me.A tall wall, as long as I’m on the right side of it.If you’re playing the game correctly, winning is aboutSituating yourself within the right illusion.“Every time you say you don’t believe in fairies afairy dies.”So, the skill I guess is in discerning the good illusionAnd the hedonic calculus won’t get you thereSelfishness is better than good, don’t trust the good!Bounded selflessness is better, bounded to the self.Are the illusions pointing beyond themselves,I think they are. But not in any clearly expressible wayIn a way, it seems like an awareness of the wider gameDoes get you closer to recognising the deeper contoursThere are so many bad illusions. They all have in commonjust how good they look from the outsideyou’ll probably need to get into the middle of a fewbefore you realise how they’re all structured.You cannot compel them through will. You can onlyabandon them, you can only choose. If you’re lucky.But maybe you don’t even choose. I cringe at the clichéBut perhaps they choose you. Or the exceptional oneson occasion craft their own. I find that remarkable.Even if they craft a really really bad one, just the abilityI find impressive. I think also part of the recognition ofthe contours, lies in one’s ability to discern the need forOne, or the space that one could occupy, despite not havingthe ability to bring it forth. It’s probably inaccurate tosay any one person brings them forth… They ride theswell. Aesthetics is a nice way to think about it, what everplatonic furniture looks like, one thing is for certainit doesn’t look like platonic furniture."
+          ]
+        },
+        {
+          "title": "A Death",
+          "meta": "10 March 2022",
+          "subtitle": "",
+          "body": [
+            "He raised his voice in anger. He showed us disrespect. Be our bloody sacrifice. When the pieces were arrayed, I watched him take the place of honor, the seat with the extra leg room. He snapped. He retorted. He had it all coming.",
+            "He gave such a good speech. You could say he stole the show. Such presence. Such command. Every word invoking depth; it spoke to my soul. We’re so lucky. So blessed to have someone who can elucidate the deeper mysteries.",
+            "We’ll tear, we’ll scream, we’ll rip him all the way down. You’d be mad not to convict. Mad not to throw the stone. I saw it in his eyes. It’s like I never knew him. Yes, we cheered. Yes, we adored. But now we’re ready to destroy.",
+            "It’s like a love turning to a hate. What we gave, we’ll take it all away. I heard them crying “give us everything”. And thank them for the privilege. A little less. A little more. Jump you fool. To the right. To the left. A little too much if you ask me.",
+            "Express the whole. Be a part of me. Tease out what I wish to be. I see myself in you, in your words, and I don’t like it. Divide me, divide my house, divide us all. My supporter. My detractor. A step too far. An endless game of words.",
+            "A sacrifice"
+          ]
+        },
+        {
+          "title": "The Yielding Dance",
+          "meta": "6 November 2019",
+          "subtitle": "",
+          "body": [
+            "Through the tent pitched bogRising up the wet grassy creekFollowing dad to pub’s shelterDrawing in dark cloud and skyTo sanctuary of fire and songO how I love this rainy nightSee black stout of brawny menKnees and bellies, Gaelic cheerRising fiddle, and lass’s dittyTo dance as little boys enthralThrough the back rooms andRound the bare wooden beamsTo the strawberry dervish girlThe twist of tartan plaid crossRound ta the pinball set matchLeaning in to inhale this balladAnd then back again, back againBack to the hard-wooden floorsO how I love this rainy nightA tap and tap, he whirred us onSpinning skirt and freckled faceRound ta the back n’ round againHeadlong past wind-lashed porchTo this liminal space to never endBeating fast, and faster whileThese pants exuberant hither endA pound for dancing with my gal"
+          ]
+        },
+        {
+          "title": "Reposting Rumi",
+          "meta": "28 June 2019",
+          "subtitle": "",
+          "body": [
+            "If you can repost Rumi to refashion your identityYet not lose your sense of self-respect,If you can apprehend your true economic value,while everyone around you does likewise;If you can capture it all in a consumable narrativeOr put your name to causes worthy of it,Or be located in the right place at the right time,And yet not post too much, or look too eager:",
+            "If you can sincerely monetize your innermost passions;If you can utilize every click, and optimize every like;If you can offset your plagiarism with your clevernessAnd never allow your ego to acknowledge either;If you can withstand others’ cynicism of globalisationWhile bearing their nationalistic and utopian folly,Or watch as others steal URLs with your name on itAnd brace yourself for the inevitable rebrand:",
+            "If you can skim quite happily along the surface of lifeAnd never acknowledge the nihilistic void ahead,If you can view your neighbour as an economic actorAnd see their failures as theirs, and theirs alone;If you can equate market freedom, with human freedom,And never think to question the status quoOr deal in what could be’s, or lofty contingencies,Don’t acknowledge such idealistic tripe:",
+            "If you can know all this, and still rise to assert yourself,Or affirm your own personhood in a world devoid of it;If you can blog for the sake of your own actualisation,And recognize your own wit and wisdom to boot;If you can set all those agitated minds demanding redressat ease, with catchy slogans, and echoed clichés;Yours is the neoliberal world and all forces therein,And – what’s more – you’ll be soulless, my son!"
+          ]
+        },
+        {
+          "title": "No Bucket",
+          "meta": "25 June 2019",
+          "subtitle": "",
+          "body": [
+            "You have no means, companion of the desolate,To annex the deluge below, and bring it all forthNo weapon to compel it, no tool to draw itYou come, as I do, with nothing.",
+            "With nothing, but the urgency of the cut throat,Chomping at the bit and raging after possibilityMight we ever take it all, hold it as our due,Depart, as if it was always going to be.",
+            "If we say as much, command as much, speak as much,Shall it not be so. Shall all of creation not conspireAs we tune into all that primordial intention,To give us what we long for, pray and hope for."
+          ]
+        },
+        {
+          "title": "The Green Snake and the Beautiful Lily",
+          "meta": "4 June 2019",
+          "subtitle": "This short story as written by me is a simplified adaption of ‘The Green Snake and the Beautiful Lily’ (1795) by Johann Goethe.",
+          "body": [
+            "Once upon a time, a Ferryman, who slept in his hut by the Great River, was awoken. Awoken in the night by two will-o’-wisps seeking eagerly to be taken across the river. Without a moment’s hesitation, the Ferryman pushed his boat into the river and began taking the two across. As they came to the other side, the two will-o’-wisps began to shake gold pieces from themselves, that fell haphazardly into the boat. “Stop!” Said the Ferryman. “What are you doing‽ Do you not know if a piece of gold fell into the Great River, the river would send up waves - a great tempest - and it would swallow up both me and my boat? Take back your gold at once, I do not accept it as payment.”The will-o’-wisps then explained how they never took back anything that they gave.“Be that as it may, the Ferryman of the Great River (that’s me!) only accepts as payment the fruits of the good earth! Everyone knows that! I cannot let you go until you promise to return to me with – with – let’s see - three cabbages, three artichokes, and three onions – three large onions!”The will-o’-wisps agreed and departed into the night. The Ferryman then collected up the perilous gold coins in his cap. Once he was sure he hadn’t missed a single piece, he took them up to a high place and dropped them into a cleft in the rock. Deep in that cleft, the gold pieces fell, chinking as they went down, awakening, deep within the rock, a green Snake. The green Snake, to her great delight, discovered the gold coins and swallowed them up. Scarcely had she swallowed them, when she felt great delight flood her body. She could feel the metal within her melting, spreading joy throughout her body; her skin began to glow. She was emanating a bright light which allowed her to see all about her. So often she had to rely upon the feel of things, the sharp rocks, the pillars, and the polished marble about her in the depths of the earth, but now she could see, she could navigate. So, slithering down into the deep, she went exploring, and in no time at all, in a subterranean cavern, she discovered a grand Temple, shimmering with precious metals. A temple to the three which have rule on earth: wisdom, appearance, and strength.The Ferryman was used to taking all sorts across the Great River - everyone who was seeking to pass from the land of the senses to the land of the spirit.“Oh what does it matter!” Like this one for instance. “Oh woe is me!”The Ferryman took him across just a couple of days ago, this sad looking prince.“My heart aches for the one I love, the beautiful Lily of the garden; I can never be with her.”He moaned liked this constantly. So much so, that when the Ferryman had taken him across the river, he didn’t even ask him for payment. He was glad to be rid of him.“I am without hope!”The Ferryman asked why he had returned with what looked like a basket of vegetables.“Two will-o’-wisps bade me to do so. They stole my gold, and ordered me to come and pay you what they owed. Is this right - three cabbages, three artichokes, and three small onions?”“Close enough”, explained the Ferryman, who then enquired as to why the prince had listened to them at all, especially after they had robbed him.“Because what does it matter? That’s why. I am alone and I always will be alone.”  You see, it was said that the Lily of the garden was the most beautiful, but it was also said that if one got to close to her, they would surely die.“Must I walk up and down this river for evermore? No! I must be with her, and if die I must, then die I shall!” cried the prince, and with that, he left the Ferryman and made his way to the garden.Sure enough, when the sad prince reached the garden, he made for the beautiful Lily, and just before he reached her, he collapsed and died. The Lily of the garden looked down at the prince full of sorrow, with despair in her heart. But from afar, the glowing Green Snake watched the whole scene unfold, for she had come forth from the Temple of the deep.“The time is at hand”, the snake said as she went towards the garden, moved by compassion. When the snake was before the prince and the Lily, she took the hand of the prince and the hand of the Lily and placed them both on her scaly skin. The prince instantly sat upright, as all that energy and joy flowed out of the snake and into him. At that very moment the ground began to shake. As it did so, the prince and the Lily, hand in hand, along with the snake, made their way down to the Great River. As they arrived at the water’s edge, they all watched in astonishment as the shimmering Great Temple of the deep burst up out of the ground, the temple of wisdom, appearance, and strength. But as the snake saw the united couple and the temple, she knew wisdom, appearance, and strength were not enough; there was a fourth power that ruled the world, a fourth power which is older and more universal: the power of love.With that thought the snake stretched herself across the river, and, sacrificing herself, created a bridge which for evermore united the land of the senses and the land of the spirit. United also in marriage were the prince and the Lily, who lived happily ever after. To this present hour the bridge is swarming with travellers, and the Temple is the most frequented on the whole Earth.",
+            "THE END"
+          ]
+        },
+        {
+          "title": "The Masquerade",
+          "meta": "11 March 2019",
+          "subtitle": "",
+          "body": [
+            "He took my fear but yielded to the circus.I asked him about the imitation game,Where one’s form and façade are king,The softened image, the edges frame.Must we play the jesters game?For I horror. The curated self is no self at all.Does reality not collapse into appearance?Are we not hidden crafters ever preparingFor some grand carnival that never comes?Must we play the jesters game?"
+          ]
+        },
+        {
+          "title": "This Illustrious Cacophony",
+          "meta": "11 March 2019",
+          "subtitle": "",
+          "body": [
+            "At breaktime, playful fingers reach for milky keys,fretting hands imitate eagle’s claws perched on prickly strings,while a wee index digit is adjusted by big hairy handsupon the trumpet’s silver valves. Little earnest faces,hammer, spit, and pluck life into their miniature tools,which buzz and twang in discordant waves that soarin joyful array out from Mr Banks’ déjà vu musical emporium.This illustrious cacophony, chorus of shouts to boot,harmonises in ideal unison with school’s atonal woops.A sideways glance, a whistle, an anticipated coda.She conducts her pinching finale to the instrumental end."
+          ]
+        },
+        {
+          "title": "The Looking Glass",
+          "meta": "11 June 2018",
+          "subtitle": "",
+          "body": [
+            "In time I dared to look through the looking glassGloss of small specks caused me to see but dimlyCalmly I spoke of all the grim horrors withinInculcated inside was the great rolling BehemothThe wrathful one veiled by thick dust on windowsHeedful I wiped the glass, and peered in deeperWitnesser of all earth’s death and tumultAssault upon gentle innocence, she howledSprawled out these green refusers breathed dustVast evils are not out there - in condemned goatsBeasts afar off, no, no! They writhe within!"
+          ]
+        },
+        {
+          "title": "Sublime Triplicity",
+          "meta": "11 May 2018",
+          "subtitle": "",
+          "body": [
+            "Betwixt the thumb, forefinger, and middle finger of the adept, a sprig of wormwood held aloft. He stood bent amongst the accoutrements of a lifetime’s craft; orbs, scrolls, charts, and countless crystal beakers. All resolute memorials to efforts that transpired to no end. The shallow endeavours of a now brittle and wretched old man, ever plagued by a youthful hope never realised. “But could this be it?” Like new moons of the lunar cycle his eyes flashed with brilliance anew, he sprung after parchment and a quill. “Could this be the triplicity of compounds I have sought all my days?”",
+            "Goose feather in hand, he scratched upon the vellum a triangle. Upon the first point he penned ‘absinthium’, the second, ‘conium maculatum’, and the third, ‘mandragora’. “This is it,” he muttered in adoration. For a moment he held the parchment in disbelief. It was as if he had plucked the formula effortlessly from the air. Setting to the task, he arrayed the coiling apparatus, and fixed the pear-shaped flask upon the steel tripod, within which he arrayed the organic matter, setting the flame. An impure froth emanated forth, a vapour rose through the pipes and drops fell upon the dish.",
+            "Seizing the elixir in raw anticipation, he did not hesitate to put it to his lips. In a sublime euphoric instant, he knew this was the culmination of his life’s work. The knots of every past failure seemed to uncoil within him; he could see that all his folly, precipitated by folly, arced flawlessly to this very moment. His skin tingled with delight. It was as if he perceived all from an elevated state of being. Looking to the scraggy ink splotched triangle, he smiled as his breath shallowed, his heart beat its last, and he gave up the ghost…"
+          ]
+        },
+        {
+          "title": "The Kenotic Angler",
+          "meta": "11 September 2017",
+          "subtitle": "",
+          "body": [
+            "He cast his lure from the centre of himself,a burst of unspooling divinity across the cosmic lake.It was out of his being that all possibility unravelled,upon a line affixed with lead split shot.Small steely ball bearings, thread throughtheir gimlet eye, varnished with blues and greens.With all the vital mushy fibres of motion,ready to ripen into a farrago of blood and shit.Watch, as conveners tug on the totemic yarn,and knot it through the synthetic scholastic tree.Idolatrous zealots of nonsense revering tangledfishing line once cast by the long since dead angler.Is it not time to cut it down, and loose ourselvesfrom it all, as he once loosed himself from himself?"
+          ]
+        }
+      ],
+      "source_path": "/assets/private/connolly-archives/writings-source/poetry.docx"
+    },
+    {
+      "slug": "reflections",
+      "title": "Reflections",
+      "description": "Recovered reflective and devotional pieces preserved from a Word document.",
+      "entries": [
+        {
+          "title": "Upon the Wooded Thicket",
+          "meta": "",
+          "subtitle": "",
+          "body": [
+            "Lighter air of our affinity, awaken thine true love within us,Root us, and bind us, banish false masks, and all apparitions of deceit. Let us venture together, standing as one upon the verge of the wooded thicket, As we seek together groves of refuge, awakened selves, and closer harmony.",
+            "Let us delight in these warrens of insight, these illuminated paths of curiosity,For alike, we intuit after religious truth, we unfold the mysteries of the self.Self in harmony with the body: body of our physicality, body of our shared unity,As one gathered people, where souls silently commune in mystic labour.",
+            "Where the tides of the spirit flow over us, attending our pains and sorrows, Guide our hearts upon this trail; help us to notice the bluebells growing,To find joy in simply, simply. To be deeply alive to all, for God who is in everything, As we find our conscience, our good, our kind words, our non-conformity.",
+            "Raising our gaze: spattering of light through the canopy above, green on green.For the sake of larger things, dreams worth having, and mighty grand visions,Take up this work of love, to be hands of compassion, and instruments of peace. Eternal Kin-dom draw near, may we breathe you into our midst.",
+            "May it be so, Amen."
+          ]
+        },
+        {
+          "title": "Glimpses",
+          "meta": "",
+          "subtitle": "Inspired by Marcel Proust",
+          "body": [
+            "In taste, in smell, in sight, we catch glimpses of our past;Recollections we didn’t know we had, which teleport us back,Back to memories all but gone. Dreams within dreams.Precious fragments, essences of pasts forgotten.The illusory sense; how we long for dawn's breaking,For simply clarity, to see the truths behind senses' web,To feel in love, and connected, and presentIn the moment, connected to a thousand moments,And there be uplifted, and awakened, and alive.Lemon tea and Madeleines, delicate sweet aromas.Precious memories, fleeting glimpses, wordless abstraction.Intaking breath from spaces, in the depths of our knowing.Being fed from wells unseen, renewed from places within.For our voyages ahead, enlivened with these new eyes. In taste, in smell, in sight, we catch glimpses of our past."
+          ]
+        },
+        {
+          "title": "No mundane task",
+          "meta": "",
+          "subtitle": "",
+          "body": [
+            "What we choose to believe is no mundane task;it shapes and illuminates our world.",
+            "Such freedom is the greatest gift,and as we unwrap it and savour the riches therein,",
+            "do we not uncover the numinous,commune with the sacred, and reach upon the illusive?",
+            "Here we prize that most weighty responsibility,upholding one another in this most hallowed task,",
+            "around this chalice, enjoining hearts of compassionfor a people trapped in the concrete mundane.",
+            "We strive anew with lofty dreamsfor the triumph of compassion, love and justice.",
+            "Amen."
+          ]
+        },
+        {
+          "title": "Unitarianism",
+          "meta": "",
+          "subtitle": "",
+          "body": [
+            "Unitarianism is where we proudly own the heresy label. Boldly disavow the centre-ground, and the respectable.Brazenly stand shoulder to shoulder with our fellow misfits and rebels.Unitarianism is a place to grow, to unfold, to stretch out.Fearlessly and joyfully ferreting and shuffling our way down new paths.Wilfully declaring our unified oneness, in spite of our spacious uniqueness.Unitarianism does not dream of imagined pasts, or wallow in the mire of lifeless custom. Foolishly we will play the jester to point the way towards a world of unshackled souls.Profusely striving as dreamers do, towards a world of liberty and happiness.For in this space beyond assumption, beyond the centre, we live, we strive, we have our being.Amen."
+          ]
+        },
+        {
+          "title": "Finding the Sacred Centre",
+          "meta": "",
+          "subtitle": "",
+          "body": [
+            "God of mystery and wonderWho encompasses the breadth of our warring selves – bring us into peace and harmony with all around us, and this world – in all its wonders and its vast diversity. Help us to be a force for good on this planet, advocates of peace and love, and visionaries of a world where there is neither hunger nor segregation.God of mystery and wonder – bring us together into a tapestry so beautiful and fascinating: that in its diversity and depths we might hold and embrace the lost, and the dispossessed. Amen"
+          ]
+        },
+        {
+          "title": "What is this Spiritual Path...",
+          "meta": "",
+          "subtitle": "",
+          "body": [
+            "To be led to green pastures, and not be a sheepTo follow the way of love, and not follow blindlyTo make allowances for doubt, and not fall into cynicismWhat is this Spiritual Path…To be true to yourself, and to never live enoughTo search, to seek, to ever wonderTo be ready always to risk it all, for love, for dreamsWhat is this Spiritual Path…To be thankful for this new day, thankful for the beauty we seeTo rejoice with the rejoicing, and weep with the weepingTo be ever free, to ever treasure our libertyWhat is this Spiritual Path…"
+          ]
+        }
+      ],
+      "source_path": "/assets/private/connolly-archives/writings-source/reflections.docx"
+    }
+  ]
 }

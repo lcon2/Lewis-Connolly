@@ -1372,6 +1372,32 @@ footer {
     .connolly-archives-gate__cancel {
         width: 100%;
     }
+
+    .connolly-archives-writing {
+        padding: 18px 16px 18px;
+    }
+
+    .connolly-archives-writing__header h3 {
+        font-size: 1.3em;
+    }
+
+    .connolly-archives-lightbox {
+        padding: 14px;
+    }
+
+    .connolly-archives-lightbox__panel {
+        padding: 18px 14px 14px;
+        border-radius: 20px;
+    }
+
+    .connolly-archives-lightbox__title {
+        margin-right: 34px;
+        font-size: 1.25em;
+    }
+
+    .connolly-archives-lightbox__figure img {
+        max-height: calc(100vh - 150px);
+    }
 }
 
 .audio-player {
@@ -1531,6 +1557,10 @@ footer {
 }
 
 .connolly-archives-lock {
+    overflow: hidden;
+}
+
+.connolly-archives-lightbox-lock {
     overflow: hidden;
 }
 
@@ -1775,6 +1805,16 @@ footer {
     min-height: inherit;
 }
 
+.connolly-archives-carousel__image {
+    display: block;
+    width: 100%;
+    min-height: inherit;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
 .connolly-archives-carousel__slide img {
     display: block;
     width: 100%;
@@ -1853,6 +1893,148 @@ footer {
     color: #ffffff;
     border-bottom-color: #ffffff;
     outline: none;
+}
+
+.connolly-archives-writing-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.connolly-archives-writing {
+    padding: 20px 22px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.connolly-archives-writing__header {
+    margin-bottom: 14px;
+}
+
+.connolly-archives-writing__header h3 {
+    margin: 0;
+    color: #f2ede6;
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+.connolly-archives-writing__subtitle,
+.connolly-archives-writing__meta {
+    margin: 8px 0 0;
+    color: #d7d0c9;
+}
+
+.connolly-archives-writing__subtitle {
+    font-style: italic;
+}
+
+.connolly-archives-writing__meta {
+    font-size: 0.95em;
+    letter-spacing: 0.02em;
+}
+
+.connolly-archives-writing__body {
+    display: grid;
+    gap: 12px;
+    color: #e4ddd5;
+}
+
+.connolly-archives-writing__body p {
+    margin: 0;
+}
+
+.connolly-archives-source-link {
+    margin: 16px 0 0;
+}
+
+.connolly-archives-source-link a {
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.45);
+}
+
+.connolly-archives-source-link a:hover,
+.connolly-archives-source-link a:focus-visible {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+    outline: none;
+}
+
+.connolly-archives-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.connolly-archives-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 40%),
+        rgba(8, 8, 8, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.connolly-archives-lightbox__panel {
+    position: relative;
+    width: min(1200px, 100%);
+    max-height: calc(100vh - 48px);
+    padding: 22px 22px 18px;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(180deg, rgba(44, 44, 44, 0.98), rgba(18, 18, 18, 0.98));
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+
+.connolly-archives-lightbox__close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #c9c9c9;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.connolly-archives-lightbox__close:hover,
+.connolly-archives-lightbox__close:focus-visible {
+    color: #ffffff;
+    outline: none;
+}
+
+.connolly-archives-lightbox__title {
+    margin: 0 40px 16px 0;
+    color: #f2ede6;
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+.connolly-archives-lightbox__figure {
+    margin: 0;
+}
+
+.connolly-archives-lightbox__figure img {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 180px);
+    object-fit: contain;
+    border-radius: 18px;
+    background: #0d0d0d;
+}
+
+.connolly-archives-lightbox__caption {
+    margin-top: 14px;
+    color: #ddd7d0;
+    text-align: center;
+    line-height: 1.5;
 }
 
 /* Sidebar Styling */

@@ -7,6 +7,11 @@
     var input = document.getElementById("connolly-archives-password");
     var error = document.querySelector("[data-connolly-archives-error]");
     var closeControls = document.querySelectorAll("[data-connolly-archives-close]");
+    var lightbox = document.querySelector("[data-connolly-lightbox]");
+    var lightboxImage = document.querySelector("[data-connolly-lightbox-image]");
+    var lightboxCaption = document.querySelector("[data-connolly-lightbox-caption]");
+    var lightboxCloseControls = document.querySelectorAll("[data-connolly-lightbox-close]");
+    var lightboxTriggers = document.querySelectorAll("[data-connolly-lightbox-trigger]");
 
     if (!page) {
         return;
@@ -57,6 +62,41 @@
         window.location.assign(page.getAttribute("data-archive-url") || "/archive/");
     }
 
+    function openLightbox(source, alt, caption) {
+        if (!lightbox || !lightboxImage) {
+            return;
+        }
+
+        lightboxImage.src = source;
+        lightboxImage.alt = alt || "";
+
+        if (lightboxCaption) {
+            lightboxCaption.textContent = caption || "";
+        }
+
+        lightbox.hidden = false;
+        document.body.classList.add("connolly-archives-lightbox-lock");
+    }
+
+    function closeLightbox() {
+        if (!lightbox || lightbox.hidden) {
+            return;
+        }
+
+        lightbox.hidden = true;
+
+        if (lightboxImage) {
+            lightboxImage.removeAttribute("src");
+            lightboxImage.alt = "";
+        }
+
+        if (lightboxCaption) {
+            lightboxCaption.textContent = "";
+        }
+
+        document.body.classList.remove("connolly-archives-lightbox-lock");
+    }
+
     if (hasAccess()) {
         revealPage();
     } else {
@@ -87,9 +127,28 @@
     });
 
     document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && lightbox && !lightbox.hidden) {
+            closeLightbox();
+            return;
+        }
+
         if (event.key === "Escape" && gate && !gate.hidden) {
             leavePage();
         }
+    });
+
+    lightboxTriggers.forEach(function (trigger) {
+        trigger.addEventListener("click", function () {
+            openLightbox(
+                trigger.getAttribute("data-lightbox-src"),
+                trigger.getAttribute("data-lightbox-alt"),
+                trigger.getAttribute("data-lightbox-caption")
+            );
+        });
+    });
+
+    lightboxCloseControls.forEach(function (control) {
+        control.addEventListener("click", closeLightbox);
     });
 
     document.querySelectorAll("[data-connolly-carousel]").forEach(function (carousel) {
