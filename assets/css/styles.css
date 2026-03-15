@@ -1870,6 +1870,7 @@ footer {
     text-transform: capitalize;
     line-height: 1.4;
     min-width: 0;
+    white-space: pre-line;
 }
 
 .connolly-archives-carousel__button {
