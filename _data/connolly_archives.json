@@ -2,12 +2,6 @@
   "overview": {
     "images": [
       {
-        "title": "Blueprint",
-        "path": "/assets/private/connolly-archives/blueprint.jpg",
-        "extension": ".jpg",
-        "file_name": "blueprint.jpg"
-      },
-      {
         "title": "Top (left to right): Unknown, Pat Connolly, Unknown, Nick Moore, Pete Coxon",
         "path": "/assets/private/connolly-archives/top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg",
         "extension": ".jpg",
@@ -793,8 +787,14 @@
     {
       "slug": "1229-willow-springs-rd-approx-2023",
       "title": "1229 Willow Springs Rd - approx. 2023",
-      "description": "House images stored alongside the blueprint material.",
+      "description": "",
       "images": [
+        {
+          "title": "Blueprint - by Doris Connolly aprox 1997/1998",
+          "path": "/assets/private/connolly-archives/blueprint.jpg",
+          "extension": ".jpg",
+          "file_name": "blueprint.jpg"
+        },
         {
           "title": "1229 Willow Springs exterior 1",
           "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m170043358rd-w1280_h960.webp",

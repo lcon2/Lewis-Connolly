@@ -85,11 +85,7 @@ permalink: /connolly-archives/
   {% for section in blueprint_related %}
   <section class="connolly-archives-section" id="section-{{ section.slug }}">
     <div class="connolly-archives-section__header">
-      <p class="connolly-archives-section__eyebrow">Under Blueprint</p>
       <h2>{{ section.title }}</h2>
-      {% if section.description and section.description != "" %}
-      <p>{{ section.description }}</p>
-      {% endif %}
     </div>
 
     <div class="connolly-archives-section__body">
@@ -175,46 +171,25 @@ permalink: /connolly-archives/
   </section>
   {% endfor %}
 
-  {% for collection in writing_collections %}
-  <section class="connolly-archives-section" id="section-{{ collection.slug }}">
+  <section class="connolly-archives-section" id="section-writing-folders">
     <div class="connolly-archives-section__header">
-      <h2>{{ collection.title }}</h2>
-      {% if collection.description and collection.description != "" %}
-      <p>{{ collection.description }}</p>
-      {% endif %}
+      <h2>Writings</h2>
+      <p>Recovered writing collections arranged as private folders.</p>
     </div>
 
-    <div class="connolly-archives-writing-grid">
-      {% for entry in collection.entries %}
-      <article class="connolly-archives-writing">
-        <header class="connolly-archives-writing__header">
-          <h3>{{ entry.title }}</h3>
-          {% if entry.subtitle and entry.subtitle != "" %}
-          <p class="connolly-archives-writing__subtitle">{{ entry.subtitle }}</p>
-          {% endif %}
-          {% if entry.meta and entry.meta != "" %}
-          <p class="connolly-archives-writing__meta">{{ entry.meta }}</p>
-          {% endif %}
-        </header>
-
-        {% if entry.body.size > 0 %}
-        <div class="connolly-archives-writing__body">
-          {% for paragraph in entry.body %}
-          <p>{{ paragraph }}</p>
-          {% endfor %}
-        </div>
+    <div class="connolly-archives-folder-grid">
+      {% for collection in writing_collections %}
+      <a class="connolly-archives-folder" href="{{ '/connolly-archives/' | append: collection.slug | append: '/' | relative_url }}">
+        <p class="connolly-archives-folder__type">Folder</p>
+        <h3>{{ collection.title }}</h3>
+        {% if collection.description and collection.description != "" %}
+        <p class="connolly-archives-folder__copy">{{ collection.description }}</p>
         {% endif %}
-      </article>
+        <p class="connolly-archives-folder__meta">{{ collection.entries.size }} items</p>
+      </a>
       {% endfor %}
     </div>
-
-    {% if collection.show_source_link and collection.source_path and collection.source_path != "" %}
-    <p class="connolly-archives-source-link">
-      <a href="{{ collection.source_path | relative_url }}" target="_blank" rel="noopener noreferrer">Open original Word document</a>
-    </p>
-    {% endif %}
   </section>
-  {% endfor %}
 
   {% for section in bottom_carousels %}
   <section class="connolly-archives-section" id="section-{{ section.slug }}">

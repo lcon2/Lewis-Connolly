@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include seo.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body class="about connolly-archives-body">
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <span class="logo-wrap">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+                </span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About Me</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}is-active{% endif %}">Contact</a></li>
+                <li><a href="{{ '/archive/' | relative_url }}" class="{% if page.url == '/archive/' %}is-active{% endif %}">Archive</a></li>
+                <li><a href="{{ '/studies/' | relative_url }}" class="{% if page.url contains '/studies/' %}is-active{% endif %}">Studies</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
+            </a>
+        </div>
+    </nav>
+
+    {% assign collection = site.data.connolly_archives.writing_collections | where: "slug", page.collection_slug | first %}
+
+    <main class="connolly-archives-main">
+        <div class="connolly-archives-shell connolly-archives-page" data-connolly-archives-page data-archive-url="{{ '/connolly-archives/' | relative_url }}" hidden>
+            <div class="connolly-archives-gate" data-connolly-archives-gate hidden>
+                <div class="connolly-archives-gate__backdrop" data-connolly-archives-close></div>
+                <div class="connolly-archives-gate__panel" role="dialog" aria-modal="true" aria-labelledby="connolly-archives-gate-title">
+                    <button class="connolly-archives-gate__close" type="button" aria-label="Close archives access prompt" data-connolly-archives-close>&times;</button>
+                    <p class="connolly-archives-gate__eyebrow">Private Family Materials</p>
+                    <h2 id="connolly-archives-gate-title">Connolly Archives</h2>
+                    <p class="connolly-archives-gate__copy">Enter the password to view the archive.</p>
+                    <form class="connolly-archives-gate__form" data-connolly-archives-form>
+                        <label class="connolly-archives-gate__label" for="connolly-archives-password">Password</label>
+                        <input class="connolly-archives-gate__input" id="connolly-archives-password" name="password" type="password" autocomplete="current-password" required>
+                        <p class="connolly-archives-gate__error" data-connolly-archives-error hidden>Incorrect password.</p>
+                        <div class="connolly-archives-gate__actions">
+                            <button class="connolly-archives-gate__submit" type="submit">Enter</button>
+                            <a class="connolly-archives-gate__cancel" href="{{ '/connolly-archives/' | relative_url }}">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <header class="connolly-archives-hero">
+                <p class="connolly-archives-kicker">Private Collection</p>
+                <h1>{{ collection.title }}</h1>
+                {% if collection.description and collection.description != "" %}
+                <p class="connolly-archives-intro">{{ collection.description }}</p>
+                {% endif %}
+                <p class="connolly-archives-subnav">
+                    <a href="{{ '/connolly-archives/' | relative_url }}">Back to Connolly Archives</a>
+                </p>
+            </header>
+
+            <section class="connolly-archives-section" id="section-{{ collection.slug }}">
+                <div class="connolly-archives-writing-grid">
+                    {% for entry in collection.entries %}
+                    <article class="connolly-archives-writing">
+                        <header class="connolly-archives-writing__header">
+                            <h3>{{ entry.title }}</h3>
+                            {% if entry.subtitle and entry.subtitle != "" %}
+                            <p class="connolly-archives-writing__subtitle">{{ entry.subtitle }}</p>
+                            {% endif %}
+                            {% if entry.meta and entry.meta != "" %}
+                            <p class="connolly-archives-writing__meta">{{ entry.meta }}</p>
+                            {% endif %}
+                        </header>
+
+                        {% if entry.body.size > 0 %}
+                        <div class="connolly-archives-writing__body">
+                            {% for paragraph in entry.body %}
+                            <p>{{ paragraph }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </article>
+                    {% endfor %}
+                </div>
+
+                {% if collection.show_source_link and collection.source_path and collection.source_path != "" %}
+                <p class="connolly-archives-source-link">
+                    <a href="{{ collection.source_path | relative_url }}" target="_blank" rel="noopener noreferrer">Open original Word document</a>
+                </p>
+                {% endif %}
+            </section>
+        </div>
+    </main>
+
+    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+        <p>Ã‚Â© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Ã¢â€Æ’ Copyright</p>
+    </footer>
+    <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/connolly-archives-page.js?v=20260315f' | relative_url }}"></script>
+</body>
+</html>
