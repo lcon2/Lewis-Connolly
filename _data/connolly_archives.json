@@ -1,0 +1,449 @@
+﻿{
+    "root_items":  [
+                       {
+                           "title":  "blueprint",
+                           "file_name":  "blueprint.jpg",
+                           "type":  "image",
+                           "extension":  ".jpg",
+                           "path":  "/assets/private/connolly-archives/blueprint.jpg"
+                       },
+                       {
+                           "title":  "doris-connolly-book-of-remembrance",
+                           "file_name":  "doris-connolly-book-of-remembrance.pdf",
+                           "type":  "document",
+                           "extension":  ".pdf",
+                           "path":  "/assets/private/connolly-archives/doris-connolly-book-of-remembrance.pdf"
+                       },
+                       {
+                           "title":  "doris-connolly-coursebook",
+                           "file_name":  "doris-connolly-coursebook.pdf",
+                           "type":  "document",
+                           "extension":  ".pdf",
+                           "path":  "/assets/private/connolly-archives/doris-connolly-coursebook.pdf"
+                       },
+                       {
+                           "title":  "doris-gillon-cv",
+                           "file_name":  "doris-gillon-cv.pdf",
+                           "type":  "document",
+                           "extension":  ".pdf",
+                           "path":  "/assets/private/connolly-archives/doris-gillon-cv.pdf"
+                       },
+                       {
+                           "title":  "fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995",
+                           "file_name":  "fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf",
+                           "type":  "document",
+                           "extension":  ".pdf",
+                           "path":  "/assets/private/connolly-archives/fussbuzz-exercise-book-1995-by-lewis-connolly-20-04-1995.pdf"
+                       },
+                       {
+                           "title":  "top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon",
+                           "file_name":  "top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg",
+                           "type":  "image",
+                           "extension":  ".jpg",
+                           "path":  "/assets/private/connolly-archives/top-left-to-right-unknown-pat-connolly-unknown-nick-moore-pete-coxon.jpg"
+                       }
+                   ],
+    "sections":  [
+                     {
+                         "title":  "camp-cayote-summer-1998",
+                         "folder_name":  "camp-cayote-summer-1998",
+                         "slug":  "camp-cayote-summer-1998",
+                         "images":  [
+                                        {
+                                            "title":  "1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda",
+                                            "file_name":  "1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558379922-39211943-0b43-43cd-b909-4a5b0f780bda.jpg"
+                                        },
+                                        {
+                                            "title":  "1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc",
+                                            "file_name":  "1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/1639558426459-5c143a23-f56f-4c49-91c3-d2a71d11adbc.jpg"
+                                        },
+                                        {
+                                            "title":  "camp",
+                                            "file_name":  "camp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/camp.jpg"
+                                        }
+                                    ],
+                         "documents":  [
+                                           {
+                                               "title":  "doris-gillon-cv",
+                                               "file_name":  "doris-gillon-cv.pdf",
+                                               "extension":  ".pdf",
+                                               "path":  "/assets/private/connolly-archives/camp-cayote-summer-1998/doris-gillon-cv.pdf"
+                                           }
+                                       ],
+                         "notes":  [
+
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     },
+                     {
+                         "title":  "doris-connolly-art-other",
+                         "folder_name":  "doris-connolly-art-other",
+                         "slug":  "doris-connolly-art-other",
+                         "images":  [
+                                        {
+                                            "title":  "pxl-20220307-021514483-mp",
+                                            "file_name":  "pxl-20220307-021514483-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021514483-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021540630",
+                                            "file_name":  "pxl-20220307-021540630.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021540630.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021558660-mp",
+                                            "file_name":  "pxl-20220307-021558660-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021558660-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021622805",
+                                            "file_name":  "pxl-20220307-021622805.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021622805.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021645434",
+                                            "file_name":  "pxl-20220307-021645434.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021645434.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021706673-mp",
+                                            "file_name":  "pxl-20220307-021706673-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021706673-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021722549",
+                                            "file_name":  "pxl-20220307-021722549.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021722549.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021745690-mp",
+                                            "file_name":  "pxl-20220307-021745690-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021745690-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021803913-mp",
+                                            "file_name":  "pxl-20220307-021803913-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021803913-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021820517-mp",
+                                            "file_name":  "pxl-20220307-021820517-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021820517-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021849547",
+                                            "file_name":  "pxl-20220307-021849547.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021849547.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021908795-mp",
+                                            "file_name":  "pxl-20220307-021908795-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021908795-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021926797-mp-copy",
+                                            "file_name":  "pxl-20220307-021926797-mp-copy.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021926797-mp-copy.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-021952939-mp-copy",
+                                            "file_name":  "pxl-20220307-021952939-mp-copy.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-021952939-mp-copy.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022232598-copy",
+                                            "file_name":  "pxl-20220307-022232598-copy.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022232598-copy.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022301225",
+                                            "file_name":  "pxl-20220307-022301225.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022301225.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022420630",
+                                            "file_name":  "pxl-20220307-022420630.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022420630.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022546096",
+                                            "file_name":  "pxl-20220307-022546096.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022546096.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022615200",
+                                            "file_name":  "pxl-20220307-022615200.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022615200.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022632887",
+                                            "file_name":  "pxl-20220307-022632887.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022632887.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022727962",
+                                            "file_name":  "pxl-20220307-022727962.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022727962.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022806023",
+                                            "file_name":  "pxl-20220307-022806023.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022806023.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022844654-mp-1",
+                                            "file_name":  "pxl-20220307-022844654-mp-1.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022844654-mp-1.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022920147-mp",
+                                            "file_name":  "pxl-20220307-022920147-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022920147-mp.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220307-022954673",
+                                            "file_name":  "pxl-20220307-022954673.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/pxl-20220307-022954673.jpg"
+                                        },
+                                        {
+                                            "title":  "this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore",
+                                            "file_name":  "this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-art-other/this-is-obviously-by-me-lewis-connolly-its-of-our-chicken-which-i-believe-was-turned-into-a-t-shirt-which-i-wore.jpg"
+                                        }
+                                    ],
+                         "documents":  [
+
+                                       ],
+                         "notes":  [
+
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     },
+                     {
+                         "title":  "doris-connolly-painted-table",
+                         "folder_name":  "doris-connolly-painted-table",
+                         "slug":  "doris-connolly-painted-table",
+                         "images":  [
+                                        {
+                                            "title":  "pxl-20220308-155009019",
+                                            "file_name":  "pxl-20220308-155009019.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155009019.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220308-155015097",
+                                            "file_name":  "pxl-20220308-155015097.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155015097.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220308-155023054",
+                                            "file_name":  "pxl-20220308-155023054.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155023054.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20220308-155028496",
+                                            "file_name":  "pxl-20220308-155028496.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/pxl-20220308-155028496.jpg"
+                                        }
+                                    ],
+                         "documents":  [
+
+                                       ],
+                         "notes":  [
+                                       {
+                                           "title":  "note",
+                                           "file_name":  "note.txt",
+                                           "extension":  ".txt",
+                                           "path":  "/assets/private/connolly-archives/doris-connolly-painted-table/note.txt",
+                                           "content":  "These pictures were taken on 08/03/2022. I believe this side table was painted as you see by Doris Connolly in the mid 1990s. (I don’t know where the piece was purchased)."
+                                       }
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     },
+                     {
+                         "title":  "dorris-connolly-personal-effects",
+                         "folder_name":  "dorris-connolly-personal-effects",
+                         "slug":  "dorris-connolly-personal-effects",
+                         "images":  [
+                                        {
+                                            "title":  "1639578832749-ce690441-f552-4939-9e70-cbd85208dd05",
+                                            "file_name":  "1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578832749-ce690441-f552-4939-9e70-cbd85208dd05.jpg"
+                                        },
+                                        {
+                                            "title":  "1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a",
+                                            "file_name":  "1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578871436-2c0e27b1-9275-4b62-a69c-b30de83fd83a.jpg"
+                                        },
+                                        {
+                                            "title":  "1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75",
+                                            "file_name":  "1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578953996-0758ba47-bb96-4798-bacc-222d888b0d75.jpg"
+                                        },
+                                        {
+                                            "title":  "1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22",
+                                            "file_name":  "1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639578981246-c19a17d7-802c-4477-b4d5-4dc601b28d22.jpg"
+                                        },
+                                        {
+                                            "title":  "1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3",
+                                            "file_name":  "1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579025709-3cf71659-8a45-4971-b78b-e85396f5b2c3.jpg"
+                                        },
+                                        {
+                                            "title":  "1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e",
+                                            "file_name":  "1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579080094-0cde59ab-8b37-4b05-b1cc-990bbc04455e.jpg"
+                                        },
+                                        {
+                                            "title":  "1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377",
+                                            "file_name":  "1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579351341-b6a1f495-4fb5-4d08-b58b-c5bc04232377.jpg"
+                                        },
+                                        {
+                                            "title":  "1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e",
+                                            "file_name":  "1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/1639579395648-4b9a78b2-7dff-48db-8b06-80e32206be4e.jpg"
+                                        },
+                                        {
+                                            "title":  "doris-and-paul",
+                                            "file_name":  "doris-and-paul.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/doris-and-paul.jpg"
+                                        },
+                                        {
+                                            "title":  "edgar-allan-isabella-fotheringham-mcdonald-allan",
+                                            "file_name":  "edgar-allan-isabella-fotheringham-mcdonald-allan.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/edgar-allan-isabella-fotheringham-mcdonald-allan.jpg"
+                                        },
+                                        {
+                                            "title":  "loveletter",
+                                            "file_name":  "loveletter.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/loveletter.jpg"
+                                        },
+                                        {
+                                            "title":  "paul-and-julie",
+                                            "file_name":  "paul-and-julie.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/paul-and-julie.jpg"
+                                        },
+                                        {
+                                            "title":  "pxl-20211215-145209523-mp",
+                                            "file_name":  "pxl-20211215-145209523-mp.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/dorris-connolly-personal-effects/pxl-20211215-145209523-mp.jpg"
+                                        }
+                                    ],
+                         "documents":  [
+
+                                       ],
+                         "notes":  [
+
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     },
+                     {
+                         "title":  "funeral-aetifacts",
+                         "folder_name":  "funeral-aetifacts",
+                         "slug":  "funeral-aetifacts",
+                         "images":  [
+                                        {
+                                            "title":  "image1",
+                                            "file_name":  "image1.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/funeral-aetifacts/image1.jpg"
+                                        },
+                                        {
+                                            "title":  "image2",
+                                            "file_name":  "image2.jpg",
+                                            "extension":  ".jpg",
+                                            "path":  "/assets/private/connolly-archives/funeral-aetifacts/image2.jpg"
+                                        }
+                                    ],
+                         "documents":  [
+
+                                       ],
+                         "notes":  [
+
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     },
+                     {
+                         "title":  "lewis-connolly-restrospective",
+                         "folder_name":  "lewis-connolly-restrospective",
+                         "slug":  "lewis-connolly-restrospective",
+                         "images":  [
+
+                                    ],
+                         "documents":  [
+                                           {
+                                               "title":  "1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5",
+                                               "file_name":  "1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf",
+                                               "extension":  ".pdf",
+                                               "path":  "/assets/private/connolly-archives/lewis-connolly-restrospective/1639559280440-80e552de-db2e-40c8-a922-fd63165c91d5.pdf"
+                                           }
+                                       ],
+                         "notes":  [
+
+                                   ],
+                         "misc":  [
+
+                                  ]
+                     }
+                 ]
+}
