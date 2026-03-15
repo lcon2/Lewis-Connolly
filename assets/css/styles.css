@@ -1351,9 +1351,14 @@ footer {
         font-size: 1.7em;
     }
 
-    .connolly-archives-carousel__viewport,
-    .connolly-archives-carousel__slide img {
+    .connolly-archives-carousel__viewport {
         min-height: 280px;
+        height: 280px;
+    }
+
+    .connolly-archives-carousel__slide img {
+        min-height: 0;
+        height: 100%;
     }
 
     .connolly-archives-carousel__footer {
@@ -1809,23 +1814,27 @@ footer {
 
 .connolly-archives-carousel__viewport {
     position: relative;
+    height: clamp(420px, 62vh, 720px);
     min-height: 420px;
     background: #111111;
 }
 
 .connolly-archives-carousel__track {
     min-height: inherit;
+    height: 100%;
 }
 
 .connolly-archives-carousel__slide {
     margin: 0;
     min-height: inherit;
+    height: 100%;
 }
 
 .connolly-archives-carousel__image {
     display: block;
     width: 100%;
     min-height: inherit;
+    height: 100%;
     padding: 0;
     border: 0;
     background: transparent;
@@ -1835,19 +1844,24 @@ footer {
 .connolly-archives-carousel__slide img {
     display: block;
     width: 100%;
-    min-height: 420px;
-    max-height: 720px;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
     object-fit: contain;
     background: #0c0c0c;
 }
 
 .connolly-archives-carousel__footer {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 112px minmax(0, 1fr) 112px;
     gap: 14px;
     align-items: center;
     padding: 16px 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.connolly-archives-carousel.is-single .connolly-archives-carousel__footer {
+    grid-template-columns: 1fr;
 }
 
 .connolly-archives-carousel__caption {
@@ -1855,10 +1869,12 @@ footer {
     text-align: center;
     text-transform: capitalize;
     line-height: 1.4;
+    min-width: 0;
 }
 
 .connolly-archives-carousel__button {
     appearance: none;
+    width: 112px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 999px;
     background: linear-gradient(180deg, #505050 0%, #373737 100%);
