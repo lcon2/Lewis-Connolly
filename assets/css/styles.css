@@ -899,6 +899,34 @@ body {
     color: #d8d0c9;
 }
 
+.studies.bookman-document .bookman-document-hero {
+    margin-bottom: 24px;
+}
+
+.studies.bookman-document .bookman-document-card {
+    display: grid;
+    gap: 18px;
+}
+
+.studies.bookman-document .bookman-document-viewer {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #111111;
+}
+
+.studies.bookman-document .bookman-document-viewer iframe {
+    display: block;
+    width: 100%;
+    height: min(78vh, 1100px);
+    border: 0;
+    background: #111111;
+}
+
+.studies.bookman-document .bookman-document-actions {
+    justify-content: center;
+}
+
 .studies .studies-footer-nav {
     display: flex;
     flex-wrap: wrap;
@@ -937,6 +965,10 @@ body {
 
     .studies .studies-hero {
         margin-top: 10px;
+    }
+
+    .studies.bookman-document .bookman-document-viewer iframe {
+        height: 72vh;
     }
 }
 

@@ -79,7 +79,6 @@
                         {% endif %}
                         {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
                         {% for month_group in posts_by_month %}
-                            {% assign archive_extras = site.data.archive_extras | where: "year", year_group.name | where: "month", month_group.name %}
                             <div class="month-category" id="month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">
                                 <h3>{{ month_group.name }} {{ year_group.name }}</h3>
                                 <ul>
@@ -95,11 +94,13 @@
                                             </li>
                                         {% endif %}
                                     {% endfor %}
-                                    {% for item in archive_extras %}
-                                        <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ item.url | relative_url }}" data-summary="{{ item.summary | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
-                                        </li>
+                                    {% for item in site.data.archive_extras %}
+                                        {% if item.year == year_group.name and item.month == month_group.name %}
+                                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                                                <a href="{{ item.url | relative_url }}" data-summary="{{ item.summary | escape }}">{{ item.title }}</a>
+                                            </li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ul>
                             </div>
