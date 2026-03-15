@@ -2,6 +2,7 @@
 layout: post
 title: "Introducing NoteTick"
 date: 2026-03-07
+permalink: /notetick/
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:

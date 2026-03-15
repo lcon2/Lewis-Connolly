@@ -100,7 +100,30 @@
                     </div>
                 {% endfor %}
             </div>
+            <section class="connolly-archives-cta" aria-label="Private archives">
+                <button
+                    class="connolly-archives-button"
+                    type="button"
+                    data-connolly-archives-trigger
+                    data-target="{{ '/connolly-archives/' | relative_url }}">
+                    Connolly Archives
+                </button>
+            </section>
         </main>
+    </div>
+    <div class="connolly-archives-modal" data-connolly-archives-modal hidden>
+        <div class="connolly-archives-modal__backdrop" data-connolly-archives-close></div>
+        <div class="connolly-archives-modal__panel" role="dialog" aria-modal="true" aria-labelledby="connolly-archives-title">
+            <button class="connolly-archives-modal__dismiss" type="button" aria-label="Close password prompt" data-connolly-archives-close>&times;</button>
+            <h2 id="connolly-archives-title">Connolly Archives</h2>
+            <p>Enter the password to continue.</p>
+            <form data-connolly-archives-form>
+                <label class="connolly-archives-modal__label" for="connolly-archives-password">Password</label>
+                <input class="connolly-archives-modal__input" id="connolly-archives-password" name="password" type="password" autocomplete="current-password" required>
+                <p class="connolly-archives-modal__error" data-connolly-archives-error hidden>Incorrect password.</p>
+                <button class="connolly-archives-modal__submit" type="submit">Enter</button>
+            </form>
+        </div>
     </div>
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
@@ -108,5 +131,6 @@
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/connolly-archives.js' | relative_url }}"></script>
 </body>
 </html>
