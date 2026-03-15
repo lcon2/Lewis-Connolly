@@ -8,4 +8,4 @@ permalink: /connolly-archives/
   <h1>Connolly Archives</h1>
 </div>
 
-<script src="{{ '/assets/js/connolly-archives-protected.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/connolly-archives-protected.js?v=20260315b' | relative_url }}"></script>

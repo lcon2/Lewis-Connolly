@@ -47,11 +47,16 @@
     }
 
     if (trigger && modal && form && passwordInput) {
+        // Force a closed state on load and when the page is restored from bfcache.
+        closeModal();
+
         trigger.addEventListener("click", openModal);
 
         closeControls.forEach(function (control) {
             control.addEventListener("click", closeModal);
         });
+
+        window.addEventListener("pageshow", closeModal);
 
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape" && !modal.hidden) {
