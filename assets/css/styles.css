@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 /* Body Styles */
 body {
     font-family: 'EBGaramond', serif;
@@ -1461,6 +1465,9 @@ footer {
 }
 
 .archive .connolly-archives-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     appearance: none;
     border: 1px solid #8d8d8d;
     border-radius: 999px;
@@ -1472,6 +1479,7 @@ footer {
     padding: 14px 34px;
     cursor: pointer;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    text-decoration: none;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
@@ -1479,121 +1487,6 @@ footer {
 .archive .connolly-archives-button:focus-visible {
     transform: translateY(-2px);
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
-    border-color: #d0d0d0;
-    color: #ffffff;
-    outline: none;
-}
-
-.connolly-archives-modal-open {
-    overflow: hidden;
-}
-
-.connolly-archives-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-}
-
-.connolly-archives-modal__backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(12, 12, 12, 0.72);
-    backdrop-filter: blur(3px);
-}
-
-.connolly-archives-modal__panel {
-    position: relative;
-    width: min(420px, 100%);
-    padding: 28px 28px 24px;
-    border: 1px solid #767676;
-    border-radius: 24px;
-    background: linear-gradient(180deg, #2f2f2f 0%, #1d1d1d 100%);
-    box-shadow: 0 28px 48px rgba(0, 0, 0, 0.45);
-    color: #f0f0f0;
-}
-
-.connolly-archives-modal__panel h2 {
-    margin: 0 0 8px;
-    font-family: 'EBGaramond', serif;
-    font-size: 34px;
-    font-weight: normal;
-}
-
-.connolly-archives-modal__panel p {
-    margin: 0 0 18px;
-    color: #d7d7d7;
-    font-size: 17px;
-}
-
-.connolly-archives-modal__dismiss {
-    position: absolute;
-    top: 12px;
-    right: 14px;
-    border: 0;
-    background: transparent;
-    color: #bcbcbc;
-    font-size: 30px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.connolly-archives-modal__dismiss:hover,
-.connolly-archives-modal__dismiss:focus-visible {
-    color: #ffffff;
-    outline: none;
-}
-
-.connolly-archives-modal__label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 15px;
-    letter-spacing: 0.03em;
-    color: #d7d7d7;
-}
-
-.connolly-archives-modal__input {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #6d6d6d;
-    border-radius: 14px;
-    background: #111111;
-    color: #f0f0f0;
-    font-size: 17px;
-    box-sizing: border-box;
-}
-
-.connolly-archives-modal__input:focus-visible {
-    outline: 1px solid #cfcfcf;
-    outline-offset: 1px;
-}
-
-.connolly-archives-modal__error {
-    margin: 10px 0 0;
-    color: #f2c8c8;
-    font-size: 15px;
-}
-
-.connolly-archives-modal__submit {
-    margin-top: 16px;
-    width: 100%;
-    border: 1px solid #8d8d8d;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #5a5a5a 0%, #3d3d3d 100%);
-    color: #f0f0f0;
-    font-family: 'EBGaramond', serif;
-    font-size: 20px;
-    padding: 12px 18px;
-    cursor: pointer;
-    transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
-}
-
-.connolly-archives-modal__submit:hover,
-.connolly-archives-modal__submit:focus-visible {
-    transform: translateY(-1px);
     border-color: #d0d0d0;
     color: #ffffff;
     outline: none;
