@@ -1881,6 +1881,13 @@ footer {
     text-transform: capitalize;
 }
 
+.connolly-archives-document__description {
+    margin: -4px 0 14px;
+    color: #d5cec6;
+    font-size: 0.96em;
+    line-height: 1.6;
+}
+
 .connolly-archives-document a {
     color: #f0f0f0;
     text-decoration: none;

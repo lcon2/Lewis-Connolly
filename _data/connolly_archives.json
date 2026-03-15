@@ -339,7 +339,7 @@
           "file_name": "edgar-allan-isabella-fotheringham-mcdonald-allan.jpg"
         },
         {
-          "title": "Love letter",
+          "title": "Love letter/poster - from Doris to her ex-husband Peter Gillon",
           "path": "/assets/private/connolly-archives/dorris-connolly-personal-effects/loveletter.jpg",
           "extension": ".jpg",
           "file_name": "loveletter.jpg"
@@ -383,7 +383,8 @@
           "title": "Doris Connolly Book of Remembrance",
           "path": "/assets/private/connolly-archives/doris-connolly-book-of-remembrance.pdf",
           "extension": ".pdf",
-          "file_name": "doris-connolly-book-of-remembrance.pdf"
+          "file_name": "doris-connolly-book-of-remembrance.pdf",
+          "description": "Doris Connolly (September 18, 1954, Glasgow Scotland to October 31, 1998, Houston, Texas)."
         }
       ],
       "notes": []
@@ -405,8 +406,8 @@
     },
     {
       "slug": "pictures-from-website",
-      "title": "Pictures from Website",
-      "description": "Recovered website-era images grouped into a dedicated archive section.",
+      "title": "Random Old Pictures",
+      "description": "A loose carousel of older recovered photographs from the wider archive.",
       "images": [
         {
           "title": "Website image 1",
@@ -607,7 +608,8 @@
           ]
         }
       ],
-      "source_path": "/assets/private/connolly-archives/writings-source/film-reviews.docx"
+      "source_path": "/assets/private/connolly-archives/writings-source/film-reviews.docx",
+      "show_source_link": true
     },
     {
       "slug": "poetry",
@@ -716,7 +718,8 @@
           ]
         }
       ],
-      "source_path": "/assets/private/connolly-archives/writings-source/poetry.docx"
+      "source_path": "/assets/private/connolly-archives/writings-source/poetry.docx",
+      "show_source_link": false
     },
     {
       "slug": "reflections",
@@ -782,7 +785,82 @@
           ]
         }
       ],
-      "source_path": "/assets/private/connolly-archives/writings-source/reflections.docx"
+      "source_path": "/assets/private/connolly-archives/writings-source/reflections.docx",
+      "show_source_link": false
+    }
+  ],
+  "blueprint_related": [
+    {
+      "slug": "1229-willow-springs-rd-approx-2023",
+      "title": "1229 Willow Springs Rd - approx. 2023",
+      "description": "House images stored alongside the blueprint material.",
+      "images": [
+        {
+          "title": "1229 Willow Springs exterior 1",
+          "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m170043358rd-w1280_h960.webp",
+          "extension": ".webp",
+          "file_name": "5f11f6dc66807d05466e81a4166de7c9l-m170043358rd-w1280_h960.webp"
+        },
+        {
+          "title": "1229 Willow Springs exterior 2",
+          "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m2973042450rd-w1280_h960.webp",
+          "extension": ".webp",
+          "file_name": "5f11f6dc66807d05466e81a4166de7c9l-m2973042450rd-w1280_h960.webp"
+        },
+        {
+          "title": "1229 Willow Springs exterior 3",
+          "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m3291810399rd-w1280_h960.webp",
+          "extension": ".webp",
+          "file_name": "5f11f6dc66807d05466e81a4166de7c9l-m3291810399rd-w1280_h960.webp"
+        },
+        {
+          "title": "1229 Willow Springs exterior 4",
+          "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m3355317674rd-w1280_h960.webp",
+          "extension": ".webp",
+          "file_name": "5f11f6dc66807d05466e81a4166de7c9l-m3355317674rd-w1280_h960.webp"
+        },
+        {
+          "title": "1229 Willow Springs exterior 5",
+          "path": "/assets/private/connolly-archives/blueprint-house-folder/5f11f6dc66807d05466e81a4166de7c9l-m3387329921rd-w1280_h960.webp",
+          "extension": ".webp",
+          "file_name": "5f11f6dc66807d05466e81a4166de7c9l-m3387329921rd-w1280_h960.webp"
+        }
+      ],
+      "documents": [],
+      "notes": []
+    }
+  ],
+  "bottom_carousels": [
+    {
+      "slug": "houses-bottom-carousel",
+      "title": "Houses",
+      "description": "Four standalone house images from the wider Houses folder.",
+      "images": [
+        {
+          "title": "1st Ipswich House",
+          "path": "/assets/private/connolly-archives/houses-bottom-carousel/1st Ipswich House.png",
+          "extension": ".png",
+          "file_name": "1st Ipswich House.png"
+        },
+        {
+          "title": "2nd Ipswich House",
+          "path": "/assets/private/connolly-archives/houses-bottom-carousel/2nd Ipswich House.png",
+          "extension": ".png",
+          "file_name": "2nd Ipswich House.png"
+        },
+        {
+          "title": "Charlotte Apartment",
+          "path": "/assets/private/connolly-archives/houses-bottom-carousel/Charlotte Apartment.jpg",
+          "extension": ".jpg",
+          "file_name": "Charlotte Apartment.jpg"
+        },
+        {
+          "title": "Horndean House",
+          "path": "/assets/private/connolly-archives/houses-bottom-carousel/Horndean House.png",
+          "extension": ".png",
+          "file_name": "Horndean House.png"
+        }
+      ]
     }
   ]
 }

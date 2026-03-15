@@ -6,7 +6,9 @@ permalink: /connolly-archives/
 
 {% assign overview_images = site.data.connolly_archives.overview.images %}
 {% assign overview_documents = site.data.connolly_archives.overview.documents %}
+{% assign blueprint_related = site.data.connolly_archives.blueprint_related %}
 {% assign writing_collections = site.data.connolly_archives.writing_collections %}
+{% assign bottom_carousels = site.data.connolly_archives.bottom_carousels %}
 
 <div class="connolly-archives-shell connolly-archives-page" data-connolly-archives-page data-archive-url="{{ '/archive/' | relative_url }}" hidden>
   <div class="connolly-archives-gate" data-connolly-archives-gate hidden>
@@ -69,6 +71,9 @@ permalink: /connolly-archives/
       <article class="connolly-archives-document">
         <p class="connolly-archives-document__type">PDF</p>
         <h3>{{ document.title }}</h3>
+        {% if document.description and document.description != "" %}
+        <p class="connolly-archives-document__description">{{ document.description }}</p>
+        {% endif %}
         <a href="{{ document.path | relative_url }}" target="_blank" rel="noopener noreferrer">Open document</a>
       </article>
       {% endfor %}
@@ -76,6 +81,41 @@ permalink: /connolly-archives/
     {% endif %}
   </section>
   {% endif %}
+
+  {% for section in blueprint_related %}
+  <section class="connolly-archives-section" id="section-{{ section.slug }}">
+    <div class="connolly-archives-section__header">
+      <p class="connolly-archives-section__eyebrow">Under Blueprint</p>
+      <h2>{{ section.title }}</h2>
+      {% if section.description and section.description != "" %}
+      <p>{{ section.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="connolly-archives-section__body">
+      {% if section.images.size > 0 %}
+      <div class="connolly-archives-carousel" data-connolly-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="{{ section.title | escape }}">
+        <div class="connolly-archives-carousel__viewport">
+          <div class="connolly-archives-carousel__track" data-carousel-track>
+            {% for image in section.images %}
+            <figure class="connolly-archives-carousel__slide{% if forloop.first %} is-active{% endif %}" data-carousel-slide{% unless forloop.first %} hidden{% endunless %} data-caption="{{ image.title | escape }}">
+              <button class="connolly-archives-carousel__image" type="button" data-connolly-lightbox-trigger data-lightbox-src="{{ image.path | relative_url }}" data-lightbox-alt="{{ image.title | escape }}" data-lightbox-caption="{{ image.title | escape }}">
+                <img src="{{ image.path | relative_url }}" alt="{{ image.title | escape }}">
+              </button>
+            </figure>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="connolly-archives-carousel__footer">
+          <button class="connolly-archives-carousel__button" type="button" data-carousel-prev aria-label="Previous image">Previous</button>
+          <p class="connolly-archives-carousel__caption" data-carousel-caption>{{ section.images.first.title }}</p>
+          <button class="connolly-archives-carousel__button" type="button" data-carousel-next aria-label="Next image">Next</button>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
 
   {% for section in site.data.connolly_archives.sections %}
   <section class="connolly-archives-section" id="section-{{ section.slug }}">
@@ -123,6 +163,9 @@ permalink: /connolly-archives/
         <article class="connolly-archives-document">
           <p class="connolly-archives-document__type">PDF</p>
           <h3>{{ document.title }}</h3>
+          {% if document.description and document.description != "" %}
+          <p class="connolly-archives-document__description">{{ document.description }}</p>
+          {% endif %}
           <a href="{{ document.path | relative_url }}" target="_blank" rel="noopener noreferrer">Open document</a>
         </article>
         {% endfor %}
@@ -135,7 +178,6 @@ permalink: /connolly-archives/
   {% for collection in writing_collections %}
   <section class="connolly-archives-section" id="section-{{ collection.slug }}">
     <div class="connolly-archives-section__header">
-      <p class="connolly-archives-section__eyebrow">Recovered Writing</p>
       <h2>{{ collection.title }}</h2>
       {% if collection.description and collection.description != "" %}
       <p>{{ collection.description }}</p>
@@ -166,11 +208,45 @@ permalink: /connolly-archives/
       {% endfor %}
     </div>
 
-    {% if collection.source_path and collection.source_path != "" %}
+    {% if collection.show_source_link and collection.source_path and collection.source_path != "" %}
     <p class="connolly-archives-source-link">
       <a href="{{ collection.source_path | relative_url }}" target="_blank" rel="noopener noreferrer">Open original Word document</a>
     </p>
     {% endif %}
+  </section>
+  {% endfor %}
+
+  {% for section in bottom_carousels %}
+  <section class="connolly-archives-section" id="section-{{ section.slug }}">
+    <div class="connolly-archives-section__header">
+      <h2>{{ section.title }}</h2>
+      {% if section.description and section.description != "" %}
+      <p>{{ section.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="connolly-archives-section__body">
+      {% if section.images.size > 0 %}
+      <div class="connolly-archives-carousel" data-connolly-carousel tabindex="0" role="region" aria-roledescription="carousel" aria-label="{{ section.title | escape }}">
+        <div class="connolly-archives-carousel__viewport">
+          <div class="connolly-archives-carousel__track" data-carousel-track>
+            {% for image in section.images %}
+            <figure class="connolly-archives-carousel__slide{% if forloop.first %} is-active{% endif %}" data-carousel-slide{% unless forloop.first %} hidden{% endunless %} data-caption="{{ image.title | escape }}">
+              <button class="connolly-archives-carousel__image" type="button" data-connolly-lightbox-trigger data-lightbox-src="{{ image.path | relative_url }}" data-lightbox-alt="{{ image.title | escape }}" data-lightbox-caption="{{ image.title | escape }}">
+                <img src="{{ image.path | relative_url }}" alt="{{ image.title | escape }}">
+              </button>
+            </figure>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="connolly-archives-carousel__footer">
+          <button class="connolly-archives-carousel__button" type="button" data-carousel-prev aria-label="Previous image">Previous</button>
+          <p class="connolly-archives-carousel__caption" data-carousel-caption>{{ section.images.first.title }}</p>
+          <button class="connolly-archives-carousel__button" type="button" data-carousel-next aria-label="Next image">Next</button>
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </section>
   {% endfor %}
 </div>
@@ -187,4 +263,4 @@ permalink: /connolly-archives/
   </div>
 </div>
 
-<script src="{{ '/assets/js/connolly-archives-page.js?v=20260315d' | relative_url }}"></script>
+<script src="{{ '/assets/js/connolly-archives-page.js?v=20260315e' | relative_url }}"></script>
