@@ -134,7 +134,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       position: absolute;
       left: 50%;
       top: 50%;
-      font-size: clamp(2.5rem, 10vw, 10rem);
+      font-size: clamp(2rem, 8vw, 7rem);
       letter-spacing: 0.12em;
       text-transform: uppercase;
       opacity: 0;
@@ -145,7 +145,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     #scroll-space {
-      height: 1800vh;
+      height: 2400vh;
     }
 
     .scroll-hint {
@@ -239,7 +239,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       position: absolute;
       left: 50%;
       top: 50%;
-      font-size: clamp(1.4rem, 4.4vw, 3.8rem);
+      font-size: clamp(1.2rem, 3.8vw, 3.1rem);
       letter-spacing: 0.13em;
       text-transform: uppercase;
       opacity: 0;
@@ -249,7 +249,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
     }
 
     .sequence-word.is-lead {
-      font-size: clamp(2rem, 6.8vw, 6rem);
+      font-size: clamp(1.7rem, 5.4vw, 4.6rem);
       letter-spacing: 0.12em;
     }
 
@@ -488,7 +488,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <div class="volume-control" aria-label="Audio volume">
     <div class="volume-panel">
       <div class="volume-track">
-        <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="Volume">
+        <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.24" aria-label="Volume">
       </div>
     </div>
     <img class="volume-icon" src="{{ '/assets/images/audio.png' | relative_url }}" alt="">
@@ -511,11 +511,11 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
   <script>
     (function () {
       var words = [
-        { text: "Awareness", endX: -32, endY: -18, settleScale: 0.35, color: "var(--rose)" },
-        { text: "Light", endX: 30, endY: -24, settleScale: 0.4, color: "var(--powder)" },
-        { text: "Love", endX: -26, endY: 22, settleScale: 0.38, color: "var(--sage)" },
-        { text: "Energy", endX: 26, endY: 18, settleScale: 0.36, color: "var(--amber)" },
-        { text: "Truth", endX: 0, endY: 30, settleScale: 0.4, color: "var(--blush)" }
+        { text: "Awareness", endX: -24, endY: -14, settleScale: 0.42, color: "var(--rose)" },
+        { text: "Light", endX: 22, endY: -18, settleScale: 0.44, color: "var(--powder)" },
+        { text: "Love", endX: -20, endY: 18, settleScale: 0.43, color: "var(--sage)" },
+        { text: "Energy", endX: 20, endY: 16, settleScale: 0.42, color: "var(--amber)" },
+        { text: "Truth", endX: 0, endY: 22, settleScale: 0.44, color: "var(--blush)" }
       ];
 
       var stage = document.getElementById("stage");
@@ -532,7 +532,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       var endCard = document.querySelector(".end-card");
       var copyButton = document.querySelector(".end-button");
       var bgAudio = document.getElementById("bg-audio");
-      var baseVolume = 0.35;
+      var baseVolume = 0.24;
       var volumeControl = document.querySelector(".volume-control");
       var volumeSlider = document.getElementById("volume-slider");
       var volumeIconSrc = "{{ '/assets/images/audio.png' | relative_url }}";
@@ -551,7 +551,6 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             { text: "Notice the body", x: 0, y: 0, scale: 1.1, role: "lead" },
             { text: "Breath", x: -28, y: -20, scale: 0.8 },
             { text: "Temperature", x: 24, y: -18, scale: 0.78 },
-            { text: "Pressure", x: -18, y: 22, scale: 0.82 },
             { text: "Contact", x: 28, y: 18, scale: 0.8 }
           ]
         },
@@ -560,10 +559,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             { text: "Notice sensation", x: 0, y: -6, scale: 1.05, role: "lead" },
             { text: "Tightness", x: -32, y: 14, scale: 0.8 },
             { text: "Ease", x: 30, y: 6, scale: 0.85 },
-            { text: "Movement", x: 0, y: 26, scale: 0.78 },
-            { text: "Nothing to fix", x: -24, y: -24, scale: 0.72 },
-            { text: "Nothing to improve", x: 26, y: -24, scale: 0.72 },
-            { text: "Just appearing", x: 0, y: 0, scale: 0.7 }
+            { text: "Nothing to fix", x: 0, y: -22, scale: 0.72 }
           ]
         },
         {
@@ -571,21 +567,14 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             { text: "Notice thought", x: 0, y: -8, scale: 1.05, role: "lead" },
             { text: "A word", x: -26, y: 18, scale: 0.78 },
             { text: "A memory", x: 24, y: 20, scale: 0.76 },
-            { text: "A plan", x: 0, y: 30, scale: 0.72 },
-            { text: "Arising", x: -30, y: -22, scale: 0.7 },
-            { text: "Passing", x: 28, y: -20, scale: 0.7 },
-            { text: "Like weather", x: -6, y: 2, scale: 0.7 },
-            { text: "Moving through a wider sky", x: 6, y: 10, scale: 0.66 }
+            { text: "Like weather", x: 0, y: -20, scale: 0.72 }
           ]
         },
         {
           lines: [
             { text: "You are not the thought", x: 0, y: -10, scale: 1.05, role: "lead" },
             { text: "You are what notices it", x: 0, y: 10, scale: 0.88 },
-            { text: "Still here", x: -28, y: -26, scale: 0.72 },
-            { text: "Before the thought", x: 28, y: -24, scale: 0.7 },
-            { text: "Still here", x: -24, y: 26, scale: 0.72 },
-            { text: "After it fades", x: 24, y: 24, scale: 0.7 }
+            { text: "Still here", x: 0, y: 28, scale: 0.72 }
           ]
         },
         {
@@ -593,18 +582,15 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             { text: "Notice emotion", x: 0, y: -8, scale: 1.05, role: "lead" },
             { text: "Pleasant", x: -30, y: 18, scale: 0.78 },
             { text: "Unpleasant", x: 28, y: 14, scale: 0.78 },
-            { text: "Neutral", x: 0, y: 28, scale: 0.76 },
-            { text: "Let it be exactly as it is", x: 0, y: -26, scale: 0.7 },
-            { text: "No resistance", x: -20, y: -2, scale: 0.7 },
-            { text: "No grasping", x: 22, y: 2, scale: 0.7 }
+            { text: "Let it be exactly as it is", x: 0, y: -24, scale: 0.7 }
           ]
         },
         {
           lines: [
             { text: "Everything is allowed", x: 0, y: -6, scale: 1.05, role: "lead" },
             { text: "Nothing needs permission", x: 0, y: 10, scale: 0.84 },
-            { text: "To arise", x: -26, y: 24, scale: 0.74 },
-            { text: "Or to leave", x: 26, y: 24, scale: 0.74 }
+            { text: "To arise", x: -24, y: 24, scale: 0.74 },
+            { text: "Or to leave", x: 24, y: 24, scale: 0.74 }
           ]
         },
         {
@@ -633,7 +619,6 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             { text: "Just this", x: 0, y: -8, scale: 1.05, role: "lead" },
             { text: "Breath", x: -30, y: 18, scale: 0.78 },
             { text: "Sensation", x: 0, y: 26, scale: 0.78 },
-            { text: "Sound", x: 26, y: 18, scale: 0.78 },
             { text: "Silence", x: 0, y: -26, scale: 0.74 }
           ]
         },
@@ -729,10 +714,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
       function update() {
         var maxScroll = Math.max(1, scrollSpace.offsetHeight - window.innerHeight);
         var target = clamp01(window.scrollY / maxScroll);
-        progress = lerp(progress, target, 0.05);
-        var wordsPortion = 0.18;
-        var breathPortion = 0.25;
-        var sequencePortion = 0.57;
+        progress = lerp(progress, target, 0.035);
+        var wordsPortion = 0.14;
+        var breathPortion = 0.3;
+        var sequencePortion = 0.56;
         var segment = wordsPortion / words.length;
         var wordsEnd = wordsPortion;
 
@@ -747,20 +732,20 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             return;
           }
 
-          var growPhase = 0.6;
+          var growPhase = 0.72;
           var scale;
           var x;
           var y;
 
           if (local < growPhase) {
             var grow = easeInOutCubic(local / growPhase);
-            scale = lerp(0.2, 1.6, grow);
+            scale = lerp(0.45, 1.2, grow);
             x = 0;
             y = 0;
-            el.style.opacity = Math.min(1, local / 0.15);
+            el.style.opacity = Math.min(1, local / 0.22);
           } else {
             var settle = easeInOutCubic((local - growPhase) / (1 - growPhase));
-            scale = lerp(1.6, word.settleScale, settle);
+            scale = lerp(1.2, word.settleScale, settle);
             x = lerp(0, word.endX, settle);
             y = lerp(0, word.endY, settle);
             el.style.opacity = 1;
@@ -787,16 +772,16 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             breathHaze.style.opacity = 0;
           }
         } else {
-          var fadeIn = clamp01(breathLocal / 0.18);
-          var fadeOut = clamp01((1 - breathLocal) / 0.18);
+          var fadeIn = clamp01(breathLocal / 0.24);
+          var fadeOut = clamp01((1 - breathLocal) / 0.24);
           breathWrap.style.opacity = Math.min(1, fadeIn, fadeOut);
 
-          var cycles = 2;
+          var cycles = 1;
           var cycle = (breathLocal * cycles) % 1;
-          var inhaleEnd = 0.6;
-          var holdEnd = 0.78;
-          var minScale = 0.12;
-          var maxScale = 6.0;
+          var inhaleEnd = 0.5;
+          var holdEnd = 0.74;
+          var minScale = 0.5;
+          var maxScale = 3.6;
           var eased;
           var scale;
           var inhale = cycle < holdEnd;
@@ -814,8 +799,8 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           breathRing.style.transform = "scale(" + scale + ")";
           if (breathHaze) {
             var hazeNorm = clamp01((scale - minScale) / (maxScale - minScale));
-            breathHaze.style.opacity = (0.15 + hazeNorm * 0.2).toFixed(3);
-            breathHaze.style.transform = "scale(" + (0.6 + hazeNorm * 1.1).toFixed(3) + ")";
+            breathHaze.style.opacity = (0.1 + hazeNorm * 0.15).toFixed(3);
+            breathHaze.style.transform = "scale(" + (0.75 + hazeNorm * 0.65).toFixed(3) + ")";
           }
 
           if (cycle < inhaleEnd) {
@@ -841,17 +826,17 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
           group.style.opacity = 1;
           var words = group.querySelectorAll(".sequence-word");
           var isFinal = index === sequenceGroups.length - 1;
-          var lineWindow = isFinal ? 1.05 : 0.92;
-          var perLine = lineWindow / Math.max(1, words.length);
-          var groupFadeOutStart = isFinal ? 0.96 : 0.9;
-          var groupFadeOutDur = isFinal ? 0.04 : 0.1;
+          var revealWindow = isFinal ? 0.75 : 0.58;
+          var perLine = revealWindow / Math.max(1, words.length);
+          var groupFadeOutStart = isFinal ? 0.97 : 0.9;
+          var groupFadeOutDur = isFinal ? 0.03 : 0.1;
           var groupFadeOut = stepLocal > groupFadeOutStart ? (1 - stepLocal) / groupFadeOutDur : 1;
           words.forEach(function (wordEl, lineIndex) {
             var lineStart = lineIndex * perLine;
-            var lineLocal = clamp01((stepLocal - lineStart) / perLine);
+            var lineLocal = clamp01((stepLocal - lineStart) / (perLine * 0.9));
             var role = wordEl.dataset.role || "";
             var kind = classifyLine(wordEl.textContent || "", role, isFinal);
-            var fadeInDur = kind === "sensory" ? 0.3 : kind === "instructional" ? 0.5 : kind === "final" ? 0.6 : 0.4;
+            var fadeInDur = kind === "sensory" ? 0.45 : kind === "instructional" ? 0.65 : kind === "final" ? 0.78 : 0.55;
             var lineFadeIn = lineLocal < fadeInDur ? lineLocal / fadeInDur : 1;
             var baseOpacity = Math.min(lineFadeIn, groupFadeOut);
             var opacityBoost = role === "lead" ? 1.06 : 0.94;
@@ -862,10 +847,10 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
             var baseScale = parseFloat(wordEl.dataset.scale || "0.8");
             var scale = baseScale;
             if (role === "lead") {
-              if (stepLocal < 0.4) {
-                scale = lerp(0.4, 1.8, easeInOutCubic(stepLocal / 0.4));
+              if (stepLocal < 0.36) {
+                scale = lerp(0.92, 1.14, easeInOutCubic(stepLocal / 0.36));
               } else {
-                scale = lerp(1.8, baseScale, easeInOutCubic((stepLocal - 0.4) / 0.6));
+                scale = lerp(1.14, baseScale, easeInOutCubic((stepLocal - 0.36) / 0.64));
               }
             }
             wordEl.style.transform = "translate(-50%, -50%) translate(" + x + "vw, " + y + "vh) scale(" + scale + ")";
@@ -991,7 +976,7 @@ ai_summary: "A scroll-driven meditation where five words bloom large, then settl
 
       function tryPlayAudio() {
         if (!bgAudio) return;
-        baseVolume = volumeSlider ? parseFloat(volumeSlider.value) : 0.35;
+        baseVolume = volumeSlider ? parseFloat(volumeSlider.value) : 0.24;
         bgAudio.volume = baseVolume;
         var playPromise = bgAudio.play();
         if (playPromise && typeof playPromise.catch === "function") {
