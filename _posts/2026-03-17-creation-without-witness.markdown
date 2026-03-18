@@ -13,24 +13,6 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 ---
 
 <style>
-.post-side-image {
-  float: right;
-  width: 150px;
-  max-width: 32%;
-  margin: 6px 0 14px 20px;
-  border-radius: 4px;
-}
-
-@media (max-width: 640px) {
-  .post-side-image {
-    float: none;
-    display: block;
-    width: 150px;
-    max-width: 100%;
-    margin: 20px auto;
-  }
-}
-
 .audio-card {
   max-width: 600px;
   margin: 30px auto 40px;
@@ -196,8 +178,6 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 <img src="{{ '/assets/images/smokyroom.png' | relative_url }}" alt="Creation Without Witness" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 'History SideQuests' was an abandoned podcast project I attempted back in mid-2024. I read quite a bit of history, and in particular enjoy going down obscure rabbit holes, especially 19th-century American history.
-
-<img src="{{ '/assets/images/podcastart2.png' | relative_url }}" alt="History SideQuests artwork" class="post-side-image">
 
 Anyway, I made three episodes before giving up.
 
