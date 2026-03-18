@@ -54,25 +54,10 @@
         <!-- Newest Section (fixed) -->
         <div class="content-section" id="newest">
             <h2>NEWEST</h2>
-            {% assign recent = site.posts | sort: "date" | reverse %}
+            {% assign featured_pages = site.pages | where_exp: "item", "item.featured_in_newest == true and item.date" %}
+            {% assign newest_items = site.posts | concat: featured_pages | sort: "date" | reverse %}
             <ul>
-                {% for post in recent limit:1 %}
-                    <li>
-                        <span class="bullet-wrap">
-                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
-                            <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
-                        </span>
-                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.ai_summary | escape }}">{{ post.title | truncate: 45 }}</a>
-                    </li>
-                {% endfor %}
-                <li>
-                    <span class="bullet-wrap">
-                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
-                        <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
-                    </span>
-                    <a href="{{ '/abide' | relative_url }}" class="bullet-link" data-summary="A scroll-driven meditation experience, inviting intention, peace, and quiet into our lives. Nothing to achieve, nothing to complete.">Abide</a>
-                </li>
-                {% for post in recent offset:1 limit:9 %}
+                {% for post in newest_items limit:10 %}
                     <li>
                         <span class="bullet-wrap">
                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
