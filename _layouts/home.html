@@ -57,7 +57,7 @@
             {% assign featured_pages = site.pages | where_exp: "item", "item.featured_in_newest == true and item.date" %}
             {% assign newest_items = site.posts | concat: featured_pages | sort: "date" | reverse %}
             <ul>
-                {% for post in newest_items limit:10 %}
+{% for post in newest_items limit:11 %}
                     <li>
                         <span class="bullet-wrap">
                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
