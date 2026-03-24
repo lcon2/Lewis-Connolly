@@ -240,6 +240,7 @@ body {
     display: block;
     max-width: 80px;
     transition: transform 1s ease;
+    transform-origin: center center;
 }
 
 .home .logo-wrap img,
@@ -263,6 +264,7 @@ body {
 .archive .logo-base,
 .archive .logo-hover {
     transition: opacity 1s ease, transform 1s ease;
+    transform-origin: center center;
 }
 
 .home .logo-hover,
@@ -271,10 +273,10 @@ body {
 .contact .logo-hover,
 .archive .logo-hover {
     position: absolute;
-    top: 2px;
-    left: 0;
+    left: 50%;
+    top: 50%;
     opacity: 0;
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .home .logo-link:hover .logo-hover,
