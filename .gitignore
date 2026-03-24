@@ -3,3 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Optional local master for regenerating hero images (see scripts/build_home_hero_images.py)
+assets/images/home-hero-background-source.png
+assets/images/home-hero-background.png

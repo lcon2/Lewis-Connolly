@@ -17,36 +17,33 @@
 </head>
 <body class="home">
     <div class="home-backdrop" aria-hidden="true">
-        <div class="home-backdrop__photo" data-bg-src="{{ '/assets/images/home-hero-background.png' | relative_url }}"></div>
+        <div class="home-backdrop__layers">
+            <div class="home-backdrop__layer home-backdrop__lqip" style="background-image: url('{{ '/assets/images/home-hero-background-lqip.jpg' | relative_url }}');"></div>
+            <div class="home-backdrop__layer home-backdrop__full" data-bg-webp="{{ '/assets/images/home-hero-background-full.webp' | relative_url }}" data-bg-fallback="{{ '/assets/images/home-hero-background-full.jpg' | relative_url }}"></div>
+        </div>
         <div class="home-backdrop__scrim"></div>
     </div>
 
-    <nav class="navbar">
-        <!-- Wrapper for Logo and Navigation Menu -->
-        <div class="navbar-content">
-            <!-- Logo -->
-            <a href="{{ '/' | relative_url }}" class="logo-link brand-lockup">
-                <span class="logo-wrap">
-                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
-                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
-                </span>
-                <span class="site-wordmark">Lewis Connolly</span>
-            </a>
-
-            <!-- Navigation Menu -->
+    <nav class="navbar home-navbar">
+        <a href="{{ '/' | relative_url }}" class="logo-link brand-lockup">
+            <span class="logo-wrap">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+            </span>
+            <span class="site-wordmark">Lewis Connolly</span>
+        </a>
+        <div class="home-navbar__end">
             <ul class="navbar-menu">
                 <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
                 <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
                 <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
                 <li><a href="{{ '/studies/' | relative_url }}">Studies</a></li>
             </ul>
-        </div>
-
-        <!-- Right Section (Buy Me a Coffee) -->
-        <div class="navbar-right">
-            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
-                <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
-            </a>
+            <div class="navbar-right">
+                <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="Buy Me a Beer" class="buy-coffee">
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -70,8 +67,8 @@
 {% for post in newest_items limit:11 %}
                     <li>
                         <span class="bullet-wrap">
-                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base">
-                            <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover">
+                            <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base">
+                            <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover">
                         </span>
                         <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.ai_summary | escape }}">{{ post.title | truncate: 45 }}</a>
                     </li>
@@ -83,17 +80,17 @@
         <div class="content-section" id="featured">
             <h2>FEATURED</h2>
             <ul>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2025/04/22/the-diachronic-and-the-episodic/' | relative_url }}" class="bullet-link">The Diachronic and the Episodic</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2021/12/09/a-guide-to-active-imagination/' | relative_url }}" class="bullet-link">A Guide to Active Imagination</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2025/01/02/in-wonderlands-shadow/' | relative_url }}" class="bullet-link">In Wonderland’s Shadow</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/drift' | relative_url }}" class="bullet-link">Drift</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2025/01/30/Lynch-Jung-and-Art-Alchemy/' | relative_url }}" class="bullet-link">Lynch, Jung, and Art Alchemy</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}" class="bullet-link">A Taste of Deeper Things</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2025/05/12/Frankl-and-the-Horizon-of-Meaning/' | relative_url }}" class="bullet-link">Frankl and the Horizon of Meaning</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2024/11/15/sunk-cost-the-meaning-crisis-and-taste/' | relative_url }}" class="bullet-link">Sunk Cost, the Meaning Crisis, &amp; Taste</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2018/06/03/the-giving-tree/' | relative_url }}" class="bullet-link">The Giving Tree</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/2023/03/16/what-is-the-gospel/' | relative_url }}" class="bullet-link">What is the Gospel?</a></li>
-                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="Bullet" class="bullet-icon bullet-hover"></span> <a href="{{ '/proustian-temporality/' | relative_url }}" class="bullet-link" data-summary="This paper explores how time functions in Marcel Proust&rsquo;s &Agrave; la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust&rsquo;s &ldquo;privileged moments&rdquo; of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.">Proustian Temporality (MA Dissertation)</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2025/04/22/the-diachronic-and-the-episodic/' | relative_url }}" class="bullet-link">The Diachronic and the Episodic</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2021/12/09/a-guide-to-active-imagination/' | relative_url }}" class="bullet-link">A Guide to Active Imagination</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2025/01/02/in-wonderlands-shadow/' | relative_url }}" class="bullet-link">In Wonderland’s Shadow</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/drift' | relative_url }}" class="bullet-link">Drift</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2025/01/30/Lynch-Jung-and-Art-Alchemy/' | relative_url }}" class="bullet-link">Lynch, Jung, and Art Alchemy</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}" class="bullet-link">A Taste of Deeper Things</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2025/05/12/Frankl-and-the-Horizon-of-Meaning/' | relative_url }}" class="bullet-link">Frankl and the Horizon of Meaning</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2024/11/15/sunk-cost-the-meaning-crisis-and-taste/' | relative_url }}" class="bullet-link">Sunk Cost, the Meaning Crisis, &amp; Taste</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2018/06/03/the-giving-tree/' | relative_url }}" class="bullet-link">The Giving Tree</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/2023/03/16/what-is-the-gospel/' | relative_url }}" class="bullet-link">What is the Gospel?</a></li>
+                <li><span class="bullet-wrap"><img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base"><img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover"></span><a href="{{ '/proustian-temporality/' | relative_url }}" class="bullet-link" data-summary="This paper explores how time functions in Marcel Proust&rsquo;s &Agrave; la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust&rsquo;s &ldquo;privileged moments&rdquo; of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.">Proustian Temporality (MA Dissertation)</a></li>
             </ul>
         </div>
         
@@ -154,11 +151,11 @@
           wrap.className = "bullet-wrap";
           var img = document.createElement('img');
           img.src = "{{ '/assets/images/bullet.png' | relative_url }}";
-          img.alt = "Bullet";
+          img.alt = "";
           img.className = "bullet-icon bullet-base";
           var img2 = document.createElement('img');
           img2.src = "{{ '/assets/images/bullet2.png' | relative_url }}";
-          img2.alt = "Bullet";
+          img2.alt = "";
           img2.className = "bullet-icon bullet-hover";
           var link = document.createElement('a');
           link.href = candidates[k].url;

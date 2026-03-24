@@ -32,7 +32,7 @@ body {
         radial-gradient(700px 320px at 20% 30%, rgba(255, 255, 255, 0.04), rgba(21, 21, 21, 0) 65%);
 }
 
-/* Full-viewport photographic backdrop (image loads progressively via home-background.js) */
+/* Full-viewport photographic backdrop: LQIP layer + crossfade to WebP/JPEG (home-background.js) */
 .home-backdrop {
     position: fixed;
     inset: 0;
@@ -40,22 +40,30 @@ body {
     pointer-events: none;
 }
 
-.home-backdrop__photo {
+.home-backdrop__layers {
     position: absolute;
     inset: 0;
     background-color: #1a1814;
+}
+
+.home-backdrop__layer {
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.home-backdrop__full {
     opacity: 0;
     transition: opacity 0.85s ease;
 }
 
-.home-backdrop__photo.is-loaded {
+.home-backdrop__full.is-loaded {
     opacity: 1;
 }
 
-.home-backdrop__photo.is-error {
+.home-backdrop__full.is-error {
     opacity: 0;
 }
 
@@ -68,7 +76,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .home-backdrop__photo {
+    .home-backdrop__full {
         transition: none;
     }
 }
@@ -76,19 +84,24 @@ body {
 .home .brand-lockup {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     text-decoration: none;
     color: inherit;
+    flex-shrink: 0;
 }
 
+/* Mock-aligned wordmark: clean sans, uppercase tracking (text stays “Lewis Connolly” in markup for accessibility) */
 .home .site-wordmark {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    font-size: clamp(0.92rem, 1.55vw, 1.22rem);
-    color: #f0ede8;
+    font-size: clamp(0.78rem, 1.1vw + 0.55rem, 1.05rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #f5f2ec;
     transition: color 0.75s ease;
     white-space: nowrap;
+    line-height: 1;
+    padding-top: 0.12em; /* optical alignment with round logo */
 }
 
 .home .logo-link.brand-lockup:hover .site-wordmark,
@@ -141,6 +154,28 @@ body {
     padding: 12px 32px;
 }
 
+/* Home header: brand left, nav + beer right (matches reference layout) */
+.home .navbar.home-navbar {
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+}
+
+.home-navbar__end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.home .home-navbar__end .buy-coffee-link {
+    margin-left: 4px;
+}
+
 .home .navbar-content,
 .studies .navbar-content,
 .about .navbar-content,
@@ -149,10 +184,6 @@ body {
     display: flex;
     align-items: center; /* Vertically aligns logo and menu */
     gap: 30px; /* Expands spacing between the logo and navigation menu */
-}
-
-.home .navbar-content {
-    gap: 18px;
 }
 
 .home .logo,
@@ -564,6 +595,12 @@ body {
 
 .home .content-section ul li {
     margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .home .content-section ul li a {
@@ -1072,14 +1109,9 @@ body {
 }
 
 /* Home list titles should never wrap; show ellipsis instead. */
-.home .content-section ul li {
-    white-space: nowrap;
-    overflow: hidden;
-}
-
 .home .content-section ul li a {
     display: inline-block;
-    max-width: calc(100% - 36px); /* leave room for bullet icon */
+    max-width: calc(100% - 42px); /* bullet column + gap */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1419,12 +1451,22 @@ footer {
         padding: 10px 20px;
     }
 
+    .home .navbar.home-navbar {
+        max-width: none;
+    }
+
+    .home-navbar__end {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .home .brand-lockup {
         gap: 10px;
     }
 
     .home .site-wordmark {
-        letter-spacing: 0.06em;
+        letter-spacing: 0.12em;
+        font-size: clamp(0.7rem, 2.8vw, 0.95rem);
     }
 
     .home .navbar-content,

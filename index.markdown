@@ -1,4 +1,4 @@
 ---
 layout: home
-title: Welcome to My Website
+title: "Lewis Connolly — Consciousness, Meaning, and the Future"
 ---
