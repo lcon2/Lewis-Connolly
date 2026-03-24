@@ -19,13 +19,11 @@ body {
     margin: 0;
 }
 
-/* Homepage visual direction */
+/* Homepage visual direction (no min-height: content defines height; backdrop is fixed full-viewport) */
 .home {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100svh;
     background-color: #151515;
     background-image:
         radial-gradient(900px 380px at 50% -120px, rgba(255, 190, 120, 0.08), rgba(21, 21, 21, 0) 60%),
@@ -117,13 +115,13 @@ body {
 }
 
 .home-hero__title {
-    font-family: 'EBGaramond', serif;
-    font-size: clamp(1.8rem, 4.2vw, 2.85rem);
-    font-weight: 600;
-    line-height: 1.22;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
+    font-size: clamp(1.65rem, 3.8vw, 2.65rem);
+    font-weight: 700;
+    line-height: 1.25;
     color: #f5f1eb;
     text-shadow: 0 2px 32px rgba(0, 0, 0, 0.55);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
 }
 
 /* Studies visual direction */
@@ -151,43 +149,46 @@ body {
 }
 
 .home .navbar {
-    padding: 12px 32px;
+    padding: 12px clamp(20px, 4vw, 40px);
     border-bottom: none;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
     box-shadow:
         0 10px 36px rgba(0, 0, 0, 0.38),
-        0 18px 56px rgba(255, 95, 40, 0.06);
+        0 18px 56px rgba(255, 95, 40, 0.08);
 }
 
-/* Gold-tinted illuminated divider under home nav */
+/* Gold-tinted illuminated divider under home nav (full viewport width) */
 .home .navbar::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(
         90deg,
-        rgba(255, 150, 85, 0) 0%,
-        rgba(255, 185, 125, 0.35) 15%,
-        rgba(255, 215, 165, 0.65) 50%,
-        rgba(255, 185, 125, 0.35) 85%,
-        rgba(255, 150, 85, 0) 100%
+        rgba(255, 140, 75, 0) 0%,
+        rgba(255, 175, 115, 0.45) 12%,
+        rgba(255, 220, 175, 0.85) 50%,
+        rgba(255, 175, 115, 0.45) 88%,
+        rgba(255, 140, 75, 0) 100%
     );
     box-shadow:
-        0 0 10px rgba(255, 175, 110, 0.35),
-        0 0 26px rgba(255, 130, 70, 0.18);
+        0 0 14px rgba(255, 185, 120, 0.55),
+        0 0 36px rgba(255, 145, 80, 0.35),
+        0 2px 20px rgba(255, 120, 60, 0.2);
     pointer-events: none;
 }
 
-/* Home header: brand left, nav + beer right (matches reference layout) */
+/* Home header: brand left, nav + beer right; bar spans full width */
 .home .navbar.home-navbar {
     justify-content: space-between;
     width: 100%;
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
     gap: 16px;
 }
 
@@ -590,11 +591,12 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin: 28px auto 32px;
+    margin: 28px auto 24px;
     padding: 0 24px;
     max-width: 1200px;
     font-size: 1.1em;
     flex: 0 0 auto;
+    align-items: start; /* panels height = content; no stretch on tall monitors */
 }
 
 .home .content-section {
@@ -604,29 +606,32 @@ body {
     border: none;
     border-radius: 16px;
     background: rgba(22, 20, 18, 0.78);
-    overflow: hidden;
+    overflow: visible; /* allow outer glow to bloom past box */
     box-shadow:
-        0 0 0 1px rgba(255, 175, 115, 0.09),
-        0 0 36px rgba(255, 120, 55, 0.14),
-        0 0 88px rgba(255, 85, 35, 0.07),
-        0 22px 52px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        0 0 0 1px rgba(255, 190, 130, 0.14),
+        0 0 24px rgba(255, 145, 75, 0.22),
+        0 0 48px rgba(255, 115, 50, 0.16),
+        0 0 96px rgba(255, 90, 40, 0.09),
+        0 20px 48px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
-/* Vignetted amber rim / burnished edge bloom (not a hard stroke) */
+/* Rim-lit amber edge: stronger at corners, fades inward */
 .home .content-section::before {
     content: "";
     position: absolute;
-    inset: -3px;
+    inset: -4px;
     border-radius: 18px;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.9;
+    opacity: 1;
     background:
-        radial-gradient(ellipse 130% 70% at 50% -20%, rgba(255, 185, 120, 0.2), transparent 52%),
-        radial-gradient(ellipse 55% 45% at 0% 100%, rgba(255, 145, 75, 0.14), transparent 48%),
-        radial-gradient(ellipse 55% 45% at 100% 100%, rgba(255, 145, 75, 0.14), transparent 48%),
-        radial-gradient(ellipse 90% 85% at 50% 50%, transparent 55%, rgba(255, 160, 90, 0.08) 100%);
+        radial-gradient(ellipse 125% 65% at 50% -15%, rgba(255, 200, 140, 0.35), transparent 50%),
+        radial-gradient(ellipse 50% 42% at 0% 0%, rgba(255, 165, 95, 0.28), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 100% 0%, rgba(255, 165, 95, 0.28), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 0% 100%, rgba(255, 155, 85, 0.22), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 100% 100%, rgba(255, 155, 85, 0.22), transparent 45%),
+        radial-gradient(ellipse 95% 90% at 50% 50%, transparent 50%, rgba(255, 175, 110, 0.12) 100%);
     mix-blend-mode: screen;
 }
 
@@ -1446,8 +1451,8 @@ footer {
 }
 
 .home-footer {
-    margin-top: 2rem;
-    padding: 18px 16px 24px;
+    margin-top: 1.25rem;
+    padding: 14px 16px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
