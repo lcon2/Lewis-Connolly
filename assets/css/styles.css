@@ -239,7 +239,7 @@ body {
     position: relative;
     display: block;
     max-width: 80px;
-    transition: transform 0.8s ease;
+    transition: transform 1s ease;
 }
 
 .home .logo-wrap img,
@@ -262,7 +262,7 @@ body {
 .contact .logo-hover,
 .archive .logo-base,
 .archive .logo-hover {
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .home .logo-hover,
@@ -274,7 +274,7 @@ body {
     top: 2px;
     left: 0;
     opacity: 0;
-    transform: scale(1.192);
+    transform: scale(1);
 }
 
 .home .logo-link:hover .logo-hover,
@@ -313,7 +313,7 @@ body {
 .contact .logo-link:focus-visible .logo-wrap,
 .archive .logo-link:hover .logo-wrap,
 .archive .logo-link:focus-visible .logo-wrap {
-    transform: scale(1.2);
+    transform: scale(1.03);
 }
 
 .post .category-pill {
@@ -399,14 +399,14 @@ body {
 
 /* Home nav pills: readable on photo backdrop */
 .home .navbar-menu a {
-    background: rgba(55, 46, 40, 0.96);
-    border: 1px solid rgba(95, 80, 68, 0.4);
+    background: rgba(55, 46, 40, 0.77);
+    border: 1px solid rgba(95, 80, 68, 0.32);
 }
 
 .home .navbar-menu a:hover,
 .home .navbar-menu a:focus-visible,
 .home .navbar-menu a.is-active {
-    background-color: rgba(74, 62, 54, 0.95);
+    background-color: rgba(74, 62, 54, 0.76);
     border-color: #d1ae7a;
     color: #d1ae7a;
     box-shadow: 0 0 0 2px rgba(209, 174, 122, 0.18);
