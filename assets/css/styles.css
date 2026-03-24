@@ -124,6 +124,10 @@ body {
     letter-spacing: 0.04em;
 }
 
+.home-hero__title .home-hero__line {
+    display: block;
+}
+
 /* Studies visual direction */
 .studies {
     background-color: #151515;
@@ -279,9 +283,9 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Home only: hover asset (logo2) 2px higher for optical match to base */
+/* Home only: hover asset (logo2) optical nudge vs base */
 .home .logo-hover {
-    transform: translate(-50%, calc(-50% - 2px)) scale(1);
+    transform: translate(-50%, calc(-50% - 1px)) scale(1);
 }
 
 .home .logo-link:hover .logo-hover,
@@ -1466,6 +1470,35 @@ article picture {
 .post article a:hover {
     color: #ffa64d;
     border-bottom-color: #ffa64d;
+}
+
+/* Post: share + RSS (above prev/next) */
+.post-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 20px;
+    margin-top: 2.5rem;
+}
+
+.post-share__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+.post-share__link:hover,
+.post-share__link:focus-visible {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.post-share__icon {
+    width: 36px;
+    height: 36px;
+    display: block;
 }
 
 /* Post Navigation Styling */

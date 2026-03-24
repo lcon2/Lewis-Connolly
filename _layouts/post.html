@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVG9646266"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-KVG9646266');
-    </script>
-
 </head>
 <body class="post">
     <header>
@@ -47,7 +36,23 @@
             </p>
             <div>{{ content }}</div>
         </article>
-        
+        {% assign share_u = page.url | absolute_url | uri_escape %}
+        {% assign share_t = page.title | uri_escape %}
+        <nav class="post-share" aria-label="Share and subscribe">
+            <a class="post-share__link" href="https://x.com/intent/post?text={{ share_t }}%20{{ share_u }}" target="_blank" rel="noopener noreferrer">
+                <img class="post-share__icon" src="{{ '/assets/images/share/X.svg' | relative_url }}" width="36" height="36" alt="Share on X" loading="lazy" decoding="async">
+            </a>
+            <a class="post-share__link" href="https://www.facebook.com/sharer/sharer.php?u={{ share_u }}" target="_blank" rel="noopener noreferrer">
+                <img class="post-share__icon" src="{{ '/assets/images/share/Facebook.svg' | relative_url }}" width="36" height="36" alt="Share on Facebook" loading="lazy" decoding="async">
+            </a>
+            <a class="post-share__link" href="https://www.reddit.com/submit?url={{ share_u }}&title={{ share_t }}" target="_blank" rel="noopener noreferrer">
+                <img class="post-share__icon" src="{{ '/assets/images/share/Reddit.svg' | relative_url }}" width="36" height="36" alt="Submit to Reddit" loading="lazy" decoding="async">
+            </a>
+            <a class="post-share__link" href="{{ '/feed.xml' | relative_url }}">
+                <img class="post-share__icon" src="{{ '/assets/images/share/RSS.svg' | relative_url }}" width="36" height="36" alt="RSS feed" loading="lazy" decoding="async">
+            </a>
+        </nav>
+
         <!-- New Navigation Section -->
         <div class="post-navigation">
             <div class="previous-post">
