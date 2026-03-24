@@ -154,54 +154,75 @@ body {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    background: #2e241e;
     box-shadow:
         0 10px 36px rgba(0, 0, 0, 0.38),
-        0 18px 56px rgba(255, 95, 40, 0.08);
+        0 18px 56px rgba(255, 95, 40, 0.05);
 }
 
-/* Gold-tinted illuminated divider under home nav (full viewport width) */
+/* Gold-tinted divider under home nav (subtle; full width) */
 .home .navbar::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(
         90deg,
         rgba(255, 140, 75, 0) 0%,
-        rgba(255, 175, 115, 0.45) 12%,
-        rgba(255, 220, 175, 0.85) 50%,
-        rgba(255, 175, 115, 0.45) 88%,
+        rgba(255, 175, 115, 0.2) 12%,
+        rgba(255, 210, 165, 0.38) 50%,
+        rgba(255, 175, 115, 0.2) 88%,
         rgba(255, 140, 75, 0) 100%
     );
     box-shadow:
-        0 0 14px rgba(255, 185, 120, 0.55),
-        0 0 36px rgba(255, 145, 80, 0.35),
-        0 2px 20px rgba(255, 120, 60, 0.2);
+        0 0 8px rgba(255, 185, 120, 0.22),
+        0 0 20px rgba(255, 145, 80, 0.14),
+        0 2px 10px rgba(255, 120, 60, 0.08);
     pointer-events: none;
 }
 
-/* Home header: brand left, nav + beer right; bar spans full width */
+/* Home header: logo + links grouped with modest gap (not split to viewport edges) */
 .home .navbar.home-navbar {
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     max-width: none;
     margin-left: 0;
     margin-right: 0;
-    gap: 16px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .home-navbar__end {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 8px 16px;
+    gap: 8px 12px;
+}
+
+/* Tighter pill spacing on home */
+.home .home-navbar .navbar-menu {
+    gap: 10px;
 }
 
 .home .home-navbar__end .buy-coffee-link {
     margin-left: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px 6px;
+    border-radius: 8px;
+    background: rgba(62, 52, 45, 0.98);
+    border: 1px solid rgba(95, 80, 68, 0.35);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.3s ease;
+}
+
+.home .home-navbar__end .buy-coffee-link:hover,
+.home .home-navbar__end .buy-coffee-link:focus-visible {
+    background: rgba(74, 62, 54, 0.98);
+    border-color: rgba(255, 153, 51, 0.45);
 }
 
 .home .navbar-content,
@@ -389,6 +410,21 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
 }
 
+/* Home nav pills: sit on #2e241e bar; slightly lighter fill (overrides shared rule above) */
+.home .navbar-menu a {
+    background: rgba(55, 46, 40, 0.96);
+    border: 1px solid rgba(95, 80, 68, 0.4);
+}
+
+.home .navbar-menu a:hover,
+.home .navbar-menu a:focus-visible,
+.home .navbar-menu a.is-active {
+    background-color: #4a3e36;
+    border-color: #ff9933;
+    color: #ff9933;
+    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
+}
+
 /* Content Grid */
 .content-grid {
     display: flex;
@@ -522,16 +558,16 @@ body {
 }
 
 .home .intro {
-    color: #9a8665;
+    color: #b9a088;
     border-bottom-color: rgba(154, 134, 101, 0.35);
     margin: 18px auto 8px;
     padding: 8px 20px 14px;
 }
 
 .home .intro a {
-    color: #c4b498;
+    color: #d2c4b2;
     text-decoration: none;
-    border-bottom: 1px dotted rgba(196, 180, 152, 0.6);
+    border-bottom: 1px dotted rgba(210, 196, 178, 0.55);
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
@@ -590,7 +626,7 @@ body {
 .home .content-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 16px;
     margin: 28px auto 24px;
     padding: 0 24px;
     max-width: 1200px;
@@ -608,30 +644,30 @@ body {
     background: rgba(22, 20, 18, 0.78);
     overflow: visible; /* allow outer glow to bloom past box */
     box-shadow:
-        0 0 0 1px rgba(255, 190, 130, 0.14),
-        0 0 24px rgba(255, 145, 75, 0.22),
-        0 0 48px rgba(255, 115, 50, 0.16),
-        0 0 96px rgba(255, 90, 40, 0.09),
-        0 20px 48px rgba(0, 0, 0, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        0 0 0 1px rgba(255, 190, 130, 0.08),
+        0 0 18px rgba(255, 145, 75, 0.14),
+        0 0 40px rgba(255, 115, 50, 0.1),
+        0 0 72px rgba(255, 90, 40, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Rim-lit amber edge: stronger at corners, fades inward */
+/* Rim-lit amber edge: softer than previous pass */
 .home .content-section::before {
     content: "";
     position: absolute;
-    inset: -4px;
-    border-radius: 18px;
+    inset: -2px;
+    border-radius: 17px;
     pointer-events: none;
     z-index: 0;
-    opacity: 1;
+    opacity: 0.88;
     background:
-        radial-gradient(ellipse 125% 65% at 50% -15%, rgba(255, 200, 140, 0.35), transparent 50%),
-        radial-gradient(ellipse 50% 42% at 0% 0%, rgba(255, 165, 95, 0.28), transparent 45%),
-        radial-gradient(ellipse 50% 42% at 100% 0%, rgba(255, 165, 95, 0.28), transparent 45%),
-        radial-gradient(ellipse 50% 42% at 0% 100%, rgba(255, 155, 85, 0.22), transparent 45%),
-        radial-gradient(ellipse 50% 42% at 100% 100%, rgba(255, 155, 85, 0.22), transparent 45%),
-        radial-gradient(ellipse 95% 90% at 50% 50%, transparent 50%, rgba(255, 175, 110, 0.12) 100%);
+        radial-gradient(ellipse 125% 65% at 50% -15%, rgba(255, 200, 140, 0.22), transparent 50%),
+        radial-gradient(ellipse 50% 42% at 0% 0%, rgba(255, 165, 95, 0.18), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 100% 0%, rgba(255, 165, 95, 0.18), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 0% 100%, rgba(255, 155, 85, 0.14), transparent 45%),
+        radial-gradient(ellipse 50% 42% at 100% 100%, rgba(255, 155, 85, 0.14), transparent 45%),
+        radial-gradient(ellipse 95% 90% at 50% 50%, transparent 50%, rgba(255, 175, 110, 0.07) 100%);
     mix-blend-mode: screen;
 }
 
@@ -689,7 +725,7 @@ body {
 .home .content-section ul li a {
     color: #f0f0f0;
     text-decoration: none;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.48); /* ~20% softer than 0.6 */
     font-size: 1.1em;
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
