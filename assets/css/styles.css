@@ -90,18 +90,18 @@ body {
     flex-shrink: 0;
 }
 
-/* Mock-aligned wordmark: clean sans, uppercase tracking (text stays “Lewis Connolly” in markup for accessibility) */
+/* Wordmark: Cinzel uppercase (markup stays “Lewis Connolly” for accessibility) */
 .home .site-wordmark {
-    font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
     font-weight: 600;
-    font-size: clamp(0.78rem, 1.1vw + 0.55rem, 1.05rem);
-    letter-spacing: 0.16em;
+    font-size: clamp(0.72rem, 0.95vw + 0.52rem, 1rem);
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #f5f2ec;
     transition: color 0.75s ease;
     white-space: nowrap;
-    line-height: 1;
-    padding-top: 0.12em; /* optical alignment with round logo */
+    line-height: 1.15;
+    padding-top: 0.08em;
 }
 
 .home .logo-link.brand-lockup:hover .site-wordmark,
@@ -112,7 +112,7 @@ body {
 .home-hero {
     max-width: 920px;
     margin: 0 auto;
-    padding: 24px 24px 6px;
+    padding: 18px 24px 4px;
     text-align: center;
 }
 
@@ -152,6 +152,33 @@ body {
 
 .home .navbar {
     padding: 12px 32px;
+    border-bottom: none;
+    position: relative;
+    box-shadow:
+        0 10px 36px rgba(0, 0, 0, 0.38),
+        0 18px 56px rgba(255, 95, 40, 0.06);
+}
+
+/* Gold-tinted illuminated divider under home nav */
+.home .navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 150, 85, 0) 0%,
+        rgba(255, 185, 125, 0.35) 15%,
+        rgba(255, 215, 165, 0.65) 50%,
+        rgba(255, 185, 125, 0.35) 85%,
+        rgba(255, 150, 85, 0) 100%
+    );
+    box-shadow:
+        0 0 10px rgba(255, 175, 110, 0.35),
+        0 0 26px rgba(255, 130, 70, 0.18);
+    pointer-events: none;
 }
 
 /* Home header: brand left, nav + beer right (matches reference layout) */
@@ -496,6 +523,8 @@ body {
 .home .intro {
     color: #9a8665;
     border-bottom-color: rgba(154, 134, 101, 0.35);
+    margin: 18px auto 8px;
+    padding: 8px 20px 14px;
 }
 
 .home .intro a {
@@ -561,30 +590,79 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin: 35px auto 50px;
+    margin: 28px auto 32px;
     padding: 0 24px;
     max-width: 1200px;
     font-size: 1.1em;
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .home .content-section {
+    position: relative;
     padding: 18px 20px 16px;
     text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: none;
     border-radius: 16px;
-    background: rgba(24, 24, 24, 0.7);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    background: rgba(22, 20, 18, 0.78);
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(255, 175, 115, 0.09),
+        0 0 36px rgba(255, 120, 55, 0.14),
+        0 0 88px rgba(255, 85, 35, 0.07),
+        0 22px 52px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Vignetted amber rim / burnished edge bloom (not a hard stroke) */
+.home .content-section::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 18px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.9;
+    background:
+        radial-gradient(ellipse 130% 70% at 50% -20%, rgba(255, 185, 120, 0.2), transparent 52%),
+        radial-gradient(ellipse 55% 45% at 0% 100%, rgba(255, 145, 75, 0.14), transparent 48%),
+        radial-gradient(ellipse 55% 45% at 100% 100%, rgba(255, 145, 75, 0.14), transparent 48%),
+        radial-gradient(ellipse 90% 85% at 50% 50%, transparent 55%, rgba(255, 160, 90, 0.08) 100%);
+    mix-blend-mode: screen;
+}
+
+.home .content-section > * {
+    position: relative;
+    z-index: 1;
 }
 
 .home .content-section h2 {
     font-size: 0.95em;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: #d8d3cd;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e8e2da;
+    border-bottom: none;
     margin-bottom: 14px;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+/* Warm glowing rule under column titles */
+.home .content-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 175, 110, 0.35) 20%,
+        rgba(255, 210, 155, 0.75) 50%,
+        rgba(255, 175, 110, 0.35) 80%,
+        transparent 100%
+    );
+    box-shadow: 0 0 12px rgba(255, 170, 100, 0.28);
 }
 
 .content-section ul {
@@ -1368,8 +1446,8 @@ footer {
 }
 
 .home-footer {
-    margin-top: auto;
-    padding: 22px 16px 28px;
+    margin-top: 2rem;
+    padding: 18px 16px 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
