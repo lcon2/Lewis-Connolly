@@ -279,6 +279,11 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* Home only: hover asset (logo2) 2px higher for optical match to base */
+.home .logo-hover {
+    transform: translate(-50%, calc(-50% - 2px)) scale(1);
+}
+
 .home .logo-link:hover .logo-hover,
 .home .logo-link:focus-visible .logo-hover,
 .studies .logo-link:hover .logo-hover,
