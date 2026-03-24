@@ -1327,6 +1327,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
     background: rgba(21, 21, 21, 0.96);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #2c2c2c;
@@ -1334,13 +1336,18 @@ header {
     padding-top: 4px;
     min-height: 80px;
     display: block;
+    text-align: center;
 }
 
+/* Full-width row so flex centers; overrides .archive .logo { max-width: 80px } from navbar rules */
 .archive.category-page .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80px;
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .post .beer-link {
