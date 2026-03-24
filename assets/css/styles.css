@@ -2543,6 +2543,109 @@ footer {
     color: #ffa500; /* Orange hover effect */
 }
 
+/* Archive index: collapsible year groups (sidebar--archive-years) */
+.sidebar--archive-years .archive-sidebar-years {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar--archive-years .archive-sidebar-year {
+    margin-bottom: 8px;
+}
+
+.sidebar--archive-years .archive-sidebar-year__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar--archive-years .archive-sidebar-year__toggle {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar--archive-years .archive-sidebar-year__toggle:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar--archive-years .archive-sidebar-year__toggle:focus-visible {
+    outline: 2px solid #ffa500;
+    outline-offset: 2px;
+}
+
+.sidebar--archive-years .archive-sidebar-year__chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.sidebar--archive-years .archive-sidebar-year__chevron svg {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.sidebar--archive-years .archive-sidebar-year.is-open .archive-sidebar-year__chevron svg {
+    transform: rotate(90deg);
+}
+
+.sidebar--archive-years .archive-sidebar-year__link {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.sidebar--archive-years .archive-sidebar-year__link:hover {
+    color: #ffa500;
+}
+
+.sidebar--archive-years .archive-sidebar-year__months {
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0 0 0 8px;
+    margin-left: 15px;
+}
+
+.sidebar--archive-years .archive-sidebar-year__months[hidden] {
+    display: none !important;
+}
+
+.sidebar--archive-years .archive-sidebar-year__months > li {
+    margin-bottom: -10px;
+}
+
+.sidebar--archive-years .archive-sidebar-year__months > li > a {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar--archive-years .archive-sidebar-year__months > li > a:hover {
+    color: #ffa500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar--archive-years .archive-sidebar-year__chevron svg {
+        transition: none;
+    }
+}
+
 /* Media Query to Hide Sidebar on Mobile */
 @media screen and (max-width: 868px) {
     .sidebar {

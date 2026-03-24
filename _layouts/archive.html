@@ -6,7 +6,7 @@
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body class="archive">
+<body class="archive archive-page">
     <nav class="navbar">
         <div class="navbar-content">
             <a href="{{ '/' | relative_url }}" class="logo-link">
@@ -32,15 +32,22 @@
     </nav>
     <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
         <!-- Sidebar -->
-        <nav class="sidebar">
-            <ul>
-                {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-                {% assign posts_by_year = sorted_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+        {% assign posts_by_year = sorted_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        <nav class="sidebar sidebar--archive-years" aria-label="Archive by year">
+            <ul class="archive-sidebar-years">
                 {% for year_group in posts_by_year %}
-                    <li>
-                        <a href="#year-{{ year_group.name }}">{{ year_group.name }}</a>
-                        <ul>
-                            {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                    {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                    <li class="archive-sidebar-year" data-year="{{ year_group.name }}">
+                        <div class="archive-sidebar-year__header">
+                            <button type="button" class="archive-sidebar-year__toggle" id="archive-toggle-{{ year_group.name }}" aria-expanded="false" aria-controls="archive-year-{{ year_group.name }}-months" aria-label="Toggle months for {{ year_group.name }}">
+                                <span class="archive-sidebar-year__chevron" aria-hidden="true">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" focusable="false"><path d="M2.5 1.5 L7.5 5 L2.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </button>
+                            <a class="archive-sidebar-year__link" href="#year-{{ year_group.name }}">{{ year_group.name }}</a>
+                        </div>
+                        <ul class="archive-sidebar-year__months" id="archive-year-{{ year_group.name }}-months" hidden>
                             {% if year_group.name == "2020" %}
                                 <li>
                                     <a href="#month-2020-September">September</a>
@@ -121,6 +128,7 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
+    <script src="{{ '/assets/js/archive-sidebar.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
