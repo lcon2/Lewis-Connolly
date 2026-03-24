@@ -607,8 +607,20 @@ body {
     color: #d0c7bf;
     border-bottom: 1px solid #2f2f2f;
     padding-bottom: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     white-space: pre-line;
+}
+
+.summary-tooltip .summary-date {
+    display: block;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+    color: #a89888;
+    margin: 8px 0 10px;
+}
+
+.summary-tooltip .summary-date[hidden] {
+    display: none;
 }
 
 .summary-tooltip .summary-body {

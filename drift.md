@@ -1,7 +1,8 @@
 ---
 layout: null
-ai_summary: "An experimental poetry and video experience, created with AI, inspired by the Lowcountry - its marshes, light, and Spanish moss."
 title: "Drift"
+date: 2025-04-16 12:00:00 +0000
+ai_summary: "An experimental poetry and video experience, created with AI, inspired by the Lowcountry - its marshes, light, and Spanish moss."
 ---
 
 <html lang="en">

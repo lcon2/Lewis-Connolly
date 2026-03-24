@@ -1,10 +1,12 @@
 (function () {
   var tooltip = document.createElement('div');
   tooltip.className = 'summary-tooltip';
-  tooltip.innerHTML = '<div class="summary-title"></div><div class="summary-body"></div>';
+  tooltip.innerHTML =
+    '<div class="summary-title"></div><div class="summary-date" hidden></div><div class="summary-body"></div>';
   document.body.appendChild(tooltip);
 
   var titleEl = tooltip.querySelector('.summary-title');
+  var dateEl = tooltip.querySelector('.summary-date');
   var bodyEl = tooltip.querySelector('.summary-body');
   var activeLink = null;
 
@@ -38,6 +40,16 @@
     var title = link.getAttribute('data-title');
     titleEl.textContent = title ? title.trim() : link.textContent.trim();
     bodyEl.textContent = summary.trim();
+
+    var dateStr = link.getAttribute('data-date');
+    if (dateStr && dateStr.trim()) {
+      dateEl.textContent = dateStr.trim();
+      dateEl.hidden = false;
+    } else {
+      dateEl.textContent = '';
+      dateEl.hidden = true;
+    }
+
     tooltip.classList.add('is-visible');
     positionTooltip(link);
   }

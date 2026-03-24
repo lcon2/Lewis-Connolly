@@ -45,7 +45,7 @@
                                     {% for post in year_group.items %}
                                         <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}">{{ post.title }}</a>
+                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
                                         </li>
                                     {% endfor %}
                                 </ul>

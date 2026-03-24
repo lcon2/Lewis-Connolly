@@ -58,6 +58,7 @@
         </nav>
         <!-- Main Content -->
         <main style="width: 75%; padding: 20px; line-height: 1.6; font-size: 18px; color: #f0f0f0;">
+            {% assign abide_tooltip_page = site.pages | where_exp: "p", "p.path == 'abide.md'" | first %}
             <h1>{{ page.title }}</h1>
             <div class="archive-content">
                 {% for year_group in posts_by_year %}
@@ -85,12 +86,12 @@
                                     {% for post in month_group.items %}
                                         <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}">{{ post.title }}</a>
+                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
                                         </li>
                                         {% if year_group.name == "2026" and month_group.name == "January" and post.title == "Wage Labor and the Meaning Crisis" %}
                                             <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                                 <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                                <a href="{{ '/abide' | relative_url }}" data-summary="A scroll-driven meditation experience, inviting intention, peace, and quiet into our lives. Nothing to achieve, nothing to complete.">Abide</a>
+                                                <a href="{{ '/abide' | relative_url }}" data-summary="A scroll-driven meditation experience, inviting intention, peace, and quiet into our lives. Nothing to achieve, nothing to complete."{% if abide_tooltip_page.date %} data-date="{{ abide_tooltip_page.date | date: '%d/%m/%Y' }}"{% endif %}>Abide</a>
                                             </li>
                                         {% endif %}
                                     {% endfor %}
