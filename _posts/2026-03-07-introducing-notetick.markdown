@@ -26,7 +26,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 }
 
 .notetick-carousel:focus-visible {
-  outline: 2px solid rgba(255, 153, 51, 0.7);
+  outline: 2px solid rgba(209, 174, 122, 0.7);
   outline-offset: 4px;
 }
 
@@ -92,14 +92,14 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 
 .notetick-carousel-btn:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 153, 51, 0.45);
+  border-color: rgba(209, 174, 122, 0.45);
   background: rgba(31, 24, 18, 0.92);
   color: #ffbf7a;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 .notetick-carousel-btn:focus-visible {
-  outline: 2px solid rgba(255, 153, 51, 0.75);
+  outline: 2px solid rgba(209, 174, 122, 0.75);
   outline-offset: 2px;
 }
 
@@ -137,7 +137,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 
 .notetick-carousel-dot.is-active {
   width: 28px;
-  background: #ff9933;
+  background: #d1ae7a;
 }
 
 .notetick-carousel-dot:hover {
@@ -145,7 +145,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 }
 
 .notetick-carousel-dot:focus-visible {
-  outline: 2px solid rgba(255, 153, 51, 0.75);
+  outline: 2px solid rgba(209, 174, 122, 0.75);
   outline-offset: 2px;
 }
 
@@ -223,7 +223,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
   position: absolute;
   left: 0;
   top: 0;
-  color: #ff9933;
+  color: #d1ae7a;
   font-weight: 700;
 }
 
@@ -294,7 +294,7 @@ ai_summary: "NoteTick is a lightweight desktop notes app built for quick tasks a
 }
 
 .notetick-download-link:focus-visible {
-  outline: 2px solid rgba(255, 153, 51, 0.82);
+  outline: 2px solid rgba(209, 174, 122, 0.82);
   outline-offset: 4px;
 }
 

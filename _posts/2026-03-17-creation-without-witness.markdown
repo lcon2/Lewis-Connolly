@@ -71,8 +71,8 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 }
 
 .audio-btn:hover {
-  border-color: #ff9933;
-  color: #ff9933;
+  border-color: #d1ae7a;
+  color: #d1ae7a;
 }
 
 .audio-seek {
@@ -83,7 +83,7 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 
 .audio-seek input[type="range"] {
   width: 100%;
-  accent-color: #ff9933;
+  accent-color: #d1ae7a;
 }
 
 .audio-seek-meta {
@@ -108,7 +108,7 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 
 .audio-volume input[type="range"] {
   width: 120px;
-  accent-color: #ff9933;
+  accent-color: #d1ae7a;
 }
 
 .audio-list {
@@ -134,14 +134,14 @@ ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke me
 }
 
 .audio-track:hover {
-  border-color: #ff9933;
-  color: #ff9933;
+  border-color: #d1ae7a;
+  color: #d1ae7a;
 }
 
 .audio-track.is-active {
   background: #262626;
-  border-color: #ff9933;
-  color: #ff9933;
+  border-color: #d1ae7a;
+  color: #d1ae7a;
 }
 
 .track-num {

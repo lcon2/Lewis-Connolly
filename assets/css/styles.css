@@ -349,8 +349,8 @@ body {
 
 .post .category-pill:hover,
 .post .category-pill:focus-visible {
-    color: #ff9933;
-    border-color: #ff9933;
+    color: #d1ae7a;
+    border-color: #d1ae7a;
 }
 
 .post .category-pill:active {
@@ -403,9 +403,9 @@ body {
 .contact .navbar-menu a.is-active,
 .archive .navbar-menu a.is-active {
     background-color: #242424;
-    border-color: #ff9933;
-    color: #ff9933;
-    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
+    border-color: #d1ae7a;
+    color: #d1ae7a;
+    box-shadow: 0 0 0 2px rgba(209, 174, 122, 0.12);
 }
 
 /* Home nav pills: readable on photo backdrop */
@@ -506,7 +506,7 @@ body {
 }
 
 .content-section ul li a:hover {
-    color: #ff9933; /* Highlight on hover */
+    color: #d1ae7a; /* Highlight on hover */
 }
 
 @media (max-width: 800px) {
@@ -583,8 +583,8 @@ body {
 
 .studies .intro a:hover,
 .studies .intro a:focus-visible {
-    color: #ff9933;
-    border-bottom-color: #ff9933;
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
 }
 
 /* Article summary tooltip */
@@ -887,7 +887,7 @@ body {
 .studies .studies-card-link:hover,
 .studies .studies-card-link:focus-visible {
     transform: translateY(-2px);
-    border-color: rgba(255, 153, 51, 0.35);
+    border-color: rgba(209, 174, 122, 0.35);
     box-shadow: 0 22px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -963,27 +963,27 @@ body {
 }
 
 .studies .btn:focus-visible {
-    outline: 2px solid rgba(255, 153, 51, 0.6);
+    outline: 2px solid rgba(209, 174, 122, 0.6);
     outline-offset: 2px;
 }
 
 .studies .btn:hover,
 .studies .btn:focus-visible {
-    border-color: #ff9933;
-    color: #ff9933;
-    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
+    border-color: #d1ae7a;
+    color: #d1ae7a;
+    box-shadow: 0 0 0 2px rgba(209, 174, 122, 0.12);
     transform: translateY(-1px);
 }
 
 .studies .btn-primary {
     background: #2a2118;
-    border-color: rgba(255, 153, 51, 0.4);
+    border-color: rgba(209, 174, 122, 0.4);
     color: #f6e9dd;
 }
 
 .studies .btn-primary:hover,
 .studies .btn-primary:focus-visible {
-    color: #ffb169;
+    color: #d1ae7a;
 }
 
 .studies .btn-secondary {
@@ -1002,8 +1002,8 @@ body {
 
 .studies .btn-link:hover,
 .studies .btn-link:focus-visible {
-    color: #ff9933;
-    border-bottom-color: #ff9933;
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
     box-shadow: none;
     transform: none;
 }
@@ -1058,7 +1058,7 @@ body {
     content: "•";
     position: absolute;
     left: 0;
-    color: rgba(255, 153, 51, 0.8);
+    color: rgba(209, 174, 122, 0.8);
 }
 
 .studies .studies-syllabus {
@@ -1129,7 +1129,7 @@ body {
 
 .studies .studies-mini-strip span::before {
     content: "•";
-    color: rgba(255, 153, 51, 0.8);
+    color: rgba(209, 174, 122, 0.8);
 }
 
 .studies .studies-faq details {
@@ -1163,7 +1163,7 @@ body {
 }
 
 .studies .studies-faq details[open] {
-    border-color: rgba(255, 153, 51, 0.3);
+    border-color: rgba(209, 174, 122, 0.3);
 }
 
 .studies .studies-faq p {
@@ -1255,7 +1255,8 @@ body {
 }
 
 /* Blog Post-Specific Styles */
-.post .logo img {
+.post .logo img,
+.archive.category-page .logo img {
     display: block; /* Ensures it behaves like a block-level element */
     margin: 20px auto 10px; /* Adjusts top margin */
     max-width: 70px; /* Makes the logo smaller */
@@ -1265,7 +1266,8 @@ body {
     transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-.post .logo img:hover {
+.post .logo img:hover,
+.archive.category-page .logo img:hover {
     transform: scale(1.1); /* Slight zoom effect on hover */
     filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
 }
@@ -1314,6 +1316,27 @@ header {
 }
 
 .post .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}
+
+/* Category pages: same sticky bar + rule as posts (no beer link) */
+.archive.category-page header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(21, 21, 21, 0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #2c2c2c;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    min-height: 80px;
+    display: block;
+}
+
+.archive.category-page .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1416,15 +1439,15 @@ header {
 }
 
 .post-meta .author-meta a:hover {
-    color: #ff9933; /* Orange text on hover */
-    border-bottom-color: #ff9933; /* Matches dotted line color to hover text */
+    color: #d1ae7a; /* Orange text on hover */
+    border-bottom-color: #d1ae7a; /* Matches dotted line color to hover text */
 }
 
 /* Blockquote Styles */
 .post article blockquote {
     margin: 20px auto;
     padding: 10px 20px;
-    border-left: 4px solid #ff9933;
+    border-left: 4px solid #d1ae7a;
     background-color: #222;
     font-style: italic;
     color: #ccc;
@@ -1468,8 +1491,8 @@ article picture {
 }
 
 .post article a:hover {
-    color: #ffa64d;
-    border-bottom-color: #ffa64d;
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
 }
 
 /* Post: share + RSS (above prev/next) */
@@ -1520,7 +1543,7 @@ article picture {
 }
 
 .post-navigation a:hover {
-    color: #ff9933; /* Highlight orange */
+    color: #d1ae7a; /* Highlight orange */
 }
 
 /* Footer */
@@ -1554,8 +1577,8 @@ footer {
 
 .about main a:hover,
 .contact main a:hover {
-    color: #ff9933; /* Turns orange on hover */
-    border-bottom-color: #ff9933; /* Changes underline color */
+    color: #d1ae7a; /* Turns orange on hover */
+    border-bottom-color: #d1ae7a; /* Changes underline color */
 }
 
 .contact-main {
@@ -1875,8 +1898,8 @@ footer {
 }
 
 .archive .month-category ul li a:hover {
-    color: #ffa500; /* Changes text to orange on hover */
-    border-bottom-color: #ffa500; /* Dotted underline also changes to orange */
+    color: #d1ae7a; /* Changes text to orange on hover */
+    border-bottom-color: #d1ae7a; /* Dotted underline also changes to orange */
 }
 
 /* Month Category Spacing */
@@ -2519,7 +2542,7 @@ footer {
 }
 
 .sidebar ul > li > a:hover {
-    color: #ffa500; /* Orange hover effect */
+    color: #d1ae7a; /* Orange hover effect */
 }
 
 .sidebar ul > li ul {
@@ -2540,7 +2563,7 @@ footer {
 }
 
 .sidebar ul > li ul > li > a:hover {
-    color: #ffa500; /* Orange hover effect */
+    color: #d1ae7a; /* Orange hover effect */
 }
 
 /* Archive index: collapsible year groups (sidebar--archive-years) */
@@ -2582,7 +2605,7 @@ footer {
 }
 
 .sidebar--archive-years .archive-sidebar-year__toggle:focus-visible {
-    outline: 2px solid #ffa500;
+    outline: 2px solid #d1ae7a;
     outline-offset: 2px;
 }
 
@@ -2610,7 +2633,7 @@ footer {
 }
 
 .sidebar--archive-years .archive-sidebar-year__link:hover {
-    color: #ffa500;
+    color: #d1ae7a;
 }
 
 .sidebar--archive-years .archive-sidebar-year__months {
@@ -2637,7 +2660,7 @@ footer {
 }
 
 .sidebar--archive-years .archive-sidebar-year__months > li > a:hover {
-    color: #ffa500;
+    color: #d1ae7a;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2823,6 +2846,6 @@ footer {
 
 .studies.dissertation .dissertation-content a:hover,
 .studies.dissertation .dissertation-content a:focus-visible {
-    color: #ff9933;
-    border-bottom-color: #ff9933;
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
 }

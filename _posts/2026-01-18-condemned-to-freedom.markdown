@@ -72,17 +72,17 @@ The deeper problem of freedom may not be how to escape consequence, but how to r
 .audio-artist { color: #c9c9c9; font-size: 0.95em; }
 .audio-controls { display: flex; gap: 8px; margin-top: 6px; }
 .audio-btn { background: #222; color: #f0f0f0; border: 1px solid #3a3a3a; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
-.audio-btn:hover { border-color: #ff9933; color: #ff9933; }
+.audio-btn:hover { border-color: #d1ae7a; color: #d1ae7a; }
 .audio-seek { display: grid; gap: 6px; margin-top: 10px; }
-.audio-seek input[type="range"] { width: 100%; accent-color: #ff9933; }
+.audio-seek input[type="range"] { width: 100%; accent-color: #d1ae7a; }
 .audio-seek-meta { display: flex; justify-content: space-between; font-size: 0.85em; color: #bdbdbd; font-variant-numeric: tabular-nums; }
 .audio-volume { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
 .audio-volume label { font-size: 0.8em; color: #bdbdbd; }
-.audio-volume input[type="range"] { width: 120px; accent-color: #ff9933; }
+.audio-volume input[type="range"] { width: 120px; accent-color: #d1ae7a; }
 .audio-list { margin-top: 14px; border-top: 1px solid #2c2c2c; padding-top: 10px; display: grid; gap: 6px; }
 .audio-track { width: 100%; text-align: left; background: #1f1f1f; color: #e6e6e6; border: 1px solid #2f2f2f; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
-.audio-track:hover { border-color: #ff9933; color: #ff9933; }
-.audio-track.is-active { background: #262626; border-color: #ff9933; color: #ff9933; }
+.audio-track:hover { border-color: #d1ae7a; color: #d1ae7a; }
+.audio-track.is-active { background: #262626; border-color: #d1ae7a; color: #d1ae7a; }
 .track-num { width: 18px; color: #9a9a9a; font-variant-numeric: tabular-nums; }
 .track-name { flex: 1; }
 .track-time { color: #b5b5b5; font-variant-numeric: tabular-nums; }
