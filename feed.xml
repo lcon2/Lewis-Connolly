@@ -14,7 +14,9 @@ permalink: /feed.xml
     <name>{{ site.title | xml_escape }}</name>
     {% if site.email %}<email>{{ site.email | xml_escape }}</email>{% endif %}
   </author>
+  {% comment %}Blog posts only; never include connolly-archives pages if any ever appear in posts.{% endcomment %}
   {% for post in site.posts limit:50 %}
+  {% unless post.url contains 'connolly-archives' %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html"/>
@@ -27,5 +29,6 @@ permalink: /feed.xml
     <summary type="text">{{ post.content | strip_html | strip_newlines | truncatewords: 120 | xml_escape }}</summary>
     {% endif %}
   </entry>
+  {% endunless %}
   {% endfor %}
 </feed>

@@ -1477,6 +1477,7 @@ article picture {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 14px 20px;
     margin-top: 2.5rem;
 }
@@ -1491,7 +1492,7 @@ article picture {
 
 .post-share__link:hover,
 .post-share__link:focus-visible {
-    transform: scale(1.05);
+    transform: scale(1.1);
     filter: brightness(1.2);
 }
 
