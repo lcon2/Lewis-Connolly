@@ -104,7 +104,7 @@ body {
 
 .home .logo-link.brand-lockup:hover .site-wordmark,
 .home .logo-link.brand-lockup:focus-visible .site-wordmark {
-    color: #ff6f00;
+    color: #d1ae7a;
 }
 
 .home-hero {
@@ -154,10 +154,10 @@ body {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    background: #2e241e;
-    box-shadow:
-        0 10px 36px rgba(0, 0, 0, 0.38),
-        0 18px 56px rgba(255, 95, 40, 0.05);
+    /* Let .home-backdrop show through; keep ::after divider only */
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
 }
 
 /* Gold-tinted divider under home nav (subtle; full width) */
@@ -183,22 +183,22 @@ body {
     pointer-events: none;
 }
 
-/* Home header: logo + links grouped with modest gap (not split to viewport edges) */
+/* Home header: one centered row, extra space between wordmark and menu */
 .home .navbar.home-navbar {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: none;
     margin-left: 0;
     margin-right: 0;
-    gap: 10px;
+    gap: clamp(28px, 5vw, 52px);
     flex-wrap: wrap;
 }
 
 .home-navbar__end {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 8px 12px;
 }
@@ -210,19 +210,6 @@ body {
 
 .home .home-navbar__end .buy-coffee-link {
     margin-left: 4px;
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px 6px;
-    border-radius: 8px;
-    background: rgba(62, 52, 45, 0.98);
-    border: 1px solid rgba(95, 80, 68, 0.35);
-    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.3s ease;
-}
-
-.home .home-navbar__end .buy-coffee-link:hover,
-.home .home-navbar__end .buy-coffee-link:focus-visible {
-    background: rgba(74, 62, 54, 0.98);
-    border-color: rgba(255, 153, 51, 0.45);
 }
 
 .home .navbar-content,
@@ -410,7 +397,7 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
 }
 
-/* Home nav pills: sit on #2e241e bar; slightly lighter fill (overrides shared rule above) */
+/* Home nav pills: readable on photo backdrop */
 .home .navbar-menu a {
     background: rgba(55, 46, 40, 0.96);
     border: 1px solid rgba(95, 80, 68, 0.4);
@@ -419,10 +406,10 @@ body {
 .home .navbar-menu a:hover,
 .home .navbar-menu a:focus-visible,
 .home .navbar-menu a.is-active {
-    background-color: #4a3e36;
-    border-color: #ff9933;
-    color: #ff9933;
-    box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.12);
+    background-color: rgba(74, 62, 54, 0.95);
+    border-color: #d1ae7a;
+    color: #d1ae7a;
+    box-shadow: 0 0 0 2px rgba(209, 174, 122, 0.18);
 }
 
 /* Content Grid */
@@ -545,6 +532,12 @@ body {
     transform: scale(1.1);
 }
 
+/* Homepage: beer image hover matches site accent (no pill chrome) */
+.home .home-navbar__end .buy-coffee-link:hover .buy-coffee,
+.home .home-navbar__end .buy-coffee-link:focus-visible .buy-coffee {
+    filter: drop-shadow(0 0 8px rgba(209, 174, 122, 0.45));
+}
+
 /* Intro Section */
 .intro {
     margin: 30px auto 10px;
@@ -573,8 +566,8 @@ body {
 
 .home .intro a:hover,
 .home .intro a:focus-visible {
-    color: #ff9933;
-    border-bottom-color: #ff9933;
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
 }
 
 .studies .intro a:hover,
@@ -730,9 +723,10 @@ body {
     transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
-.home .content-section ul li a:hover {
-    color: #ff9933;
-    border-bottom-color: #ff9933;
+.home .content-section ul li a:hover,
+.home .content-section ul li a:focus-visible {
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
 }
 
 /* Studies pages */
@@ -1572,11 +1566,15 @@ footer {
 
     .home .navbar.home-navbar {
         max-width: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
     }
 
     .home-navbar__end {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .home .brand-lockup {
