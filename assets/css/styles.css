@@ -1845,9 +1845,18 @@ footer {
         padding: 13px 14px;
     }
 
-    .home .start-here__thumb img,
-    .home .start-here__thumb video {
+    .home .start-here__thumb img {
         height: 100%;
+    }
+
+    /* Mobile: keep START HERE cards static (poster only) */
+    .home .start-here__thumb video {
+        display: none;
+        height: 100%;
+    }
+
+    .home .start-here__thumb.is-video-ready .start-here__poster {
+        opacity: 1;
     }
 
     .home .start-here__thumb {
