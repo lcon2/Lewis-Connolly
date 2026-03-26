@@ -55,7 +55,7 @@
         <div class="start-here__grid">
             <a class="start-here__card" href="{{ '/2026/03/24/the-shapes-beneath-thought/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <video class="start-here__video" muted loop playsinline preload="metadata">
+                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0">
                         <source src="{{ '/assets/movies/start-here-mandala.mp4' | relative_url }}" type="video/mp4">
                     </video>
                 </span>
@@ -67,8 +67,8 @@
             </a>
             <a class="start-here__card" href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <video class="start-here__video" muted loop playsinline preload="metadata">
-                        <source src="{{ '/assets/movies/start-here-deer.mp4' | relative_url }}" type="video/mp4">
+                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0.5">
+                        <source src="{{ '/assets/movies/start-here-deer3.mov' | relative_url }}" type="video/quicktime">
                     </video>
                 </span>
                 <span class="start-here__content">
@@ -227,6 +227,15 @@
         cards.forEach(function (card) {
           var video = card.querySelector('.start-here__video');
           if (!video) return;
+          var startTime = Number(video.getAttribute('data-start') || 0);
+
+          function seekToStart() {
+            try {
+              video.currentTime = startTime;
+            } catch (error) {
+              // Ignore seek errors while metadata is still loading.
+            }
+          }
 
           function playVideo() {
             var playAttempt = video.play();
@@ -237,12 +246,10 @@
 
           function resetVideo() {
             video.pause();
-            try {
-              video.currentTime = 0;
-            } catch (error) {
-              // Ignore seek errors while metadata is still loading.
-            }
+            seekToStart();
           }
+
+          video.addEventListener('loadedmetadata', seekToStart, { once: true });
 
           card.addEventListener('mouseenter', playVideo);
           card.addEventListener('mouseleave', resetVideo);
