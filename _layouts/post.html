@@ -21,14 +21,13 @@
     <main>
         <article>
             <h2>{{ page.title }}</h2>
-            <p class="post-meta" style="margin-bottom: 0;">
+            <p class="post-meta" style="margin-bottom: 3px;">
                 {{ page.date | date: "%B %d, %Y" }} 
                     <span class="author-meta">
                         By <a href="{{ page.author_url | relative_url }}" class="author-link">{{ page.author }}</a>
                     </span>
                 </p>
             <p class="post-meta" style="margin-top: 0;">
-                Filed under:
                 {% for category in page.categories %}
                     {% assign category_slug = category | slugify %}
                     <a href="{{ '/categories/' | append: category_slug | append: '/' | relative_url }}" class="category-pill">{{ category }}</a>
