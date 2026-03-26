@@ -56,7 +56,7 @@
             <a class="start-here__card" href="{{ '/2026/03/24/the-shapes-beneath-thought/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
                     <img class="start-here__poster" src="{{ '/assets/images/start-here-mandala-poster.jpg' | relative_url }}" alt="">
-                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0">
+                    <video class="start-here__video" muted loop playsinline preload="auto" data-start="0">
                         <source src="{{ '/assets/movies/start-here-mandala.mp4' | relative_url }}" type="video/mp4">
                     </video>
                 </span>
@@ -69,7 +69,7 @@
             <a class="start-here__card" href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
                     <img class="start-here__poster" src="{{ '/assets/images/start-here-deer4-poster.jpg' | relative_url }}" alt="">
-                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0.5">
+                    <video class="start-here__video" muted loop playsinline preload="auto" data-start="0.5">
                         <source src="{{ '/assets/movies/start-here-deer4.mp4' | relative_url }}" type="video/mp4">
                     </video>
                 </span>
@@ -231,6 +231,13 @@
           var thumb = card.querySelector('.start-here__thumb');
           if (!video) return;
           var startTime = Number(video.getAttribute('data-start') || 0);
+          var hasMarkedReady = false;
+
+          function markReady() {
+            if (hasMarkedReady) return;
+            hasMarkedReady = true;
+            if (thumb) thumb.classList.add('is-video-ready');
+          }
 
           function seekToStart() {
             try {
@@ -252,12 +259,21 @@
             seekToStart();
           }
 
-          video.addEventListener('loadedmetadata', function () {
+          function onVideoReady() {
             seekToStart();
-            if (thumb) thumb.classList.add('is-video-ready');
-          }, { once: true });
+            markReady();
+          }
+
+          if (video.readyState >= 1) {
+            onVideoReady();
+          } else {
+            video.addEventListener('loadedmetadata', onVideoReady, { once: true });
+            video.addEventListener('loadeddata', onVideoReady, { once: true });
+            video.addEventListener('canplay', onVideoReady, { once: true });
+          }
           video.addEventListener('error', function () {
             if (thumb) thumb.classList.remove('is-video-ready');
+            hasMarkedReady = false;
           });
 
           card.addEventListener('mouseenter', playVideo);
