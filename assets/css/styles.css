@@ -635,7 +635,8 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
-.home .start-here__thumb img {
+.home .start-here__thumb img,
+.home .start-here__thumb video {
     display: block;
     width: 100%;
     height: 150px;
@@ -681,7 +682,9 @@ body {
 }
 
 .home .start-here__card:hover .start-here__thumb img,
-.home .start-here__card:focus-visible .start-here__thumb img {
+.home .start-here__card:hover .start-here__thumb video,
+.home .start-here__card:focus-visible .start-here__thumb img,
+.home .start-here__card:focus-visible .start-here__thumb video {
     transform: scale(1.03);
 }
 
@@ -1819,7 +1822,8 @@ footer {
         padding: 13px 14px;
     }
 
-    .home .start-here__thumb img {
+    .home .start-here__thumb img,
+    .home .start-here__thumb video {
         height: 128px;
     }
 

@@ -55,7 +55,9 @@
         <div class="start-here__grid">
             <a class="start-here__card" href="{{ '/2026/03/24/the-shapes-beneath-thought/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <img src="{{ '/assets/images/archetype_eye.png' | relative_url }}" alt="">
+                    <video class="start-here__video" muted loop playsinline preload="metadata">
+                        <source src="{{ '/assets/movies/start-here-mandala.mp4' | relative_url }}" type="video/mp4">
+                    </video>
                 </span>
                 <span class="start-here__content">
                     <span class="start-here__title">The Shapes Beneath Thought</span>
@@ -65,7 +67,9 @@
             </a>
             <a class="start-here__card" href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <img src="{{ '/assets/images/taste.png' | relative_url }}" alt="">
+                    <video class="start-here__video" muted loop playsinline preload="metadata">
+                        <source src="{{ '/assets/movies/start-here-deer.mp4' | relative_url }}" type="video/mp4">
+                    </video>
                 </span>
                 <span class="start-here__content">
                     <span class="start-here__title">A Taste of Deeper Things</span>
@@ -215,6 +219,40 @@
           }
         });
 
+      })();
+    </script>
+    <script>
+      (function () {
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.start-here__card'));
+        cards.forEach(function (card) {
+          var video = card.querySelector('.start-here__video');
+          if (!video) return;
+
+          function playVideo() {
+            var playAttempt = video.play();
+            if (playAttempt && typeof playAttempt.catch === 'function') {
+              playAttempt.catch(function () {});
+            }
+          }
+
+          function resetVideo() {
+            video.pause();
+            try {
+              video.currentTime = 0;
+            } catch (error) {
+              // Ignore seek errors while metadata is still loading.
+            }
+          }
+
+          card.addEventListener('mouseenter', playVideo);
+          card.addEventListener('mouseleave', resetVideo);
+          card.addEventListener('focusin', playVideo);
+          card.addEventListener('focusout', function (event) {
+            if (!card.contains(event.relatedTarget)) {
+              resetVideo();
+            }
+          });
+        });
       })();
     </script>
     <script src="{{ '/assets/js/home-background.js' | relative_url }}"></script>
