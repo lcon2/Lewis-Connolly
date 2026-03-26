@@ -11,12 +11,6 @@ categories:
 og_image: /assets/images/deathinwood.png
 ai_summary: "Lately I have not been able to stop thinking about taste. Through reflections on four works of art, the essay argues that taste is an inward recognition of deeper reality—something older and harder to pin down."
 ---
-<div class="post">
-    <audio class="audio-player" controls>
-        <source src="/assets/audio/taste.mp3" type="audio/mpeg">
-    </audio>
-    <!-- Blog content here -->
-</div>
 
 <img src="{{ '/assets/images/deathinwood.png' | relative_url }}" alt="Death in Wood" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
