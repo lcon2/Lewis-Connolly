@@ -55,7 +55,8 @@
         <div class="start-here__grid">
             <a class="start-here__card" href="{{ '/2026/03/24/the-shapes-beneath-thought/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <video class="start-here__video" muted playsinline preload="metadata" data-start="0">
+                    <img class="start-here__poster" src="{{ '/assets/images/start-here-mandala-poster.jpg' | relative_url }}" alt="">
+                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0">
                         <source src="{{ '/assets/movies/start-here-mandala.mp4' | relative_url }}" type="video/mp4">
                     </video>
                 </span>
@@ -67,7 +68,8 @@
             </a>
             <a class="start-here__card" href="{{ '/2024/12/27/A-Taste-of-Deeper-Things/' | relative_url }}">
                 <span class="start-here__thumb" aria-hidden="true">
-                    <video class="start-here__video" muted playsinline preload="metadata" data-start="0.5">
+                    <img class="start-here__poster" src="{{ '/assets/images/start-here-deer4-poster.jpg' | relative_url }}" alt="">
+                    <video class="start-here__video" muted loop playsinline preload="metadata" data-start="0.5">
                         <source src="{{ '/assets/movies/start-here-deer4.mp4' | relative_url }}" type="video/mp4">
                     </video>
                 </span>
@@ -226,9 +228,9 @@
         var cards = Array.prototype.slice.call(document.querySelectorAll('.start-here__card'));
         cards.forEach(function (card) {
           var video = card.querySelector('.start-here__video');
+          var thumb = card.querySelector('.start-here__thumb');
           if (!video) return;
           var startTime = Number(video.getAttribute('data-start') || 0);
-          var loopFadeMs = 180;
 
           function seekToStart() {
             try {
@@ -239,37 +241,23 @@
           }
 
           function playVideo() {
-            video.classList.remove('is-loop-fading');
             var playAttempt = video.play();
             if (playAttempt && typeof playAttempt.catch === 'function') {
               playAttempt.catch(function () {});
             }
           }
 
-          function smoothRestart() {
-            if (video.dataset.looping === '1') return;
-            video.dataset.looping = '1';
-            video.classList.add('is-loop-fading');
-            window.setTimeout(function () {
-              seekToStart();
-              playVideo();
-              video.dataset.looping = '0';
-            }, loopFadeMs);
-          }
-
           function resetVideo() {
-            video.dataset.looping = '0';
             video.pause();
-            video.classList.remove('is-loop-fading');
             seekToStart();
           }
 
-          video.addEventListener('loadedmetadata', seekToStart, { once: true });
-          video.addEventListener('timeupdate', function () {
-            if (video.paused || video.dataset.looping === '1' || !video.duration) return;
-            if ((video.duration - video.currentTime) <= (loopFadeMs / 1000)) {
-              smoothRestart();
-            }
+          video.addEventListener('loadedmetadata', function () {
+            seekToStart();
+            if (thumb) thumb.classList.add('is-video-ready');
+          }, { once: true });
+          video.addEventListener('error', function () {
+            if (thumb) thumb.classList.remove('is-video-ready');
           });
 
           card.addEventListener('mouseenter', playVideo);
