@@ -549,6 +549,12 @@ body {
     filter: drop-shadow(0 0 8px rgba(209, 174, 122, 0.45));
 }
 
+/* Hidden by default; enabled for home on small screens */
+.home-mobile-menu-toggle,
+.home-mobile-menu-overlay {
+    display: none;
+}
+
 /* Intro Section */
 .intro {
     margin: 30px auto 10px;
@@ -1779,15 +1785,15 @@ footer {
 
     .home .navbar.home-navbar {
         max-width: none;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        gap: 18px;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
     }
 
-    .home-navbar__end {
-        width: 100%;
-        justify-content: center;
+    .home .home-navbar__end {
+        display: none;
     }
 
     .home .brand-lockup {
@@ -1797,6 +1803,26 @@ footer {
     .home .site-wordmark {
         letter-spacing: 0.12em;
         font-size: clamp(0.7rem, 2.8vw, 0.95rem);
+    }
+
+    .home .home-hero {
+        padding: 8px 14px 0;
+    }
+
+    .home .home-hero__title {
+        display: none;
+    }
+
+    .home .intro {
+        margin: 6px auto 10px;
+        max-width: 34ch;
+        font-size: clamp(1rem, 3.9vw, 1.08rem);
+        line-height: 1.58;
+        padding: 8px 16px 14px;
+    }
+
+    .home .intro br {
+        display: none;
     }
 
     .home .navbar-content,
@@ -1816,7 +1842,6 @@ footer {
         max-width: 60px; /* Reduces logo size */
     }
 
-    .home .navbar-menu,
     .studies .navbar-menu,
     .about .navbar-menu,
     .contact .navbar-menu,
@@ -1824,6 +1849,110 @@ footer {
         flex-direction: column; /* Stacks menu items vertically */
         gap: 10px;
         width: 100%; /* Makes menu span the screen */
+    }
+
+    .home .home-mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid rgba(165, 139, 108, 0.6);
+        border-radius: 999px;
+        padding: 8px 14px;
+        background: rgba(28, 24, 20, 0.92);
+        color: #e8ddd0;
+        font-family: "EBGaramond", Garamond, serif;
+        font-size: 1.02rem;
+        line-height: 1;
+        letter-spacing: 0.03em;
+    }
+
+    .home .home-mobile-menu-toggle__icon {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .home .home-mobile-menu-toggle__icon span {
+        width: 14px;
+        height: 1px;
+        background: currentColor;
+        display: block;
+    }
+
+    .home .home-mobile-menu-toggle[aria-expanded="true"] {
+        border-color: rgba(209, 174, 122, 0.95);
+        color: #d1ae7a;
+    }
+
+    .home .home-mobile-menu-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1200;
+    }
+
+    .home .home-mobile-menu-overlay[hidden] {
+        display: none;
+    }
+
+    .home .home-mobile-menu-overlay__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 8, 7, 0.72);
+        backdrop-filter: blur(2px);
+    }
+
+    .home .home-mobile-menu-overlay__panel {
+        position: relative;
+        margin: 74px 14px 0;
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(165, 139, 108, 0.52);
+        background: rgba(22, 18, 15, 0.94);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.42);
+    }
+
+    .home .home-mobile-menu-overlay__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 9px;
+    }
+
+    .home .home-mobile-menu-overlay__list a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(165, 139, 108, 0.5);
+        color: #e8ddd0;
+        text-decoration: none;
+        font-family: "EBGaramond", Garamond, serif;
+        font-size: 1.12rem;
+        letter-spacing: 0.03em;
+        background: rgba(42, 35, 29, 0.72);
+        transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .home .home-mobile-menu-overlay__list a:hover,
+    .home .home-mobile-menu-overlay__list a:focus-visible {
+        color: #d1ae7a;
+        border-color: rgba(209, 174, 122, 0.9);
+        background: rgba(54, 45, 37, 0.78);
+    }
+
+    .home .home-mobile-menu-overlay__beer-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    body.home-mobile-menu-open {
+        overflow: hidden;
     }
 
     .content-grid {

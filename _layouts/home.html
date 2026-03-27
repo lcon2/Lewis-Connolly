@@ -26,6 +26,14 @@
             </span>
             <span class="site-wordmark">Lewis Connolly</span>
         </a>
+        <button class="home-mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="home-mobile-menu-panel">
+            <span class="home-mobile-menu-toggle__label">Menu</span>
+            <span class="home-mobile-menu-toggle__icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
         <div class="home-navbar__end">
             <ul class="navbar-menu">
                 <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
@@ -40,6 +48,23 @@
             </div>
         </div>
     </nav>
+    <div class="home-mobile-menu-overlay" id="home-mobile-menu-panel" hidden>
+        <div class="home-mobile-menu-overlay__backdrop" data-mobile-menu-close></div>
+        <div class="home-mobile-menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+            <ul class="home-mobile-menu-overlay__list">
+                <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
+                <li><a href="{{ '/studies/' | relative_url }}">Studies</a></li>
+                <li>
+                    <a class="home-mobile-menu-overlay__beer-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ '/assets/images/buybeer.png' | relative_url }}" alt="" class="home-mobile-menu-overlay__beer-icon">
+                        <span>Buy me a beer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <header class="home-hero">
         <h1 class="home-hero__title"><span class="home-hero__line">Consciousness, Meaning,</span><span class="home-hero__line">and the Future</span></h1>
@@ -135,6 +160,52 @@
     </footer>
     <script>
       (function () {
+        var menuToggle = document.querySelector('.home-mobile-menu-toggle');
+        var menuPanel = document.getElementById('home-mobile-menu-panel');
+        if (!menuToggle || !menuPanel) {
+          return;
+        }
+
+        var closeTriggers = Array.prototype.slice.call(menuPanel.querySelectorAll('[data-mobile-menu-close]'));
+        var menuLinks = Array.prototype.slice.call(menuPanel.querySelectorAll('a'));
+
+        function setMenuState(isOpen) {
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          document.body.classList.toggle('home-mobile-menu-open', isOpen);
+          if (isOpen) {
+            menuPanel.hidden = false;
+          } else {
+            menuPanel.hidden = true;
+          }
+        }
+
+        menuToggle.addEventListener('click', function () {
+          var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          setMenuState(!expanded);
+        });
+
+        closeTriggers.forEach(function (trigger) {
+          trigger.addEventListener('click', function () {
+            setMenuState(false);
+          });
+        });
+
+        menuLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setMenuState(false);
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          if (menuToggle.getAttribute('aria-expanded') === 'true') {
+            setMenuState(false);
+            menuToggle.focus();
+          }
+        });
+
         function normalizeUrl(url) {
           if (!url) return url;
           return url.replace(/\/+$/, '').toLowerCase();
