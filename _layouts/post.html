@@ -6,18 +6,20 @@
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body class="post">
+<body class="post has-mobile-nav">
     <header>
         <div class="logo">
             <a href="{{ '/' | relative_url }}">
                 <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
             </a>
         </div>
+        {% include mobile-nav-toggle.html panel_id='post-mobile-menu-panel' %}
         <a href="https://buymeacoffee.com/lewisconnolly" class="beer-link" target="_blank" rel="noopener noreferrer" aria-label="Buy me a beer">
             <img src="{{ '/assets/images/beer.png' | relative_url }}" alt="Buy me a beer">
             <span class="beer-text" aria-hidden="true">Buy me a beer</span>
         </a>
     </header>
+    {% include mobile-nav-overlay.html panel_id='post-mobile-menu-panel' %}
     <main>
         <article>
             <h2>{{ page.title }}</h2>
@@ -76,6 +78,7 @@
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
 
+    <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
     <script>
       (function () {
         var header = document.querySelector('.post header');

@@ -1,0 +1,17 @@
+<div class="home-mobile-menu-overlay" id="{{ include.panel_id | default: 'site-mobile-menu-panel' }}" hidden>
+    <div class="home-mobile-menu-overlay__backdrop" data-mobile-menu-close></div>
+    <div class="home-mobile-menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+        <ul class="home-mobile-menu-overlay__list">
+            <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About Me</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}is-active{% endif %}">Contact</a></li>
+            <li><a href="{{ '/archive/' | relative_url }}" class="{% if page.url == '/archive/' %}is-active{% endif %}">Archive</a></li>
+            <li><a href="{{ '/studies/' | relative_url }}" class="{% if page.url contains '/studies/' %}is-active{% endif %}">Studies</a></li>
+            <li>
+                <a class="home-mobile-menu-overlay__beer-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ '/assets/images/beer.png' | relative_url }}" alt="" class="home-mobile-menu-overlay__beer-icon">
+                    <span>Buy me a beer</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

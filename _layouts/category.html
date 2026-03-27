@@ -6,14 +6,16 @@
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body class="archive category-page">
+<body class="archive category-page has-mobile-nav">
     <header>
         <div class="logo">
             <a href="{{ '/' | relative_url }}">
                 <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
             </a>
         </div>
+        {% include mobile-nav-toggle.html panel_id='category-mobile-menu-panel' %}
     </header>
+    {% include mobile-nav-overlay.html panel_id='category-mobile-menu-panel' %}
     <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
         <nav class="sidebar">
             <ul>
@@ -61,6 +63,7 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>(c) Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Copyright</p>
     </footer>
+    <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>

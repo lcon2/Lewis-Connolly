@@ -6,7 +6,7 @@
     {% include seo.html %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
-<body class="studies{% if page.body_class %} {{ page.body_class }}{% endif %}">
+<body class="studies has-mobile-nav{% if page.body_class %} {{ page.body_class }}{% endif %}">
     <nav class="navbar">
         <div class="navbar-content">
             <a href="{{ '/' | relative_url }}" class="logo-link">
@@ -15,6 +15,7 @@
                     <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
                 </span>
             </a>
+            {% include mobile-nav-toggle.html panel_id='studies-mobile-menu-panel' %}
 
             <ul class="navbar-menu">
                 <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}is-active{% endif %}">About Me</a></li>
@@ -30,6 +31,7 @@
             </a>
         </div>
     </nav>
+    {% include mobile-nav-overlay.html panel_id='studies-mobile-menu-panel' %}
 
     <main class="studies-wrap">
         {{ content }}
@@ -38,6 +40,7 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>(c) Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved Copyright</p>
     </footer>
+    <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
 </body>
