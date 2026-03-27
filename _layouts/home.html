@@ -169,8 +169,14 @@
         });
 
         var driftUrl = "{{ '/drift' | relative_url }}";
+        var meaningCourseBaseUrl = "{{ '/studies/meaning-in-a-disenchanted-age/' | relative_url }}";
         var candidates = allPosts.filter(function (p) {
-          return !blocked[normalizeUrl(p.url)] && normalizeUrl(p.url) !== normalizeUrl(driftUrl);
+          var normalizedUrl = normalizeUrl(p.url);
+          return (
+            !blocked[normalizedUrl] &&
+            normalizedUrl !== normalizeUrl(driftUrl) &&
+            !normalizedUrl.startsWith(normalizeUrl(meaningCourseBaseUrl))
+          );
         });
         for (var i = candidates.length - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
