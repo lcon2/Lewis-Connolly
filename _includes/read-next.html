@@ -1,20 +1,79 @@
+{% assign recommendation_count = 0 %}
+{% capture recommendations_markup %}
 {% if page.read_next and page.read_next.size > 0 %}
+    {% for item in page.read_next limit: 3 %}
+        {% assign recommendation_count = recommendation_count | plus: 1 %}
+            <li class="post-read-next__item">
+                <a class="post-read-next__link" href="{{ item.url | relative_url }}">
+                    <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
+                    <span class="post-read-next__content">
+                        <span class="post-read-next__item-title">{{ item.title }}</span>
+                        <span class="post-read-next__item-description">{{ item.tagline | default: item.description }}</span>
+                    </span>
+                </a>
+            </li>
+    {% endfor %}
+{% else %}
+    {% capture seen_urls %}|{{ page.url }}|{% endcapture %}
+    {% for category in page.categories %}
+        {% assign category_posts = site.categories[category] | sort: "date" | reverse %}
+        {% for candidate in category_posts %}
+            {% if recommendation_count >= 3 %}
+                {% break %}
+            {% endif %}
+            {% capture candidate_key %}|{{ candidate.url }}|{% endcapture %}
+            {% unless seen_urls contains candidate_key %}
+                {% assign recommendation_count = recommendation_count | plus: 1 %}
+            <li class="post-read-next__item">
+                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}">
+                    <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
+                    <span class="post-read-next__content">
+                        <span class="post-read-next__item-title">{{ candidate.title }}</span>
+                        <span class="post-read-next__item-description">{{ candidate.tagline | default: candidate.description }}</span>
+                    </span>
+                </a>
+            </li>
+                {% capture seen_urls %}{{ seen_urls }}{{ candidate.url }}|{% endcapture %}
+            {% endunless %}
+        {% endfor %}
+        {% if recommendation_count >= 3 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% if recommendation_count < 3 %}
+        {% assign fallback_posts = site.posts | sort: "date" | reverse %}
+        {% for candidate in fallback_posts %}
+            {% if recommendation_count >= 3 %}
+                {% break %}
+            {% endif %}
+            {% capture candidate_key %}|{{ candidate.url }}|{% endcapture %}
+            {% unless seen_urls contains candidate_key %}
+                {% assign recommendation_count = recommendation_count | plus: 1 %}
+            <li class="post-read-next__item">
+                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}">
+                    <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
+                    <span class="post-read-next__content">
+                        <span class="post-read-next__item-title">{{ candidate.title }}</span>
+                        <span class="post-read-next__item-description">{{ candidate.tagline | default: candidate.description }}</span>
+                    </span>
+                </a>
+            </li>
+                {% capture seen_urls %}{{ seen_urls }}{{ candidate.url }}|{% endcapture %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+{% endcapture %}
+
+{% assign recommendations_markup = recommendations_markup | strip %}
+{% if recommendations_markup != "" %}
 <section class="post-read-next" aria-label="Read next essays">
     <div class="post-read-next__inner">
         <h3 class="post-read-next__title">Read next</h3>
         <p class="post-read-next__intro">Essays nearby in mood, theme, or concern.</p>
         <ol class="post-read-next__list">
-            {% for item in page.read_next limit: 3 %}
-            <li class="post-read-next__item">
-                <a class="post-read-next__link" href="{{ item.url | relative_url }}">
-                    <span class="post-read-next__number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
-                    <span class="post-read-next__content">
-                        <span class="post-read-next__item-title">{{ item.title }}</span>
-                        <span class="post-read-next__item-description">{{ item.description }}</span>
-                    </span>
-                </a>
-            </li>
-            {% endfor %}
+            {{ recommendations_markup }}
         </ol>
     </div>
 </section>
