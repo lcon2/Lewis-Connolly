@@ -8,7 +8,8 @@ categories:
   - Theology
   - Identity
   - Narrative
-ai_summary: "In my on-going thinking about Unitarian identity I read Understanding Unitarians by Phillip Hewett, who was briefly the minister here in the 1950s. He developed a model that attempts to get away from the Humanist/Christian dichotomy; a Venn Diagram, with not two but three overlapping circles. Amen. I have put the model in your order of service. As you can..."
+description: "A reflection on Unitarian identity through Phillip Hewett's three-circle model, asking how Christian inheritance, humanism, and wider spiritual searching might coexist without flattening one another. The essay uses David and Goliath less as proof text than as a way into questions of belonging, imagination, and theological breadth."
+tagline: "A reflection on Unitarian identity through Phillip Hewett's three-circle model."
 ---
 In my on-going thinking about Unitarian identity I read Understanding Unitarians by Phillip Hewett, who was briefly the minister here in the 1950s. He developed a model that attempts to get away from the Humanist/Christian dichotomy; a Venn Diagram, with not two but three overlapping circles. I have put the model in your order of service.
 

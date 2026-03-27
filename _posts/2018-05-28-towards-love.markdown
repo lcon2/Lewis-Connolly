@@ -9,7 +9,8 @@ categories:
   - Technology
   - Consciousness
 og_image: /assets/images/logo.png
-ai_summary: "Part 1 So, I watched Michael Curry’s wedding sermon. It was the very expressive, love-emphasising sermon I expected it to be, quoting the Bible and Martin Luther King, “we must discover the redemptive power love. Amen. Love is the only way!” There was one surprise though. Apart from quoting Martin Luther King, and the Bible at length as you would..."
+description: "Beginning with Michael Curry's wedding sermon, this reflection asks what it means to center love without collapsing into sentimentality. It probes the moral demands hidden inside uplifting rhetoric, considering how love can function as discipline, orientation, and social practice rather than slogan, and why that distinction matters for religious life."
+tagline: "Beginning with Michael Curry's wedding sermon, this reflection asks what it means to center love."
 ---
 Part 1
 

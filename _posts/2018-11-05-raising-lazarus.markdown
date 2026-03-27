@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - Narrative
 og_image: /assets/images/logo.png
-ai_summary: "Lazarus’ body is in a tomb in Judea, the Southern portion of Israel, in the town of Bethany, a little east of Jerusalem. Before what we read transpired, Jesus and the disciples discuss if they should travel south into Judea. Amen. A disciple says to Jesus, “Rabbi, the Jews were just now trying to stone you, and are you going..."
+description: "A reading of the Lazarus story that follows Jesus into Judea and toward death, grief, and revelation. The essay lingers over danger, delay, mourning, and the layered drama of the text, asking what resurrection language might disclose beyond the literal desire for miracle, consolation, and human attachment."
+tagline: "A reading of the Lazarus story that follows Jesus into Judea and toward death, grief."
 ---
 Lazarus’ body is in a tomb in Judea, the Southern portion of Israel, in the town of Bethany, a little east of Jerusalem. Before what we read transpired, Jesus and the disciples discuss if they should travel south into Judea. A disciple says to Jesus, “Rabbi, the Jews were just now trying to stone you, and are you going there again"” But Jesus explains to all of them that Lazarus, whom he loved, had died, and so go he must. And so, Jesus and the disciples travel to Judea.
 

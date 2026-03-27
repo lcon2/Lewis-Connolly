@@ -9,7 +9,8 @@ categories:
   - Identity
   - Aesthetics
 og_image: /assets/images/gameart.png
-ai_summary: "Silo (2023) is a great series; it is set in a seemingly post-apocalyptic world in which 10,000 people live in a ‘silo’ or underground vault. The silo is entirely self-sustaining, across its 144 floors everything is covered, from food to electricity production, to maintenance, medical care, and security, to anything else you can think of, anything which would be necessary..."
+description: "Using the premise of Silo, this essay thinks through the social arithmetic of a closed world built for ten thousand souls. It reflects on population, order, sacrifice, and the fragility of systems, asking what kinds of human life emerge when survival requires rigid planning and the horizon has vanished."
+tagline: "Using the premise of Silo, this essay thinks through the social arithmetic of a closed."
 ---
 <img src="{{ '/assets/images/gameart.png' | relative_url }}" alt="Game Art" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

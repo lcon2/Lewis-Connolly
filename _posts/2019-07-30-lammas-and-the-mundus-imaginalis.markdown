@@ -9,7 +9,8 @@ categories:
   - Spirituality
   - Psychology
 og_image: /assets/images/logo.png
-ai_summary: "When I think of Lammas tide, I think of one tearing the first loaf of the harvest, a move from scarcity to abundance. I think of the crops, the rain falling on blackened soil, Fields, trees, the thicket, green on green, From the highlands, to Suffolk’s Coast and Heaths, From Constable’s ‘Hay Wain’, and even further afield, my thoughts migrate..."
+description: "A richly lyrical Lammas meditation that binds harvest, travel, and imagination into one field of resonance. Moving from bread and weather to sacred geography and memory, the essay explores how seasonal ritual can widen perception and restore a sense of abundance that is at once earthly and imaginal."
+tagline: "A richly lyrical Lammas meditation that binds harvest, travel, and imagination into one field."
 ---
 When I think of Lammas tide,
 I think of one tearing the first loaf of the harvest,

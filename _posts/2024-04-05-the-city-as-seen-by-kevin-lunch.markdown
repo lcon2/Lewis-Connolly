@@ -8,7 +8,8 @@ categories:
   - Culture
   - Meaning
   - Aesthetics
-ai_summary: "Published in 1959, it was the seminal work of Kevin Lynch, an MIT professor in the school of Architecture and Planning. His book is about the way cities look, or rather the mental picture that we all form in our heads of cities. They highlight the potential of thoughtful design to transform urban spaces into places of beauty, significance, and..."
+description: "A concise reflection on Kevin Lynch's classic account of urban form and mental maps. The essay considers how cities become legible or alienating, and why thoughtful design matters not only for efficiency but for beauty, orientation, and the felt meaning of public life in common life."
+tagline: "A concise reflection on Kevin Lynch's classic account of urban form and mental maps."
 ---
 Published in 1959, it was the seminal work of Kevin Lynch, an MIT professor in the school of Architecture and Planning. His book is about the way cities look, or rather the mental picture that we all form in our heads of cities. His book looks at three American cities: Boston, Jersey City (part of the New York metropolitan area), and Los Angeles.
 

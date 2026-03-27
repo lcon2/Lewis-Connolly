@@ -8,7 +8,8 @@ categories:
   - Theology
   - Spirituality
   - Meaning
-ai_summary: "I come to writing this essay in a melancholic mood, and as ever, I come in search of that elusive something. It is Advent 2021. The drama is perfect. Advent is the season for waiting and expectation, and I, at this moment in my life find myself waiting. Waiting somewhat against my will. Waiting for the next chapter of my..."
+description: "Written in a mood of waiting during Advent 2021, this essay turns seasonal expectation into a more personal reckoning with delay, melancholy, and spiritual impasse. It reflects on the drama of hope when life feels suspended, and on the difficulty of receiving a liturgical season whose promises no longer arrive untouched."
+tagline: "Written in a mood of waiting during Advent 2021, this essay turns seasonal expectation."
 ---
 I come to writing this essay in a melancholic mood, and as ever, I come in search of that elusive something. It is Advent 2021. Advent is the season for waiting and expectation, and I, at this moment in my life find myself waiting. Waiting somewhat against my will. Waiting for the next chapter of my life to begin.
 

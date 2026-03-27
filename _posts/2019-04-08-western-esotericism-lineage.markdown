@@ -8,7 +8,8 @@ categories:
   - Spirituality
   - Culture
   - Consciousness
-ai_summary: "This morning I am entering territory I have not traversed before. I’m thinking about the emergence of what we might term western esotericism, or western occultism, or modern spirituality. As we rise in the scale of development we perceive that during the stages through which we have passed we mistook shadows for realities…only when we shall have reached the absolute..."
+description: "A companion essay on Western esotericism that traces its lineage through philosophical, religious, and occult inheritances. Rather than treating modern spirituality as a sudden novelty, it follows the older streams that fed it, showing how mystical ambition repeatedly reappears in new cultural dress across the modern West and its restless seekers."
+tagline: "A companion essay on Western esotericism that traces its lineage through philosophical, religious, and occult."
 ---
 This morning I am entering territory I have not traversed before. I’m thinking about the emergence of what we might term western esotericism, or western occultism, or modern spirituality. When we think about the emergence of an idea, or a set of ideas, it’s worth thinking about how such ideas arose. An idea does not just appear – *ex nihilo* - out of nothing. The conditions, the architecture of ideas prevalent at a particular time, the softening of prior-held precepts, these are all essential prerequisites for an idea to arise. 
 

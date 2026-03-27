@@ -8,7 +8,8 @@ categories:
   - Theology
   - Identity
   - Culture
-ai_summary: "Just finished watching ‘American Heretics: The Politics of the Gospel (2019)’, a very interesting and inspiring documentary, which focused ostensibly on the ministries of two social action churches, namely, the Mayflower Congregational UCC Church and All Souls Unitarian Church, both in the state of Oklahoma. Although I find the ministries of both churches to be courageous within their context, I..."
+description: "Prompted by the documentary American Heretics, this essay asks whether radical inclusivity can become a form of evasiveness. Admiring courageous ministries while remaining critical, it explores the limits of social action churchmanship and the tension between welcome, conviction, and the need for spiritual depth within liberal religion."
+tagline: "Prompted by the documentary American Heretics, this essay asks whether radical inclusivity can become."
 ---
 Just finished watching ‘American Heretics: The Politics of the Gospel (2019)’, a very interesting and inspiring documentary, which focused ostensibly on the ministries of two social action churches, namely, the Mayflower Congregational UCC Church and All Souls Unitarian Church, both in the state of Oklahoma.
 

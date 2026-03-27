@@ -8,7 +8,8 @@ categories:
   - Theology
   - Culture
   - Philosophy
-ai_summary: "It is no secret that I found my time training for the priesthood at Westcott House grating. There were a number of reasons for this—but the underlying issue was the degree to which my own theological opinions jarred with the ethos of the College. Amen. Now three years on I find myself in the incredibly weird situation of living once..."
+description: "Part memoir, part theological critique, this essay revisits Anglican formation and the medieval assumptions still haunting modern Christianity. It argues for a faith less invested in inherited hierarchy, fear, and sacerdotal nostalgia, and more open to conscience, honesty, and the living realities of modern spiritual life."
+tagline: "Part memoir, part theological critique, this essay revisits Anglican formation and the medieval assumptions still."
 ---
 It is no secret that I found my time training for the priesthood at Westcott House grating. There were a number of reasons for this—but the underlying issue was the degree to which my own theological opinions jarred with the ethos of the College. Now three years on I find myself in the incredibly weird situation of living once again in an Anglican training College—this time in Oxford, while my wife trains for the priesthood. As a Unitarian, my perspective on these Anglican training establishments must be quite unique.
 

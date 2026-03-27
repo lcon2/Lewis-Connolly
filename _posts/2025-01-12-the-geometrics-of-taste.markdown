@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - Technology
 og_image: /assets/images/deco.png
-ai_summary: "In this essay, I’ll explore design—interior design, website design, and its ties to marketing—examining how taste shapes the spaces we create, their purpose, and how they reflect our individuality and aspirations. I’m a fan of Art Deco, which has its origins at the 1925 Paris Exhibition, but I think of it as primarily a 1920s and 30s American style, finding..."
+description: "An essay on design, interior space, and digital aesthetics that examines how taste shapes identity, aspiration, and persuasion. Moving from Art Deco to contemporary branding, it asks whether good design clarifies life or merely sells desire, and how geometry, texture, and proportion quietly train our habits of attention."
+tagline: "An essay on design, interior space, and digital aesthetics that examines how taste shapes identity."
 ---
 <div class="post">
     <audio class="audio-player" controls>

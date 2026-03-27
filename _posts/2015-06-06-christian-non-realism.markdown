@@ -8,7 +8,8 @@ categories:
   - Theology
   - Consciousness
   - Narrative
-ai_summary: "Christian non-realism is essentially an approach to one’s Christian faith that interprets the ‘magical’ aspects of Christianity as metaphor. Christian non-realists reject all the supernatural elements of the faith and do not believe in an objective being or thing called God. I feel that Christian non-realism fits better into a Unitarian context, for the culture within Unitarianism is more egalitarian..."
+description: "An exploration of Christian non-realism as a way of holding Christian language without supernatural commitments. The essay considers God-talk as symbolic, ethically formative, and culturally situated, then asks why this approach may sit more naturally within Unitarian life, where conscience, plurality, and theological humility are given room to breathe."
+tagline: "An exploration of Christian non-realism as a way of holding Christian language without supernatural commitments."
 ---
 Christian non-realism is essentially an approach to one’s Christian faith that interprets the ‘magical’ aspects of Christianity as metaphor. Christian non-realists reject all the supernatural elements of the faith and do not believe in an objective being or thing called God. The word ‘God’ is used in a plethora of different ways, but never to describe a force beyond the laws of nature. God is not a thing or a being, but rather an experience—an experience of the subjectively impossible being actualized in our lives, an experience of finding hope in hopelessness, a word that articulates something of the quality of sacred space, and a word that somehow describes something beyond words.
 

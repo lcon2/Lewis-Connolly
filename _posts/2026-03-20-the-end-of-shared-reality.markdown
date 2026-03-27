@@ -12,8 +12,8 @@ og_image: /assets/images/ai-flammarion.png
 og_image_width: 1559
 og_image_height: 1024
 image_alt: "AI Flammarion illustration for The End of Shared Reality"
-description: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually replace shared reality with highly individualized worlds. As interface dissolves into environment, morality, meaning, and even curiosity become more local, aesthetic, and inward-facing."
-ai_summary: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually replace shared reality with highly individualized worlds. As interface dissolves into environment, morality, meaning, and even curiosity become more local, aesthetic, and inward-facing. What looks like escape may instead feel like a richer, more satisfying form of life than unfiltered material existence."
+description: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually replace shared reality with highly individualized worlds. As interface dissolves into environment, morality, meaning, and even curiosity become more local, aesthetic, and inward-facing. What looks like escape may instead feel like a richer, more satisfying form of life than unfiltered material existence."
+tagline: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually."
 ---
 
 <img src="{{ '/assets/images/ai-flammarion.png' | relative_url }}" alt="The End of Shared Reality" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

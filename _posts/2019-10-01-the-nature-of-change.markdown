@@ -9,7 +9,8 @@ categories:
   - Meaning
   - Philosophy
 og_image: /assets/images/logo.png
-ai_summary: "I remember it as if it was yesterday. I was lying on a large, very comfortable, couch. Amen. It was late, probably around midnight. I must have been eleven years old at the time. The year was 1999, and I was still living in Texas, although my remaining time in Texas was quickly drawing to an end. I had already..."
+description: "Beginning with a vivid childhood memory, this essay explores impermanence, identity, and the stories we tell to preserve continuity. It traces how people metabolize change across decades, suggesting that transformation is less a dramatic rupture than an ongoing negotiation between memory, desire, and the unpredictable weather of lived experience."
+tagline: "Beginning with a vivid childhood memory, this essay explores impermanence, identity, and the stories we."
 ---
 I remember it as if it was yesterday. I was lying on a large, very comfortable, couch. It was late, probably around midnight. I must have been eleven years old at the time. The year was 1999, and I was still living in Texas, although my remaining time in Texas was quickly drawing to an end. I had already seen the prospectus for the English boarding school I was to enter later in the year. And I wasn’t very happy about leaving Texas. The years there had been (up to that point) the happiest in my life. I had my Nintendo, my horse riding that I did at weekends, my ranch house that took me out into the country, and our suburban house, which was Texas-style-large, it has a swimming pool with a diving board, and a waterfall. It seemed very unlikely to me that whatever came next would be as good. And I was mostly right about that.
 

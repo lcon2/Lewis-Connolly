@@ -8,7 +8,8 @@ categories:
   - Narrative
   - Film
   - History
-ai_summary: "‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I know it’s crazy, but that’s the only thing I’d really like to be. I grew up on a diet of film; it is our generation’s first language after all, and yet, I can..."
+description: "Using Salinger's Holden Caulfield as a companion, this piece reflects on spectacle, violence, and the ache for genuine human contact in an image-saturated age. It sets the novel against modern media culture and asks what it means to resist the phony without surrendering tenderness or moral seriousness."
+tagline: "Using Salinger's Holden Caulfield as a companion, this piece reflects on spectacle, violence."
 ---
 ‘The Catcher in the Rye’ sets itself up in opposition to “The goddam movies,” as Holden Caufield says. Now I am a fan of the movies. I grew up on a diet of film; it is our generation’s first language after all, and yet, I can see why Salinger would want to set himself up in opposition to this image-driven world.
 

@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - Psychology
 og_image: /assets/images/logo.png
-ai_summary: "When I think of Lammas-tide, I think of bread broken in celebration, from scarcity to abundance; I think of the harvest, rain falling on blackened soil, Crops, trees, the thicket, green on green, From the highlands to Dixieland’s deserts, From Constable’s ‘Hay Wain’ to the god-haunted Central Sea, From some Austrian peak, to the very shore of Galilee, I think..."
+description: "A lyrical Lammas meditation on harvest, bread, landscape, and the move from scarcity to abundance. The piece dwells in fields, memory, and sacramental imagination, gathering rural images and spiritual resonances into a quiet celebration of ripeness, gratitude, and the many textures of the created world."
+tagline: "A lyrical Lammas meditation on harvest, bread, landscape, and the move from scarcity to abundance."
 ---
 When I think of Lammas-tide,
 I think of bread broken in celebration,

@@ -9,7 +9,8 @@ categories:
   - Culture
   - Meaning
 og_image: /assets/images/logo.png
-ai_summary: "There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District. It was given the nick-name during a period of intense revival in the US, with hell and damnation being preached at huge tent revival meetings. Amen. Fuel denoted the unconverted population, those people who were receptive to hearing the..."
+description: "A reflective journey through revivalist history, deconversion, and the slow reassembly of belief. Beginning in America's Burned-Over District, the essay traces how inherited certainties fray, why old religious forms lose their hold, and how one might continue seeking meaning without surrendering either intellectual honesty or spiritual depth."
+tagline: "A reflective journey through revivalist history, deconversion, and the slow reassembly of belief."
 ---
 There is an area in upstate New York that in the 19th century was given the nick name the Burned-Over District.
 

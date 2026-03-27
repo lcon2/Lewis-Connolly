@@ -8,7 +8,8 @@ categories:
   - Meaning
   - Theology
   - Culture
-ai_summary: "I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and perhaps in America generally, are coy to reveal what human behavior transpires within; the architecture rarely offers up much of a clue. I stirred, I rolled over, I found myself in the car..."
+description: "Part travel sketch, part spiritual vignette, this essay wanders through Charlotte's ambiguous religious and architectural landscape in a mood between waking and dream. It notices signage, surfaces, and atmosphere with wry precision, while asking what sort of spiritual hunger and spiritual kitsch flicker beneath ordinary American banality."
+tagline: "Part travel sketch, part spiritual vignette, this essay wanders through Charlotte's ambiguous religious and architectural."
 ---
 I’m driving up along North Graham Street on the Sabbath; I pull into a parking lot in front of a non-descript building. Buildings here in Charlotte, and perhaps in America generally, are coy to reveal what human behavior transpires within; the architecture rarely offers up much of a clue. But there is a sign out front, a truly hideous and slightly pixilated sign. It looks as if some boomer back in the 90s discovered the marvels of paint on his Windows PC and allowed their Gee-Whiz-Can-Do attitude to do the rest. And why change it now? After all, it has done a perfectly fine job these past twenty-odd years. The sign reads something like, LovingJoy Ministries, or HeartFreedom Center. Something God-awful like that.
 

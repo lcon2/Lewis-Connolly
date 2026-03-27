@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - Film
 og_image: /assets/images/cow.png
-ai_summary: "A few weeks back, I re-watched ‘Temple Grandin’ (2010), a great movie about its namesake, an autistic woman, who despite the odds, entered the male-dominated American cattle industry of the 1970s and revolutionized it. Her autism allowed her to perceive feedlots—where animals are fattened for slaughter— in ways, according to her own reckoning, more akin to the cattle. A marbled..."
+description: "Starting from Temple Grandin and the cattle industry, this essay reflects on perception, animal life, and the uneasy moral imagination of modern meat culture. It is attentive to embodiment and suffering, while asking what becomes visible when one tries, however imperfectly, to see the world from the creature's side."
+tagline: "Starting from Temple Grandin and the cattle industry, this essay reflects on perception, animal life."
 ---
 <img src="{{ '/assets/images/cow.png' | relative_url }}" alt="Cow" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

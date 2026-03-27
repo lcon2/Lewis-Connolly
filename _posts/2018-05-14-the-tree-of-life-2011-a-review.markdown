@@ -8,7 +8,8 @@ categories:
   - Film
   - Aesthetics
   - Meaning
-ai_summary: "‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7 This film takes some stamina. It is long, dense with metaphor, lacking a conventional narrative arc, and somewhat mystifying. All in all, I value this Avant Garde piece of art for daring..."
+description: "A review of Terrence Malick's The Tree of Life that honors its metaphysical reach as much as its emotional tenderness. The essay lingers over the film's cosmic scale, family grief, biblical imagery, and resistance to conventional storytelling, treating it as a work to be entered rather than merely decoded."
+tagline: "A review of Terrence Malick's The Tree of Life that honors its metaphysical reach."
 ---
 ‘Where were you when I laid the foundations of the earth?… When the morning stars sang together, and all the sons of God shouted for Joy?’ Job 38:4,7
 

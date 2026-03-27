@@ -8,7 +8,8 @@ categories:
   - Philosophy
   - Theology
   - History
-ai_summary: "Part 1 I’m going to begin the morning by thinking about the apocalypse. The apocalypse, as you know, is the final destruction of the world. Amen. When we think about the apocalypse our thoughts often turn to those Christian fundamentalists who prophesy the imminent end of the world. They who believe that any day now, a series of events will..."
+description: "A reconsideration of apocalypse as revelation before catastrophe, this essay moves beyond end-times spectacle toward psychological and social unmasking. It examines why collapse narratives attract us, what they conceal, and how personal upheaval can become a site of moral clarity rather than a theatre for fear, certainty, or domination."
+tagline: "A reconsideration of apocalypse as revelation before catastrophe, this essay moves beyond end-times spectacle."
 ---
 ##Part 1
 

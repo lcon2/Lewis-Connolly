@@ -8,7 +8,8 @@ categories:
   - Aesthetics
   - Narrative
   - Consciousness
-ai_summary: "The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’ I’ll avoid the trite/clichéd answer, as the George Mallory quote goes, “because it is there!” Instead, I will lean on my own academic of choice and quote Carl Jung, “people don’t have ideas, ideas have people.” This quote comes much closer, I think, to how I..."
+description: "A reflection on why long-distance hiking exerts such magnetic force, using the Appalachian Trail as both literal route and existential image. The essay weaves Jungian motifs, discipline, solitude, and beauty, suggesting that the hike's aesthetic lies in its capacity to reorder attention and return the walker to lived immediacy."
+tagline: "A reflection on why long-distance hiking exerts such magnetic force, using the Appalachian Trail."
 ---
 The obvious question – ‘Why would one want to undertake the Appalachian Trail hike?’
 

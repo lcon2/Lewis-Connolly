@@ -8,7 +8,8 @@ categories:
   - Spirituality
   - Narrative
   - Culture
-ai_summary: "This morning I’m returning to the world of esoteric culture, the Theosophical Society, the world of Madame Blavatsky, and the realm of exploring hidden knowledge. In particular, I want to think about Rudolf Steiner, a key figure in this world. Amen. Steiner, an Austrian born in 1861, is perhaps best known today for his experimental educational curriculum, used in Steiner..."
+description: "Returning to the world of Theosophy and Rudolf Steiner, this essay explores esoteric education, myth, and the search for hidden knowledge. It reflects on the overlap between spiritual ambition and symbolic storytelling, using Goethe's fairy tale to think about transformation, polarity, imaginative seeing, and modern enchantment."
+tagline: "Returning to the world of Theosophy and Rudolf Steiner, this essay explores esoteric education, myth."
 ---
 This morning I’m returning to the world of esoteric culture, the Theosophical Society, the world of Madame Blavatsky, and the realm of exploring hidden knowledge. In particular, I want to think about Rudolf Steiner, a key figure in this world. Steiner, an Austrian born in 1861, is perhaps best known today for his experimental educational curriculum, used in Steiner Schools. These schools emphasize holistic, spiritual education, punctuated by exercise, movement, and creativity, aiming to foster harmony in society.
 

@@ -3,7 +3,7 @@ layout: null
 title: "Abide"
 date: 2026-01-20 12:00:00 +0000
 featured_in_newest: true
-ai_summary: "A scroll-driven meditation where five words bloom large, then settle into the edges of the screen."
+description: "A scroll-driven meditation where five words bloom large, then settle into the edges of the screen."
 ---
 
 <html lang="en">

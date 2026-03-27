@@ -8,7 +8,8 @@ categories:
   - Aesthetics
   - Theology
   - Narrative
-ai_summary: "This week, a few of us met in the upper room to discuss how we understand the person of Jesus. Our conversation circled back to the issue of interpretation a few times. Amen. How are we to interpret his parables? How are we to interpret his miracles? How are we to interpret his death upon the cross? The point was..."
+description: "Prompted by conversation about Jesus in the upper room, this essay reflects on interpretation itself: how communities read miracles, parables, and the cross in ways that often confirm what they already want to see. It argues for a more imaginative, self-aware reading that can still be surprised by the figure at its center."
+tagline: "Prompted by conversation about Jesus in the upper room, this essay reflects on interpretation itself."
 ---
 This week, a few of us met in the upper room to discuss how we understand the person of Jesus. Our conversation circled back to the issue of interpretation a few times. How are we to interpret his parables? How are we to interpret his miracles? How are we to interpret his death upon the cross? The point was made that Christian denominations are often able to present Jesus in such a way that serves their own interests or affirms their own pre-held assumptions. We see what we want to see. It’s one of the oddities of reading the Bible: the conservative is able to uncover a conservative message and image of Jesus, and the liberal is able to uncover a liberal message and image of Jesus. And yet they’re reading the same Bible. It made me think about this question of interpretation.
 

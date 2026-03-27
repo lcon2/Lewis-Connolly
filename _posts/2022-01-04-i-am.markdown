@@ -8,7 +8,8 @@ categories:
   - Consciousness
   - Meaning
   - Philosophy
-ai_summary: "There is no “I”. Or “I” is the ground of being. The wellspring of all wisdom. What do we mean by “I”? “I do not experience: I am experience, I am not the subject of an experience: I am that experience. “I am” awareness. Nothing else can be I or can exist.” — Wei We Wei “I am the way..."
+description: "A brief contemplative inquiry into the meaning of I am, selfhood, and awareness. Drawing on non-dual language, the piece questions the ordinary ego as ultimate center, and explores whether identity is better understood as participation in consciousness itself, where subject and object blur into a more fundamental immediacy."
+tagline: "A brief contemplative inquiry into the meaning of I am, selfhood, and awareness."
 ---
 There is no “I”.
 

@@ -8,7 +8,8 @@ categories:
   - Theology
   - Philosophy
   - Psychology
-ai_summary: "Here is a talk I gave at my church, Watershed Charlotte. The topic was on What is the Gospel? As can nature, art, movement, running, play, meditation, yoga, story, relationships, community, animals, music, the stars, spirituality, food, imagination, silence, and so on… The Gospel is that you should reach out to your suffering self. As in, what do I personally..."
+description: "A wide-ranging talk on the Gospel that moves from evangelical inheritance to Jung, the Good Samaritan, and the kingdom within. Rather than locating salvation in correct belief or distant heaven, the essay argues for a healing inward work from which love, ethics, and spiritual transformation can genuinely flow."
+tagline: "A wide-ranging talk on the Gospel that moves from evangelical inheritance to Jung."
 ---
 Here is a talk I gave at my church, Watershed Charlotte. The topic was on *What is the Gospel?* As in, what do I personally understand the Gospel (the good news) to be?
 

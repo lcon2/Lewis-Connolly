@@ -95,7 +95,7 @@
                                     {% for post in month_group.items %}
                                         <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.ai_summary | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
+                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.description | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
                                         </li>
                                         {% if year_group.name == "2026" and month_group.name == "January" and post.title == "Wage Labor and the Meaning Crisis" %}
                                             <li style="display: flex; align-items: center; margin-bottom: 10px;">

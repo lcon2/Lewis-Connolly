@@ -9,11 +9,11 @@ categories:
   - Consciousness
   - Meaning
 description: "Active imagination, for Jung, is a waking encounter with the unconscious. Rather than merely analysing dreams, we stay with an image or inner figure, let it develop, and respond through thought, writing, or creative expression."
+tagline: "A clear entry point into Jung’s method of meeting the unconscious in waking life."
 og_image: /assets/images/reflectiveman.png
 og_image_width: 1536
 og_image_height: 1024
 image_alt: "Reflective figure for A Guide to Active Imagination"
-ai_summary: "Active imagination, for Jung, is a waking encounter with the unconscious. Rather than merely analysing dreams, we stay with an image or inner figure, let it develop, and respond through thought, writing, or creative expression."
 ---
 <img src="{{ '/assets/images/reflectiveman.png' | relative_url }}" alt="Reflective figure for A Guide to Active Imagination" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

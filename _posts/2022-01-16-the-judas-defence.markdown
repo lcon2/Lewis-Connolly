@@ -9,7 +9,8 @@ categories:
   - Narrative
   - Psychology
 og_image: /assets/images/logo.png
-ai_summary: "“If I were Jesus Christ. I would save Judas.” Victor Hugo In my previous post, I referred to what I called the Judas Defence, that propensity amongst many Christian thinkers to argue Judas’ case. (the short form CW is used for the Collective Works). Why are so many compelled to make this case\" What underlies this impulse\" I undertake this..."
+description: "Using the recurring impulse to rehabilitate Judas, this essay examines guilt, scapegoating, and the psychology of moral reversal in Christian thought. It asks why readers return to the betrayer with sympathy, what theological work that sympathy performs, and how mercy can coexist with accountability without collapsing into sentiment."
+tagline: "Using the recurring impulse to rehabilitate Judas, this essay examines guilt, scapegoating, and the psychology."
 ---
 “If I were Jesus Christ. I would save Judas.”
 Victor Hugo

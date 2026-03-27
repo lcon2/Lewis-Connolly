@@ -9,7 +9,8 @@ categories:
   - Narrative
   - History
 og_image: /assets/images/logo.png
-ai_summary: "Part 1 Beatrix Potter was steeped in 19th Century Unitarianism, coming from a long line of English dissenters. Her mother and father, Helen and Rupert, were both from prosperous North Western Unitarian families that made their money in the cotton trade. Amen Beatrix’s paternal grandparents, Edmund and Jessie, were both notable Unitarians in their day. Edmund was a radical liberal..."
+description: "Through Beatrix Potter's family background and dissenting milieu, this piece sketches the religious and social world that shaped both her imagination and moral outlook. It links biography, class, and Unitarian inheritance, showing how a beloved children's writer emerged from a dense web of liberal faith, discipline, and historical circumstance."
+tagline: "Through Beatrix Potter's family background and dissenting milieu, this piece sketches the religious and social."
 ---
 Part 1
 

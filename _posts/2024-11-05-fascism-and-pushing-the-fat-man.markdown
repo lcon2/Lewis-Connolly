@@ -8,7 +8,8 @@ categories:
   - Culture
   - Philosophy
   - History
-ai_summary: "Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train onto another track where there is one bystander. There will just need to be a bit more theatre, we’ll wear our complaints on our sleeves, but really, why make the fuss? Do..."
+description: "Using the trolley problem as a point of entry, this essay considers fascism, moral theater, and the willingness to violate persons in the name of higher goods. It probes the logic of sacrificial politics and asks how easily respectable moral reasoning can shade into something cold, coercive, and inhumane."
+tagline: "Using the trolley problem as a point of entry, this essay considers fascism, moral theater."
 ---
 Most people know the classic trolley problem: a train is hurtling toward five people on the track. You have the option to pull a lever, diverting the train onto another track where there is one bystander. Do you pull the lever, sacrificing the one to save the five? From a utilitarian perspective—where the focus is on maximizing the greatest good or happiness—the answer is yes. One life lost is deemed preferable to five.
 

@@ -8,7 +8,8 @@ categories:
   - Film
   - Theology
   - History
-ai_summary: "‘The Price for your glory is their suffering’ Scorsese’s new epic masterpiece is theologically rich, aesthetically captivating, and emotionally raw. Based upon Endo’s 1966 historical fiction by the same name, Silence is a film about Portuguese priests facing persecution in 17th century Japan. Keep in mind also, this film is coming from the same director who gave us the other..."
+description: "A theological and cinematic meditation on Scorsese's Silence, attentive to persecution, apostasy, and the cost of missionary certainty. The review reads the film as a difficult inquiry into glory, suffering, and divine hiddenness, where faith is tested not in abstraction but in the unbearable moral weight of other people's pain."
+tagline: "A theological and cinematic meditation on Scorsese's Silence, attentive to persecution, apostasy, and the cost."
 ---
 ‘The Price for your glory is their suffering’
 

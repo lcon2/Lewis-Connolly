@@ -8,7 +8,8 @@ categories:
   - Consciousness
   - Meaning
   - Spirituality
-ai_summary: "I recall my last sitting. I awoke the other night; my wife and daughter were fast asleep. There is the I who perceives, the I that listens. Let me describe the experience to you. This exercise was motivated by a desire to approach this—whatever word we’re using to describe it—with more intentionality. This intentionality colors what follows. I chose to..."
+description: "An intimate account of a late-night sitting practice centered on receptive attention. The essay explores what listening becomes when stripped of performance and doctrine, tracing subtle shifts in perception, self-awareness, and calm. It treats contemplation as an experiment in presence, where meaning appears through patient stillness rather than force."
+tagline: "An intimate account of a late-night sitting practice centered on receptive attention."
 ---
 I recall my last sitting. I awoke the other night; my wife and daughter were fast asleep. Let me describe the experience to you. This exercise was motivated by a desire to approach this—whatever word we’re using to describe it—with more intentionality. This intentionality colors what follows.
 

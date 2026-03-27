@@ -9,7 +9,8 @@ categories:
   - Culture
   - History
 og_image: /assets/images/logo.png
-ai_summary: "April 5, 1884. He began his letter, ‘Dear Rev. Blackstone Editions, 2017. James Martineau’. It was the letter of a 19 year old boy from County Down, Ireland, the son of a non-subscribing Presbyterian farmer, who was seeking to train for Unitarian ministry under Martineau, the principle of Manchester New College in London. References were sent, tests were taken, and..."
+description: "A concise portrait of William Jellie, tracing the making of a nineteenth-century Unitarian minister from an Irish farm to theological training in London. Through letters, institutions, and vocation, the essay recovers a life that speaks to the earnest seriousness of dissenting religious culture and the disciplined hopes of liberal ministry."
+tagline: "A concise portrait of William Jellie, tracing the making of a nineteenth-century Unitarian minister."
 ---
 April 5, 1884. He began his letter, ‘Dear Rev. James Martineau’. It was the letter of a 19 year old boy from County Down, Ireland, the son of a non-subscribing Presbyterian farmer, who was seeking to train for Unitarian ministry under Martineau, the principle of Manchester New College in London. References were sent, tests were taken, and he was accepted to train.
 

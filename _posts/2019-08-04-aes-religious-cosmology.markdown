@@ -8,7 +8,8 @@ categories:
   - Psychology
   - Spirituality
   - Consciousness
-ai_summary: "George William Russell was an Irish nationalist, poet, artist, and mystic, who went by the pseudonym Æ. Today I’ll be exploring his religious views, and his overall religious cosmology. Amen. And by ‘religious cosmology’ I mean that set of myths and narratives, through which he understood and orientated himself within the universe. Whenever we’re considering a thinker or writer, we..."
+description: "A study of George William Russell, or A.E., through the religious cosmology that shaped his art and thought. The essay follows the myths, influences, and metaphysical assumptions by which he oriented himself, asking how a writer's vision of the universe informs both creativity and spiritual witness."
+tagline: "A study of George William Russell, or A.E., through the religious cosmology that shaped his."
 ---
 George William Russell was an Irish nationalist, poet, artist, and mystic, who went by the pseudonym Æ. Today I’ll be exploring his religious views, and his overall religious cosmology. And by ‘religious cosmology’ I mean that set of myths and narratives, through which he understood and orientated himself within the universe. Whenever we’re considering a thinker or writer, we of course gain a great deal of insight by merely learning which thinkers and writers they themselves held in high regard, and the three individuals held in high regard by Æ were Madame Blavatsky, alongside Ralph Waldo Emerson and Walt Whitman.
 

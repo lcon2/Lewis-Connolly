@@ -12,8 +12,8 @@ og_image: /assets/images/archetype_eye.png
 og_image_width: 1536
 og_image_height: 1024
 image_alt: "Archetypal eye illustration for The Shapes Beneath Thought"
-description: "A reflection on Jung’s archetypes as deep structural forms rather than mere symbolic motifs, and on the possibility that code now gives us a new way of seeing those forms recur. What myth, dream, and art once revealed, formal systems may now be revealing again."
-ai_summary: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility than as recurring symbolic decorations. Their reappearance across myth, dream, art, and now code suggests that intelligence does not invent meaning from nothing, but repeatedly falls into certain forms. Large language models do not prove Jung, but they make his stronger intuition harder to dismiss: that mind may be discovering patterns already woven into the grain of mind and world."
+description: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility than as recurring symbolic decorations. Their reappearance across myth, dream, art, and now code suggests that intelligence does not invent meaning from nothing, but repeatedly falls into certain forms. Large language models do not prove Jung, but they make his stronger intuition harder to dismiss: that mind may be discovering patterns already woven into the grain of mind and world."
+tagline: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility."
 read_next:
   - title: "A Guide to Active Imagination"
     description: "A clear entry point into Jung’s method of meeting the unconscious in waking life."

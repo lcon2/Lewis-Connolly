@@ -8,7 +8,8 @@ categories:
   - Culture
   - Aesthetics
   - Meaning
-ai_summary: "Part 1 Public expressions of violence are not merely a matter of the number of lives lost; their impact cannot be measured in such terms. Rather their impact is shaped a great deal by the lens we view them through, through narratives already present in society. Amen. Take, for example, the Orlando shooting two years ago - the impact of..."
+description: "Prompted by public violence and competing narratives, this essay explores how meaning is assigned to tragedy long before facts settle. It reflects on media framing, race, and collective imagination, asking why certain losses become symbols while others disappear, and what ethical attention requires in an age of accelerated outrage."
+tagline: "Prompted by public violence and competing narratives, this essay explores how meaning is assigned."
 ---
 Part 1
 

@@ -8,7 +8,8 @@ categories:
   - Culture
   - Spirituality
   - Theology
-ai_summary: "To quote Emanuel Swedenborg, the 18th century Swedish philosopher and mystic, “We can see from this (from Nature), as though in a mirror, how perfection stems from variety in heaven as well, since things that happen in the natural world offer us a reflection of things in the spiritual world.” When we look upon variety in Nature, that variety corresponds..."
+description: "Beginning with Swedenborg and a green apple in a field, this essay becomes a meditation on variety, correspondence, and the spiritual significance of the natural world. It reflects on how multiplicity need not imply disorder, and how attention to nature can disclose a deeper patterning of reality."
+tagline: "Beginning with Swedenborg and a green apple in a field, this essay becomes a meditation."
 ---
 To quote Emanuel Swedenborg, the 18th century Swedish philosopher and mystic, “We can see from this (from Nature), as though in a mirror, how perfection stems from variety in heaven as well, since things that happen in the natural world offer us a reflection of things in the spiritual world.” When we look upon variety in Nature, that variety corresponds to a spiritual reality. I find myself standing in a wheat field; before me the crop stretches out across the undulating topography. As I walk the path, my eyes catch upon the uniform lines, the crops, perfectly ordered. After a short time, I reach the edge of a wood, and stepping across the threshold, moving from the field to the wood, my spirit is lifted, for I have gone from the singular to the varied. From the land ordered by man, to the land ordered by God.
 

@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - History
 og_image: /assets/images/logo.png
-ai_summary: "Our annual Bodhi Sunday service is about Buddhism, that Eastern religious tradition or philosophy which has shaped us so much. It has shaped us as individuals, and our Unitarian movement collectively, in ways we may not even be conscious of. Amen. Its influence runs deep. This morning then, I want to begin not in India, not with the historical Buddha..."
+description: "For Bodhi Sunday, this essay approaches Buddhism by way of nineteenth-century Europe and Schopenhauer, tracing how Buddhist thought entered Western consciousness. It reflects on suffering, desire, and philosophical translation, while noticing how deeply Eastern ideas have already entered modern liberal religious life, imagination, and spiritual self-understanding."
+tagline: "For Bodhi Sunday, this essay approaches Buddhism by way of nineteenth-century Europe and Schopenhauer, tracing."
 ---
 Our annual Bodhi Sunday service is about Buddhism, that Eastern religious tradition or philosophy which has shaped us so much. It has shaped us as individuals, and our Unitarian movement collectively, in ways we may not even be conscious of. Its influence runs deep. This morning then, I want to begin not in India, not with the historical Buddha of the 5th Century BCE as I have done in previous years, but rather begin in 19th Century Europe, as that is the point that Western thinkers began to consider for the first time the teachings of the Buddha.
 

@@ -8,7 +8,8 @@ categories:
   - Culture
   - Aesthetics
   - Philosophy
-ai_summary: "When I was fifteen my friend Simon Poole and I had a mutual art project. We designed a communist community, a huge mega-structure in which the population of the world would live and work. Society is built upon a truly meritocratic foundation, everyone has an equal chance in life, and it addresses the social ill of isolation. We created a..."
+description: "A reflective essay on a teenage utopian project, using the imagined phalanstery to think about equality, merit, isolation, and the strange sincerity of youthful political dreams. What begins as remembered idealism becomes a quieter meditation on community, order, and the hope that society might yet be arranged more humanely."
+tagline: "A reflective essay on a teenage utopian project, using the imagined phalanstery to think."
 ---
 When I was fifteen my friend Simon Poole and I had a mutual art project. We designed a communist community, a huge mega-structure in which the population of the world would live and work. We created a model of a typical living quarter, considered the average day of a person, what he/she would do, what work would consist of, and what would motivate them to participate within a society in which they could never rise above total equality.
 

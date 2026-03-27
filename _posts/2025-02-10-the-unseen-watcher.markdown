@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - Philosophy
 og_image: /assets/images/blueprint.png
-ai_summary: "I have been reading about prison design, specifically Panopticon prisons. A Panopticon prison is a circular prison design where a central watchtower allows guards to observe all inmates without the prisoners knowing whether they are being watched, creating a sense of constant surveillance and self-regulation. Look at that, I managed to write this whole article without mentioning Orwell. This design..."
+description: "Starting with Bentham's Panopticon, this essay reflects on surveillance, self-regulation, and the interiorization of power in modern life. It follows the prison model into digital culture, asking how constant visibility reshapes behavior, conscience, and freedom, and whether moral formation can survive when observation replaces trust."
+tagline: "Starting with Bentham's Panopticon, this essay reflects on surveillance, self-regulation, and the interiorization of power."
 ---
 <div class="post">
     <audio class="audio-player" controls>

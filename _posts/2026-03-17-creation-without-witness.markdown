@@ -9,7 +9,8 @@ categories:
   - Aesthetics
   - Identity
 og_image: /assets/images/smokyroom.png
-ai_summary: "An abandoned podcast project becomes a meditation on AI, bespoke media, and the changing motives of creation. If engaging audio on any obscure subject can be generated instantly, the old logic of audience, scarcity, and value starts to erode. What remains is creation for its own sake: compulsion, taste, curation, and the attempt to leave behind a pattern of mind."
+description: "An abandoned podcast project becomes a meditation on AI, bespoke media, and the changing motives of creation. If engaging audio on any obscure subject can be generated instantly, the old logic of audience, scarcity, and value starts to erode. What remains is creation for its own sake: compulsion, taste, curation, and the attempt to leave behind a pattern of mind."
+tagline: "An abandoned podcast project becomes a meditation on AI, bespoke media, and the changing motives."
 ---
 
 <style>

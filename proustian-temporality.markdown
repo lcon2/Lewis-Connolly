@@ -33,7 +33,7 @@ categories:
 
 og_image: /assets/images/essay.png
 
-ai_summary: >-
+description: >-
 
   This paper explores how time functions in Marcel Proust's A la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust's privileged moments of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.
 

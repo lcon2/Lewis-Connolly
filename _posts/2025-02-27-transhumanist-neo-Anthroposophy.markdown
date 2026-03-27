@@ -9,7 +9,8 @@ categories:
   - Consciousness
   - History
 og_image: /assets/images/pantheon.png
-ai_summary: "I find myself occasionally being brought back to the work of Rudolf Steiner (1861 – 1925) – a sense that there is something there to be discovered, something worth knowing. Something that I haven’t got yet. It’s a warm, sunny day, beer, laughter, vitality — a return to life in its purest, most essential form. He is most famous today..."
+description: "A reflective inquiry into Rudolf Steiner's afterlives in a technological age, this essay considers whether transhumanist ambitions echo neo-Anthroposophical longings. It explores education, spirit, embodiment, and progress narratives, asking what kind of human future is imagined when mystical inheritance and machine-enhancement begin to speak a surprisingly similar language."
+tagline: "A reflective inquiry into Rudolf Steiner's afterlives in a technological age, this essay considers whether."
 ---
 <div class="post">
     <audio class="audio-player" controls>

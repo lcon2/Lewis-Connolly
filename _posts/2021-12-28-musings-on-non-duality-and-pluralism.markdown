@@ -9,7 +9,8 @@ categories:
   - Meaning
   - Philosophy
 og_image: /assets/images/logo.png
-ai_summary: "It is my sense that a belief in non-duality (which is to say a fundamental belief in the oneness of all), leads naturally to pluralism. It makes perfect sense that it would - if all is one, then irrespective of your role on the world’s stage, you are nevertheless part of the whole, part of the one. Perhaps this would..."
+description: "A reflection on non-duality as a philosophical intuition that may naturally widen into pluralism. The essay considers whether oneness can underwrite ethical openness without dissolving difference, and how spiritual unity might be practiced in social life where conflict, identity, and power remain stubbornly, deeply real."
+tagline: "A reflection on non-duality as a philosophical intuition that may naturally widen into pluralism."
 ---
 It is my sense that a belief in non-duality (which is to say a fundamental belief in the oneness of all), leads naturally to pluralism. It makes perfect sense that it would - if all is one, then irrespective of your role on the world’s stage, you are nevertheless part of the whole, part of the one. Or rather, one should probably say you are the one, as to say ‘part’ suggests you can in some sense be broken off.
 

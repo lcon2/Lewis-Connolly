@@ -9,7 +9,8 @@ categories:
   - Aesthetics
   - History
 og_image: /assets/images/deathinwood.png
-ai_summary: "Lately I have not been able to stop thinking about taste. Through reflections on four works of art, the essay argues that taste is an inward recognition of deeper reality—something older and harder to pin down."
+description: "Through four works of art, this essay develops a theory of taste as inward recognition rather than social signaling. It argues that genuine taste responds to depth, form, and metaphysical weight, pointing toward realities that exceed fashion, and invites the reader to treat aesthetic judgment as a mode of knowing."
+tagline: "Through four works of art, this essay develops a theory of taste as inward recognition."
 ---
 
 <img src="{{ '/assets/images/deathinwood.png' | relative_url }}" alt="Death in Wood" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

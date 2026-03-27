@@ -8,7 +8,8 @@ categories:
   - Theology
   - Philosophy
   - Spirituality
-ai_summary: "Part 1 This week, the weekly news magazine ‘Time’ went with the front page cover caption ‘Is Truth Dead?’ as you can see. Now the story itself is, as you might imagine, all about Donald Trump’s presidency, specifically, his approach to the ‘Truth’. Amen. The article outlines a whole string of outright false claims that the president has made, from..."
+description: "Using the contemporary crisis of public discourse as a point of departure, this essay examines truth, propaganda, and the seductions of partisan narrative. It asks what happens when factual claims become tribal signals, and how communities might recover intellectual integrity without pretending neutrality is ever simple or politically innocent."
+tagline: "Using the contemporary crisis of public discourse as a point of departure, this essay examines."
 ---
 ##Part 1
 

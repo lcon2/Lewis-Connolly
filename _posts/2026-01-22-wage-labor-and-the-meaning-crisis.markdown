@@ -9,7 +9,8 @@ categories:
   - Meaning
   - Psychology
 og_image: /assets/images/time.png
-ai_summary: "As AGI approaches, knowledge work loses its status as the engine of identity and time-structure. The essay argues that wage labor has become the secular scaffold of meaning, and that its collapse will leave people disoriented in unstructured time. The coming disruption is framed less as a tech crisis than a spiritual and temporal reckoning over how to inhabit time and purpose."
+description: "As AGI approaches, knowledge work loses its status as the engine of identity and time-structure. The essay argues that wage labor has become the secular scaffold of meaning, and that its collapse will leave people disoriented in unstructured time. The coming disruption is framed less as a tech crisis than a spiritual and temporal reckoning over how to inhabit time and purpose."
+tagline: "As AGI approaches, knowledge work loses its status as the engine of identity and time-structure."
 ---
 
 <img src="{{ '/assets/images/time.png' | relative_url }}" alt="Wage Labor and the Meaning Crisis" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">

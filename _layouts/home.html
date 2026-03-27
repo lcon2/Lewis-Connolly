@@ -100,7 +100,7 @@
                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base">
                             <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover">
                         </span>
-                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.ai_summary | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title | truncate: 45 }}</a>
+                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.description | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title | truncate: 45 }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -144,15 +144,15 @@
 
         var allPosts = [
           {% for post in site.posts %}
-          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }}, summary: {{ post.ai_summary | jsonify }}, dateFormatted: {{ post.date | date: '%d/%m/%Y' | jsonify }} }{% if forloop.last == false %},{% endif %}
+          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }}, summary: {{ post.description | jsonify }}, dateFormatted: {{ post.date | date: '%d/%m/%Y' | jsonify }} }{% if forloop.last == false %},{% endif %}
           {% endfor %}
         ];
         {% for page in site.pages %}
-        {% if page.ai_summary and page.url %}
+        {% if page.description and page.url %}
         allPosts.push({
           title: {{ page.title | default: page.url | jsonify }},
           url: {{ page.url | relative_url | jsonify }},
-          summary: {{ page.ai_summary | jsonify }}{% if page.date %},
+          summary: {{ page.description | jsonify }}{% if page.date %},
           dateFormatted: {{ page.date | date: '%d/%m/%Y' | jsonify }}{% endif %}
         });
         {% endif %}
