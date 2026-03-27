@@ -21,10 +21,9 @@ description: Drawing the threads together into a coherent way of life.
 <section class="studies-section">
     <div class="studies-section-card">
         <h2>Introduction</h2>
-        <p>Across this course we have moved through diagnosis, archetype, inward work, evolving faith, wonder, and social ethics. We have refused quick closure at each stage, partly because life does not offer it, and partly because premature synthesis usually protects us from transformation rather than enabling it.</p>
-        <p>This final session has one primary task. It offers a provisional coherence: not a system that resolves every tension, but an orientation robust enough to inhabit modern life without collapsing into cynicism, dogma, or drift. We gather the threads so they can be lived, revised, and tested.</p>
-        <p>Provisional coherence is not weakness. It is fidelity to reality when reality resists final packaging. We can still make strong commitments, speak with conviction, and risk action. But we do so knowing that understanding is historical, partial, and always vulnerable to correction by experience, by others, and by what we have not yet suffered enough to see.</p>
-        <p>What this session deliberately does not do is provide a final doctrine, a guaranteed method, or a triumphant ending. Any synthesis worthy of the disenchanted age must remain open. It must include uncertainty as a structural feature, not a temporary defect. The point is not completion. The point is faithful orientation under conditions that remain unstable.</p>
+        <p>A coherent life in late modernity cannot be built from one register alone. Myth without discipline becomes fantasy. Interiority without responsibility becomes refuge. Ethics without inward work becomes theater. Technical fluency without symbolic depth becomes control without wisdom. The task is to hold these tensions long enough for an inhabitable form to emerge.</p>
+        <p>What emerges is not final doctrine. It is provisional coherence: an orientation sturdy enough to live by and humble enough to revise. This is not weakness. It is fidelity to reality when reality refuses final packaging. Conviction remains possible, but it is joined to corrigibility.</p>
+        <p>So the aim here is not closure in the triumphant sense. The aim is a way of standing: less divided, less performative, more answerable, and more capable of remaining faithful under unstable conditions.</p>
     </div>
 </section>
 
@@ -81,6 +80,7 @@ description: Drawing the threads together into a coherent way of life.
         <h2>A Quiet Closing</h2>
         <p>No final formula can carry the full burden of a human life. What we can carry is orientation: stay near depth, remain answerable to others, commit without idolizing certainty, protect attention, welcome correction, and keep faith with what proves life-giving over time.</p>
         <p>If this course has done anything worthwhile, perhaps it has not solved the meaning crisis so much as clarified its terrain and reintroduced practices of seriousness. We began with drift. We end with a more difficult hope: not that confusion disappears, but that one can live faithfully within it, and even be changed by it.</p>
+        <p>Such hope is quieter than optimism. It does not deny fracture, and it does not promise rescue from ambiguity. It asks for endurance, attention, and a kind of fidelity that can survive disillusionment without collapsing into contempt.</p>
         <p>The work ahead is not dramatic. It is made of repeated gestures: listening, choosing, returning, apologizing, revising, and beginning again. It is made of communities imperfectly practicing what they proclaim. It is made of persons who refuse both cynicism and innocence.</p>
         <p>So this is not an ending that closes. It is an ending that hands life back to you, perhaps with slightly better questions, and with a stronger sense that questions themselves can be formative when carried honestly. The world may still feel disenchanted. But perhaps not entirely mute.</p>
     </div>

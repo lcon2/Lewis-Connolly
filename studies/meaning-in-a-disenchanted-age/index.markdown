@@ -3,7 +3,7 @@ layout: studies
 title: "Meaning in a Disenchanted Age: Myth, Mind, and Spirituality in the 21st Century"
 permalink: /studies/meaning-in-a-disenchanted-age/
 body_class: studies-course
-description: "A guided path through modern meaning-making, blending myth, psychology, and spiritual imagination."
+description: "A seven-session essay cycle on meaning, myth, interior life, and spiritual seriousness in modernity."
 og_image: /assets/images/Course.png
 ---
 
@@ -11,7 +11,7 @@ og_image: /assets/images/Course.png
     <div class="studies-hero-text">
         <p class="studies-kicker">Course</p>
         <h1>Meaning in a Disenchanted Age: Myth, Mind, and Spirituality in the 21st Century</h1>
-        <p class="studies-intro">A guided path through modern meaning-making, blending myth, psychology, and spiritual imagination. By the end, you will have a practical framework for living with more depth, wonder, and moral clarity.</p>
+        <p class="studies-intro">A seven-session course on myth, psyche, faith, wonder, and moral life in a disenchanted age. It does not offer a quick system. It offers orientation, pressure, and a deeper way of seeing.</p>
         <div class="studies-cta-group">
             <a class="btn btn-primary" href="#syllabus">Start the course</a>
             <a class="btn btn-secondary" href="{{ '/assets/files/meaning-in-a-disenchanted-age-syllabus.pdf' | relative_url }}">Download the syllabus PDF</a>
@@ -54,20 +54,20 @@ og_image: /assets/images/Course.png
             <ul class="studies-list">
                 <li>People navigating a modern meaning crisis.</li>
                 <li>Spiritually curious readers who want depth without dogma.</li>
-                <li>Jung, myth, and archetype enthusiasts.</li>
-                <li>Reflective readers craving a slower, wiser pace.</li>
-                <li>Small group leaders looking for a thoughtful structure.</li>
+                <li>Readers drawn to Jung, myth, and symbolic life.</li>
+                <li>Reflective readers who prefer depth to quick answers.</li>
+                <li>Small groups seeking serious shared conversation.</li>
             </ul>
         </div>
         <div class="studies-section-card">
             <h2>What You'll Explore</h2>
             <ul class="studies-list">
                 <li>Myth and archetype as maps for inner life.</li>
-                <li>Practical inner work and the journey to the self.</li>
+                <li>Inner work and the journey toward a more integrated self.</li>
                 <li>Evolving faith in a plural, postmodern world.</li>
                 <li>Wonder, beauty, and the recovery of awe.</li>
                 <li>Ethics, community, and the shared good.</li>
-                <li>Technology and the search for a future synthesis.</li>
+                <li>Technology, attention, and the search for a faithful synthesis.</li>
             </ul>
         </div>
     </div>
@@ -139,7 +139,7 @@ og_image: /assets/images/Course.png
     <h2>How to Take It</h2>
     <div class="studies-two-col">
         <div class="studies-section-card">
-            <p>Move through the sessions in order. One a week gives you time to reflect, but you can also binge if you prefer. Bring a notebook, and expect optional reflection questions to appear in each session soon.</p>
+            <p>Move through the sessions in order. A weekly pace allows the writing to settle, but you can also read them in a shorter run if the thread is alive for you. A notebook helps, though silence and attention matter more than note-taking.</p>
         </div>
         <div class="studies-section-card studies-donation">
             <p>This course is free. If it helped, you can support the work.</p>
@@ -166,7 +166,7 @@ og_image: /assets/images/Course.png
     </details>
     <details>
         <summary>Will there be PDFs?</summary>
-        <p>Yes, PDF summaries and reflection prompts will be added over time.</p>
+        <p>Yes. Each session includes a companion PDF for offline reading.</p>
     </details>
     <details>
         <summary>Can I share it?</summary>
