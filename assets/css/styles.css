@@ -1898,6 +1898,7 @@ footer {
         position: fixed;
         inset: 0;
         z-index: 1200;
+        overflow-x: hidden;
     }
 
     .home .home-mobile-menu-overlay[hidden] {
@@ -1916,8 +1917,10 @@ footer {
         position: absolute;
         z-index: 1;
         top: calc(env(safe-area-inset-top, 0px) + 68px);
-        right: 12px;
-        width: min(248px, calc(100vw - 24px));
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(300px, calc(100% - 24px));
+        max-width: calc(100% - 24px);
         padding: 8px;
         border-radius: 15px;
         border: 1px solid rgba(154, 131, 106, 0.62);
@@ -1939,7 +1942,7 @@ footer {
     .home .home-mobile-menu-overlay__list a {
         display: inline-flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 8px;
         width: 100%;
         box-sizing: border-box;
@@ -1964,8 +1967,8 @@ footer {
     }
 
     .home .home-mobile-menu-overlay__beer-icon {
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
         object-fit: contain;
         flex-shrink: 0;
     }
@@ -1977,6 +1980,18 @@ footer {
     .content-grid {
         grid-template-columns: 1fr; /* Single-column layout */
         padding: 0 10px;
+    }
+
+    .home .content-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        gap: 12px;
+    }
+
+    .home .content-section {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
 
     .home .start-here {
