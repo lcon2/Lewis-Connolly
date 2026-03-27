@@ -1,0 +1,21 @@
+{% if page.read_next and page.read_next.size > 0 %}
+<section class="post-read-next" aria-label="Read next essays">
+    <div class="post-read-next__inner">
+        <h3 class="post-read-next__title">Read next</h3>
+        <p class="post-read-next__intro">Essays nearby in mood, theme, or concern.</p>
+        <ol class="post-read-next__list">
+            {% for item in page.read_next limit: 3 %}
+            <li class="post-read-next__item">
+                <a class="post-read-next__link" href="{{ item.url | relative_url }}">
+                    <span class="post-read-next__number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                    <span class="post-read-next__content">
+                        <span class="post-read-next__item-title">{{ item.title }}</span>
+                        <span class="post-read-next__item-description">{{ item.description }}</span>
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+{% endif %}

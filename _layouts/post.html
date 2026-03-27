@@ -37,6 +37,7 @@
             </p>
             <div>{{ content }}</div>
         </article>
+        {% include read-next.html %}
         {% assign share_u = page.url | absolute_url | uri_escape %}
         {% assign share_t = page.title | uri_escape %}
         <nav class="post-share" aria-label="Share and subscribe">
