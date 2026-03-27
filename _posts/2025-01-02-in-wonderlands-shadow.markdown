@@ -11,6 +11,16 @@ categories:
 og_image: /assets/images/Alicepic.png
 description: "I write through Thomas Ligotti's 'Alice's Last Adventure' and its shadowy dialogue with Carroll, Nabokov, and trauma. The essay circles taste, voyeurism, and the intimacy of prose, then descends into a chilling reading of Alice's story as a survivor's broken wonderland. It is less about scandal than about how abuse distorts memory, narrative, and selfhood."
 tagline: "I write through Thomas Ligotti's 'Alice's Last Adventure' and its shadowy dialogue with Carroll, Nabokov."
+read_next:
+  - title: "A Taste of Deeper Things"
+    url: "/2024/12/27/A-Taste-of-Deeper-Things/"
+    tagline: "Through four works of art, this essay develops a theory of taste as inward recognition."
+  - title: "The Scythe of Saturn"
+    url: "/2017/08/20/the-scythe-of-saturn/"
+    tagline: "A contemplative reflection on Tarkovsky's inward world, where memory, family, and metaphysical longing fold."
+  - title: "The Diachronic and the Episodic"
+    url: "/2025/04/22/the-diachronic-and-the-episodic/"
+    tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
 ---
 <div class="post">
     <audio class="audio-player" controls>

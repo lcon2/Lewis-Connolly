@@ -10,6 +10,16 @@ categories:
   - Meaning
 description: "Active imagination, for Jung, is a waking encounter with the unconscious. Rather than merely analysing dreams, we stay with an image or inner figure, let it develop, and respond through thought, writing, or creative expression."
 tagline: "A clear entry point into Jung’s method of meeting the unconscious in waking life."
+read_next:
+  - title: "The Shapes Beneath Thought"
+    url: "/2026/03/24/the-shapes-beneath-thought/"
+    tagline: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility."
+  - title: "Lynch, Jung, and Art Alchemy"
+    url: "/2025/01/30/Lynch-Jung-and-Art-Alchemy/"
+    tagline: "On higher art, intuition, and the deeper logic beneath image."
+  - title: "The Diachronic and the Episodic"
+    url: "/2025/04/22/the-diachronic-and-the-episodic/"
+    tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
 og_image: /assets/images/reflectiveman.png
 og_image_width: 1536
 og_image_height: 1024

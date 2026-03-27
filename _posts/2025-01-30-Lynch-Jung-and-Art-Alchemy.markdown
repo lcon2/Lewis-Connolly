@@ -11,6 +11,16 @@ categories:
 og_image: /assets/images/paintinggod.png
 description: "David Lynch's death turns me toward abstraction, intuition, and the dreamlike logic of his work. I trace parallels with meditation and Jung's idea of higher art emerging from the collective unconscious, and extend the thought to AI's self-organizing patterns. Twin Peaks becomes a case study in archetype and individuation, where the shadow must be faced."
 tagline: "On higher art, intuition, and the deeper logic beneath image."
+read_next:
+  - title: "The Shapes Beneath Thought"
+    url: "/2026/03/24/the-shapes-beneath-thought/"
+    tagline: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility."
+  - title: "A Taste of Deeper Things"
+    url: "/2024/12/27/A-Taste-of-Deeper-Things/"
+    tagline: "Through four works of art, this essay develops a theory of taste as inward recognition."
+  - title: "A Guide to Active Imagination"
+    url: "/2021/12/09/a-guide-to-active-imagination/"
+    tagline: "A clear entry point into Jung’s method of meeting the unconscious in waking life."
 ---
 <div class="post">
     <audio class="audio-player" controls>

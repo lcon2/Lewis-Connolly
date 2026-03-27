@@ -10,6 +10,16 @@ categories:
   - Philosophy
 description: "I describe alchemy as the ancient art of transformation and then turn it inward. The soul is refined the way base metal is refined: through heat, loss, and slow change. Our dark nights are part of the process; they burn away dross and reveal something precious. The spiritual life is an alchemical work, carried out in suffering and grace."
 tagline: "I describe alchemy as the ancient art of transformation and then turn it inward."
+read_next:
+  - title: "The Green Snake and the Beautiful Lily"
+    url: "/2019/06/04/the-green-snake-and-the-beautiful-lily/"
+    tagline: "Returning to the world of Theosophy and Rudolf Steiner, this essay explores esoteric education, myth."
+  - title: "Western Esotericism's Lineage"
+    url: "/2019/04/08/western-esotericism-lineage/"
+    tagline: "A companion essay on Western esotericism that traces its lineage through philosophical, religious, and occult."
+  - title: "Lynch, Jung, and Art Alchemy"
+    url: "/2025/01/30/Lynch-Jung-and-Art-Alchemy/"
+    tagline: "On higher art, intuition, and the deeper logic beneath image."
 ---
 ### Part 1
 

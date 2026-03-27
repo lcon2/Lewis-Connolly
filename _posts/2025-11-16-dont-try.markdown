@@ -11,6 +11,16 @@ categories:
 og_image: /assets/images/donttry.png
 description: "A late-night note on impulse and exhaustion: the writing comes when it comes, not when I will it. I am tired of the religious project, tired of striving, and I want my daughters to find their passion moment by moment. The mantra is simple and Bukowski-ish: do not try, breathe, and let life arise."
 tagline: "A late-night note on impulse and exhaustion: the writing comes when it comes, not."
+read_next:
+  - title: "The Diachronic and the Episodic"
+    url: "/2025/04/22/the-diachronic-and-the-episodic/"
+    tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
+  - title: "A Taste of Deeper Things"
+    url: "/2024/12/27/A-Taste-of-Deeper-Things/"
+    tagline: "Through four works of art, this essay develops a theory of taste as inward recognition."
+  - title: "Frankl and the Horizon of Meaning"
+    url: "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/"
+    tagline: "I admit my discomfort with Man's Search for Meaning, especially the way it can slide."
 ---
 <img src="{{ '/assets/images/donttry.png' | relative_url }}" alt="donttry" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

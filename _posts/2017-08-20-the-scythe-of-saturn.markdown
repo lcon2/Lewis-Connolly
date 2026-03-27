@@ -10,6 +10,16 @@ categories:
   - Narrative
 description: "A contemplative reflection on Tarkovsky's inward world, where memory, family, and metaphysical longing fold into one another. The essay lingers over uncertainty, impracticality, and the burden of being human, suggesting that art can disclose a truer register of life precisely where ordinary language fails to make us whole."
 tagline: "A contemplative reflection on Tarkovsky's inward world, where memory, family, and metaphysical longing fold."
+read_next:
+  - title: "A Taste of Deeper Things"
+    url: "/2024/12/27/A-Taste-of-Deeper-Things/"
+    tagline: "Through four works of art, this essay develops a theory of taste as inward recognition."
+  - title: "In Wonderland’s Shadow"
+    url: "/2025/01/02/in-wonderlands-shadow/"
+    tagline: "I write through Thomas Ligotti's 'Alice's Last Adventure' and its shadowy dialogue with Carroll, Nabokov."
+  - title: "The Diachronic and the Episodic"
+    url: "/2025/04/22/the-diachronic-and-the-episodic/"
+    tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
 ---
 “Unfortunately, I am a completely impractical person, caught up in endless trains of thought. All of us are fantasists, ill-equipped for life, the children as much as myself. It seems to me sometimes that we never get used to being on this earth and life is just one great, ongoing, incomprehensible blunder.” Words from the writer W. G. Sebald, in his most notable book *The Rings of Saturn*. When you hear that title, *The Rings of Saturn*, one might imagine we were about to start talking about a science fiction book; it brings to mind *Star Trek*, and the USS Enterprise whizzing past (in the opening credits) the rings of a Saturn-like planet. But rather, the title has a more mythological association: the Romans deified the planets of the cosmos, they understood them to be representations of divine forces—Mars the God of War, Mercury the God of commerce and financial gain, and Jupiter as Father Time, usually depicted as an elderly bearded man, dressed in a robe, and carrying a scythe and an hourglass. A scythe with which he will cut you down when your time is at hand. In one of the author’s ponderings, he likens the earth’s slow turn to darkness to Saturn’s scythe. He says, “The shadow of the night is drawn like a black veil across the earth, and since almost all creatures, from one meridian to the next, lie down after the sun has set… one might, in following the setting sun, see on our globe nothing but prone bodies, row upon row, as if leveled by the scythe of Saturn—an endless graveyard for a humanity struck by falling sickness.”
 

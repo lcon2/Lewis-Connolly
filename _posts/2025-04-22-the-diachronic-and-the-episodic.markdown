@@ -11,6 +11,16 @@ categories:
 og_image: /assets/images/Chess.png
 description: "Using Galen Strawson's diachronic/episodic distinction, I test my own self-conception: strategic, future-oriented, yet pulled toward non-dual insight. I sketch three layers of 'I'--persona, interior operator, and the witnessing screen--and suggest the more we chase a fixed self, the more it dissolves into awareness."
 tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
+read_next:
+  - title: "Bergson & Jung - A Consideration of Proustian Temporality"
+    url: "/proustian-temporality/"
+    tagline: "An MA dissertation on Proustian temporality through Bergson, Jung, memory, and synchronicity."
+  - title: "A Guide to Active Imagination"
+    url: "/2021/12/09/a-guide-to-active-imagination/"
+    tagline: "A clear entry point into Jung’s method of meeting the unconscious in waking life."
+  - title: "The Shapes Beneath Thought"
+    url: "/2026/03/24/the-shapes-beneath-thought/"
+    tagline: "This essay argues that Jung’s archetypes are better understood as deep structures of intelligibility."
 ---
 <img src="{{ '/assets/images/Chess.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 

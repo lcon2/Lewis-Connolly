@@ -11,6 +11,16 @@ categories:
 og_image: /assets/images/pantheon.png
 description: "A reflective inquiry into Rudolf Steiner's afterlives in a technological age, this essay considers whether transhumanist ambitions echo neo-Anthroposophical longings. It explores education, spirit, embodiment, and progress narratives, asking what kind of human future is imagined when mystical inheritance and machine-enhancement begin to speak a surprisingly similar language."
 tagline: "A reflective inquiry into Rudolf Steiner's afterlives in a technological age, this essay considers whether."
+read_next:
+  - title: "Western Esotericism's Lineage"
+    url: "/2019/04/08/western-esotericism-lineage/"
+    tagline: "A companion essay on Western esotericism that traces its lineage through philosophical, religious, and occult."
+  - title: "The Green Snake and the Beautiful Lily"
+    url: "/2019/06/04/the-green-snake-and-the-beautiful-lily/"
+    tagline: "Returning to the world of Theosophy and Rudolf Steiner, this essay explores esoteric education, myth."
+  - title: "Wage Labor and the Meaning Crisis"
+    url: "/2026/01/22/wage-labor-and-the-meaning-crisis/"
+    tagline: "As AGI approaches, knowledge work loses its status as the engine of identity and time-structure."
 ---
 <div class="post">
     <audio class="audio-player" controls>
