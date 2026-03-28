@@ -177,5 +177,4 @@ og_image: /assets/images/Course.png
 <nav class="studies-footer-nav">
     <a class="btn btn-secondary" href="{{ '/studies/' | relative_url }}">Back to Studies</a>
     <a class="btn btn-primary" href="{{ '/studies/meaning-in-a-disenchanted-age/session-1/' | relative_url }}">Go to Session 1</a>
-    <a class="btn btn-secondary" href="{{ '/archive/' | relative_url }}">Archive</a>
 </nav>

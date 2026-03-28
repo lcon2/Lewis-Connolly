@@ -23,7 +23,7 @@ description: Drawing the threads together into a coherent way of life.
         <h2>Introduction</h2>
         <p>A coherent life in late modernity cannot be built from one register alone. Myth without discipline becomes fantasy. Interiority without responsibility becomes refuge. Ethics without inward work becomes theater. Technical fluency without symbolic depth becomes control without wisdom. The task is to hold these tensions long enough for an inhabitable form to emerge.</p>
         <p>What emerges is not final doctrine. It is provisional coherence: an orientation sturdy enough to live by and humble enough to revise. This is not weakness. It is fidelity to reality when reality refuses final packaging. Conviction remains possible, but it is joined to corrigibility.</p>
-        <p>So the aim here is not closure in the triumphant sense. The aim is a way of standing: less divided, less performative, more answerable, and more capable of remaining faithful under unstable conditions.</p>
+        <p>The concern is not closure in the triumphant sense. It is a way of standing: less divided, less performative, more answerable, and more capable of remaining faithful under unstable conditions.</p>
     </div>
 </section>
 

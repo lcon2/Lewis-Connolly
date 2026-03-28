@@ -23,7 +23,7 @@ description: How personal meaning becomes shared responsibility.
         <h2>Introduction</h2>
         <p>Depth that never leaves the interior eventually hardens into refuge. The inward life matters, but it is tested in relation: in speech, in conflict, in institutions, in public consequence. At some point meaning must cross the threshold into shared life, where motives are mixed, outcomes are unclear, and no one remains morally innocent for long.</p>
         <p>This passage is uncomfortable because it strips fantasy from both sides. It strips the fantasy that private peace is enough, and the fantasy that public urgency alone is proof of moral seriousness. Integration is slower than both. It requires inward honesty and outward accountability at once.</p>
-        <p>So the emphasis here is friction rather than final scheme: how responsibility is formed under pluralism, uncertainty, and real stakes. Depth before program, honesty before tidy consensus.</p>
+        <p>The concern here is friction rather than final scheme: how responsibility is formed under pluralism, uncertainty, and real stakes. Depth before program, honesty before tidy consensus.</p>
     </div>
 </section>
 
