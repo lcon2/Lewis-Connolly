@@ -10,7 +10,7 @@ categories:
   - Identity
 og_image: /assets/images/pill.png
 description: "A month after an ADHD diagnosis, I describe inattentive-type attention and the shift brought by lisdexamfetamine: quieter interior noise, steadier motivation, a new baseline that raises questions about the “real” self. I follow threads on identity, consciousness, and whether medication subtly changes the felt quality of taste and enjoyment—without reducing pleasures to the noble and the base."
-tagline: "On ADHD, Vyvanse, identity, and the subtle texture of enjoyment after medication."
+tagline: "How Vyvanse has changed my mind, my attention, and my taste."
 read_next:
   - title: "Curator of Being"
     description: "I describe a kind of person who does not cling to conclusions but inhabits worldviews."
@@ -29,23 +29,15 @@ A month ago I was officially diagnosed with ADHD and prescribed lisdexamfetamine
 
 But I also wanted to see what would happen if I addressed it more directly. I was curious to try a pharmaceutical approach and to find out what, if anything, medication would change. It has changed a lot.
 
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
-
 So let me begin by explaining what my ADHD feels like. Broadly speaking, ADHD tends to present in either a more hyperactive or a more inattentive form. Mine is inattentive, which for me comes down to uneven control over attention. I can focus intensely on something for long stretches if it really grabs my interest, but when it doesn’t, starting, organizing, and following through become inherently difficult. I do not really have hobbies so much as month-long obsessions, during which I read everything, understand everything, and then abruptly lose interest to the point where I can barely bring myself to think about it. There is a frustrating gap between what I know I should do and my ability to do it consistently.
 
 That is the main thing, but there are a few other related elements. I have a tendency to get lost in my own head and, now that I have experienced Vyvanse, I can describe the inverse more clearly. My subjective world has a pressured, loud, and jaggy quality to it; there is no interior calm unless I force it. Part of this also seems to involve a weak sense of time passing, so that a slight digression in thought can easily result in forty-five minutes disappearing.
 
 <div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
 <div style="margin-bottom: 40px;"></div>
 
 So I went through the ADHD evaluation process: questions about my childhood, my education, my experience, my medical history, and so on. I did the online cognitive tests designed to measure attention, working memory, and response consistency. Then came the agonizing wait, during which I second-guessed everything I had thought and wondered whether I was barking up the wrong tree. And then finally came the answer: I did indeed have ADHD. The various pharmaceutical options were discussed and I was prescribed Vyvanse; I picked it up that day, and started it the next morning.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
 
 Vyvanse is a long-acting medication. You take one pill in the morning, you don’t feel anything for about an hour and a half, and then it comes on. What strikes me, reading other people’s accounts of the drug, is just how varied their experiences are. I suppose whenever you’re talking about psychoactive drugs, drugs that change your mental state, you are by definition in the realm of the subjective. So I am underlining that point to make it clear that I am now talking about my own subjective experience on Vyvanse.
 
@@ -63,16 +55,8 @@ It raises certain philosophical questions in my mind - questions about conscious
 
 It affords a different texture to my inner life, one that I experience as functionally more desirable, but I could still imagine the possibility of further refinement, and indeed, as I have written about before, I think traversing a landscape of such refinements is in our future.
 
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
-
 Closely linked to such questions of identity is the question of taste. The very difficult distinction between what you like and why you like it. Or: do you find it fun, versus why is it fun? My intuition tells me that what I like and what I find fun has been subtly shifted by Vyvanse, although I can’t quite articulate that shift. I think perhaps superficial fun is rendered more hollow, but I am talking about something very subtle. Do more exacting forms of satisfaction become easier to access? It seems like that would be true. Again, this is a subjective textural shift, a textural shift in appetite.
 
 It also occurs to me that there is a moralizing temptation here, which I dislike. I do not want to imply that the medication has simply sorted pleasures into the noble and the base. What interests me is something subtler: that a change in mental state may alter the felt quality of enjoyment itself, making some pleasures seem flatter and others more available.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
 
 Anyway, as I said I am only a month in, so these are still very much early days.
