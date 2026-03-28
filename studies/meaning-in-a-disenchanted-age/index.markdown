@@ -14,7 +14,7 @@ og_image: /assets/images/Course.png
         <p class="studies-intro">A seven-session course on myth, psyche, faith, wonder, and moral life in a disenchanted age. It does not offer a quick system. It offers orientation, pressure, and a deeper way of seeing.</p>
         <div class="studies-cta-group">
             <a class="btn btn-primary" href="#syllabus">Start the course</a>
-            <a class="btn btn-secondary" href="{{ '/assets/files/meaning-in-a-disenchanted-age-syllabus.pdf' | relative_url }}">Download the syllabus PDF</a>
+            <a class="btn btn-secondary" href="{{ '/assets/files/meaning-in-a-disenchanted-age-syllabus.pdf' | relative_url }}" download>Download the syllabus PDF</a>
             <a class="btn btn-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Optional: buy me a beer</a>
         </div>
     </div>
