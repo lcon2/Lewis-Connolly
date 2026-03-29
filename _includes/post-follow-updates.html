@@ -1,9 +1,9 @@
 {% assign nl_action = site.newsletter_form_action | default: "" | strip %}
 <aside class="post-follow-panel" aria-labelledby="post-follow-heading">
     <div class="post-follow-panel__inner">
-        <p class="post-follow-label" aria-hidden="true">Follow updates</p>
+        <div class="post-follow-eyebrow-spacer" aria-hidden="true"></div>
         <h3 class="post-follow-heading" id="post-follow-heading">Follow updates</h3>
-        <p class="post-follow-body">Get the odd email when a few essays have built up.</p>
+        <p class="post-follow-body">Occasional emails when new essays are published.</p>
         <form
             class="post-follow-form"
             action="{% if nl_action != '' %}{{ nl_action }}{% else %}#{% endif %}"
