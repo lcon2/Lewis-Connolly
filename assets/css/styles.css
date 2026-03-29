@@ -2081,6 +2081,44 @@ footer {
     font-size: 1.15em; /* Increased font size for better readability */
 }
 
+/* Many-me portrait (About): two-layer crossfade, same footprint as former me2.png hero */
+.about .manyme-portrait {
+    display: block;
+    margin: 20px auto -120px;
+    max-width: 480px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.about .manyme-portrait.manyme-portrait--ready {
+    opacity: 1;
+}
+
+.about .manyme-portrait__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1671 / 2135;
+    overflow: hidden;
+}
+
+.about .manyme-portrait__layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.about .manyme-portrait__layer.is-visible {
+    opacity: 1;
+    z-index: 2;
+}
+
 .about main a:hover,
 .contact main a:hover {
     color: #d1ae7a; /* Turns orange on hover */
