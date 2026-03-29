@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include seo.html %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body class="post has-mobile-nav">
@@ -37,7 +40,10 @@
             </p>
             <div>{{ content }}</div>
         </article>
-        {% include read-next.html %}
+        <div class="post-lower-grid">
+            {% include read-next.html %}
+            {% include post-follow-updates.html %}
+        </div>
         {% assign share_u = page.url | absolute_url | uri_escape %}
         {% assign share_t = page.title | uri_escape %}
         <nav class="post-share" aria-label="Share and subscribe">

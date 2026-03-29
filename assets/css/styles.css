@@ -9,6 +9,18 @@
     display: none !important;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Body Styles */
 body {
     font-family: 'EBGaramond', serif;
@@ -1732,6 +1744,174 @@ article picture {
     line-height: 1.45;
 }
 
+/* Post: read next + follow updates (two-column lower section) */
+.post-lower-grid {
+    max-width: 1100px;
+    margin: 2.2rem auto 0;
+    padding: 0 clamp(12px, 4vw, 36px);
+    display: grid;
+    grid-template-columns: 1.85fr 1fr;
+    gap: clamp(24px, 3vw, 32px);
+    align-items: start;
+}
+
+.post-lower-grid:not(:has(.post-read-next-panel)) {
+    grid-template-columns: minmax(0, 400px);
+    justify-content: center;
+}
+
+.post-read-next-panel .post-read-next {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-follow-panel {
+    margin: 0;
+    min-width: 0;
+}
+
+.post-follow-panel__inner {
+    padding: 20px 20px 18px;
+    border-radius: 14px;
+    background: rgba(22, 20, 18, 0.82);
+    border: 1px solid rgba(255, 190, 130, 0.12);
+    box-shadow:
+        0 0 12px rgba(255, 145, 75, 0.08),
+        0 12px 28px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    background-image: linear-gradient(165deg, rgba(255, 200, 150, 0.04) 0%, rgba(0, 0, 0, 0) 42%);
+}
+
+.post-follow-label {
+    margin: 0 0 8px;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(232, 224, 214, 0.72);
+    text-align: center;
+}
+
+.post-follow-heading {
+    margin: 0 0 10px;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #f3ece3;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.post-follow-body {
+    margin: 0 0 16px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: #b0a69a;
+    text-align: center;
+}
+
+.post-follow-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 14px;
+}
+
+.post-follow-field {
+    display: block;
+    margin: 0;
+}
+
+.post-follow-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-family: 'EBGaramond', serif;
+    font-size: 1rem;
+    color: #ebe6df;
+    background: rgba(10, 10, 10, 0.65);
+    border: 1px solid rgba(255, 200, 160, 0.14);
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-follow-input::placeholder {
+    color: rgba(200, 190, 178, 0.45);
+}
+
+.post-follow-input:hover {
+    border-color: rgba(209, 174, 122, 0.28);
+}
+
+.post-follow-input:focus {
+    outline: none;
+    border-color: rgba(209, 174, 122, 0.5);
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.35),
+        0 0 0 2px rgba(209, 174, 122, 0.12);
+}
+
+.post-follow-button {
+    align-self: center;
+    padding: 8px 18px;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #1a1512;
+    background: linear-gradient(180deg, #d4b896 0%, #b8956a 100%);
+    border: 1px solid rgba(255, 220, 180, 0.35);
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.22) inset,
+        0 6px 14px rgba(0, 0, 0, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.post-follow-button:hover,
+.post-follow-button:focus-visible {
+    filter: brightness(1.05);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.28) inset,
+        0 0 16px rgba(209, 174, 122, 0.35),
+        0 8px 18px rgba(0, 0, 0, 0.32);
+}
+
+.post-follow-button:focus-visible {
+    outline: 1px solid rgba(245, 190, 120, 0.65);
+    outline-offset: 2px;
+}
+
+.post-follow-button:active {
+    transform: translateY(1px);
+}
+
+.post-follow-rss-wrap {
+    margin: 0;
+    text-align: center;
+}
+
+.post-follow-rss {
+    font-size: 0.88rem;
+    color: #9a8f82;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(154, 143, 130, 0.55);
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.post-follow-rss:hover,
+.post-follow-rss:focus-visible {
+    color: #d1ae7a;
+    border-bottom-color: #d1ae7a;
+}
+
 /* Post: share + RSS (above prev/next) */
 .post-share {
     display: flex;
@@ -2125,13 +2305,37 @@ footer {
         padding: 0 20px; /* Reduces padding for better readability on small screens */
     }
 
-    .post-read-next {
-        padding: 0 12px;
+    .post-lower-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(22px, 5vw, 28px);
         margin-top: 1.9rem;
+        padding: 0 12px;
+    }
+
+    .post-lower-grid:not(:has(.post-read-next-panel)) {
+        grid-template-columns: 1fr;
+        justify-content: stretch;
+    }
+
+    .post-read-next-panel {
+        order: 1;
+    }
+
+    .post-follow-panel {
+        order: 2;
+    }
+
+    .post-read-next {
+        padding: 0;
+        margin-top: 0;
     }
 
     .post-read-next__inner {
         padding: 20px 14px 10px;
+    }
+
+    .post-follow-panel__inner {
+        padding: 18px 16px 16px;
     }
 
     .post-read-next__title {

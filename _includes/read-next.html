@@ -68,6 +68,7 @@
 
 {% assign recommendations_markup = recommendations_markup | strip %}
 {% if recommendations_markup != "" %}
+<div class="post-read-next-panel">
 <section class="post-read-next" aria-label="Read next essays">
     <div class="post-read-next__inner">
         <h3 class="post-read-next__title">Read next</h3>
@@ -77,4 +78,5 @@
         </ol>
     </div>
 </section>
+</div>
 {% endif %}

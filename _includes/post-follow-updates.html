@@ -1,0 +1,31 @@
+{% assign nl_action = site.newsletter_form_action | default: "" | strip %}
+<aside class="post-follow-panel" aria-labelledby="post-follow-heading">
+    <div class="post-follow-panel__inner">
+        <p class="post-follow-label" aria-hidden="true">Follow updates</p>
+        <h3 class="post-follow-heading" id="post-follow-heading">Follow updates</h3>
+        <p class="post-follow-body">Get the odd email when a few essays have built up.</p>
+        <form
+            class="post-follow-form"
+            action="{% if nl_action != '' %}{{ nl_action }}{% else %}#{% endif %}"
+            method="post"
+            {% if nl_action == "" %}novalidate onsubmit="return false;"{% endif %}
+        >
+            <label class="post-follow-field">
+                <span class="visually-hidden">Email address</span>
+                <input
+                    class="post-follow-input"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="Email address"
+                    {% if nl_action != "" %}required{% endif %}
+                    inputmode="email"
+                >
+            </label>
+            <button class="post-follow-button" type="submit">Send</button>
+        </form>
+        <p class="post-follow-rss-wrap">
+            <a class="post-follow-rss" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
+        </p>
+    </div>
+</aside>

@@ -8,6 +8,10 @@ description: >-
 baseurl: ""  # Leave empty if your site is hosted at the root of your domain
 url: "https://lewisconnolly.com"  # Full URL of your site
 
+# Optional: POST endpoint for the article footer email field (e.g. Buttondown embed:
+# https://buttondown.email/api/emails/embed-subscribe/your-handle). Leave unset while experimenting; the form will not submit until configured.
+# newsletter_form_action: "https://buttondown.email/api/emails/embed-subscribe/your-handle"
+
 # Social media
 twitter_username: Adv_with_Lewis
 github_username: jekyll
