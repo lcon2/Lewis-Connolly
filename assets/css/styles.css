@@ -1744,15 +1744,16 @@ article picture {
     line-height: 1.45;
 }
 
-/* Post: read next + follow updates (two-column lower section) */
+/* Post: read next + follow updates (two-column lower section)
+   Grid max-width chosen so ~65% track fits the original 900px read-next column. */
 .post-lower-grid {
-    max-width: 1100px;
+    max-width: min(100%, 1386px);
     margin: 2.2rem auto 0;
     padding: 0 clamp(12px, 4vw, 36px);
     display: grid;
     grid-template-columns: 1.85fr 1fr;
     gap: clamp(24px, 3vw, 32px);
-    align-items: start;
+    align-items: stretch;
 }
 
 .post-lower-grid:not(:has(.post-read-next-panel)) {
@@ -1760,18 +1761,48 @@ article picture {
     justify-content: center;
 }
 
+.post-read-next-panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    align-self: stretch;
+}
+
 .post-read-next-panel .post-read-next {
-    max-width: none;
-    margin: 0;
-    padding: 0;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 36px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    box-sizing: border-box;
+}
+
+.post-read-next-panel .post-read-next__inner {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .post-follow-panel {
     margin: 0;
     min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
 }
 
 .post-follow-panel__inner {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
     padding: 20px 20px 18px;
     border-radius: 14px;
     background: rgba(22, 20, 18, 0.82);
@@ -1817,7 +1848,7 @@ article picture {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 0 0 14px;
+    margin: 0;
 }
 
 .post-follow-field {
@@ -1891,25 +1922,6 @@ article picture {
 
 .post-follow-button:active {
     transform: translateY(1px);
-}
-
-.post-follow-rss-wrap {
-    margin: 0;
-    text-align: center;
-}
-
-.post-follow-rss {
-    font-size: 0.88rem;
-    color: #9a8f82;
-    text-decoration: none;
-    border-bottom: 1px dotted rgba(154, 143, 130, 0.55);
-    transition: color 0.2s ease, border-bottom-color 0.2s ease;
-}
-
-.post-follow-rss:hover,
-.post-follow-rss:focus-visible {
-    color: #d1ae7a;
-    border-bottom-color: #d1ae7a;
 }
 
 /* Post: share + RSS (above prev/next) */
@@ -2319,6 +2331,10 @@ footer {
 
     .post-read-next-panel {
         order: 1;
+    }
+
+    .post-read-next-panel .post-read-next {
+        padding: 0 12px;
     }
 
     .post-follow-panel {
