@@ -1,24 +1,26 @@
 <div class="post-follow-card" id="post-follow-card" role="region" aria-labelledby="post-follow-title">
     <div class="post-follow-inner" id="post-follow-inner">
-        <h3 class="post-follow-title" id="post-follow-title">FOLLOW UPDATES</h3>
-        <p class="post-follow-copy">Occasional emails when new essays are published.</p>
+        <div class="post-follow-stack" id="post-follow-stack">
+            <h3 class="post-follow-title" id="post-follow-title">Follow updates</h3>
+            <p class="post-follow-copy">Occasional emails when new essays are published.</p>
 
-        <form id="subscribe-form" class="post-follow-form">
-            <input
-                type="email"
-                name="email"
-                class="post-follow-input"
-                placeholder="Email address"
-                required
-                autocomplete="email"
-                inputmode="email"
-                aria-label="Email address"
-            >
-            <button type="submit" class="post-follow-button">Subscribe</button>
-        </form>
+            <form id="subscribe-form" class="post-follow-form">
+                <input
+                    type="email"
+                    name="email"
+                    class="post-follow-input"
+                    placeholder="Email address"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    aria-label="Email address"
+                >
+                <button type="submit" class="post-follow-button">Subscribe</button>
+            </form>
 
-        <p class="post-follow-meta">No spam. Unsubscribe anytime.</p>
+            <p class="post-follow-meta">No spam. Unsubscribe anytime.</p>
+        </div>
+
+        <p id="subscribe-message" class="post-follow-message" hidden></p>
     </div>
-
-    <p id="subscribe-message" class="post-follow-message" hidden></p>
 </div>

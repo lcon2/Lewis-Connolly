@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("subscribe-form");
   const message = document.getElementById("subscribe-message");
   const card = document.getElementById("post-follow-card");
-  const inner = document.getElementById("post-follow-inner");
+  const stack = document.getElementById("post-follow-stack");
 
-  if (!form || !message || !card || !inner) return;
+  if (!form || !message || !card || !stack) return;
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error(data.error || "Something went wrong.");
       }
 
-      inner.style.display = "none";
+      stack.style.visibility = "hidden";
+      stack.style.pointerEvents = "none";
       message.textContent = "Thank you for subscribing.";
       message.hidden = false;
       card.classList.add("is-subscribed");
