@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("subscribe-form");
   const message = document.getElementById("subscribe-message");
+  const card = document.getElementById("post-follow-card");
+  const inner = document.getElementById("post-follow-inner");
 
-  if (!form || !message) return;
+  if (!form || !message || !card || !inner) return;
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const email = form.email.value.trim();
-
-    message.hidden = true;
-    message.textContent = "";
 
     try {
       const response = await fetch("https://lewis-updates.contact-b4a.workers.dev/subscribe", {
@@ -27,9 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error(data.error || "Something went wrong.");
       }
 
-      message.textContent = data.message || "Check your email to confirm your subscription.";
+      inner.style.display = "none";
+      message.textContent = "Thank you for subscribing.";
       message.hidden = false;
-      form.reset();
+      card.classList.add("is-subscribed");
     } catch (err) {
       message.textContent = err.message || "Something went wrong.";
       message.hidden = false;

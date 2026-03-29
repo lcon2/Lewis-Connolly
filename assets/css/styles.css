@@ -1797,13 +1797,13 @@ article picture {
     flex: 0 0 auto;
 }
 
-.post-follow-panel {
+.post-follow-card {
     margin: 0;
     min-width: 0;
     flex: 0 0 auto;
 }
 
-.post-follow-panel__inner {
+.post-follow-inner {
     position: relative;
     overflow: hidden;
     padding: 20px 20px 18px;
@@ -1823,6 +1823,29 @@ article picture {
     background-repeat: no-repeat;
 }
 
+.post-follow-card.is-subscribed {
+    padding: 22px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 190, 130, 0.14);
+    box-shadow:
+        0 0 12px rgba(255, 145, 75, 0.08),
+        0 12px 28px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+    background-color: rgba(12, 10, 8, 0.92);
+    background-image:
+        linear-gradient(180deg, rgba(10, 8, 6, 0.88) 0%, rgba(12, 10, 8, 0.8) 100%),
+        url("../images/home-hero-background-cropped-800.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.post-follow-card.is-subscribed .post-follow-message {
+    margin: 0;
+    padding: 0;
+    font-size: 1.05rem;
+    color: #e8e4dc;
+}
 
 .post-share-panel {
     flex: 1 1 auto;
@@ -1859,28 +1882,20 @@ article picture {
     justify-content: center;
 }
 
-/* Preserves vertical space where the removed uppercase eyebrow sat */
-.post-follow-eyebrow-spacer {
-    margin: 0 0 8px;
-    min-height: calc(0.68rem * 1.35);
-    width: 100%;
-    flex-shrink: 0;
-    pointer-events: none;
-}
-
-.post-follow-heading {
+.post-follow-title {
     margin: 0 0 10px;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
-    font-size: 1.15rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    color: #f3ece3;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(232, 224, 214, 0.9);
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.35;
     text-shadow: 0 1px 14px rgba(0, 0, 0, 0.65);
 }
 
-.post-follow-body {
+.post-follow-copy {
     margin: 0 0 16px;
     font-size: 0.98rem;
     line-height: 1.5;
@@ -1896,7 +1911,7 @@ article picture {
     margin: 0;
 }
 
-.post-follow-disclaimer {
+.post-follow-meta {
     margin: 10px 0 0;
     font-size: 0.82rem;
     line-height: 1.45;
@@ -1909,18 +1924,13 @@ article picture {
     margin: 10px 0 0;
     font-size: 0.9rem;
     line-height: 1.45;
-    color: #c5e6c8;
+    color: #e8c4c4;
     text-align: center;
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
 }
 
 .post-follow-message[hidden] {
     display: none !important;
-}
-
-.post-follow-field {
-    display: block;
-    margin: 0;
 }
 
 .post-follow-input {
@@ -1959,28 +1969,28 @@ article picture {
     min-width: 12rem;
     padding: 11px 32px;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
-    font-size: 0.74rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
     color: #1a1512;
-    background: linear-gradient(180deg, #d4b896 0%, #b8956a 100%);
-    border: 1px solid rgba(255, 220, 180, 0.38);
+    background-color: #c89a4a;
+    border: 1px solid rgba(255, 220, 180, 0.35);
     border-radius: 999px;
     cursor: pointer;
     box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.24) inset,
-        0 6px 16px rgba(0, 0, 0, 0.32);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        0 1px 0 rgba(255, 255, 255, 0.28) inset,
+        0 6px 16px rgba(0, 0, 0, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
 }
 
 .post-follow-button:hover,
 .post-follow-button:focus-visible {
-    filter: brightness(1.05);
+    background-color: #d4a85c;
+    filter: brightness(1.02);
     box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.28) inset,
-        0 0 16px rgba(209, 174, 122, 0.35),
-        0 8px 18px rgba(0, 0, 0, 0.32);
+        0 1px 0 rgba(255, 255, 255, 0.32) inset,
+        0 0 14px rgba(200, 154, 74, 0.45),
+        0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .post-follow-button:focus-visible {
@@ -2421,8 +2431,12 @@ footer {
         padding: 20px 14px 10px;
     }
 
-    .post-follow-panel__inner {
+    .post-follow-inner {
         padding: 18px 16px 16px;
+    }
+
+    .post-follow-card.is-subscribed {
+        padding: 18px 16px;
     }
 
     .post-share-panel {

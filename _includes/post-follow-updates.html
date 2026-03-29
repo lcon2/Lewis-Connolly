@@ -1,24 +1,24 @@
-<aside class="post-follow-panel" aria-labelledby="post-follow-heading">
-    <div class="post-follow-panel__inner">
-        <div class="post-follow-eyebrow-spacer" aria-hidden="true"></div>
-        <h3 class="post-follow-heading" id="post-follow-heading">Follow updates</h3>
-        <p class="post-follow-body">Occasional emails when new essays are published.</p>
+<div class="post-follow-card" id="post-follow-card" role="region" aria-labelledby="post-follow-title">
+    <div class="post-follow-inner" id="post-follow-inner">
+        <h3 class="post-follow-title" id="post-follow-title">FOLLOW UPDATES</h3>
+        <p class="post-follow-copy">Occasional emails when new essays are published.</p>
+
         <form id="subscribe-form" class="post-follow-form">
-            <label class="post-follow-field">
-                <span class="visually-hidden">Email address</span>
-                <input
-                    type="email"
-                    name="email"
-                    class="post-follow-input"
-                    placeholder="Email address"
-                    required
-                    autocomplete="email"
-                    inputmode="email"
-                >
-            </label>
-            <button type="submit" class="post-follow-button">SUBSCRIBE</button>
+            <input
+                type="email"
+                name="email"
+                class="post-follow-input"
+                placeholder="Email address"
+                required
+                autocomplete="email"
+                inputmode="email"
+                aria-label="Email address"
+            >
+            <button type="submit" class="post-follow-button">Subscribe</button>
         </form>
-        <p class="post-follow-disclaimer">No spam. Unsubscribe anytime.</p>
-        <p id="subscribe-message" class="post-follow-message" hidden></p>
+
+        <p class="post-follow-meta">No spam. Unsubscribe anytime.</p>
     </div>
-</aside>
+
+    <p id="subscribe-message" class="post-follow-message" hidden></p>
+</div>
