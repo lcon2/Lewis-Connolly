@@ -2,8 +2,8 @@
   const root = document.getElementById('manyme-portrait');
   if (!root) return;
 
-  const VISIBLE_MS = 1500;
-  const FADE_MS = 600;
+  const VISIBLE_MS = 2000;
+  const FADE_MS = 1000;
   const COUNT = 24;
 
   const layerA = root.querySelector('.manyme-portrait__layer--a');
@@ -95,7 +95,7 @@
   };
 
   const scheduleStep = () => {
-    timerId = window.setTimeout(transitionToNext, VISIBLE_MS);
+    window.setTimeout(transitionToNext, VISIBLE_MS);
   };
 
   const start = () => {

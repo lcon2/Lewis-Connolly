@@ -2081,11 +2081,11 @@ footer {
     font-size: 1.15em; /* Increased font size for better readability */
 }
 
-/* Many-me portrait (About): two-layer crossfade, same footprint as former me2.png hero */
+/* Many-me portrait (About): two-layer crossfade; above main text, ~20% smaller than original 480px max */
 .about .manyme-portrait {
     display: block;
-    margin: 20px auto -120px;
-    max-width: 480px;
+    margin: 20px auto 28px;
+    max-width: 384px;
     width: 100%;
     opacity: 0;
     transition: opacity 0.35s ease;
@@ -2110,7 +2110,7 @@ footer {
     object-fit: contain;
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 1s ease-in-out;
     pointer-events: none;
 }
 
