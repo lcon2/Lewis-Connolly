@@ -1804,16 +1804,25 @@ article picture {
 }
 
 .post-follow-panel__inner {
+    position: relative;
+    overflow: hidden;
     padding: 20px 20px 18px;
     border-radius: 14px;
-    background: rgba(22, 20, 18, 0.82);
-    border: 1px solid rgba(255, 190, 130, 0.12);
+    border: 1px solid rgba(255, 190, 130, 0.14);
     box-shadow:
         0 0 12px rgba(255, 145, 75, 0.08),
         0 12px 28px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.035);
-    background-image: linear-gradient(165deg, rgba(255, 200, 150, 0.04) 0%, rgba(0, 0, 0, 0) 42%);
+    background-color: rgba(12, 10, 8, 0.88);
+    background-image:
+        linear-gradient(180deg, rgba(10, 8, 6, 0.82) 0%, rgba(12, 10, 8, 0.72) 45%, rgba(8, 7, 6, 0.88) 100%),
+        linear-gradient(165deg, rgba(255, 200, 150, 0.06) 0%, rgba(0, 0, 0, 0) 48%),
+        url("../images/home-hero-background-cropped-800.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .post-share-panel {
     flex: 1 1 auto;
@@ -1868,21 +1877,45 @@ article picture {
     color: #f3ece3;
     text-align: center;
     line-height: 1.25;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.65);
 }
 
 .post-follow-body {
     margin: 0 0 16px;
     font-size: 0.98rem;
     line-height: 1.5;
-    color: #b0a69a;
+    color: #d8cfc4;
     text-align: center;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.65);
 }
 
 .post-follow-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin: 0;
+}
+
+.post-follow-disclaimer {
+    margin: 10px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: rgba(210, 200, 190, 0.88);
+    text-align: center;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
+}
+
+.post-follow-message {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #c5e6c8;
+    text-align: center;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+
+.post-follow-message[hidden] {
+    display: none !important;
 }
 
 .post-follow-field {
@@ -1923,20 +1956,21 @@ article picture {
 
 .post-follow-button {
     align-self: center;
-    padding: 8px 18px;
+    min-width: 12rem;
+    padding: 11px 32px;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #1a1512;
     background: linear-gradient(180deg, #d4b896 0%, #b8956a 100%);
-    border: 1px solid rgba(255, 220, 180, 0.35);
+    border: 1px solid rgba(255, 220, 180, 0.38);
     border-radius: 999px;
     cursor: pointer;
     box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.22) inset,
-        0 6px 14px rgba(0, 0, 0, 0.28);
+        0 1px 0 rgba(255, 255, 255, 0.24) inset,
+        0 6px 16px rgba(0, 0, 0, 0.32);
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 

@@ -1,28 +1,24 @@
-{% assign nl_action = site.newsletter_form_action | default: "" | strip %}
 <aside class="post-follow-panel" aria-labelledby="post-follow-heading">
     <div class="post-follow-panel__inner">
         <div class="post-follow-eyebrow-spacer" aria-hidden="true"></div>
         <h3 class="post-follow-heading" id="post-follow-heading">Follow updates</h3>
         <p class="post-follow-body">Occasional emails when new essays are published.</p>
-        <form
-            class="post-follow-form"
-            action="{% if nl_action != '' %}{{ nl_action }}{% else %}#{% endif %}"
-            method="post"
-            {% if nl_action == "" %}novalidate onsubmit="return false;"{% endif %}
-        >
+        <form id="subscribe-form" class="post-follow-form">
             <label class="post-follow-field">
                 <span class="visually-hidden">Email address</span>
                 <input
-                    class="post-follow-input"
                     type="email"
                     name="email"
-                    autocomplete="email"
+                    class="post-follow-input"
                     placeholder="Email address"
-                    {% if nl_action != "" %}required{% endif %}
+                    required
+                    autocomplete="email"
                     inputmode="email"
                 >
             </label>
-            <button class="post-follow-button" type="submit">Send</button>
+            <button type="submit" class="post-follow-button">SUBSCRIBE</button>
         </form>
+        <p class="post-follow-disclaimer">No spam. Unsubscribe anytime.</p>
+        <p id="subscribe-message" class="post-follow-message" hidden></p>
     </div>
 </aside>
