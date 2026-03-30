@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = form.email.value.trim();
 
     try {
-      const response = await fetch("https://lewis-updates.contact-b4a.workers.dev/subscribe", {
+      const response = await fetch("https://email.lewisconnolly.com/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
