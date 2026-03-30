@@ -4,7 +4,7 @@
 
   const VISIBLE_MS = 2000;
   const FADE_MS = 1000;
-  const COUNT = 26;
+  const COUNT = 27;
 
   const layerA = root.querySelector('.manyme-portrait__layer--a');
   const layerB = root.querySelector('.manyme-portrait__layer--b');
