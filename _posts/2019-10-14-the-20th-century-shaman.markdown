@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The 20th Century Shaman"
+seo_title: "The 20th Century Shaman"
 date: 2019-10-14
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Raising Lazarus"
+seo_title: "Raising Lazarus"
 date: 2018-11-05
 author: "Lewis Connolly"
 author_url: "/about/"

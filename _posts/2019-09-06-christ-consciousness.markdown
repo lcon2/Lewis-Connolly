@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Christ Consciousness"
+seo_title: "Christ Consciousness"
 date: 2019-09-06
 author: "Lewis Connolly"
 author_url: "/about/"

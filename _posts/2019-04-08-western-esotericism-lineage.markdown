@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Western Esotericism's Lineage"
+seo_title: "Western Esotericism's Lineage"
 date: 2019-04-08
 author: "Lewis Connolly"
 author_url: "/about/"

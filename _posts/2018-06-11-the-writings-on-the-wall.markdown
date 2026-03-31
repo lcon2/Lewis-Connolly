@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Writing’s on the Wall"
+seo_title: "The Writing’s on the Wall"
 date: 2018-06-11
 author: "Lewis Connolly"
 author_url: "/about/"

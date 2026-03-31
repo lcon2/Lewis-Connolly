@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cults"
+seo_title: "Cults"
 date: 2018-08-29
 author: "Lewis Connolly"
 author_url: "/about/"

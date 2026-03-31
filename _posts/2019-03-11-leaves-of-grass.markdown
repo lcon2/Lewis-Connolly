@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Leaves of Grass"
+seo_title: "Leaves of Grass"
 date: 2019-03-11
 author: "Lewis Connolly"
 author_url: "/about/"

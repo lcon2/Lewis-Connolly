@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Towards Epistemic Convergence"
+seo_title: "Towards Epistemic Convergence"
 date: 2025-02-14
 author: "Lewis Connolly"
 author_url: "/about/"

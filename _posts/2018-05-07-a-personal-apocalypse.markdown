@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Personal Apocalypse"
+seo_title: "A Personal Apocalypse"
 date: 2018-05-07
 author: "Lewis Connolly"
 author_url: "/about/"

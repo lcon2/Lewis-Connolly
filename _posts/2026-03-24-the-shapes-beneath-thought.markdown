@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Shapes Beneath Thought"
+seo_title: "Jung, Archetypes, and AI: The Shapes Beneath Thought"
 date: 2026-03-24
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -25,7 +26,6 @@ read_next:
     description: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
     url: "/2025/04/22/the-diachronic-and-the-episodic/"
 ---
-
 <img src="{{ '/assets/images/archetype_eye.png' | relative_url }}" alt="The Shapes Beneath Thought" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 Jung is often presented as if he were simply offering a symbolic glossary. The mother, the shadow, the trickster, the wise old man - a set of recurring images that happen to appear in dreams, myths, and religions across the world. That is not false, but it is weaker than what he was actually saying.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ADHD, Vyvanse, and Taste"
+seo_title: "ADHD, Vyvanse, and Taste: One Month After Diagnosis"
 date: 2026-03-28
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -22,7 +23,6 @@ read_next:
     description: "I trace my attraction to intuition back to Jung and a kind of small-c conservatism."
     url: "/2025/10/05/Some-thoughts-on-Intuition/"
 ---
-
 <img src="{{ '/assets/images/pill.png' | relative_url }}" alt="ADHD, Vyvanse, and Taste" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 A month ago I was officially diagnosed with ADHD and prescribed lisdexamfetamine, better known in the United States by the brand name Vyvanse. In truth, this did not come as much of a surprise. About three years ago I went down an ADHD rabbit hole - reading, watching, writing up notes - and concluded that I almost certainly had it. That realization led me to lean more deliberately into running, meditation, and a largely ketogenic diet, all of which I had read could help. They did, and they do.

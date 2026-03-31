@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Hogwarts and the Black Madonna"
+seo_title: "Hogwarts and the Black Madonna"
 date: 2018-03-12
 author: "Lewis Connolly"
 author_url: "/about/"

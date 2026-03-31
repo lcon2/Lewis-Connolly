@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Sacrificing Isaac"
+seo_title: "Sacrificing Isaac"
 date: 2019-03-21
 author: "Lewis Connolly"
 author_url: "/about/"

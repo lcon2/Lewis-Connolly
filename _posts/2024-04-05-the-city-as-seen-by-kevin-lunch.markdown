@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The City as Seen by Kevin Lynch"
+seo_title: "The City as Seen by Kevin Lynch"
 date: 2024-04-05
 author: "Lewis Connolly"
 author_url: "/about/"

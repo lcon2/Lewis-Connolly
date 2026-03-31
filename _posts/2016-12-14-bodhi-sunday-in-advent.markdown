@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bodhi Sunday in Advent"
+seo_title: "Bodhi Sunday in Advent"
 date: 2016-12-14
 author: "Lewis Connolly"
 author_url: "/about/"

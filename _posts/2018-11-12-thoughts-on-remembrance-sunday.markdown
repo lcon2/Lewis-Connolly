@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Thoughts on Remembrance Sunday"
+seo_title: "Thoughts on Remembrance Sunday"
 date: 2018-11-12
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A transcendental crossing"
+seo_title: "A transcendental crossing"
 date: 2019-07-15
 author: "Lewis Connolly"
 author_url: "/about/"

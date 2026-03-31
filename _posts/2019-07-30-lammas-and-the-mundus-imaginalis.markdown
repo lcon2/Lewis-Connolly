@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lammas & the Mundus Imaginalis"
+seo_title: "Lammas & the Mundus Imaginalis"
 date: 2019-07-30
 author: "Lewis Connolly"
 author_url: "/about/"

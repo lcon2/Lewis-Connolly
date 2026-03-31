@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Losing my Religion"
+seo_title: "Losing my Religion"
 date: 2016-05-31
 author: "Lewis Connolly"
 author_url: "/about/"

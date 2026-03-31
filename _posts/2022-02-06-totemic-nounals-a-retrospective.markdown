@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "“Totemic Nounals”: a retrospective"
+seo_title: "“Totemic Nounals”: a retrospective"
 date: 2022-02-06
 author: "Lewis Connolly"
 author_url: "/about/"

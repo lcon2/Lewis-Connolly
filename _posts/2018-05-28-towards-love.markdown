@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Towards Love"
+seo_title: "Towards Love"
 date: 2018-05-28
 author: "Lewis Connolly"
 author_url: "/about/"

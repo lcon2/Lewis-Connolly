@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Musings on Non-Duality & Pluralism"
+seo_title: "Musings on Non-Duality & Pluralism"
 date: 2021-12-28
 author: "Lewis Connolly"
 author_url: "/about/"

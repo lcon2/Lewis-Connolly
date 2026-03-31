@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Arguing the Bible"
+seo_title: "Arguing the Bible"
 date: 2024-05-29
 author: "Lewis Connolly"
 author_url: "/about/"

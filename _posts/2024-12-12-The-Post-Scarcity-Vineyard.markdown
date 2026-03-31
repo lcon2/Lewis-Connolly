@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Post-Scarcity Vineyard"
+seo_title: "The Post-Scarcity Vineyard"
 date: 2024-12-12
 author: "Lewis Connolly"
 author_url: "/about/"

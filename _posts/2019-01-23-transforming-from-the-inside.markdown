@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Transforming from the Inside"
+seo_title: "Transforming from the Inside"
 date: 2019-01-23
 author: "Lewis Connolly"
 author_url: "/about/"

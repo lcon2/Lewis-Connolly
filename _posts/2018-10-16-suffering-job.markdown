@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Suffering Job"
+seo_title: "Suffering Job"
 date: 2018-10-16
 author: "Lewis Connolly"
 author_url: "/about/"

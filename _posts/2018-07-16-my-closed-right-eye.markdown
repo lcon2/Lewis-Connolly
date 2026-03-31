@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My Closed Right Eye"
+seo_title: "My Closed Right Eye"
 date: 2018-07-16
 author: "Lewis Connolly"
 author_url: "/about/"

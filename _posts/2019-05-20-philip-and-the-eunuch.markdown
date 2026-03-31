@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Philip and the Eunuch"
+seo_title: "Philip and the Eunuch"
 date: 2019-05-20
 author: "Lewis Connolly"
 author_url: "/about/"

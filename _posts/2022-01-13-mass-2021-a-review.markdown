@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Mass (2021): A Review"
+seo_title: "Mass (2021): A Review"
 date: 2022-01-13
 author: "Lewis Connolly"
 author_url: "/about/"

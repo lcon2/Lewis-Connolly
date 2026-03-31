@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Unseen Watcher"
+seo_title: "The Unseen Watcher"
 date: 2025-02-10
 author: "Lewis Connolly"
 author_url: "/about/"

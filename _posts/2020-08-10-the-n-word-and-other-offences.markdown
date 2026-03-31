@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The N-Word & Other Offences"
+seo_title: "The N-Word & Other Offences"
 date: 2020-08-10
 author: "Lewis Connolly"
 author_url: "/about/"

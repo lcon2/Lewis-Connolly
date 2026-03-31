@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Resurrection and the Nature of Truth"
+seo_title: "Resurrection and the Nature of Truth"
 date: 2018-04-02
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Thoughts on Transcendentalism from a Recovering Fundamentalist"
+seo_title: "Thoughts on Transcendentalism from a Recovering Fundamentalist"
 date: 2022-06-15
 author: "Lewis Connolly"
 author_url: "/about/"

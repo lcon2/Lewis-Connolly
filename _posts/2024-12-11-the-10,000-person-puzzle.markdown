@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The 10,000-Person Puzzle"
+seo_title: "The 10,000-Person Puzzle"
 date: 2024-12-11
 author: "Lewis Connolly"
 author_url: "/about/"

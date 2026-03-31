@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Nature of Change"
+seo_title: "The Nature of Change"
 date: 2019-10-01
 author: "Lewis Connolly"
 author_url: "/about/"

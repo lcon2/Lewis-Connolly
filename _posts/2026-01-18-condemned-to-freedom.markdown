@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Condemned to Freedom"
+seo_title: "Condemned to Freedom: Virtual Reality, Choice, and Commitment"
 date: 2026-01-18
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -12,7 +13,6 @@ og_image: /assets/images/fragmented.png
 description: "Freedom in virtual worlds becomes a design problem: when nothing binds, identity thins and meaning drains. I argue that commitment and stakes, not suffering, give choices weight. Games model this through consequence within a frame. AI-curated lives may optimize comfort while dissolving narrative gravity. Freedom without constraints risks drift; freedom with chosen limits lets the self cohere."
 tagline: "Freedom in virtual worlds becomes a design problem: when nothing binds, identity thins and meaning."
 ---
-
 > "Freedom is what you do with what's been done to you."
 > -- Jean-Paul Sartre
 

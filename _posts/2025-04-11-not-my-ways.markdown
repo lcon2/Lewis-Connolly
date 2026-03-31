@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Not My Ways"
+seo_title: "Not My Ways"
 date: 2025-04-10
 author: "Lewis Connolly"
 author_url: "/about/"

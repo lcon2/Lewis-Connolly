@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rejecting Advent"
+seo_title: "Rejecting Advent"
 date: 2021-12-20
 author: "Lewis Connolly"
 author_url: "/about/"

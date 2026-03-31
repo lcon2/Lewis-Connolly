@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Transhumanist Neo-Anthroposophy"
+seo_title: "Transhumanist Neo-Anthroposophy"
 date: 2025-02-27
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Silence (2016)"
+seo_title: "Silence (2016)"
 date: 2017-01-02
 author: "Lewis Connolly"
 author_url: "/about/"

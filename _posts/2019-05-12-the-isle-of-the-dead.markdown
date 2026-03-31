@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Isle of the Dead"
+seo_title: "The Isle of the Dead"
 date: 2019-05-12
 author: "Lewis Connolly"
 author_url: "/about/"

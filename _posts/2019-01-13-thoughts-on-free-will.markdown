@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Thoughts on Free Will"
+seo_title: "Thoughts on Free Will"
 date: 2019-01-13
 author: "Lewis Connolly"
 author_url: "/about/"

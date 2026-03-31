@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Psychic Iron Dome"
+seo_title: "A Psychic Iron Dome: Psychological Resilience in the Age of AI"
 date: 2025-11-10
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -12,7 +13,7 @@ og_image: /assets/images/irondome.png
 description: "AI is thrilling and apocalyptic at once. As algorithms learn to nudge and manipulate us, I imagine a personal defensive AI, a psychic iron dome that filters ads, protects mental health, and helps us discern what is real. Beyond that lies a meaning crisis: if machines outperform us, purpose must be forged locally and relationally, not through usefulness."
 tagline: "AI is thrilling and apocalyptic at once As algorithms learn to nudge and manipulate us."
 ---
-<img src="{{ '/assets/images/irondome.png' | relative_url }}" alt="iron" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+img src="{{ '/assets/images/irondome.png' | relative_url }}" alt="iron" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artificial intelligence is fast saturating everything. I’m largely on the “yay” side of it – I think it’s very exciting, and I’m glad to be alive at this pivotal moment in history, witnessing what may be the most significant technological leap yet.
 

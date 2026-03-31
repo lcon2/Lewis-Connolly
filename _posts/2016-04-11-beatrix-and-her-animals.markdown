@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Beatrix and Her Animals"
+seo_title: "Beatrix and Her Animals"
 date: 2016-04-11
 author: "Lewis Connolly"
 author_url: "/about/"

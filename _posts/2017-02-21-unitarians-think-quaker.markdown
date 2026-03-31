@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Unitarians Think Quaker"
+seo_title: "Unitarians Think Quaker"
 date: 2017-02-21
 author: "Lewis Connolly"
 author_url: "/about/"

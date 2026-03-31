@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Æ’s Religious Cosmology"
+seo_title: "Æ’s Religious Cosmology"
 date: 2019-08-04
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Hoop of my People"
+seo_title: "The Hoop of my People"
 date: 2018-10-12
 author: "Lewis Connolly"
 author_url: "/about/"

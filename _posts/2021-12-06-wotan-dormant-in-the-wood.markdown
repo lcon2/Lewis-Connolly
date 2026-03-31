@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Wotan Dormant in the Wood"
+seo_title: "Wotan Dormant in the Wood"
 date: 2021-12-06
 author: "Lewis Connolly"
 author_url: "/about/"

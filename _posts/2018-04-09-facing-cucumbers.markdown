@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Facing Cucumbers"
+seo_title: "Facing Cucumbers"
 date: 2018-04-09
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Grand Inquisitor"
+seo_title: "The Grand Inquisitor"
 date: 2018-09-03
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Neville Goddard and your Imagination"
+seo_title: "Neville Goddard and your Imagination"
 date: 2019-04-15
 author: "Lewis Connolly"
 author_url: "/about/"

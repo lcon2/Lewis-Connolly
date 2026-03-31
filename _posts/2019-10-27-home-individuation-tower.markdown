@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Home, Individuation, and the Tower"
+seo_title: "Home, Individuation, and the Tower"
 date: 2019-10-27
 author: "Lewis Connolly"
 author_url: "/about/"

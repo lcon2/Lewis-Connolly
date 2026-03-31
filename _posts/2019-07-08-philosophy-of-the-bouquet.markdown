@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Philosophy of the Bouquet"
+seo_title: "Philosophy of the Bouquet"
 date: 2019-07-08
 author: "Lewis Connolly"
 author_url: "/about/"

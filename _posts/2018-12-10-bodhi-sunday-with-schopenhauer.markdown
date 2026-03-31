@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bodhi Sunday: Schopenhauer"
+seo_title: "Bodhi Sunday: Schopenhauer"
 date: 2018-12-10
 author: "Lewis Connolly"
 author_url: "/about/"

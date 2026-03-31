@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Creation Without Witness"
+seo_title: "Creation Without Witness: Why Make Art in the Age of AI?"
 date: 2026-03-17
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -12,7 +13,6 @@ og_image: /assets/images/smokyroom.png
 description: "An abandoned podcast project becomes a meditation on AI, bespoke media, and the changing motives of creation. If engaging audio on any obscure subject can be generated instantly, the old logic of audience, scarcity, and value starts to erode. What remains is creation for its own sake: compulsion, taste, curation, and the attempt to leave behind a pattern of mind."
 tagline: "An abandoned podcast project becomes a meditation on AI, bespoke media, and the changing motives."
 ---
-
 <style>
 .audio-card {
   max-width: 600px;

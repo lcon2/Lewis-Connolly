@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lammas Address"
+seo_title: "Lammas Address"
 date: 2018-07-30
 author: "Lewis Connolly"
 author_url: "/about/"

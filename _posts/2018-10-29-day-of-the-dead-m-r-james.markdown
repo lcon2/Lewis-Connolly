@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Day of the Dead - M. R. James"
+seo_title: "Day of the Dead - M. R. James"
 date: 2018-10-29
 author: "Lewis Connolly"
 author_url: "/about/"

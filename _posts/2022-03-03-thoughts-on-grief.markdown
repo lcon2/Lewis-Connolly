@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Thoughts on Grief"
+seo_title: "Thoughts on Grief"
 date: 2022-03-03
 author: "Lewis Connolly"
 author_url: "/about/"

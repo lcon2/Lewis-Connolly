@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Empathy, Pity, and Compassion"
+seo_title: "Empathy, Pity, and Compassion"
 date: 2022-02-19
 author: "Lewis Connolly"
 author_url: "/about/"

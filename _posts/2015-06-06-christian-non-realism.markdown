@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Christian Non-Realism"
+seo_title: "Christian Non-Realism"
 date: 2015-06-06
 author: "Lewis Connolly"
 author_url: "/about/"

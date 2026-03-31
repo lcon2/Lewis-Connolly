@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Introducing NoteTick"
+seo_title: "NoteTick: Offline Desktop Sticky Notes with Checkboxes for Windows"
 date: 2026-03-07
 permalink: /notetick/
 author: "Lewis Connolly"
@@ -14,7 +15,6 @@ image_alt: "NoteTick running on a desktop with several notes open at once."
 description: "NoteTick is a lightweight desktop notes app built for quick tasks and simple checklists without accounts, syncing, subscriptions, or feature overload. Lewis created it after finding existing sticky-note tools cluttered, dated, or overbuilt. The app focuses on movable desktop notes, checkboxes, bullet lists, text formatting, links, images, color themes, adjustable UI scale, an optional dyslexia-friendly font, fast startup, and fully offline operation."
 tagline: "NoteTick is a lightweight desktop notes app built for quick tasks and simple checklists without."
 ---
-
 <style>
 .notetick-carousel {
   margin: 24px auto 30px;

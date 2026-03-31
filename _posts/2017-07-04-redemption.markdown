@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Redemption"
+seo_title: "Redemption"
 date: 2017-07-04
 author: "Lewis Connolly"
 author_url: "/about/"

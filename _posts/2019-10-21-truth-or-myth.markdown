@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Truth or Myth"
+seo_title: "Truth or Myth"
 date: 2019-10-21
 author: "Lewis Connolly"
 author_url: "/about/"

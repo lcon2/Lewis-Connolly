@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reinterpreting the Resurrection Mythos"
+seo_title: "Reinterpreting the Resurrection Mythos"
 date: 2019-04-21
 author: "Lewis Connolly"
 author_url: "/about/"

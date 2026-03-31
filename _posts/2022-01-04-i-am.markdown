@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I Am"
+seo_title: "I Am"
 date: 2022-01-04
 author: "Lewis Connolly"
 author_url: "/about/"

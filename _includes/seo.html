@@ -1,9 +1,10 @@
 {%- assign page_title = page.title | default: site.title -%}
+{%- assign seo_page_title = page.seo_title | default: page.title | default: site.title -%}
 {%- assign site_title = site.title | default: '' -%}
-{%- if page_title and site_title and page_title != site_title -%}
-  <title>{{ page_title }} | {{ site_title }}</title>
+{%- if seo_page_title and site_title and seo_page_title != site_title -%}
+  <title>{{ seo_page_title }} | {{ site_title }}</title>
 {%- else -%}
-  <title>{{ site_title | default: page_title }}</title>
+  <title>{{ site_title | default: seo_page_title }}</title>
 {%- endif -%}
 {%- assign description = page.description | default: page.excerpt | default: site.description -%}
 {%- assign image_alt = page.image_alt | default: page_title -%}
@@ -13,7 +14,7 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | absolute_url }}">
 <meta property="og:site_name" content="{{ site.title | escape }}">
-<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:title" content="{{ seo_page_title | escape }}">
 {%- if description -%}
 <meta property="og:description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}
@@ -41,7 +42,7 @@
 {%- if site.twitter_username and site.twitter_username != "" -%}
 <meta name="twitter:site" content="@{{ site.twitter_username }}">
 {%- endif -%}
-<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:title" content="{{ seo_page_title | escape }}">
 {%- if description -%}
 <meta name="twitter:description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}

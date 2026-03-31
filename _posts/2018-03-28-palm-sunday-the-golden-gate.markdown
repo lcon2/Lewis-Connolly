@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Palm Sunday & The Golden Gate"
+seo_title: "Palm Sunday & The Golden Gate"
 date: 2018-03-28
 author: "Lewis Connolly"
 author_url: "/about/"

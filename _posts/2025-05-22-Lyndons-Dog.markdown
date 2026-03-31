@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lyndon’s Dog"
+seo_title: "LBJ, Robert Caro, and the Origins of Ambition"
 date: 2025-05-22
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -12,7 +13,7 @@ og_image: /assets/images/dog.png
 description: "Reading Robert Caro on LBJ sends me down a Texas Hill Country rabbit hole: Lyndon's father, their dog named Bigham Young, and the lingering memory of Mormonism in the region. I sketch the national panic over the Mormon 'question' and trace how these cultural fragments shaped Johnson's mythology and ambition. A small anecdote becomes a window into American history."
 tagline: "Reading Robert Caro on LBJ sends me down a Texas Hill Country rabbit hole: Lyndon's."
 ---
-<img src="{{ '/assets/images/dog.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+img src="{{ '/assets/images/dog.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I’m currently making my way through ‘The Path to Power’ by Robert Caro,<img src="/assets/images/footnote/no1.png"
      alt="Footnote 1"

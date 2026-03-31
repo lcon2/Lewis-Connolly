@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The End of Shared Reality"
+seo_title: "AI, Personalization, and the End of Shared Reality"
 date: 2026-03-20
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -15,7 +16,6 @@ image_alt: "AI Flammarion illustration for The End of Shared Reality"
 description: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually replace shared reality with highly individualized worlds. As interface dissolves into environment, morality, meaning, and even curiosity become more local, aesthetic, and inward-facing. What looks like escape may instead feel like a richer, more satisfying form of life than unfiltered material existence."
 tagline: "The essay argues that advanced AI will not simply mediate reality more efficiently but gradually."
 ---
-
 <img src="{{ '/assets/images/ai-flammarion.png' | relative_url }}" alt="The End of Shared Reality" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 It seems to me that one of the great assumptions quietly governing our imagination of the future is that reality, however mediated it becomes, will remain in some meaningful sense shared. We picture AI growing more intimate, more anticipatory, more exact in its understanding of us, and yet beneath all this the old stage set remains: one world, one common order, one reality within which we continue to encounter one another directly, frustrate one another directly, injure one another directly, and remain morally bound to one another in roughly the old ways. I am no longer sure this survives.

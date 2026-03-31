@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Sunk Cost, the Meaning Crisis, & Taste"
+seo_title: "Sunk Cost, the Meaning Crisis, & Taste"
 date: 2024-11-15
 author: "Lewis Connolly"
 author_url: "/about/"

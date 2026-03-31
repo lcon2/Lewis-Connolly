@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Aikenhead & the Long Cold Winter"
+seo_title: "Aikenhead & the Long Cold Winter"
 date: 2019-09-16
 author: "Lewis Connolly"
 author_url: "/about/"

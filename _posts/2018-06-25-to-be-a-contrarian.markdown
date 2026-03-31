@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "To be a Contrarian"
+seo_title: "To be a Contrarian"
 date: 2018-06-25
 author: "Lewis Connolly"
 author_url: "/about/"

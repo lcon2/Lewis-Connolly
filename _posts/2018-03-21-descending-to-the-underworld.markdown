@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Descending to the Underworld"
+seo_title: "Descending to the Underworld"
 date: 2018-03-21
 author: "Lewis Connolly"
 author_url: "/about/"

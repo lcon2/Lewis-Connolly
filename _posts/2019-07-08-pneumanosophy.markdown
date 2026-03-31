@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Pneumanosophy"
+seo_title: "Pneumanosophy"
 date: 2019-07-08
 author: "Lewis Connolly"
 author_url: "/about/"

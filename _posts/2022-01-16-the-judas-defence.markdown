@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Judas Defence"
+seo_title: "The Judas Defence"
 date: 2022-01-16
 author: "Lewis Connolly"
 author_url: "/about/"

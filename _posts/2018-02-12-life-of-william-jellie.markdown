@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Life of William Jellie"
+seo_title: "Life of William Jellie"
 date: 2018-02-12
 author: "Lewis Connolly"
 author_url: "/about/"

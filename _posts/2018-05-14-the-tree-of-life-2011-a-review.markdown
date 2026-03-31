@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Tree of Life (2011): A Review"
+seo_title: "The Tree of Life (2011): A Review"
 date: 2018-05-14
 author: "Lewis Connolly"
 author_url: "/about/"

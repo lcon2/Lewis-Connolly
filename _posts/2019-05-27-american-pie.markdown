@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "American Pie"
+seo_title: "American Pie"
 date: 2019-05-27
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Path behind Publix"
+seo_title: "The Path behind Publix"
 date: 2021-12-02
 author: "Lewis Connolly"
 author_url: "/about/"

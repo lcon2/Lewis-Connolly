@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Falling Upward"
+seo_title: "Falling Upward"
 date: 2018-06-18
 author: "Lewis Connolly"
 author_url: "/about/"

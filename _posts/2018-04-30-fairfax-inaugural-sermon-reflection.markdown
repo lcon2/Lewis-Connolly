@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Fairfax’s Inaugural Sermon: a reflection"
+seo_title: "Fairfax’s Inaugural Sermon: a reflection"
 date: 2018-04-30
 author: "Lewis Connolly"
 author_url: "/about/"

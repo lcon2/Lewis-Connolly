@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "This is America"
+seo_title: "This is America"
 date: 2018-05-22
 author: "Lewis Connolly"
 author_url: "/about/"

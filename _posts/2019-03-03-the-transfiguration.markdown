@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Transfiguration"
+seo_title: "The Transfiguration"
 date: 2019-03-03
 author: "Lewis Connolly"
 author_url: "/about/"

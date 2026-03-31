@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Journey Through Lent"
+seo_title: "Journey Through Lent"
 date: 2019-03-24
 author: "Lewis Connolly"
 author_url: "/about/"

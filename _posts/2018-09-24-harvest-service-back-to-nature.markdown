@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Harvest Service: Back to Nature"
+seo_title: "Harvest Service: Back to Nature"
 date: 2018-09-24
 author: "Lewis Connolly"
 author_url: "/about/"

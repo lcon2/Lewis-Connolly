@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lynch, Jung, and Art Alchemy"
+seo_title: "Lynch, Jung, and Art Alchemy"
 date: 2025-01-30
 author: "Lewis Connolly"
 author_url: "/about/"

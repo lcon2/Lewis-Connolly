@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Planes of Existence"
+seo_title: "Planes of Existence"
 date: 2019-02-18
 author: "Lewis Connolly"
 author_url: "/about/"

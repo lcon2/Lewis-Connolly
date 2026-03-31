@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Haunting the Wood"
+seo_title: "Haunting the Wood"
 date: 2019-08-26
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rejecting Medievalist Christianity"
+seo_title: "Rejecting Medievalist Christianity"
 date: 2015-11-22
 author: "Lewis Connolly"
 author_url: "/about/"

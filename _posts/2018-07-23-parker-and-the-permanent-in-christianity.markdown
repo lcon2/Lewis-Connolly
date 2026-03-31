@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Parker and the Permanent in Christianity"
+seo_title: "Parker and the Permanent in Christianity"
 date: 2018-07-23
 author: "Lewis Connolly"
 author_url: "/about/"

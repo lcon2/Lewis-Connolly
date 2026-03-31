@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Carve Space"
+seo_title: "Carve Space"
 date: 2018-04-24
 author: "Lewis Connolly"
 author_url: "/about/"

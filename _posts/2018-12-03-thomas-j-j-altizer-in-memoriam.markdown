@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Thomas J. J. Altizer: In Memoriam"
+seo_title: "Thomas J. J. Altizer: In Memoriam"
 date: 2018-12-03
 author: "Lewis Connolly"
 author_url: "/about/"

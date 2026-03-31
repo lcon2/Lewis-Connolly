@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Green Snake and the Beautiful Lily"
+seo_title: "The Green Snake and the Beautiful Lily"
 date: 2019-06-04
 author: "Lewis Connolly"
 author_url: "/about/"

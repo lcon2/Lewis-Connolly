@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Purpose of Community"
+seo_title: "The Purpose of Community"
 date: 2017-09-26
 author: "Lewis Connolly"
 author_url: "/about/"

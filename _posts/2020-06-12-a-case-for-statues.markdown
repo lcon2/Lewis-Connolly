@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A case for Statues"
+seo_title: "A case for Statues"
 date: 2020-06-12
 author: "Lewis Connolly"
 author_url: "/about/"

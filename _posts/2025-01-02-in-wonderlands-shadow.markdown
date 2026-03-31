@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "In Wonderland’s Shadow"
+seo_title: "Thomas Ligotti’s Alice: A Psychological Analysis"
 date: 2025-01-02
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -22,7 +23,7 @@ read_next:
     url: "/2025/04/22/the-diachronic-and-the-episodic/"
     tagline: "A reflection on selfhood, continuity, and the shifting shape of the “I.”"
 ---
-<div class="post">
+div class="post">
     <audio class="audio-player" controls>
         <source src="/assets/audio/Alice.mp3" type="audio/mpeg">
     </audio>

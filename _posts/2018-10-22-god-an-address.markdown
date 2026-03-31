@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "‘God’ an address"
+seo_title: "‘God’ an address"
 date: 2018-10-22
 author: "Lewis Connolly"
 author_url: "/about/"

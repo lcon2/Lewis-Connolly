@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Inclusive to a Fault?"
+seo_title: "Inclusive to a Fault?"
 date: 2022-02-18
 author: "Lewis Connolly"
 author_url: "/about/"

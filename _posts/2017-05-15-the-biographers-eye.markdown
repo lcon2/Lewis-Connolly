@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Biographer’s Eye"
+seo_title: "The Biographer’s Eye"
 date: 2017-05-15
 author: "Lewis Connolly"
 author_url: "/about/"

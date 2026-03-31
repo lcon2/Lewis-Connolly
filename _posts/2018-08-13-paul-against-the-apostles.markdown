@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Paul against the Apostles"
+seo_title: "Paul against the Apostles"
 date: 2018-08-13
 author: "Lewis Connolly"
 author_url: "/about/"

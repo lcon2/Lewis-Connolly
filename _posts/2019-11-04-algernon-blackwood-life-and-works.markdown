@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Algernon Blackwood: Life & Works"
+seo_title: "Algernon Blackwood: Life & Works"
 date: 2019-11-04
 author: "Lewis Connolly"
 author_url: "/about/"

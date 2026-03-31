@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Barfield and the Landscape of Imagination"
+seo_title: "Barfield and the Landscape of Imagination"
 date: 2019-06-16
 author: "Lewis Connolly"
 author_url: "/about/"

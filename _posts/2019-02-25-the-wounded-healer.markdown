@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Wounded Healer"
+seo_title: "The Wounded Healer"
 date: 2019-02-25
 author: "Lewis Connolly"
 author_url: "/about/"

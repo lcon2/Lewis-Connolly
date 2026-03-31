@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "So, Is Truth Dead?"
+seo_title: "So, Is Truth Dead?"
 date: 2017-04-03
 author: "Lewis Connolly"
 author_url: "/about/"

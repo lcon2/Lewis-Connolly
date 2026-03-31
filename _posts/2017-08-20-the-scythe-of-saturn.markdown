@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Scythe of Saturn"
+seo_title: "The Scythe of Saturn"
 date: 2017-08-20
 author: "Lewis Connolly"
 author_url: "/about/"

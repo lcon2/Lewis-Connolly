@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A Green Apple"
+seo_title: "A Green Apple"
 date: 2019-04-28
 author: "Lewis Connolly"
 author_url: "/about/"

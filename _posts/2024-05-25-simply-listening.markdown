@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Simply Listening"
+seo_title: "Simply Listening"
 date: 2024-05-25
 author: "Lewis Connolly"
 author_url: "/about/"

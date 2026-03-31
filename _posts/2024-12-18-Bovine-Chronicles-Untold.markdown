@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bovine Chronicles Untold"
+seo_title: "Bovine Chronicles Untold"
 date: 2024-12-18
 author: "Lewis Connolly"
 author_url: "/about/"

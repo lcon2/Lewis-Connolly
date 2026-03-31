@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Eschatology Parables"
+seo_title: "The Eschatology Parables"
 date: 2019-08-11
 author: "Lewis Connolly"
 author_url: "/about/"

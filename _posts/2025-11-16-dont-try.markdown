@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Don't Work. And Don't Try"
+seo_title: "What Does 'Don't Try' Mean? Bukowski on Creativity"
 date: 2025-11-16
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -22,7 +23,7 @@ read_next:
     url: "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/"
     tagline: "I admit my discomfort with Man's Search for Meaning, especially the way it can slide."
 ---
-<img src="{{ '/assets/images/donttry.png' | relative_url }}" alt="donttry" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+img src="{{ '/assets/images/donttry.png' | relative_url }}" alt="donttry" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t work. And don’t try.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close your eyes.  

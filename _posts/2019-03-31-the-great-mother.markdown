@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Great Mother"
+seo_title: "The Great Mother"
 date: 2019-03-31
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Archetypes in Motion"
+seo_title: "Archetypes in Motion"
 date: 2025-03-16
 author: "Lewis Connolly"
 author_url: "/about/"

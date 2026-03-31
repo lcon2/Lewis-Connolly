@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Syrophoenician woman"
+seo_title: "The Syrophoenician woman"
 date: 2018-09-17
 author: "Lewis Connolly"
 author_url: "/about/"

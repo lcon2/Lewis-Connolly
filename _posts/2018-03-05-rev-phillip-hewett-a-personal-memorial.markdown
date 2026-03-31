@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rev. Phillip Hewett: A Personal Memorial"
+seo_title: "Rev. Phillip Hewett: A Personal Memorial"
 date: 2018-03-05
 author: "Lewis Connolly"
 author_url: "/about/"

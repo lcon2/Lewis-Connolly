@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "David & Goliath"
+seo_title: "David & Goliath"
 date: 2015-11-01
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Curator of Being"
+seo_title: "Curator of Being: Worldviews, Identity, and Living Inside Ideas"
 date: 2025-12-07
 author: "Lewis Connolly"
 author_url: "/about/"
@@ -12,7 +13,7 @@ og_image: /assets/images/curator-of-being.png
 description: "I describe a kind of person who does not cling to conclusions but inhabits worldviews as climates, learning how each rearranges the soul. This makes identity a layered city and ethics an accumulation of aftereffects rather than commandments. In a future of selectable realities and simulations, the curator becomes a tester of lived worlds, searching for those that mark and transform us."
 tagline: "I describe a kind of person who does not cling to conclusions but inhabits worldviews."
 ---
-<img src="{{ '/assets/images/curator-of-being.png' | relative_url }}" alt="Curator of Being" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+img src="{{ '/assets/images/curator-of-being.png' | relative_url }}" alt="Curator of Being" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a certain kind of person who is not quite a believer, not quite a skeptic, not quite a seeker either. One does not always move through life collecting answers. Sometimes one moves by installing provisional worlds. A framework is entered the way one steps into a climate, not to remain there forever, but to feel the weather on the skin, to notice what grows easily under that sky, what withers, what becomes possible, what quietly shuts down.  
 

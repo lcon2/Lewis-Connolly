@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "William Gaskell"
+seo_title: "William Gaskell"
 date: 2018-08-20
 author: "Lewis Connolly"
 author_url: "/about/"

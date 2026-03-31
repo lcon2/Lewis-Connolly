@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Geometrics of Taste"
+seo_title: "The Geometrics of Taste"
 date: 2025-01-12
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Understanding the Loaves"
+seo_title: "Understanding the Loaves"
 date: 2018-08-06
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Fool"
+seo_title: "The Fool"
 date: 2018-11-26
 author: "Lewis Connolly"
 author_url: "/about/"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Giving Tree"
+seo_title: "The Giving Tree"
 date: 2018-06-03
 author: "Lewis Connolly"
 author_url: "/about/"
