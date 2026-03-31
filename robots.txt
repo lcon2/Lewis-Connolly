@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /connolly-archives/
+Disallow: /assets/private/
 
 Sitemap: https://lewisconnolly.com/sitemap.xml

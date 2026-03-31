@@ -8,6 +8,9 @@
 {%- endif -%}
 {%- assign description = page.description | default: page.excerpt | default: site.description -%}
 {%- assign image_alt = page.image_alt | default: page_title -%}
+{%- if page.robots and page.robots != "" -%}
+  <meta name="robots" content="{{ page.robots | escape }}">
+{%- endif -%}
 {%- if description -%}
   <meta name="description" content="{{ description | strip_html | strip_newlines | escape }}">
 {%- endif -%}

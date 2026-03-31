@@ -23,6 +23,11 @@ permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-sitemap
 
+jekyll-sitemap:
+  exclude:
+    - /assets/private/
+    - /assets/private/**
+
 # Build settings
 future: true  # Allow future dated posts
 
@@ -46,6 +51,10 @@ defaults:
       type: "pages"
     values:
       layout: studies
+  - scope:
+      path: "assets/private"
+    values:
+      sitemap: false
 
 # Ensure category pages are built
 include:

@@ -1,6 +1,7 @@
 ---
 layout: contact
 title: Contact
+description: "Contact Lewis Connolly by email, Instagram, or YouTube for questions, collaborations, or general correspondence."
 permalink: /contact/
 ---
 

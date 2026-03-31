@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About Me
+description: "Learn about Lewis Connolly, a British writer whose essays draw on religion, psychology, philosophy, and technology to explore meaning, consciousness, and modern inner life."
 permalink: /about/
 ---
 

@@ -1,6 +1,8 @@
 ---
 layout: private-archive
 title: Connolly Archives
+sitemap: false
+robots: noindex, nofollow, noarchive
 permalink: /connolly-archives/
 ---
 

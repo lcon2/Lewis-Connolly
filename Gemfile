@@ -3,6 +3,8 @@ source "https://rubygems.org"
 # Use Jekyll
 gem "jekyll", "~> 4.3.4"
 gem "webrick"
+gem "csv"
+gem "base64"
 
 group :jekyll_plugins do
   gem "jekyll-sitemap"
