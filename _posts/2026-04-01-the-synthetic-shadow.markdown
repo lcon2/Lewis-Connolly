@@ -71,11 +71,11 @@ There is, however, an upside to all this. AI can be useful precisely because it 
 
 That, I think, is where the line has to be drawn. Dialogue becomes dependency when the machine is no longer helping one reflect, but quietly taking over the burden of reflection itself. It begins innocently enough. One asks for help clarifying a thought, naming a feeling, sorting through a problem. But there comes a point at which the system is no longer being used to illuminate one’s own mind, but to spare one the difficulty of having a mind. Reflection becomes enchantment when the response ceases to be taken as material for judgment and starts being received as judgment. At that point, one is no longer using the tool. One is submitting to the atmosphere it creates.
 
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
-
 This is part of why the danger arrives so softly.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
 
 Awareness is often not removed by force but rendered unnecessary by competence. <img src="/assets/images/footnote/no3.png" alt="Footnote 3" style="width: 15px; height: 15px; margin: 0; padding: 0; position: relative; top: -7px; vertical-align: middle; display: inline; border: none;"> The better the interface becomes at anticipating us, soothing us, mirroring us, and giving us language for ourselves, the easier it becomes to stop inspecting what stands behind it.
 
