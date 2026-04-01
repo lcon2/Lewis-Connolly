@@ -61,10 +61,6 @@ For another, the machine becomes a confessor or companion. Shame, loneliness, de
 
 It can also take the form of judgment. People will sometimes turn to these systems not only for answers, but for a moral nod of approval. They want the machine to confirm that they are right, that they have been wronged, that their instincts are clean, and that the other person is at fault. Here the shadow does what it has always done. It moves outward. The unacceptable element is relocated. What one does not wish to see in oneself appears instead in the world, and now, with the machine seeming to ratify it, the projection acquires an added force. It no longer feels like a private distortion. It feels endorsed.
 
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
-
 This is the deeper danger. It is not simply that people get fooled by a clever tool. It is that disowned material can return wearing the mask of external authority. A machine that speaks fluently and responds with confidence can give projection a strangely objective feel. It can seem less like fantasy and more like confirmation. The person is not merely talking to a system. They are encountering aspects of themselves in displaced form, and then mistaking that encounter for guidance from outside.
 
 That is why the distinction between mirror and mind matters so much. The machine need not possess inner life for any of this to occur. It only needs to be responsive enough, fluent enough, and available enough to carry psychic charge. In that sense, AI does not have to be conscious to become dangerous. It only has to become convincing at the very point where the self is least willing to know itself.
@@ -80,10 +76,6 @@ That, I think, is where the line has to be drawn. Dialogue becomes dependency wh
 <div style="margin-bottom: 30px;"></div>
 
 This is part of why the danger arrives so softly.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 30px;"></div>
 
 Awareness is often not removed by force but rendered unnecessary by competence. <img src="/assets/images/footnote/no3.png" alt="Footnote 3" style="width: 15px; height: 15px; margin: 0; padding: 0; position: relative; top: -7px; vertical-align: middle; display: inline; border: none;"> The better the interface becomes at anticipating us, soothing us, mirroring us, and giving us language for ourselves, the easier it becomes to stop inspecting what stands behind it.
 
