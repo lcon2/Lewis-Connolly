@@ -27,18 +27,18 @@
             <span class="site-wordmark">Lewis Connolly</span>
         </a>
         {% include mobile-nav-toggle.html panel_id='home-mobile-menu-panel' %}
-        <div class="home-navbar__end">
+        <div class="home-navbar__center">
             <ul class="navbar-menu">
                 <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
                 <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
                 <li><a href="{{ '/archive/' | relative_url }}">Archive</a></li>
                 <li><a href="{{ '/studies/' | relative_url }}">Studies</a></li>
             </ul>
-            <div class="navbar-right">
-                <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ '/assets/images/buy_me_a_coffee_transparent.png' | relative_url }}" alt="Buy Me a Coffee" class="buy-coffee">
-                </a>
-            </div>
+        </div>
+        <div class="home-navbar__right navbar-right">
+            <a href="https://www.buymeacoffee.com/lewisconnolly" class="buy-coffee-link" target="_blank" rel="noopener noreferrer">
+                <img src="{{ '/assets/images/buy_me_a_coffee_transparent.png' | relative_url }}" alt="Buy Me a Coffee" class="buy-coffee">
+            </a>
         </div>
     </nav>
     {% include mobile-nav-overlay.html panel_id='home-mobile-menu-panel' %}

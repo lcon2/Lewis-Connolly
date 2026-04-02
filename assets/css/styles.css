@@ -199,33 +199,60 @@ body {
     pointer-events: none;
 }
 
-/* Home header: one centered row, extra space between wordmark and menu */
+/* Home header: brand left, pills viewport-centered, coffee right */
 .home .navbar.home-navbar {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     max-width: none;
     margin-left: 0;
     margin-right: 0;
-    gap: clamp(28px, 5vw, 52px);
-    flex-wrap: wrap;
+    gap: 0;
+    flex-wrap: nowrap;
 }
 
-.home-navbar__end {
+.home .navbar.home-navbar .brand-lockup {
+    flex: 0 0 auto;
+    margin-right: clamp(28px, 5vw, 52px);
+}
+
+/* Flex middle: absorbs space between brand and coffee; ul is positioned vs .home .navbar */
+.home-navbar__center {
+    flex: 1 1 0;
+    min-width: 0;
+    position: static;
+}
+
+.home-navbar__right {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px 12px;
+    /* Slightly more air between Studies pill and coffee than the old grouped row */
+    margin-left: 10px;
 }
 
-/* Tighter pill spacing on home */
+/* Tighter pill spacing on home; centered on nav (50% = Contact–Archive midpoint ≈ row center) */
 .home .home-navbar .navbar-menu {
     gap: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
-.home .home-navbar__end .buy-coffee-link {
-    margin-left: 4px;
+.home .home-navbar__right .buy-coffee-link {
+    margin-left: 0;
+}
+
+.home .home-navbar .buy-coffee {
+    max-width: calc(180px * 1.08);
 }
 
 .home .navbar-content,
@@ -555,9 +582,9 @@ body {
     transform: scale(1.1);
 }
 
-/* Homepage: beer image hover matches site accent (no pill chrome) */
-.home .home-navbar__end .buy-coffee-link:hover .buy-coffee,
-.home .home-navbar__end .buy-coffee-link:focus-visible .buy-coffee {
+/* Homepage: coffee image hover matches site accent (no pill chrome) */
+.home .home-navbar__right .buy-coffee-link:hover .buy-coffee,
+.home .home-navbar__right .buy-coffee-link:focus-visible .buy-coffee {
     filter: drop-shadow(0 0 8px rgba(209, 174, 122, 0.45));
 }
 
@@ -2221,8 +2248,13 @@ footer {
         width: 100%;
     }
 
-    .home .home-navbar__end {
+    .home .home-navbar__center,
+    .home .home-navbar__right {
         display: none;
+    }
+
+    .home .navbar.home-navbar .brand-lockup {
+        margin-right: 0;
     }
 
     .home .brand-lockup {
@@ -2271,7 +2303,8 @@ footer {
 
     .has-mobile-nav .navbar-menu,
     .has-mobile-nav .navbar-right,
-    .home .home-navbar__end {
+    .home .home-navbar__center,
+    .home .home-navbar__right {
         display: none;
     }
 
