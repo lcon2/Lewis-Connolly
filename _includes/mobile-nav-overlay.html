@@ -8,8 +8,14 @@
             <li><a href="{{ '/studies/' | relative_url }}" class="{% if page.url contains '/studies/' %}is-active{% endif %}">Studies</a></li>
             <li>
                 <a class="home-mobile-menu-overlay__beer-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">
+                    {% assign mobile_tip = include.mobile_tip | default: 'beer' %}
+                    {% if mobile_tip == 'coffee' %}
+                    <img src="{{ '/assets/images/coffee-mobile-menu.png' | relative_url }}" alt="" class="home-mobile-menu-overlay__beer-icon">
+                    <span>Buy me a coffee</span>
+                    {% else %}
                     <img src="{{ '/assets/images/beer.png' | relative_url }}" alt="" class="home-mobile-menu-overlay__beer-icon">
                     <span>Buy me a beer</span>
+                    {% endif %}
                 </a>
             </li>
         </ul>

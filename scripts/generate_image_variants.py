@@ -14,6 +14,7 @@ EXCLUDE_NAMES = {
     "buybeer.png",
     "buy_me_a_coffee_transparent.png",
     "beer.png",
+    "coffee-mobile-menu.png",
     "asterism1.png",
     "asterism2.png",
 }
