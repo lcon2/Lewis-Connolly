@@ -310,7 +310,9 @@ body {
 .contact .logo-base,
 .contact .logo-hover,
 .archive .logo-base,
-.archive .logo-hover {
+.archive .logo-hover,
+.post .logo-base,
+.post .logo-hover {
     transition: opacity 1s ease, transform 1s ease;
     transform-origin: center center;
 }
@@ -319,7 +321,8 @@ body {
 .studies .logo-hover,
 .about .logo-hover,
 .contact .logo-hover,
-.archive .logo-hover {
+.archive .logo-hover,
+.post .logo-hover {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -327,8 +330,10 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Home only: hover asset (logo2) optical nudge vs base */
-.home .logo-hover {
+/* Home + post + category listing: hover asset (logo2) optical nudge vs base */
+.home .logo-hover,
+.post .logo-hover,
+.archive.category-page .logo-hover {
     transform: translate(-50%, calc(-50% - 1px)) scale(1);
 }
 
@@ -341,7 +346,9 @@ body {
 .contact .logo-link:hover .logo-hover,
 .contact .logo-link:focus-visible .logo-hover,
 .archive .logo-link:hover .logo-hover,
-.archive .logo-link:focus-visible .logo-hover {
+.archive .logo-link:focus-visible .logo-hover,
+.post .logo-link:hover .logo-hover,
+.post .logo-link:focus-visible .logo-hover {
     opacity: 1;
 }
 
@@ -354,7 +361,9 @@ body {
 .contact .logo-link:hover .logo-base,
 .contact .logo-link:focus-visible .logo-base,
 .archive .logo-link:hover .logo-base,
-.archive .logo-link:focus-visible .logo-base {
+.archive .logo-link:focus-visible .logo-base,
+.post .logo-link:hover .logo-base,
+.post .logo-link:focus-visible .logo-base {
     opacity: 0;
 }
 
@@ -367,8 +376,28 @@ body {
 .contact .logo-link:hover .logo-wrap,
 .contact .logo-link:focus-visible .logo-wrap,
 .archive .logo-link:hover .logo-wrap,
-.archive .logo-link:focus-visible .logo-wrap {
+.archive .logo-link:focus-visible .logo-wrap,
+.post .logo-link:hover .logo-wrap,
+.post .logo-link:focus-visible .logo-wrap {
     transform: scale(1.03);
+}
+
+/* Post + category listing headers: dual logo; ~10% larger than former 70px single mark */
+.post .logo-wrap,
+.archive.category-page .logo-wrap {
+    position: relative;
+    display: block;
+    max-width: calc(70px * 1.1);
+    transition: transform 1s ease;
+    transform-origin: center center;
+}
+
+.post .logo-wrap img,
+.archive.category-page .logo-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .post .category-pill {
@@ -1440,23 +1469,6 @@ body {
 }
 
 /* Blog Post-Specific Styles */
-.post .logo img,
-.archive.category-page .logo img {
-    display: block; /* Ensures it behaves like a block-level element */
-    margin: 20px auto 10px; /* Adjusts top margin */
-    max-width: 70px; /* Makes the logo smaller */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 5px; /* Adds subtle rounded corners */
-    filter: grayscale(100%) brightness(0.8); /* Greyed-out and slightly dim */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-.post .logo img:hover,
-.archive.category-page .logo img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    filter: grayscale(0%) brightness(1.2); /* Full color and brightens */
-}
-
 /* About Me and Contact Page-Specific Styles */
 .about .logo img, .contact .logo img {
     display: block;
@@ -1495,8 +1507,8 @@ header {
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
-    margin-left: 10px;
-    width: calc(100% - 10px);
+    margin-left: 14px;
+    width: calc(100% - 14px);
     padding-top: 4px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -1505,7 +1517,7 @@ header {
     overflow-x: visible;
 }
 
-.post .logo {
+.post header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1530,7 +1542,7 @@ header {
 }
 
 /* Full-width row so flex centers; overrides .archive .logo { max-width: 80px } from navbar rules */
-.archive.category-page .logo {
+.archive.category-page header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2322,6 +2334,11 @@ footer {
         max-width: 60px; /* Reduces logo size */
     }
 
+    .post header .logo-wrap,
+    .archive.category-page .logo-wrap {
+        max-width: calc(60px * 1.1);
+    }
+
     .has-mobile-nav .navbar-menu,
     .has-mobile-nav .navbar-right,
     .home .home-navbar__middle,
@@ -2727,7 +2744,7 @@ footer {
 
 /* Archive Page-Specific Styles */
 
-/* Logo Styling */
+/* Logo Styling (archive pages; sticky post/category headers use dual logo above) */
 .archive .logo img {
     display: block;
     margin: 20px auto 10px;
@@ -2741,6 +2758,33 @@ footer {
 .archive .logo img:hover {
     transform: scale(1.1);
     filter: grayscale(0%) brightness(1.2);
+}
+
+.post header .logo-wrap img,
+.archive.category-page header .logo-wrap img {
+    margin: 0;
+    max-width: none;
+    filter: none;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.post header .logo-wrap img:hover,
+.archive.category-page header .logo-wrap img:hover {
+    transform: none;
+    filter: none;
+}
+
+/* Archive main nav: dual logo must not inherit .archive .logo img grayscale block below */
+.archive .navbar .logo-wrap img {
+    margin: 0;
+    max-width: none;
+    filter: none;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.archive .navbar .logo-wrap img:hover {
+    transform: none;
+    filter: none;
 }
 
 /* Archive Content Styling */

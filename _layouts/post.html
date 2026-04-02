@@ -12,8 +12,11 @@
 <body class="post has-mobile-nav">
     <header>
         <div class="logo">
-            <a href="{{ '/' | relative_url }}">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo">
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <span class="logo-wrap">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+                </span>
             </a>
         </div>
         {% include mobile-nav-toggle.html panel_id='post-mobile-menu-panel' %}
