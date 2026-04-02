@@ -330,10 +330,8 @@ body {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Home + post + category listing: hover asset (logo2) optical nudge vs base */
-.home .logo-hover,
-.post .logo-hover,
-.archive.category-page .logo-hover {
+/* Home only: hover asset (logo2) optical nudge vs base */
+.home .logo-hover {
     transform: translate(-50%, calc(-50% - 1px)) scale(1);
 }
 
@@ -376,10 +374,16 @@ body {
 .contact .logo-link:hover .logo-wrap,
 .contact .logo-link:focus-visible .logo-wrap,
 .archive .logo-link:hover .logo-wrap,
-.archive .logo-link:focus-visible .logo-wrap,
-.post .logo-link:hover .logo-wrap,
-.post .logo-link:focus-visible .logo-wrap {
+.archive .logo-link:focus-visible .logo-wrap {
     transform: scale(1.03);
+}
+
+/* Post/category sticky headers: opacity crossfade only — same position as logo1 */
+.post .logo-link:hover .logo-wrap,
+.post .logo-link:focus-visible .logo-wrap,
+.archive.category-page .logo-link:hover .logo-wrap,
+.archive.category-page .logo-link:focus-visible .logo-wrap {
+    transform: none;
 }
 
 /* Post + category listing headers: dual logo; ~10% larger than former 70px single mark */
@@ -1507,8 +1511,8 @@ header {
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
-    margin-left: 14px;
-    width: calc(100% - 14px);
+    margin-left: 18px;
+    width: calc(100% - 18px);
     padding-top: 4px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -1521,7 +1525,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80px;
 }
 
 /* Category pages: same sticky bar + rule as posts (no Buy Me a Coffee link in header) */
@@ -1546,7 +1549,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80px;
     max-width: none;
     width: 100%;
     margin: 0 auto;

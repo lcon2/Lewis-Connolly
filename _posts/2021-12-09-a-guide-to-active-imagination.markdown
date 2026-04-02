@@ -26,7 +26,7 @@ og_image_width: 1536
 og_image_height: 1024
 image_alt: "Reflective figure for A Guide to Active Imagination"
 ---
-img src="{{ '/assets/images/reflectiveman.png' | relative_url }}" alt="Reflective figure for A Guide to Active Imagination" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/reflectiveman.png' | relative_url }}" alt="Reflective figure for A Guide to Active Imagination" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 Active Imagination is a technique that was developed by Carl Jung to access the unconscious in waking life. When we consider engaging the unconscious, most of us think exclusively of dream analysis - the process of taking our dreams and uncovering what they’re trying to teach us, ideally with the assistance of a trained analyst. Jung believed our dreams consisted of the stuff of our unconscious.
 
