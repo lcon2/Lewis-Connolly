@@ -1495,6 +1495,8 @@ header {
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
+    margin-left: 10px;
+    width: calc(100% - 10px);
     padding-top: 4px;
     padding-right: 20px;
     box-sizing: border-box;
