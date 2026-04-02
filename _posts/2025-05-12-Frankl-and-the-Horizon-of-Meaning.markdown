@@ -13,7 +13,7 @@ og_image: /assets/images/void.png
 description: "I admit my discomfort with Man's Search for Meaning, especially the way it can slide into moralism and hyper-individualism. Frankl entered the camps already formed; not everyone has that. From there I compare the Nazi camps as an event horizon to the coming AI singularity, another rupture that will test our frameworks. We need a flexible worldview for what is coming."
 tagline: "I admit my discomfort with Man's Search for Meaning, especially the way it can slide."
 ---
-img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/void.png' | relative_url }}" alt="chess" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Despite its reputation, Viktor Frankl’s ‘Man’s Search for Meaning’ never resonated with me. It’s a difficult book to critique of course. After all, it means taking issue with someone who endured one of the darkest hells imaginable. Who am I, from my place of comfort and safety, to question the conclusions he drew from his suffering? And yet I do take issue. 
 

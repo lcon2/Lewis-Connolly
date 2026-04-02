@@ -13,7 +13,7 @@ og_image: /assets/images/Stairs.png
 description: "This piece is a refusal of the cultural demand to strive and perform. I argue there is no truer self hidden beneath effort, no purpose to construct, no identity to build. Life has its own trajectory, and when the noise quiets, what remains is enough. Step back, stay back, and let whatever arises move you."
 tagline: "This piece is a refusal of the cultural demand to strive and perform."
 ---
-img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/Stairs.png' | relative_url }}" alt="Stairs" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s an idea which comes to me less as an idea and more as a memory. Not something discovered, but something quietly recalled, as if it had always been there, waiting beneath the noise.
 

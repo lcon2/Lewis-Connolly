@@ -13,7 +13,7 @@ og_image: /assets/images/river.png
 description: "I toy with the idea of releasing an AI folk album, building a Rowan North persona and using Suno to spin songs from my voice and a Celtic-spiritual prompt. The whole thing leans into the fantasy of fictional bands and alternate histories, while admitting my lack of musical chops. It becomes a small meditation on play, creativity, and the odd intimacy of synthetic art."
 tagline: "I toy with the idea of releasing an AI folk album, building a Rowan North."
 ---
-img src="{{ '/assets/images/river.png' | relative_url }}" alt="Watch the River" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
+<img src="{{ '/assets/images/river.png' | relative_url }}" alt="Watch the River" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
 It would be funny to release an AI album. I've been listening to some AI songs on Spotify recently, such as Many Men by Shifty Brent, a soulful 60s reimagining of the 50 Cent rap song. And The Velvet Sundown, probably the most famous AI band, a soft-rock, indie-Americana project. It's a particularly good example because it really leans into the fantasy of it all. "Their" profile on Spotify even includes photographs of the "band," all of which are, of course, AI-generated. They (or he) have created a consistent sound; it would be easy to believe this is a real band with a backstory, a van. It just so happens that this plausible alternate history is purely the result of a few clever prompts given to an AI music generator.
 
