@@ -2577,7 +2577,27 @@ footer {
     }
 
     .post article {
-        padding: 0 20px; /* Reduces padding for better readability on small screens */
+        padding: 0 clamp(20px, 5vw, 28px); /* Slightly more horizontal room than fixed 20px */
+        text-align: left; /* Avoid justified rivers on narrow lines; desktop keeps justify */
+        overflow-wrap: anywhere; /* Long words/URLs don’t force horizontal scroll */
+    }
+
+    .post article picture {
+        max-width: 100%;
+    }
+
+    .post article img {
+        max-width: 100% !important; /* Beats inline max-width: 600px on narrow viewports */
+        height: auto !important;
+    }
+
+    .post article img[style*="max-width: 85px"] {
+        max-width: 85px !important; /* Preserve asterism dividers */
+    }
+
+    .post .post-meta {
+        flex-wrap: wrap;
+        gap: 10px 16px;
     }
 
     .post-lower-grid {
