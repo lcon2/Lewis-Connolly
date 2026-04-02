@@ -1496,8 +1496,11 @@ header {
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
     padding-top: 4px;
+    padding-right: 20px;
+    box-sizing: border-box;
     min-height: 80px;
     display: block;
+    overflow-x: visible;
 }
 
 .post .logo {
@@ -1540,7 +1543,8 @@ header {
     left: 50%;
     top: 50%;
     opacity: 0;
-    transform: translate(calc(35px + 12px + 112px), calc(-50% + 10px));
+    /* 92px ≈ prior 112px adjusted for ~20% smaller coffee icon */
+    transform: translate(calc(35px + 12px + 92px), calc(-50% + 10px));
     transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     align-items: center;
@@ -1556,7 +1560,7 @@ header {
 }
 
 .post .beer-link img {
-    width: 101px;
+    width: calc(101px * 0.8);
     height: auto;
     transition: transform 0.3s ease;
     filter: grayscale(35%);
@@ -1576,18 +1580,21 @@ header {
     opacity: 0;
     transition: width 0.4s ease, opacity 0.2s ease;
     display: inline-block;
+    box-sizing: content-box;
 }
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    width: 15ch;
+    /* Extra ch + padding: letter-spacing was clipping the final “e” */
+    width: 16.75ch;
+    padding-right: 0.45em;
     opacity: 1;
     animation: coffee-type 0.9s steps(15, end);
 }
 
 @keyframes coffee-type {
     from { width: 0; }
-    to { width: 15ch; }
+    to { width: 16.75ch; }
 }
 
 .post .beer-link:hover img,
