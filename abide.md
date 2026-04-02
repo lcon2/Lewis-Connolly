@@ -499,7 +499,7 @@ description: "A scroll-driven meditation where five words bloom large, then sett
       <p id="end-title" class="end-reflection">If this was meaningful,<br>you're welcome to pass it on.</p>
       <div class="end-actions">
         <button class="end-button" type="button">COPY LINK</button>
-        <a class="end-link" href="https://buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">BUY ME A BEER</a>
+        <a class="end-link" href="https://buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">BUY ME A COFFEE</a>
       </div>
       <div class="end-exit">
         <a class="end-link end-close" href="{{ '/' | relative_url }}">CLOSE</a>

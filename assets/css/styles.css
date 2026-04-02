@@ -1507,7 +1507,7 @@ header {
     min-height: 80px;
 }
 
-/* Category pages: same sticky bar + rule as posts (no beer link) */
+/* Category pages: same sticky bar + rule as posts (no Buy Me a Coffee link in header) */
 .archive.category-page header {
     position: sticky;
     top: 0;
@@ -1580,14 +1580,14 @@ header {
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    width: 13.5ch;
+    width: 15ch;
     opacity: 1;
-    animation: beer-type 0.9s steps(13, end);
+    animation: coffee-type 0.9s steps(15, end);
 }
 
-@keyframes beer-type {
+@keyframes coffee-type {
     from { width: 0; }
-    to { width: 13.5ch; }
+    to { width: 15ch; }
 }
 
 .post .beer-link:hover img,

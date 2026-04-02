@@ -15,7 +15,7 @@ og_image: /assets/images/Course.png
         <div class="studies-cta-group">
             <a class="btn btn-primary" href="#syllabus">Start the course</a>
             <a class="btn btn-secondary" href="{{ '/assets/files/meaning-in-a-disenchanted-age-syllabus.pdf' | relative_url }}" download>Download the syllabus PDF</a>
-            <a class="btn btn-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Optional: buy me a beer</a>
+            <a class="btn btn-link" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Optional: buy me a coffee</a>
         </div>
     </div>
     <div class="studies-hero-media">
@@ -144,7 +144,7 @@ og_image: /assets/images/Course.png
         <div class="studies-section-card studies-donation">
             <p>This course is free. If it helped, you can support the work.</p>
             <div class="studies-cta-group">
-                <a class="btn btn-secondary" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Buy me a beer</a>
+                <a class="btn btn-secondary" href="https://www.buymeacoffee.com/lewisconnolly" target="_blank" rel="noopener noreferrer">Buy me a coffee</a>
             </div>
         </div>
     </div>
