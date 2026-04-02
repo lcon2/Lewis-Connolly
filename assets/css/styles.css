@@ -378,35 +378,53 @@ body {
     transform: scale(1.03);
 }
 
-/* Post/category sticky headers: opacity crossfade only — lock wrap transform */
+/* Post/category sticky headers: never move the wrap on hover */
 .post .logo-link:hover .logo-wrap,
 .post .logo-link:focus-visible .logo-wrap,
 .archive.category-page .logo-link:hover .logo-wrap,
 .archive.category-page .logo-link:focus-visible .logo-wrap {
-    transform: translateZ(0);
+    transform: none;
 }
 
-/* Post + category listing headers: dual logo; +21% vs original 70px (two +10% steps) */
+/*
+ * Post + category sticky headers: fixed square box; both PNGs absolutely centered with
+ * object-fit — crossfade opacity only, zero layout reflow (fixes intermittent jump).
+ */
 .post .logo-wrap,
 .archive.category-page .logo-wrap {
     position: relative;
     display: block;
+    width: calc(70px * 1.1 * 1.1);
     max-width: calc(70px * 1.1 * 1.1);
-    transform: translateZ(0);
-    /* No transform transition — avoids hover jitter; crossfade is opacity-only below */
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    isolation: isolate;
     transition: none;
+    transform: none;
     transform-origin: center center;
 }
 
 .post .logo-wrap img,
 .archive.category-page .logo-wrap img {
-    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
     width: 100%;
-    height: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    display: block;
     border-radius: 5px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
 }
 
-/* Opacity-only crossfade in sticky headers — no transform animation (prevents logo shift) */
 .post header .logo-wrap .logo-base,
 .post header .logo-wrap .logo-hover,
 .archive.category-page header .logo-wrap .logo-base,
@@ -414,41 +432,10 @@ body {
     transition: opacity 1s ease;
 }
 
-/* Post header: kill baseline gap + stabilize stacked logo transforms */
-.post header .logo-link {
-    display: inline-block;
-    line-height: 0;
-}
-
-.post header .logo-wrap {
-    line-height: 0;
-}
-
-.post header .logo-wrap .logo-base,
-.post header .logo-wrap .logo-hover {
-    backface-visibility: hidden;
-}
-
-.post header .logo-wrap .logo-hover {
-    transform: translate3d(-50%, -50%, 0);
-}
-
+.post header .logo-link,
 .archive.category-page header .logo-link {
     display: inline-block;
     line-height: 0;
-}
-
-.archive.category-page header .logo-wrap {
-    line-height: 0;
-}
-
-.archive.category-page header .logo-wrap .logo-base,
-.archive.category-page header .logo-wrap .logo-hover {
-    backface-visibility: hidden;
-}
-
-.archive.category-page header .logo-wrap .logo-hover {
-    transform: translate3d(-50%, -50%, 0);
 }
 
 .post .category-pill {
@@ -2392,7 +2379,8 @@ footer {
     }
 
     .post header .logo-wrap,
-    .archive.category-page .logo-wrap {
+    .archive.category-page header .logo-wrap {
+        width: calc(60px * 1.1 * 1.1);
         max-width: calc(60px * 1.1 * 1.1);
     }
 
@@ -2822,7 +2810,6 @@ footer {
     margin: 0;
     max-width: none;
     filter: none;
-    transition: none;
 }
 
 .post header .logo-wrap img:hover,
