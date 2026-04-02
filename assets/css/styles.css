@@ -378,21 +378,23 @@ body {
     transform: scale(1.03);
 }
 
-/* Post/category sticky headers: opacity crossfade only — same position as logo1 */
+/* Post/category sticky headers: opacity crossfade only — lock wrap transform */
 .post .logo-link:hover .logo-wrap,
 .post .logo-link:focus-visible .logo-wrap,
 .archive.category-page .logo-link:hover .logo-wrap,
 .archive.category-page .logo-link:focus-visible .logo-wrap {
-    transform: none;
+    transform: translateZ(0);
 }
 
-/* Post + category listing headers: dual logo; ~10% larger than former 70px single mark */
+/* Post + category listing headers: dual logo; +21% vs original 70px (two +10% steps) */
 .post .logo-wrap,
 .archive.category-page .logo-wrap {
     position: relative;
     display: block;
-    max-width: calc(70px * 1.1);
-    transition: transform 1s ease;
+    max-width: calc(70px * 1.1 * 1.1);
+    transform: translateZ(0);
+    /* No transform transition — avoids hover jitter; crossfade is opacity-only below */
+    transition: none;
     transform-origin: center center;
 }
 
@@ -402,6 +404,14 @@ body {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+/* Opacity-only crossfade in sticky headers — no transform animation (prevents logo shift) */
+.post header .logo-wrap .logo-base,
+.post header .logo-wrap .logo-hover,
+.archive.category-page header .logo-wrap .logo-base,
+.archive.category-page header .logo-wrap .logo-hover {
+    transition: opacity 1s ease;
 }
 
 .post .category-pill {
@@ -1516,7 +1526,7 @@ header {
     padding-top: 4px;
     padding-right: 20px;
     box-sizing: border-box;
-    min-height: 80px;
+    min-height: calc(80px * 1.2);
     display: block;
     overflow-x: visible;
 }
@@ -1539,7 +1549,7 @@ header {
     border-bottom: 1px solid #2c2c2c;
     margin-bottom: 20px;
     padding-top: 4px;
-    min-height: 80px;
+    min-height: calc(80px * 1.2);
     display: block;
     text-align: center;
 }
@@ -2338,7 +2348,7 @@ footer {
 
     .post header .logo-wrap,
     .archive.category-page .logo-wrap {
-        max-width: calc(60px * 1.1);
+        max-width: calc(60px * 1.1 * 1.1);
     }
 
     .has-mobile-nav .navbar-menu,
@@ -2767,7 +2777,7 @@ footer {
     margin: 0;
     max-width: none;
     filter: none;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: none;
 }
 
 .post header .logo-wrap img:hover,
