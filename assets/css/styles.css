@@ -199,7 +199,7 @@ body {
     pointer-events: none;
 }
 
-/* Home header: brand left, pills viewport-centered, coffee right */
+/* Home header: tripartite flex — equal side columns so brand↔pills and pills↔coffee gaps match */
 .home .navbar.home-navbar {
     justify-content: flex-start;
     align-items: center;
@@ -211,35 +211,36 @@ body {
     flex-wrap: nowrap;
 }
 
-.home .navbar.home-navbar .brand-lockup {
-    flex: 0 0 auto;
-    margin-right: clamp(28px, 5vw, 52px);
-    /* Pills are absolute-centered; nudge brand right to restore wordmark→About spacing vs old flex gap */
-    transform: translateX(clamp(24px, 5vw, 60px));
-}
-
-/* Flex middle: absorbs space between brand and coffee; ul is positioned vs .home .navbar */
-.home-navbar__center {
+.home-navbar__left {
     flex: 1 1 0;
     min-width: 0;
-    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: clamp(28px, 5vw, 52px);
+}
+
+.home-navbar__left .brand-lockup {
+    flex: 0 0 auto;
+}
+
+.home-navbar__middle {
+    flex: 0 0 auto;
 }
 
 .home-navbar__right {
-    flex: 0 0 auto;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    /* Match brand margin-right rhythm: Studies→coffee similar to Lewis Connolly→About */
-    margin-left: clamp(28px, 5vw, 52px);
+    padding-left: clamp(28px, 5vw, 52px);
 }
 
-/* Tighter pill spacing on home; centered on nav (50% = Contact–Archive midpoint ≈ row center) */
+/* Tighter pill spacing on home; flow in middle column (symmetric gutters from tripartite flex) */
 .home .home-navbar .navbar-menu {
     gap: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     z-index: 2;
     margin: 0;
     padding: 0;
@@ -2257,14 +2258,16 @@ footer {
         width: 100%;
     }
 
-    .home .home-navbar__center,
-    .home .home-navbar__right {
-        display: none;
+    .home-navbar__left {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        padding-right: 0;
+        min-width: 0;
     }
 
-    .home .navbar.home-navbar .brand-lockup {
-        margin-right: 0;
-        transform: none;
+    .home .home-navbar__middle,
+    .home .home-navbar__right {
+        display: none;
     }
 
     .home .brand-lockup {
@@ -2313,7 +2316,7 @@ footer {
 
     .has-mobile-nav .navbar-menu,
     .has-mobile-nav .navbar-right,
-    .home .home-navbar__center,
+    .home .home-navbar__middle,
     .home .home-navbar__right {
         display: none;
     }

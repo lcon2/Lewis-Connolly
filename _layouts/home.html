@@ -19,15 +19,17 @@
     </div>
 
     <nav class="navbar home-navbar">
-        <a href="{{ '/' | relative_url }}" class="logo-link brand-lockup">
-            <span class="logo-wrap">
-                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
-                <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
-            </span>
-            <span class="site-wordmark">Lewis Connolly</span>
-        </a>
+        <div class="home-navbar__left">
+            <a href="{{ '/' | relative_url }}" class="logo-link brand-lockup">
+                <span class="logo-wrap">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="logo logo-base">
+                    <img src="{{ '/assets/images/logo2.png' | relative_url }}" alt="Logo" class="logo logo-hover">
+                </span>
+                <span class="site-wordmark">Lewis Connolly</span>
+            </a>
+        </div>
         {% include mobile-nav-toggle.html panel_id='home-mobile-menu-panel' %}
-        <div class="home-navbar__center">
+        <div class="home-navbar__middle">
             <ul class="navbar-menu">
                 <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
                 <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
