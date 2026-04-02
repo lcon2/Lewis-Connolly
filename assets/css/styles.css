@@ -214,6 +214,8 @@ body {
 .home .navbar.home-navbar .brand-lockup {
     flex: 0 0 auto;
     margin-right: clamp(28px, 5vw, 52px);
+    /* Pills are absolute-centered; nudge brand right to restore wordmark→About spacing vs old flex gap */
+    transform: translateX(clamp(24px, 5vw, 60px));
 }
 
 /* Flex middle: absorbs space between brand and coffee; ul is positioned vs .home .navbar */
@@ -227,8 +229,8 @@ body {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    /* Slightly more air between Studies pill and coffee than the old grouped row */
-    margin-left: 10px;
+    /* Match brand margin-right rhythm: Studies→coffee similar to Lewis Connolly→About */
+    margin-left: clamp(28px, 5vw, 52px);
 }
 
 /* Tighter pill spacing on home; centered on nav (50% = Contact–Archive midpoint ≈ row center) */
@@ -252,7 +254,9 @@ body {
 }
 
 .home .home-navbar .buy-coffee {
-    max-width: calc(180px * 1.08);
+    max-width: 180px;
+    transform: scale(1.08);
+    transform-origin: center center;
 }
 
 .home .navbar-content,
@@ -582,10 +586,15 @@ body {
     transform: scale(1.1);
 }
 
-/* Homepage: coffee image hover matches site accent (no pill chrome) */
+.home .navbar.home-navbar .buy-coffee:hover {
+    transform: scale(1.188);
+}
+
+/* Homepage: coffee image hover matches site accent (no pill chrome); 1.188 ≈ 1.08 × 1.1 */
 .home .home-navbar__right .buy-coffee-link:hover .buy-coffee,
 .home .home-navbar__right .buy-coffee-link:focus-visible .buy-coffee {
     filter: drop-shadow(0 0 8px rgba(209, 174, 122, 0.45));
+    transform: scale(1.188);
 }
 
 /* Hard desktop guard for reusable mobile controls */
@@ -2255,6 +2264,7 @@ footer {
 
     .home .navbar.home-navbar .brand-lockup {
         margin-right: 0;
+        transform: none;
     }
 
     .home .brand-lockup {
