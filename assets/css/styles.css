@@ -1585,9 +1585,8 @@ header {
 
 .post .beer-link:hover .beer-text,
 .post .beer-link:focus-visible .beer-text {
-    /* Extra ch + padding: letter-spacing was clipping the final “e” */
+    /* Wider than 15ch so letter-spacing does not clip the final letters */
     width: 16.75ch;
-    padding-right: 0.45em;
     opacity: 1;
     animation: coffee-type 0.9s steps(15, end);
 }
