@@ -3,19 +3,19 @@
     <div class="post-share-panel">
         <p class="post-share-kicker">Pass it on...</p>
         <nav class="post-share" aria-label="Share">
-            <a class="post-share__link" title="Share to X" href="https://x.com/intent/post?text={{ share_t }}%20{{ share_u }}" target="_blank" rel="noopener noreferrer">
+            <a class="post-share__link" data-tooltip="Share to X" href="https://x.com/intent/post?text={{ share_t }}%20{{ share_u }}" target="_blank" rel="noopener noreferrer">
                 <img class="post-share__icon" src="{{ '/assets/images/share/X.svg' | relative_url }}" width="36" height="36" alt="Share to X" loading="lazy" decoding="async">
             </a>
-            <a class="post-share__link" title="Share to Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ share_u }}" target="_blank" rel="noopener noreferrer">
+            <a class="post-share__link" data-tooltip="Share to Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ share_u }}" target="_blank" rel="noopener noreferrer">
                 <img class="post-share__icon" src="{{ '/assets/images/share/Facebook.svg' | relative_url }}" width="36" height="36" alt="Share to Facebook" loading="lazy" decoding="async">
             </a>
-            <a class="post-share__link" title="Share to Bluesky" href="https://bsky.app/intent/compose?text={{ share_t }}%20{{ share_u }}" target="_blank" rel="noopener noreferrer">
+            <a class="post-share__link" data-tooltip="Share to Bluesky" href="https://bsky.app/intent/compose?text={{ share_t }}%20{{ share_u }}" target="_blank" rel="noopener noreferrer">
                 <img class="post-share__icon" src="{{ '/assets/images/share/Bluesky.svg' | relative_url }}" width="36" height="36" alt="Share to Bluesky" loading="lazy" decoding="async">
             </a>
-            <a class="post-share__link" title="Share to Reddit" href="https://www.reddit.com/submit?url={{ share_u }}&title={{ share_t }}" target="_blank" rel="noopener noreferrer">
+            <a class="post-share__link" data-tooltip="Share to Reddit" href="https://www.reddit.com/submit?url={{ share_u }}&title={{ share_t }}" target="_blank" rel="noopener noreferrer">
                 <img class="post-share__icon" src="{{ '/assets/images/share/Reddit.svg' | relative_url }}" width="36" height="36" alt="Share to Reddit" loading="lazy" decoding="async">
             </a>
-            <a class="post-share__link" title="Atom 1.0 feed" href="{{ '/feed.xml' | relative_url }}">
+            <a class="post-share__link" data-tooltip="Atom 1.0 feed" href="{{ '/feed.xml' | relative_url }}">
                 <img class="post-share__icon" src="{{ '/assets/images/share/RSS.svg' | relative_url }}" width="36" height="36" alt="Atom 1.0 feed" loading="lazy" decoding="async">
             </a>
         </nav>
