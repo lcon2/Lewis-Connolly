@@ -2055,11 +2055,14 @@ body.post-support-modal-open {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    width: min(94vw, 30rem);
+    flex-shrink: 0;
+    align-self: center;
+    margin-inline: auto;
+    width: min(90vw, 25.5rem);
     min-height: clamp(280px, 42vh, 480px);
     max-height: min(92vh, 900px);
     overflow: auto;
-    padding: clamp(1.6rem, 4vw, 2.1rem) clamp(1.35rem, 3.5vw, 1.85rem) clamp(1.75rem, 4vw, 2.25rem);
+    padding: clamp(1.6rem, 4vw, 2.1rem) clamp(1.35rem, 3.5vw, 1.85rem) clamp(1.5rem, 3.4vw, 1.9rem);
     border-radius: 16px;
     border: 1px solid rgba(184, 138, 60, 0.35);
     background:
@@ -2079,13 +2082,12 @@ body.post-support-modal-open {
     height: 2rem;
     margin: 0;
     padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     font-family: system-ui, sans-serif;
     font-size: 1.35rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 0;
     color: rgba(231, 221, 209, 0.75);
     background: rgba(12, 10, 8, 0.65);
     border: 1px solid rgba(184, 138, 60, 0.28);
@@ -2130,7 +2132,7 @@ body.post-support-modal-open {
     align-items: center;
     min-height: 10rem;
     margin-top: clamp(1.25rem, 3vw, 2rem);
-    padding: clamp(0.75rem, 2vw, 1.5rem) 0 clamp(0.5rem, 1.5vw, 1rem);
+    padding: clamp(0.75rem, 2vw, 1.5rem) 0 clamp(0.45rem, 1.25vw, 0.85rem);
 }
 
 .post-support-modal__bmc-link {
@@ -2153,7 +2155,7 @@ body.post-support-modal-open {
 
 .post-support-modal__bmc-img {
     display: block;
-    width: min(240px, 70vw);
+    width: min(720px, 100%);
     height: auto;
     max-width: 100%;
 }
@@ -2161,10 +2163,10 @@ body.post-support-modal-open {
 /* Desktop: featured-card scale (~40–45% viewport width, generous vertical room) */
 @media (min-width: 900px) {
     .post-support-modal__panel {
-        width: min(94vw, max(32rem, 42.5vw));
+        width: min(90vw, max(27.2rem, 36.125vw));
         min-height: clamp(380px, 48vh, 640px);
         max-height: min(88vh, 920px);
-        padding: clamp(2.35rem, 3.2vw, 3.35rem) clamp(2.1rem, 2.8vw, 2.85rem) clamp(2.5rem, 3.5vw, 3.5rem);
+        padding: clamp(2.35rem, 3.2vw, 3.35rem) clamp(2.1rem, 2.8vw, 2.85rem) clamp(2.1rem, 3vw, 3rem);
         border-radius: 18px;
     }
 
@@ -2185,11 +2187,7 @@ body.post-support-modal-open {
     .post-support-modal__body {
         min-height: clamp(14rem, 28vh, 22rem);
         margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
-        padding: clamp(1rem, 2vw, 2rem) 0 clamp(0.75rem, 1.5vw, 1.5rem);
-    }
-
-    .post-support-modal__bmc-img {
-        width: min(280px, 72%);
+        padding: clamp(1rem, 2vw, 2rem) 0 clamp(0.65rem, 1.25vw, 1.25rem);
     }
 }
 
