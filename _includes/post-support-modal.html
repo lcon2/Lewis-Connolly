@@ -5,27 +5,51 @@
         role="dialog"
         aria-modal="true"
         aria-labelledby="post-support-modal-heading"
+        aria-describedby="post-support-modal-lede"
     >
         <button type="button" class="post-support-modal__close" data-post-support-close aria-label="Close">&times;</button>
-        <h2 id="post-support-modal-heading" class="post-support-modal__heading">
-            If you&rsquo;d like to support this work, you can do so below:
-        </h2>
-        <div class="post-support-modal__body">
+        <div class="post-support-modal__header">
+            <h2 id="post-support-modal-heading" class="post-support-modal__heading">
+                If you&rsquo;d like to support this work, you can do so below:
+            </h2>
+            <p id="post-support-modal-lede" class="post-support-modal__lede">
+                Tips and one-off support help keep essays and the site itself going.
+            </p>
+        </div>
+        <div class="post-support-modal__actions" id="post-support-modal-actions">
             <a
                 href="https://buymeacoffee.com/lewisconnolly"
-                class="post-support-modal__bmc-link"
+                class="post-support-modal__action post-support-modal__action--coffee"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-support-hint="Support my work on buy me a coffee."
             >
                 <img
                     src="{{ '/assets/images/Coffee-Button.svg' | relative_url }}"
                     alt="Buy me a coffee"
                     width="40"
                     height="40"
-                    class="post-support-modal__bmc-img"
+                    class="post-support-modal__action-img"
                     decoding="async"
                 >
             </a>
+            <button
+                type="button"
+                class="post-support-modal__action post-support-modal__action--stripe"
+                aria-disabled="true"
+                aria-label="Stripe (not yet available)"
+                data-support-hint="Stripe not yet available."
+            >
+                <img
+                    src="{{ '/assets/images/Stripe.svg' | relative_url }}"
+                    alt=""
+                    width="40"
+                    height="40"
+                    class="post-support-modal__action-img"
+                    decoding="async"
+                >
+            </button>
         </div>
+        <p class="post-support-modal__hint" id="post-support-modal-hint" aria-live="polite"></p>
     </div>
 </div>

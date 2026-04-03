@@ -2113,9 +2113,13 @@ body.post-support-modal-open {
     outline-offset: 2px;
 }
 
+.post-support-modal__header {
+    flex-shrink: 0;
+    padding-right: 2.25rem;
+}
+
 .post-support-modal__heading {
-    margin: 0 2.5rem 0 0;
-    padding-right: 0.25rem;
+    margin: 0;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
     font-size: clamp(1.02rem, 2.8vw, 1.18rem);
     font-weight: 600;
@@ -2125,39 +2129,112 @@ body.post-support-modal-open {
     text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 
-.post-support-modal__body {
+.post-support-modal__lede {
+    margin: clamp(0.65rem, 1.8vw, 0.95rem) 0 0;
+    font-family: 'EBGaramond', serif;
+    font-size: clamp(0.98rem, 2.4vw, 1.06rem);
+    line-height: 1.55;
+    color: rgba(215, 205, 192, 0.88);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.post-support-modal__actions {
     flex: 1 1 auto;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    min-height: 10rem;
-    margin-top: clamp(1.25rem, 3vw, 2rem);
-    padding: clamp(0.75rem, 2vw, 1.5rem) 0 clamp(0.45rem, 1.25vw, 0.85rem);
+    justify-content: center;
+    gap: clamp(1.25rem, 4vw, 2.25rem);
+    min-height: clamp(11rem, 32vh, 18rem);
+    margin-top: clamp(1.35rem, 3.2vw, 2rem);
+    padding: clamp(0.85rem, 2.5vw, 1.75rem) 0;
 }
 
-.post-support-modal__bmc-link {
-    display: inline-block;
+.post-support-modal__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(9.5rem, 42vw, 11.5rem);
+    min-height: clamp(5.5rem, 18vw, 7rem);
+    padding: clamp(0.85rem, 2.2vw, 1.15rem) clamp(1rem, 2.5vw, 1.35rem);
     line-height: 0;
-    border-radius: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    border-radius: 12px;
+    border: 1px solid rgba(184, 138, 60, 0.4);
+    background: rgba(10, 8, 7, 0.75);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.25) inset,
+        0 10px 28px rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
-.post-support-modal__bmc-link:hover,
-.post-support-modal__bmc-link:focus-visible {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+.post-support-modal__action--coffee {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
-.post-support-modal__bmc-link:focus-visible {
+.post-support-modal__action--coffee:hover,
+.post-support-modal__action--coffee:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(216, 171, 94, 0.55);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.2) inset,
+        0 0 20px rgba(184, 138, 60, 0.12),
+        0 14px 32px rgba(0, 0, 0, 0.42);
+}
+
+.post-support-modal__action--coffee:focus-visible {
     outline: 1px solid rgba(216, 171, 94, 0.55);
     outline-offset: 3px;
 }
 
-.post-support-modal__bmc-img {
+.post-support-modal__action--stripe {
+    margin: 0;
+    cursor: not-allowed;
+    opacity: 0.72;
+    border-color: rgba(184, 138, 60, 0.22);
+    background: rgba(8, 7, 6, 0.55);
+}
+
+.post-support-modal__action--stripe:hover,
+.post-support-modal__action--stripe:focus-visible {
+    transform: none;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.25) inset,
+        0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.post-support-modal__action--stripe:focus-visible {
+    outline: 1px solid rgba(184, 138, 60, 0.35);
+    outline-offset: 3px;
+}
+
+.post-support-modal__action-img {
     display: block;
-    width: min(720px, 100%);
+    width: clamp(140px, 36vw, 220px);
     height: auto;
     max-width: 100%;
+}
+
+.post-support-modal__hint {
+    flex-shrink: 0;
+    margin: 0;
+    min-height: 0;
+    padding-top: clamp(0.35rem, 1.2vw, 0.65rem);
+    font-family: 'EBGaramond', serif;
+    font-size: clamp(0.92rem, 2.2vw, 1rem);
+    line-height: 1.45;
+    text-align: center;
+    color: rgba(231, 221, 209, 0.82);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+.post-support-modal__hint:empty {
+    padding-top: 0;
 }
 
 /* Desktop: featured-card scale (~40–45% viewport width, generous vertical room) */
@@ -2178,16 +2255,44 @@ body.post-support-modal-open {
         font-size: 1.45rem;
     }
 
+    .post-support-modal__header {
+        padding-right: 2.75rem;
+    }
+
     .post-support-modal__heading {
-        margin-right: 2.75rem;
         font-size: clamp(1.12rem, 1.35vw, 1.38rem);
         line-height: 1.48;
     }
 
-    .post-support-modal__body {
-        min-height: clamp(14rem, 28vh, 22rem);
-        margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
-        padding: clamp(1rem, 2vw, 2rem) 0 clamp(0.65rem, 1.25vw, 1.25rem);
+    .post-support-modal__lede {
+        font-size: clamp(1.02rem, 1.15vw, 1.08rem);
+    }
+
+    .post-support-modal__actions {
+        min-height: clamp(15rem, 30vh, 24rem);
+        gap: clamp(1.75rem, 3vw, 2.75rem);
+        margin-top: clamp(1.65rem, 2.5vw, 2.35rem);
+        padding: clamp(1.15rem, 2vw, 2rem) 0 clamp(0.85rem, 1.5vw, 1.35rem);
+    }
+
+    .post-support-modal__action {
+        min-width: clamp(11rem, 18vw, 13rem);
+        min-height: clamp(6.5rem, 14vh, 8.5rem);
+        padding: clamp(1rem, 1.8vw, 1.35rem) clamp(1.15rem, 2vw, 1.5rem);
+        border-radius: 14px;
+    }
+
+    .post-support-modal__action-img {
+        width: clamp(180px, 22vw, 260px);
+    }
+
+    .post-support-modal__hint {
+        font-size: clamp(0.98rem, 1.1vw, 1.04rem);
+        padding-top: clamp(0.5rem, 1vw, 0.85rem);
+    }
+
+    .post-support-modal__hint:empty {
+        padding-top: 0;
     }
 }
 
