@@ -378,11 +378,19 @@ body {
     transform: scale(1.03);
 }
 
-/* Post/category sticky headers: never move the wrap on hover */
+/* Post/category sticky headers + non-home navbar: never move the wrap on hover */
 .post .logo-link:hover .logo-wrap,
 .post .logo-link:focus-visible .logo-wrap,
 .archive.category-page .logo-link:hover .logo-wrap,
-.archive.category-page .logo-link:focus-visible .logo-wrap {
+.archive.category-page .logo-link:focus-visible .logo-wrap,
+.studies .navbar .logo-link:hover .logo-wrap,
+.studies .navbar .logo-link:focus-visible .logo-wrap,
+.about .navbar .logo-link:hover .logo-wrap,
+.about .navbar .logo-link:focus-visible .logo-wrap,
+.contact .navbar .logo-link:hover .logo-wrap,
+.contact .navbar .logo-link:focus-visible .logo-wrap,
+.archive.archive-page .navbar .logo-link:hover .logo-wrap,
+.archive.archive-page .navbar .logo-link:focus-visible .logo-wrap {
     transform: none;
 }
 
@@ -434,6 +442,70 @@ body {
 
 .post header .logo-link,
 .archive.category-page header .logo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+/*
+ * Navbar (non-home): same fixed logo box + crossfade as posts/category headers.
+ * Archive, about, contact, studies (incl. dissertation + private archive) use this nav;
+ * without it, .logo-wrap hover scale fights absolute-stacked PNGs and the mark jumps/misaligns.
+ */
+.studies .navbar .logo-wrap,
+.about .navbar .logo-wrap,
+.contact .navbar .logo-wrap,
+.archive.archive-page .navbar .logo-wrap {
+    position: relative;
+    display: block;
+    width: calc(70px * 1.1 * 1.1);
+    max-width: calc(70px * 1.1 * 1.1);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    isolation: isolate;
+    transition: none;
+    transform: none;
+    transform-origin: center center;
+}
+
+.studies .navbar .logo-wrap img,
+.about .navbar .logo-wrap img,
+.contact .navbar .logo-wrap img,
+.archive.archive-page .navbar .logo-wrap img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    filter: none;
+}
+
+.studies .navbar .logo-wrap .logo-base,
+.studies .navbar .logo-wrap .logo-hover,
+.about .navbar .logo-wrap .logo-base,
+.about .navbar .logo-wrap .logo-hover,
+.contact .navbar .logo-wrap .logo-base,
+.contact .navbar .logo-wrap .logo-hover,
+.archive.archive-page .navbar .logo-wrap .logo-base,
+.archive.archive-page .navbar .logo-wrap .logo-hover {
+    transition: opacity 1s ease;
+}
+
+.studies .navbar .logo-link,
+.about .navbar .logo-link,
+.contact .navbar .logo-link,
+.archive.archive-page .navbar .logo-link {
     display: inline-block;
     line-height: 0;
 }
@@ -2384,6 +2456,14 @@ footer {
         max-width: calc(60px * 1.1 * 1.1);
     }
 
+    .studies .navbar .logo-wrap,
+    .about .navbar .logo-wrap,
+    .contact .navbar .logo-wrap,
+    .archive.archive-page .navbar .logo-wrap {
+        width: calc(60px * 1.1 * 1.1);
+        max-width: calc(60px * 1.1 * 1.1);
+    }
+
     .has-mobile-nav .navbar-menu,
     .has-mobile-nav .navbar-right,
     .home .home-navbar__middle,
@@ -2849,18 +2929,7 @@ footer {
     filter: none;
 }
 
-/* Archive main nav: dual logo must not inherit .archive .logo img grayscale block below */
-.archive .navbar .logo-wrap img {
-    margin: 0;
-    max-width: none;
-    filter: none;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.archive .navbar .logo-wrap img:hover {
-    transform: none;
-    filter: none;
-}
+/* Navbar dual-logo rules: see “Navbar (non-home)” block with .post header logo-wrap */
 
 /* Archive Content Styling */
 .archive .archive-content {
