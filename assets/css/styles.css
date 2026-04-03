@@ -2058,11 +2058,11 @@ body.post-support-modal-open {
     flex-shrink: 0;
     align-self: center;
     margin-inline: auto;
-    width: min(90vw, 25.5rem);
-    min-height: clamp(280px, 42vh, 480px);
+    width: min(90vw, 24rem);
+    min-height: clamp(220px, 28vh, 360px);
     max-height: min(92vh, 900px);
     overflow: auto;
-    padding: clamp(1.6rem, 4vw, 2.1rem) clamp(1.35rem, 3.5vw, 1.85rem) clamp(1.5rem, 3.4vw, 1.9rem);
+    padding: clamp(1.45rem, 3.5vw, 1.9rem) clamp(1.2rem, 3.2vw, 1.65rem) clamp(1.35rem, 3vw, 1.7rem);
     border-radius: 16px;
     border: 1px solid rgba(184, 138, 60, 0.35);
     background:
@@ -2130,15 +2130,15 @@ body.post-support-modal-open {
 }
 
 .post-support-modal__actions {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: clamp(1rem, 3.2vw, 1.75rem);
-    min-height: clamp(9rem, 26vh, 14rem);
-    margin-top: clamp(1.35rem, 3.2vw, 2rem);
-    padding: clamp(0.85rem, 2.5vw, 1.75rem) 0;
+    min-height: clamp(5.5rem, 10vh, 9rem);
+    margin-top: clamp(1.1rem, 2.8vw, 1.65rem);
+    padding: clamp(0.65rem, 2vw, 1.25rem) 0;
 }
 
 .post-support-modal__action {
@@ -2215,28 +2215,32 @@ body.post-support-modal-open {
     flex-shrink: 0;
     margin: 0;
     box-sizing: border-box;
-    /* Reserve space so hover hint text does not resize the modal */
-    min-height: clamp(3rem, 8.5vh, 3.65rem);
-    padding-top: clamp(0.35rem, 1.2vw, 0.65rem);
-    padding-bottom: clamp(0.2rem, 0.6vw, 0.45rem);
+    /* Fixed band: empty, one line, or two lines must not change modal height */
+    height: 3.75rem;
+    min-height: 3.75rem;
+    max-height: 3.75rem;
+    padding: 0.35rem 0.65rem;
     font-family: 'EBGaramond', serif;
     font-size: clamp(0.92rem, 2.2vw, 1rem);
     line-height: 1.45;
     text-align: center;
     color: rgba(231, 221, 209, 0.82);
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Desktop: featured-card scale (~40–45% viewport width, generous vertical room) */
 @media (min-width: 900px) {
     .post-support-modal__panel {
-        width: min(90vw, max(27.2rem, 36.125vw));
-        min-height: clamp(380px, 48vh, 640px);
+        width: min(90vw, max(23.5rem, 31vw));
+        min-height: clamp(300px, 34vh, 480px);
         max-height: min(88vh, 920px);
-        padding: clamp(2.35rem, 3.2vw, 3.35rem) clamp(2.1rem, 2.8vw, 2.85rem) clamp(2.1rem, 3vw, 3rem);
+        padding: clamp(2.1rem, 2.85vw, 3rem) clamp(1.9rem, 2.5vw, 2.55rem) clamp(1.9rem, 2.7vw, 2.7rem);
         border-radius: 18px;
     }
 
@@ -2258,10 +2262,10 @@ body.post-support-modal-open {
     }
 
     .post-support-modal__actions {
-        min-height: clamp(11rem, 24vh, 17rem);
+        min-height: clamp(7rem, 12vh, 11rem);
         gap: clamp(1.25rem, 2.5vw, 2rem);
-        margin-top: clamp(1.65rem, 2.5vw, 2.35rem);
-        padding: clamp(1.15rem, 2vw, 2rem) 0 clamp(0.85rem, 1.5vw, 1.35rem);
+        margin-top: clamp(1.35rem, 2vw, 1.9rem);
+        padding: clamp(0.85rem, 1.6vw, 1.6rem) 0 clamp(0.65rem, 1.2vw, 1.1rem);
     }
 
     .post-support-modal__action {
@@ -2277,9 +2281,10 @@ body.post-support-modal-open {
 
     .post-support-modal__hint {
         font-size: clamp(0.98rem, 1.1vw, 1.04rem);
-        min-height: clamp(3.15rem, 7vh, 3.85rem);
-        padding-top: clamp(0.5rem, 1vw, 0.85rem);
-        padding-bottom: clamp(0.25rem, 0.55vw, 0.5rem);
+        height: 4.15rem;
+        min-height: 4.15rem;
+        max-height: 4.15rem;
+        padding: 0.45rem 0.85rem;
     }
 }
 
