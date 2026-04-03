@@ -2144,8 +2144,8 @@ body.post-support-modal-open {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: clamp(1.25rem, 4vw, 2.25rem);
-    min-height: clamp(11rem, 32vh, 18rem);
+    gap: clamp(1rem, 3.2vw, 1.75rem);
+    min-height: clamp(9rem, 26vh, 14rem);
     margin-top: clamp(1.35rem, 3.2vw, 2rem);
     padding: clamp(0.85rem, 2.5vw, 1.75rem) 0;
 }
@@ -2154,9 +2154,9 @@ body.post-support-modal-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: clamp(9.5rem, 42vw, 11.5rem);
-    min-height: clamp(5.5rem, 18vw, 7rem);
-    padding: clamp(0.85rem, 2.2vw, 1.15rem) clamp(1rem, 2.5vw, 1.35rem);
+    min-width: clamp(6.5rem, 34vw, 8rem);
+    min-height: clamp(4rem, 14vw, 5rem);
+    padding: clamp(0.55rem, 1.6vw, 0.85rem) clamp(0.75rem, 1.8vw, 1rem);
     line-height: 0;
     border-radius: 12px;
     border: 1px solid rgba(184, 138, 60, 0.4);
@@ -2215,7 +2215,7 @@ body.post-support-modal-open {
 
 .post-support-modal__action-img {
     display: block;
-    width: clamp(140px, 36vw, 220px);
+    width: clamp(70px, 18vw, 110px);
     height: auto;
     max-width: 100%;
 }
@@ -2223,18 +2223,20 @@ body.post-support-modal-open {
 .post-support-modal__hint {
     flex-shrink: 0;
     margin: 0;
-    min-height: 0;
+    box-sizing: border-box;
+    /* Reserve space so hover hint text does not resize the modal */
+    min-height: clamp(3rem, 8.5vh, 3.65rem);
     padding-top: clamp(0.35rem, 1.2vw, 0.65rem);
+    padding-bottom: clamp(0.2rem, 0.6vw, 0.45rem);
     font-family: 'EBGaramond', serif;
     font-size: clamp(0.92rem, 2.2vw, 1rem);
     line-height: 1.45;
     text-align: center;
     color: rgba(231, 221, 209, 0.82);
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
-}
-
-.post-support-modal__hint:empty {
-    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Desktop: featured-card scale (~40–45% viewport width, generous vertical room) */
@@ -2269,30 +2271,28 @@ body.post-support-modal-open {
     }
 
     .post-support-modal__actions {
-        min-height: clamp(15rem, 30vh, 24rem);
-        gap: clamp(1.75rem, 3vw, 2.75rem);
+        min-height: clamp(11rem, 24vh, 17rem);
+        gap: clamp(1.25rem, 2.5vw, 2rem);
         margin-top: clamp(1.65rem, 2.5vw, 2.35rem);
         padding: clamp(1.15rem, 2vw, 2rem) 0 clamp(0.85rem, 1.5vw, 1.35rem);
     }
 
     .post-support-modal__action {
-        min-width: clamp(11rem, 18vw, 13rem);
-        min-height: clamp(6.5rem, 14vh, 8.5rem);
-        padding: clamp(1rem, 1.8vw, 1.35rem) clamp(1.15rem, 2vw, 1.5rem);
+        min-width: clamp(7.5rem, 14vw, 9rem);
+        min-height: clamp(4.5rem, 11vh, 6rem);
+        padding: clamp(0.65rem, 1.3vw, 0.95rem) clamp(0.85rem, 1.5vw, 1.1rem);
         border-radius: 14px;
     }
 
     .post-support-modal__action-img {
-        width: clamp(180px, 22vw, 260px);
+        width: clamp(90px, 11vw, 130px);
     }
 
     .post-support-modal__hint {
         font-size: clamp(0.98rem, 1.1vw, 1.04rem);
+        min-height: clamp(3.15rem, 7vh, 3.85rem);
         padding-top: clamp(0.5rem, 1vw, 0.85rem);
-    }
-
-    .post-support-modal__hint:empty {
-        padding-top: 0;
+        padding-bottom: clamp(0.25rem, 0.55vw, 0.5rem);
     }
 }
 
