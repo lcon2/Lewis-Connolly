@@ -2129,15 +2129,6 @@ body.post-support-modal-open {
     text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 
-.post-support-modal__lede {
-    margin: clamp(0.65rem, 1.8vw, 0.95rem) 0 0;
-    font-family: 'EBGaramond', serif;
-    font-size: clamp(0.98rem, 2.4vw, 1.06rem);
-    line-height: 1.55;
-    color: rgba(215, 205, 192, 0.88);
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
-}
-
 .post-support-modal__actions {
     flex: 1 1 auto;
     display: flex;
@@ -2264,10 +2255,6 @@ body.post-support-modal-open {
     .post-support-modal__heading {
         font-size: clamp(1.12rem, 1.35vw, 1.38rem);
         line-height: 1.48;
-    }
-
-    .post-support-modal__lede {
-        font-size: clamp(1.02rem, 1.15vw, 1.08rem);
     }
 
     .post-support-modal__actions {
