@@ -2522,6 +2522,17 @@ footer {
         z-index: 2;
     }
 
+    /* Post: keep coffee on the left on mobile so it doesn’t overlap the menu (right) */
+    .post .beer-link {
+        left: 12px;
+        right: auto;
+        transform: translate(calc(-35px - 12px - 92px), -50%);
+    }
+
+    .post header.is-beer-placed .beer-link {
+        transform: translateY(-50%);
+    }
+
     body.home-mobile-menu-open {
         overflow: hidden;
     }
