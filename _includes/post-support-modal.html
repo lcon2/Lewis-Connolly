@@ -1,0 +1,31 @@
+<div id="post-support-modal" class="post-support-modal" hidden>
+    <div class="post-support-modal__backdrop" data-post-support-close tabindex="-1" aria-hidden="true"></div>
+    <div
+        class="post-support-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="post-support-modal-heading"
+    >
+        <button type="button" class="post-support-modal__close" data-post-support-close aria-label="Close">&times;</button>
+        <h2 id="post-support-modal-heading" class="post-support-modal__heading">
+            If you&rsquo;d like to support this work, you can do so below:
+        </h2>
+        <div class="post-support-modal__body">
+            <a
+                href="https://buymeacoffee.com/lewisconnolly"
+                class="post-support-modal__bmc-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img
+                    src="{{ '/assets/images/Coffee-Button.png' | relative_url }}"
+                    alt="Buy me a coffee"
+                    width="40"
+                    height="40"
+                    class="post-support-modal__bmc-img"
+                    decoding="async"
+                >
+            </a>
+        </div>
+    </div>
+</div>

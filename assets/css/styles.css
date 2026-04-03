@@ -1983,10 +1983,10 @@ article picture {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 12rem;
-    padding: 11px 32px;
+    min-width: 14.4rem;
+    padding: 13px 38px;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
-    font-size: 0.85rem;
+    font-size: 1.02rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-decoration: none;
@@ -2001,6 +2001,9 @@ article picture {
         border-color 0.2s ease,
         box-shadow 0.2s ease,
         transform 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
 }
 
 .post-support-button:hover,
@@ -2019,6 +2022,133 @@ article picture {
 
 .post-support-button:active {
     transform: translateY(1px);
+}
+
+body.post-support-modal-open {
+    overflow: hidden;
+}
+
+.post-support-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(16px, 4vw, 28px);
+    box-sizing: border-box;
+}
+
+.post-support-modal[hidden] {
+    display: none !important;
+}
+
+.post-support-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    cursor: pointer;
+}
+
+.post-support-modal__panel {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 26rem);
+    max-height: min(90vh, 520px);
+    overflow: auto;
+    padding: clamp(1.35rem, 3.5vw, 1.75rem) clamp(1.25rem, 3vw, 1.65rem) clamp(1.5rem, 3.5vw, 1.85rem);
+    border-radius: 14px;
+    border: 1px solid rgba(184, 138, 60, 0.35);
+    background:
+        linear-gradient(165deg, rgba(255, 200, 150, 0.05) 0%, rgba(0, 0, 0, 0) 42%),
+        #171311;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.35) inset,
+        0 24px 48px rgba(0, 0, 0, 0.55),
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.post-support-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(231, 221, 209, 0.75);
+    background: rgba(12, 10, 8, 0.65);
+    border: 1px solid rgba(184, 138, 60, 0.28);
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.post-support-modal__close:hover,
+.post-support-modal__close:focus-visible {
+    color: #e7ddd1;
+    background: rgba(36, 27, 22, 0.92);
+    border-color: rgba(216, 171, 94, 0.45);
+}
+
+.post-support-modal__close:focus-visible {
+    outline: 1px solid rgba(216, 171, 94, 0.55);
+    outline-offset: 2px;
+}
+
+.post-support-modal__heading {
+    margin: 0 2.25rem 1.15rem 0;
+    font-family: "Cinzel", "EBGaramond", Garamond, serif;
+    font-size: clamp(1rem, 2.6vw, 1.12rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    color: #e7ddd1;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+.post-support-modal__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.25rem;
+}
+
+.post-support-modal__bmc-link {
+    display: inline-block;
+    line-height: 0;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.post-support-modal__bmc-link:hover,
+.post-support-modal__bmc-link:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.post-support-modal__bmc-link:focus-visible {
+    outline: 1px solid rgba(216, 171, 94, 0.55);
+    outline-offset: 3px;
+}
+
+.post-support-modal__bmc-img {
+    display: block;
+    width: min(200px, 72vw);
+    height: auto;
+    max-width: 100%;
 }
 
 .post-follow-card {

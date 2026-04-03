@@ -51,7 +51,9 @@
         </div>
 
         <div class="post-support-wrap">
-            <a href="https://buymeacoffee.com/lewisconnolly" class="post-support-button" target="_blank" rel="noopener noreferrer">Support my work</a>
+            <button type="button" class="post-support-button" id="post-support-open" aria-haspopup="dialog" aria-controls="post-support-modal">
+                Support my work
+            </button>
         </div>
 
         <!-- New Navigation Section -->
@@ -77,6 +79,8 @@
     <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
+
+    {% include post-support-modal.html %}
 
     <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
     <script>
@@ -122,5 +126,6 @@
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/subscribe-form.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/post-support-modal.js' | relative_url }}"></script>
 </body>
 </html>
