@@ -2613,6 +2613,17 @@ footer {
         transform: translateY(-50%);
     }
 
+    /* Icon only on mobile: hide “Buy me a coffee” expansion (hover rules win on specificity otherwise) */
+    .post .beer-text,
+    .post .beer-link:hover .beer-text,
+    .post .beer-link:focus-visible .beer-text {
+        display: none !important;
+        width: 0 !important;
+        margin: 0 !important;
+        opacity: 0 !important;
+        animation: none !important;
+    }
+
     body.home-mobile-menu-open {
         overflow: hidden;
     }
