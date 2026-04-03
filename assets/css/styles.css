@@ -2053,25 +2053,28 @@ body.post-support-modal-open {
 .post-support-modal__panel {
     position: relative;
     z-index: 1;
-    width: min(100%, 26rem);
-    max-height: min(90vh, 520px);
+    display: flex;
+    flex-direction: column;
+    width: min(94vw, 30rem);
+    min-height: clamp(280px, 42vh, 480px);
+    max-height: min(92vh, 900px);
     overflow: auto;
-    padding: clamp(1.35rem, 3.5vw, 1.75rem) clamp(1.25rem, 3vw, 1.65rem) clamp(1.5rem, 3.5vw, 1.85rem);
-    border-radius: 14px;
+    padding: clamp(1.6rem, 4vw, 2.1rem) clamp(1.35rem, 3.5vw, 1.85rem) clamp(1.75rem, 4vw, 2.25rem);
+    border-radius: 16px;
     border: 1px solid rgba(184, 138, 60, 0.35);
     background:
-        linear-gradient(165deg, rgba(255, 200, 150, 0.05) 0%, rgba(0, 0, 0, 0) 42%),
+        linear-gradient(165deg, rgba(255, 200, 150, 0.06) 0%, rgba(0, 0, 0, 0) 48%),
         #171311;
     box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.35) inset,
-        0 24px 48px rgba(0, 0, 0, 0.55),
-        0 8px 20px rgba(0, 0, 0, 0.35);
+        0 28px 56px rgba(0, 0, 0, 0.58),
+        0 12px 28px rgba(0, 0, 0, 0.38);
 }
 
 .post-support-modal__close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     width: 2rem;
     height: 2rem;
     margin: 0;
@@ -2109,21 +2112,25 @@ body.post-support-modal-open {
 }
 
 .post-support-modal__heading {
-    margin: 0 2.25rem 1.15rem 0;
+    margin: 0 2.5rem 0 0;
+    padding-right: 0.25rem;
     font-family: "Cinzel", "EBGaramond", Garamond, serif;
-    font-size: clamp(1rem, 2.6vw, 1.12rem);
+    font-size: clamp(1.02rem, 2.8vw, 1.18rem);
     font-weight: 600;
     letter-spacing: 0.04em;
-    line-height: 1.45;
+    line-height: 1.5;
     color: #e7ddd1;
     text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 
 .post-support-modal__body {
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0.25rem;
+    min-height: 10rem;
+    margin-top: clamp(1.25rem, 3vw, 2rem);
+    padding: clamp(0.75rem, 2vw, 1.5rem) 0 clamp(0.5rem, 1.5vw, 1rem);
 }
 
 .post-support-modal__bmc-link {
@@ -2146,9 +2153,44 @@ body.post-support-modal-open {
 
 .post-support-modal__bmc-img {
     display: block;
-    width: min(200px, 72vw);
+    width: min(240px, 70vw);
     height: auto;
     max-width: 100%;
+}
+
+/* Desktop: featured-card scale (~40–45% viewport width, generous vertical room) */
+@media (min-width: 900px) {
+    .post-support-modal__panel {
+        width: min(94vw, max(32rem, 42.5vw));
+        min-height: clamp(380px, 48vh, 640px);
+        max-height: min(88vh, 920px);
+        padding: clamp(2.35rem, 3.2vw, 3.35rem) clamp(2.1rem, 2.8vw, 2.85rem) clamp(2.5rem, 3.5vw, 3.5rem);
+        border-radius: 18px;
+    }
+
+    .post-support-modal__close {
+        top: 16px;
+        right: 16px;
+        width: 2.35rem;
+        height: 2.35rem;
+        font-size: 1.45rem;
+    }
+
+    .post-support-modal__heading {
+        margin-right: 2.75rem;
+        font-size: clamp(1.12rem, 1.35vw, 1.38rem);
+        line-height: 1.48;
+    }
+
+    .post-support-modal__body {
+        min-height: clamp(14rem, 28vh, 22rem);
+        margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+        padding: clamp(1rem, 2vw, 2rem) 0 clamp(0.75rem, 1.5vw, 1.5rem);
+    }
+
+    .post-support-modal__bmc-img {
+        width: min(280px, 72%);
+    }
 }
 
 .post-follow-card {
