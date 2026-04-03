@@ -2593,6 +2593,17 @@ footer {
         flex-shrink: 0;
     }
 
+    /* Sticky bar: center logo on the cross axis; menu + coffee stay top:50% / translateY(-50%) */
+    .post header,
+    .archive.category-page header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-block: 8px;
+    }
+
     .post.has-mobile-nav .home-mobile-menu-toggle,
     .archive.category-page.has-mobile-nav .home-mobile-menu-toggle {
         position: absolute;
