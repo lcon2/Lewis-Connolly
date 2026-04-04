@@ -69,6 +69,14 @@
         <main style="width: 75%; padding: 20px; line-height: 1.6; font-size: 18px; color: #f0f0f0;">
             {% assign abide_tooltip_page = site.pages | where_exp: "p", "p.path == 'abide.md'" | first %}
             <h1>{{ page.title }}</h1>
+            <section class="connolly-archives-cta threads-archive-cta" aria-label="Thematic threads map">
+                <a
+                    class="connolly-archives-button"
+                    href="{{ '/threads/' | relative_url }}"
+                    aria-label="View thematic threads between recent posts">
+                    Threads
+                </a>
+            </section>
             <div class="archive-content">
                 {% for year_group in posts_by_year %}
                     <div class="year-group" id="year-{{ year_group.name }}">

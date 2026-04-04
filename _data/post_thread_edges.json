@@ -1,0 +1,4 @@
+{
+  "about": "Edges connect posts by thematic or argumentative links. Use each post's Jekyll url path as id (same as post.url): leading slash, trailing slash, e.g. /2026/04/03/the-hybrid-interiority/. Only edges whose source and target appear in the 20 most recent posts are drawn.",
+  "edges": []
+}
