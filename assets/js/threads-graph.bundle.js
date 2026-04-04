@@ -7005,6 +7005,42 @@ function isWebglAvailable() {
     return false;
   }
 }
+function attachThreadsFullscreen(container) {
+  const btn = container.querySelector("#threads-fullscreen-btn");
+  if (!btn) return;
+  const doc = document;
+  function fullscreenElement() {
+    return doc.fullscreenElement || doc.webkitFullscreenElement || null;
+  }
+  function updateBtn() {
+    const on = fullscreenElement() === container;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute(
+      "aria-label",
+      on ? "Exit full screen" : "Enter full screen"
+    );
+    btn.title = on ? "Exit full screen (Esc)" : "Full screen (Esc to exit)";
+  }
+  async function toggle() {
+    try {
+      if (fullscreenElement() === container) {
+        if (doc.exitFullscreen) await doc.exitFullscreen();
+        else if (doc.webkitExitFullscreen) await doc.webkitExitFullscreen();
+      } else if (container.requestFullscreen) {
+        await container.requestFullscreen();
+      } else if (container.webkitRequestFullscreen) {
+        await container.webkitRequestFullscreen();
+      }
+    } catch {
+    }
+  }
+  btn.addEventListener("click", () => {
+    void toggle();
+  });
+  doc.addEventListener("fullscreenchange", updateBtn);
+  doc.addEventListener("webkitfullscreenchange", updateBtn);
+  updateBtn();
+}
 function runGraph(container, dataEl) {
   let payload;
   try {
@@ -7478,6 +7514,7 @@ function startWhenContainerReady() {
     if (container.offsetWidth > 0 && container.offsetHeight > 0) {
       done = true;
       if (ro) ro.disconnect();
+      attachThreadsFullscreen(container);
       runGraph(container, dataEl);
     }
   };

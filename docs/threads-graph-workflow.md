@@ -21,6 +21,7 @@ Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 4. **Validation** — After `bundle exec jekyll build`, run `npm run validate:thread-edges` (requires `_site/`).
 5. **Visual check (Phase 5)** — Open `/threads/` on the built site or after deploy (`https://lewisconnolly.com/threads/`); confirm density, legibility, and that new edges read as intended.
 6. **Ship (Phase 6)** — Commit and push (or open a PR). After deploy, spot-check `/threads/` once more so production matches what you validated locally.
+7. **Graph UI chrome (Phase 7)** — After changing the threads layout, graph CSS, or `threads-graph.entry.mjs` (fullscreen control, labels, bands, etc.), run `npm run build:threads-graph`, commit the updated `threads-graph.bundle.js`, and smoke-test `/threads/` including full screen (toggle, Esc), hover labels, and pan/zoom.
 
 ## Suggested pace
 
@@ -34,6 +35,7 @@ Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year 
 4. Run `npm run validate:thread-edges`.
 5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, layout, arrow clarity, hover labels, and legibility.
 6. **Phase 6:** Commit and push; after deploy, quick confirm on the live `/threads/` page.
+7. **Phase 7:** If graph JS or chrome changed, rebuild the bundle and re-check fullscreen and core interactions on `/threads/`.
 
 ### Commands
 

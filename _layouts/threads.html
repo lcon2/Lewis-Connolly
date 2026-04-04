@@ -48,8 +48,17 @@
         <div
             id="threads-sigma-container"
             class="threads-sigma-container"
-            role="img"
-            aria-label="Interactive graph of essays. Hover a node for title, date, and summary; connected posts and thread links highlight. Drag a node to reposition it for this session. A quick click opens the essay in a new tab. Pan and zoom on empty space; mouse or touch.">
+            role="region"
+            aria-label="Interactive graph of essays. Hover a node for title, date, and summary; connected posts and thread links highlight. Drag a node to reposition it for this session. A quick click opens the essay in a new tab. Pan and zoom on empty space; mouse or touch. Use the full screen control for an immersive view.">
+            <button
+                type="button"
+                class="threads-fullscreen-btn"
+                id="threads-fullscreen-btn"
+                aria-label="Enter full screen"
+                aria-pressed="false"
+                title="Full screen (Esc to exit)">
+                <img src="{{ '/assets/images/threads-fullscreen.svg' | relative_url }}" alt="" width="19" height="19" decoding="async">
+            </button>
             <div class="threads-node-panel summary-tooltip" id="threads-node-panel" aria-live="polite" hidden>
                 <div class="summary-title"></div>
                 <div class="summary-date" hidden></div>
