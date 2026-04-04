@@ -240,6 +240,106 @@
       "source": "/2018/07/30/lammas-address/",
       "target": "/2018/08/06/understanding-the-loaves/",
       "kind": "thread"
+    },
+    {
+      "source": "/2017/02/21/unitarians-think-quaker/",
+      "target": "/2023/03/16/what-is-the-gospel/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/08/20/the-scythe-of-saturn/",
+      "target": "/2024/12/27/A-Taste-of-Deeper-Things/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/08/20/the-scythe-of-saturn/",
+      "target": "/2025/01/02/in-wonderlands-shadow/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/08/20/the-scythe-of-saturn/",
+      "target": "/2025/04/22/the-diachronic-and-the-episodic/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/02/28/alchemy-of-the-soul/",
+      "target": "/2019/06/04/the-green-snake-and-the-beautiful-lily/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/02/28/alchemy-of-the-soul/",
+      "target": "/2025/01/30/Lynch-Jung-and-Art-Alchemy/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/04/08/western-esotericism-lineage/",
+      "target": "/2019/06/04/the-green-snake-and-the-beautiful-lily/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/04/08/western-esotericism-lineage/",
+      "target": "/2025/02/27/transhumanist-neo-Anthroposophy/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/06/04/the-green-snake-and-the-beautiful-lily/",
+      "target": "/2025/02/27/transhumanist-neo-Anthroposophy/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/09/a-guide-to-active-imagination/",
+      "target": "/2025/01/30/Lynch-Jung-and-Art-Alchemy/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/09/a-guide-to-active-imagination/",
+      "target": "/2025/04/22/the-diachronic-and-the-episodic/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/09/a-guide-to-active-imagination/",
+      "target": "/2026/03/24/the-shapes-beneath-thought/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/09/a-guide-to-active-imagination/",
+      "target": "/2026/04/01/the-synthetic-shadow/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/09/a-guide-to-active-imagination/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/11/15/sunk-cost-the-meaning-crisis-and-taste/",
+      "target": "/2026/04/01/the-synthetic-shadow/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/12/27/A-Taste-of-Deeper-Things/",
+      "target": "/2025/01/02/in-wonderlands-shadow/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/12/27/A-Taste-of-Deeper-Things/",
+      "target": "/2025/01/30/Lynch-Jung-and-Art-Alchemy/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/12/27/A-Taste-of-Deeper-Things/",
+      "target": "/2025/11/16/dont-try/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/12/27/A-Taste-of-Deeper-Things/",
+      "target": "/2026/03/28/ADHD-Vyvanse-and-Taste/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/01/02/in-wonderlands-shadow/",
+      "target": "/2025/04/22/the-diachronic-and-the-episodic/",
+      "kind": "conceptual_bridge"
     }
   ]
 }

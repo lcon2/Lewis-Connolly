@@ -6548,6 +6548,7 @@ var EDGE_REPULSE_MARGIN = 26;
 var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
 var DRAG_CONSTELLATION_PULL = 0.022;
+var LABEL_ZOOM_OVER_FIT = 1.07;
 var DRAG_SIM_TICKS = 9;
 var NODE_BASE = "#c9a962";
 var NODE_MUTED = "#5c5238";
@@ -7205,7 +7206,7 @@ function runGraph(container, dataEl) {
   }
   function linkStrength(link) {
     if (isThreadEdgeKind(link.kind)) return 0.92;
-    if (link.kind === "conceptual_bridge") return 0.26;
+    if (link.kind === "conceptual_bridge") return 0.4;
     return 0.52;
   }
   const simulation = simulation_default(simNodes).force(
@@ -7218,6 +7219,9 @@ function runGraph(container, dataEl) {
   let dragActive = false;
   let hoverFocus = null;
   let hoverHighlightSet = null;
+  let sigmaRef = null;
+  let pointerInsideContainer = false;
+  let labelRatioThreshold = 1;
   function rebuildHighlightSet(nodeId) {
     hoverFocus = nodeId;
     if (!nodeId) {
@@ -7232,7 +7236,11 @@ function runGraph(container, dataEl) {
   }
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    const showTitle = !dragActive && data.label && (!hoverHighlightSet || hoverHighlightSet.has(node));
+    const cam = sigmaRef?.getCamera?.()?.getState();
+    const ratio = typeof cam?.ratio === "number" ? cam.ratio : 0;
+    const zoomOk = ratio >= labelRatioThreshold;
+    const frameOk = pointerInsideContainer;
+    const showTitle = !dragActive && data.label && frameOk && zoomOk && (!hoverHighlightSet || hoverHighlightSet.has(node));
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
@@ -7421,6 +7429,24 @@ function runGraph(container, dataEl) {
   window.addEventListener("pointerup", onGlobalPointerUp);
   window.addEventListener("pointercancel", onGlobalPointerUp);
   try {
+    let onContainerPointerEnter = function() {
+      pointerInsideContainer = true;
+      sigma.refresh();
+    }, onContainerPointerLeave = function(ev) {
+      const rel = ev.relatedTarget;
+      if (rel && container.contains(rel)) return;
+      pointerInsideContainer = false;
+      sigma.refresh();
+    }, requestLabelRefreshFromCamera = function() {
+      if (labelRefreshRaf) return;
+      labelRefreshRaf = requestAnimationFrame(() => {
+        labelRefreshRaf = 0;
+        try {
+          sigma.refresh();
+        } catch {
+        }
+      });
+    };
     sigma = new import_sigma.Sigma(graph, container, {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
@@ -7434,10 +7460,21 @@ function runGraph(container, dataEl) {
       nodeReducer,
       edgeReducer
     });
+    sigmaRef = sigma;
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
     }
     fitSigmaViewport(sigma, graph, void 0, graphNodeCount);
+    {
+      const rFit = sigma.getCamera().getState().ratio;
+      labelRatioThreshold = rFit * LABEL_ZOOM_OVER_FIT;
+    }
+    const POINTER_OPTS = { capture: true };
+    container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
+    container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
+    let labelRefreshRaf = 0;
+    const camForLabels = sigma.getCamera();
+    camForLabels.on("updated", requestLabelRefreshFromCamera);
     runSettle(0.78, 1500, true);
     sigma.on("enterNode", ({ node }) => {
       rebuildHighlightSet(node);
@@ -7465,6 +7502,22 @@ function runGraph(container, dataEl) {
       lerpRaf = requestAnimationFrame(lerpStep);
     });
     sigma.on("kill", () => {
+      if (labelRefreshRaf) {
+        cancelAnimationFrame(labelRefreshRaf);
+        labelRefreshRaf = 0;
+      }
+      camForLabels.removeListener("updated", requestLabelRefreshFromCamera);
+      container.removeEventListener(
+        "pointerenter",
+        onContainerPointerEnter,
+        POINTER_OPTS
+      );
+      container.removeEventListener(
+        "pointerleave",
+        onContainerPointerLeave,
+        POINTER_OPTS
+      );
+      sigmaRef = null;
       if (bandUnderlay) {
         bandUnderlay.teardown();
         bandUnderlay = null;
