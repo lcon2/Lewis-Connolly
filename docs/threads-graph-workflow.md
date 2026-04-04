@@ -20,6 +20,7 @@ Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 3. **Sparsity** — Remove weak or purely thematic “cosmetic” links.
 4. **Validation** — After `bundle exec jekyll build`, run `npm run validate:thread-edges` (requires `_site/`).
 5. **Visual check (Phase 5)** — Open `/threads/` on the built site or after deploy (`https://lewisconnolly.com/threads/`); confirm density, legibility, and that new edges read as intended.
+6. **Ship (Phase 6)** — Commit and push (or open a PR). After deploy, spot-check `/threads/` once more so production matches what you validated locally.
 
 ## Suggested pace
 
@@ -31,8 +32,8 @@ Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year 
 2. Run `npm run inventory:thread-posts > scratch-urls.txt` (optional) to list every post URL that exists in `_site/`—use exact strings for `source` / `target`.
 3. Edit `_data/post_thread_edges.json` (add or revise `edges`; each edge is `source`, `target`, `kind` only).
 4. Run `npm run validate:thread-edges`.
-5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, band layout, and arrow clarity.
-6. Commit when satisfied.
+5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, layout, arrow clarity, hover labels, and legibility.
+6. **Phase 6:** Commit and push; after deploy, quick confirm on the live `/threads/` page.
 
 ### Commands
 

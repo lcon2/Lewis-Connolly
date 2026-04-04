@@ -63,6 +63,8 @@ const EDGE_SIZE_THREAD = 3.4;
 /** Subtle fill for alternating quarterly bands (viewport canvas, graph-space annuli). */
 const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.062)";
 const TIME_BAND_STEPS = 72;
+/** When false, no underlay canvas is created (grey quarterly rings hidden; layout forces unchanged). */
+const DRAW_QUARTERLY_BAND_UNDERLAY = false;
 
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
@@ -832,7 +834,6 @@ function runGraph(container, dataEl) {
     .alphaTarget(0)
     .stop();
 
-  let pointerInsideContainer = false;
   let dragActive = false;
 
   let hoverFocus = null;
@@ -853,9 +854,13 @@ function runGraph(container, dataEl) {
 
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    const labelsAllowed = pointerInsideContainer || dragActive;
-    attr.label =
-      labelsAllowed && data.label ? String(data.label) : null;
+    /** Titles only on hovered node and its edge-neighbors (highlight set); none when idle or while dragging. */
+    const showTitle =
+      !dragActive &&
+      hoverHighlightSet &&
+      data.label &&
+      hoverHighlightSet.has(node);
+    attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
       return attr;
@@ -1087,27 +1092,12 @@ function runGraph(container, dataEl) {
       edgeReducer,
     });
 
-    bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
+    if (DRAW_QUARTERLY_BAND_UNDERLAY) {
+      bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
+    }
 
     fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
     runSettle(0.78, 1500, true);
-
-    const POINTER_OPTS = { capture: true };
-
-    function onContainerPointerEnter() {
-      pointerInsideContainer = true;
-      sigma.refresh();
-    }
-
-    function onContainerPointerLeave(ev) {
-      const rel = ev.relatedTarget;
-      if (rel && container.contains(rel)) return;
-      pointerInsideContainer = false;
-      sigma.refresh();
-    }
-
-    container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
-    container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
 
     sigma.on("enterNode", ({ node }) => {
       rebuildHighlightSet(node);
@@ -1147,16 +1137,6 @@ function runGraph(container, dataEl) {
       stopLerp();
       dragActive = false;
       dragNode = null;
-      container.removeEventListener(
-        "pointerenter",
-        onContainerPointerEnter,
-        POINTER_OPTS,
-      );
-      container.removeEventListener(
-        "pointerleave",
-        onContainerPointerLeave,
-        POINTER_OPTS,
-      );
       window.removeEventListener("pointermove", onGlobalPointerMove);
       window.removeEventListener("pointerup", onGlobalPointerUp);
       window.removeEventListener("pointercancel", onGlobalPointerUp);
