@@ -1,5 +1,5 @@
 {
-  "about": "Edges use post.url as id (leading slash). kind \"thread\": same line of thought continues or develops; arrow #801f22; direction is meaningful (source → target). kind \"conceptual_bridge\": frames or illuminates without being the same thread; line #5f7583. Legacy \"precursor\" is accepted as an alias for thread. Only edges whose endpoints exist in the Threads page node list are drawn. Keep the graph sparse: add a link only when the relation is genuine. Canonical source: edit this file directly. Review workflow: see docs/threads-graph-workflow.md.",
+  "about": "Edges use post.url as id (leading slash). kind \"thread\": same line of thought continues or develops; arrow #801f22; direction is meaningful (source → target). kind \"conceptual_bridge\": frames or illuminates without being the same thread; line #5f7583. Legacy \"precursor\" is accepted as an alias for thread. Only edges whose endpoints exist in the Threads page node list are drawn. Keep the graph sparse: add a link only when the relation is genuine. The Threads map layout uses calendar time bands in graph space: yearly through 2020, half-yearly for 2021–2024, quarterly from 2025 onward (soft radial bias, subordinate to edges). Canonical source: edit this file directly. Review workflow: see docs/threads-graph-workflow.md.",
   "edges": [
     {
       "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
@@ -364,6 +364,96 @@
     {
       "source": "/2025/12/07/Curator-of-being/",
       "target": "/2026/03/28/ADHD-Vyvanse-and-Taste/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/08/13/paul-against-the-apostles/",
+      "target": "/2018/08/06/understanding-the-loaves/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/08/20/william-gaskell/",
+      "target": "/2018/03/05/rev-phillip-hewett-a-personal-memorial/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/08/29/cults/",
+      "target": "/2018/09/03/the-grand-inquisitor/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/09/03/the-grand-inquisitor/",
+      "target": "/2018/09/17/the-syrophoenician-woman/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/09/24/harvest-service-back-to-nature/",
+      "target": "/2018/10/12/the-hoop-of-my-people/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/10/12/the-hoop-of-my-people/",
+      "target": "/2018/10/22/god-an-address/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/10/16/suffering-job/",
+      "target": "/2018/10/22/god-an-address/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/10/16/suffering-job/",
+      "target": "/2018/11/26/the-fool/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/10/22/god-an-address/",
+      "target": "/2018/10/29/day-of-the-dead-m-r-james/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/10/22/god-an-address/",
+      "target": "/2018/12/03/thomas-j-j-altizer-in-memoriam/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/10/29/day-of-the-dead-m-r-james/",
+      "target": "/2018/11/05/raising-lazarus/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/11/05/raising-lazarus/",
+      "target": "/2018/11/12/thoughts-on-remembrance-sunday/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/11/12/thoughts-on-remembrance-sunday/",
+      "target": "/2018/11/26/the-fool/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/11/26/the-fool/",
+      "target": "/2018/12/03/thomas-j-j-altizer-in-memoriam/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/12/03/thomas-j-j-altizer-in-memoriam/",
+      "target": "/2018/12/10/bodhi-sunday-with-schopenhauer/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/12/10/bodhi-sunday-with-schopenhauer/",
+      "target": "/2019/01/13/thoughts-on-free-will/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/01/13/thoughts-on-free-will/",
+      "target": "/2019/01/23/transforming-from-the-inside/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/01/23/transforming-from-the-inside/",
+      "target": "/2019/02/11/the-alchemists-beaker/",
       "kind": "conceptual_bridge"
     }
   ]

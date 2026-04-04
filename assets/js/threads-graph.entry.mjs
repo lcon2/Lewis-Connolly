@@ -13,25 +13,22 @@ import { Sigma } from "sigma";
 
 const NODE_DEFAULT_SIZE = 12;
 
-const POSITIONS_KEY = "threads-graph-positions-v4";
+const POSITIONS_KEY = "threads-graph-positions-v5";
 const CLICK_PX = 6;
 /** Lerp toward cursor while dragging (higher = snappier). */
 const LERP_K = 0.52;
 /** Graph-space collision radius around each node (Sigma coords). */
 const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
-/** ~3-month bands from oldest post in the set (days). */
-const TIME_BAND_DAYS = 90;
-const MS_PER_DAY = 86400000;
 /** Global repulsion (softer so band shells and links win). */
 const CHARGE_STRENGTH = -24;
-/** Min radial thickness of each time band (graph units); wider = softer overlap between cohorts. */
-const MIN_BAND_SHELL_DR = 46;
+/** Min radial thickness of each time band (graph units); wider shells = softer time bias. */
+const MIN_BAND_SHELL_DR = 64;
 /** Visual-only extra width for annulus fill (can exceed shell). */
-const MIN_BAND_VISUAL_EXTRA_DR = 10;
-/** Push back when outside [rBandMin, rBandMax] — keep low so thread links dominate over radial shells. */
-const BAND_SHELL_PUSH_OUT = 0.3;
-/** Gentle pull toward targetR when inside the shell (time as bias, not rigid rings). */
-const BAND_SHELL_CENTER = 0.024;
+const MIN_BAND_VISUAL_EXTRA_DR = 16;
+/** Push back when outside [rBandMin, rBandMax] — low so thread links dominate. */
+const BAND_SHELL_PUSH_OUT = 0.18;
+/** Gentle pull toward targetR when inside the shell (time as background bias). */
+const BAND_SHELL_CENTER = 0.012;
 /** Min distance from non-incident edges (graph units). */
 const EDGE_REPULSE_MARGIN = 26;
 const EDGE_REPULSE_STRENGTH = 0.11;
@@ -62,11 +59,11 @@ const EDGE_SIZE_REL = 1.2;
 const EDGE_SIZE_CONCEPTUAL = 2.3;
 const EDGE_SIZE_THREAD = 3.4;
 
-/** Subtle fill for alternating quarterly bands (viewport canvas, graph-space annuli). */
-const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.062)";
+/** Alternating calendar bands: very subtle grey (elegant, barely visible). */
+const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.038)";
 const TIME_BAND_STEPS = 72;
-/** When false, no underlay canvas is created (grey quarterly rings hidden; layout forces unchanged). */
-const DRAW_QUARTERLY_BAND_UNDERLAY = false;
+/** Draw 2D annulus underlay (even bands only); layout uses same calendar band model. */
+const DRAW_QUARTERLY_BAND_UNDERLAY = true;
 
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
@@ -218,17 +215,52 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    /* Prefer short thread spans so edges pull across bands without time-geometry stretching. */
-    return Math.max(28, chord * 0.38);
+    return Math.max(24, chord * 0.32);
   }
   if (kind === "conceptual_bridge") {
-    return Math.max(42, chord * 0.68);
+    return Math.max(38, chord * 0.6);
   }
-  return Math.max(36, chord * 0.58);
+  return Math.max(34, chord * 0.5);
+}
+
+/** Sort key → period start (UTC ms) for stable chronological band ordering. */
+function periodStartMsFromBandKey(key) {
+  const mY = key.match(/^(\d{4})-year$/);
+  if (mY) return Date.UTC(Number(mY[1]), 0, 1);
+  const mH = key.match(/^(\d{4})-H([12])$/);
+  if (mH) {
+    const y = Number(mH[1]);
+    return mH[2] === "1" ? Date.UTC(y, 0, 1) : Date.UTC(y, 6, 1);
+  }
+  const mQ = key.match(/^(\d{4})-Q([1-4])$/);
+  if (mQ) {
+    const y = Number(mQ[1]);
+    const qi = Number(mQ[2]) - 1;
+    return Date.UTC(y, qi * 3, 1);
+  }
+  return 0;
 }
 
 /**
- * Shared quarterly time model for layout + band underlay (keep in sync).
+ * Calendar band for a post date: yearly through 2020, half-yearly 2021–2024, quarterly from 2025.
+ */
+function calendarBandKeyFromUtcMs(t) {
+  const d = new Date(t);
+  const y = d.getUTCFullYear();
+  const m = d.getUTCMonth();
+  if (y <= 2020) {
+    return `${y}-year`;
+  }
+  if (y <= 2024) {
+    const h = m < 6 ? 1 : 2;
+    return `${y}-H${h}`;
+  }
+  const q = Math.floor(m / 3) + 1;
+  return `${y}-Q${q}`;
+}
+
+/**
+ * Shared calendar time model for layout + band underlay (keep in sync).
  * @returns {{ dateMode: true, bandById: Map, maxBand: number, rMin: number, rMax: number, targetRForBand: (b:number)=>number } | { dateMode: false, n: number, rMin: number, rMax: number, sortedAsc: object[] }}
  */
 function buildQuarterlyTimeModel(sortedAsc) {
@@ -248,7 +280,6 @@ function buildQuarterlyTimeModel(sortedAsc) {
     };
   }
 
-  const bandMs = TIME_BAND_DAYS * MS_PER_DAY;
   const dated = sortedAsc.map((node) => ({
     node,
     t: parsePostDateMs(node.date),
@@ -260,22 +291,26 @@ function buildQuarterlyTimeModel(sortedAsc) {
     return { dateMode: false, n, rMin: ext.rMin, rMax: ext.rMax, sortedAsc };
   }
 
-  const minT = Math.min(...finite.map((d) => d.t));
-  const bandById = new Map();
-  let maxBand = 0;
-  for (const { node, t } of dated) {
-    let b;
-    if (Number.isNaN(t)) {
-      b = 0;
-    } else {
-      b = Math.max(0, Math.floor((t - minT) / bandMs));
-      maxBand = Math.max(maxBand, b);
-    }
-    bandById.set(node.id, b);
+  const keySet = new Set();
+  for (const { t } of finite) {
+    keySet.add(calendarBandKeyFromUtcMs(t));
   }
+  const sortedKeys = [...keySet].sort(
+    (a, b) => periodStartMsFromBandKey(a) - periodStartMsFromBandKey(b),
+  );
+  const keyToBand = new Map();
+  for (let i = 0; i < sortedKeys.length; i++) {
+    keyToBand.set(sortedKeys[i], i);
+  }
+  const maxBand = sortedKeys.length - 1;
+
+  const bandById = new Map();
   for (const { node, t } of dated) {
     if (Number.isNaN(t)) {
       bandById.set(node.id, maxBand);
+    } else {
+      const k = calendarBandKeyFromUtcMs(t);
+      bandById.set(node.id, keyToBand.get(k) ?? maxBand);
     }
   }
 
@@ -288,7 +323,7 @@ function buildQuarterlyTimeModel(sortedAsc) {
 }
 
 /**
- * Stepped ~quarterly rings from min date: older bands smaller targetR, newer larger.
+ * Calendar time bands (year / half-year / quarter by era): older bands smaller targetR, newer larger.
  * Returns map id -> { x, y, targetR } for initial placement and radial force.
  */
 function layoutTimeBandsQuarterly(sortedAsc) {
@@ -858,9 +893,9 @@ function runGraph(container, dataEl) {
   }
 
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.92;
-    if (link.kind === "conceptual_bridge") return 0.4;
-    return 0.52;
+    if (isThreadEdgeKind(link.kind)) return 0.96;
+    if (link.kind === "conceptual_bridge") return 0.28;
+    return 0.42;
   }
 
   const simulation = forceSimulation(simNodes)

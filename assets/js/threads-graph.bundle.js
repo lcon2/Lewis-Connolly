@@ -6533,17 +6533,15 @@ function manyBody_default() {
 // assets/js/threads-graph.entry.mjs
 var import_sigma = __toESM(require_sigma2(), 1);
 var NODE_DEFAULT_SIZE = 12;
-var POSITIONS_KEY = "threads-graph-positions-v4";
+var POSITIONS_KEY = "threads-graph-positions-v5";
 var CLICK_PX = 6;
 var LERP_K = 0.52;
 var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
-var TIME_BAND_DAYS = 90;
-var MS_PER_DAY = 864e5;
 var CHARGE_STRENGTH = -24;
-var MIN_BAND_SHELL_DR = 46;
-var MIN_BAND_VISUAL_EXTRA_DR = 10;
-var BAND_SHELL_PUSH_OUT = 0.3;
-var BAND_SHELL_CENTER = 0.024;
+var MIN_BAND_SHELL_DR = 64;
+var MIN_BAND_VISUAL_EXTRA_DR = 16;
+var BAND_SHELL_PUSH_OUT = 0.18;
+var BAND_SHELL_CENTER = 0.012;
 var EDGE_REPULSE_MARGIN = 26;
 var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
@@ -6563,9 +6561,9 @@ var EDGE_CONCEPTUAL_DIM = "#3d4a52";
 var EDGE_SIZE_REL = 1.2;
 var EDGE_SIZE_CONCEPTUAL = 2.3;
 var EDGE_SIZE_THREAD = 3.4;
-var TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.062)";
+var TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.038)";
 var TIME_BAND_STEPS = 72;
-var DRAW_QUARTERLY_BAND_UNDERLAY = false;
+var DRAW_QUARTERLY_BAND_UNDERLAY = true;
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
 }
@@ -6680,12 +6678,42 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(28, chord * 0.38);
+    return Math.max(24, chord * 0.32);
   }
   if (kind === "conceptual_bridge") {
-    return Math.max(42, chord * 0.68);
+    return Math.max(38, chord * 0.6);
   }
-  return Math.max(36, chord * 0.58);
+  return Math.max(34, chord * 0.5);
+}
+function periodStartMsFromBandKey(key) {
+  const mY = key.match(/^(\d{4})-year$/);
+  if (mY) return Date.UTC(Number(mY[1]), 0, 1);
+  const mH = key.match(/^(\d{4})-H([12])$/);
+  if (mH) {
+    const y3 = Number(mH[1]);
+    return mH[2] === "1" ? Date.UTC(y3, 0, 1) : Date.UTC(y3, 6, 1);
+  }
+  const mQ = key.match(/^(\d{4})-Q([1-4])$/);
+  if (mQ) {
+    const y3 = Number(mQ[1]);
+    const qi = Number(mQ[2]) - 1;
+    return Date.UTC(y3, qi * 3, 1);
+  }
+  return 0;
+}
+function calendarBandKeyFromUtcMs(t) {
+  const d = new Date(t);
+  const y3 = d.getUTCFullYear();
+  const m2 = d.getUTCMonth();
+  if (y3 <= 2020) {
+    return `${y3}-year`;
+  }
+  if (y3 <= 2024) {
+    const h = m2 < 6 ? 1 : 2;
+    return `${y3}-H${h}`;
+  }
+  const q = Math.floor(m2 / 3) + 1;
+  return `${y3}-Q${q}`;
 }
 function buildQuarterlyTimeModel(sortedAsc) {
   const n = sortedAsc.length;
@@ -6703,7 +6731,6 @@ function buildQuarterlyTimeModel(sortedAsc) {
       targetRForBand: () => rMin
     };
   }
-  const bandMs = TIME_BAND_DAYS * MS_PER_DAY;
   const dated = sortedAsc.map((node) => ({
     node,
     t: parsePostDateMs(node.date)
@@ -6713,22 +6740,25 @@ function buildQuarterlyTimeModel(sortedAsc) {
     const ext = radialExtentForPostCount(n);
     return { dateMode: false, n, rMin: ext.rMin, rMax: ext.rMax, sortedAsc };
   }
-  const minT = Math.min(...finite.map((d) => d.t));
-  const bandById = /* @__PURE__ */ new Map();
-  let maxBand = 0;
-  for (const { node, t } of dated) {
-    let b;
-    if (Number.isNaN(t)) {
-      b = 0;
-    } else {
-      b = Math.max(0, Math.floor((t - minT) / bandMs));
-      maxBand = Math.max(maxBand, b);
-    }
-    bandById.set(node.id, b);
+  const keySet = /* @__PURE__ */ new Set();
+  for (const { t } of finite) {
+    keySet.add(calendarBandKeyFromUtcMs(t));
   }
+  const sortedKeys = [...keySet].sort(
+    (a2, b) => periodStartMsFromBandKey(a2) - periodStartMsFromBandKey(b)
+  );
+  const keyToBand = /* @__PURE__ */ new Map();
+  for (let i = 0; i < sortedKeys.length; i++) {
+    keyToBand.set(sortedKeys[i], i);
+  }
+  const maxBand = sortedKeys.length - 1;
+  const bandById = /* @__PURE__ */ new Map();
   for (const { node, t } of dated) {
     if (Number.isNaN(t)) {
       bandById.set(node.id, maxBand);
+    } else {
+      const k = calendarBandKeyFromUtcMs(t);
+      bandById.set(node.id, keyToBand.get(k) ?? maxBand);
     }
   }
   function targetRForBand(band) {
@@ -7205,9 +7235,9 @@ function runGraph(container, dataEl) {
     return link.baseDist;
   }
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.92;
-    if (link.kind === "conceptual_bridge") return 0.4;
-    return 0.52;
+    if (isThreadEdgeKind(link.kind)) return 0.96;
+    if (link.kind === "conceptual_bridge") return 0.28;
+    return 0.42;
   }
   const simulation = simulation_default(simNodes).force(
     "link",
