@@ -48,6 +48,10 @@ This distinction matters when imagining AI-type implants, because one can pictur
 <li><strong>Endogenous surfacing:</strong> AI content arises as if it were a native psychic event—a sudden intuition, a memory, or a pre-verbal urge.</li>
 </ol>
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
+
 I will return to this, but first I want to widen the frame a little and set out some of the broader philosophical implications and adjacent observations prompted by emerging AI intelligence.
 
 ## The wider landscape
@@ -59,6 +63,10 @@ Although this online facsimile of us may sound like us, speak like us, and reaso
 But this still raises the question of whether genuinely conscious artificial beings could be created: whether we might, in theory, construct a computational model that mimics the architecture of the human brain closely enough to produce a truly conscious artificial intelligence. Perhaps such a thing will prove theoretically possible, while the technological constraints involved render it practically impossible.
 
 Let us suppose, however, that it were possible. Let us say that we took my brain and created a computational model that mimicked it exactly—every brain cell, every neuron. What we would then be left with is a conscious being, presumably with as much ontological value as me, but it would not be me, for the simple reason that there would necessarily have been a break in spatiotemporal continuity. It is the same reason the Star Trek transporter would not really work: it is effectively killing you and creating a new person every time.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
 
 Returning, then, to the idea of endogenous surfacing: I think one would have to assume that for this to be possible, we would already have reached the point of duplicating the entirety of conscious experience before we could begin modulating psychic life in this way—before one could simply go along to the psychic tuning centre for an enhancement. And given what I have already highlighted, there is a real danger that the person who goes in and the person who comes out is no longer you. Spatiotemporal continuity would need to be preserved, and the changes made would have to be such that they do not fundamentally distort your sense of self.
 
@@ -79,6 +87,10 @@ The first thing to say, if one wants to remain properly within a Jungian frame, 
 If AI content were to arrive endogenously, then, it would not first appear as a notification, a voice in the ear, or an object standing over against the ego. It would arise more like a hunch, a sudden relevance, a word that seems to present itself, a memory surfacing at exactly the right moment, an image carrying a peculiar charge, or a pre-verbal sense of where thought ought to go next. In Jungian language, the nearest analogue here is not the Self but intuition—perception via the unconscious. But intuition alone is not enough to describe it. The stronger analogue is the autonomous complex: an affectively charged formation that is only partly under the control of the will, can intrude into consciousness as though from elsewhere, and can temporarily organize thought and conduct around itself. Jung's point, put bluntly, is that the psyche already contains agencies that are not identical with the ego. Endogenous AI would therefore be experienced, not as a second Self, but as something closer to an artificial complex or synthetic sub-personality operating within the field of consciousness.
 
 This matters because complexes do not enter consciousness as neutral data. They arrive with tone, pressure, direction, and often a kind of implied personality. Jung repeatedly treats the psyche as prone to personification: dream figures, fantasy figures, autonomous tendencies that begin to look like someone. Once that is granted, one can see how an implanted AI layer would very quickly acquire an imaginal character. It would not remain, phenomenologically speaking, a mere utility. It would be liable to become the helpful guide, the inner adviser, the voice that <em>just knows</em>, perhaps even clothed in one of the familiar archetypal forms—the wise old man, the mother, the jester, the lover. The engineering would be modern, but the psychic experience of it would be ancient.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
 
 This is where the real danger begins. Analytical psychology aims at a better relation between ego and unconscious, not the replacement of that relation with an optimized inner feed.
 
