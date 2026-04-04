@@ -24,14 +24,14 @@ const TIME_BAND_DAYS = 90;
 const MS_PER_DAY = 86400000;
 /** Global repulsion (softer so band shells and links win). */
 const CHARGE_STRENGTH = -24;
-/** Min radial thickness of each time band (graph units) for shell + visuals. */
-const MIN_BAND_SHELL_DR = 28;
+/** Min radial thickness of each time band (graph units); wider = softer overlap between cohorts. */
+const MIN_BAND_SHELL_DR = 46;
 /** Visual-only extra width for annulus fill (can exceed shell). */
 const MIN_BAND_VISUAL_EXTRA_DR = 10;
-/** Push back when outside [rBandMin, rBandMax]. */
-const BAND_SHELL_PUSH_OUT = 0.78;
-/** Weak pull toward targetR when inside the shell. */
-const BAND_SHELL_CENTER = 0.068;
+/** Push back when outside [rBandMin, rBandMax] — keep low so thread links dominate over radial shells. */
+const BAND_SHELL_PUSH_OUT = 0.3;
+/** Gentle pull toward targetR when inside the shell (time as bias, not rigid rings). */
+const BAND_SHELL_CENTER = 0.024;
 /** Min distance from non-incident edges (graph units). */
 const EDGE_REPULSE_MARGIN = 26;
 const EDGE_REPULSE_STRENGTH = 0.11;
@@ -153,7 +153,7 @@ function annulusForBand(b, R, maxBand, minDr) {
   return { lo, hi };
 }
 
-/** Keep nodes inside [rBandMin, rBandMax] with weak drift toward targetR. */
+/** Soft radial bias: loose shells + gentle drift toward targetR (subordinate to link forces). */
 function forceBandShell() {
   let nodes;
   function force(alpha) {
@@ -216,12 +216,13 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(34, chord * 0.58);
+    /* Prefer short thread spans so edges pull across bands without time-geometry stretching. */
+    return Math.max(28, chord * 0.38);
   }
   if (kind === "conceptual_bridge") {
-    return Math.max(46, chord * 0.82);
+    return Math.max(42, chord * 0.68);
   }
-  return Math.max(40, chord * 0.72);
+  return Math.max(36, chord * 0.58);
 }
 
 /**
@@ -855,9 +856,9 @@ function runGraph(container, dataEl) {
   }
 
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.76;
-    if (link.kind === "conceptual_bridge") return 0.2;
-    return 0.44;
+    if (isThreadEdgeKind(link.kind)) return 0.92;
+    if (link.kind === "conceptual_bridge") return 0.26;
+    return 0.52;
   }
 
   const simulation = forceSimulation(simNodes)
@@ -899,12 +900,11 @@ function runGraph(container, dataEl) {
 
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    /** Titles only on hovered node and its edge-neighbors (highlight set); none when idle or while dragging. */
+    /** All titles when idle; while hovering, only focused node + edge-neighbors; none while dragging. */
     const showTitle =
       !dragActive &&
-      hoverHighlightSet &&
       data.label &&
-      hoverHighlightSet.has(node);
+      (!hoverHighlightSet || hoverHighlightSet.has(node));
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;

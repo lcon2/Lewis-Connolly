@@ -4395,7 +4395,7 @@ footer {
     border-radius: 0;
 }
 
-/* Slightly larger than default node draw size (~12); quiet until hover/focus. */
+/* ~1.5× prior control; quiet until hover/focus. */
 .threads-fullscreen-btn {
     position: absolute;
     top: 10px;
@@ -4404,8 +4404,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 42px;
+    height: 42px;
     margin: 0;
     padding: 0;
     border: none;
@@ -4429,8 +4429,8 @@ footer {
 
 .threads-fullscreen-btn img {
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 23px;
+    height: 23px;
 }
 
 .threads-sigma-container canvas {

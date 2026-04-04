@@ -6540,10 +6540,10 @@ var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
 var TIME_BAND_DAYS = 90;
 var MS_PER_DAY = 864e5;
 var CHARGE_STRENGTH = -24;
-var MIN_BAND_SHELL_DR = 28;
+var MIN_BAND_SHELL_DR = 46;
 var MIN_BAND_VISUAL_EXTRA_DR = 10;
-var BAND_SHELL_PUSH_OUT = 0.78;
-var BAND_SHELL_CENTER = 0.068;
+var BAND_SHELL_PUSH_OUT = 0.3;
+var BAND_SHELL_CENTER = 0.024;
 var EDGE_REPULSE_MARGIN = 26;
 var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
@@ -6679,12 +6679,12 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(34, chord * 0.58);
+    return Math.max(28, chord * 0.38);
   }
   if (kind === "conceptual_bridge") {
-    return Math.max(46, chord * 0.82);
+    return Math.max(42, chord * 0.68);
   }
-  return Math.max(40, chord * 0.72);
+  return Math.max(36, chord * 0.58);
 }
 function buildQuarterlyTimeModel(sortedAsc) {
   const n = sortedAsc.length;
@@ -7204,9 +7204,9 @@ function runGraph(container, dataEl) {
     return link.baseDist;
   }
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.76;
-    if (link.kind === "conceptual_bridge") return 0.2;
-    return 0.44;
+    if (isThreadEdgeKind(link.kind)) return 0.92;
+    if (link.kind === "conceptual_bridge") return 0.26;
+    return 0.52;
   }
   const simulation = simulation_default(simNodes).force(
     "link",
@@ -7232,7 +7232,7 @@ function runGraph(container, dataEl) {
   }
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    const showTitle = !dragActive && hoverHighlightSet && data.label && hoverHighlightSet.has(node);
+    const showTitle = !dragActive && data.label && (!hoverHighlightSet || hoverHighlightSet.has(node));
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;

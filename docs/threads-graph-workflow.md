@@ -22,6 +22,7 @@ Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 5. **Visual check (Phase 5)** — Open `/threads/` on the built site or after deploy (`https://lewisconnolly.com/threads/`); confirm density, legibility, and that new edges read as intended.
 6. **Ship (Phase 6)** — Commit and push (or open a PR). After deploy, spot-check `/threads/` once more so production matches what you validated locally.
 7. **Graph UI chrome (Phase 7)** — After changing the threads layout, graph CSS, or `threads-graph.entry.mjs` (fullscreen control, labels, bands, etc.), run `npm run build:threads-graph`, commit the updated `threads-graph.bundle.js`, and smoke-test `/threads/` including full screen (toggle, Esc), hover labels, and pan/zoom.
+8. **Layout / forces (Phase 8)** — If you tune time-band vs link behavior in `threads-graph.entry.mjs` (shell strength, link strength, `MIN_BAND_SHELL_DR`, chord distances, etc.), rebuild the bundle, commit it, and re-check `/threads/` for cluster shape, cross-band threads, and readability.
 
 ## Suggested pace
 
@@ -33,9 +34,10 @@ Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year 
 2. Run `npm run inventory:thread-posts > scratch-urls.txt` (optional) to list every post URL that exists in `_site/`—use exact strings for `source` / `target`.
 3. Edit `_data/post_thread_edges.json` (add or revise `edges`; each edge is `source`, `target`, `kind` only).
 4. Run `npm run validate:thread-edges`.
-5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, layout, arrow clarity, hover labels, and legibility.
+5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, layout, arrow clarity, labels (all at rest vs highlighted-only on hover), and legibility.
 6. **Phase 6:** Commit and push; after deploy, quick confirm on the live `/threads/` page.
 7. **Phase 7:** If graph JS or chrome changed, rebuild the bundle and re-check fullscreen and core interactions on `/threads/`.
+8. **Phase 8:** If simulation or time-bias constants changed, rebuild the bundle and eyeball layout on `/threads/` (threads vs time rings).
 
 ### Commands
 
