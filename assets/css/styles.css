@@ -4369,7 +4369,10 @@ footer {
     margin-bottom: 0;
 }
 
+/* Sigma injects absolutely positioned canvases; this box must establish the containing block. */
 .threads-sigma-container {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     min-height: min(70vh, 640px);
     height: min(70vh, 640px);
@@ -4379,11 +4382,27 @@ footer {
     background: #121212;
     box-sizing: border-box;
     touch-action: none;
+    isolation: isolate;
 }
 
 .threads-sigma-container canvas {
     display: block;
     border-radius: 5px;
+}
+
+.threads-graph-error {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #c8c4bf;
+    background: rgba(18, 18, 18, 0.92);
+    z-index: 2;
 }
 
 .threads-post-list {

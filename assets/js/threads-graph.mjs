@@ -58,12 +58,21 @@ function fitSigmaViewport(sigma, graph, padding = 72) {
   sigma.refresh();
 }
 
+function showGraphError(container, message) {
+  const p = document.createElement("p");
+  p.className = "threads-graph-error";
+  p.setAttribute("role", "alert");
+  p.textContent = message;
+  container.appendChild(p);
+}
+
 function runGraph(container, dataEl) {
   let payload;
   try {
     payload = JSON.parse(dataEl.textContent.trim());
   } catch (e) {
     console.error("threads-graph: invalid JSON", e);
+    showGraphError(container, "Could not read graph data. Check the page source JSON block.");
     return;
   }
 
@@ -71,73 +80,93 @@ function runGraph(container, dataEl) {
   const nodes = Array.isArray(payload.nodes) ? payload.nodes : [];
   const rawEdges = Array.isArray(payload.edges) ? payload.edges : [];
 
-  if (nodes.length === 0) return;
+  if (nodes.length === 0) {
+    showGraphError(container, "No posts to display in this map.");
+    return;
+  }
 
-  const sortedAsc = [...nodes].sort((a, b) => {
-    const da = String(a.date || "");
-    const db = String(b.date || "");
-    return da.localeCompare(db);
-  });
+  let sigma = null;
 
-  const nodeSet = new Set(nodes.map((n) => n.id));
-  const posById = layoutRadialByDate(sortedAsc);
-
-  const graph = new Graph({ type: "directed" });
-
-  for (const node of sortedAsc) {
-    const p = posById.get(node.id);
-    graph.addNode(node.id, {
-      x: p.x,
-      y: p.y,
-      label: node.title || "",
-      size: 10,
-      color: "#c9a962",
+  try {
+    const sortedAsc = [...nodes].sort((a, b) => {
+      const da = String(a.date || "");
+      const db = String(b.date || "");
+      return da.localeCompare(db);
     });
-  }
 
-  for (const e of rawEdges) {
-    if (!e || typeof e.source !== "string" || typeof e.target !== "string") continue;
-    if (!nodeSet.has(e.source) || !nodeSet.has(e.target)) continue;
-    if (e.source === e.target) continue;
-    if (!graph.hasNode(e.source) || !graph.hasNode(e.target)) continue;
-    if (graph.hasEdge(e.source, e.target)) continue;
+    const nodeSet = new Set(nodes.map((n) => n.id));
+    const posById = layoutRadialByDate(sortedAsc);
 
-    const kind = e.kind || "related";
-    const edgeType = kind === "precursor" ? "arrow" : "line";
-    try {
-      graph.addEdge(e.source, e.target, { type: edgeType, kind });
-    } catch (_) {
-      /* parallel or invalid */
+    const graph = new Graph({ type: "directed" });
+
+    for (const node of sortedAsc) {
+      const p = posById.get(node.id);
+      graph.addNode(node.id, {
+        x: p.x,
+        y: p.y,
+        label: node.title || "",
+        size: 10,
+        color: "#c9a962",
+      });
     }
-  }
 
-  const sigma = new Sigma(graph, container, {
-    renderLabels: true,
-    defaultNodeColor: "#c9a962",
-    defaultEdgeColor: "#6e6e6e",
-    labelDensity: 0.22,
-    labelSize: 13,
-    labelFont: "Georgia, 'Times New Roman', serif",
-    labelWeight: "normal",
-    labelRenderer: threadsLightLabelRenderer,
-    defaultEdgeType: "line",
-  });
+    for (const e of rawEdges) {
+      if (!e || typeof e.source !== "string" || typeof e.target !== "string") continue;
+      if (!nodeSet.has(e.source) || !nodeSet.has(e.target)) continue;
+      if (e.source === e.target) continue;
+      if (!graph.hasNode(e.source) || !graph.hasNode(e.target)) continue;
+      if (graph.hasEdge(e.source, e.target)) continue;
 
-  fitSigmaViewport(sigma, graph);
-
-  sigma.on("clickNode", ({ node }) => {
-    window.location.href = baseurl + node;
-  });
-
-  const ro = new ResizeObserver(() => {
-    try {
-      sigma.resize();
-      fitSigmaViewport(sigma, graph);
-    } catch (_) {
-      /* resize before layout ready */
+      const kind = e.kind || "related";
+      const edgeType = kind === "precursor" ? "arrow" : "line";
+      try {
+        graph.addEdge(e.source, e.target, { type: edgeType, kind });
+      } catch (_) {
+        /* parallel or invalid */
+      }
     }
-  });
-  ro.observe(container);
+
+    sigma = new Sigma(graph, container, {
+      renderLabels: true,
+      defaultNodeColor: "#c9a962",
+      defaultEdgeColor: "#6e6e6e",
+      labelDensity: 0.22,
+      labelSize: 13,
+      labelFont: "Georgia, 'Times New Roman', serif",
+      labelWeight: "normal",
+      labelRenderer: threadsLightLabelRenderer,
+      defaultEdgeType: "line",
+    });
+
+    fitSigmaViewport(sigma, graph);
+
+    sigma.on("clickNode", ({ node }) => {
+      window.location.href = baseurl + node;
+    });
+
+    const ro = new ResizeObserver(() => {
+      try {
+        sigma.resize();
+        fitSigmaViewport(sigma, graph);
+      } catch (_) {
+        /* resize edge case */
+      }
+    });
+    ro.observe(container);
+  } catch (err) {
+    console.error("threads-graph:", err);
+    if (sigma && typeof sigma.kill === "function") {
+      try {
+        sigma.kill();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    showGraphError(
+      container,
+      "The graph could not start (WebGL, layout, or script loading). Try another browser or check the developer console.",
+    );
+  }
 }
 
 function startWhenContainerReady() {
