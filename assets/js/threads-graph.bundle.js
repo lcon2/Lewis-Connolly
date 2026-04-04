@@ -6651,8 +6651,8 @@ function radialExtentForPostCount(nodeCount) {
   const rMax = Math.min(560, 240 + Math.sqrt(n) * 26);
   return { rMin, rMax };
 }
-function buildQuarterlyTimeModel(sortedAsc2) {
-  const n = sortedAsc2.length;
+function buildQuarterlyTimeModel(sortedAsc) {
+  const n = sortedAsc.length;
   const { rMin, rMax } = radialExtentForPostCount(n);
   if (n === 0) {
     return { dateMode: true, bandById: /* @__PURE__ */ new Map(), maxBand: 0, rMin, rMax, targetRForBand: () => rMin };
@@ -6660,7 +6660,7 @@ function buildQuarterlyTimeModel(sortedAsc2) {
   if (n === 1) {
     return {
       dateMode: true,
-      bandById: /* @__PURE__ */ new Map([[sortedAsc2[0].id, 0]]),
+      bandById: /* @__PURE__ */ new Map([[sortedAsc[0].id, 0]]),
       maxBand: 0,
       rMin,
       rMax,
@@ -6668,14 +6668,14 @@ function buildQuarterlyTimeModel(sortedAsc2) {
     };
   }
   const bandMs = TIME_BAND_DAYS * MS_PER_DAY;
-  const dated = sortedAsc2.map((node) => ({
+  const dated = sortedAsc.map((node) => ({
     node,
     t: parsePostDateMs(node.date)
   }));
   const finite = dated.filter((d) => !Number.isNaN(d.t));
   if (finite.length === 0) {
     const ext = radialExtentForPostCount(n);
-    return { dateMode: false, n, rMin: ext.rMin, rMax: ext.rMax, sortedAsc: sortedAsc2 };
+    return { dateMode: false, n, rMin: ext.rMin, rMax: ext.rMax, sortedAsc };
   }
   const minT = Math.min(...finite.map((d) => d.t));
   const bandById = /* @__PURE__ */ new Map();
@@ -6701,15 +6701,15 @@ function buildQuarterlyTimeModel(sortedAsc2) {
   }
   return { dateMode: true, bandById, maxBand, rMin, rMax, targetRForBand };
 }
-function layoutTimeBandsQuarterly(sortedAsc2) {
+function layoutTimeBandsQuarterly(sortedAsc) {
   const positions = /* @__PURE__ */ new Map();
-  const n = sortedAsc2.length;
+  const n = sortedAsc.length;
   if (n === 0) return positions;
-  const model = buildQuarterlyTimeModel(sortedAsc2);
+  const model = buildQuarterlyTimeModel(sortedAsc);
   const rMin = model.rMin;
   const rMax = model.rMax;
   if (!model.dateMode) {
-    sortedAsc2.forEach((node, rank) => {
+    sortedAsc.forEach((node, rank) => {
       const t = rank / (n - 1);
       const r = rMin + t * (rMax - rMin);
       const angle = 2 * Math.PI * rank / n - Math.PI / 2;
@@ -6722,12 +6722,12 @@ function layoutTimeBandsQuarterly(sortedAsc2) {
     return positions;
   }
   if (n === 1) {
-    positions.set(sortedAsc2[0].id, { x: 0, y: 0, targetR: rMin });
+    positions.set(sortedAsc[0].id, { x: 0, y: 0, targetR: rMin });
     return positions;
   }
   const { bandById, targetRForBand } = model;
   const byBand = /* @__PURE__ */ new Map();
-  for (const node of sortedAsc2) {
+  for (const node of sortedAsc) {
     const b = bandById.get(node.id) ?? 0;
     if (!byBand.has(b)) byBand.set(b, []);
     byBand.get(b).push(node);
@@ -6751,9 +6751,9 @@ function layoutTimeBandsQuarterly(sortedAsc2) {
   }
   return positions;
 }
-function drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc2, cssW, cssH) {
+function drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc, cssW, cssH) {
   ctx.clearRect(0, 0, cssW, cssH);
-  const model = buildQuarterlyTimeModel(sortedAsc2);
+  const model = buildQuarterlyTimeModel(sortedAsc);
   if (!model.dateMode) return;
   const { maxBand, targetRForBand } = model;
   const R = [];
@@ -6789,7 +6789,7 @@ function drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc2, cssW, cssH) {
     ctx.fill();
   }
 }
-function attachQuarterlyBandUnderlay(container, sigma, sortedAsc2) {
+function attachQuarterlyBandUnderlay(container, sigma, sortedAsc) {
   const canvas = document.createElement("canvas");
   canvas.className = "threads-time-bands-canvas";
   canvas.setAttribute("aria-hidden", "true");
@@ -6806,7 +6806,7 @@ function attachQuarterlyBandUnderlay(container, sigma, sortedAsc2) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc2, cssW, cssH);
+    drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc, cssW, cssH);
   }
   redraw();
   const cam = sigma.getCamera();
@@ -7019,16 +7019,17 @@ function runGraph(container, dataEl) {
     panel.setAttribute("hidden", "");
   }
   let graph;
+  let sortedAsc = [];
   try {
-    const sortedAsc2 = [...nodes].sort((a2, b) => {
+    sortedAsc = [...nodes].sort((a2, b) => {
       const da = String(a2.date || "");
       const db = String(b.date || "");
       return da.localeCompare(db);
     });
     const nodeSet = new Set(nodes.map((n) => n.id));
-    const posById = layoutTimeBandsQuarterly(sortedAsc2);
+    const posById = layoutTimeBandsQuarterly(sortedAsc);
     graph = new import_graphology.default({ type: "directed" });
-    for (const node of sortedAsc2) {
+    for (const node of sortedAsc) {
       const p = posById.get(node.id);
       graph.addNode(node.id, {
         x: p.x,

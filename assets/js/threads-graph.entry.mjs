@@ -567,8 +567,10 @@ function runGraph(container, dataEl) {
   }
 
   let graph;
+  /** Chronological order; kept in runGraph scope for band underlay after graph build. */
+  let sortedAsc = [];
   try {
-    const sortedAsc = [...nodes].sort((a, b) => {
+    sortedAsc = [...nodes].sort((a, b) => {
       const da = String(a.date || "");
       const db = String(b.date || "");
       return da.localeCompare(db);
