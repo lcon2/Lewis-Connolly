@@ -1,5 +1,5 @@
 {
-  "about": "Directed edges use post.url as id (leading slash, trailing slash). kind \"precursor\": Thread link from earlier essay to later; rendered as an arrow in #5f7583. kind \"conceptual_bridge\": thematic bridge; neutral line in #801f22. Other kinds use a neutral gray line. Only edges whose endpoints appear in the 20 most recent posts are drawn.",
+  "about": "Directed edges use post.url as id (leading slash, trailing slash). kind \"precursor\": Thread link from earlier essay to later; rendered as an arrow in #801f22. kind \"conceptual_bridge\": thematic bridge; line in #5f7583. Other kinds use a neutral gray line. Only edges whose endpoints appear in the 20 most recent posts are drawn.",
   "edges": [
     {
       "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
@@ -109,6 +109,11 @@
     {
       "source": "/2025/04/10/not-my-ways/",
       "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
+      "target": "/2025/11/27/the-self-evident/",
       "kind": "conceptual_bridge"
     }
   ]

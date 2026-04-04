@@ -6530,64 +6530,43 @@ function manyBody_default() {
   return force;
 }
 
-// node_modules/d3-force/src/x.js
-function x_default2(x3) {
-  var strength = constant_default(0.1), nodes, strengths, xz;
-  if (typeof x3 !== "function") x3 = constant_default(x3 == null ? 0 : +x3);
+// node_modules/d3-force/src/radial.js
+function radial_default(radius, x3, y3) {
+  var nodes, strength = constant_default(0.1), strengths, radiuses;
+  if (typeof radius !== "function") radius = constant_default(+radius);
+  if (x3 == null) x3 = 0;
+  if (y3 == null) y3 = 0;
   function force(alpha) {
-    for (var i = 0, n = nodes.length, node; i < n; ++i) {
-      node = nodes[i], node.vx += (xz[i] - node.x) * strengths[i] * alpha;
+    for (var i = 0, n = nodes.length; i < n; ++i) {
+      var node = nodes[i], dx = node.x - x3 || 1e-6, dy = node.y - y3 || 1e-6, r = Math.sqrt(dx * dx + dy * dy), k = (radiuses[i] - r) * strengths[i] * alpha / r;
+      node.vx += dx * k;
+      node.vy += dy * k;
     }
   }
   function initialize() {
     if (!nodes) return;
     var i, n = nodes.length;
     strengths = new Array(n);
-    xz = new Array(n);
+    radiuses = new Array(n);
     for (i = 0; i < n; ++i) {
-      strengths[i] = isNaN(xz[i] = +x3(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
+      radiuses[i] = +radius(nodes[i], i, nodes);
+      strengths[i] = isNaN(radiuses[i]) ? 0 : +strength(nodes[i], i, nodes);
     }
   }
   force.initialize = function(_) {
-    nodes = _;
-    initialize();
+    nodes = _, initialize();
   };
   force.strength = function(_) {
     return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
+  };
+  force.radius = function(_) {
+    return arguments.length ? (radius = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : radius;
   };
   force.x = function(_) {
-    return arguments.length ? (x3 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : x3;
-  };
-  return force;
-}
-
-// node_modules/d3-force/src/y.js
-function y_default2(y3) {
-  var strength = constant_default(0.1), nodes, strengths, yz;
-  if (typeof y3 !== "function") y3 = constant_default(y3 == null ? 0 : +y3);
-  function force(alpha) {
-    for (var i = 0, n = nodes.length, node; i < n; ++i) {
-      node = nodes[i], node.vy += (yz[i] - node.y) * strengths[i] * alpha;
-    }
-  }
-  function initialize() {
-    if (!nodes) return;
-    var i, n = nodes.length;
-    strengths = new Array(n);
-    yz = new Array(n);
-    for (i = 0; i < n; ++i) {
-      strengths[i] = isNaN(yz[i] = +y3(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
-    }
-  }
-  force.initialize = function(_) {
-    nodes = _;
-    initialize();
-  };
-  force.strength = function(_) {
-    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
+    return arguments.length ? (x3 = +_, force) : x3;
   };
   force.y = function(_) {
-    return arguments.length ? (y3 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : y3;
+    return arguments.length ? (y3 = +_, force) : y3;
   };
   return force;
 }
@@ -6595,10 +6574,16 @@ function y_default2(y3) {
 // assets/js/threads-graph.entry.mjs
 var import_sigma = __toESM(require_sigma2(), 1);
 var NODE_DEFAULT_SIZE = 12;
-var POSITIONS_KEY = "threads-graph-positions";
+var POSITIONS_KEY = "threads-graph-positions-v2";
 var CLICK_PX = 6;
 var LERP_K = 0.52;
-var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 6;
+var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
+var TIME_BAND_DAYS = 90;
+var MS_PER_DAY = 864e5;
+var RADIAL_STRENGTH = 0.052;
+var CHARGE_STRENGTH = -38;
+var EDGE_REPULSE_MARGIN = 26;
+var EDGE_REPULSE_STRENGTH = 0.15;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
 var DRAG_CONSTELLATION_PULL = 0.022;
 var DRAG_SIM_TICKS = 9;
@@ -6608,10 +6593,10 @@ var NODE_FOCUS = "#e8cf7a";
 var NODE_NEIGHBOR = "#d4b86a";
 var EDGE_REL = "#6e6e6e";
 var EDGE_REL_DIM = "#4a4a4a";
-var EDGE_THREAD = "#5f7583";
-var EDGE_THREAD_DIM = "#3d4a52";
-var EDGE_CONCEPTUAL = "#801f22";
-var EDGE_CONCEPTUAL_DIM = "#501015";
+var EDGE_THREAD = "#801f22";
+var EDGE_THREAD_DIM = "#501015";
+var EDGE_CONCEPTUAL = "#5f7583";
+var EDGE_CONCEPTUAL_DIM = "#3d4a52";
 var EDGE_SIZE_REL = 1.2;
 var EDGE_SIZE_CONCEPTUAL = 2.3;
 var EDGE_SIZE_THREAD = 3.4;
@@ -6651,26 +6636,128 @@ function threadsLightLabelRenderer(context, data, settings) {
   context.font = `${weight} ${size}px ${font}`;
   context.fillText(data.label, data.x + data.size + 4, data.y + size / 3);
 }
-function layoutRadialByDate(sortedAsc) {
-  const n = sortedAsc.length;
+function parsePostDateMs(iso) {
+  const t = Date.parse(String(iso || ""));
+  return Number.isFinite(t) ? t : NaN;
+}
+function layoutTimeBandsQuarterly(sortedAsc) {
   const rMin = 48;
   const rMax = 240;
   const positions = /* @__PURE__ */ new Map();
+  const n = sortedAsc.length;
   if (n === 0) return positions;
   if (n === 1) {
-    positions.set(sortedAsc[0].id, { x: 0, y: 0 });
+    positions.set(sortedAsc[0].id, { x: 0, y: 0, targetR: rMin });
     return positions;
   }
-  sortedAsc.forEach((node, rank) => {
-    const t = rank / (n - 1);
-    const r = rMin + t * (rMax - rMin);
-    const angle = 2 * Math.PI * rank / n - Math.PI / 2;
-    positions.set(node.id, {
-      x: Math.cos(angle) * r,
-      y: Math.sin(angle) * r
+  const bandMs = TIME_BAND_DAYS * MS_PER_DAY;
+  const dated = sortedAsc.map((node) => ({
+    node,
+    t: parsePostDateMs(node.date)
+  }));
+  const finite = dated.filter((d) => !Number.isNaN(d.t));
+  if (finite.length === 0) {
+    sortedAsc.forEach((node, rank) => {
+      const t = rank / (n - 1);
+      const r = rMin + t * (rMax - rMin);
+      const angle = 2 * Math.PI * rank / n - Math.PI / 2;
+      positions.set(node.id, {
+        x: Math.cos(angle) * r,
+        y: Math.sin(angle) * r,
+        targetR: r
+      });
     });
-  });
+    return positions;
+  }
+  const minT = Math.min(...finite.map((d) => d.t));
+  const bandById = /* @__PURE__ */ new Map();
+  let maxBand = 0;
+  for (const { node, t } of dated) {
+    let b;
+    if (Number.isNaN(t)) {
+      b = 0;
+    } else {
+      b = Math.max(0, Math.floor((t - minT) / bandMs));
+      maxBand = Math.max(maxBand, b);
+    }
+    bandById.set(node.id, b);
+  }
+  for (const { node, t } of dated) {
+    if (Number.isNaN(t)) {
+      bandById.set(node.id, maxBand);
+    }
+  }
+  function targetRForBand(band) {
+    if (maxBand === 0) return rMin;
+    return rMin + band / maxBand * (rMax - rMin);
+  }
+  const byBand = /* @__PURE__ */ new Map();
+  for (const node of sortedAsc) {
+    const b = bandById.get(node.id) ?? 0;
+    if (!byBand.has(b)) byBand.set(b, []);
+    byBand.get(b).push(node);
+  }
+  const bandKeys = [...byBand.keys()].sort((a2, b) => a2 - b);
+  let bandPhase = 0;
+  for (const b of bandKeys) {
+    const group = byBand.get(b).slice().sort((a2, c2) => String(a2.date).localeCompare(String(c2.date)));
+    const tr = targetRForBand(b);
+    const k = group.length;
+    for (let j = 0; j < k; j++) {
+      const node = group[j];
+      const theta = (2 * Math.PI * j / k || 0) + bandPhase;
+      positions.set(node.id, {
+        x: Math.cos(theta) * tr,
+        y: Math.sin(theta) * tr,
+        targetR: tr
+      });
+    }
+    bandPhase += Math.PI / 7;
+  }
   return positions;
+}
+function forceEdgeRepulse(links) {
+  let nodes;
+  function force(alpha) {
+    const k = EDGE_REPULSE_STRENGTH * alpha;
+    const margin = EDGE_REPULSE_MARGIN;
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      for (let j = 0; j < links.length; j++) {
+        const l = links[j];
+        const na = l.source;
+        const nb = l.target;
+        if (node === na || node === nb) continue;
+        const ax = na.x;
+        const ay = na.y;
+        const bx = nb.x;
+        const by = nb.y;
+        const abx = bx - ax;
+        const aby = by - ay;
+        const apx = node.x - ax;
+        const apy = node.y - ay;
+        const abLen2 = abx * abx + aby * aby || 1e-12;
+        let t = (apx * abx + apy * aby) / abLen2;
+        t = Math.max(0, Math.min(1, t));
+        const cx = ax + t * abx;
+        const cy = ay + t * aby;
+        let dx = node.x - cx;
+        let dy = node.y - cy;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 1e-6) continue;
+        const penetration = margin - dist;
+        if (penetration <= 0) continue;
+        dx /= dist;
+        dy /= dist;
+        node.vx += dx * penetration * k;
+        node.vy += dy * penetration * k;
+      }
+    }
+  }
+  force.initialize = (_) => {
+    nodes = _;
+  };
+  return force;
 }
 function fitSigmaViewport(sigma, graph, padding = 88) {
   let minX = Infinity;
@@ -6827,13 +6914,14 @@ function runGraph(container, dataEl) {
       return da.localeCompare(db);
     });
     const nodeSet = new Set(nodes.map((n) => n.id));
-    const posById = layoutRadialByDate(sortedAsc);
+    const posById = layoutTimeBandsQuarterly(sortedAsc);
     graph = new import_graphology.default({ type: "directed" });
     for (const node of sortedAsc) {
       const p = posById.get(node.id);
       graph.addNode(node.id, {
         x: p.x,
         y: p.y,
+        targetR: p.targetR,
         label: node.title || "",
         size: NODE_DEFAULT_SIZE,
         color: NODE_BASE
@@ -6882,36 +6970,52 @@ function runGraph(container, dataEl) {
   const idToSim = /* @__PURE__ */ new Map();
   const simNodes = [];
   graph.forEachNode((id, a2) => {
+    const tr = typeof a2.targetR === "number" && Number.isFinite(a2.targetR) ? a2.targetR : 120;
     const o = {
       id,
       x: a2.x,
       y: a2.y,
-      anchorX: a2.x,
-      anchorY: a2.y
+      targetR: tr
     };
     simNodes.push(o);
     idToSim.set(id, o);
   });
   const simLinks = [];
-  graph.forEachEdge((_edge, _attr, s, t) => {
+  graph.forEachEdge((_edge, attr, s, t) => {
     const sx = graph.getNodeAttribute(s, "x");
     const sy = graph.getNodeAttribute(s, "y");
     const tx = graph.getNodeAttribute(t, "x");
     const ty = graph.getNodeAttribute(t, "y");
     const d = Math.hypot(tx - sx, ty - sy);
+    const kind = attr.kind || "related";
     simLinks.push({
       source: idToSim.get(s),
       target: idToSim.get(t),
-      distance: Math.max(28, d * 0.92)
+      kind,
+      baseDist: Math.max(28, d * 0.92)
     });
   });
+  function linkIdealDistance(link) {
+    const b = link.baseDist;
+    if (link.kind === "precursor") return b * 0.72;
+    if (link.kind === "conceptual_bridge") return b * 1.22;
+    return b;
+  }
+  function linkStrength(link) {
+    if (link.kind === "precursor") return 0.84;
+    if (link.kind === "conceptual_bridge") return 0.24;
+    return 0.52;
+  }
   const simulation = simulation_default(simNodes).force(
     "link",
-    link_default(simLinks).distance((l) => l.distance).strength(0.62)
-  ).force("charge", manyBody_default().strength(-24)).force(
+    link_default(simLinks).distance(linkIdealDistance).strength(linkStrength)
+  ).force("charge", manyBody_default().strength(CHARGE_STRENGTH)).force(
     "collide",
-    collide_default().radius(() => COLLIDE_RADIUS).strength(0.88)
-  ).force("x", x_default2((d) => d.anchorX).strength(0.032)).force("y", y_default2((d) => d.anchorY).strength(0.032)).alphaTarget(0).stop();
+    collide_default().radius(() => COLLIDE_RADIUS).strength(0.92)
+  ).force(
+    "radial",
+    radial_default((d) => d.targetR, 0, 0).strength(RADIAL_STRENGTH)
+  ).force("edgeRepulse", forceEdgeRepulse(simLinks)).alphaTarget(0).stop();
   let pointerInsideContainer = false;
   let dragActive = false;
   let hoverFocus = null;
@@ -7014,11 +7118,11 @@ function runGraph(container, dataEl) {
       settleRaf = 0;
     }
   }
-  function startSettleAfterDrag() {
+  function runSettle(alphaStart, budgetMs, refitWhenDone) {
     cancelSettle();
     simulation.stop();
-    simulation.alpha(0.42);
-    settleDeadline = performance.now() + 800;
+    simulation.alpha(alphaStart);
+    settleDeadline = performance.now() + budgetMs;
     function settleStep() {
       simulation.tick();
       syncGraphFromSim();
@@ -7027,11 +7131,17 @@ function runGraph(container, dataEl) {
         simulation.stop();
         settleRaf = 0;
         persistPositions(graph);
+        if (refitWhenDone) {
+          fitSigmaViewport(sigma, graph);
+        }
         return;
       }
       settleRaf = requestAnimationFrame(settleStep);
     }
     settleRaf = requestAnimationFrame(settleStep);
+  }
+  function startSettleAfterDrag() {
+    runSettle(0.42, 800, false);
   }
   let dragNode = null;
   let startVp = { x: 0, y: 0 };
@@ -7135,6 +7245,7 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     fitSigmaViewport(sigma, graph);
+    runSettle(0.78, 1500, true);
     const POINTER_OPTS = { capture: true };
     container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
     container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
