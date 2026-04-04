@@ -1,15 +1,115 @@
 {
-  "about": "Directed edges use post.url as id (leading slash, trailing slash). kind \"precursor\": source is the earlier essay, target is the later piece; rendered as an arrow. Other kinds use a neutral line. Only edges whose endpoints appear in the 20 most recent posts are drawn.",
+  "about": "Directed edges use post.url as id (leading slash, trailing slash). kind \"precursor\": Thread link from earlier essay to later; rendered as an arrow in #5f7583. kind \"conceptual_bridge\": thematic bridge; neutral line in #801f22. Other kinds use a neutral gray line. Only edges whose endpoints appear in the 20 most recent posts are drawn.",
   "edges": [
     {
-      "source": "/2026/03/20/the-end-of-shared-reality/",
-      "target": "/2026/04/03/the-hybrid-interiority/",
+      "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
+      "target": "/2026/01/22/wage-labor-and-the-meaning-crisis/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/01/22/wage-labor-and-the-meaning-crisis/",
+      "target": "/2025/11/10/iron-dome/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2025/11/16/dont-try/",
+      "target": "/2025/11/27/the-self-evident/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2025/11/27/the-self-evident/",
+      "target": "/2025/12/07/Curator-of-being/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2025/12/07/Curator-of-being/",
+      "target": "/2026/01/18/condemned-to-freedom/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/01/18/condemned-to-freedom/",
+      "target": "/2026/03/20/the-end-of-shared-reality/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2025/11/10/iron-dome/",
+      "target": "/2026/03/20/the-end-of-shared-reality/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/01/17/watch-the-river/",
+      "target": "/2026/03/17/creation-without-witness/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/03/17/creation-without-witness/",
+      "target": "/2026/03/20/the-end-of-shared-reality/",
       "kind": "precursor"
     },
     {
       "source": "/2026/03/20/the-end-of-shared-reality/",
       "target": "/2026/03/24/the-shapes-beneath-thought/",
       "kind": "precursor"
+    },
+    {
+      "source": "/2026/03/20/the-end-of-shared-reality/",
+      "target": "/2026/04/01/the-synthetic-shadow/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/03/20/the-end-of-shared-reality/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/03/24/the-shapes-beneath-thought/",
+      "target": "/2026/04/01/the-synthetic-shadow/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/03/24/the-shapes-beneath-thought/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/04/01/the-synthetic-shadow/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2026/01/22/wage-labor-and-the-meaning-crisis/",
+      "target": "/2025/11/27/the-self-evident/",
+      "kind": "precursor"
+    },
+    {
+      "source": "/2025/10/05/Some-thoughts-on-Intuition/",
+      "target": "/2026/03/24/the-shapes-beneath-thought/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/10/05/Some-thoughts-on-Intuition/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/04/22/the-diachronic-and-the-episodic/",
+      "target": "/2026/01/18/condemned-to-freedom/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/04/22/the-diachronic-and-the-episodic/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/04/10/not-my-ways/",
+      "target": "/2026/04/01/the-synthetic-shadow/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2025/04/10/not-my-ways/",
+      "target": "/2026/04/03/the-hybrid-interiority/",
+      "kind": "conceptual_bridge"
     }
   ]
 }

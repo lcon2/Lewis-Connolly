@@ -21,14 +21,12 @@ const CLICK_PX = 6;
 const LERP_K = 0.52;
 /** Graph-space collision radius around each node (Sigma coords). */
 const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 6;
-/** Idle: radians/frame scale for slow orbit around barycenter (scaled by cursor influence). */
-const IDLE_ORBIT = 0.00095;
-/** Idle: how strongly the whole group drifts toward the cursor (very small). */
-const IDLE_ATTRACT = 0.022;
+/** While dragging: orbit scale around barycenter toward cursor (radians, scaled by influence). */
+const DRAG_CONSTELLATION_ORBIT = 0.00095;
+/** While dragging: pull non-dragged nodes toward cursor (very small). */
+const DRAG_CONSTELLATION_PULL = 0.022;
 /** Simulation ticks per frame while dragging (higher = snappier separation). */
 const DRAG_SIM_TICKS = 9;
-/** Simulation ticks per idle frame after cursor nudge. */
-const IDLE_SIM_TICKS = 2;
 
 const NODE_BASE = "#c9a962";
 const NODE_MUTED = "#5c5238";
@@ -39,9 +37,44 @@ const EDGE_REL = "#6e6e6e";
 const EDGE_REL_DIM = "#4a4a4a";
 const EDGE_THREAD = "#5f7583";
 const EDGE_THREAD_DIM = "#3d4a52";
+const EDGE_CONCEPTUAL = "#801f22";
+const EDGE_CONCEPTUAL_DIM = "#501015";
 
 const EDGE_SIZE_REL = 1.2;
+const EDGE_SIZE_CONCEPTUAL = 2.3;
 const EDGE_SIZE_THREAD = 3.4;
+
+/**
+ * Nudge all sim nodes except the dragged one: slow rotation about barycenter + drift toward (gx, gy).
+ */
+function applyConstellationFollowToward(gx, gy, simNodes, dragNodeId) {
+  if (simNodes.length === 0) return;
+  let sx = 0;
+  let sy = 0;
+  for (const n of simNodes) {
+    sx += n.x;
+    sy += n.y;
+  }
+  const p = { x: sx / simNodes.length, y: sy / simNodes.length };
+  const toCx = gx - p.x;
+  const toCy = gy - p.y;
+  const toCLen = Math.hypot(toCx, toCy) || 1;
+  const inf = Math.min(1.4, toCLen / 95);
+  const theta = DRAG_CONSTELLATION_ORBIT * inf;
+  const ct = Math.cos(theta);
+  const st = Math.sin(theta);
+  const pull = DRAG_CONSTELLATION_PULL * 0.018 * inf;
+
+  for (const n of simNodes) {
+    if (n.id === dragNodeId) continue;
+    const rx = n.x - p.x;
+    const ry = n.y - p.y;
+    n.x = p.x + rx * ct - ry * st;
+    n.y = p.y + rx * st + ry * ct;
+    n.x += toCx * pull;
+    n.y += toCy * pull;
+  }
+}
 
 function threadsLightLabelRenderer(context, data, settings) {
   if (!data.label) return;
@@ -286,14 +319,24 @@ function runGraph(container, dataEl) {
       if (graph.hasEdge(e.source, e.target)) continue;
 
       const kind = e.kind || "related";
-      const edgeType = kind === "precursor" ? "arrow" : "line";
-      const isThread = kind === "precursor";
+      const isPrecursor = kind === "precursor";
+      const isConceptual = kind === "conceptual_bridge";
+      const edgeType = isPrecursor ? "arrow" : "line";
+      let color = EDGE_REL;
+      let size = EDGE_SIZE_REL;
+      if (isPrecursor) {
+        color = EDGE_THREAD;
+        size = EDGE_SIZE_THREAD;
+      } else if (isConceptual) {
+        color = EDGE_CONCEPTUAL;
+        size = EDGE_SIZE_CONCEPTUAL;
+      }
       try {
         graph.addEdge(e.source, e.target, {
           type: edgeType,
           kind,
-          color: isThread ? EDGE_THREAD : EDGE_REL,
-          size: isThread ? EDGE_SIZE_THREAD : EDGE_SIZE_REL,
+          color,
+          size,
         });
       } catch (_) {
         /* parallel or invalid */
@@ -357,9 +400,7 @@ function runGraph(container, dataEl) {
     .stop();
 
   let pointerInsideContainer = false;
-  let lastGraphPointer = { x: 0, y: 0 };
   let dragActive = false;
-  let idleRaf = 0;
 
   let hoverFocus = null;
   let hoverHighlightSet = null;
@@ -399,24 +440,45 @@ function runGraph(container, dataEl) {
     return attr;
   };
 
+  function edgeStyleForKind(kind, dimmed) {
+    if (kind === "precursor") {
+      return {
+        color: dimmed ? EDGE_THREAD_DIM : EDGE_THREAD,
+        size: EDGE_SIZE_THREAD,
+      };
+    }
+    if (kind === "conceptual_bridge") {
+      return {
+        color: dimmed ? EDGE_CONCEPTUAL_DIM : EDGE_CONCEPTUAL,
+        size: EDGE_SIZE_CONCEPTUAL,
+      };
+    }
+    return {
+      color: dimmed ? EDGE_REL_DIM : EDGE_REL,
+      size: EDGE_SIZE_REL,
+    };
+  }
+
   const edgeReducer = (edge, data) => {
     const attr = Object.assign({}, data);
+    const k = data.kind || "related";
     if (!hoverHighlightSet) {
-      const k = data.kind === "precursor" ? "precursor" : "related";
-      attr.color = k === "precursor" ? EDGE_THREAD : EDGE_REL;
-      attr.size = k === "precursor" ? EDGE_SIZE_THREAD : EDGE_SIZE_REL;
+      const st = edgeStyleForKind(k, false);
+      attr.color = st.color;
+      attr.size = st.size;
       return attr;
     }
     const [s, t] = graph.extremities(edge);
     const incident = hoverHighlightSet.has(s) || hoverHighlightSet.has(t);
-    const isThread = data.kind === "precursor";
     if (incident) {
-      attr.color = isThread ? EDGE_THREAD : EDGE_REL;
-      attr.size = isThread ? EDGE_SIZE_THREAD : EDGE_SIZE_REL;
+      const st = edgeStyleForKind(k, false);
+      attr.color = st.color;
+      attr.size = st.size;
       return attr;
     }
-    attr.color = isThread ? EDGE_THREAD_DIM : EDGE_REL_DIM;
-    attr.size = (isThread ? EDGE_SIZE_THREAD : EDGE_SIZE_REL) * 0.75;
+    const st = edgeStyleForKind(k, true);
+    attr.color = st.color;
+    attr.size = st.size * 0.75;
     return attr;
   };
 
@@ -451,62 +513,8 @@ function runGraph(container, dataEl) {
     }
   }
 
-  function stopIdleLoop() {
-    if (idleRaf) {
-      cancelAnimationFrame(idleRaf);
-      idleRaf = 0;
-    }
-  }
-
-  function startIdleLoop() {
-    if (idleRaf || !sigma || dragActive || settleRaf || !pointerInsideContainer)
-      return;
-    idleRaf = requestAnimationFrame(idleStep);
-  }
-
-  function idleStep() {
-    idleRaf = 0;
-    if (!sigma || !pointerInsideContainer || dragActive || settleRaf) return;
-    if (simNodes.length === 0) return;
-
-    let sx = 0;
-    let sy = 0;
-    for (const n of simNodes) {
-      sx += n.x;
-      sy += n.y;
-    }
-    const p = { x: sx / simNodes.length, y: sy / simNodes.length };
-    const gx = lastGraphPointer.x;
-    const gy = lastGraphPointer.y;
-    const toCx = gx - p.x;
-    const toCy = gy - p.y;
-    const toCLen = Math.hypot(toCx, toCy) || 1;
-    const inf = Math.min(1.4, toCLen / 95);
-    const theta = IDLE_ORBIT * inf;
-    const ct = Math.cos(theta);
-    const st = Math.sin(theta);
-    const pull = IDLE_ATTRACT * 0.018 * inf;
-
-    for (const n of simNodes) {
-      const rx = n.x - p.x;
-      const ry = n.y - p.y;
-      n.x = p.x + rx * ct - ry * st;
-      n.y = p.y + rx * st + ry * ct;
-      n.x += toCx * pull;
-      n.y += toCy * pull;
-    }
-
-    simulation.stop();
-    simulation.alpha(Math.max(simulation.alpha(), 0.038));
-    for (let i = 0; i < IDLE_SIM_TICKS; i++) simulation.tick();
-    syncGraphFromSim();
-    sigma.refresh();
-    idleRaf = requestAnimationFrame(idleStep);
-  }
-
   function startSettleAfterDrag() {
     cancelSettle();
-    stopIdleLoop();
     simulation.stop();
     simulation.alpha(0.42);
     settleDeadline = performance.now() + 800;
@@ -519,7 +527,6 @@ function runGraph(container, dataEl) {
         simulation.stop();
         settleRaf = 0;
         persistPositions(graph);
-        if (pointerInsideContainer) startIdleLoop();
         return;
       }
       settleRaf = requestAnimationFrame(settleStep);
@@ -555,6 +562,7 @@ function runGraph(container, dataEl) {
     const ty = dragTargetGraph.y;
     sn.fx = sn.x + (tx - sn.x) * LERP_K;
     sn.fy = sn.y + (ty - sn.y) * LERP_K;
+    applyConstellationFollowToward(tx, ty, simNodes, dragNode);
     for (let i = 0; i < DRAG_SIM_TICKS; i++) simulation.tick();
     syncGraphFromSim();
     sigma.refresh();
@@ -604,7 +612,6 @@ function runGraph(container, dataEl) {
     if (dist < CLICK_PX) {
       openPostInNewTab(baseurl, openedNode);
       sigma.refresh();
-      if (pointerInsideContainer) startIdleLoop();
       return;
     }
 
@@ -637,35 +644,20 @@ function runGraph(container, dataEl) {
 
     const POINTER_OPTS = { capture: true };
 
-    function updateLastGraphPointerFromEvent(ev) {
-      if (!sigma) return;
-      lastGraphPointer = sigma.viewportToGraph(
-        viewportFromClient(container, ev.clientX, ev.clientY),
-      );
-    }
-
-    function onContainerPointerEnter(ev) {
+    function onContainerPointerEnter() {
       pointerInsideContainer = true;
-      updateLastGraphPointerFromEvent(ev);
       sigma.refresh();
-      startIdleLoop();
     }
 
     function onContainerPointerLeave(ev) {
       const rel = ev.relatedTarget;
       if (rel && container.contains(rel)) return;
       pointerInsideContainer = false;
-      stopIdleLoop();
       sigma.refresh();
-    }
-
-    function onContainerPointerMove(ev) {
-      updateLastGraphPointerFromEvent(ev);
     }
 
     container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
     container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
-    container.addEventListener("pointermove", onContainerPointerMove, POINTER_OPTS);
 
     sigma.on("enterNode", ({ node }) => {
       rebuildHighlightSet(node);
@@ -683,7 +675,6 @@ function runGraph(container, dataEl) {
     sigma.on("downNode", ({ node, event }) => {
       cancelSettle();
       simulation.stop();
-      stopIdleLoop();
       hidePanel();
       syncSimFromGraph();
       dragActive = true;
@@ -698,7 +689,6 @@ function runGraph(container, dataEl) {
 
     sigma.on("kill", () => {
       cancelSettle();
-      stopIdleLoop();
       simulation.stop();
       stopLerp();
       dragActive = false;
@@ -711,11 +701,6 @@ function runGraph(container, dataEl) {
       container.removeEventListener(
         "pointerleave",
         onContainerPointerLeave,
-        POINTER_OPTS,
-      );
-      container.removeEventListener(
-        "pointermove",
-        onContainerPointerMove,
         POINTER_OPTS,
       );
       window.removeEventListener("pointermove", onGlobalPointerMove);
