@@ -525,6 +525,116 @@
       "source": "/2019/07/08/philosophy-of-the-bouquet/",
       "target": "/2019/07/08/pneumanosophy/",
       "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/07/15/a-trrascendental-crossing/",
+      "target": "/2019/07/30/lammas-and-the-mundus-imaginalis/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/07/30/lammas-and-the-mundus-imaginalis/",
+      "target": "/2019/08/04/aes-religious-cosmology/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/08/04/aes-religious-cosmology/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/08/11/the-eschatology-parables/",
+      "target": "/2019/08/26/haunting-the-wood/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/08/11/the-eschatology-parables/",
+      "target": "/2019/09/06/christ-consciousness/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/08/26/haunting-the-wood/",
+      "target": "/2019/09/06/christ-consciousness/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/09/06/christ-consciousness/",
+      "target": "/2019/09/12/cain-and-abel/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/09/12/cain-and-abel/",
+      "target": "/2019/10/21/truth-or-myth/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/10/01/the-nature-of-change/",
+      "target": "/2019/10/14/the-20th-century-shaman/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/10/14/the-20th-century-shaman/",
+      "target": "/2019/08/04/aes-religious-cosmology/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/10/14/the-20th-century-shaman/",
+      "target": "/2019/10/21/truth-or-myth/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/10/21/truth-or-myth/",
+      "target": "/2019/11/04/algernon-blackwood-life-and-works/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2021/12/02/the-path-behind-publix/",
+      "target": "/2021/12/06/wotan-dormant-in-the-wood/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2021/12/06/wotan-dormant-in-the-wood/",
+      "target": "/2019/11/04/algernon-blackwood-life-and-works/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2021/12/06/wotan-dormant-in-the-wood/",
+      "target": "/2021/12/20/rejecting-advent/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2021/12/20/rejecting-advent/",
+      "target": "/2021/12/28/musings-on-non-duality-and-pluralism/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2022/03/31/water-into-wine/",
+      "target": "/2024/05/29/arguing-the-bible/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2022/06/15/thoughts-on-transcendentalism-from-a-recovering-fundamentalist/",
+      "target": "/2019/08/04/aes-religious-cosmology/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2023/03/16/what-is-the-gospel/",
+      "target": "/2019/09/06/christ-consciousness/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/03/19/the-aesthetic-of-the-hike/",
+      "target": "/2024/05/25/simply-listening/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/05/29/arguing-the-bible/",
+      "target": "/2019/10/21/truth-or-myth/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2024/11/05/fascism-and-pushing-the-fat-man/",
+      "target": "/2021/12/06/wotan-dormant-in-the-wood/",
+      "kind": "conceptual_bridge"
     }
   ]
 }

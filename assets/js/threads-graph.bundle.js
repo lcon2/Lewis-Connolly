@@ -6546,7 +6546,7 @@ var EDGE_REPULSE_MARGIN = 26;
 var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
 var DRAG_CONSTELLATION_PULL = 0.022;
-var LABEL_ZOOM_OVER_FIT = 1.06;
+var LABEL_GRID_DENSITY_NO_CAP = 1e18;
 var DRAG_SIM_TICKS = 9;
 var NODE_BASE = "#c9a962";
 var NODE_MUTED = "#5c5238";
@@ -7093,7 +7093,6 @@ function runGraph(container, dataEl) {
     return;
   }
   const graphNodeCount = nodes.length;
-  const labelDensityForCount = graphNodeCount > 72 ? 0.08 : graphNodeCount > 44 ? 0.11 : graphNodeCount > 28 ? 0.14 : 0.18;
   if (!isWebglAvailable()) {
     showGraphError(
       container,
@@ -7251,7 +7250,6 @@ function runGraph(container, dataEl) {
   let hoverHighlightSet = null;
   let sigmaRef = null;
   let pointerInsideContainer = false;
-  let labelRatioThreshold = 1;
   function rebuildHighlightSet(nodeId) {
     hoverFocus = nodeId;
     if (!nodeId) {
@@ -7266,12 +7264,9 @@ function runGraph(container, dataEl) {
   }
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    const cam = sigmaRef?.getCamera?.()?.getState();
-    const ratio = typeof cam?.ratio === "number" ? cam.ratio : 0;
-    const zoomOk = ratio >= labelRatioThreshold;
-    const frameOk = pointerInsideContainer;
     const inHighlight = hoverHighlightSet && hoverHighlightSet.has(node);
-    const showTitle = !dragActive && data.label && (inHighlight || frameOk && zoomOk && !hoverHighlightSet);
+    const idleAllInFrame = !hoverHighlightSet && pointerInsideContainer;
+    const showTitle = !dragActive && data.label && (inHighlight || idleAllInFrame);
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
@@ -7356,8 +7351,6 @@ function runGraph(container, dataEl) {
       settleRaf = 0;
     }
   }
-  let updateLabelZoomThreshold = () => {
-  };
   function runSettle(alphaStart, budgetMs, refitWhenDone) {
     cancelSettle();
     simulation.stop();
@@ -7373,7 +7366,6 @@ function runGraph(container, dataEl) {
         persistPositions(graph);
         if (refitWhenDone) {
           fitSigmaViewport(sigma, graph, void 0, graphNodeCount);
-          updateLabelZoomThreshold();
         }
         return;
       }
@@ -7477,20 +7469,14 @@ function runGraph(container, dataEl) {
   window.addEventListener("pointerup", onGlobalPointerUp);
   window.addEventListener("pointercancel", onGlobalPointerUp);
   try {
-    let syncSigmaLabelDensityForZoom = function() {
-      const r = sigma.getCamera().getState().ratio;
-      if (typeof r === "number" && Number.isFinite(r) && r > 0) {
-        sigma.settings.labelDensity = Math.max(
-          labelDensityBase * r * r,
-          labelDensityBase * 0.04
-        );
-      }
+    let applyLabelGridNoCap = function() {
+      sigma.settings.labelDensity = LABEL_GRID_DENSITY_NO_CAP;
     }, requestLabelRefreshFromCamera = function() {
       if (labelRefreshRaf) return;
       labelRefreshRaf = requestAnimationFrame(() => {
         labelRefreshRaf = 0;
         try {
-          syncSigmaLabelDensityForZoom();
+          applyLabelGridNoCap();
           sigma.refresh();
         } catch {
         }
@@ -7500,7 +7486,7 @@ function runGraph(container, dataEl) {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
       defaultEdgeColor: EDGE_REL,
-      labelDensity: labelDensityForCount,
+      labelDensity: LABEL_GRID_DENSITY_NO_CAP,
       labelSize: 13,
       labelFont: "Georgia, 'Times New Roman', serif",
       labelWeight: "normal",
@@ -7510,17 +7496,11 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     sigmaRef = sigma;
-    const labelDensityBase = labelDensityForCount;
-    updateLabelZoomThreshold = () => {
-      const r = sigma.getCamera().getState().ratio;
-      labelRatioThreshold = r * LABEL_ZOOM_OVER_FIT;
-      syncSigmaLabelDensityForZoom();
-    };
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
     }
     fitSigmaViewport(sigma, graph, void 0, graphNodeCount);
-    updateLabelZoomThreshold();
+    applyLabelGridNoCap();
     let labelRefreshRaf = 0;
     const camForLabels = sigma.getCamera();
     camForLabels.on("updated", requestLabelRefreshFromCamera);

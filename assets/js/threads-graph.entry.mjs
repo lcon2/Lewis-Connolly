@@ -37,10 +37,10 @@ const DRAG_CONSTELLATION_ORBIT = 0.00095;
 /** While dragging: pull non-dragged nodes toward cursor (very small). */
 const DRAG_CONSTELLATION_PULL = 0.022;
 /**
- * Idle bulk labels when camera ratio ≥ fit ratio × this (re-synced after fitSigmaViewport).
- * Slightly above 1 avoids a full wall of text at the initial fit while staying monotonic in ratio.
+ * Sigma's LabelGrid caps labels per cell with ceil(settings.labelDensity / ratio²); use a very
+ * large value so in-frame bulk labels are not culled by zoom/pan once nodeReducer supplies text.
  */
-const LABEL_ZOOM_OVER_FIT = 1.06;
+const LABEL_GRID_DENSITY_NO_CAP = 1e18;
 /** Simulation ticks per frame while dragging (higher = snappier separation). */
 const DRAG_SIM_TICKS = 9;
 
@@ -724,8 +724,6 @@ function runGraph(container, dataEl) {
   }
 
   const graphNodeCount = nodes.length;
-  const labelDensityForCount =
-    graphNodeCount > 72 ? 0.08 : graphNodeCount > 44 ? 0.11 : graphNodeCount > 28 ? 0.14 : 0.18;
 
   if (!isWebglAvailable()) {
     showGraphError(
@@ -925,11 +923,9 @@ function runGraph(container, dataEl) {
   let hoverFocus = null;
   let hoverHighlightSet = null;
 
-  /** Set after Sigma exists; nodeReducer reads for zoom-gated labels. */
+  /** Set after Sigma exists; nodeReducer reads for frame-gated labels. */
   let sigmaRef = null;
   let pointerInsideContainer = false;
-  /** Min camera ratio (after fit) before idle labels are allowed. */
-  let labelRatioThreshold = 1;
 
   function rebuildHighlightSet(nodeId) {
     hoverFocus = nodeId;
@@ -946,17 +942,15 @@ function runGraph(container, dataEl) {
 
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    const cam = sigmaRef?.getCamera?.()?.getState();
-    const ratio = typeof cam?.ratio === "number" ? cam.ratio : 0;
-    const zoomOk = ratio >= labelRatioThreshold;
-    const frameOk = pointerInsideContainer;
-    /** Highlighted nodes: always titled (unless dragging). Idle: all titles only in-frame + zoom. */
+    /** Hover: only focus + edge-neighbors titled. Idle inside frame: all titles. Outside frame: none (until hover). */
     const inHighlight =
       hoverHighlightSet && hoverHighlightSet.has(node);
+    const idleAllInFrame =
+      !hoverHighlightSet && pointerInsideContainer;
     const showTitle =
       !dragActive &&
       data.label &&
-      (inHighlight || (frameOk && zoomOk && !hoverHighlightSet));
+      (inHighlight || idleAllInFrame);
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
@@ -1050,9 +1044,6 @@ function runGraph(container, dataEl) {
     }
   }
 
-  /** Recompute label zoom gate from camera after any fitSigmaViewport. */
-  let updateLabelZoomThreshold = () => {};
-
   /**
    * @param {number} alphaStart
    * @param {number} budgetMs
@@ -1074,7 +1065,6 @@ function runGraph(container, dataEl) {
         persistPositions(graph);
         if (refitWhenDone) {
           fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
-          updateLabelZoomThreshold();
         }
         return;
       }
@@ -1203,7 +1193,7 @@ function runGraph(container, dataEl) {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
       defaultEdgeColor: EDGE_REL,
-      labelDensity: labelDensityForCount,
+      labelDensity: LABEL_GRID_DENSITY_NO_CAP,
       labelSize: 13,
       labelFont: "Georgia, 'Times New Roman', serif",
       labelWeight: "normal",
@@ -1214,32 +1204,16 @@ function runGraph(container, dataEl) {
     });
     sigmaRef = sigma;
 
-    /** Base grid density from post count; scaled by ratio² each frame so Sigma's ceil(d/r²) stays stable when zooming in. */
-    const labelDensityBase = labelDensityForCount;
-
-    function syncSigmaLabelDensityForZoom() {
-      const r = sigma.getCamera().getState().ratio;
-      if (typeof r === "number" && Number.isFinite(r) && r > 0) {
-        /* LabelGrid uses ceil(settings.labelDensity / ratio²); compensate so zoom-in does not cull more labels. */
-        sigma.settings.labelDensity = Math.max(
-          labelDensityBase * r * r,
-          labelDensityBase * 0.04,
-        );
-      }
+    function applyLabelGridNoCap() {
+      sigma.settings.labelDensity = LABEL_GRID_DENSITY_NO_CAP;
     }
-
-    updateLabelZoomThreshold = () => {
-      const r = sigma.getCamera().getState().ratio;
-      labelRatioThreshold = r * LABEL_ZOOM_OVER_FIT;
-      syncSigmaLabelDensityForZoom();
-    };
 
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
     }
 
     fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
-    updateLabelZoomThreshold();
+    applyLabelGridNoCap();
 
     let labelRefreshRaf = 0;
     function requestLabelRefreshFromCamera() {
@@ -1247,7 +1221,7 @@ function runGraph(container, dataEl) {
       labelRefreshRaf = requestAnimationFrame(() => {
         labelRefreshRaf = 0;
         try {
-          syncSigmaLabelDensityForZoom();
+          applyLabelGridNoCap();
           sigma.refresh();
         } catch {
           /* ignore */
