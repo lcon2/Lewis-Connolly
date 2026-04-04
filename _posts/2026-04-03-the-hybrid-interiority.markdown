@@ -58,7 +58,7 @@ I will return to this, but first I want to widen the frame a little and set out 
 
 For a time, it was not entirely clear which reality we were in; now, I think we can say with some confidence that we are in the reality of rapid AI capability expansion. Increasingly, people are going to be off-loading cognitive tasks onto AI, and the breadth of these tasks will become wider and more comprehensive. I have little doubt that before long we will have superficial digital twins in the cloud, able to act in the digital world on our behalf, doing whatever we want them to be doing, perhaps most significantly our jobs and our tax returns.
 
-Although this online facsimile of us may sound like us, speak like us, and reason like us—or rather like improved versions of us—it will not, of course, really be us. Nor will it be conscious in and of itself; it will be more like an impressive smoke-and-mirrors performance, seeming to be something it is not.
+Although this online facsimile of us may sound like us, speak like us, and reason like us - or rather like improved versions of us - it will not, of course, really be us. Nor will it be conscious in and of itself; it will be more like an impressive smoke-and-mirrors performance, seeming to be something it is not.
 
 But this still raises the question of whether genuinely conscious artificial beings could be created: whether we might, in theory, construct a computational model that mimics the architecture of the human brain closely enough to produce a truly conscious artificial intelligence. Perhaps such a thing will prove theoretically possible, while the technological constraints involved render it practically impossible.
 
