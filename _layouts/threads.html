@@ -42,14 +42,19 @@
         </header>
 
         <script type="application/json" id="threads-graph-data">
-{"baseurl":{{ site.baseurl | default: "" | jsonify }},"nodes":[{% for post in thread_posts limit:20 %}{"id":{{ post.url | jsonify }},"title":{{ post.title | jsonify }},"date":{{ post.date | date: "%Y-%m-%d" | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"edges":{% if site.data.post_thread_edges.edges %}{{ site.data.post_thread_edges.edges | jsonify }}{% else %}[]{% endif %}}
+{"baseurl":{{ site.baseurl | default: "" | jsonify }},"nodes":[{% for post in thread_posts limit:20 %}{"id":{{ post.url | jsonify }},"title":{{ post.title | jsonify }},"date":{{ post.date | date: "%Y-%m-%d" | jsonify }},"dateDisplay":{{ post.date | date: "%d/%m/%Y" | jsonify }},"description":{{ post.description | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"edges":{% if site.data.post_thread_edges.edges %}{{ site.data.post_thread_edges.edges | jsonify }}{% else %}[]{% endif %}}
         </script>
 
         <div
             id="threads-sigma-container"
             class="threads-sigma-container"
             role="img"
-            aria-label="Interactive graph of recent posts. Click a node to open an essay. Pan and zoom with the mouse or touch.">
+            aria-label="Interactive graph of recent posts. Hover a node for title, date, and summary; connected posts and Thread links highlight. Drag a node to reposition it for this session. A quick click opens the essay in a new tab. Pan and zoom on empty space; mouse or touch.">
+            <div class="threads-node-panel summary-tooltip" id="threads-node-panel" aria-live="polite" hidden>
+                <div class="summary-title"></div>
+                <div class="summary-date" hidden></div>
+                <div class="summary-body"></div>
+            </div>
         </div>
 
         <section class="threads-post-list" aria-label="Posts in this map">

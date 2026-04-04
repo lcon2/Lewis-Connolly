@@ -4390,6 +4390,59 @@ footer {
     border-radius: 5px;
 }
 
+/* Bottom-left hover panel — matches homepage .summary-tooltip treatment */
+.threads-sigma-container .threads-node-panel {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    z-index: 5;
+    max-width: min(360px, calc(100% - 28px));
+    padding: 12px 14px 14px;
+    background: #1a1a1a;
+    border: 1px solid #3a3a3a;
+    border-radius: 6px;
+    color: #e7e2dc;
+    font-size: 0.95em;
+    line-height: 1.5;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.threads-sigma-container .threads-node-panel.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.threads-sigma-container .threads-node-panel .summary-title {
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d0c7bf;
+    border-bottom: 1px solid #2f2f2f;
+    padding-bottom: 6px;
+    margin-bottom: 0;
+    white-space: pre-line;
+}
+
+.threads-sigma-container .threads-node-panel .summary-date {
+    display: block;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+    color: #a89888;
+    margin: 8px 0 10px;
+}
+
+.threads-sigma-container .threads-node-panel .summary-date[hidden] {
+    display: none;
+}
+
+.threads-sigma-container .threads-node-panel .summary-body {
+    color: #e7e2dc;
+}
+
 .threads-graph-error {
     position: absolute;
     inset: 0;
