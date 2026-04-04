@@ -70,23 +70,23 @@ var require_graphology_umd_min = __commonJS({
           return n3 && r(o2, n3.prototype), o2;
         }, o.apply(null, arguments);
       }
-      function a(t2) {
+      function a2(t2) {
         var e2 = "function" == typeof Map ? /* @__PURE__ */ new Map() : void 0;
-        return a = function(t3) {
+        return a2 = function(t3) {
           if (null === t3 || (i2 = t3, -1 === Function.toString.call(i2).indexOf("[native code]"))) return t3;
           var i2;
           if ("function" != typeof t3) throw new TypeError("Super expression must either be null or a function");
           if (void 0 !== e2) {
             if (e2.has(t3)) return e2.get(t3);
-            e2.set(t3, a2);
+            e2.set(t3, a3);
           }
-          function a2() {
+          function a3() {
             return o(t3, arguments, n(this).constructor);
           }
-          return a2.prototype = Object.create(t3.prototype, { constructor: { value: a2, enumerable: false, writable: true, configurable: true } }), r(a2, t3);
-        }, a(t2);
+          return a3.prototype = Object.create(t3.prototype, { constructor: { value: a3, enumerable: false, writable: true, configurable: true } }), r(a3, t3);
+        }, a2(t2);
       }
-      function c(t2) {
+      function c2(t2) {
         if (void 0 === t2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
         return t2;
       }
@@ -117,7 +117,7 @@ var require_graphology_umd_min = __commonJS({
         return !!s(t2) && !(t2.attributes && !Array.isArray(t2.attributes));
       }
       "function" == typeof Object.assign && (u = Object.assign);
-      var g, y = { exports: {} }, w = "object" == typeof Reflect ? Reflect : null, v = w && "function" == typeof w.apply ? w.apply : function(t2, e2, n2) {
+      var g, y2 = { exports: {} }, w = "object" == typeof Reflect ? Reflect : null, v = w && "function" == typeof w.apply ? w.apply : function(t2, e2, n2) {
         return Function.prototype.apply.call(t2, e2, n2);
       };
       g = w && "function" == typeof w.ownKeys ? w.ownKeys : Object.getOwnPropertySymbols ? function(t2) {
@@ -128,10 +128,10 @@ var require_graphology_umd_min = __commonJS({
       var b = Number.isNaN || function(t2) {
         return t2 != t2;
       };
-      function m() {
-        m.init.call(this);
+      function m2() {
+        m2.init.call(this);
       }
-      y.exports = m, y.exports.once = function(t2, e2) {
+      y2.exports = m2, y2.exports.once = function(t2, e2) {
         return new Promise((function(n2, r2) {
           function i2(n3) {
             t2.removeListener(e2, o2), r2(n3);
@@ -143,21 +143,21 @@ var require_graphology_umd_min = __commonJS({
             "function" == typeof t3.on && U(t3, "error", e3, n3);
           })(t2, i2, { once: true });
         }));
-      }, m.EventEmitter = m, m.prototype._events = void 0, m.prototype._eventsCount = 0, m.prototype._maxListeners = void 0;
+      }, m2.EventEmitter = m2, m2.prototype._events = void 0, m2.prototype._eventsCount = 0, m2.prototype._maxListeners = void 0;
       var k = 10;
       function _(t2) {
         if ("function" != typeof t2) throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof t2);
       }
       function G(t2) {
-        return void 0 === t2._maxListeners ? m.defaultMaxListeners : t2._maxListeners;
+        return void 0 === t2._maxListeners ? m2.defaultMaxListeners : t2._maxListeners;
       }
-      function x(t2, e2, n2, r2) {
-        var i2, o2, a2, c2;
-        if (_(n2), void 0 === (o2 = t2._events) ? (o2 = t2._events = /* @__PURE__ */ Object.create(null), t2._eventsCount = 0) : (void 0 !== o2.newListener && (t2.emit("newListener", e2, n2.listener ? n2.listener : n2), o2 = t2._events), a2 = o2[e2]), void 0 === a2) a2 = o2[e2] = n2, ++t2._eventsCount;
-        else if ("function" == typeof a2 ? a2 = o2[e2] = r2 ? [n2, a2] : [a2, n2] : r2 ? a2.unshift(n2) : a2.push(n2), (i2 = G(t2)) > 0 && a2.length > i2 && !a2.warned) {
-          a2.warned = true;
-          var u2 = new Error("Possible EventEmitter memory leak detected. " + a2.length + " " + String(e2) + " listeners added. Use emitter.setMaxListeners() to increase limit");
-          u2.name = "MaxListenersExceededWarning", u2.emitter = t2, u2.type = e2, u2.count = a2.length, c2 = u2, console && console.warn && console.warn(c2);
+      function x2(t2, e2, n2, r2) {
+        var i2, o2, a3, c3;
+        if (_(n2), void 0 === (o2 = t2._events) ? (o2 = t2._events = /* @__PURE__ */ Object.create(null), t2._eventsCount = 0) : (void 0 !== o2.newListener && (t2.emit("newListener", e2, n2.listener ? n2.listener : n2), o2 = t2._events), a3 = o2[e2]), void 0 === a3) a3 = o2[e2] = n2, ++t2._eventsCount;
+        else if ("function" == typeof a3 ? a3 = o2[e2] = r2 ? [n2, a3] : [a3, n2] : r2 ? a3.unshift(n2) : a3.push(n2), (i2 = G(t2)) > 0 && a3.length > i2 && !a3.warned) {
+          a3.warned = true;
+          var u2 = new Error("Possible EventEmitter memory leak detected. " + a3.length + " " + String(e2) + " listeners added. Use emitter.setMaxListeners() to increase limit");
+          u2.name = "MaxListenersExceededWarning", u2.emitter = t2, u2.type = e2, u2.count = a3.length, c3 = u2, console && console.warn && console.warn(c3);
         }
         return t2;
       }
@@ -203,19 +203,19 @@ var require_graphology_umd_min = __commonJS({
         if ("function" != typeof t2) throw new Error("obliterator/iterator: expecting a function!");
         this.next = t2;
       }
-      Object.defineProperty(m, "defaultMaxListeners", { enumerable: true, get: function() {
+      Object.defineProperty(m2, "defaultMaxListeners", { enumerable: true, get: function() {
         return k;
       }, set: function(t2) {
         if ("number" != typeof t2 || t2 < 0 || b(t2)) throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + t2 + ".");
         k = t2;
-      } }), m.init = function() {
+      } }), m2.init = function() {
         void 0 !== this._events && this._events !== Object.getPrototypeOf(this)._events || (this._events = /* @__PURE__ */ Object.create(null), this._eventsCount = 0), this._maxListeners = this._maxListeners || void 0;
-      }, m.prototype.setMaxListeners = function(t2) {
+      }, m2.prototype.setMaxListeners = function(t2) {
         if ("number" != typeof t2 || t2 < 0 || b(t2)) throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + t2 + ".");
         return this._maxListeners = t2, this;
-      }, m.prototype.getMaxListeners = function() {
+      }, m2.prototype.getMaxListeners = function() {
         return G(this);
-      }, m.prototype.emit = function(t2) {
+      }, m2.prototype.emit = function(t2) {
         for (var e2 = [], n2 = 1; n2 < arguments.length; n2++) e2.push(arguments[n2]);
         var r2 = "error" === t2, i2 = this._events;
         if (void 0 !== i2) r2 = r2 && void 0 === i2.error;
@@ -223,43 +223,43 @@ var require_graphology_umd_min = __commonJS({
         if (r2) {
           var o2;
           if (e2.length > 0 && (o2 = e2[0]), o2 instanceof Error) throw o2;
-          var a2 = new Error("Unhandled error." + (o2 ? " (" + o2.message + ")" : ""));
-          throw a2.context = o2, a2;
+          var a3 = new Error("Unhandled error." + (o2 ? " (" + o2.message + ")" : ""));
+          throw a3.context = o2, a3;
         }
-        var c2 = i2[t2];
-        if (void 0 === c2) return false;
-        if ("function" == typeof c2) v(c2, this, e2);
+        var c3 = i2[t2];
+        if (void 0 === c3) return false;
+        if ("function" == typeof c3) v(c3, this, e2);
         else {
-          var u2 = c2.length, d2 = D(c2, u2);
+          var u2 = c3.length, d2 = D(c3, u2);
           for (n2 = 0; n2 < u2; ++n2) v(d2[n2], this, e2);
         }
         return true;
-      }, m.prototype.addListener = function(t2, e2) {
-        return x(this, t2, e2, false);
-      }, m.prototype.on = m.prototype.addListener, m.prototype.prependListener = function(t2, e2) {
-        return x(this, t2, e2, true);
-      }, m.prototype.once = function(t2, e2) {
+      }, m2.prototype.addListener = function(t2, e2) {
+        return x2(this, t2, e2, false);
+      }, m2.prototype.on = m2.prototype.addListener, m2.prototype.prependListener = function(t2, e2) {
+        return x2(this, t2, e2, true);
+      }, m2.prototype.once = function(t2, e2) {
         return _(e2), this.on(t2, A(this, t2, e2)), this;
-      }, m.prototype.prependOnceListener = function(t2, e2) {
+      }, m2.prototype.prependOnceListener = function(t2, e2) {
         return _(e2), this.prependListener(t2, A(this, t2, e2)), this;
-      }, m.prototype.removeListener = function(t2, e2) {
-        var n2, r2, i2, o2, a2;
+      }, m2.prototype.removeListener = function(t2, e2) {
+        var n2, r2, i2, o2, a3;
         if (_(e2), void 0 === (r2 = this._events)) return this;
         if (void 0 === (n2 = r2[t2])) return this;
         if (n2 === e2 || n2.listener === e2) 0 == --this._eventsCount ? this._events = /* @__PURE__ */ Object.create(null) : (delete r2[t2], r2.removeListener && this.emit("removeListener", t2, n2.listener || e2));
         else if ("function" != typeof n2) {
           for (i2 = -1, o2 = n2.length - 1; o2 >= 0; o2--) if (n2[o2] === e2 || n2[o2].listener === e2) {
-            a2 = n2[o2].listener, i2 = o2;
+            a3 = n2[o2].listener, i2 = o2;
             break;
           }
           if (i2 < 0) return this;
           0 === i2 ? n2.shift() : (function(t3, e3) {
             for (; e3 + 1 < t3.length; e3++) t3[e3] = t3[e3 + 1];
             t3.pop();
-          })(n2, i2), 1 === n2.length && (r2[t2] = n2[0]), void 0 !== r2.removeListener && this.emit("removeListener", t2, a2 || e2);
+          })(n2, i2), 1 === n2.length && (r2[t2] = n2[0]), void 0 !== r2.removeListener && this.emit("removeListener", t2, a3 || e2);
         }
         return this;
-      }, m.prototype.off = m.prototype.removeListener, m.prototype.removeAllListeners = function(t2) {
+      }, m2.prototype.off = m2.prototype.removeListener, m2.prototype.removeAllListeners = function(t2) {
         var e2, n2, r2;
         if (void 0 === (n2 = this._events)) return this;
         if (void 0 === n2.removeListener) return 0 === arguments.length ? (this._events = /* @__PURE__ */ Object.create(null), this._eventsCount = 0) : void 0 !== n2[t2] && (0 == --this._eventsCount ? this._events = /* @__PURE__ */ Object.create(null) : delete n2[t2]), this;
@@ -271,13 +271,13 @@ var require_graphology_umd_min = __commonJS({
         if ("function" == typeof (e2 = n2[t2])) this.removeListener(t2, e2);
         else if (void 0 !== e2) for (r2 = e2.length - 1; r2 >= 0; r2--) this.removeListener(t2, e2[r2]);
         return this;
-      }, m.prototype.listeners = function(t2) {
+      }, m2.prototype.listeners = function(t2) {
         return L(this, t2, true);
-      }, m.prototype.rawListeners = function(t2) {
+      }, m2.prototype.rawListeners = function(t2) {
         return L(this, t2, false);
-      }, m.listenerCount = function(t2, e2) {
+      }, m2.listenerCount = function(t2, e2) {
         return "function" == typeof t2.listenerCount ? t2.listenerCount(e2) : S.call(t2, e2);
-      }, m.prototype.listenerCount = S, m.prototype.eventNames = function() {
+      }, m2.prototype.listenerCount = S, m2.prototype.eventNames = function() {
         return this._eventsCount > 0 ? g(this._events) : [];
       }, "undefined" != typeof Symbol && (N.prototype[Symbol.iterator] = function() {
         return this;
@@ -308,9 +308,9 @@ var require_graphology_umd_min = __commonJS({
         if (!e2) throw new Error("obliterator: target is not iterable nor a valid iterator.");
         return e2;
       }, R = P, K = function(t2, e2) {
-        for (var n2, r2 = arguments.length > 1 ? e2 : 1 / 0, i2 = r2 !== 1 / 0 ? new Array(r2) : [], o2 = 0, a2 = R(t2); ; ) {
+        for (var n2, r2 = arguments.length > 1 ? e2 : 1 / 0, i2 = r2 !== 1 / 0 ? new Array(r2) : [], o2 = 0, a3 = R(t2); ; ) {
           if (o2 === r2) return i2;
-          if ((n2 = a2.next()).done) return o2 !== e2 && (i2.length = o2), i2;
+          if ((n2 = a3.next()).done) return o2 !== e2 && (i2.length = o2), i2;
           i2[o2++] = n2.value;
         }
       }, T = (function(t2) {
@@ -319,22 +319,22 @@ var require_graphology_umd_min = __commonJS({
           return (n3 = t2.call(this) || this).name = "GraphError", n3.message = e2, n3;
         }
         return e(n2, t2), n2;
-      })(a(Error)), B = (function(t2) {
+      })(a2(Error)), B = (function(t2) {
         function n2(e2) {
           var r2;
-          return (r2 = t2.call(this, e2) || this).name = "InvalidArgumentsGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c(r2), n2.prototype.constructor), r2;
+          return (r2 = t2.call(this, e2) || this).name = "InvalidArgumentsGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c2(r2), n2.prototype.constructor), r2;
         }
         return e(n2, t2), n2;
       })(T), F = (function(t2) {
         function n2(e2) {
           var r2;
-          return (r2 = t2.call(this, e2) || this).name = "NotFoundGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c(r2), n2.prototype.constructor), r2;
+          return (r2 = t2.call(this, e2) || this).name = "NotFoundGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c2(r2), n2.prototype.constructor), r2;
         }
         return e(n2, t2), n2;
       })(T), I = (function(t2) {
         function n2(e2) {
           var r2;
-          return (r2 = t2.call(this, e2) || this).name = "UsageGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c(r2), n2.prototype.constructor), r2;
+          return (r2 = t2.call(this, e2) || this).name = "UsageGraphError", "function" == typeof Error.captureStackTrace && Error.captureStackTrace(c2(r2), n2.prototype.constructor), r2;
         }
         return e(n2, t2), n2;
       })(T);
@@ -374,32 +374,32 @@ var require_graphology_umd_min = __commonJS({
         var t2 = this.source.key, e2 = this.target.key, n2 = "out", r2 = "in";
         this.undirected && (n2 = r2 = "undirected"), void 0 === this.previous ? void 0 === this.next ? (delete this.source[n2][e2], delete this.target[r2][t2]) : (this.next.previous = void 0, this.source[n2][e2] = this.next, this.target[r2][t2] = this.next) : (this.previous.next = this.next, void 0 !== this.next && (this.next.previous = this.previous));
       };
-      function H(t2, e2, n2, r2, i2, o2, a2) {
-        var c2, u2, d2, s2;
+      function H(t2, e2, n2, r2, i2, o2, a3) {
+        var c3, u2, d2, s2;
         if (r2 = "" + r2, 0 === n2) {
-          if (!(c2 = t2._nodes.get(r2))) throw new F("Graph.".concat(e2, ': could not find the "').concat(r2, '" node in the graph.'));
+          if (!(c3 = t2._nodes.get(r2))) throw new F("Graph.".concat(e2, ': could not find the "').concat(r2, '" node in the graph.'));
           d2 = i2, s2 = o2;
         } else if (3 === n2) {
           if (i2 = "" + i2, !(u2 = t2._edges.get(i2))) throw new F("Graph.".concat(e2, ': could not find the "').concat(i2, '" edge in the graph.'));
           var h2 = u2.source.key, p2 = u2.target.key;
-          if (r2 === h2) c2 = u2.target;
+          if (r2 === h2) c3 = u2.target;
           else {
             if (r2 !== p2) throw new F("Graph.".concat(e2, ': the "').concat(r2, '" node is not attached to the "').concat(i2, '" edge (').concat(h2, ", ").concat(p2, ")."));
-            c2 = u2.source;
+            c3 = u2.source;
           }
-          d2 = o2, s2 = a2;
+          d2 = o2, s2 = a3;
         } else {
           if (!(u2 = t2._edges.get(r2))) throw new F("Graph.".concat(e2, ': could not find the "').concat(r2, '" edge in the graph.'));
-          c2 = 1 === n2 ? u2.source : u2.target, d2 = i2, s2 = o2;
+          c3 = 1 === n2 ? u2.source : u2.target, d2 = i2, s2 = o2;
         }
-        return [c2, d2, s2];
+        return [c3, d2, s2];
       }
       var Q = [{ name: function(t2) {
         return "get".concat(t2, "Attribute");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          return a2.attributes[c2];
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          return a3.attributes[c3];
         };
       } }, { name: function(t2) {
         return "get".concat(t2, "Attributes");
@@ -411,55 +411,55 @@ var require_graphology_umd_min = __commonJS({
         return "has".concat(t2, "Attribute");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          return a2.attributes.hasOwnProperty(c2);
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          return a3.attributes.hasOwnProperty(c3);
         };
       } }, { name: function(t2) {
         return "set".concat(t2, "Attribute");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2, o2) {
-          var a2 = H(this, e2, n2, t3, r2, i2, o2), c2 = a2[0], u2 = a2[1], d2 = a2[2];
-          return c2.attributes[u2] = d2, this.emit("nodeAttributesUpdated", { key: c2.key, type: "set", attributes: c2.attributes, name: u2 }), this;
+          var a3 = H(this, e2, n2, t3, r2, i2, o2), c3 = a3[0], u2 = a3[1], d2 = a3[2];
+          return c3.attributes[u2] = d2, this.emit("nodeAttributesUpdated", { key: c3.key, type: "set", attributes: c3.attributes, name: u2 }), this;
         };
       } }, { name: function(t2) {
         return "update".concat(t2, "Attribute");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2, o2) {
-          var a2 = H(this, e2, n2, t3, r2, i2, o2), c2 = a2[0], u2 = a2[1], d2 = a2[2];
+          var a3 = H(this, e2, n2, t3, r2, i2, o2), c3 = a3[0], u2 = a3[1], d2 = a3[2];
           if ("function" != typeof d2) throw new B("Graph.".concat(e2, ": updater should be a function."));
-          var s2 = c2.attributes, h2 = d2(s2[u2]);
-          return s2[u2] = h2, this.emit("nodeAttributesUpdated", { key: c2.key, type: "set", attributes: c2.attributes, name: u2 }), this;
+          var s2 = c3.attributes, h2 = d2(s2[u2]);
+          return s2[u2] = h2, this.emit("nodeAttributesUpdated", { key: c3.key, type: "set", attributes: c3.attributes, name: u2 }), this;
         };
       } }, { name: function(t2) {
         return "remove".concat(t2, "Attribute");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          return delete a2.attributes[c2], this.emit("nodeAttributesUpdated", { key: a2.key, type: "remove", attributes: a2.attributes, name: c2 }), this;
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          return delete a3.attributes[c3], this.emit("nodeAttributesUpdated", { key: a3.key, type: "remove", attributes: a3.attributes, name: c3 }), this;
         };
       } }, { name: function(t2) {
         return "replace".concat(t2, "Attributes");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          if (!s(c2)) throw new B("Graph.".concat(e2, ": provided attributes are not a plain object."));
-          return a2.attributes = c2, this.emit("nodeAttributesUpdated", { key: a2.key, type: "replace", attributes: a2.attributes }), this;
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          if (!s(c3)) throw new B("Graph.".concat(e2, ": provided attributes are not a plain object."));
+          return a3.attributes = c3, this.emit("nodeAttributesUpdated", { key: a3.key, type: "replace", attributes: a3.attributes }), this;
         };
       } }, { name: function(t2) {
         return "merge".concat(t2, "Attributes");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          if (!s(c2)) throw new B("Graph.".concat(e2, ": provided attributes are not a plain object."));
-          return u(a2.attributes, c2), this.emit("nodeAttributesUpdated", { key: a2.key, type: "merge", attributes: a2.attributes, data: c2 }), this;
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          if (!s(c3)) throw new B("Graph.".concat(e2, ": provided attributes are not a plain object."));
+          return u(a3.attributes, c3), this.emit("nodeAttributesUpdated", { key: a3.key, type: "merge", attributes: a3.attributes, data: c3 }), this;
         };
       } }, { name: function(t2) {
         return "update".concat(t2, "Attributes");
       }, attacher: function(t2, e2, n2) {
         t2.prototype[e2] = function(t3, r2, i2) {
-          var o2 = H(this, e2, n2, t3, r2, i2), a2 = o2[0], c2 = o2[1];
-          if ("function" != typeof c2) throw new B("Graph.".concat(e2, ": provided updater is not a function."));
-          return a2.attributes = c2(a2.attributes), this.emit("nodeAttributesUpdated", { key: a2.key, type: "update", attributes: a2.attributes }), this;
+          var o2 = H(this, e2, n2, t3, r2, i2), a3 = o2[0], c3 = o2[1];
+          if ("function" != typeof c3) throw new B("Graph.".concat(e2, ": provided updater is not a function."));
+          return a3.attributes = c3(a3.attributes), this.emit("nodeAttributesUpdated", { key: a3.key, type: "update", attributes: a3.attributes }), this;
         };
       } }];
       var X = [{ name: function(t2) {
@@ -470,8 +470,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -502,8 +502,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -518,8 +518,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 3) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var a2 = "" + t3, c2 = "" + r2;
-            if (r2 = arguments[2], i2 = arguments[3], !(o2 = d(this, a2, c2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(a2, '" - "').concat(c2, '").'));
+            var a3 = "" + t3, c3 = "" + r2;
+            if (r2 = arguments[2], i2 = arguments[3], !(o2 = d(this, a3, c3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(a3, '" - "').concat(c3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(o2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -534,8 +534,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 3) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var a2 = "" + t3, c2 = "" + r2;
-            if (r2 = arguments[2], i2 = arguments[3], !(o2 = d(this, a2, c2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(a2, '" - "').concat(c2, '").'));
+            var a3 = "" + t3, c3 = "" + r2;
+            if (r2 = arguments[2], i2 = arguments[3], !(o2 = d(this, a3, c3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(a3, '" - "').concat(c3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(o2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -551,8 +551,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -567,8 +567,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -584,8 +584,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -601,8 +601,8 @@ var require_graphology_umd_min = __commonJS({
           if ("mixed" !== this.type && "mixed" !== n2 && n2 !== this.type) throw new I("Graph.".concat(e2, ": cannot find this type of edges in your ").concat(this.type, " graph."));
           if (arguments.length > 2) {
             if (this.multi) throw new I("Graph.".concat(e2, ": cannot use a {source,target} combo when asking about an edge's attributes in a MultiGraph since we cannot infer the one you want information about."));
-            var o2 = "" + t3, a2 = "" + r2;
-            if (r2 = arguments[2], !(i2 = d(this, o2, a2, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a2, '").'));
+            var o2 = "" + t3, a3 = "" + r2;
+            if (r2 = arguments[2], !(i2 = d(this, o2, a3, n2))) throw new F("Graph.".concat(e2, ': could not find an edge for the given path ("').concat(o2, '" - "').concat(a3, '").'));
           } else {
             if ("mixed" !== n2) throw new I("Graph.".concat(e2, ": calling this method with only a key (vs. a source and target) does not make sense since an edge with this key could have the other type."));
             if (t3 = "" + t3, !(i2 = this._edges.get(t3))) throw new F("Graph.".concat(e2, ': could not find the "').concat(t3, '" edge in the graph.'));
@@ -628,16 +628,16 @@ var require_graphology_umd_min = __commonJS({
       function nt(t2, e2, n2, r2) {
         var i2 = false;
         for (var o2 in e2) if (o2 !== r2) {
-          var a2 = e2[o2];
-          if (i2 = n2(a2.key, a2.attributes, a2.source.key, a2.target.key, a2.source.attributes, a2.target.attributes, a2.undirected), t2 && i2) return a2.key;
+          var a3 = e2[o2];
+          if (i2 = n2(a3.key, a3.attributes, a3.source.key, a3.target.key, a3.source.attributes, a3.target.attributes, a3.undirected), t2 && i2) return a3.key;
         }
       }
       function rt(t2, e2, n2, r2) {
-        var i2, o2, a2, c2 = false;
+        var i2, o2, a3, c3 = false;
         for (var u2 in e2) if (u2 !== r2) {
           i2 = e2[u2];
           do {
-            if (o2 = i2.source, a2 = i2.target, c2 = n2(i2.key, i2.attributes, o2.key, a2.key, o2.attributes, a2.attributes, i2.undirected), t2 && c2) return i2.key;
+            if (o2 = i2.source, a3 = i2.target, c3 = n2(i2.key, i2.attributes, o2.key, a3.key, o2.attributes, a3.attributes, i2.undirected), t2 && c3) return i2.key;
             i2 = i2.next;
           } while (void 0 !== i2);
         }
@@ -649,12 +649,12 @@ var require_graphology_umd_min = __commonJS({
             if (n2) n2 = n2.next;
             else {
               if (o2 >= i2) return { done: true };
-              var a2 = r2[o2++];
-              if (a2 === e2) {
+              var a3 = r2[o2++];
+              if (a3 === e2) {
                 n2 = void 0;
                 continue;
               }
-              n2 = t2[a2];
+              n2 = t2[a3];
             }
           } while (!n2);
           return { done: false, value: { edge: n2.key, attributes: n2.attributes, source: n2.source.key, target: n2.target.key, sourceAttributes: n2.source.attributes, targetAttributes: n2.target.attributes, undirected: n2.undirected } };
@@ -663,8 +663,8 @@ var require_graphology_umd_min = __commonJS({
       function ot(t2, e2, n2, r2) {
         var i2 = e2[n2];
         if (i2) {
-          var o2 = i2.source, a2 = i2.target;
-          return r2(i2.key, i2.attributes, o2.key, a2.key, o2.attributes, a2.attributes, i2.undirected) && t2 ? i2.key : void 0;
+          var o2 = i2.source, a3 = i2.target;
+          return r2(i2.key, i2.attributes, o2.key, a3.key, o2.attributes, a3.attributes, i2.undirected) && t2 ? i2.key : void 0;
         }
       }
       function at(t2, e2, n2, r2) {
@@ -688,12 +688,12 @@ var require_graphology_umd_min = __commonJS({
       function ut(t2, e2) {
         if (0 === t2.size) return [];
         if ("mixed" === e2 || e2 === t2.type) return "function" == typeof Array.from ? Array.from(t2._edges.keys()) : K(t2._edges.keys(), t2._edges.size);
-        for (var n2, r2, i2 = "undirected" === e2 ? t2.undirectedSize : t2.directedSize, o2 = new Array(i2), a2 = "undirected" === e2, c2 = t2._edges.values(), u2 = 0; true !== (n2 = c2.next()).done; ) (r2 = n2.value).undirected === a2 && (o2[u2++] = r2.key);
+        for (var n2, r2, i2 = "undirected" === e2 ? t2.undirectedSize : t2.directedSize, o2 = new Array(i2), a3 = "undirected" === e2, c3 = t2._edges.values(), u2 = 0; true !== (n2 = c3.next()).done; ) (r2 = n2.value).undirected === a3 && (o2[u2++] = r2.key);
         return o2;
       }
       function dt(t2, e2, n2, r2) {
         if (0 !== e2.size) {
-          for (var i2, o2, a2 = "mixed" !== n2 && n2 !== e2.type, c2 = "undirected" === n2, u2 = false, d2 = e2._edges.values(); true !== (i2 = d2.next()).done; ) if (o2 = i2.value, !a2 || o2.undirected === c2) {
+          for (var i2, o2, a3 = "mixed" !== n2 && n2 !== e2.type, c3 = "undirected" === n2, u2 = false, d2 = e2._edges.values(); true !== (i2 = d2.next()).done; ) if (o2 = i2.value, !a3 || o2.undirected === c3) {
             var s2 = o2, h2 = s2.key, p2 = s2.attributes, f2 = s2.source, l2 = s2.target;
             if (u2 = r2(h2, p2, f2.key, l2.key, f2.attributes, l2.attributes, o2.undirected), t2 && u2) return h2;
           }
@@ -711,12 +711,12 @@ var require_graphology_umd_min = __commonJS({
         }));
       }
       function ht(t2, e2, n2, r2, i2, o2) {
-        var a2, c2 = e2 ? rt : nt;
+        var a3, c3 = e2 ? rt : nt;
         if ("undirected" !== n2) {
-          if ("out" !== r2 && (a2 = c2(t2, i2.in, o2), t2 && a2)) return a2;
-          if ("in" !== r2 && (a2 = c2(t2, i2.out, o2, r2 ? void 0 : i2.key), t2 && a2)) return a2;
+          if ("out" !== r2 && (a3 = c3(t2, i2.in, o2), t2 && a3)) return a3;
+          if ("in" !== r2 && (a3 = c3(t2, i2.out, o2, r2 ? void 0 : i2.key), t2 && a3)) return a3;
         }
-        if ("directed" !== n2 && (a2 = c2(t2, i2.undirected, o2), t2 && a2)) return a2;
+        if ("directed" !== n2 && (a3 = c3(t2, i2.undirected, o2), t2 && a3)) return a3;
       }
       function pt(t2, e2, n2, r2) {
         var i2 = [];
@@ -728,13 +728,13 @@ var require_graphology_umd_min = __commonJS({
         var r2 = O.empty();
         return "undirected" !== t2 && ("out" !== e2 && void 0 !== n2.in && (r2 = tt(r2, it(n2.in))), "in" !== e2 && void 0 !== n2.out && (r2 = tt(r2, it(n2.out, e2 ? void 0 : n2.key)))), "directed" !== t2 && void 0 !== n2.undirected && (r2 = tt(r2, it(n2.undirected))), r2;
       }
-      function lt(t2, e2, n2, r2, i2, o2, a2) {
-        var c2, u2 = n2 ? at : ot;
+      function lt(t2, e2, n2, r2, i2, o2, a3) {
+        var c3, u2 = n2 ? at : ot;
         if ("undirected" !== e2) {
-          if (void 0 !== i2.in && "out" !== r2 && (c2 = u2(t2, i2.in, o2, a2), t2 && c2)) return c2;
-          if (void 0 !== i2.out && "in" !== r2 && (r2 || i2.key !== o2) && (c2 = u2(t2, i2.out, o2, a2), t2 && c2)) return c2;
+          if (void 0 !== i2.in && "out" !== r2 && (c3 = u2(t2, i2.in, o2, a3), t2 && c3)) return c3;
+          if (void 0 !== i2.out && "in" !== r2 && (r2 || i2.key !== o2) && (c3 = u2(t2, i2.out, o2, a3), t2 && c3)) return c3;
         }
-        if ("directed" !== e2 && void 0 !== i2.undirected && (c2 = u2(t2, i2.undirected, o2, a2), t2 && c2)) return c2;
+        if ("directed" !== e2 && void 0 !== i2.undirected && (c3 = u2(t2, i2.undirected, o2, a3), t2 && c3)) return c3;
       }
       function gt(t2, e2, n2, r2, i2) {
         var o2 = [];
@@ -752,7 +752,7 @@ var require_graphology_umd_min = __commonJS({
       }
       function bt(t2, e2, n2, r2, i2) {
         for (var o2 in r2) {
-          var a2 = r2[o2], c2 = a2.source, u2 = a2.target, d2 = c2 === n2 ? u2 : c2;
+          var a3 = r2[o2], c3 = a3.source, u2 = a3.target, d2 = c3 === n2 ? u2 : c3;
           if (!e2 || !e2.has(d2.key)) {
             var s2 = i2(d2.key, d2.attributes);
             if (t2 && s2) return d2.key;
@@ -764,29 +764,29 @@ var require_graphology_umd_min = __commonJS({
           if ("undirected" === e2) return bt(t2, null, r2, r2.undirected, i2);
           if ("string" == typeof n2) return bt(t2, null, r2, r2[n2], i2);
         }
-        var o2, a2 = new vt();
+        var o2, a3 = new vt();
         if ("undirected" !== e2) {
           if ("out" !== n2) {
             if (o2 = bt(t2, null, r2, r2.in, i2), t2 && o2) return o2;
-            a2.wrap(r2.in);
+            a3.wrap(r2.in);
           }
           if ("in" !== n2) {
-            if (o2 = bt(t2, a2, r2, r2.out, i2), t2 && o2) return o2;
-            a2.wrap(r2.out);
+            if (o2 = bt(t2, a3, r2, r2.out, i2), t2 && o2) return o2;
+            a3.wrap(r2.out);
           }
         }
-        if ("directed" !== e2 && (o2 = bt(t2, a2, r2, r2.undirected, i2), t2 && o2)) return o2;
+        if ("directed" !== e2 && (o2 = bt(t2, a3, r2, r2.undirected, i2), t2 && o2)) return o2;
       }
       function kt(t2, e2, n2) {
         var r2 = Object.keys(n2), i2 = r2.length, o2 = 0;
         return new O((function() {
-          var a2 = null;
+          var a3 = null;
           do {
             if (o2 >= i2) return t2 && t2.wrap(n2), { done: true };
-            var c2 = n2[r2[o2++]], u2 = c2.source, d2 = c2.target;
-            a2 = u2 === e2 ? d2 : u2, t2 && t2.has(a2.key) && (a2 = null);
-          } while (null === a2);
-          return { done: false, value: { neighbor: a2.key, attributes: a2.attributes } };
+            var c3 = n2[r2[o2++]], u2 = c3.source, d2 = c3.target;
+            a3 = u2 === e2 ? d2 : u2, t2 && t2.has(a3.key) && (a3 = null);
+          } while (null === a3);
+          return { done: false, value: { neighbor: a3.key, attributes: a3.attributes } };
         }));
       }
       function _t(t2, e2) {
@@ -826,25 +826,25 @@ var require_graphology_umd_min = __commonJS({
         };
       }
       function xt(t2, e2, n2, r2, i2) {
-        for (var o2, a2, c2, u2, d2, s2, h2, p2 = r2._nodes.values(), f2 = r2.type; true !== (o2 = p2.next()).done; ) {
+        for (var o2, a3, c3, u2, d2, s2, h2, p2 = r2._nodes.values(), f2 = r2.type; true !== (o2 = p2.next()).done; ) {
           var l2 = false;
-          if (a2 = o2.value, "undirected" !== f2) for (c2 in u2 = a2.out) {
-            d2 = u2[c2];
+          if (a3 = o2.value, "undirected" !== f2) for (c3 in u2 = a3.out) {
+            d2 = u2[c3];
             do {
-              if (s2 = d2.target, l2 = true, h2 = i2(a2.key, s2.key, a2.attributes, s2.attributes, d2.key, d2.attributes, d2.undirected), t2 && h2) return d2;
+              if (s2 = d2.target, l2 = true, h2 = i2(a3.key, s2.key, a3.attributes, s2.attributes, d2.key, d2.attributes, d2.undirected), t2 && h2) return d2;
               d2 = d2.next;
             } while (d2);
           }
           if ("directed" !== f2) {
-            for (c2 in u2 = a2.undirected) if (!(e2 && a2.key > c2)) {
-              d2 = u2[c2];
+            for (c3 in u2 = a3.undirected) if (!(e2 && a3.key > c3)) {
+              d2 = u2[c3];
               do {
-                if ((s2 = d2.target).key !== c2 && (s2 = d2.source), l2 = true, h2 = i2(a2.key, s2.key, a2.attributes, s2.attributes, d2.key, d2.attributes, d2.undirected), t2 && h2) return d2;
+                if ((s2 = d2.target).key !== c3 && (s2 = d2.source), l2 = true, h2 = i2(a3.key, s2.key, a3.attributes, s2.attributes, d2.key, d2.attributes, d2.undirected), t2 && h2) return d2;
                 d2 = d2.next;
               } while (d2);
             }
           }
-          if (n2 && !l2 && (h2 = i2(a2.key, null, a2.attributes, null, null, null, null), t2 && h2)) return null;
+          if (n2 && !l2 && (h2 = i2(a3.key, null, a3.attributes, null, null, null, null), t2 && h2)) return null;
         }
       }
       function Et(t2) {
@@ -871,60 +871,60 @@ var require_graphology_umd_min = __commonJS({
         var r2 = new t2.NodeDataClass(e2, n2);
         return t2._nodes.set(e2, r2), t2.emit("nodeAdded", { key: e2, attributes: n2 }), r2;
       }
-      function jt(t2, e2, n2, r2, i2, o2, a2, c2) {
+      function jt(t2, e2, n2, r2, i2, o2, a3, c3) {
         if (!r2 && "undirected" === t2.type) throw new I("Graph.".concat(e2, ": you cannot add a directed edge to an undirected graph. Use the #.addEdge or #.addUndirectedEdge instead."));
         if (r2 && "directed" === t2.type) throw new I("Graph.".concat(e2, ": you cannot add an undirected edge to a directed graph. Use the #.addEdge or #.addDirectedEdge instead."));
-        if (c2 && !s(c2)) throw new B("Graph.".concat(e2, ': invalid attributes. Expecting an object but got "').concat(c2, '"'));
-        if (o2 = "" + o2, a2 = "" + a2, c2 = c2 || {}, !t2.allowSelfLoops && o2 === a2) throw new I("Graph.".concat(e2, ': source & target are the same ("').concat(o2, `"), thus creating a loop explicitly forbidden by this graph 'allowSelfLoops' option set to false.`));
-        var u2 = t2._nodes.get(o2), d2 = t2._nodes.get(a2);
+        if (c3 && !s(c3)) throw new B("Graph.".concat(e2, ': invalid attributes. Expecting an object but got "').concat(c3, '"'));
+        if (o2 = "" + o2, a3 = "" + a3, c3 = c3 || {}, !t2.allowSelfLoops && o2 === a3) throw new I("Graph.".concat(e2, ': source & target are the same ("').concat(o2, `"), thus creating a loop explicitly forbidden by this graph 'allowSelfLoops' option set to false.`));
+        var u2 = t2._nodes.get(o2), d2 = t2._nodes.get(a3);
         if (!u2) throw new F("Graph.".concat(e2, ': source node "').concat(o2, '" not found.'));
-        if (!d2) throw new F("Graph.".concat(e2, ': target node "').concat(a2, '" not found.'));
-        var h2 = { key: null, undirected: r2, source: o2, target: a2, attributes: c2 };
+        if (!d2) throw new F("Graph.".concat(e2, ': target node "').concat(a3, '" not found.'));
+        var h2 = { key: null, undirected: r2, source: o2, target: a3, attributes: c3 };
         if (n2) i2 = t2._edgeKeyGenerator();
         else if (i2 = "" + i2, t2._edges.has(i2)) throw new I("Graph.".concat(e2, ': the "').concat(i2, '" edge already exists in the graph.'));
-        if (!t2.multi && (r2 ? void 0 !== u2.undirected[a2] : void 0 !== u2.out[a2])) throw new I("Graph.".concat(e2, ': an edge linking "').concat(o2, '" to "').concat(a2, `" already exists. If you really want to add multiple edges linking those nodes, you should create a multi graph by using the 'multi' option.`));
-        var p2 = new V(r2, i2, u2, d2, c2);
+        if (!t2.multi && (r2 ? void 0 !== u2.undirected[a3] : void 0 !== u2.out[a3])) throw new I("Graph.".concat(e2, ': an edge linking "').concat(o2, '" to "').concat(a3, `" already exists. If you really want to add multiple edges linking those nodes, you should create a multi graph by using the 'multi' option.`));
+        var p2 = new V(r2, i2, u2, d2, c3);
         t2._edges.set(i2, p2);
-        var f2 = o2 === a2;
+        var f2 = o2 === a3;
         return r2 ? (u2.undirectedDegree++, d2.undirectedDegree++, f2 && (u2.undirectedLoops++, t2._undirectedSelfLoopCount++)) : (u2.outDegree++, d2.inDegree++, f2 && (u2.directedLoops++, t2._directedSelfLoopCount++)), t2.multi ? p2.attachMulti() : p2.attach(), r2 ? t2._undirectedSize++ : t2._directedSize++, h2.key = i2, t2.emit("edgeAdded", h2), i2;
       }
-      function Ct(t2, e2, n2, r2, i2, o2, a2, c2, d2) {
+      function Ct(t2, e2, n2, r2, i2, o2, a3, c3, d2) {
         if (!r2 && "undirected" === t2.type) throw new I("Graph.".concat(e2, ": you cannot merge/update a directed edge to an undirected graph. Use the #.mergeEdge/#.updateEdge or #.addUndirectedEdge instead."));
         if (r2 && "directed" === t2.type) throw new I("Graph.".concat(e2, ": you cannot merge/update an undirected edge to a directed graph. Use the #.mergeEdge/#.updateEdge or #.addDirectedEdge instead."));
-        if (c2) {
+        if (c3) {
           if (d2) {
-            if ("function" != typeof c2) throw new B("Graph.".concat(e2, ': invalid updater function. Expecting a function but got "').concat(c2, '"'));
-          } else if (!s(c2)) throw new B("Graph.".concat(e2, ': invalid attributes. Expecting an object but got "').concat(c2, '"'));
+            if ("function" != typeof c3) throw new B("Graph.".concat(e2, ': invalid updater function. Expecting a function but got "').concat(c3, '"'));
+          } else if (!s(c3)) throw new B("Graph.".concat(e2, ': invalid attributes. Expecting an object but got "').concat(c3, '"'));
         }
         var h2;
-        if (o2 = "" + o2, a2 = "" + a2, d2 && (h2 = c2, c2 = void 0), !t2.allowSelfLoops && o2 === a2) throw new I("Graph.".concat(e2, ': source & target are the same ("').concat(o2, `"), thus creating a loop explicitly forbidden by this graph 'allowSelfLoops' option set to false.`));
-        var p2, f2, l2 = t2._nodes.get(o2), g2 = t2._nodes.get(a2);
+        if (o2 = "" + o2, a3 = "" + a3, d2 && (h2 = c3, c3 = void 0), !t2.allowSelfLoops && o2 === a3) throw new I("Graph.".concat(e2, ': source & target are the same ("').concat(o2, `"), thus creating a loop explicitly forbidden by this graph 'allowSelfLoops' option set to false.`));
+        var p2, f2, l2 = t2._nodes.get(o2), g2 = t2._nodes.get(a3);
         if (!n2 && (p2 = t2._edges.get(i2))) {
-          if (!(p2.source.key === o2 && p2.target.key === a2 || r2 && p2.source.key === a2 && p2.target.key === o2)) throw new I("Graph.".concat(e2, ': inconsistency detected when attempting to merge the "').concat(i2, '" edge with "').concat(o2, '" source & "').concat(a2, '" target vs. ("').concat(p2.source.key, '", "').concat(p2.target.key, '").'));
+          if (!(p2.source.key === o2 && p2.target.key === a3 || r2 && p2.source.key === a3 && p2.target.key === o2)) throw new I("Graph.".concat(e2, ': inconsistency detected when attempting to merge the "').concat(i2, '" edge with "').concat(o2, '" source & "').concat(a3, '" target vs. ("').concat(p2.source.key, '", "').concat(p2.target.key, '").'));
           f2 = p2;
         }
-        if (f2 || t2.multi || !l2 || (f2 = r2 ? l2.undirected[a2] : l2.out[a2]), f2) {
-          var y2 = [f2.key, false, false, false];
-          if (d2 ? !h2 : !c2) return y2;
+        if (f2 || t2.multi || !l2 || (f2 = r2 ? l2.undirected[a3] : l2.out[a3]), f2) {
+          var y3 = [f2.key, false, false, false];
+          if (d2 ? !h2 : !c3) return y3;
           if (d2) {
             var w2 = f2.attributes;
             f2.attributes = h2(w2), t2.emit("edgeAttributesUpdated", { type: "replace", key: f2.key, attributes: f2.attributes });
-          } else u(f2.attributes, c2), t2.emit("edgeAttributesUpdated", { type: "merge", key: f2.key, attributes: f2.attributes, data: c2 });
-          return y2;
+          } else u(f2.attributes, c3), t2.emit("edgeAttributesUpdated", { type: "merge", key: f2.key, attributes: f2.attributes, data: c3 });
+          return y3;
         }
-        c2 = c2 || {}, d2 && h2 && (c2 = h2(c2));
-        var v2 = { key: null, undirected: r2, source: o2, target: a2, attributes: c2 };
+        c3 = c3 || {}, d2 && h2 && (c3 = h2(c3));
+        var v2 = { key: null, undirected: r2, source: o2, target: a3, attributes: c3 };
         if (n2) i2 = t2._edgeKeyGenerator();
         else if (i2 = "" + i2, t2._edges.has(i2)) throw new I("Graph.".concat(e2, ': the "').concat(i2, '" edge already exists in the graph.'));
-        var b2 = false, m2 = false;
-        l2 || (l2 = Ot(t2, o2, {}), b2 = true, o2 === a2 && (g2 = l2, m2 = true)), g2 || (g2 = Ot(t2, a2, {}), m2 = true), p2 = new V(r2, i2, l2, g2, c2), t2._edges.set(i2, p2);
-        var k2 = o2 === a2;
-        return r2 ? (l2.undirectedDegree++, g2.undirectedDegree++, k2 && (l2.undirectedLoops++, t2._undirectedSelfLoopCount++)) : (l2.outDegree++, g2.inDegree++, k2 && (l2.directedLoops++, t2._directedSelfLoopCount++)), t2.multi ? p2.attachMulti() : p2.attach(), r2 ? t2._undirectedSize++ : t2._directedSize++, v2.key = i2, t2.emit("edgeAdded", v2), [i2, true, b2, m2];
+        var b2 = false, m3 = false;
+        l2 || (l2 = Ot(t2, o2, {}), b2 = true, o2 === a3 && (g2 = l2, m3 = true)), g2 || (g2 = Ot(t2, a3, {}), m3 = true), p2 = new V(r2, i2, l2, g2, c3), t2._edges.set(i2, p2);
+        var k2 = o2 === a3;
+        return r2 ? (l2.undirectedDegree++, g2.undirectedDegree++, k2 && (l2.undirectedLoops++, t2._undirectedSelfLoopCount++)) : (l2.outDegree++, g2.inDegree++, k2 && (l2.directedLoops++, t2._directedSelfLoopCount++)), t2.multi ? p2.attachMulti() : p2.attach(), r2 ? t2._undirectedSize++ : t2._directedSize++, v2.key = i2, t2.emit("edgeAdded", v2), [i2, true, b2, m3];
       }
       function Mt(t2, e2) {
         t2._edges.delete(e2.key);
-        var n2 = e2.source, r2 = e2.target, i2 = e2.attributes, o2 = e2.undirected, a2 = n2 === r2;
-        o2 ? (n2.undirectedDegree--, r2.undirectedDegree--, a2 && (n2.undirectedLoops--, t2._undirectedSelfLoopCount--)) : (n2.outDegree--, r2.inDegree--, a2 && (n2.directedLoops--, t2._directedSelfLoopCount--)), t2.multi ? e2.detachMulti() : e2.detach(), o2 ? t2._undirectedSize-- : t2._directedSize--, t2.emit("edgeDropped", { key: e2.key, attributes: i2, source: n2.key, target: r2.key, undirected: o2 });
+        var n2 = e2.source, r2 = e2.target, i2 = e2.attributes, o2 = e2.undirected, a3 = n2 === r2;
+        o2 ? (n2.undirectedDegree--, r2.undirectedDegree--, a3 && (n2.undirectedLoops--, t2._undirectedSelfLoopCount--)) : (n2.outDegree--, r2.inDegree--, a3 && (n2.directedLoops--, t2._directedSelfLoopCount--)), t2.multi ? e2.detachMulti() : e2.detach(), o2 ? t2._undirectedSize-- : t2._directedSize--, t2.emit("edgeDropped", { key: e2.key, attributes: i2, source: n2.key, target: r2.key, undirected: o2 });
       }
       var zt = (function(n2) {
         function r2(t2) {
@@ -933,31 +933,31 @@ var require_graphology_umd_min = __commonJS({
           if (!Dt.has(t2.type)) throw new B(`Graph.constructor: invalid 'type' option. Should be one of "mixed", "directed" or "undirected" but got "`.concat(t2.type, '".'));
           if ("boolean" != typeof t2.allowSelfLoops) throw new B(`Graph.constructor: invalid 'allowSelfLoops' option. Expecting a boolean but got "`.concat(t2.allowSelfLoops, '".'));
           var r3 = "mixed" === t2.type ? Y : "directed" === t2.type ? q : J;
-          p(c(e2), "NodeDataClass", r3);
+          p(c2(e2), "NodeDataClass", r3);
           var i3 = "geid_" + St() + "_", o2 = 0;
-          return p(c(e2), "_attributes", {}), p(c(e2), "_nodes", /* @__PURE__ */ new Map()), p(c(e2), "_edges", /* @__PURE__ */ new Map()), p(c(e2), "_directedSize", 0), p(c(e2), "_undirectedSize", 0), p(c(e2), "_directedSelfLoopCount", 0), p(c(e2), "_undirectedSelfLoopCount", 0), p(c(e2), "_edgeKeyGenerator", (function() {
+          return p(c2(e2), "_attributes", {}), p(c2(e2), "_nodes", /* @__PURE__ */ new Map()), p(c2(e2), "_edges", /* @__PURE__ */ new Map()), p(c2(e2), "_directedSize", 0), p(c2(e2), "_undirectedSize", 0), p(c2(e2), "_directedSelfLoopCount", 0), p(c2(e2), "_undirectedSelfLoopCount", 0), p(c2(e2), "_edgeKeyGenerator", (function() {
             var t3;
             do {
               t3 = i3 + o2++;
             } while (e2._edges.has(t3));
             return t3;
-          })), p(c(e2), "_options", t2), Ut.forEach((function(t3) {
-            return p(c(e2), t3, e2[t3]);
-          })), f(c(e2), "order", (function() {
+          })), p(c2(e2), "_options", t2), Ut.forEach((function(t3) {
+            return p(c2(e2), t3, e2[t3]);
+          })), f(c2(e2), "order", (function() {
             return e2._nodes.size;
-          })), f(c(e2), "size", (function() {
+          })), f(c2(e2), "size", (function() {
             return e2._edges.size;
-          })), f(c(e2), "directedSize", (function() {
+          })), f(c2(e2), "directedSize", (function() {
             return e2._directedSize;
-          })), f(c(e2), "undirectedSize", (function() {
+          })), f(c2(e2), "undirectedSize", (function() {
             return e2._undirectedSize;
-          })), f(c(e2), "selfLoopCount", (function() {
+          })), f(c2(e2), "selfLoopCount", (function() {
             return e2._directedSelfLoopCount + e2._undirectedSelfLoopCount;
-          })), f(c(e2), "directedSelfLoopCount", (function() {
+          })), f(c2(e2), "directedSelfLoopCount", (function() {
             return e2._directedSelfLoopCount;
-          })), f(c(e2), "undirectedSelfLoopCount", (function() {
+          })), f(c2(e2), "undirectedSelfLoopCount", (function() {
             return e2._undirectedSelfLoopCount;
-          })), f(c(e2), "multi", e2._options.multi), f(c(e2), "type", e2._options.type), f(c(e2), "allowSelfLoops", e2._options.allowSelfLoops), f(c(e2), "implementation", (function() {
+          })), f(c2(e2), "multi", e2._options.multi), f(c2(e2), "type", e2._options.type), f(c2(e2), "allowSelfLoops", e2._options.allowSelfLoops), f(c2(e2), "implementation", (function() {
             return "graphology";
           })), e2;
         }
@@ -1288,7 +1288,7 @@ var require_graphology_umd_min = __commonJS({
         }, i2.updateEachEdgeAttributes = function(t2, e2) {
           if ("function" != typeof t2) throw new B("Graph.updateEachEdgeAttributes: expecting an updater function.");
           if (e2 && !l(e2)) throw new B("Graph.updateEachEdgeAttributes: invalid hints. Expecting an object having the following shape: {attributes?: [string]}");
-          for (var n3, r3, i3, o2, a2 = this._edges.values(); true !== (n3 = a2.next()).done; ) i3 = (r3 = n3.value).source, o2 = r3.target, r3.attributes = t2(r3.key, r3.attributes, i3.key, o2.key, i3.attributes, o2.attributes, r3.undirected);
+          for (var n3, r3, i3, o2, a3 = this._edges.values(); true !== (n3 = a3.next()).done; ) i3 = (r3 = n3.value).source, o2 = r3.target, r3.attributes = t2(r3.key, r3.attributes, i3.key, o2.key, i3.attributes, o2.attributes, r3.undirected);
           this.emit("eachEdgeAttributesUpdated", { hints: e2 || null });
         }, i2.forEachAdjacencyEntry = function(t2) {
           if ("function" != typeof t2) throw new B("Graph.forEachAdjacencyEntry: expecting a callback.");
@@ -1355,11 +1355,11 @@ var require_graphology_umd_min = __commonJS({
             })(t2.type, i3, e3);
           })), { options: { type: this.type, multi: this.multi, allowSelfLoops: this.allowSelfLoops }, attributes: this.getAttributes(), nodes: e2, edges: r3 };
         }, i2.import = function(t2) {
-          var e2, n3, i3, o2, a2, c2 = this, u2 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          var e2, n3, i3, o2, a3, c3 = this, u2 = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           if (t2 instanceof r2) return t2.forEachNode((function(t3, e3) {
-            u2 ? c2.mergeNode(t3, e3) : c2.addNode(t3, e3);
-          })), t2.forEachEdge((function(t3, e3, n4, r3, i4, o3, a3) {
-            u2 ? a3 ? c2.mergeUndirectedEdgeWithKey(t3, n4, r3, e3) : c2.mergeDirectedEdgeWithKey(t3, n4, r3, e3) : a3 ? c2.addUndirectedEdgeWithKey(t3, n4, r3, e3) : c2.addDirectedEdgeWithKey(t3, n4, r3, e3);
+            u2 ? c3.mergeNode(t3, e3) : c3.addNode(t3, e3);
+          })), t2.forEachEdge((function(t3, e3, n4, r3, i4, o3, a4) {
+            u2 ? a4 ? c3.mergeUndirectedEdgeWithKey(t3, n4, r3, e3) : c3.mergeDirectedEdgeWithKey(t3, n4, r3, e3) : a4 ? c3.addUndirectedEdgeWithKey(t3, n4, r3, e3) : c3.addDirectedEdgeWithKey(t3, n4, r3, e3);
           })), this;
           if (!s(t2)) throw new B("Graph.import: invalid argument. Expecting a serialized graph or, alternatively, a Graph instance.");
           if (t2.attributes) {
@@ -1378,9 +1378,9 @@ var require_graphology_umd_min = __commonJS({
             var f2 = false;
             if ("undirected" === this.type && (f2 = true), i3 = t2.edges, !Array.isArray(i3)) throw new B("Graph.import: invalid edges. Expecting an array.");
             for (e2 = 0, n3 = i3.length; e2 < n3; e2++) {
-              At(a2 = i3[e2]);
-              var l2 = a2, g2 = l2.source, y2 = l2.target, w2 = l2.attributes, v2 = l2.undirected, b2 = void 0 === v2 ? f2 : v2;
-              "key" in a2 ? (u2 ? b2 ? this.mergeUndirectedEdgeWithKey : this.mergeDirectedEdgeWithKey : b2 ? this.addUndirectedEdgeWithKey : this.addDirectedEdgeWithKey).call(this, a2.key, g2, y2, w2) : (u2 ? b2 ? this.mergeUndirectedEdge : this.mergeDirectedEdge : b2 ? this.addUndirectedEdge : this.addDirectedEdge).call(this, g2, y2, w2);
+              At(a3 = i3[e2]);
+              var l2 = a3, g2 = l2.source, y3 = l2.target, w2 = l2.attributes, v2 = l2.undirected, b2 = void 0 === v2 ? f2 : v2;
+              "key" in a3 ? (u2 ? b2 ? this.mergeUndirectedEdgeWithKey : this.mergeDirectedEdgeWithKey : b2 ? this.addUndirectedEdgeWithKey : this.addDirectedEdgeWithKey).call(this, a3.key, g2, y3, w2) : (u2 ? b2 ? this.mergeUndirectedEdge : this.mergeDirectedEdge : b2 ? this.addUndirectedEdge : this.addDirectedEdge).call(this, g2, y3, w2);
             }
           }
           return this;
@@ -1410,16 +1410,16 @@ var require_graphology_umd_min = __commonJS({
           }));
           var r3 = {}, i3 = {};
           this._edges.forEach((function(t2, n4) {
-            var o3, a3 = t2.undirected ? "--" : "->", c2 = "", u2 = t2.source.key, d2 = t2.target.key;
+            var o3, a4 = t2.undirected ? "--" : "->", c3 = "", u2 = t2.source.key, d2 = t2.target.key;
             t2.undirected && u2 > d2 && (o3 = u2, u2 = d2, d2 = o3);
-            var s2 = "(".concat(u2, ")").concat(a3, "(").concat(d2, ")");
-            n4.startsWith("geid_") ? e2.multi && (void 0 === i3[s2] ? i3[s2] = 0 : i3[s2]++, c2 += "".concat(i3[s2], ". ")) : c2 += "[".concat(n4, "]: "), r3[c2 += s2] = t2.attributes;
+            var s2 = "(".concat(u2, ")").concat(a4, "(").concat(d2, ")");
+            n4.startsWith("geid_") ? e2.multi && (void 0 === i3[s2] ? i3[s2] = 0 : i3[s2]++, c3 += "".concat(i3[s2], ". ")) : c3 += "[".concat(n4, "]: "), r3[c3 += s2] = t2.attributes;
           }));
           var o2 = {};
-          for (var a2 in this) this.hasOwnProperty(a2) && !Ut.has(a2) && "function" != typeof this[a2] && "symbol" !== t(a2) && (o2[a2] = this[a2]);
+          for (var a3 in this) this.hasOwnProperty(a3) && !Ut.has(a3) && "function" != typeof this[a3] && "symbol" !== t(a3) && (o2[a3] = this[a3]);
           return o2.attributes = this._attributes, o2.nodes = n3, o2.edges = r3, p(o2, "constructor", this.constructor), o2;
         }, r2;
-      })(y.exports.EventEmitter);
+      })(y2.exports.EventEmitter);
       "undefined" != typeof Symbol && (zt.prototype[Symbol.for("nodejs.util.inspect.custom")] = zt.prototype.inspect), [{ name: function(t2) {
         return "".concat(t2, "Edge");
       }, generateKey: true }, { name: function(t2) {
@@ -1435,10 +1435,10 @@ var require_graphology_umd_min = __commonJS({
       }, type: "undirected" }].forEach((function(t2) {
         ["add", "merge", "update"].forEach((function(e2) {
           var n2 = t2.name(e2), r2 = "add" === e2 ? jt : Ct;
-          t2.generateKey ? zt.prototype[n2] = function(i2, o2, a2) {
-            return r2(this, n2, true, "undirected" === (t2.type || this.type), null, i2, o2, a2, "update" === e2);
-          } : zt.prototype[n2] = function(i2, o2, a2, c2) {
-            return r2(this, n2, false, "undirected" === (t2.type || this.type), i2, o2, a2, c2, "update" === e2);
+          t2.generateKey ? zt.prototype[n2] = function(i2, o2, a3) {
+            return r2(this, n2, true, "undirected" === (t2.type || this.type), null, i2, o2, a3, "update" === e2);
+          } : zt.prototype[n2] = function(i2, o2, a3, c3) {
+            return r2(this, n2, false, "undirected" === (t2.type || this.type), i2, o2, a3, c3, "update" === e2);
           };
         }));
       })), (function(t2) {
@@ -1466,10 +1466,10 @@ var require_graphology_umd_min = __commonJS({
               }
               if (2 === arguments.length) {
                 t4 = "" + t4, e4 = "" + e4;
-                var a2 = this._nodes.get(t4);
-                if (!a2) throw new F("Graph.".concat(n2, ':  could not find the "').concat(t4, '" source node in the graph.'));
+                var a3 = this._nodes.get(t4);
+                if (!a3) throw new F("Graph.".concat(n2, ':  could not find the "').concat(t4, '" source node in the graph.'));
                 if (!this._nodes.has(e4)) throw new F("Graph.".concat(n2, ':  could not find the "').concat(e4, '" target node in the graph.'));
-                return gt(r2, this.multi, i2, a2, e4);
+                return gt(r2, this.multi, i2, a3, e4);
               }
               throw new B("Graph.".concat(n2, ": too many arguments (expecting 0, 1 or 2 and got ").concat(arguments.length, ")."));
             };
@@ -1480,40 +1480,40 @@ var require_graphology_umd_min = __commonJS({
                 if (1 === arguments.length) return dt(false, this, r2, n3 = t4);
                 if (2 === arguments.length) {
                   t4 = "" + t4, n3 = e4;
-                  var a3 = this._nodes.get(t4);
-                  if (void 0 === a3) throw new F("Graph.".concat(o2, ': could not find the "').concat(t4, '" node in the graph.'));
-                  return ht(false, this.multi, "mixed" === r2 ? this.type : r2, i2, a3, n3);
+                  var a4 = this._nodes.get(t4);
+                  if (void 0 === a4) throw new F("Graph.".concat(o2, ': could not find the "').concat(t4, '" node in the graph.'));
+                  return ht(false, this.multi, "mixed" === r2 ? this.type : r2, i2, a4, n3);
                 }
                 if (3 === arguments.length) {
                   t4 = "" + t4, e4 = "" + e4;
-                  var c3 = this._nodes.get(t4);
-                  if (!c3) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
+                  var c4 = this._nodes.get(t4);
+                  if (!c4) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
                   if (!this._nodes.has(e4)) throw new F("Graph.".concat(o2, ':  could not find the "').concat(e4, '" target node in the graph.'));
-                  return lt(false, r2, this.multi, i2, c3, e4, n3);
+                  return lt(false, r2, this.multi, i2, c4, e4, n3);
                 }
                 throw new B("Graph.".concat(o2, ": too many arguments (expecting 1, 2 or 3 and got ").concat(arguments.length, ")."));
               }
             };
-            var a2 = "map" + n2[0].toUpperCase() + n2.slice(1);
-            t3.prototype[a2] = function() {
+            var a3 = "map" + n2[0].toUpperCase() + n2.slice(1);
+            t3.prototype[a3] = function() {
               var t4, e4 = Array.prototype.slice.call(arguments), n3 = e4.pop();
               if (0 === e4.length) {
                 var i3 = 0;
                 "directed" !== r2 && (i3 += this.undirectedSize), "undirected" !== r2 && (i3 += this.directedSize), t4 = new Array(i3);
-                var a3 = 0;
-                e4.push((function(e5, r3, i4, o3, c3, u3, d2) {
-                  t4[a3++] = n3(e5, r3, i4, o3, c3, u3, d2);
+                var a4 = 0;
+                e4.push((function(e5, r3, i4, o3, c4, u3, d2) {
+                  t4[a4++] = n3(e5, r3, i4, o3, c4, u3, d2);
                 }));
-              } else t4 = [], e4.push((function(e5, r3, i4, o3, a4, c3, u3) {
-                t4.push(n3(e5, r3, i4, o3, a4, c3, u3));
+              } else t4 = [], e4.push((function(e5, r3, i4, o3, a5, c4, u3) {
+                t4.push(n3(e5, r3, i4, o3, a5, c4, u3));
               }));
               return this[o2].apply(this, e4), t4;
             };
-            var c2 = "filter" + n2[0].toUpperCase() + n2.slice(1);
-            t3.prototype[c2] = function() {
+            var c3 = "filter" + n2[0].toUpperCase() + n2.slice(1);
+            t3.prototype[c3] = function() {
               var t4 = Array.prototype.slice.call(arguments), e4 = t4.pop(), n3 = [];
-              return t4.push((function(t5, r3, i3, o3, a3, c3, u3) {
-                e4(t5, r3, i3, o3, a3, c3, u3) && n3.push(t5);
+              return t4.push((function(t5, r3, i3, o3, a4, c4, u3) {
+                e4(t5, r3, i3, o3, a4, c4, u3) && n3.push(t5);
               })), this[o2].apply(this, t4), n3;
             };
             var u2 = "reduce" + n2[0].toUpperCase() + n2.slice(1);
@@ -1523,8 +1523,8 @@ var require_graphology_umd_min = __commonJS({
               if ("function" == typeof n3[n3.length - 1] && "function" != typeof n3[n3.length - 2]) throw new B("Graph.".concat(u2, ": missing initial value. You must provide it because the callback takes more than one argument and we cannot infer the initial value from the first iteration, as you could with a simple array."));
               2 === n3.length ? (t4 = n3[0], e4 = n3[1], n3 = []) : 3 === n3.length ? (t4 = n3[1], e4 = n3[2], n3 = [n3[0]]) : 4 === n3.length && (t4 = n3[2], e4 = n3[3], n3 = [n3[0], n3[1]]);
               var r3 = e4;
-              return n3.push((function(e5, n4, i3, o3, a3, c3, u3) {
-                r3 = t4(r3, e5, n4, i3, o3, a3, c3, u3);
+              return n3.push((function(e5, n4, i3, o3, a4, c4, u3) {
+                r3 = t4(r3, e5, n4, i3, o3, a4, c4, u3);
               })), this[o2].apply(this, n3), r3;
             };
           })(t2, e2), (function(t3, e3) {
@@ -1534,31 +1534,31 @@ var require_graphology_umd_min = __commonJS({
               if (1 === arguments.length) return dt(true, this, r2, n3 = t4);
               if (2 === arguments.length) {
                 t4 = "" + t4, n3 = e4;
-                var a3 = this._nodes.get(t4);
-                if (void 0 === a3) throw new F("Graph.".concat(o2, ': could not find the "').concat(t4, '" node in the graph.'));
-                return ht(true, this.multi, "mixed" === r2 ? this.type : r2, i2, a3, n3);
+                var a4 = this._nodes.get(t4);
+                if (void 0 === a4) throw new F("Graph.".concat(o2, ': could not find the "').concat(t4, '" node in the graph.'));
+                return ht(true, this.multi, "mixed" === r2 ? this.type : r2, i2, a4, n3);
               }
               if (3 === arguments.length) {
                 t4 = "" + t4, e4 = "" + e4;
-                var c3 = this._nodes.get(t4);
-                if (!c3) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
+                var c4 = this._nodes.get(t4);
+                if (!c4) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
                 if (!this._nodes.has(e4)) throw new F("Graph.".concat(o2, ':  could not find the "').concat(e4, '" target node in the graph.'));
-                return lt(true, r2, this.multi, i2, c3, e4, n3);
+                return lt(true, r2, this.multi, i2, c4, e4, n3);
               }
               throw new B("Graph.".concat(o2, ": too many arguments (expecting 1, 2 or 3 and got ").concat(arguments.length, ")."));
             };
-            var a2 = "some" + n2[0].toUpperCase() + n2.slice(1, -1);
-            t3.prototype[a2] = function() {
+            var a3 = "some" + n2[0].toUpperCase() + n2.slice(1, -1);
+            t3.prototype[a3] = function() {
               var t4 = Array.prototype.slice.call(arguments), e4 = t4.pop();
-              return t4.push((function(t5, n3, r3, i3, o3, a3, c3) {
-                return e4(t5, n3, r3, i3, o3, a3, c3);
+              return t4.push((function(t5, n3, r3, i3, o3, a4, c4) {
+                return e4(t5, n3, r3, i3, o3, a4, c4);
               })), !!this[o2].apply(this, t4);
             };
-            var c2 = "every" + n2[0].toUpperCase() + n2.slice(1, -1);
-            t3.prototype[c2] = function() {
+            var c3 = "every" + n2[0].toUpperCase() + n2.slice(1, -1);
+            t3.prototype[c3] = function() {
               var t4 = Array.prototype.slice.call(arguments), e4 = t4.pop();
-              return t4.push((function(t5, n3, r3, i3, o3, a3, c3) {
-                return !e4(t5, n3, r3, i3, o3, a3, c3);
+              return t4.push((function(t5, n3, r3, i3, o3, a4, c4) {
+                return !e4(t5, n3, r3, i3, o3, a4, c4);
               })), !this[o2].apply(this, t4);
             };
           })(t2, e2), (function(t3, e3) {
@@ -1574,10 +1574,10 @@ var require_graphology_umd_min = __commonJS({
               }
               if (2 === arguments.length) {
                 t4 = "" + t4, e4 = "" + e4;
-                var a2 = this._nodes.get(t4);
-                if (!a2) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
+                var a3 = this._nodes.get(t4);
+                if (!a3) throw new F("Graph.".concat(o2, ':  could not find the "').concat(t4, '" source node in the graph.'));
                 if (!this._nodes.has(e4)) throw new F("Graph.".concat(o2, ':  could not find the "').concat(e4, '" target node in the graph.'));
-                return yt(r2, i2, a2, e4);
+                return yt(r2, i2, a3, e4);
               }
               throw new B("Graph.".concat(o2, ": too many arguments (expecting 0, 1 or 2 and got ").concat(arguments.length, ")."));
             };
@@ -1595,15 +1595,15 @@ var require_graphology_umd_min = __commonJS({
                 mt(false, "mixed" === r2 ? this.type : r2, i2, n3, e4);
               }
             };
-            var a2 = "map" + n2[0].toUpperCase() + n2.slice(1);
-            t3.prototype[a2] = function(t4, e4) {
+            var a3 = "map" + n2[0].toUpperCase() + n2.slice(1);
+            t3.prototype[a3] = function(t4, e4) {
               var n3 = [];
               return this[o2](t4, (function(t5, r3) {
                 n3.push(e4(t5, r3));
               })), n3;
             };
-            var c2 = "filter" + n2[0].toUpperCase() + n2.slice(1);
-            t3.prototype[c2] = function(t4, e4) {
+            var c3 = "filter" + n2[0].toUpperCase() + n2.slice(1);
+            t3.prototype[c3] = function(t4, e4) {
               var n3 = [];
               return this[o2](t4, (function(t5, r3) {
                 e4(t5, r3) && n3.push(t5);
@@ -1618,22 +1618,22 @@ var require_graphology_umd_min = __commonJS({
               })), r3;
             };
           })(t2, e2), (function(t3, e3) {
-            var n2 = e3.name, r2 = e3.type, i2 = e3.direction, o2 = n2[0].toUpperCase() + n2.slice(1, -1), a2 = "find" + o2;
-            t3.prototype[a2] = function(t4, e4) {
+            var n2 = e3.name, r2 = e3.type, i2 = e3.direction, o2 = n2[0].toUpperCase() + n2.slice(1, -1), a3 = "find" + o2;
+            t3.prototype[a3] = function(t4, e4) {
               if ("mixed" === r2 || "mixed" === this.type || r2 === this.type) {
                 t4 = "" + t4;
                 var n3 = this._nodes.get(t4);
-                if (void 0 === n3) throw new F("Graph.".concat(a2, ': could not find the "').concat(t4, '" node in the graph.'));
+                if (void 0 === n3) throw new F("Graph.".concat(a3, ': could not find the "').concat(t4, '" node in the graph.'));
                 return mt(true, "mixed" === r2 ? this.type : r2, i2, n3, e4);
               }
             };
-            var c2 = "some" + o2;
-            t3.prototype[c2] = function(t4, e4) {
-              return !!this[a2](t4, e4);
+            var c3 = "some" + o2;
+            t3.prototype[c3] = function(t4, e4) {
+              return !!this[a3](t4, e4);
             };
             var u2 = "every" + o2;
             t3.prototype[u2] = function(t4, e4) {
-              return !this[a2](t4, (function(t5, n3) {
+              return !this[a3](t4, (function(t5, n3) {
                 return !e4(t5, n3);
               }));
             };
@@ -1800,7 +1800,7 @@ var require_events = __commonJS({
       return true;
     };
     function _addListener(target, type, listener, prepend) {
-      var m;
+      var m2;
       var events;
       var existing;
       checkListener(listener);
@@ -1830,8 +1830,8 @@ var require_events = __commonJS({
         } else {
           existing.push(listener);
         }
-        m = _getMaxListeners(target);
-        if (m > 0 && existing.length > m && !existing.warned) {
+        m2 = _getMaxListeners(target);
+        if (m2 > 0 && existing.length > m2 && !existing.warned) {
           existing.warned = true;
           var w = new Error("Possible EventEmitter memory leak detected. " + existing.length + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
           w.name = "MaxListenersExceededWarning";
@@ -2003,9 +2003,9 @@ var require_events = __commonJS({
         copy[i] = arr[i];
       return copy;
     }
-    function spliceOne(list, index) {
-      for (; index + 1 < list.length; index++)
-        list[index] = list[index + 1];
+    function spliceOne(list, index2) {
+      for (; index2 + 1 < list.length; index2++)
+        list[index2] = list[index2 + 1];
       list.pop();
     }
     function unwrapListeners(arr) {
@@ -2077,15 +2077,15 @@ var require_extent = __commonJS({
       if (!isGraph(graph))
         throw new Error("graphology-metrics/extent: the given graph is not a valid graphology instance.");
       var attributes = [].concat(attribute);
-      var value, key, a;
+      var value, key, a2;
       var results = {};
-      for (a = 0; a < attributes.length; a++) {
-        key = attributes[a];
+      for (a2 = 0; a2 < attributes.length; a2++) {
+        key = attributes[a2];
         results[key] = [Infinity, -Infinity];
       }
       graph.forEachNode(function(node, data) {
-        for (a = 0; a < attributes.length; a++) {
-          key = attributes[a];
+        for (a2 = 0; a2 < attributes.length; a2++) {
+          key = attributes[a2];
           value = data[key];
           if (value < results[key][0])
             results[key][0] = value;
@@ -2099,15 +2099,15 @@ var require_extent = __commonJS({
       if (!isGraph(graph))
         throw new Error("graphology-metrics/extent: the given graph is not a valid graphology instance.");
       var attributes = [].concat(attribute);
-      var value, key, a;
+      var value, key, a2;
       var results = {};
-      for (a = 0; a < attributes.length; a++) {
-        key = attributes[a];
+      for (a2 = 0; a2 < attributes.length; a2++) {
+        key = attributes[a2];
         results[key] = [Infinity, -Infinity];
       }
       graph.forEachEdge(function(edge, data) {
-        for (a = 0; a < attributes.length; a++) {
-          key = attributes[a];
+        for (a2 = 0; a2 < attributes.length; a2++) {
+          key = attributes[a2];
           value = data[key];
           if (value < results[key][0])
             results[key][0] = value;
@@ -2134,56 +2134,56 @@ var require_matrices = __commonJS({
       return Float32Array.of(1, 0, 0, 0, 1, 0, 0, 0, 1);
     }
     exports.identity = identity;
-    function scale(m, x, y) {
-      m[0] = x;
-      m[4] = typeof y === "number" ? y : x;
-      return m;
+    function scale(m2, x2, y2) {
+      m2[0] = x2;
+      m2[4] = typeof y2 === "number" ? y2 : x2;
+      return m2;
     }
     exports.scale = scale;
-    function rotate(m, r) {
-      var s = Math.sin(r), c = Math.cos(r);
-      m[0] = c;
-      m[1] = s;
-      m[3] = -s;
-      m[4] = c;
-      return m;
+    function rotate(m2, r) {
+      var s = Math.sin(r), c2 = Math.cos(r);
+      m2[0] = c2;
+      m2[1] = s;
+      m2[3] = -s;
+      m2[4] = c2;
+      return m2;
     }
     exports.rotate = rotate;
-    function translate(m, x, y) {
-      m[6] = x;
-      m[7] = y;
-      return m;
+    function translate(m2, x2, y2) {
+      m2[6] = x2;
+      m2[7] = y2;
+      return m2;
     }
     exports.translate = translate;
-    function multiply(a, b) {
-      var a00 = a[0], a01 = a[1], a02 = a[2];
-      var a10 = a[3], a11 = a[4], a12 = a[5];
-      var a20 = a[6], a21 = a[7], a22 = a[8];
+    function multiply(a2, b) {
+      var a00 = a2[0], a01 = a2[1], a02 = a2[2];
+      var a10 = a2[3], a11 = a2[4], a12 = a2[5];
+      var a20 = a2[6], a21 = a2[7], a22 = a2[8];
       var b00 = b[0], b01 = b[1], b02 = b[2];
       var b10 = b[3], b11 = b[4], b12 = b[5];
       var b20 = b[6], b21 = b[7], b22 = b[8];
-      a[0] = b00 * a00 + b01 * a10 + b02 * a20;
-      a[1] = b00 * a01 + b01 * a11 + b02 * a21;
-      a[2] = b00 * a02 + b01 * a12 + b02 * a22;
-      a[3] = b10 * a00 + b11 * a10 + b12 * a20;
-      a[4] = b10 * a01 + b11 * a11 + b12 * a21;
-      a[5] = b10 * a02 + b11 * a12 + b12 * a22;
-      a[6] = b20 * a00 + b21 * a10 + b22 * a20;
-      a[7] = b20 * a01 + b21 * a11 + b22 * a21;
-      a[8] = b20 * a02 + b21 * a12 + b22 * a22;
-      return a;
+      a2[0] = b00 * a00 + b01 * a10 + b02 * a20;
+      a2[1] = b00 * a01 + b01 * a11 + b02 * a21;
+      a2[2] = b00 * a02 + b01 * a12 + b02 * a22;
+      a2[3] = b10 * a00 + b11 * a10 + b12 * a20;
+      a2[4] = b10 * a01 + b11 * a11 + b12 * a21;
+      a2[5] = b10 * a02 + b11 * a12 + b12 * a22;
+      a2[6] = b20 * a00 + b21 * a10 + b22 * a20;
+      a2[7] = b20 * a01 + b21 * a11 + b22 * a21;
+      a2[8] = b20 * a02 + b21 * a12 + b22 * a22;
+      return a2;
     }
     exports.multiply = multiply;
-    function multiplyVec(a, b) {
-      var a00 = a[0], a01 = a[1], a02 = a[2];
-      var a10 = a[3], a11 = a[4], a12 = a[5];
-      var a20 = a[6], a21 = a[7], a22 = a[8];
+    function multiplyVec(a2, b) {
+      var a00 = a2[0], a01 = a2[1], a02 = a2[2];
+      var a10 = a2[3], a11 = a2[4], a12 = a2[5];
+      var a20 = a2[6], a21 = a2[7], a22 = a2[8];
       var b0 = b[0], b1 = b[1], b2 = b[2];
-      var c = Array.isArray(b) ? [0, 0, 0] : Float32Array.of(0, 0, 0);
-      c[0] = b0 * a00 + b1 * a10 + b2 * a20;
-      c[1] = b0 * a01 + b1 * a11 + b2 * a21;
-      c[2] = b0 * a02 + b1 * a12 + b2 * a22;
-      return c;
+      var c2 = Array.isArray(b) ? [0, 0, 0] : Float32Array.of(0, 0, 0);
+      c2[0] = b0 * a00 + b1 * a10 + b2 * a20;
+      c2[1] = b0 * a01 + b1 * a11 + b2 * a21;
+      c2[2] = b0 * a02 + b1 * a12 + b2 * a22;
+      return c2;
     }
     exports.multiplyVec = multiplyVec;
   }
@@ -2194,16 +2194,16 @@ var require_utils = __commonJS({
   "node_modules/sigma/utils/index.js"(exports) {
     "use strict";
     var __read = exports && exports.__read || function(o, n) {
-      var m = typeof Symbol === "function" && o[Symbol.iterator];
-      if (!m) return o;
-      var i = m.call(o), r, ar = [], e;
+      var m2 = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m2) return o;
+      var i = m2.call(o), r, ar = [], e;
       try {
         while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = { error };
       } finally {
         try {
-          if (r && !r.done && (m = i["return"])) m.call(i);
+          if (r && !r.done && (m2 = i["return"])) m2.call(i);
         } finally {
           if (e) throw e.error;
         }
@@ -2300,8 +2300,8 @@ var require_utils = __commonJS({
     }
     exports.createNormalizationFunction = createNormalizationFunction;
     function zIndexOrdering(extent, getter, elements) {
-      return elements.sort(function(a, b) {
-        var zA = getter(a) || 0, zB = getter(b) || 0;
+      return elements.sort(function(a2, b) {
+        var zA = getter(a2) || 0, zB = getter(b) || 0;
         if (zA < zB)
           return -1;
         if (zA > zB)
@@ -2319,7 +2319,7 @@ var require_utils = __commonJS({
     function floatColor(val) {
       if (typeof FLOAT_COLOR_CACHE[val] !== "undefined")
         return FLOAT_COLOR_CACHE[val];
-      var r = 0, g = 0, b = 0, a = 1;
+      var r = 0, g = 0, b = 0, a2 = 1;
       if (val[0] === "#") {
         if (val.length === 4) {
           r = parseInt(val.charAt(1) + val.charAt(1), 16);
@@ -2337,11 +2337,11 @@ var require_utils = __commonJS({
           g = +match[2];
           b = +match[3];
           if (match[4])
-            a = +match[4];
+            a2 = +match[4];
         }
       }
-      a = a * 255 | 0;
-      INT32[0] = (a << 24 | b << 16 | g << 8 | r) & 4278190079;
+      a2 = a2 * 255 | 0;
+      INT32[0] = (a2 << 24 | b << 16 | g << 8 | r) & 4278190079;
       var color = FLOAT32[0];
       FLOAT_COLOR_CACHE[val] = color;
       return color;
@@ -2357,7 +2357,7 @@ var require_utils = __commonJS({
     }
     exports.getCorrectionRatio = getCorrectionRatio;
     function matrixFromCamera(state, viewportDimensions, graphDimensions, padding, inverse) {
-      var angle = state.angle, ratio = state.ratio, x = state.x, y = state.y;
+      var angle = state.angle, ratio = state.ratio, x2 = state.x, y2 = state.y;
       var width = viewportDimensions.width, height = viewportDimensions.height;
       var matrix = (0, matrices_1.identity)();
       var smallestDimension = Math.min(width, height) - 2 * padding;
@@ -2366,9 +2366,9 @@ var require_utils = __commonJS({
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), 2 * (smallestDimension / width) * correctionRatio, 2 * (smallestDimension / height) * correctionRatio));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.rotate)((0, matrices_1.identity)(), -angle));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), 1 / ratio));
-        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), -x, -y));
+        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), -x2, -y2));
       } else {
-        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), x, y));
+        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), x2, y2));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), ratio));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.rotate)((0, matrices_1.identity)(), angle));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), width / smallestDimension / 2 / correctionRatio, height / smallestDimension / 2 / correctionRatio));
@@ -2376,9 +2376,9 @@ var require_utils = __commonJS({
       return matrix;
     }
     exports.matrixFromCamera = matrixFromCamera;
-    function extractPixel(gl, x, y, array) {
+    function extractPixel(gl, x2, y2, array) {
       var data = array || new Uint8Array(4);
-      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, data);
+      gl.readPixels(x2, y2, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, data);
       return data;
     }
     exports.extractPixel = extractPixel;
@@ -2477,7 +2477,7 @@ var require_animate = __commonJS({
         for (var k in attrs)
           startPositions[node][k] = graph.getNodeAttribute(node, k);
       }
-      var frame = null;
+      var frame2 = null;
       var step = function() {
         var p = (Date.now() - start) / options.duration;
         if (p >= 1) {
@@ -2497,12 +2497,12 @@ var require_animate = __commonJS({
           for (var k2 in attrs2)
             graph.setNodeAttribute(node2, k2, attrs2[k2] * p + s[k2] * (1 - p));
         }
-        frame = (0, index_1.requestFrame)(step);
+        frame2 = (0, index_1.requestFrame)(step);
       };
       step();
       return function() {
-        if (frame)
-          (0, index_1.cancelFrame)(frame);
+        if (frame2)
+          (0, index_1.cancelFrame)(frame2);
       };
     }
     exports.animateNodes = animateNodes;
@@ -2827,14 +2827,14 @@ var require_mouse = __commonJS({
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
       };
     })();
-    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
+    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m2, k, k2) {
       if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
-        return m[k];
+        return m2[k];
       } });
-    }) : (function(o, m, k, k2) {
+    }) : (function(o, m2, k, k2) {
       if (k2 === void 0) k2 = k;
-      o[k2] = m[k];
+      o[k2] = m2[k];
     }));
     var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
@@ -2970,7 +2970,7 @@ var require_mouse = __commonJS({
             clearTimeout(this.movingTimeout);
             this.movingTimeout = null;
           }
-          var x = (0, captor_1.getX)(e), y = (0, captor_1.getY)(e);
+          var x2 = (0, captor_1.getX)(e), y2 = (0, captor_1.getY)(e);
           var cameraState = camera.getState(), previousCameraState = camera.getPreviousState() || { x: 0, y: 0 };
           if (this.isMoving) {
             camera.animate({
@@ -2980,7 +2980,7 @@ var require_mouse = __commonJS({
               duration: MOUSE_INERTIA_DURATION,
               easing: "quadraticOut"
             });
-          } else if (this.lastMouseX !== x || this.lastMouseY !== y) {
+          } else if (this.lastMouseX !== x2 || this.lastMouseY !== y2) {
             camera.setState({
               x: cameraState.x,
               y: cameraState.y
@@ -3017,8 +3017,8 @@ var require_mouse = __commonJS({
             var mouse = this.renderer.viewportToFramedGraph({ x: eX, y: eY });
             var offsetX = lastMouse.x - mouse.x, offsetY = lastMouse.y - mouse.y;
             var cameraState = camera.getState();
-            var x = cameraState.x + offsetX, y = cameraState.y + offsetY;
-            camera.setState({ x, y });
+            var x2 = cameraState.x + offsetX, y2 = cameraState.y + offsetY;
+            camera.setState({ x: x2, y: y2 });
             this.lastMouseX = eX;
             this.lastMouseY = eY;
           }
@@ -3045,8 +3045,8 @@ var require_mouse = __commonJS({
           var camera = this.renderer.getCamera();
           var newRatio = camera.getState().ratio * ratioDiff;
           var wheelDirection = delta > 0 ? 1 : -1;
-          var now = Date.now();
-          if (this.currentWheelDirection === wheelDirection && this.lastWheelTriggerTime && now - this.lastWheelTriggerTime < MOUSE_ZOOM_DURATION / 5) {
+          var now2 = Date.now();
+          if (this.currentWheelDirection === wheelDirection && this.lastWheelTriggerTime && now2 - this.lastWheelTriggerTime < MOUSE_ZOOM_DURATION / 5) {
             return false;
           }
           camera.animate(this.renderer.getViewportZoomedState({ x: (0, captor_1.getX)(e), y: (0, captor_1.getY)(e) }, newRatio), {
@@ -3056,7 +3056,7 @@ var require_mouse = __commonJS({
             _this.currentWheelDirection = 0;
           });
           this.currentWheelDirection = wheelDirection;
-          this.lastWheelTriggerTime = now;
+          this.lastWheelTriggerTime = now2;
           return false;
         };
         MouseCaptor2.prototype.handleOut = function() {
@@ -3088,16 +3088,16 @@ var require_quadtree = __commonJS({
   "node_modules/sigma/core/quadtree.js"(exports) {
     "use strict";
     var __read = exports && exports.__read || function(o, n) {
-      var m = typeof Symbol === "function" && o[Symbol.iterator];
-      if (!m) return o;
-      var i = m.call(o), r, ar = [], e;
+      var m2 = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m2) return o;
+      var i = m2.call(o), r, ar = [], e;
       try {
         while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = { error };
       } finally {
         try {
-          if (r && !r.done && (m = i["return"])) m.call(i);
+          if (r && !r.done && (m2 = i["return"])) m2.call(i);
         } finally {
           if (e) throw e.error;
         }
@@ -3172,8 +3172,8 @@ var require_quadtree = __commonJS({
       return x1 < qx + qw && x1 + w > qx && y1 < qy + qh && y1 + h > qy;
     }
     exports.rectangleCollidesWithQuad = rectangleCollidesWithQuad;
-    function pointIsInQuad(x, y, qx, qy, qw, qh) {
-      var xmp = qx + qw / 2, ymp = qy + qh / 2, top = y < ymp, left = x < xmp;
+    function pointIsInQuad(x2, y2, qx, qy, qw, qh) {
+      var xmp = qx + qw / 2, ymp = qy + qh / 2, top = y2 < ymp, left = x2 < xmp;
       return top ? left ? TOP_LEFT : TOP_RIGHT : left ? BOTTOM_LEFT : BOTTOM_RIGHT;
     }
     function buildQuadrants(maxLevel, data) {
@@ -3181,21 +3181,21 @@ var require_quadtree = __commonJS({
       while (stack.length) {
         var level = stack.pop(), block = stack.pop();
         var topLeftBlock = 4 * block + BLOCKS, topRightBlock = 4 * block + 2 * BLOCKS, bottomLeftBlock = 4 * block + 3 * BLOCKS, bottomRightBlock = 4 * block + 4 * BLOCKS;
-        var x = data[block + X_OFFSET], y = data[block + Y_OFFSET], width = data[block + WIDTH_OFFSET], height = data[block + HEIGHT_OFFSET], hw = width / 2, hh = height / 2;
-        data[topLeftBlock + X_OFFSET] = x;
-        data[topLeftBlock + Y_OFFSET] = y;
+        var x2 = data[block + X_OFFSET], y2 = data[block + Y_OFFSET], width = data[block + WIDTH_OFFSET], height = data[block + HEIGHT_OFFSET], hw = width / 2, hh = height / 2;
+        data[topLeftBlock + X_OFFSET] = x2;
+        data[topLeftBlock + Y_OFFSET] = y2;
         data[topLeftBlock + WIDTH_OFFSET] = hw;
         data[topLeftBlock + HEIGHT_OFFSET] = hh;
-        data[topRightBlock + X_OFFSET] = x + hw;
-        data[topRightBlock + Y_OFFSET] = y;
+        data[topRightBlock + X_OFFSET] = x2 + hw;
+        data[topRightBlock + Y_OFFSET] = y2;
         data[topRightBlock + WIDTH_OFFSET] = hw;
         data[topRightBlock + HEIGHT_OFFSET] = hh;
-        data[bottomLeftBlock + X_OFFSET] = x;
-        data[bottomLeftBlock + Y_OFFSET] = y + hh;
+        data[bottomLeftBlock + X_OFFSET] = x2;
+        data[bottomLeftBlock + Y_OFFSET] = y2 + hh;
         data[bottomLeftBlock + WIDTH_OFFSET] = hw;
         data[bottomLeftBlock + HEIGHT_OFFSET] = hh;
-        data[bottomRightBlock + X_OFFSET] = x + hw;
-        data[bottomRightBlock + Y_OFFSET] = y + hh;
+        data[bottomRightBlock + X_OFFSET] = x2 + hw;
+        data[bottomRightBlock + Y_OFFSET] = y2 + hh;
         data[bottomRightBlock + WIDTH_OFFSET] = hw;
         data[bottomRightBlock + HEIGHT_OFFSET] = hh;
         if (level < maxLevel - 1) {
@@ -3206,8 +3206,8 @@ var require_quadtree = __commonJS({
         }
       }
     }
-    function insertNode(maxLevel, data, containers, key, x, y, size) {
-      var x1 = x - size, y1 = y - size, w = size * 2;
+    function insertNode(maxLevel, data, containers, key, x2, y2, size) {
+      var x1 = x2 - size, y1 = y2 - size, w = size * 2;
       var level = 0, block = 0;
       while (true) {
         if (level >= maxLevel) {
@@ -3240,9 +3240,9 @@ var require_quadtree = __commonJS({
           return;
         }
         if (collisions === 0)
-          throw new Error("sigma/quadtree.insertNode: no collision (level: " + level + ", key: " + key + ", x: " + x + ", y: " + y + ", size: " + size + ").");
+          throw new Error("sigma/quadtree.insertNode: no collision (level: " + level + ", key: " + key + ", x: " + x2 + ", y: " + y2 + ", size: " + size + ").");
         if (collisions === 3)
-          throw new Error("sigma/quadtree.insertNode: 3 impossible collisions (level: " + level + ", key: " + key + ", x: " + x + ", y: " + y + ", size: " + size + ").");
+          throw new Error("sigma/quadtree.insertNode: 3 impossible collisions (level: " + level + ", key: " + key + ", x: " + x2 + ", y: " + y2 + ", size: " + size + ").");
         if (collisions > 1) {
           containers[block] = containers[block] || [];
           containers[block].push(key);
@@ -3310,8 +3310,8 @@ var require_quadtree = __commonJS({
               height: 1
             });
         }
-        QuadTree2.prototype.add = function(key, x, y, size) {
-          insertNode(MAX_LEVEL, this.data, this.containers, key, x, y, size);
+        QuadTree2.prototype.add = function(key, x2, y2, size) {
+          insertNode(MAX_LEVEL, this.data, this.containers, key, x2, y2, size);
           return this;
         };
         QuadTree2.prototype.resize = function(boundaries) {
@@ -3327,13 +3327,13 @@ var require_quadtree = __commonJS({
           this.containers = (_a = {}, _a[OUTSIDE_BLOCK] = [], _a);
           return this;
         };
-        QuadTree2.prototype.point = function(x, y) {
+        QuadTree2.prototype.point = function(x2, y2) {
           var nodes = this.containers[OUTSIDE_BLOCK];
           var block = 0, level = 0;
           do {
             if (this.containers[block])
               nodes.push.apply(nodes, __spreadArray([], __read(this.containers[block]), false));
-            var quad = pointIsInQuad(x, y, this.data[block + X_OFFSET], this.data[block + Y_OFFSET], this.data[block + WIDTH_OFFSET], this.data[block + HEIGHT_OFFSET]);
+            var quad = pointIsInQuad(x2, y2, this.data[block + X_OFFSET], this.data[block + Y_OFFSET], this.data[block + WIDTH_OFFSET], this.data[block + HEIGHT_OFFSET]);
             block = 4 * block + quad * BLOCKS;
             level++;
           } while (level <= MAX_LEVEL);
@@ -3416,11 +3416,11 @@ var require_labels = __commonJS({
         };
         LabelGrid2.prototype.add = function(key, size, pos) {
           var candidate = new LabelCandidate(key, size);
-          var index = this.getIndex(pos);
-          var cell = this.cells[index];
+          var index2 = this.getIndex(pos);
+          var cell = this.cells[index2];
           if (!cell) {
             cell = [];
-            this.cells[index] = cell;
+            this.cells[index2] = cell;
           }
           cell.push(candidate);
         };
@@ -4070,13 +4070,13 @@ var require_edge2 = __commonJS({
           var l = this.array.length / ATTRIBUTES;
           var size = l + l / 2;
           var indices = new this.IndicesArray(size);
-          for (var i = 0, c = 0; i < l; i += 4) {
-            indices[c++] = i;
-            indices[c++] = i + 1;
-            indices[c++] = i + 2;
-            indices[c++] = i + 2;
-            indices[c++] = i + 1;
-            indices[c++] = i + 3;
+          for (var i = 0, c2 = 0; i < l; i += 4) {
+            indices[c2++] = i;
+            indices[c2++] = i + 1;
+            indices[c2++] = i + 2;
+            indices[c2++] = i + 2;
+            indices[c2++] = i + 1;
+            indices[c2++] = i + 3;
           }
           this.indicesArray = indices;
         };
@@ -4149,12 +4149,12 @@ var require_edge_arrowHead_vert_glsl = __commonJS({
   "node_modules/sigma/rendering/webgl/shaders/edge.arrowHead.vert.glsl.js"(exports, module) {
     (() => {
       "use strict";
-      var a = { d: (n2, t2) => {
-        for (var o in t2) a.o(t2, o) && !a.o(n2, o) && Object.defineProperty(n2, o, { enumerable: true, get: t2[o] });
-      }, o: (a2, n2) => Object.prototype.hasOwnProperty.call(a2, n2), r: (a2) => {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(a2, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(a2, "__esModule", { value: true });
+      var a2 = { d: (n2, t2) => {
+        for (var o in t2) a2.o(t2, o) && !a2.o(n2, o) && Object.defineProperty(n2, o, { enumerable: true, get: t2[o] });
+      }, o: (a3, n2) => Object.prototype.hasOwnProperty.call(a3, n2), r: (a3) => {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(a3, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(a3, "__esModule", { value: true });
       } }, n = {};
-      a.r(n), a.d(n, { default: () => t });
+      a2.r(n), a2.d(n, { default: () => t });
       const t = "attribute vec2 a_position;\nattribute vec2 a_normal;\nattribute float a_thickness;\nattribute float a_radius;\nattribute vec4 a_color;\nattribute vec3 a_barycentric;\n\nuniform mat3 u_matrix;\nuniform float u_scale;\nuniform float u_cameraRatio;\nuniform float u_viewportRatio;\nuniform float u_thicknessRatio;\n\nvarying vec4 v_color;\n\nconst float arrowHeadLengthThicknessRatio = 2.5;\nconst float arrowHeadWidthLengthRatio = 0.66;\nconst float minThickness = 0.8;\nconst float bias = 255.0 / 254.0;\n\nvoid main() {\n\n  // Computing thickness in screen space:\n  float thickness = a_thickness * u_thicknessRatio * u_scale * u_viewportRatio / 2.0;\n  thickness = max(thickness, minThickness * u_viewportRatio);\n\n  float nodeRadius = a_radius * u_thicknessRatio * u_viewportRatio * u_cameraRatio;\n  float arrowHeadLength = thickness * 2.0 * arrowHeadLengthThicknessRatio * u_cameraRatio;\n  float arrowHeadHalfWidth = arrowHeadWidthLengthRatio * arrowHeadLength / 2.0;\n\n  float da = a_barycentric.x;\n  float db = a_barycentric.y;\n  float dc = a_barycentric.z;\n\n  vec2 delta = vec2(\n      da * ((nodeRadius) * a_normal.y)\n    + db * ((nodeRadius + arrowHeadLength) * a_normal.y + arrowHeadHalfWidth * a_normal.x)\n    + dc * ((nodeRadius + arrowHeadLength) * a_normal.y - arrowHeadHalfWidth * a_normal.x),\n\n      da * (-(nodeRadius) * a_normal.x)\n    + db * (-(nodeRadius + arrowHeadLength) * a_normal.x + arrowHeadHalfWidth * a_normal.y)\n    + dc * (-(nodeRadius + arrowHeadLength) * a_normal.x - arrowHeadHalfWidth * a_normal.y)\n  );\n\n  vec2 position = (u_matrix * vec3(a_position + delta, 1)).xy;\n\n  gl_Position = vec4(position, 0, 1);\n\n  // Extract the color:\n  v_color = a_color;\n  v_color.a *= bias;\n}\n";
       module.exports = n;
     })();
@@ -4485,13 +4485,13 @@ var require_edge_clamped = __commonJS({
           var l = this.array.length / ATTRIBUTES;
           var size = l + l / 2;
           var indices = new this.IndicesArray(size);
-          for (var i = 0, c = 0; i < l; i += 4) {
-            indices[c++] = i;
-            indices[c++] = i + 1;
-            indices[c++] = i + 2;
-            indices[c++] = i + 2;
-            indices[c++] = i + 1;
-            indices[c++] = i + 3;
+          for (var i = 0, c2 = 0; i < l; i += 4) {
+            indices[c2++] = i;
+            indices[c2++] = i + 1;
+            indices[c2++] = i + 2;
+            indices[c2++] = i + 2;
+            indices[c2++] = i + 1;
+            indices[c2++] = i + 3;
           }
           this.indicesArray = indices;
         };
@@ -4621,14 +4621,14 @@ var require_touch = __commonJS({
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
       };
     })();
-    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
+    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m2, k, k2) {
       if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
-        return m[k];
+        return m2[k];
       } });
-    }) : (function(o, m, k, k2) {
+    }) : (function(o, m2, k, k2) {
       if (k2 === void 0) k2 = k;
-      o[k2] = m[k];
+      o[k2] = m2[k];
     }));
     var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? (function(o, v) {
       Object.defineProperty(o, "default", { enumerable: true, value: v });
@@ -4645,16 +4645,16 @@ var require_touch = __commonJS({
       return result;
     };
     var __read = exports && exports.__read || function(o, n) {
-      var m = typeof Symbol === "function" && o[Symbol.iterator];
-      if (!m) return o;
-      var i = m.call(o), r, ar = [], e;
+      var m2 = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m2) return o;
+      var i = m2.call(o), r, ar = [], e;
       try {
         while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = { error };
       } finally {
         try {
-          if (r && !r.done && (m = i["return"])) m.call(i);
+          if (r && !r.done && (m2 = i["return"])) m2.call(i);
         } finally {
           if (e) throw e.error;
         }
@@ -4785,10 +4785,10 @@ var require_touch = __commonJS({
           switch (this.touchMode) {
             case 1: {
               var _b = this.renderer.viewportToFramedGraph((this.startTouchesPositions || [])[0]), xStart = _b.x, yStart = _b.y;
-              var _c = this.renderer.viewportToFramedGraph(touchesPositions[0]), x = _c.x, y = _c.y;
+              var _c = this.renderer.viewportToFramedGraph(touchesPositions[0]), x2 = _c.x, y2 = _c.y;
               this.renderer.getCamera().setState({
-                x: startCameraState.x + xStart - x,
-                y: startCameraState.y + yStart - y
+                x: startCameraState.x + xStart - x2,
+                y: startCameraState.y + yStart - y2
               });
               break;
             }
@@ -4806,14 +4806,14 @@ var require_touch = __commonJS({
               var dx = smallestDimension / dimensions.width;
               var dy = smallestDimension / dimensions.height;
               var ratio = newCameraState.ratio / smallestDimension;
-              var x = x0 - smallestDimension / 2 / dx;
-              var y = y0 - smallestDimension / 2 / dy;
+              var x2 = x0 - smallestDimension / 2 / dx;
+              var y2 = y0 - smallestDimension / 2 / dy;
               _a = __read([
-                x * Math.cos(-newCameraState.angle) - y * Math.sin(-newCameraState.angle),
-                y * Math.cos(-newCameraState.angle) + x * Math.sin(-newCameraState.angle)
-              ], 2), x = _a[0], y = _a[1];
-              newCameraState.x = touchGraphPosition.x - x * ratio;
-              newCameraState.y = touchGraphPosition.y + y * ratio;
+                x2 * Math.cos(-newCameraState.angle) - y2 * Math.sin(-newCameraState.angle),
+                y2 * Math.cos(-newCameraState.angle) + x2 * Math.sin(-newCameraState.angle)
+              ], 2), x2 = _a[0], y2 = _a[1];
+              newCameraState.x = touchGraphPosition.x - x2 * ratio;
+              newCameraState.y = touchGraphPosition.y + y2 * ratio;
               this.renderer.getCamera().setState(newCameraState);
               break;
             }
@@ -5289,7 +5289,7 @@ var require_sigma = __commonJS({
             var data = this.nodeDataCache[node];
             if (data.hidden)
               continue;
-            var _a = this.framedGraphToViewport(data), x = _a.x, y = _a.y;
+            var _a = this.framedGraphToViewport(data), x2 = _a.x, y2 = _a.y;
             var size = this.scaleSize(data.size);
             if (size < this.settings.labelRenderedSizeThreshold)
               continue;
@@ -5301,8 +5301,8 @@ var require_sigma = __commonJS({
               label: data.label,
               color: "#000",
               size,
-              x,
-              y
+              x: x2,
+              y: y2
             }, this.settings);
           }
           return this;
@@ -5349,15 +5349,15 @@ var require_sigma = __commonJS({
           context.clearRect(0, 0, this.width, this.height);
           var render = function(node) {
             var data = _this.nodeDataCache[node];
-            var _a = _this.framedGraphToViewport(data), x = _a.x, y = _a.y;
+            var _a = _this.framedGraphToViewport(data), x2 = _a.x, y2 = _a.y;
             var size = _this.scaleSize(data.size);
             _this.settings.hoverRenderer(context, {
               key: node,
               label: data.label,
               color: data.color,
               size,
-              x,
-              y
+              x: x2,
+              y: y2
             }, _this.settings);
           };
           var nodesToRender = [];
@@ -5562,7 +5562,7 @@ var require_sigma = __commonJS({
           return this;
         };
         Sigma3.prototype.getViewportZoomedState = function(viewportTarget, newRatio) {
-          var _a = this.camera.getState(), ratio = _a.ratio, angle = _a.angle, x = _a.x, y = _a.y;
+          var _a = this.camera.getState(), ratio = _a.ratio, angle = _a.angle, x2 = _a.x, y2 = _a.y;
           var ratioDiff = newRatio / ratio;
           var center = {
             x: this.width / 2,
@@ -5572,8 +5572,8 @@ var require_sigma = __commonJS({
           var graphCenterPosition = this.viewportToFramedGraph(center);
           return {
             angle,
-            x: (graphMousePosition.x - graphCenterPosition.x) * (1 - ratioDiff) + x,
-            y: (graphMousePosition.y - graphCenterPosition.y) * (1 - ratioDiff) + y,
+            x: (graphMousePosition.x - graphCenterPosition.x) * (1 - ratioDiff) + x2,
+            y: (graphMousePosition.y - graphCenterPosition.y) * (1 - ratioDiff) + y2,
             ratio: newRatio
           };
         };
@@ -5698,7 +5698,830 @@ var require_sigma2 = __commonJS({
 
 // assets/js/threads-graph.entry.mjs
 var import_graphology = __toESM(require_graphology_umd_min(), 1);
+
+// node_modules/d3-quadtree/src/add.js
+function add_default(d) {
+  const x2 = +this._x.call(null, d), y2 = +this._y.call(null, d);
+  return add(this.cover(x2, y2), x2, y2, d);
+}
+function add(tree, x2, y2, d) {
+  if (isNaN(x2) || isNaN(y2)) return tree;
+  var parent, node = tree._root, leaf = { data: d }, x0 = tree._x0, y0 = tree._y0, x1 = tree._x1, y1 = tree._y1, xm, ym, xp, yp, right, bottom, i, j;
+  if (!node) return tree._root = leaf, tree;
+  while (node.length) {
+    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    else x1 = xm;
+    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    else y1 = ym;
+    if (parent = node, !(node = node[i = bottom << 1 | right])) return parent[i] = leaf, tree;
+  }
+  xp = +tree._x.call(null, node.data);
+  yp = +tree._y.call(null, node.data);
+  if (x2 === xp && y2 === yp) return leaf.next = node, parent ? parent[i] = leaf : tree._root = leaf, tree;
+  do {
+    parent = parent ? parent[i] = new Array(4) : tree._root = new Array(4);
+    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    else x1 = xm;
+    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    else y1 = ym;
+  } while ((i = bottom << 1 | right) === (j = (yp >= ym) << 1 | xp >= xm));
+  return parent[j] = node, parent[i] = leaf, tree;
+}
+function addAll(data) {
+  var d, i, n = data.length, x2, y2, xz = new Array(n), yz = new Array(n), x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (i = 0; i < n; ++i) {
+    if (isNaN(x2 = +this._x.call(null, d = data[i])) || isNaN(y2 = +this._y.call(null, d))) continue;
+    xz[i] = x2;
+    yz[i] = y2;
+    if (x2 < x0) x0 = x2;
+    if (x2 > x1) x1 = x2;
+    if (y2 < y0) y0 = y2;
+    if (y2 > y1) y1 = y2;
+  }
+  if (x0 > x1 || y0 > y1) return this;
+  this.cover(x0, y0).cover(x1, y1);
+  for (i = 0; i < n; ++i) {
+    add(this, xz[i], yz[i], data[i]);
+  }
+  return this;
+}
+
+// node_modules/d3-quadtree/src/cover.js
+function cover_default(x2, y2) {
+  if (isNaN(x2 = +x2) || isNaN(y2 = +y2)) return this;
+  var x0 = this._x0, y0 = this._y0, x1 = this._x1, y1 = this._y1;
+  if (isNaN(x0)) {
+    x1 = (x0 = Math.floor(x2)) + 1;
+    y1 = (y0 = Math.floor(y2)) + 1;
+  } else {
+    var z = x1 - x0 || 1, node = this._root, parent, i;
+    while (x0 > x2 || x2 >= x1 || y0 > y2 || y2 >= y1) {
+      i = (y2 < y0) << 1 | x2 < x0;
+      parent = new Array(4), parent[i] = node, node = parent, z *= 2;
+      switch (i) {
+        case 0:
+          x1 = x0 + z, y1 = y0 + z;
+          break;
+        case 1:
+          x0 = x1 - z, y1 = y0 + z;
+          break;
+        case 2:
+          x1 = x0 + z, y0 = y1 - z;
+          break;
+        case 3:
+          x0 = x1 - z, y0 = y1 - z;
+          break;
+      }
+    }
+    if (this._root && this._root.length) this._root = node;
+  }
+  this._x0 = x0;
+  this._y0 = y0;
+  this._x1 = x1;
+  this._y1 = y1;
+  return this;
+}
+
+// node_modules/d3-quadtree/src/data.js
+function data_default() {
+  var data = [];
+  this.visit(function(node) {
+    if (!node.length) do
+      data.push(node.data);
+    while (node = node.next);
+  });
+  return data;
+}
+
+// node_modules/d3-quadtree/src/extent.js
+function extent_default(_) {
+  return arguments.length ? this.cover(+_[0][0], +_[0][1]).cover(+_[1][0], +_[1][1]) : isNaN(this._x0) ? void 0 : [[this._x0, this._y0], [this._x1, this._y1]];
+}
+
+// node_modules/d3-quadtree/src/quad.js
+function quad_default(node, x0, y0, x1, y1) {
+  this.node = node;
+  this.x0 = x0;
+  this.y0 = y0;
+  this.x1 = x1;
+  this.y1 = y1;
+}
+
+// node_modules/d3-quadtree/src/find.js
+function find_default(x2, y2, radius) {
+  var data, x0 = this._x0, y0 = this._y0, x1, y1, x22, y22, x3 = this._x1, y3 = this._y1, quads = [], node = this._root, q, i;
+  if (node) quads.push(new quad_default(node, x0, y0, x3, y3));
+  if (radius == null) radius = Infinity;
+  else {
+    x0 = x2 - radius, y0 = y2 - radius;
+    x3 = x2 + radius, y3 = y2 + radius;
+    radius *= radius;
+  }
+  while (q = quads.pop()) {
+    if (!(node = q.node) || (x1 = q.x0) > x3 || (y1 = q.y0) > y3 || (x22 = q.x1) < x0 || (y22 = q.y1) < y0) continue;
+    if (node.length) {
+      var xm = (x1 + x22) / 2, ym = (y1 + y22) / 2;
+      quads.push(
+        new quad_default(node[3], xm, ym, x22, y22),
+        new quad_default(node[2], x1, ym, xm, y22),
+        new quad_default(node[1], xm, y1, x22, ym),
+        new quad_default(node[0], x1, y1, xm, ym)
+      );
+      if (i = (y2 >= ym) << 1 | x2 >= xm) {
+        q = quads[quads.length - 1];
+        quads[quads.length - 1] = quads[quads.length - 1 - i];
+        quads[quads.length - 1 - i] = q;
+      }
+    } else {
+      var dx = x2 - +this._x.call(null, node.data), dy = y2 - +this._y.call(null, node.data), d2 = dx * dx + dy * dy;
+      if (d2 < radius) {
+        var d = Math.sqrt(radius = d2);
+        x0 = x2 - d, y0 = y2 - d;
+        x3 = x2 + d, y3 = y2 + d;
+        data = node.data;
+      }
+    }
+  }
+  return data;
+}
+
+// node_modules/d3-quadtree/src/remove.js
+function remove_default(d) {
+  if (isNaN(x2 = +this._x.call(null, d)) || isNaN(y2 = +this._y.call(null, d))) return this;
+  var parent, node = this._root, retainer, previous, next, x0 = this._x0, y0 = this._y0, x1 = this._x1, y1 = this._y1, x2, y2, xm, ym, right, bottom, i, j;
+  if (!node) return this;
+  if (node.length) while (true) {
+    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    else x1 = xm;
+    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    else y1 = ym;
+    if (!(parent = node, node = node[i = bottom << 1 | right])) return this;
+    if (!node.length) break;
+    if (parent[i + 1 & 3] || parent[i + 2 & 3] || parent[i + 3 & 3]) retainer = parent, j = i;
+  }
+  while (node.data !== d) if (!(previous = node, node = node.next)) return this;
+  if (next = node.next) delete node.next;
+  if (previous) return next ? previous.next = next : delete previous.next, this;
+  if (!parent) return this._root = next, this;
+  next ? parent[i] = next : delete parent[i];
+  if ((node = parent[0] || parent[1] || parent[2] || parent[3]) && node === (parent[3] || parent[2] || parent[1] || parent[0]) && !node.length) {
+    if (retainer) retainer[j] = node;
+    else this._root = node;
+  }
+  return this;
+}
+function removeAll(data) {
+  for (var i = 0, n = data.length; i < n; ++i) this.remove(data[i]);
+  return this;
+}
+
+// node_modules/d3-quadtree/src/root.js
+function root_default() {
+  return this._root;
+}
+
+// node_modules/d3-quadtree/src/size.js
+function size_default() {
+  var size = 0;
+  this.visit(function(node) {
+    if (!node.length) do
+      ++size;
+    while (node = node.next);
+  });
+  return size;
+}
+
+// node_modules/d3-quadtree/src/visit.js
+function visit_default(callback) {
+  var quads = [], q, node = this._root, child, x0, y0, x1, y1;
+  if (node) quads.push(new quad_default(node, this._x0, this._y0, this._x1, this._y1));
+  while (q = quads.pop()) {
+    if (!callback(node = q.node, x0 = q.x0, y0 = q.y0, x1 = q.x1, y1 = q.y1) && node.length) {
+      var xm = (x0 + x1) / 2, ym = (y0 + y1) / 2;
+      if (child = node[3]) quads.push(new quad_default(child, xm, ym, x1, y1));
+      if (child = node[2]) quads.push(new quad_default(child, x0, ym, xm, y1));
+      if (child = node[1]) quads.push(new quad_default(child, xm, y0, x1, ym));
+      if (child = node[0]) quads.push(new quad_default(child, x0, y0, xm, ym));
+    }
+  }
+  return this;
+}
+
+// node_modules/d3-quadtree/src/visitAfter.js
+function visitAfter_default(callback) {
+  var quads = [], next = [], q;
+  if (this._root) quads.push(new quad_default(this._root, this._x0, this._y0, this._x1, this._y1));
+  while (q = quads.pop()) {
+    var node = q.node;
+    if (node.length) {
+      var child, x0 = q.x0, y0 = q.y0, x1 = q.x1, y1 = q.y1, xm = (x0 + x1) / 2, ym = (y0 + y1) / 2;
+      if (child = node[0]) quads.push(new quad_default(child, x0, y0, xm, ym));
+      if (child = node[1]) quads.push(new quad_default(child, xm, y0, x1, ym));
+      if (child = node[2]) quads.push(new quad_default(child, x0, ym, xm, y1));
+      if (child = node[3]) quads.push(new quad_default(child, xm, ym, x1, y1));
+    }
+    next.push(q);
+  }
+  while (q = next.pop()) {
+    callback(q.node, q.x0, q.y0, q.x1, q.y1);
+  }
+  return this;
+}
+
+// node_modules/d3-quadtree/src/x.js
+function defaultX(d) {
+  return d[0];
+}
+function x_default(_) {
+  return arguments.length ? (this._x = _, this) : this._x;
+}
+
+// node_modules/d3-quadtree/src/y.js
+function defaultY(d) {
+  return d[1];
+}
+function y_default(_) {
+  return arguments.length ? (this._y = _, this) : this._y;
+}
+
+// node_modules/d3-quadtree/src/quadtree.js
+function quadtree(nodes, x2, y2) {
+  var tree = new Quadtree(x2 == null ? defaultX : x2, y2 == null ? defaultY : y2, NaN, NaN, NaN, NaN);
+  return nodes == null ? tree : tree.addAll(nodes);
+}
+function Quadtree(x2, y2, x0, y0, x1, y1) {
+  this._x = x2;
+  this._y = y2;
+  this._x0 = x0;
+  this._y0 = y0;
+  this._x1 = x1;
+  this._y1 = y1;
+  this._root = void 0;
+}
+function leaf_copy(leaf) {
+  var copy = { data: leaf.data }, next = copy;
+  while (leaf = leaf.next) next = next.next = { data: leaf.data };
+  return copy;
+}
+var treeProto = quadtree.prototype = Quadtree.prototype;
+treeProto.copy = function() {
+  var copy = new Quadtree(this._x, this._y, this._x0, this._y0, this._x1, this._y1), node = this._root, nodes, child;
+  if (!node) return copy;
+  if (!node.length) return copy._root = leaf_copy(node), copy;
+  nodes = [{ source: node, target: copy._root = new Array(4) }];
+  while (node = nodes.pop()) {
+    for (var i = 0; i < 4; ++i) {
+      if (child = node.source[i]) {
+        if (child.length) nodes.push({ source: child, target: node.target[i] = new Array(4) });
+        else node.target[i] = leaf_copy(child);
+      }
+    }
+  }
+  return copy;
+};
+treeProto.add = add_default;
+treeProto.addAll = addAll;
+treeProto.cover = cover_default;
+treeProto.data = data_default;
+treeProto.extent = extent_default;
+treeProto.find = find_default;
+treeProto.remove = remove_default;
+treeProto.removeAll = removeAll;
+treeProto.root = root_default;
+treeProto.size = size_default;
+treeProto.visit = visit_default;
+treeProto.visitAfter = visitAfter_default;
+treeProto.x = x_default;
+treeProto.y = y_default;
+
+// node_modules/d3-force/src/constant.js
+function constant_default(x2) {
+  return function() {
+    return x2;
+  };
+}
+
+// node_modules/d3-force/src/jiggle.js
+function jiggle_default(random) {
+  return (random() - 0.5) * 1e-6;
+}
+
+// node_modules/d3-force/src/link.js
+function index(d) {
+  return d.index;
+}
+function find(nodeById, nodeId) {
+  var node = nodeById.get(nodeId);
+  if (!node) throw new Error("node not found: " + nodeId);
+  return node;
+}
+function link_default(links) {
+  var id = index, strength = defaultStrength, strengths, distance = constant_default(30), distances, nodes, count, bias, random, iterations = 1;
+  if (links == null) links = [];
+  function defaultStrength(link) {
+    return 1 / Math.min(count[link.source.index], count[link.target.index]);
+  }
+  function force(alpha) {
+    for (var k = 0, n = links.length; k < iterations; ++k) {
+      for (var i = 0, link, source, target, x2, y2, l, b; i < n; ++i) {
+        link = links[i], source = link.source, target = link.target;
+        x2 = target.x + target.vx - source.x - source.vx || jiggle_default(random);
+        y2 = target.y + target.vy - source.y - source.vy || jiggle_default(random);
+        l = Math.sqrt(x2 * x2 + y2 * y2);
+        l = (l - distances[i]) / l * alpha * strengths[i];
+        x2 *= l, y2 *= l;
+        target.vx -= x2 * (b = bias[i]);
+        target.vy -= y2 * b;
+        source.vx += x2 * (b = 1 - b);
+        source.vy += y2 * b;
+      }
+    }
+  }
+  function initialize() {
+    if (!nodes) return;
+    var i, n = nodes.length, m2 = links.length, nodeById = new Map(nodes.map((d, i2) => [id(d, i2, nodes), d])), link;
+    for (i = 0, count = new Array(n); i < m2; ++i) {
+      link = links[i], link.index = i;
+      if (typeof link.source !== "object") link.source = find(nodeById, link.source);
+      if (typeof link.target !== "object") link.target = find(nodeById, link.target);
+      count[link.source.index] = (count[link.source.index] || 0) + 1;
+      count[link.target.index] = (count[link.target.index] || 0) + 1;
+    }
+    for (i = 0, bias = new Array(m2); i < m2; ++i) {
+      link = links[i], bias[i] = count[link.source.index] / (count[link.source.index] + count[link.target.index]);
+    }
+    strengths = new Array(m2), initializeStrength();
+    distances = new Array(m2), initializeDistance();
+  }
+  function initializeStrength() {
+    if (!nodes) return;
+    for (var i = 0, n = links.length; i < n; ++i) {
+      strengths[i] = +strength(links[i], i, links);
+    }
+  }
+  function initializeDistance() {
+    if (!nodes) return;
+    for (var i = 0, n = links.length; i < n; ++i) {
+      distances[i] = +distance(links[i], i, links);
+    }
+  }
+  force.initialize = function(_nodes, _random) {
+    nodes = _nodes;
+    random = _random;
+    initialize();
+  };
+  force.links = function(_) {
+    return arguments.length ? (links = _, initialize(), force) : links;
+  };
+  force.id = function(_) {
+    return arguments.length ? (id = _, force) : id;
+  };
+  force.iterations = function(_) {
+    return arguments.length ? (iterations = +_, force) : iterations;
+  };
+  force.strength = function(_) {
+    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initializeStrength(), force) : strength;
+  };
+  force.distance = function(_) {
+    return arguments.length ? (distance = typeof _ === "function" ? _ : constant_default(+_), initializeDistance(), force) : distance;
+  };
+  return force;
+}
+
+// node_modules/d3-dispatch/src/dispatch.js
+var noop = { value: () => {
+} };
+function dispatch() {
+  for (var i = 0, n = arguments.length, _ = {}, t; i < n; ++i) {
+    if (!(t = arguments[i] + "") || t in _ || /[\s.]/.test(t)) throw new Error("illegal type: " + t);
+    _[t] = [];
+  }
+  return new Dispatch(_);
+}
+function Dispatch(_) {
+  this._ = _;
+}
+function parseTypenames(typenames, types) {
+  return typenames.trim().split(/^|\s+/).map(function(t) {
+    var name = "", i = t.indexOf(".");
+    if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
+    if (t && !types.hasOwnProperty(t)) throw new Error("unknown type: " + t);
+    return { type: t, name };
+  });
+}
+Dispatch.prototype = dispatch.prototype = {
+  constructor: Dispatch,
+  on: function(typename, callback) {
+    var _ = this._, T = parseTypenames(typename + "", _), t, i = -1, n = T.length;
+    if (arguments.length < 2) {
+      while (++i < n) if ((t = (typename = T[i]).type) && (t = get(_[t], typename.name))) return t;
+      return;
+    }
+    if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);
+    while (++i < n) {
+      if (t = (typename = T[i]).type) _[t] = set(_[t], typename.name, callback);
+      else if (callback == null) for (t in _) _[t] = set(_[t], typename.name, null);
+    }
+    return this;
+  },
+  copy: function() {
+    var copy = {}, _ = this._;
+    for (var t in _) copy[t] = _[t].slice();
+    return new Dispatch(copy);
+  },
+  call: function(type, that) {
+    if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t; i < n; ++i) args[i] = arguments[i + 2];
+    if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
+    for (t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
+  },
+  apply: function(type, that, args) {
+    if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
+    for (var t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
+  }
+};
+function get(type, name) {
+  for (var i = 0, n = type.length, c2; i < n; ++i) {
+    if ((c2 = type[i]).name === name) {
+      return c2.value;
+    }
+  }
+}
+function set(type, name, callback) {
+  for (var i = 0, n = type.length; i < n; ++i) {
+    if (type[i].name === name) {
+      type[i] = noop, type = type.slice(0, i).concat(type.slice(i + 1));
+      break;
+    }
+  }
+  if (callback != null) type.push({ name, value: callback });
+  return type;
+}
+var dispatch_default = dispatch;
+
+// node_modules/d3-timer/src/timer.js
+var frame = 0;
+var timeout = 0;
+var interval = 0;
+var pokeDelay = 1e3;
+var taskHead;
+var taskTail;
+var clockLast = 0;
+var clockNow = 0;
+var clockSkew = 0;
+var clock = typeof performance === "object" && performance.now ? performance : Date;
+var setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function(f) {
+  setTimeout(f, 17);
+};
+function now() {
+  return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
+}
+function clearNow() {
+  clockNow = 0;
+}
+function Timer() {
+  this._call = this._time = this._next = null;
+}
+Timer.prototype = timer.prototype = {
+  constructor: Timer,
+  restart: function(callback, delay, time) {
+    if (typeof callback !== "function") throw new TypeError("callback is not a function");
+    time = (time == null ? now() : +time) + (delay == null ? 0 : +delay);
+    if (!this._next && taskTail !== this) {
+      if (taskTail) taskTail._next = this;
+      else taskHead = this;
+      taskTail = this;
+    }
+    this._call = callback;
+    this._time = time;
+    sleep();
+  },
+  stop: function() {
+    if (this._call) {
+      this._call = null;
+      this._time = Infinity;
+      sleep();
+    }
+  }
+};
+function timer(callback, delay, time) {
+  var t = new Timer();
+  t.restart(callback, delay, time);
+  return t;
+}
+function timerFlush() {
+  now();
+  ++frame;
+  var t = taskHead, e;
+  while (t) {
+    if ((e = clockNow - t._time) >= 0) t._call.call(void 0, e);
+    t = t._next;
+  }
+  --frame;
+}
+function wake() {
+  clockNow = (clockLast = clock.now()) + clockSkew;
+  frame = timeout = 0;
+  try {
+    timerFlush();
+  } finally {
+    frame = 0;
+    nap();
+    clockNow = 0;
+  }
+}
+function poke() {
+  var now2 = clock.now(), delay = now2 - clockLast;
+  if (delay > pokeDelay) clockSkew -= delay, clockLast = now2;
+}
+function nap() {
+  var t0, t1 = taskHead, t2, time = Infinity;
+  while (t1) {
+    if (t1._call) {
+      if (time > t1._time) time = t1._time;
+      t0 = t1, t1 = t1._next;
+    } else {
+      t2 = t1._next, t1._next = null;
+      t1 = t0 ? t0._next = t2 : taskHead = t2;
+    }
+  }
+  taskTail = t0;
+  sleep(time);
+}
+function sleep(time) {
+  if (frame) return;
+  if (timeout) timeout = clearTimeout(timeout);
+  var delay = time - clockNow;
+  if (delay > 24) {
+    if (time < Infinity) timeout = setTimeout(wake, time - clock.now() - clockSkew);
+    if (interval) interval = clearInterval(interval);
+  } else {
+    if (!interval) clockLast = clock.now(), interval = setInterval(poke, pokeDelay);
+    frame = 1, setFrame(wake);
+  }
+}
+
+// node_modules/d3-force/src/lcg.js
+var a = 1664525;
+var c = 1013904223;
+var m = 4294967296;
+function lcg_default() {
+  let s = 1;
+  return () => (s = (a * s + c) % m) / m;
+}
+
+// node_modules/d3-force/src/simulation.js
+function x(d) {
+  return d.x;
+}
+function y(d) {
+  return d.y;
+}
+var initialRadius = 10;
+var initialAngle = Math.PI * (3 - Math.sqrt(5));
+function simulation_default(nodes) {
+  var simulation, alpha = 1, alphaMin = 1e-3, alphaDecay = 1 - Math.pow(alphaMin, 1 / 300), alphaTarget = 0, velocityDecay = 0.6, forces = /* @__PURE__ */ new Map(), stepper = timer(step), event = dispatch_default("tick", "end"), random = lcg_default();
+  if (nodes == null) nodes = [];
+  function step() {
+    tick();
+    event.call("tick", simulation);
+    if (alpha < alphaMin) {
+      stepper.stop();
+      event.call("end", simulation);
+    }
+  }
+  function tick(iterations) {
+    var i, n = nodes.length, node;
+    if (iterations === void 0) iterations = 1;
+    for (var k = 0; k < iterations; ++k) {
+      alpha += (alphaTarget - alpha) * alphaDecay;
+      forces.forEach(function(force) {
+        force(alpha);
+      });
+      for (i = 0; i < n; ++i) {
+        node = nodes[i];
+        if (node.fx == null) node.x += node.vx *= velocityDecay;
+        else node.x = node.fx, node.vx = 0;
+        if (node.fy == null) node.y += node.vy *= velocityDecay;
+        else node.y = node.fy, node.vy = 0;
+      }
+    }
+    return simulation;
+  }
+  function initializeNodes() {
+    for (var i = 0, n = nodes.length, node; i < n; ++i) {
+      node = nodes[i], node.index = i;
+      if (node.fx != null) node.x = node.fx;
+      if (node.fy != null) node.y = node.fy;
+      if (isNaN(node.x) || isNaN(node.y)) {
+        var radius = initialRadius * Math.sqrt(0.5 + i), angle = i * initialAngle;
+        node.x = radius * Math.cos(angle);
+        node.y = radius * Math.sin(angle);
+      }
+      if (isNaN(node.vx) || isNaN(node.vy)) {
+        node.vx = node.vy = 0;
+      }
+    }
+  }
+  function initializeForce(force) {
+    if (force.initialize) force.initialize(nodes, random);
+    return force;
+  }
+  initializeNodes();
+  return simulation = {
+    tick,
+    restart: function() {
+      return stepper.restart(step), simulation;
+    },
+    stop: function() {
+      return stepper.stop(), simulation;
+    },
+    nodes: function(_) {
+      return arguments.length ? (nodes = _, initializeNodes(), forces.forEach(initializeForce), simulation) : nodes;
+    },
+    alpha: function(_) {
+      return arguments.length ? (alpha = +_, simulation) : alpha;
+    },
+    alphaMin: function(_) {
+      return arguments.length ? (alphaMin = +_, simulation) : alphaMin;
+    },
+    alphaDecay: function(_) {
+      return arguments.length ? (alphaDecay = +_, simulation) : +alphaDecay;
+    },
+    alphaTarget: function(_) {
+      return arguments.length ? (alphaTarget = +_, simulation) : alphaTarget;
+    },
+    velocityDecay: function(_) {
+      return arguments.length ? (velocityDecay = 1 - _, simulation) : 1 - velocityDecay;
+    },
+    randomSource: function(_) {
+      return arguments.length ? (random = _, forces.forEach(initializeForce), simulation) : random;
+    },
+    force: function(name, _) {
+      return arguments.length > 1 ? (_ == null ? forces.delete(name) : forces.set(name, initializeForce(_)), simulation) : forces.get(name);
+    },
+    find: function(x2, y2, radius) {
+      var i = 0, n = nodes.length, dx, dy, d2, node, closest;
+      if (radius == null) radius = Infinity;
+      else radius *= radius;
+      for (i = 0; i < n; ++i) {
+        node = nodes[i];
+        dx = x2 - node.x;
+        dy = y2 - node.y;
+        d2 = dx * dx + dy * dy;
+        if (d2 < radius) closest = node, radius = d2;
+      }
+      return closest;
+    },
+    on: function(name, _) {
+      return arguments.length > 1 ? (event.on(name, _), simulation) : event.on(name);
+    }
+  };
+}
+
+// node_modules/d3-force/src/manyBody.js
+function manyBody_default() {
+  var nodes, node, random, alpha, strength = constant_default(-30), strengths, distanceMin2 = 1, distanceMax2 = Infinity, theta2 = 0.81;
+  function force(_) {
+    var i, n = nodes.length, tree = quadtree(nodes, x, y).visitAfter(accumulate);
+    for (alpha = _, i = 0; i < n; ++i) node = nodes[i], tree.visit(apply);
+  }
+  function initialize() {
+    if (!nodes) return;
+    var i, n = nodes.length, node2;
+    strengths = new Array(n);
+    for (i = 0; i < n; ++i) node2 = nodes[i], strengths[node2.index] = +strength(node2, i, nodes);
+  }
+  function accumulate(quad) {
+    var strength2 = 0, q, c2, weight = 0, x2, y2, i;
+    if (quad.length) {
+      for (x2 = y2 = i = 0; i < 4; ++i) {
+        if ((q = quad[i]) && (c2 = Math.abs(q.value))) {
+          strength2 += q.value, weight += c2, x2 += c2 * q.x, y2 += c2 * q.y;
+        }
+      }
+      quad.x = x2 / weight;
+      quad.y = y2 / weight;
+    } else {
+      q = quad;
+      q.x = q.data.x;
+      q.y = q.data.y;
+      do
+        strength2 += strengths[q.data.index];
+      while (q = q.next);
+    }
+    quad.value = strength2;
+  }
+  function apply(quad, x1, _, x2) {
+    if (!quad.value) return true;
+    var x3 = quad.x - node.x, y2 = quad.y - node.y, w = x2 - x1, l = x3 * x3 + y2 * y2;
+    if (w * w / theta2 < l) {
+      if (l < distanceMax2) {
+        if (x3 === 0) x3 = jiggle_default(random), l += x3 * x3;
+        if (y2 === 0) y2 = jiggle_default(random), l += y2 * y2;
+        if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
+        node.vx += x3 * quad.value * alpha / l;
+        node.vy += y2 * quad.value * alpha / l;
+      }
+      return true;
+    } else if (quad.length || l >= distanceMax2) return;
+    if (quad.data !== node || quad.next) {
+      if (x3 === 0) x3 = jiggle_default(random), l += x3 * x3;
+      if (y2 === 0) y2 = jiggle_default(random), l += y2 * y2;
+      if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
+    }
+    do
+      if (quad.data !== node) {
+        w = strengths[quad.data.index] * alpha / l;
+        node.vx += x3 * w;
+        node.vy += y2 * w;
+      }
+    while (quad = quad.next);
+  }
+  force.initialize = function(_nodes, _random) {
+    nodes = _nodes;
+    random = _random;
+    initialize();
+  };
+  force.strength = function(_) {
+    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
+  };
+  force.distanceMin = function(_) {
+    return arguments.length ? (distanceMin2 = _ * _, force) : Math.sqrt(distanceMin2);
+  };
+  force.distanceMax = function(_) {
+    return arguments.length ? (distanceMax2 = _ * _, force) : Math.sqrt(distanceMax2);
+  };
+  force.theta = function(_) {
+    return arguments.length ? (theta2 = _ * _, force) : Math.sqrt(theta2);
+  };
+  return force;
+}
+
+// node_modules/d3-force/src/x.js
+function x_default2(x2) {
+  var strength = constant_default(0.1), nodes, strengths, xz;
+  if (typeof x2 !== "function") x2 = constant_default(x2 == null ? 0 : +x2);
+  function force(alpha) {
+    for (var i = 0, n = nodes.length, node; i < n; ++i) {
+      node = nodes[i], node.vx += (xz[i] - node.x) * strengths[i] * alpha;
+    }
+  }
+  function initialize() {
+    if (!nodes) return;
+    var i, n = nodes.length;
+    strengths = new Array(n);
+    xz = new Array(n);
+    for (i = 0; i < n; ++i) {
+      strengths[i] = isNaN(xz[i] = +x2(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
+    }
+  }
+  force.initialize = function(_) {
+    nodes = _;
+    initialize();
+  };
+  force.strength = function(_) {
+    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
+  };
+  force.x = function(_) {
+    return arguments.length ? (x2 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : x2;
+  };
+  return force;
+}
+
+// node_modules/d3-force/src/y.js
+function y_default2(y2) {
+  var strength = constant_default(0.1), nodes, strengths, yz;
+  if (typeof y2 !== "function") y2 = constant_default(y2 == null ? 0 : +y2);
+  function force(alpha) {
+    for (var i = 0, n = nodes.length, node; i < n; ++i) {
+      node = nodes[i], node.vy += (yz[i] - node.y) * strengths[i] * alpha;
+    }
+  }
+  function initialize() {
+    if (!nodes) return;
+    var i, n = nodes.length;
+    strengths = new Array(n);
+    yz = new Array(n);
+    for (i = 0; i < n; ++i) {
+      strengths[i] = isNaN(yz[i] = +y2(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
+    }
+  }
+  force.initialize = function(_) {
+    nodes = _;
+    initialize();
+  };
+  force.strength = function(_) {
+    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
+  };
+  force.y = function(_) {
+    return arguments.length ? (y2 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : y2;
+  };
+  return force;
+}
+
+// assets/js/threads-graph.entry.mjs
 var import_sigma = __toESM(require_sigma2(), 1);
+var NODE_DEFAULT_SIZE = 12;
 var POSITIONS_KEY = "threads-graph-positions";
 var CLICK_PX = 6;
 var LERP_K = 0.45;
@@ -5719,7 +6542,7 @@ function threadsLightLabelRenderer(context, data, settings) {
   const weight = settings.labelWeight;
   context.fillStyle = "#e8e8e8";
   context.font = `${weight} ${size}px ${font}`;
-  context.fillText(data.label, data.x + data.size + 3, data.y + size / 3);
+  context.fillText(data.label, data.x + data.size + 4, data.y + size / 3);
 }
 function layoutRadialByDate(sortedAsc) {
   const n = sortedAsc.length;
@@ -5742,17 +6565,17 @@ function layoutRadialByDate(sortedAsc) {
   });
   return positions;
 }
-function fitSigmaViewport(sigma, graph, padding = 72) {
+function fitSigmaViewport(sigma, graph, padding = 88) {
   let minX = Infinity;
   let maxX = -Infinity;
   let minY = Infinity;
   let maxY = -Infinity;
-  graph.forEachNode((_id, a) => {
-    const sz = a.size || 10;
-    minX = Math.min(minX, a.x - sz);
-    maxX = Math.max(maxX, a.x + sz);
-    minY = Math.min(minY, a.y - sz);
-    maxY = Math.max(maxY, a.y + sz);
+  graph.forEachNode((_id, a2) => {
+    const sz = a2.size || NODE_DEFAULT_SIZE;
+    minX = Math.min(minX, a2.x - sz);
+    maxX = Math.max(maxX, a2.x + sz);
+    minY = Math.min(minY, a2.y - sz);
+    maxY = Math.max(maxY, a2.y + sz);
   });
   if (!Number.isFinite(minX)) return;
   sigma.setCustomBBox({
@@ -5891,8 +6714,8 @@ function runGraph(container, dataEl) {
   }
   let graph;
   try {
-    const sortedAsc = [...nodes].sort((a, b) => {
-      const da = String(a.date || "");
+    const sortedAsc = [...nodes].sort((a2, b) => {
+      const da = String(a2.date || "");
       const db = String(b.date || "");
       return da.localeCompare(db);
     });
@@ -5905,7 +6728,7 @@ function runGraph(container, dataEl) {
         x: p.x,
         y: p.y,
         label: node.title || "",
-        size: 10,
+        size: NODE_DEFAULT_SIZE,
         color: NODE_BASE
       });
     }
@@ -5939,6 +6762,36 @@ function runGraph(container, dataEl) {
     );
     return;
   }
+  const idToSim = /* @__PURE__ */ new Map();
+  const simNodes = [];
+  graph.forEachNode((id, a2) => {
+    const o = {
+      id,
+      x: a2.x,
+      y: a2.y,
+      anchorX: a2.x,
+      anchorY: a2.y
+    };
+    simNodes.push(o);
+    idToSim.set(id, o);
+  });
+  const simLinks = [];
+  graph.forEachEdge((_edge, _attr, s, t) => {
+    const sx = graph.getNodeAttribute(s, "x");
+    const sy = graph.getNodeAttribute(s, "y");
+    const tx = graph.getNodeAttribute(t, "x");
+    const ty = graph.getNodeAttribute(t, "y");
+    const d = Math.hypot(tx - sx, ty - sy);
+    simLinks.push({
+      source: idToSim.get(s),
+      target: idToSim.get(t),
+      distance: Math.max(28, d * 0.92)
+    });
+  });
+  const simulation = simulation_default(simNodes).force(
+    "link",
+    link_default(simLinks).distance((l) => l.distance).strength(0.62)
+  ).force("charge", manyBody_default().strength(-24)).force("x", x_default2((d) => d.anchorX).strength(0.038)).force("y", y_default2((d) => d.anchorY).strength(0.038)).alphaTarget(0).stop();
   let hoverFocus = null;
   let hoverHighlightSet = null;
   function rebuildHighlightSet(nodeId) {
@@ -5961,7 +6814,7 @@ function runGraph(container, dataEl) {
     }
     if (node === hoverFocus) {
       attr.color = NODE_FOCUS;
-      attr.size = (data.size || 10) * 1.12;
+      attr.size = (data.size || NODE_DEFAULT_SIZE) * 1.12;
       return attr;
     }
     if (hoverHighlightSet.has(node)) {
@@ -5992,6 +6845,50 @@ function runGraph(container, dataEl) {
     return attr;
   };
   let sigma = null;
+  let settleRaf = 0;
+  let settleDeadline = 0;
+  function syncGraphFromSim() {
+    for (const n of simNodes) {
+      graph.setNodeAttribute(n.id, "x", n.x);
+      graph.setNodeAttribute(n.id, "y", n.y);
+    }
+  }
+  function syncSimFromGraph() {
+    graph.forEachNode((id, a2) => {
+      const n = idToSim.get(id);
+      if (n) {
+        n.x = a2.x;
+        n.y = a2.y;
+        n.vx = 0;
+        n.vy = 0;
+      }
+    });
+  }
+  function cancelSettle() {
+    if (settleRaf) {
+      cancelAnimationFrame(settleRaf);
+      settleRaf = 0;
+    }
+  }
+  function startSettleAfterDrag() {
+    cancelSettle();
+    simulation.stop();
+    simulation.alpha(0.42);
+    settleDeadline = performance.now() + 800;
+    function settleStep() {
+      simulation.tick();
+      syncGraphFromSim();
+      sigma.refresh();
+      if (simulation.alpha() < 0.028 || performance.now() > settleDeadline) {
+        simulation.stop();
+        settleRaf = 0;
+        persistPositions(graph);
+        return;
+      }
+      settleRaf = requestAnimationFrame(settleStep);
+    }
+    settleRaf = requestAnimationFrame(settleStep);
+  }
   let dragActive = false;
   let dragNode = null;
   let startVp = { x: 0, y: 0 };
@@ -6009,14 +6906,17 @@ function runGraph(container, dataEl) {
       lerpRaf = 0;
       return;
     }
-    const x = graph.getNodeAttribute(dragNode, "x");
-    const y = graph.getNodeAttribute(dragNode, "y");
+    const sn = idToSim.get(dragNode);
+    if (!sn) {
+      lerpRaf = 0;
+      return;
+    }
     const tx = dragTargetGraph.x;
     const ty = dragTargetGraph.y;
-    const nx = x + (tx - x) * LERP_K;
-    const ny = y + (ty - y) * LERP_K;
-    graph.setNodeAttribute(dragNode, "x", nx);
-    graph.setNodeAttribute(dragNode, "y", ny);
+    sn.fx = sn.x + (tx - sn.x) * LERP_K;
+    sn.fy = sn.y + (ty - sn.y) * LERP_K;
+    for (let i = 0; i < 5; i++) simulation.tick();
+    syncGraphFromSim();
     sigma.refresh();
     lerpRaf = requestAnimationFrame(lerpStep);
   }
@@ -6031,20 +6931,36 @@ function runGraph(container, dataEl) {
     const dist = Math.hypot(lastVp.x - startVp.x, lastVp.y - startVp.y);
     dragActive = false;
     stopLerp();
-    graph.setNodeAttribute(dragNode, "x", dragTargetGraph.x);
-    graph.setNodeAttribute(dragNode, "y", dragTargetGraph.y);
-    sigma.getMouseCaptor().enabled = true;
-    sigma.refresh();
+    cancelSettle();
+    simulation.stop();
     const openedNode = dragNode;
     dragNode = null;
+    for (const n of simNodes) {
+      n.fx = null;
+      n.fy = null;
+    }
+    syncSimFromGraph();
+    if (openedNode && dist >= CLICK_PX) {
+      const sn = idToSim.get(openedNode);
+      if (sn) {
+        graph.setNodeAttribute(openedNode, "x", dragTargetGraph.x);
+        graph.setNodeAttribute(openedNode, "y", dragTargetGraph.y);
+        sn.x = dragTargetGraph.x;
+        sn.y = dragTargetGraph.y;
+        sn.vx = 0;
+        sn.vy = 0;
+      }
+    }
+    sigma.getMouseCaptor().enabled = true;
+    sigma.refresh();
     if (dist < CLICK_PX) {
       openPostInNewTab(baseurl, openedNode);
-    } else {
-      persistPositions(graph);
-      rebuildHighlightSet(null);
-      hidePanel();
-      sigma.refresh();
+      return;
     }
+    rebuildHighlightSet(null);
+    hidePanel();
+    sigma.refresh();
+    startSettleAfterDrag();
   }
   window.addEventListener("pointermove", onGlobalPointerMove);
   window.addEventListener("pointerup", onGlobalPointerUp);
@@ -6076,6 +6992,9 @@ function runGraph(container, dataEl) {
       sigma.refresh();
     });
     sigma.on("downNode", ({ node, event }) => {
+      cancelSettle();
+      simulation.stop();
+      syncSimFromGraph();
       dragActive = true;
       dragNode = node;
       startVp = { x: event.x, y: event.y };
@@ -6086,6 +7005,8 @@ function runGraph(container, dataEl) {
       lerpRaf = requestAnimationFrame(lerpStep);
     });
     sigma.on("kill", () => {
+      cancelSettle();
+      simulation.stop();
       stopLerp();
       dragActive = false;
       dragNode = null;

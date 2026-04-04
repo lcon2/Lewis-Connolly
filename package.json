@@ -5,6 +5,7 @@
     "build:threads-graph": "esbuild assets/js/threads-graph.entry.mjs --bundle --format=esm --platform=browser --outfile=assets/js/threads-graph.bundle.js --legal-comments=none"
   },
   "devDependencies": {
+    "d3-force": "^3.0.0",
     "esbuild": "^0.25.0",
     "graphology": "0.25.4",
     "sigma": "2.0.0"

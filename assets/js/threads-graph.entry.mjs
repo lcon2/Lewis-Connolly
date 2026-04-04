@@ -1,9 +1,18 @@
 /**
  * Source for the Threads map. Rebuild bundle: npm install && npm run build:threads-graph
- * (graphology + sigma from npm; output: threads-graph.bundle.js)
+ * (graphology + sigma + d3-force; output: threads-graph.bundle.js)
  */
 import Graph from "graphology";
+import {
+  forceLink,
+  forceManyBody,
+  forceSimulation,
+  forceX,
+  forceY,
+} from "d3-force";
 import { Sigma } from "sigma";
+
+const NODE_DEFAULT_SIZE = 12;
 
 const POSITIONS_KEY = "threads-graph-positions";
 const CLICK_PX = 6;
@@ -29,7 +38,7 @@ function threadsLightLabelRenderer(context, data, settings) {
   const weight = settings.labelWeight;
   context.fillStyle = "#e8e8e8";
   context.font = `${weight} ${size}px ${font}`;
-  context.fillText(data.label, data.x + data.size + 3, data.y + size / 3);
+  context.fillText(data.label, data.x + data.size + 4, data.y + size / 3);
 }
 
 /** Oldest posts near center, newest toward the outer ring. */
@@ -55,13 +64,13 @@ function layoutRadialByDate(sortedAsc) {
   return positions;
 }
 
-function fitSigmaViewport(sigma, graph, padding = 72) {
+function fitSigmaViewport(sigma, graph, padding = 88) {
   let minX = Infinity;
   let maxX = -Infinity;
   let minY = Infinity;
   let maxY = -Infinity;
   graph.forEachNode((_id, a) => {
-    const sz = a.size || 10;
+    const sz = a.size || NODE_DEFAULT_SIZE;
     minX = Math.min(minX, a.x - sz);
     maxX = Math.max(maxX, a.x + sz);
     minY = Math.min(minY, a.y - sz);
@@ -249,7 +258,7 @@ function runGraph(container, dataEl) {
         x: p.x,
         y: p.y,
         label: node.title || "",
-        size: 10,
+        size: NODE_DEFAULT_SIZE,
         color: NODE_BASE,
       });
     }
@@ -288,6 +297,47 @@ function runGraph(container, dataEl) {
     return;
   }
 
+  const idToSim = new Map();
+  const simNodes = [];
+  graph.forEachNode((id, a) => {
+    const o = {
+      id,
+      x: a.x,
+      y: a.y,
+      anchorX: a.x,
+      anchorY: a.y,
+    };
+    simNodes.push(o);
+    idToSim.set(id, o);
+  });
+
+  const simLinks = [];
+  graph.forEachEdge((_edge, _attr, s, t) => {
+    const sx = graph.getNodeAttribute(s, "x");
+    const sy = graph.getNodeAttribute(s, "y");
+    const tx = graph.getNodeAttribute(t, "x");
+    const ty = graph.getNodeAttribute(t, "y");
+    const d = Math.hypot(tx - sx, ty - sy);
+    simLinks.push({
+      source: idToSim.get(s),
+      target: idToSim.get(t),
+      distance: Math.max(28, d * 0.92),
+    });
+  });
+
+  const simulation = forceSimulation(simNodes)
+    .force(
+      "link",
+      forceLink(simLinks)
+        .distance((l) => l.distance)
+        .strength(0.62),
+    )
+    .force("charge", forceManyBody().strength(-24))
+    .force("x", forceX((d) => d.anchorX).strength(0.038))
+    .force("y", forceY((d) => d.anchorY).strength(0.038))
+    .alphaTarget(0)
+    .stop();
+
   let hoverFocus = null;
   let hoverHighlightSet = null;
 
@@ -312,7 +362,7 @@ function runGraph(container, dataEl) {
     }
     if (node === hoverFocus) {
       attr.color = NODE_FOCUS;
-      attr.size = (data.size || 10) * 1.12;
+      attr.size = (data.size || NODE_DEFAULT_SIZE) * 1.12;
       return attr;
     }
     if (hoverHighlightSet.has(node)) {
@@ -346,6 +396,57 @@ function runGraph(container, dataEl) {
 
   let sigma = null;
 
+  let settleRaf = 0;
+  let settleDeadline = 0;
+
+  function syncGraphFromSim() {
+    for (const n of simNodes) {
+      graph.setNodeAttribute(n.id, "x", n.x);
+      graph.setNodeAttribute(n.id, "y", n.y);
+    }
+  }
+
+  function syncSimFromGraph() {
+    graph.forEachNode((id, a) => {
+      const n = idToSim.get(id);
+      if (n) {
+        n.x = a.x;
+        n.y = a.y;
+        n.vx = 0;
+        n.vy = 0;
+      }
+    });
+  }
+
+  function cancelSettle() {
+    if (settleRaf) {
+      cancelAnimationFrame(settleRaf);
+      settleRaf = 0;
+    }
+  }
+
+  function startSettleAfterDrag() {
+    cancelSettle();
+    simulation.stop();
+    simulation.alpha(0.42);
+    settleDeadline = performance.now() + 800;
+
+    function settleStep() {
+      simulation.tick();
+      syncGraphFromSim();
+      sigma.refresh();
+      if (simulation.alpha() < 0.028 || performance.now() > settleDeadline) {
+        simulation.stop();
+        settleRaf = 0;
+        persistPositions(graph);
+        return;
+      }
+      settleRaf = requestAnimationFrame(settleStep);
+    }
+
+    settleRaf = requestAnimationFrame(settleStep);
+  }
+
   let dragActive = false;
   let dragNode = null;
   let startVp = { x: 0, y: 0 };
@@ -365,14 +466,17 @@ function runGraph(container, dataEl) {
       lerpRaf = 0;
       return;
     }
-    const x = graph.getNodeAttribute(dragNode, "x");
-    const y = graph.getNodeAttribute(dragNode, "y");
+    const sn = idToSim.get(dragNode);
+    if (!sn) {
+      lerpRaf = 0;
+      return;
+    }
     const tx = dragTargetGraph.x;
     const ty = dragTargetGraph.y;
-    const nx = x + (tx - x) * LERP_K;
-    const ny = y + (ty - y) * LERP_K;
-    graph.setNodeAttribute(dragNode, "x", nx);
-    graph.setNodeAttribute(dragNode, "y", ny);
+    sn.fx = sn.x + (tx - sn.x) * LERP_K;
+    sn.fy = sn.y + (ty - sn.y) * LERP_K;
+    for (let i = 0; i < 5; i++) simulation.tick();
+    syncGraphFromSim();
     sigma.refresh();
     lerpRaf = requestAnimationFrame(lerpStep);
   }
@@ -389,20 +493,42 @@ function runGraph(container, dataEl) {
     const dist = Math.hypot(lastVp.x - startVp.x, lastVp.y - startVp.y);
     dragActive = false;
     stopLerp();
-    graph.setNodeAttribute(dragNode, "x", dragTargetGraph.x);
-    graph.setNodeAttribute(dragNode, "y", dragTargetGraph.y);
-    sigma.getMouseCaptor().enabled = true;
-    sigma.refresh();
+    cancelSettle();
+    simulation.stop();
+
     const openedNode = dragNode;
     dragNode = null;
+
+    for (const n of simNodes) {
+      n.fx = null;
+      n.fy = null;
+    }
+
+    syncSimFromGraph();
+    if (openedNode && dist >= CLICK_PX) {
+      const sn = idToSim.get(openedNode);
+      if (sn) {
+        graph.setNodeAttribute(openedNode, "x", dragTargetGraph.x);
+        graph.setNodeAttribute(openedNode, "y", dragTargetGraph.y);
+        sn.x = dragTargetGraph.x;
+        sn.y = dragTargetGraph.y;
+        sn.vx = 0;
+        sn.vy = 0;
+      }
+    }
+
+    sigma.getMouseCaptor().enabled = true;
+    sigma.refresh();
+
     if (dist < CLICK_PX) {
       openPostInNewTab(baseurl, openedNode);
-    } else {
-      persistPositions(graph);
-      rebuildHighlightSet(null);
-      hidePanel();
-      sigma.refresh();
+      return;
     }
+
+    rebuildHighlightSet(null);
+    hidePanel();
+    sigma.refresh();
+    startSettleAfterDrag();
   }
 
   window.addEventListener("pointermove", onGlobalPointerMove);
@@ -440,6 +566,9 @@ function runGraph(container, dataEl) {
     });
 
     sigma.on("downNode", ({ node, event }) => {
+      cancelSettle();
+      simulation.stop();
+      syncSimFromGraph();
       dragActive = true;
       dragNode = node;
       startVp = { x: event.x, y: event.y };
@@ -451,6 +580,8 @@ function runGraph(container, dataEl) {
     });
 
     sigma.on("kill", () => {
+      cancelSettle();
+      simulation.stop();
       stopLerp();
       dragActive = false;
       dragNode = null;

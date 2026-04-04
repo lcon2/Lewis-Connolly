@@ -4374,8 +4374,8 @@ footer {
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: min(70vh, 640px);
-    height: min(70vh, 640px);
+    min-height: min(87.5vh, 800px);
+    height: min(87.5vh, 800px);
     margin: 0 0 36px;
     border: 1px solid #3a3a3a;
     border-radius: 6px;
@@ -4592,7 +4592,7 @@ footer {
     }
 
     .threads-sigma-container {
-        min-height: 50vh;
-        height: 50vh;
+        min-height: 62.5vh;
+        height: 62.5vh;
     }
 }
