@@ -4,6 +4,7 @@
  */
 import Graph from "graphology";
 import {
+  forceCollide,
   forceLink,
   forceManyBody,
   forceSimulation,
@@ -16,7 +17,18 @@ const NODE_DEFAULT_SIZE = 12;
 
 const POSITIONS_KEY = "threads-graph-positions";
 const CLICK_PX = 6;
-const LERP_K = 0.45;
+/** Lerp toward cursor while dragging (higher = snappier). */
+const LERP_K = 0.52;
+/** Graph-space collision radius around each node (Sigma coords). */
+const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 6;
+/** Idle: radians/frame scale for slow orbit around barycenter (scaled by cursor influence). */
+const IDLE_ORBIT = 0.00095;
+/** Idle: how strongly the whole group drifts toward the cursor (very small). */
+const IDLE_ATTRACT = 0.022;
+/** Simulation ticks per frame while dragging (higher = snappier separation). */
+const DRAG_SIM_TICKS = 9;
+/** Simulation ticks per idle frame after cursor nudge. */
+const IDLE_SIM_TICKS = 2;
 
 const NODE_BASE = "#c9a962";
 const NODE_MUTED = "#5c5238";
@@ -333,10 +345,21 @@ function runGraph(container, dataEl) {
         .strength(0.62),
     )
     .force("charge", forceManyBody().strength(-24))
-    .force("x", forceX((d) => d.anchorX).strength(0.038))
-    .force("y", forceY((d) => d.anchorY).strength(0.038))
+    .force(
+      "collide",
+      forceCollide()
+        .radius(() => COLLIDE_RADIUS)
+        .strength(0.88),
+    )
+    .force("x", forceX((d) => d.anchorX).strength(0.032))
+    .force("y", forceY((d) => d.anchorY).strength(0.032))
     .alphaTarget(0)
     .stop();
+
+  let pointerInsideContainer = false;
+  let lastGraphPointer = { x: 0, y: 0 };
+  let dragActive = false;
+  let idleRaf = 0;
 
   let hoverFocus = null;
   let hoverHighlightSet = null;
@@ -356,6 +379,9 @@ function runGraph(container, dataEl) {
 
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
+    const labelsAllowed = pointerInsideContainer || dragActive;
+    attr.label =
+      labelsAllowed && data.label ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
       return attr;
@@ -425,8 +451,62 @@ function runGraph(container, dataEl) {
     }
   }
 
+  function stopIdleLoop() {
+    if (idleRaf) {
+      cancelAnimationFrame(idleRaf);
+      idleRaf = 0;
+    }
+  }
+
+  function startIdleLoop() {
+    if (idleRaf || !sigma || dragActive || settleRaf || !pointerInsideContainer)
+      return;
+    idleRaf = requestAnimationFrame(idleStep);
+  }
+
+  function idleStep() {
+    idleRaf = 0;
+    if (!sigma || !pointerInsideContainer || dragActive || settleRaf) return;
+    if (simNodes.length === 0) return;
+
+    let sx = 0;
+    let sy = 0;
+    for (const n of simNodes) {
+      sx += n.x;
+      sy += n.y;
+    }
+    const p = { x: sx / simNodes.length, y: sy / simNodes.length };
+    const gx = lastGraphPointer.x;
+    const gy = lastGraphPointer.y;
+    const toCx = gx - p.x;
+    const toCy = gy - p.y;
+    const toCLen = Math.hypot(toCx, toCy) || 1;
+    const inf = Math.min(1.4, toCLen / 95);
+    const theta = IDLE_ORBIT * inf;
+    const ct = Math.cos(theta);
+    const st = Math.sin(theta);
+    const pull = IDLE_ATTRACT * 0.018 * inf;
+
+    for (const n of simNodes) {
+      const rx = n.x - p.x;
+      const ry = n.y - p.y;
+      n.x = p.x + rx * ct - ry * st;
+      n.y = p.y + rx * st + ry * ct;
+      n.x += toCx * pull;
+      n.y += toCy * pull;
+    }
+
+    simulation.stop();
+    simulation.alpha(Math.max(simulation.alpha(), 0.038));
+    for (let i = 0; i < IDLE_SIM_TICKS; i++) simulation.tick();
+    syncGraphFromSim();
+    sigma.refresh();
+    idleRaf = requestAnimationFrame(idleStep);
+  }
+
   function startSettleAfterDrag() {
     cancelSettle();
+    stopIdleLoop();
     simulation.stop();
     simulation.alpha(0.42);
     settleDeadline = performance.now() + 800;
@@ -439,6 +519,7 @@ function runGraph(container, dataEl) {
         simulation.stop();
         settleRaf = 0;
         persistPositions(graph);
+        if (pointerInsideContainer) startIdleLoop();
         return;
       }
       settleRaf = requestAnimationFrame(settleStep);
@@ -447,7 +528,6 @@ function runGraph(container, dataEl) {
     settleRaf = requestAnimationFrame(settleStep);
   }
 
-  let dragActive = false;
   let dragNode = null;
   let startVp = { x: 0, y: 0 };
   let lastVp = { x: 0, y: 0 };
@@ -475,16 +555,17 @@ function runGraph(container, dataEl) {
     const ty = dragTargetGraph.y;
     sn.fx = sn.x + (tx - sn.x) * LERP_K;
     sn.fy = sn.y + (ty - sn.y) * LERP_K;
-    for (let i = 0; i < 5; i++) simulation.tick();
+    for (let i = 0; i < DRAG_SIM_TICKS; i++) simulation.tick();
     syncGraphFromSim();
     sigma.refresh();
     lerpRaf = requestAnimationFrame(lerpStep);
   }
 
   function onGlobalPointerMove(ev) {
-    if (!dragActive) return;
-    lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
-    dragTargetGraph = sigma.viewportToGraph(lastVp);
+    if (dragActive && sigma) {
+      lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
+      dragTargetGraph = sigma.viewportToGraph(lastVp);
+    }
   }
 
   function onGlobalPointerUp(ev) {
@@ -522,6 +603,8 @@ function runGraph(container, dataEl) {
 
     if (dist < CLICK_PX) {
       openPostInNewTab(baseurl, openedNode);
+      sigma.refresh();
+      if (pointerInsideContainer) startIdleLoop();
       return;
     }
 
@@ -552,9 +635,41 @@ function runGraph(container, dataEl) {
 
     fitSigmaViewport(sigma, graph);
 
+    const POINTER_OPTS = { capture: true };
+
+    function updateLastGraphPointerFromEvent(ev) {
+      if (!sigma) return;
+      lastGraphPointer = sigma.viewportToGraph(
+        viewportFromClient(container, ev.clientX, ev.clientY),
+      );
+    }
+
+    function onContainerPointerEnter(ev) {
+      pointerInsideContainer = true;
+      updateLastGraphPointerFromEvent(ev);
+      sigma.refresh();
+      startIdleLoop();
+    }
+
+    function onContainerPointerLeave(ev) {
+      const rel = ev.relatedTarget;
+      if (rel && container.contains(rel)) return;
+      pointerInsideContainer = false;
+      stopIdleLoop();
+      sigma.refresh();
+    }
+
+    function onContainerPointerMove(ev) {
+      updateLastGraphPointerFromEvent(ev);
+    }
+
+    container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
+    container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
+    container.addEventListener("pointermove", onContainerPointerMove, POINTER_OPTS);
+
     sigma.on("enterNode", ({ node }) => {
       rebuildHighlightSet(node);
-      showPanel(node);
+      if (!dragActive) showPanel(node);
       sigma.refresh();
     });
 
@@ -568,6 +683,8 @@ function runGraph(container, dataEl) {
     sigma.on("downNode", ({ node, event }) => {
       cancelSettle();
       simulation.stop();
+      stopIdleLoop();
+      hidePanel();
       syncSimFromGraph();
       dragActive = true;
       dragNode = node;
@@ -581,10 +698,26 @@ function runGraph(container, dataEl) {
 
     sigma.on("kill", () => {
       cancelSettle();
+      stopIdleLoop();
       simulation.stop();
       stopLerp();
       dragActive = false;
       dragNode = null;
+      container.removeEventListener(
+        "pointerenter",
+        onContainerPointerEnter,
+        POINTER_OPTS,
+      );
+      container.removeEventListener(
+        "pointerleave",
+        onContainerPointerLeave,
+        POINTER_OPTS,
+      );
+      container.removeEventListener(
+        "pointermove",
+        onContainerPointerMove,
+        POINTER_OPTS,
+      );
       window.removeEventListener("pointermove", onGlobalPointerMove);
       window.removeEventListener("pointerup", onGlobalPointerUp);
       window.removeEventListener("pointercancel", onGlobalPointerUp);

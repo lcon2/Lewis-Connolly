@@ -117,7 +117,7 @@ var require_graphology_umd_min = __commonJS({
         return !!s(t2) && !(t2.attributes && !Array.isArray(t2.attributes));
       }
       "function" == typeof Object.assign && (u = Object.assign);
-      var g, y2 = { exports: {} }, w = "object" == typeof Reflect ? Reflect : null, v = w && "function" == typeof w.apply ? w.apply : function(t2, e2, n2) {
+      var g, y3 = { exports: {} }, w = "object" == typeof Reflect ? Reflect : null, v = w && "function" == typeof w.apply ? w.apply : function(t2, e2, n2) {
         return Function.prototype.apply.call(t2, e2, n2);
       };
       g = w && "function" == typeof w.ownKeys ? w.ownKeys : Object.getOwnPropertySymbols ? function(t2) {
@@ -131,7 +131,7 @@ var require_graphology_umd_min = __commonJS({
       function m2() {
         m2.init.call(this);
       }
-      y2.exports = m2, y2.exports.once = function(t2, e2) {
+      y3.exports = m2, y3.exports.once = function(t2, e2) {
         return new Promise((function(n2, r2) {
           function i2(n3) {
             t2.removeListener(e2, o2), r2(n3);
@@ -151,7 +151,7 @@ var require_graphology_umd_min = __commonJS({
       function G(t2) {
         return void 0 === t2._maxListeners ? m2.defaultMaxListeners : t2._maxListeners;
       }
-      function x2(t2, e2, n2, r2) {
+      function x3(t2, e2, n2, r2) {
         var i2, o2, a3, c3;
         if (_(n2), void 0 === (o2 = t2._events) ? (o2 = t2._events = /* @__PURE__ */ Object.create(null), t2._eventsCount = 0) : (void 0 !== o2.newListener && (t2.emit("newListener", e2, n2.listener ? n2.listener : n2), o2 = t2._events), a3 = o2[e2]), void 0 === a3) a3 = o2[e2] = n2, ++t2._eventsCount;
         else if ("function" == typeof a3 ? a3 = o2[e2] = r2 ? [n2, a3] : [a3, n2] : r2 ? a3.unshift(n2) : a3.push(n2), (i2 = G(t2)) > 0 && a3.length > i2 && !a3.warned) {
@@ -235,9 +235,9 @@ var require_graphology_umd_min = __commonJS({
         }
         return true;
       }, m2.prototype.addListener = function(t2, e2) {
-        return x2(this, t2, e2, false);
+        return x3(this, t2, e2, false);
       }, m2.prototype.on = m2.prototype.addListener, m2.prototype.prependListener = function(t2, e2) {
-        return x2(this, t2, e2, true);
+        return x3(this, t2, e2, true);
       }, m2.prototype.once = function(t2, e2) {
         return _(e2), this.on(t2, A(this, t2, e2)), this;
       }, m2.prototype.prependOnceListener = function(t2, e2) {
@@ -904,13 +904,13 @@ var require_graphology_umd_min = __commonJS({
           f2 = p2;
         }
         if (f2 || t2.multi || !l2 || (f2 = r2 ? l2.undirected[a3] : l2.out[a3]), f2) {
-          var y3 = [f2.key, false, false, false];
-          if (d2 ? !h2 : !c3) return y3;
+          var y4 = [f2.key, false, false, false];
+          if (d2 ? !h2 : !c3) return y4;
           if (d2) {
             var w2 = f2.attributes;
             f2.attributes = h2(w2), t2.emit("edgeAttributesUpdated", { type: "replace", key: f2.key, attributes: f2.attributes });
           } else u(f2.attributes, c3), t2.emit("edgeAttributesUpdated", { type: "merge", key: f2.key, attributes: f2.attributes, data: c3 });
-          return y3;
+          return y4;
         }
         c3 = c3 || {}, d2 && h2 && (c3 = h2(c3));
         var v2 = { key: null, undirected: r2, source: o2, target: a3, attributes: c3 };
@@ -1379,8 +1379,8 @@ var require_graphology_umd_min = __commonJS({
             if ("undirected" === this.type && (f2 = true), i3 = t2.edges, !Array.isArray(i3)) throw new B("Graph.import: invalid edges. Expecting an array.");
             for (e2 = 0, n3 = i3.length; e2 < n3; e2++) {
               At(a3 = i3[e2]);
-              var l2 = a3, g2 = l2.source, y3 = l2.target, w2 = l2.attributes, v2 = l2.undirected, b2 = void 0 === v2 ? f2 : v2;
-              "key" in a3 ? (u2 ? b2 ? this.mergeUndirectedEdgeWithKey : this.mergeDirectedEdgeWithKey : b2 ? this.addUndirectedEdgeWithKey : this.addDirectedEdgeWithKey).call(this, a3.key, g2, y3, w2) : (u2 ? b2 ? this.mergeUndirectedEdge : this.mergeDirectedEdge : b2 ? this.addUndirectedEdge : this.addDirectedEdge).call(this, g2, y3, w2);
+              var l2 = a3, g2 = l2.source, y4 = l2.target, w2 = l2.attributes, v2 = l2.undirected, b2 = void 0 === v2 ? f2 : v2;
+              "key" in a3 ? (u2 ? b2 ? this.mergeUndirectedEdgeWithKey : this.mergeDirectedEdgeWithKey : b2 ? this.addUndirectedEdgeWithKey : this.addDirectedEdgeWithKey).call(this, a3.key, g2, y4, w2) : (u2 ? b2 ? this.mergeUndirectedEdge : this.mergeDirectedEdge : b2 ? this.addUndirectedEdge : this.addDirectedEdge).call(this, g2, y4, w2);
             }
           }
           return this;
@@ -1419,7 +1419,7 @@ var require_graphology_umd_min = __commonJS({
           for (var a3 in this) this.hasOwnProperty(a3) && !Ut.has(a3) && "function" != typeof this[a3] && "symbol" !== t(a3) && (o2[a3] = this[a3]);
           return o2.attributes = this._attributes, o2.nodes = n3, o2.edges = r3, p(o2, "constructor", this.constructor), o2;
         }, r2;
-      })(y2.exports.EventEmitter);
+      })(y3.exports.EventEmitter);
       "undefined" != typeof Symbol && (zt.prototype[Symbol.for("nodejs.util.inspect.custom")] = zt.prototype.inspect), [{ name: function(t2) {
         return "".concat(t2, "Edge");
       }, generateKey: true }, { name: function(t2) {
@@ -2134,9 +2134,9 @@ var require_matrices = __commonJS({
       return Float32Array.of(1, 0, 0, 0, 1, 0, 0, 0, 1);
     }
     exports.identity = identity;
-    function scale(m2, x2, y2) {
-      m2[0] = x2;
-      m2[4] = typeof y2 === "number" ? y2 : x2;
+    function scale(m2, x3, y3) {
+      m2[0] = x3;
+      m2[4] = typeof y3 === "number" ? y3 : x3;
       return m2;
     }
     exports.scale = scale;
@@ -2149,9 +2149,9 @@ var require_matrices = __commonJS({
       return m2;
     }
     exports.rotate = rotate;
-    function translate(m2, x2, y2) {
-      m2[6] = x2;
-      m2[7] = y2;
+    function translate(m2, x3, y3) {
+      m2[6] = x3;
+      m2[7] = y3;
       return m2;
     }
     exports.translate = translate;
@@ -2357,7 +2357,7 @@ var require_utils = __commonJS({
     }
     exports.getCorrectionRatio = getCorrectionRatio;
     function matrixFromCamera(state, viewportDimensions, graphDimensions, padding, inverse) {
-      var angle = state.angle, ratio = state.ratio, x2 = state.x, y2 = state.y;
+      var angle = state.angle, ratio = state.ratio, x3 = state.x, y3 = state.y;
       var width = viewportDimensions.width, height = viewportDimensions.height;
       var matrix = (0, matrices_1.identity)();
       var smallestDimension = Math.min(width, height) - 2 * padding;
@@ -2366,9 +2366,9 @@ var require_utils = __commonJS({
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), 2 * (smallestDimension / width) * correctionRatio, 2 * (smallestDimension / height) * correctionRatio));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.rotate)((0, matrices_1.identity)(), -angle));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), 1 / ratio));
-        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), -x2, -y2));
+        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), -x3, -y3));
       } else {
-        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), x2, y2));
+        (0, matrices_1.multiply)(matrix, (0, matrices_1.translate)((0, matrices_1.identity)(), x3, y3));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), ratio));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.rotate)((0, matrices_1.identity)(), angle));
         (0, matrices_1.multiply)(matrix, (0, matrices_1.scale)((0, matrices_1.identity)(), width / smallestDimension / 2 / correctionRatio, height / smallestDimension / 2 / correctionRatio));
@@ -2376,9 +2376,9 @@ var require_utils = __commonJS({
       return matrix;
     }
     exports.matrixFromCamera = matrixFromCamera;
-    function extractPixel(gl, x2, y2, array) {
+    function extractPixel(gl, x3, y3, array) {
       var data = array || new Uint8Array(4);
-      gl.readPixels(x2, y2, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, data);
+      gl.readPixels(x3, y3, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, data);
       return data;
     }
     exports.extractPixel = extractPixel;
@@ -2970,7 +2970,7 @@ var require_mouse = __commonJS({
             clearTimeout(this.movingTimeout);
             this.movingTimeout = null;
           }
-          var x2 = (0, captor_1.getX)(e), y2 = (0, captor_1.getY)(e);
+          var x3 = (0, captor_1.getX)(e), y3 = (0, captor_1.getY)(e);
           var cameraState = camera.getState(), previousCameraState = camera.getPreviousState() || { x: 0, y: 0 };
           if (this.isMoving) {
             camera.animate({
@@ -2980,7 +2980,7 @@ var require_mouse = __commonJS({
               duration: MOUSE_INERTIA_DURATION,
               easing: "quadraticOut"
             });
-          } else if (this.lastMouseX !== x2 || this.lastMouseY !== y2) {
+          } else if (this.lastMouseX !== x3 || this.lastMouseY !== y3) {
             camera.setState({
               x: cameraState.x,
               y: cameraState.y
@@ -3017,8 +3017,8 @@ var require_mouse = __commonJS({
             var mouse = this.renderer.viewportToFramedGraph({ x: eX, y: eY });
             var offsetX = lastMouse.x - mouse.x, offsetY = lastMouse.y - mouse.y;
             var cameraState = camera.getState();
-            var x2 = cameraState.x + offsetX, y2 = cameraState.y + offsetY;
-            camera.setState({ x: x2, y: y2 });
+            var x3 = cameraState.x + offsetX, y3 = cameraState.y + offsetY;
+            camera.setState({ x: x3, y: y3 });
             this.lastMouseX = eX;
             this.lastMouseY = eY;
           }
@@ -3172,8 +3172,8 @@ var require_quadtree = __commonJS({
       return x1 < qx + qw && x1 + w > qx && y1 < qy + qh && y1 + h > qy;
     }
     exports.rectangleCollidesWithQuad = rectangleCollidesWithQuad;
-    function pointIsInQuad(x2, y2, qx, qy, qw, qh) {
-      var xmp = qx + qw / 2, ymp = qy + qh / 2, top = y2 < ymp, left = x2 < xmp;
+    function pointIsInQuad(x3, y3, qx, qy, qw, qh) {
+      var xmp = qx + qw / 2, ymp = qy + qh / 2, top = y3 < ymp, left = x3 < xmp;
       return top ? left ? TOP_LEFT : TOP_RIGHT : left ? BOTTOM_LEFT : BOTTOM_RIGHT;
     }
     function buildQuadrants(maxLevel, data) {
@@ -3181,21 +3181,21 @@ var require_quadtree = __commonJS({
       while (stack.length) {
         var level = stack.pop(), block = stack.pop();
         var topLeftBlock = 4 * block + BLOCKS, topRightBlock = 4 * block + 2 * BLOCKS, bottomLeftBlock = 4 * block + 3 * BLOCKS, bottomRightBlock = 4 * block + 4 * BLOCKS;
-        var x2 = data[block + X_OFFSET], y2 = data[block + Y_OFFSET], width = data[block + WIDTH_OFFSET], height = data[block + HEIGHT_OFFSET], hw = width / 2, hh = height / 2;
-        data[topLeftBlock + X_OFFSET] = x2;
-        data[topLeftBlock + Y_OFFSET] = y2;
+        var x3 = data[block + X_OFFSET], y3 = data[block + Y_OFFSET], width = data[block + WIDTH_OFFSET], height = data[block + HEIGHT_OFFSET], hw = width / 2, hh = height / 2;
+        data[topLeftBlock + X_OFFSET] = x3;
+        data[topLeftBlock + Y_OFFSET] = y3;
         data[topLeftBlock + WIDTH_OFFSET] = hw;
         data[topLeftBlock + HEIGHT_OFFSET] = hh;
-        data[topRightBlock + X_OFFSET] = x2 + hw;
-        data[topRightBlock + Y_OFFSET] = y2;
+        data[topRightBlock + X_OFFSET] = x3 + hw;
+        data[topRightBlock + Y_OFFSET] = y3;
         data[topRightBlock + WIDTH_OFFSET] = hw;
         data[topRightBlock + HEIGHT_OFFSET] = hh;
-        data[bottomLeftBlock + X_OFFSET] = x2;
-        data[bottomLeftBlock + Y_OFFSET] = y2 + hh;
+        data[bottomLeftBlock + X_OFFSET] = x3;
+        data[bottomLeftBlock + Y_OFFSET] = y3 + hh;
         data[bottomLeftBlock + WIDTH_OFFSET] = hw;
         data[bottomLeftBlock + HEIGHT_OFFSET] = hh;
-        data[bottomRightBlock + X_OFFSET] = x2 + hw;
-        data[bottomRightBlock + Y_OFFSET] = y2 + hh;
+        data[bottomRightBlock + X_OFFSET] = x3 + hw;
+        data[bottomRightBlock + Y_OFFSET] = y3 + hh;
         data[bottomRightBlock + WIDTH_OFFSET] = hw;
         data[bottomRightBlock + HEIGHT_OFFSET] = hh;
         if (level < maxLevel - 1) {
@@ -3206,8 +3206,8 @@ var require_quadtree = __commonJS({
         }
       }
     }
-    function insertNode(maxLevel, data, containers, key, x2, y2, size) {
-      var x1 = x2 - size, y1 = y2 - size, w = size * 2;
+    function insertNode(maxLevel, data, containers, key, x3, y3, size) {
+      var x1 = x3 - size, y1 = y3 - size, w = size * 2;
       var level = 0, block = 0;
       while (true) {
         if (level >= maxLevel) {
@@ -3240,9 +3240,9 @@ var require_quadtree = __commonJS({
           return;
         }
         if (collisions === 0)
-          throw new Error("sigma/quadtree.insertNode: no collision (level: " + level + ", key: " + key + ", x: " + x2 + ", y: " + y2 + ", size: " + size + ").");
+          throw new Error("sigma/quadtree.insertNode: no collision (level: " + level + ", key: " + key + ", x: " + x3 + ", y: " + y3 + ", size: " + size + ").");
         if (collisions === 3)
-          throw new Error("sigma/quadtree.insertNode: 3 impossible collisions (level: " + level + ", key: " + key + ", x: " + x2 + ", y: " + y2 + ", size: " + size + ").");
+          throw new Error("sigma/quadtree.insertNode: 3 impossible collisions (level: " + level + ", key: " + key + ", x: " + x3 + ", y: " + y3 + ", size: " + size + ").");
         if (collisions > 1) {
           containers[block] = containers[block] || [];
           containers[block].push(key);
@@ -3310,8 +3310,8 @@ var require_quadtree = __commonJS({
               height: 1
             });
         }
-        QuadTree2.prototype.add = function(key, x2, y2, size) {
-          insertNode(MAX_LEVEL, this.data, this.containers, key, x2, y2, size);
+        QuadTree2.prototype.add = function(key, x3, y3, size) {
+          insertNode(MAX_LEVEL, this.data, this.containers, key, x3, y3, size);
           return this;
         };
         QuadTree2.prototype.resize = function(boundaries) {
@@ -3327,34 +3327,34 @@ var require_quadtree = __commonJS({
           this.containers = (_a = {}, _a[OUTSIDE_BLOCK] = [], _a);
           return this;
         };
-        QuadTree2.prototype.point = function(x2, y2) {
+        QuadTree2.prototype.point = function(x3, y3) {
           var nodes = this.containers[OUTSIDE_BLOCK];
           var block = 0, level = 0;
           do {
             if (this.containers[block])
               nodes.push.apply(nodes, __spreadArray([], __read(this.containers[block]), false));
-            var quad = pointIsInQuad(x2, y2, this.data[block + X_OFFSET], this.data[block + Y_OFFSET], this.data[block + WIDTH_OFFSET], this.data[block + HEIGHT_OFFSET]);
+            var quad = pointIsInQuad(x3, y3, this.data[block + X_OFFSET], this.data[block + Y_OFFSET], this.data[block + WIDTH_OFFSET], this.data[block + HEIGHT_OFFSET]);
             block = 4 * block + quad * BLOCKS;
             level++;
           } while (level <= MAX_LEVEL);
           return nodes;
         };
-        QuadTree2.prototype.rectangle = function(x1, y1, x2, y2, height) {
+        QuadTree2.prototype.rectangle = function(x1, y1, x22, y22, height) {
           var _a;
           var lr = this.lastRectangle;
-          if (lr && x1 === lr.x1 && x2 === lr.x2 && y1 === lr.y1 && y2 === lr.y2 && height === lr.height) {
+          if (lr && x1 === lr.x1 && x22 === lr.x2 && y1 === lr.y1 && y22 === lr.y2 && height === lr.height) {
             return this.cache;
           }
           this.lastRectangle = {
             x1,
             y1,
-            x2,
-            y2,
+            x2: x22,
+            y2: y22,
             height
           };
           if (!isRectangleAligned(this.lastRectangle))
             this.lastRectangle = getCircumscribedAlignedRectangle(this.lastRectangle);
-          this.cache = getNodesInAxisAlignedRectangleArea(MAX_LEVEL, this.data, this.containers, x1, y1, Math.abs(x1 - x2) || Math.abs(y1 - y2), height);
+          this.cache = getNodesInAxisAlignedRectangleArea(MAX_LEVEL, this.data, this.containers, x1, y1, Math.abs(x1 - x22) || Math.abs(y1 - y22), height);
           (_a = this.cache).push.apply(_a, __spreadArray([], __read(this.containers[OUTSIDE_BLOCK]), false));
           return this.cache;
         };
@@ -4091,8 +4091,8 @@ var require_edge2 = __commonJS({
               this.array[i_1] = 0;
             return;
           }
-          var thickness = data.size || 1, x1 = sourceData.x, y1 = sourceData.y, x2 = targetData.x, y2 = targetData.y, color = (0, utils_1.floatColor)(data.color);
-          var dx = x2 - x1, dy = y2 - y1;
+          var thickness = data.size || 1, x1 = sourceData.x, y1 = sourceData.y, x22 = targetData.x, y22 = targetData.y, color = (0, utils_1.floatColor)(data.color);
+          var dx = x22 - x1, dy = y22 - y1;
           var len = dx * dx + dy * dy, n1 = 0, n2 = 0;
           if (len) {
             len = 1 / Math.sqrt(len);
@@ -4113,14 +4113,14 @@ var require_edge2 = __commonJS({
           array[i++] = -n2;
           array[i++] = thickness;
           array[i++] = color;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = n1;
           array[i++] = n2;
           array[i++] = thickness;
           array[i++] = color;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = -n1;
           array[i++] = -n2;
           array[i++] = thickness;
@@ -4270,8 +4270,8 @@ var require_edge_arrowHead = __commonJS({
               this.array[i_1] = 0;
             return;
           }
-          var thickness = data.size || 1, radius = targetData.size || 1, x1 = sourceData.x, y1 = sourceData.y, x2 = targetData.x, y2 = targetData.y, color = (0, utils_1.floatColor)(data.color);
-          var dx = x2 - x1, dy = y2 - y1;
+          var thickness = data.size || 1, radius = targetData.size || 1, x1 = sourceData.x, y1 = sourceData.y, x22 = targetData.x, y22 = targetData.y, color = (0, utils_1.floatColor)(data.color);
+          var dx = x22 - x1, dy = y22 - y1;
           var len = dx * dx + dy * dy, n1 = 0, n2 = 0;
           if (len) {
             len = 1 / Math.sqrt(len);
@@ -4280,8 +4280,8 @@ var require_edge_arrowHead = __commonJS({
           }
           var i = POINTS * ATTRIBUTES * offset;
           var array = this.array;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = -n1;
           array[i++] = -n2;
           array[i++] = thickness;
@@ -4290,8 +4290,8 @@ var require_edge_arrowHead = __commonJS({
           array[i++] = 1;
           array[i++] = 0;
           array[i++] = 0;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = -n1;
           array[i++] = -n2;
           array[i++] = thickness;
@@ -4300,8 +4300,8 @@ var require_edge_arrowHead = __commonJS({
           array[i++] = 0;
           array[i++] = 1;
           array[i++] = 0;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = -n1;
           array[i++] = -n2;
           array[i++] = thickness;
@@ -4442,8 +4442,8 @@ var require_edge_clamped = __commonJS({
               this.array[i_1] = 0;
             return;
           }
-          var thickness = data.size || 1, x1 = sourceData.x, y1 = sourceData.y, x2 = targetData.x, y2 = targetData.y, radius = targetData.size || 1, color = (0, utils_1.floatColor)(data.color);
-          var dx = x2 - x1, dy = y2 - y1;
+          var thickness = data.size || 1, x1 = sourceData.x, y1 = sourceData.y, x22 = targetData.x, y22 = targetData.y, radius = targetData.size || 1, color = (0, utils_1.floatColor)(data.color);
+          var dx = x22 - x1, dy = y22 - y1;
           var len = dx * dx + dy * dy, n1 = 0, n2 = 0;
           if (len) {
             len = 1 / Math.sqrt(len);
@@ -4466,15 +4466,15 @@ var require_edge_clamped = __commonJS({
           array[i++] = thickness;
           array[i++] = color;
           array[i++] = 0;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = n1;
           array[i++] = n2;
           array[i++] = thickness;
           array[i++] = color;
           array[i++] = radius;
-          array[i++] = x2;
-          array[i++] = y2;
+          array[i++] = x22;
+          array[i++] = y22;
           array[i++] = -n1;
           array[i++] = -n2;
           array[i++] = thickness;
@@ -4785,10 +4785,10 @@ var require_touch = __commonJS({
           switch (this.touchMode) {
             case 1: {
               var _b = this.renderer.viewportToFramedGraph((this.startTouchesPositions || [])[0]), xStart = _b.x, yStart = _b.y;
-              var _c = this.renderer.viewportToFramedGraph(touchesPositions[0]), x2 = _c.x, y2 = _c.y;
+              var _c = this.renderer.viewportToFramedGraph(touchesPositions[0]), x3 = _c.x, y3 = _c.y;
               this.renderer.getCamera().setState({
-                x: startCameraState.x + xStart - x2,
-                y: startCameraState.y + yStart - y2
+                x: startCameraState.x + xStart - x3,
+                y: startCameraState.y + yStart - y3
               });
               break;
             }
@@ -4806,14 +4806,14 @@ var require_touch = __commonJS({
               var dx = smallestDimension / dimensions.width;
               var dy = smallestDimension / dimensions.height;
               var ratio = newCameraState.ratio / smallestDimension;
-              var x2 = x0 - smallestDimension / 2 / dx;
-              var y2 = y0 - smallestDimension / 2 / dy;
+              var x3 = x0 - smallestDimension / 2 / dx;
+              var y3 = y0 - smallestDimension / 2 / dy;
               _a = __read([
-                x2 * Math.cos(-newCameraState.angle) - y2 * Math.sin(-newCameraState.angle),
-                y2 * Math.cos(-newCameraState.angle) + x2 * Math.sin(-newCameraState.angle)
-              ], 2), x2 = _a[0], y2 = _a[1];
-              newCameraState.x = touchGraphPosition.x - x2 * ratio;
-              newCameraState.y = touchGraphPosition.y + y2 * ratio;
+                x3 * Math.cos(-newCameraState.angle) - y3 * Math.sin(-newCameraState.angle),
+                y3 * Math.cos(-newCameraState.angle) + x3 * Math.sin(-newCameraState.angle)
+              ], 2), x3 = _a[0], y3 = _a[1];
+              newCameraState.x = touchGraphPosition.x - x3 * ratio;
+              newCameraState.y = touchGraphPosition.y + y3 * ratio;
               this.renderer.getCamera().setState(newCameraState);
               break;
             }
@@ -5289,7 +5289,7 @@ var require_sigma = __commonJS({
             var data = this.nodeDataCache[node];
             if (data.hidden)
               continue;
-            var _a = this.framedGraphToViewport(data), x2 = _a.x, y2 = _a.y;
+            var _a = this.framedGraphToViewport(data), x3 = _a.x, y3 = _a.y;
             var size = this.scaleSize(data.size);
             if (size < this.settings.labelRenderedSizeThreshold)
               continue;
@@ -5301,8 +5301,8 @@ var require_sigma = __commonJS({
               label: data.label,
               color: "#000",
               size,
-              x: x2,
-              y: y2
+              x: x3,
+              y: y3
             }, this.settings);
           }
           return this;
@@ -5349,15 +5349,15 @@ var require_sigma = __commonJS({
           context.clearRect(0, 0, this.width, this.height);
           var render = function(node) {
             var data = _this.nodeDataCache[node];
-            var _a = _this.framedGraphToViewport(data), x2 = _a.x, y2 = _a.y;
+            var _a = _this.framedGraphToViewport(data), x3 = _a.x, y3 = _a.y;
             var size = _this.scaleSize(data.size);
             _this.settings.hoverRenderer(context, {
               key: node,
               label: data.label,
               color: data.color,
               size,
-              x: x2,
-              y: y2
+              x: x3,
+              y: y3
             }, _this.settings);
           };
           var nodesToRender = [];
@@ -5562,7 +5562,7 @@ var require_sigma = __commonJS({
           return this;
         };
         Sigma3.prototype.getViewportZoomedState = function(viewportTarget, newRatio) {
-          var _a = this.camera.getState(), ratio = _a.ratio, angle = _a.angle, x2 = _a.x, y2 = _a.y;
+          var _a = this.camera.getState(), ratio = _a.ratio, angle = _a.angle, x3 = _a.x, y3 = _a.y;
           var ratioDiff = newRatio / ratio;
           var center = {
             x: this.width / 2,
@@ -5572,8 +5572,8 @@ var require_sigma = __commonJS({
           var graphCenterPosition = this.viewportToFramedGraph(center);
           return {
             angle,
-            x: (graphMousePosition.x - graphCenterPosition.x) * (1 - ratioDiff) + x2,
-            y: (graphMousePosition.y - graphCenterPosition.y) * (1 - ratioDiff) + y2,
+            x: (graphMousePosition.x - graphCenterPosition.x) * (1 - ratioDiff) + x3,
+            y: (graphMousePosition.y - graphCenterPosition.y) * (1 - ratioDiff) + y3,
             ratio: newRatio
           };
         };
@@ -5701,42 +5701,42 @@ var import_graphology = __toESM(require_graphology_umd_min(), 1);
 
 // node_modules/d3-quadtree/src/add.js
 function add_default(d) {
-  const x2 = +this._x.call(null, d), y2 = +this._y.call(null, d);
-  return add(this.cover(x2, y2), x2, y2, d);
+  const x3 = +this._x.call(null, d), y3 = +this._y.call(null, d);
+  return add(this.cover(x3, y3), x3, y3, d);
 }
-function add(tree, x2, y2, d) {
-  if (isNaN(x2) || isNaN(y2)) return tree;
+function add(tree, x3, y3, d) {
+  if (isNaN(x3) || isNaN(y3)) return tree;
   var parent, node = tree._root, leaf = { data: d }, x0 = tree._x0, y0 = tree._y0, x1 = tree._x1, y1 = tree._y1, xm, ym, xp, yp, right, bottom, i, j;
   if (!node) return tree._root = leaf, tree;
   while (node.length) {
-    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    if (right = x3 >= (xm = (x0 + x1) / 2)) x0 = xm;
     else x1 = xm;
-    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    if (bottom = y3 >= (ym = (y0 + y1) / 2)) y0 = ym;
     else y1 = ym;
     if (parent = node, !(node = node[i = bottom << 1 | right])) return parent[i] = leaf, tree;
   }
   xp = +tree._x.call(null, node.data);
   yp = +tree._y.call(null, node.data);
-  if (x2 === xp && y2 === yp) return leaf.next = node, parent ? parent[i] = leaf : tree._root = leaf, tree;
+  if (x3 === xp && y3 === yp) return leaf.next = node, parent ? parent[i] = leaf : tree._root = leaf, tree;
   do {
     parent = parent ? parent[i] = new Array(4) : tree._root = new Array(4);
-    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    if (right = x3 >= (xm = (x0 + x1) / 2)) x0 = xm;
     else x1 = xm;
-    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    if (bottom = y3 >= (ym = (y0 + y1) / 2)) y0 = ym;
     else y1 = ym;
   } while ((i = bottom << 1 | right) === (j = (yp >= ym) << 1 | xp >= xm));
   return parent[j] = node, parent[i] = leaf, tree;
 }
 function addAll(data) {
-  var d, i, n = data.length, x2, y2, xz = new Array(n), yz = new Array(n), x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  var d, i, n = data.length, x3, y3, xz = new Array(n), yz = new Array(n), x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
   for (i = 0; i < n; ++i) {
-    if (isNaN(x2 = +this._x.call(null, d = data[i])) || isNaN(y2 = +this._y.call(null, d))) continue;
-    xz[i] = x2;
-    yz[i] = y2;
-    if (x2 < x0) x0 = x2;
-    if (x2 > x1) x1 = x2;
-    if (y2 < y0) y0 = y2;
-    if (y2 > y1) y1 = y2;
+    if (isNaN(x3 = +this._x.call(null, d = data[i])) || isNaN(y3 = +this._y.call(null, d))) continue;
+    xz[i] = x3;
+    yz[i] = y3;
+    if (x3 < x0) x0 = x3;
+    if (x3 > x1) x1 = x3;
+    if (y3 < y0) y0 = y3;
+    if (y3 > y1) y1 = y3;
   }
   if (x0 > x1 || y0 > y1) return this;
   this.cover(x0, y0).cover(x1, y1);
@@ -5747,16 +5747,16 @@ function addAll(data) {
 }
 
 // node_modules/d3-quadtree/src/cover.js
-function cover_default(x2, y2) {
-  if (isNaN(x2 = +x2) || isNaN(y2 = +y2)) return this;
+function cover_default(x3, y3) {
+  if (isNaN(x3 = +x3) || isNaN(y3 = +y3)) return this;
   var x0 = this._x0, y0 = this._y0, x1 = this._x1, y1 = this._y1;
   if (isNaN(x0)) {
-    x1 = (x0 = Math.floor(x2)) + 1;
-    y1 = (y0 = Math.floor(y2)) + 1;
+    x1 = (x0 = Math.floor(x3)) + 1;
+    y1 = (y0 = Math.floor(y3)) + 1;
   } else {
     var z = x1 - x0 || 1, node = this._root, parent, i;
-    while (x0 > x2 || x2 >= x1 || y0 > y2 || y2 >= y1) {
-      i = (y2 < y0) << 1 | x2 < x0;
+    while (x0 > x3 || x3 >= x1 || y0 > y3 || y3 >= y1) {
+      i = (y3 < y0) << 1 | x3 < x0;
       parent = new Array(4), parent[i] = node, node = parent, z *= 2;
       switch (i) {
         case 0:
@@ -5808,17 +5808,17 @@ function quad_default(node, x0, y0, x1, y1) {
 }
 
 // node_modules/d3-quadtree/src/find.js
-function find_default(x2, y2, radius) {
-  var data, x0 = this._x0, y0 = this._y0, x1, y1, x22, y22, x3 = this._x1, y3 = this._y1, quads = [], node = this._root, q, i;
-  if (node) quads.push(new quad_default(node, x0, y0, x3, y3));
+function find_default(x3, y3, radius) {
+  var data, x0 = this._x0, y0 = this._y0, x1, y1, x22, y22, x32 = this._x1, y32 = this._y1, quads = [], node = this._root, q, i;
+  if (node) quads.push(new quad_default(node, x0, y0, x32, y32));
   if (radius == null) radius = Infinity;
   else {
-    x0 = x2 - radius, y0 = y2 - radius;
-    x3 = x2 + radius, y3 = y2 + radius;
+    x0 = x3 - radius, y0 = y3 - radius;
+    x32 = x3 + radius, y32 = y3 + radius;
     radius *= radius;
   }
   while (q = quads.pop()) {
-    if (!(node = q.node) || (x1 = q.x0) > x3 || (y1 = q.y0) > y3 || (x22 = q.x1) < x0 || (y22 = q.y1) < y0) continue;
+    if (!(node = q.node) || (x1 = q.x0) > x32 || (y1 = q.y0) > y32 || (x22 = q.x1) < x0 || (y22 = q.y1) < y0) continue;
     if (node.length) {
       var xm = (x1 + x22) / 2, ym = (y1 + y22) / 2;
       quads.push(
@@ -5827,17 +5827,17 @@ function find_default(x2, y2, radius) {
         new quad_default(node[1], xm, y1, x22, ym),
         new quad_default(node[0], x1, y1, xm, ym)
       );
-      if (i = (y2 >= ym) << 1 | x2 >= xm) {
+      if (i = (y3 >= ym) << 1 | x3 >= xm) {
         q = quads[quads.length - 1];
         quads[quads.length - 1] = quads[quads.length - 1 - i];
         quads[quads.length - 1 - i] = q;
       }
     } else {
-      var dx = x2 - +this._x.call(null, node.data), dy = y2 - +this._y.call(null, node.data), d2 = dx * dx + dy * dy;
+      var dx = x3 - +this._x.call(null, node.data), dy = y3 - +this._y.call(null, node.data), d2 = dx * dx + dy * dy;
       if (d2 < radius) {
         var d = Math.sqrt(radius = d2);
-        x0 = x2 - d, y0 = y2 - d;
-        x3 = x2 + d, y3 = y2 + d;
+        x0 = x3 - d, y0 = y3 - d;
+        x32 = x3 + d, y32 = y3 + d;
         data = node.data;
       }
     }
@@ -5847,13 +5847,13 @@ function find_default(x2, y2, radius) {
 
 // node_modules/d3-quadtree/src/remove.js
 function remove_default(d) {
-  if (isNaN(x2 = +this._x.call(null, d)) || isNaN(y2 = +this._y.call(null, d))) return this;
-  var parent, node = this._root, retainer, previous, next, x0 = this._x0, y0 = this._y0, x1 = this._x1, y1 = this._y1, x2, y2, xm, ym, right, bottom, i, j;
+  if (isNaN(x3 = +this._x.call(null, d)) || isNaN(y3 = +this._y.call(null, d))) return this;
+  var parent, node = this._root, retainer, previous, next, x0 = this._x0, y0 = this._y0, x1 = this._x1, y1 = this._y1, x3, y3, xm, ym, right, bottom, i, j;
   if (!node) return this;
   if (node.length) while (true) {
-    if (right = x2 >= (xm = (x0 + x1) / 2)) x0 = xm;
+    if (right = x3 >= (xm = (x0 + x1) / 2)) x0 = xm;
     else x1 = xm;
-    if (bottom = y2 >= (ym = (y0 + y1) / 2)) y0 = ym;
+    if (bottom = y3 >= (ym = (y0 + y1) / 2)) y0 = ym;
     else y1 = ym;
     if (!(parent = node, node = node[i = bottom << 1 | right])) return this;
     if (!node.length) break;
@@ -5945,13 +5945,13 @@ function y_default(_) {
 }
 
 // node_modules/d3-quadtree/src/quadtree.js
-function quadtree(nodes, x2, y2) {
-  var tree = new Quadtree(x2 == null ? defaultX : x2, y2 == null ? defaultY : y2, NaN, NaN, NaN, NaN);
+function quadtree(nodes, x3, y3) {
+  var tree = new Quadtree(x3 == null ? defaultX : x3, y3 == null ? defaultY : y3, NaN, NaN, NaN, NaN);
   return nodes == null ? tree : tree.addAll(nodes);
 }
-function Quadtree(x2, y2, x0, y0, x1, y1) {
-  this._x = x2;
-  this._y = y2;
+function Quadtree(x3, y3, x0, y0, x1, y1) {
+  this._x = x3;
+  this._y = y3;
   this._x0 = x0;
   this._y0 = y0;
   this._x1 = x1;
@@ -5995,15 +5995,88 @@ treeProto.x = x_default;
 treeProto.y = y_default;
 
 // node_modules/d3-force/src/constant.js
-function constant_default(x2) {
+function constant_default(x3) {
   return function() {
-    return x2;
+    return x3;
   };
 }
 
 // node_modules/d3-force/src/jiggle.js
 function jiggle_default(random) {
   return (random() - 0.5) * 1e-6;
+}
+
+// node_modules/d3-force/src/collide.js
+function x(d) {
+  return d.x + d.vx;
+}
+function y(d) {
+  return d.y + d.vy;
+}
+function collide_default(radius) {
+  var nodes, radii, random, strength = 1, iterations = 1;
+  if (typeof radius !== "function") radius = constant_default(radius == null ? 1 : +radius);
+  function force() {
+    var i, n = nodes.length, tree, node, xi, yi, ri, ri2;
+    for (var k = 0; k < iterations; ++k) {
+      tree = quadtree(nodes, x, y).visitAfter(prepare);
+      for (i = 0; i < n; ++i) {
+        node = nodes[i];
+        ri = radii[node.index], ri2 = ri * ri;
+        xi = node.x + node.vx;
+        yi = node.y + node.vy;
+        tree.visit(apply);
+      }
+    }
+    function apply(quad, x0, y0, x1, y1) {
+      var data = quad.data, rj = quad.r, r = ri + rj;
+      if (data) {
+        if (data.index > node.index) {
+          var x3 = xi - data.x - data.vx, y3 = yi - data.y - data.vy, l = x3 * x3 + y3 * y3;
+          if (l < r * r) {
+            if (x3 === 0) x3 = jiggle_default(random), l += x3 * x3;
+            if (y3 === 0) y3 = jiggle_default(random), l += y3 * y3;
+            l = (r - (l = Math.sqrt(l))) / l * strength;
+            node.vx += (x3 *= l) * (r = (rj *= rj) / (ri2 + rj));
+            node.vy += (y3 *= l) * r;
+            data.vx -= x3 * (r = 1 - r);
+            data.vy -= y3 * r;
+          }
+        }
+        return;
+      }
+      return x0 > xi + r || x1 < xi - r || y0 > yi + r || y1 < yi - r;
+    }
+  }
+  function prepare(quad) {
+    if (quad.data) return quad.r = radii[quad.data.index];
+    for (var i = quad.r = 0; i < 4; ++i) {
+      if (quad[i] && quad[i].r > quad.r) {
+        quad.r = quad[i].r;
+      }
+    }
+  }
+  function initialize() {
+    if (!nodes) return;
+    var i, n = nodes.length, node;
+    radii = new Array(n);
+    for (i = 0; i < n; ++i) node = nodes[i], radii[node.index] = +radius(node, i, nodes);
+  }
+  force.initialize = function(_nodes, _random) {
+    nodes = _nodes;
+    random = _random;
+    initialize();
+  };
+  force.iterations = function(_) {
+    return arguments.length ? (iterations = +_, force) : iterations;
+  };
+  force.strength = function(_) {
+    return arguments.length ? (strength = +_, force) : strength;
+  };
+  force.radius = function(_) {
+    return arguments.length ? (radius = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : radius;
+  };
+  return force;
 }
 
 // node_modules/d3-force/src/link.js
@@ -6023,17 +6096,17 @@ function link_default(links) {
   }
   function force(alpha) {
     for (var k = 0, n = links.length; k < iterations; ++k) {
-      for (var i = 0, link, source, target, x2, y2, l, b; i < n; ++i) {
+      for (var i = 0, link, source, target, x3, y3, l, b; i < n; ++i) {
         link = links[i], source = link.source, target = link.target;
-        x2 = target.x + target.vx - source.x - source.vx || jiggle_default(random);
-        y2 = target.y + target.vy - source.y - source.vy || jiggle_default(random);
-        l = Math.sqrt(x2 * x2 + y2 * y2);
+        x3 = target.x + target.vx - source.x - source.vx || jiggle_default(random);
+        y3 = target.y + target.vy - source.y - source.vy || jiggle_default(random);
+        l = Math.sqrt(x3 * x3 + y3 * y3);
         l = (l - distances[i]) / l * alpha * strengths[i];
-        x2 *= l, y2 *= l;
-        target.vx -= x2 * (b = bias[i]);
-        target.vy -= y2 * b;
-        source.vx += x2 * (b = 1 - b);
-        source.vy += y2 * b;
+        x3 *= l, y3 *= l;
+        target.vx -= x3 * (b = bias[i]);
+        target.vy -= y3 * b;
+        source.vx += x3 * (b = 1 - b);
+        source.vy += y3 * b;
       }
     }
   }
@@ -6270,10 +6343,10 @@ function lcg_default() {
 }
 
 // node_modules/d3-force/src/simulation.js
-function x(d) {
+function x2(d) {
   return d.x;
 }
-function y(d) {
+function y2(d) {
   return d.y;
 }
 var initialRadius = 10;
@@ -6359,14 +6432,14 @@ function simulation_default(nodes) {
     force: function(name, _) {
       return arguments.length > 1 ? (_ == null ? forces.delete(name) : forces.set(name, initializeForce(_)), simulation) : forces.get(name);
     },
-    find: function(x2, y2, radius) {
+    find: function(x3, y3, radius) {
       var i = 0, n = nodes.length, dx, dy, d2, node, closest;
       if (radius == null) radius = Infinity;
       else radius *= radius;
       for (i = 0; i < n; ++i) {
         node = nodes[i];
-        dx = x2 - node.x;
-        dy = y2 - node.y;
+        dx = x3 - node.x;
+        dy = y3 - node.y;
         d2 = dx * dx + dy * dy;
         if (d2 < radius) closest = node, radius = d2;
       }
@@ -6382,7 +6455,7 @@ function simulation_default(nodes) {
 function manyBody_default() {
   var nodes, node, random, alpha, strength = constant_default(-30), strengths, distanceMin2 = 1, distanceMax2 = Infinity, theta2 = 0.81;
   function force(_) {
-    var i, n = nodes.length, tree = quadtree(nodes, x, y).visitAfter(accumulate);
+    var i, n = nodes.length, tree = quadtree(nodes, x2, y2).visitAfter(accumulate);
     for (alpha = _, i = 0; i < n; ++i) node = nodes[i], tree.visit(apply);
   }
   function initialize() {
@@ -6392,15 +6465,15 @@ function manyBody_default() {
     for (i = 0; i < n; ++i) node2 = nodes[i], strengths[node2.index] = +strength(node2, i, nodes);
   }
   function accumulate(quad) {
-    var strength2 = 0, q, c2, weight = 0, x2, y2, i;
+    var strength2 = 0, q, c2, weight = 0, x3, y3, i;
     if (quad.length) {
-      for (x2 = y2 = i = 0; i < 4; ++i) {
+      for (x3 = y3 = i = 0; i < 4; ++i) {
         if ((q = quad[i]) && (c2 = Math.abs(q.value))) {
-          strength2 += q.value, weight += c2, x2 += c2 * q.x, y2 += c2 * q.y;
+          strength2 += q.value, weight += c2, x3 += c2 * q.x, y3 += c2 * q.y;
         }
       }
-      quad.x = x2 / weight;
-      quad.y = y2 / weight;
+      quad.x = x3 / weight;
+      quad.y = y3 / weight;
     } else {
       q = quad;
       q.x = q.data.x;
@@ -6411,29 +6484,29 @@ function manyBody_default() {
     }
     quad.value = strength2;
   }
-  function apply(quad, x1, _, x2) {
+  function apply(quad, x1, _, x22) {
     if (!quad.value) return true;
-    var x3 = quad.x - node.x, y2 = quad.y - node.y, w = x2 - x1, l = x3 * x3 + y2 * y2;
+    var x3 = quad.x - node.x, y3 = quad.y - node.y, w = x22 - x1, l = x3 * x3 + y3 * y3;
     if (w * w / theta2 < l) {
       if (l < distanceMax2) {
         if (x3 === 0) x3 = jiggle_default(random), l += x3 * x3;
-        if (y2 === 0) y2 = jiggle_default(random), l += y2 * y2;
+        if (y3 === 0) y3 = jiggle_default(random), l += y3 * y3;
         if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
         node.vx += x3 * quad.value * alpha / l;
-        node.vy += y2 * quad.value * alpha / l;
+        node.vy += y3 * quad.value * alpha / l;
       }
       return true;
     } else if (quad.length || l >= distanceMax2) return;
     if (quad.data !== node || quad.next) {
       if (x3 === 0) x3 = jiggle_default(random), l += x3 * x3;
-      if (y2 === 0) y2 = jiggle_default(random), l += y2 * y2;
+      if (y3 === 0) y3 = jiggle_default(random), l += y3 * y3;
       if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
     }
     do
       if (quad.data !== node) {
         w = strengths[quad.data.index] * alpha / l;
         node.vx += x3 * w;
-        node.vy += y2 * w;
+        node.vy += y3 * w;
       }
     while (quad = quad.next);
   }
@@ -6458,9 +6531,9 @@ function manyBody_default() {
 }
 
 // node_modules/d3-force/src/x.js
-function x_default2(x2) {
+function x_default2(x3) {
   var strength = constant_default(0.1), nodes, strengths, xz;
-  if (typeof x2 !== "function") x2 = constant_default(x2 == null ? 0 : +x2);
+  if (typeof x3 !== "function") x3 = constant_default(x3 == null ? 0 : +x3);
   function force(alpha) {
     for (var i = 0, n = nodes.length, node; i < n; ++i) {
       node = nodes[i], node.vx += (xz[i] - node.x) * strengths[i] * alpha;
@@ -6472,7 +6545,7 @@ function x_default2(x2) {
     strengths = new Array(n);
     xz = new Array(n);
     for (i = 0; i < n; ++i) {
-      strengths[i] = isNaN(xz[i] = +x2(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
+      strengths[i] = isNaN(xz[i] = +x3(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
     }
   }
   force.initialize = function(_) {
@@ -6483,15 +6556,15 @@ function x_default2(x2) {
     return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
   };
   force.x = function(_) {
-    return arguments.length ? (x2 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : x2;
+    return arguments.length ? (x3 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : x3;
   };
   return force;
 }
 
 // node_modules/d3-force/src/y.js
-function y_default2(y2) {
+function y_default2(y3) {
   var strength = constant_default(0.1), nodes, strengths, yz;
-  if (typeof y2 !== "function") y2 = constant_default(y2 == null ? 0 : +y2);
+  if (typeof y3 !== "function") y3 = constant_default(y3 == null ? 0 : +y3);
   function force(alpha) {
     for (var i = 0, n = nodes.length, node; i < n; ++i) {
       node = nodes[i], node.vy += (yz[i] - node.y) * strengths[i] * alpha;
@@ -6503,7 +6576,7 @@ function y_default2(y2) {
     strengths = new Array(n);
     yz = new Array(n);
     for (i = 0; i < n; ++i) {
-      strengths[i] = isNaN(yz[i] = +y2(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
+      strengths[i] = isNaN(yz[i] = +y3(nodes[i], i, nodes)) ? 0 : +strength(nodes[i], i, nodes);
     }
   }
   force.initialize = function(_) {
@@ -6514,7 +6587,7 @@ function y_default2(y2) {
     return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
   };
   force.y = function(_) {
-    return arguments.length ? (y2 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : y2;
+    return arguments.length ? (y3 = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : y3;
   };
   return force;
 }
@@ -6524,7 +6597,12 @@ var import_sigma = __toESM(require_sigma2(), 1);
 var NODE_DEFAULT_SIZE = 12;
 var POSITIONS_KEY = "threads-graph-positions";
 var CLICK_PX = 6;
-var LERP_K = 0.45;
+var LERP_K = 0.52;
+var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 6;
+var IDLE_ORBIT = 95e-5;
+var IDLE_ATTRACT = 0.022;
+var DRAG_SIM_TICKS = 9;
+var IDLE_SIM_TICKS = 2;
 var NODE_BASE = "#c9a962";
 var NODE_MUTED = "#5c5238";
 var NODE_FOCUS = "#e8cf7a";
@@ -6791,7 +6869,14 @@ function runGraph(container, dataEl) {
   const simulation = simulation_default(simNodes).force(
     "link",
     link_default(simLinks).distance((l) => l.distance).strength(0.62)
-  ).force("charge", manyBody_default().strength(-24)).force("x", x_default2((d) => d.anchorX).strength(0.038)).force("y", y_default2((d) => d.anchorY).strength(0.038)).alphaTarget(0).stop();
+  ).force("charge", manyBody_default().strength(-24)).force(
+    "collide",
+    collide_default().radius(() => COLLIDE_RADIUS).strength(0.88)
+  ).force("x", x_default2((d) => d.anchorX).strength(0.032)).force("y", y_default2((d) => d.anchorY).strength(0.032)).alphaTarget(0).stop();
+  let pointerInsideContainer = false;
+  let lastGraphPointer = { x: 0, y: 0 };
+  let dragActive = false;
+  let idleRaf = 0;
   let hoverFocus = null;
   let hoverHighlightSet = null;
   function rebuildHighlightSet(nodeId) {
@@ -6808,6 +6893,8 @@ function runGraph(container, dataEl) {
   }
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
+    const labelsAllowed = pointerInsideContainer || dragActive;
+    attr.label = labelsAllowed && data.label ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
       return attr;
@@ -6870,8 +6957,56 @@ function runGraph(container, dataEl) {
       settleRaf = 0;
     }
   }
+  function stopIdleLoop() {
+    if (idleRaf) {
+      cancelAnimationFrame(idleRaf);
+      idleRaf = 0;
+    }
+  }
+  function startIdleLoop() {
+    if (idleRaf || !sigma || dragActive || settleRaf || !pointerInsideContainer)
+      return;
+    idleRaf = requestAnimationFrame(idleStep);
+  }
+  function idleStep() {
+    idleRaf = 0;
+    if (!sigma || !pointerInsideContainer || dragActive || settleRaf) return;
+    if (simNodes.length === 0) return;
+    let sx = 0;
+    let sy = 0;
+    for (const n of simNodes) {
+      sx += n.x;
+      sy += n.y;
+    }
+    const p = { x: sx / simNodes.length, y: sy / simNodes.length };
+    const gx = lastGraphPointer.x;
+    const gy = lastGraphPointer.y;
+    const toCx = gx - p.x;
+    const toCy = gy - p.y;
+    const toCLen = Math.hypot(toCx, toCy) || 1;
+    const inf = Math.min(1.4, toCLen / 95);
+    const theta = IDLE_ORBIT * inf;
+    const ct = Math.cos(theta);
+    const st = Math.sin(theta);
+    const pull = IDLE_ATTRACT * 0.018 * inf;
+    for (const n of simNodes) {
+      const rx = n.x - p.x;
+      const ry = n.y - p.y;
+      n.x = p.x + rx * ct - ry * st;
+      n.y = p.y + rx * st + ry * ct;
+      n.x += toCx * pull;
+      n.y += toCy * pull;
+    }
+    simulation.stop();
+    simulation.alpha(Math.max(simulation.alpha(), 0.038));
+    for (let i = 0; i < IDLE_SIM_TICKS; i++) simulation.tick();
+    syncGraphFromSim();
+    sigma.refresh();
+    idleRaf = requestAnimationFrame(idleStep);
+  }
   function startSettleAfterDrag() {
     cancelSettle();
+    stopIdleLoop();
     simulation.stop();
     simulation.alpha(0.42);
     settleDeadline = performance.now() + 800;
@@ -6883,13 +7018,13 @@ function runGraph(container, dataEl) {
         simulation.stop();
         settleRaf = 0;
         persistPositions(graph);
+        if (pointerInsideContainer) startIdleLoop();
         return;
       }
       settleRaf = requestAnimationFrame(settleStep);
     }
     settleRaf = requestAnimationFrame(settleStep);
   }
-  let dragActive = false;
   let dragNode = null;
   let startVp = { x: 0, y: 0 };
   let lastVp = { x: 0, y: 0 };
@@ -6915,15 +7050,16 @@ function runGraph(container, dataEl) {
     const ty = dragTargetGraph.y;
     sn.fx = sn.x + (tx - sn.x) * LERP_K;
     sn.fy = sn.y + (ty - sn.y) * LERP_K;
-    for (let i = 0; i < 5; i++) simulation.tick();
+    for (let i = 0; i < DRAG_SIM_TICKS; i++) simulation.tick();
     syncGraphFromSim();
     sigma.refresh();
     lerpRaf = requestAnimationFrame(lerpStep);
   }
   function onGlobalPointerMove(ev) {
-    if (!dragActive) return;
-    lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
-    dragTargetGraph = sigma.viewportToGraph(lastVp);
+    if (dragActive && sigma) {
+      lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
+      dragTargetGraph = sigma.viewportToGraph(lastVp);
+    }
   }
   function onGlobalPointerUp(ev) {
     if (!dragActive) return;
@@ -6955,6 +7091,8 @@ function runGraph(container, dataEl) {
     sigma.refresh();
     if (dist < CLICK_PX) {
       openPostInNewTab(baseurl, openedNode);
+      sigma.refresh();
+      if (pointerInsideContainer) startIdleLoop();
       return;
     }
     rebuildHighlightSet(null);
@@ -6966,6 +7104,25 @@ function runGraph(container, dataEl) {
   window.addEventListener("pointerup", onGlobalPointerUp);
   window.addEventListener("pointercancel", onGlobalPointerUp);
   try {
+    let updateLastGraphPointerFromEvent = function(ev) {
+      if (!sigma) return;
+      lastGraphPointer = sigma.viewportToGraph(
+        viewportFromClient(container, ev.clientX, ev.clientY)
+      );
+    }, onContainerPointerEnter = function(ev) {
+      pointerInsideContainer = true;
+      updateLastGraphPointerFromEvent(ev);
+      sigma.refresh();
+      startIdleLoop();
+    }, onContainerPointerLeave = function(ev) {
+      const rel = ev.relatedTarget;
+      if (rel && container.contains(rel)) return;
+      pointerInsideContainer = false;
+      stopIdleLoop();
+      sigma.refresh();
+    }, onContainerPointerMove = function(ev) {
+      updateLastGraphPointerFromEvent(ev);
+    };
     sigma = new import_sigma.Sigma(graph, container, {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
@@ -6980,9 +7137,13 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     fitSigmaViewport(sigma, graph);
+    const POINTER_OPTS = { capture: true };
+    container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
+    container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
+    container.addEventListener("pointermove", onContainerPointerMove, POINTER_OPTS);
     sigma.on("enterNode", ({ node }) => {
       rebuildHighlightSet(node);
-      showPanel(node);
+      if (!dragActive) showPanel(node);
       sigma.refresh();
     });
     sigma.on("leaveNode", () => {
@@ -6994,6 +7155,8 @@ function runGraph(container, dataEl) {
     sigma.on("downNode", ({ node, event }) => {
       cancelSettle();
       simulation.stop();
+      stopIdleLoop();
+      hidePanel();
       syncSimFromGraph();
       dragActive = true;
       dragNode = node;
@@ -7006,10 +7169,26 @@ function runGraph(container, dataEl) {
     });
     sigma.on("kill", () => {
       cancelSettle();
+      stopIdleLoop();
       simulation.stop();
       stopLerp();
       dragActive = false;
       dragNode = null;
+      container.removeEventListener(
+        "pointerenter",
+        onContainerPointerEnter,
+        POINTER_OPTS
+      );
+      container.removeEventListener(
+        "pointerleave",
+        onContainerPointerLeave,
+        POINTER_OPTS
+      );
+      container.removeEventListener(
+        "pointermove",
+        onContainerPointerMove,
+        POINTER_OPTS
+      );
       window.removeEventListener("pointermove", onGlobalPointerMove);
       window.removeEventListener("pointerup", onGlobalPointerUp);
       window.removeEventListener("pointercancel", onGlobalPointerUp);
