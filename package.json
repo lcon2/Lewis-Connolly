@@ -2,7 +2,8 @@
   "name": "lewis-connolly-site",
   "private": true,
   "scripts": {
-    "build:threads-graph": "esbuild assets/js/threads-graph.entry.mjs --bundle --format=esm --platform=browser --outfile=assets/js/threads-graph.bundle.js --legal-comments=none"
+    "build:threads-graph": "esbuild assets/js/threads-graph.entry.mjs --bundle --format=esm --platform=browser --outfile=assets/js/threads-graph.bundle.js --legal-comments=none",
+    "validate:thread-edges": "node scripts/validate-post-thread-edges.mjs"
   },
   "devDependencies": {
     "d3-force": "^3.0.0",

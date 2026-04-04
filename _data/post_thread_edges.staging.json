@@ -1,0 +1,4 @@
+{
+  "about": "STAGING ONLY — not read by Jekyll or the Threads page. Draft new edges here during review, then copy the reviewed \"edges\" array into post_thread_edges.json in a PR you approve. Use the same shape as production: source, target, kind (thread | conceptual_bridge). Optional \"note\" keys are ignored by the site and may be stripped before merge.",
+  "edges": []
+}
