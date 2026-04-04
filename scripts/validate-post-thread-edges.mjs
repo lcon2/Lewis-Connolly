@@ -9,7 +9,9 @@ import { fileURLToPath } from "url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const siteDir = join(root, "_site");
-const dataPath = join(root, "_data", "post_thread_edges.json");
+const dataPath = process.argv[2]
+  ? join(root, process.argv[2])
+  : join(root, "_data", "post_thread_edges.json");
 
 const ALLOWED_KINDS = new Set(["thread", "precursor", "conceptual_bridge", "related"]);
 
