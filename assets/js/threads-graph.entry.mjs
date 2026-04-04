@@ -3,7 +3,7 @@
  * (graphology + sigma from npm; output: threads-graph.bundle.js)
  */
 import Graph from "graphology";
-import Sigma from "sigma";
+import { Sigma } from "sigma";
 
 function threadsLightLabelRenderer(context, data, settings) {
   if (!data.label) return;

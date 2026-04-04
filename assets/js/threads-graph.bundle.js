@@ -5850,7 +5850,7 @@ function runGraph(container, dataEl) {
   }
   let sigma = null;
   try {
-    sigma = new import_sigma.default(graph, container, {
+    sigma = new import_sigma.Sigma(graph, container, {
       renderLabels: true,
       defaultNodeColor: "#c9a962",
       defaultEdgeColor: "#6e6e6e",
