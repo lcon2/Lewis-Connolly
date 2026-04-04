@@ -39,8 +39,8 @@ const EDGE_REPULSE_STRENGTH = 0.11;
 const DRAG_CONSTELLATION_ORBIT = 0.00095;
 /** While dragging: pull non-dragged nodes toward cursor (very small). */
 const DRAG_CONSTELLATION_PULL = 0.022;
-/** Show bulk labels only when camera ratio ≥ fit ratio × this (zoom in slightly from initial fit). */
-const LABEL_ZOOM_OVER_FIT = 1.07;
+/** Idle bulk labels when ratio ≥ last fit × this; re-synced after every fitSigmaViewport (settle refit). */
+const LABEL_ZOOM_OVER_FIT = 1;
 /** Simulation ticks per frame while dragging (higher = snappier separation). */
 const DRAG_SIM_TICKS = 9;
 
@@ -912,13 +912,13 @@ function runGraph(container, dataEl) {
     const ratio = typeof cam?.ratio === "number" ? cam.ratio : 0;
     const zoomOk = ratio >= labelRatioThreshold;
     const frameOk = pointerInsideContainer;
-    /** Titles only inside the graph frame and past a modest zoom-in; hover limits to highlight set. */
+    /** Highlighted nodes: always titled (unless dragging). Idle: all titles only in-frame + zoom. */
+    const inHighlight =
+      hoverHighlightSet && hoverHighlightSet.has(node);
     const showTitle =
       !dragActive &&
       data.label &&
-      frameOk &&
-      zoomOk &&
-      (!hoverHighlightSet || hoverHighlightSet.has(node));
+      (inHighlight || (frameOk && zoomOk && !hoverHighlightSet));
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
       attr.color = NODE_BASE;
@@ -1012,6 +1012,9 @@ function runGraph(container, dataEl) {
     }
   }
 
+  /** Recompute label zoom gate from camera after any fitSigmaViewport. */
+  let updateLabelZoomThreshold = () => {};
+
   /**
    * @param {number} alphaStart
    * @param {number} budgetMs
@@ -1033,6 +1036,7 @@ function runGraph(container, dataEl) {
         persistPositions(graph);
         if (refitWhenDone) {
           fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
+          updateLabelZoomThreshold();
         }
         return;
       }
@@ -1080,7 +1084,26 @@ function runGraph(container, dataEl) {
     lerpRaf = requestAnimationFrame(lerpStep);
   }
 
+  function syncPointerInsideGraphFrame(clientX, clientY) {
+    if (!sigma) return;
+    const r = container.getBoundingClientRect();
+    const inside =
+      clientX >= r.left &&
+      clientX < r.right &&
+      clientY >= r.top &&
+      clientY < r.bottom;
+    if (inside !== pointerInsideContainer) {
+      pointerInsideContainer = inside;
+      try {
+        sigma.refresh();
+      } catch {
+        /* ignore */
+      }
+    }
+  }
+
   function onGlobalPointerMove(ev) {
+    syncPointerInsideGraphFrame(ev.clientX, ev.clientY);
     if (dragActive && sigma) {
       lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
       dragTargetGraph = sigma.viewportToGraph(lastVp);
@@ -1088,6 +1111,7 @@ function runGraph(container, dataEl) {
   }
 
   function onGlobalPointerUp(ev) {
+    syncPointerInsideGraphFrame(ev.clientX, ev.clientY);
     if (!dragActive) return;
     lastVp = viewportFromClient(container, ev.clientX, ev.clientY);
     const dist = Math.hypot(lastVp.x - startVp.x, lastVp.y - startVp.y);
@@ -1152,29 +1176,17 @@ function runGraph(container, dataEl) {
     });
     sigmaRef = sigma;
 
+    updateLabelZoomThreshold = () => {
+      const r = sigma.getCamera().getState().ratio;
+      labelRatioThreshold = r * LABEL_ZOOM_OVER_FIT;
+    };
+
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
     }
 
     fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
-    {
-      const rFit = sigma.getCamera().getState().ratio;
-      labelRatioThreshold = rFit * LABEL_ZOOM_OVER_FIT;
-    }
-
-    const POINTER_OPTS = { capture: true };
-    function onContainerPointerEnter() {
-      pointerInsideContainer = true;
-      sigma.refresh();
-    }
-    function onContainerPointerLeave(ev) {
-      const rel = ev.relatedTarget;
-      if (rel && container.contains(rel)) return;
-      pointerInsideContainer = false;
-      sigma.refresh();
-    }
-    container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);
-    container.addEventListener("pointerleave", onContainerPointerLeave, POINTER_OPTS);
+    updateLabelZoomThreshold();
 
     let labelRefreshRaf = 0;
     function requestLabelRefreshFromCamera() {
@@ -1227,16 +1239,6 @@ function runGraph(container, dataEl) {
         labelRefreshRaf = 0;
       }
       camForLabels.removeListener("updated", requestLabelRefreshFromCamera);
-      container.removeEventListener(
-        "pointerenter",
-        onContainerPointerEnter,
-        POINTER_OPTS,
-      );
-      container.removeEventListener(
-        "pointerleave",
-        onContainerPointerLeave,
-        POINTER_OPTS,
-      );
       sigmaRef = null;
       if (bandUnderlay) {
         bandUnderlay.teardown();
