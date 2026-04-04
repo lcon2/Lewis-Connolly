@@ -154,7 +154,8 @@ body {
 .studies .navbar,
 .about .navbar,
 .contact .navbar,
-.archive .navbar {
+.archive .navbar,
+.threads .navbar {
     display: flex;
     justify-content: center; /* Center the combined logo and navigation menu */
     align-items: center;
@@ -264,7 +265,8 @@ body {
 .studies .navbar-content,
 .about .navbar-content,
 .contact .navbar-content,
-.archive .navbar-content {
+.archive .navbar-content,
+.threads .navbar-content {
     display: flex;
     align-items: center; /* Vertically aligns logo and menu */
     gap: 30px; /* Expands spacing between the logo and navigation menu */
@@ -274,7 +276,8 @@ body {
 .studies .logo,
 .about .logo,
 .contact .logo,
-.archive .logo {
+.archive .logo,
+.threads .logo {
     max-width: 80px;
     height: auto;
 }
@@ -283,7 +286,8 @@ body {
 .studies .logo-wrap,
 .about .logo-wrap,
 .contact .logo-wrap,
-.archive .logo-wrap {
+.archive .logo-wrap,
+.threads .logo-wrap {
     position: relative;
     display: block;
     max-width: 80px;
@@ -295,7 +299,8 @@ body {
 .studies .logo-wrap img,
 .about .logo-wrap img,
 .contact .logo-wrap img,
-.archive .logo-wrap img {
+.archive .logo-wrap img,
+.threads .logo-wrap img {
     display: block;
     width: 100%;
     height: auto;
@@ -311,6 +316,8 @@ body {
 .contact .logo-hover,
 .archive .logo-base,
 .archive .logo-hover,
+.threads .logo-base,
+.threads .logo-hover,
 .post .logo-base,
 .post .logo-hover {
     transition: opacity 1s ease, transform 1s ease;
@@ -322,6 +329,7 @@ body {
 .about .logo-hover,
 .contact .logo-hover,
 .archive .logo-hover,
+.threads .logo-hover,
 .post .logo-hover {
     position: absolute;
     left: 50%;
@@ -345,6 +353,8 @@ body {
 .contact .logo-link:focus-visible .logo-hover,
 .archive .logo-link:hover .logo-hover,
 .archive .logo-link:focus-visible .logo-hover,
+.threads .logo-link:hover .logo-hover,
+.threads .logo-link:focus-visible .logo-hover,
 .post .logo-link:hover .logo-hover,
 .post .logo-link:focus-visible .logo-hover {
     opacity: 1;
@@ -360,6 +370,8 @@ body {
 .contact .logo-link:focus-visible .logo-base,
 .archive .logo-link:hover .logo-base,
 .archive .logo-link:focus-visible .logo-base,
+.threads .logo-link:hover .logo-base,
+.threads .logo-link:focus-visible .logo-base,
 .post .logo-link:hover .logo-base,
 .post .logo-link:focus-visible .logo-base {
     opacity: 0;
@@ -374,7 +386,9 @@ body {
 .contact .logo-link:hover .logo-wrap,
 .contact .logo-link:focus-visible .logo-wrap,
 .archive .logo-link:hover .logo-wrap,
-.archive .logo-link:focus-visible .logo-wrap {
+.archive .logo-link:focus-visible .logo-wrap,
+.threads .logo-link:hover .logo-wrap,
+.threads .logo-link:focus-visible .logo-wrap {
     transform: scale(1.03);
 }
 
@@ -390,7 +404,9 @@ body {
 .contact .navbar .logo-link:hover .logo-wrap,
 .contact .navbar .logo-link:focus-visible .logo-wrap,
 .archive.archive-page .navbar .logo-link:hover .logo-wrap,
-.archive.archive-page .navbar .logo-link:focus-visible .logo-wrap {
+.archive.archive-page .navbar .logo-link:focus-visible .logo-wrap,
+.threads .navbar .logo-link:hover .logo-wrap,
+.threads .navbar .logo-link:focus-visible .logo-wrap {
     transform: none;
 }
 
@@ -454,7 +470,8 @@ body {
 .studies .navbar .logo-wrap,
 .about .navbar .logo-wrap,
 .contact .navbar .logo-wrap,
-.archive.archive-page .navbar .logo-wrap {
+.archive.archive-page .navbar .logo-wrap,
+.threads .navbar .logo-wrap {
     position: relative;
     display: block;
     width: calc(70px * 1.1 * 1.1);
@@ -472,7 +489,8 @@ body {
 .studies .navbar .logo-wrap img,
 .about .navbar .logo-wrap img,
 .contact .navbar .logo-wrap img,
-.archive.archive-page .navbar .logo-wrap img {
+.archive.archive-page .navbar .logo-wrap img,
+.threads .navbar .logo-wrap img {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -498,14 +516,17 @@ body {
 .contact .navbar .logo-wrap .logo-base,
 .contact .navbar .logo-wrap .logo-hover,
 .archive.archive-page .navbar .logo-wrap .logo-base,
-.archive.archive-page .navbar .logo-wrap .logo-hover {
+.archive.archive-page .navbar .logo-wrap .logo-hover,
+.threads .navbar .logo-wrap .logo-base,
+.threads .navbar .logo-wrap .logo-hover {
     transition: opacity 1s ease;
 }
 
 .studies .navbar .logo-link,
 .about .navbar .logo-link,
 .contact .navbar .logo-link,
-.archive.archive-page .navbar .logo-link {
+.archive.archive-page .navbar .logo-link,
+.threads .navbar .logo-link {
     display: inline-block;
     line-height: 0;
 }
@@ -544,7 +565,8 @@ body {
 .studies .navbar-menu,
 .about .navbar-menu,
 .contact .navbar-menu,
-.archive .navbar-menu {
+.archive .navbar-menu,
+.threads .navbar-menu {
     display: flex;
     list-style: none;
     gap: 15px;
@@ -556,7 +578,8 @@ body {
 .studies .navbar-menu a,
 .about .navbar-menu a,
 .contact .navbar-menu a,
-.archive .navbar-menu a {
+.archive .navbar-menu a,
+.threads .navbar-menu a {
     white-space: nowrap; /* Prevents the text from wrapping to the next line */
 }
 
@@ -564,7 +587,8 @@ body {
 .studies .navbar-menu a,
 .about .navbar-menu a,
 .contact .navbar-menu a,
-.archive .navbar-menu a {
+.archive .navbar-menu a,
+.threads .navbar-menu a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: 1.2em;
@@ -582,9 +606,11 @@ body {
 .about .navbar-menu a:hover,
 .contact .navbar-menu a:hover,
 .archive .navbar-menu a:hover,
+.threads .navbar-menu a:hover,
 .about .navbar-menu a.is-active,
 .contact .navbar-menu a.is-active,
-.archive .navbar-menu a.is-active {
+.archive .navbar-menu a.is-active,
+.threads .navbar-menu a.is-active {
     background-color: #242424;
     border-color: #d1ae7a;
     color: #d1ae7a;
@@ -1604,7 +1630,8 @@ header {
 
 /* Keep navbar sizing consistent on about/contact pages */
 .about .navbar,
-.contact .navbar {
+.contact .navbar,
+.threads .navbar {
     font-size: 16px;
 }
 
@@ -2764,7 +2791,8 @@ footer {
     .studies .logo,
     .about .logo,
     .contact .logo,
-    .archive .logo {
+    .archive .logo,
+    .threads .logo {
         max-width: 60px; /* Reduces logo size */
     }
 
@@ -2777,7 +2805,8 @@ footer {
     .studies .navbar .logo-wrap,
     .about .navbar .logo-wrap,
     .contact .navbar .logo-wrap,
-    .archive.archive-page .navbar .logo-wrap {
+    .archive.archive-page .navbar .logo-wrap,
+    .threads .navbar .logo-wrap {
         width: calc(60px * 1.1 * 1.1);
         max-width: calc(60px * 1.1 * 1.1);
     }
@@ -3271,7 +3300,8 @@ footer {
 /* Archive Page-Specific Styles */
 
 /* Logo Styling (archive pages; sticky post/category headers use dual logo above) */
-.archive .logo img {
+.archive .logo img,
+.threads .logo img {
     display: block;
     margin: 20px auto 10px;
     max-width: 70px;
@@ -3281,7 +3311,8 @@ footer {
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.archive .logo img:hover {
+.archive .logo img:hover,
+.threads .logo img:hover {
     transform: scale(1.1);
     filter: grayscale(0%) brightness(1.2);
 }
