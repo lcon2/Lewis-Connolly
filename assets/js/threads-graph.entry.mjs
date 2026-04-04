@@ -1,8 +1,9 @@
 /**
- * Pinned CDN: graphology@0.25.4, sigma@2.0.0 (no ForceAtlas2; radial layout by date).
+ * Source for the Threads map. Rebuild bundle: npm install && npm run build:threads-graph
+ * (graphology + sigma from npm; output: threads-graph.bundle.js)
  */
-import Graph from "https://esm.sh/graphology@0.25.4";
-import Sigma from "https://esm.sh/sigma@2.0.0";
+import Graph from "graphology";
+import Sigma from "sigma";
 
 function threadsLightLabelRenderer(context, data, settings) {
   if (!data.label) return;
@@ -58,12 +59,40 @@ function fitSigmaViewport(sigma, graph, padding = 72) {
   sigma.refresh();
 }
 
-function showGraphError(container, message) {
+function showGraphError(container, summary, err) {
+  const wrap = document.createElement("div");
+  wrap.className = "threads-graph-error";
+  wrap.setAttribute("role", "alert");
   const p = document.createElement("p");
-  p.className = "threads-graph-error";
-  p.setAttribute("role", "alert");
-  p.textContent = message;
-  container.appendChild(p);
+  p.className = "threads-graph-error__summary";
+  p.textContent = summary;
+  wrap.appendChild(p);
+  if (err) {
+    const det = document.createElement("details");
+    det.className = "threads-graph-error__details";
+    const sm = document.createElement("summary");
+    sm.textContent = "Technical details";
+    det.appendChild(sm);
+    const pre = document.createElement("pre");
+    pre.textContent = `${err.name}: ${err.message}`;
+    det.appendChild(pre);
+    wrap.appendChild(det);
+  }
+  container.appendChild(wrap);
+}
+
+function isWebglAvailable() {
+  const canvas = document.createElement("canvas");
+  const opts = { failIfMajorPerformanceCaveat: false };
+  try {
+    return !!(
+      canvas.getContext("webgl2", opts) ||
+      canvas.getContext("webgl", opts) ||
+      canvas.getContext("experimental-webgl", opts)
+    );
+  } catch {
+    return false;
+  }
 }
 
 function runGraph(container, dataEl) {
@@ -72,7 +101,11 @@ function runGraph(container, dataEl) {
     payload = JSON.parse(dataEl.textContent.trim());
   } catch (e) {
     console.error("threads-graph: invalid JSON", e);
-    showGraphError(container, "Could not read graph data. Check the page source JSON block.");
+    showGraphError(
+      container,
+      "Could not read graph data. Check the page source JSON block.",
+      e,
+    );
     return;
   }
 
@@ -85,8 +118,15 @@ function runGraph(container, dataEl) {
     return;
   }
 
-  let sigma = null;
+  if (!isWebglAvailable()) {
+    showGraphError(
+      container,
+      "This map needs WebGL, which is disabled or unavailable in this browser. Try another browser or turn off “disable WebGL” / strict privacy modes.",
+    );
+    return;
+  }
 
+  let graph;
   try {
     const sortedAsc = [...nodes].sort((a, b) => {
       const da = String(a.date || "");
@@ -97,7 +137,7 @@ function runGraph(container, dataEl) {
     const nodeSet = new Set(nodes.map((n) => n.id));
     const posById = layoutRadialByDate(sortedAsc);
 
-    const graph = new Graph({ type: "directed" });
+    graph = new Graph({ type: "directed" });
 
     for (const node of sortedAsc) {
       const p = posById.get(node.id);
@@ -125,7 +165,18 @@ function runGraph(container, dataEl) {
         /* parallel or invalid */
       }
     }
+  } catch (err) {
+    console.error("threads-graph: graph build failed", err);
+    showGraphError(
+      container,
+      "Could not build the post graph from the page data.",
+      err,
+    );
+    return;
+  }
 
+  let sigma = null;
+  try {
     sigma = new Sigma(graph, container, {
       renderLabels: true,
       defaultNodeColor: "#c9a962",
@@ -154,7 +205,7 @@ function runGraph(container, dataEl) {
     });
     ro.observe(container);
   } catch (err) {
-    console.error("threads-graph:", err);
+    console.error("threads-graph: Sigma / rendering failed", err);
     if (sigma && typeof sigma.kill === "function") {
       try {
         sigma.kill();
@@ -164,7 +215,8 @@ function runGraph(container, dataEl) {
     }
     showGraphError(
       container,
-      "The graph could not start (WebGL, layout, or script loading). Try another browser or check the developer console.",
+      "The graph viewer could not start. See technical details below or the browser console.",
+      err,
     );
   }
 }

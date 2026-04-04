@@ -38,6 +38,9 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - assets/js/threads-graph.entry.mjs
   - node_modules/
   - vendor/bundle/
   - vendor/cache/

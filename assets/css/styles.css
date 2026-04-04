@@ -4394,8 +4394,10 @@ footer {
     position: absolute;
     inset: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 14px;
     padding: 24px;
     text-align: center;
     font-size: 0.95rem;
@@ -4403,6 +4405,37 @@ footer {
     color: #c8c4bf;
     background: rgba(18, 18, 18, 0.92);
     z-index: 2;
+    overflow: auto;
+}
+
+.threads-graph-error__summary {
+    margin: 0;
+    max-width: 36rem;
+}
+
+.threads-graph-error__details {
+    text-align: left;
+    max-width: 42rem;
+    width: 100%;
+    font-size: 0.85rem;
+    color: #a8a49e;
+}
+
+.threads-graph-error__details summary {
+    cursor: pointer;
+    color: #c9a962;
+    margin-bottom: 8px;
+}
+
+.threads-graph-error__details pre {
+    margin: 0;
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.45);
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .threads-post-list {
