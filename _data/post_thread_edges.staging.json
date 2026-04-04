@@ -1,5 +1,5 @@
 {
-  "about": "STAGING — not loaded by the site. Baseline = production post_thread_edges.json. Editorial tranches include rationale (optional_review marks edges to drop unless later batches reinforce). Batches 1–2 as before; Batch 3 = 2018-03-21–2018-05-22. Validate: node scripts/validate-post-thread-edges.mjs _data/post_thread_edges.staging.json",
+  "about": "STAGING — not loaded by the site. Baseline = production post_thread_edges.json. Editorial tranches include rationale (optional_review marks edges to drop unless later batches reinforce). Batch 4 = 2018-05-28–2018-08-06. Validate: node scripts/validate-post-thread-edges.mjs _data/post_thread_edges.staging.json",
   "edges": [
     {
       "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
@@ -219,6 +219,54 @@
       "target": "/2018/05/14/the-tree-of-life-2011-a-review/",
       "kind": "conceptual_bridge",
       "rationale": "James’s insistence that each psyche is its own world of meaning clarifies why Malick’s transcendent guarantor-God can feel simultaneously compelling on screen and theologically alien from another interior economy."
+    },
+    {
+      "source": "/2018/06/03/the-giving-tree/",
+      "target": "/2018/06/18/falling-upward/",
+      "kind": "thread",
+      "rationale": "Silverstein’s ego–Self parable gives the mythic image Rohr then names as leaving the first-half ‘container’ for a reconciled second journey beyond mere identity maintenance."
+    },
+    {
+      "source": "/2018/06/11/the-writings-on-the-wall/",
+      "target": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "kind": "conceptual_bridge",
+      "rationale": "Exilic storytelling that fuses catastrophe with textual destiny sets up Parker’s contrast between frozen, time-proof dogma and the permanent intuition of love of God and neighbour."
+    },
+    {
+      "source": "/2018/06/18/falling-upward/",
+      "target": "/2018/06/25/to-be-a-contrarian/",
+      "kind": "conceptual_bridge",
+      "rationale": "Rohr’s insistence on outgrowing the first-half ego shell assumes the next week’s Emersonian refusal to let tribe and label do your thinking for you."
+    },
+    {
+      "source": "/2018/06/25/to-be-a-contrarian/",
+      "target": "/2018/07/23/pale-fire-lunar-light/",
+      "kind": "conceptual_bridge",
+      "rationale": "Commitment to speak what one actually thinks now is the ethical backdrop for Nabokov’s warning that interpreters can hijack a text until the poem serves the reader’s fantasy."
+    },
+    {
+      "source": "/2018/07/16/my-closed-right-eye/",
+      "target": "/2018/07/30/lammas-address/",
+      "kind": "thread",
+      "rationale": "The Lammas piece explicitly folds Mach’s zero-distance vantage and Douglas Harding’s ‘headlessness’ into Emerson’s transparent eyeball as one continuous phenomenology of selfless awareness."
+    },
+    {
+      "source": "/2018/07/23/pale-fire-lunar-light/",
+      "target": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "kind": "conceptual_bridge",
+      "rationale": "Kinbote’s annexation of Shade’s poem exemplifies the same selective Jesus-construction Parker attacks when party doctrine stands between the reader and the transient/permanent distinction."
+    },
+    {
+      "source": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "target": "/2018/08/06/understanding-the-loaves/",
+      "kind": "conceptual_bridge",
+      "rationale": "Parker’s separation of disposable husk from pure religion of love frames the Johannine loaves sequence as mythic pedagogy against spiritual self-interest masquerading as faith."
+    },
+    {
+      "source": "/2018/07/30/lammas-address/",
+      "target": "/2018/08/06/understanding-the-loaves/",
+      "kind": "thread",
+      "rationale": "Harvest bread as collective-unconscious thanksgiving carries straight into John’s bread-of-life discourse read as correcting crowds who want miraculous provision instead of enacted kingdom generosity."
     }
   ]
 }
