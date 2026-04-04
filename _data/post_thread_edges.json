@@ -455,6 +455,76 @@
       "source": "/2019/01/23/transforming-from-the-inside/",
       "target": "/2019/02/11/the-alchemists-beaker/",
       "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/02/18/planes-of-existence/",
+      "target": "/2019/02/25/the-wounded-healer/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/02/25/the-wounded-healer/",
+      "target": "/2019/03/03/the-transfiguration/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/02/18/planes-of-existence/",
+      "target": "/2019/03/11/leaves-of-grass/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/03/21/sacrificing-isaac/",
+      "target": "/2019/03/24/journey-through-lent/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/03/24/journey-through-lent/",
+      "target": "/2019/03/31/the-great-mother/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2019/04/08/blavatsky-emerson-and-the-tree-of-knowledge/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/04/15/neville-goddard-and-your-imagination/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/04/21/reinterpreting-the-resurrection-mythos/",
+      "target": "/2019/04/28/a-green-apple/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/04/28/a-green-apple/",
+      "target": "/2019/05/12/the-isle-of-the-dead/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/05/12/the-isle-of-the-dead/",
+      "target": "/2019/05/20/philip-and-the-eunuch/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/05/20/philip-and-the-eunuch/",
+      "target": "/2019/05/27/american-pie/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/06/16/barfield-and-the-landscape-of-imagination/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/06/24/britannia-marianne-and-columbia/",
+      "target": "/2019/07/02/david-s-terry-life-before-the-trigger/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2019/07/08/philosophy-of-the-bouquet/",
+      "target": "/2019/07/08/pneumanosophy/",
+      "kind": "conceptual_bridge"
     }
   ]
 }

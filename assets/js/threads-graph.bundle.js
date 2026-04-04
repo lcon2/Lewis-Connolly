@@ -6546,7 +6546,7 @@ var EDGE_REPULSE_MARGIN = 26;
 var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
 var DRAG_CONSTELLATION_PULL = 0.022;
-var LABEL_ZOOM_OVER_FIT = 1;
+var LABEL_ZOOM_OVER_FIT = 1.06;
 var DRAG_SIM_TICKS = 9;
 var NODE_BASE = "#c9a962";
 var NODE_MUTED = "#5c5238";
@@ -6563,7 +6563,7 @@ var EDGE_SIZE_CONCEPTUAL = 2.3;
 var EDGE_SIZE_THREAD = 3.4;
 var TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.038)";
 var TIME_BAND_STEPS = 72;
-var DRAW_QUARTERLY_BAND_UNDERLAY = true;
+var DRAW_QUARTERLY_BAND_UNDERLAY = false;
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
 }
@@ -7477,11 +7477,20 @@ function runGraph(container, dataEl) {
   window.addEventListener("pointerup", onGlobalPointerUp);
   window.addEventListener("pointercancel", onGlobalPointerUp);
   try {
-    let requestLabelRefreshFromCamera = function() {
+    let syncSigmaLabelDensityForZoom = function() {
+      const r = sigma.getCamera().getState().ratio;
+      if (typeof r === "number" && Number.isFinite(r) && r > 0) {
+        sigma.settings.labelDensity = Math.max(
+          labelDensityBase * r * r,
+          labelDensityBase * 0.04
+        );
+      }
+    }, requestLabelRefreshFromCamera = function() {
       if (labelRefreshRaf) return;
       labelRefreshRaf = requestAnimationFrame(() => {
         labelRefreshRaf = 0;
         try {
+          syncSigmaLabelDensityForZoom();
           sigma.refresh();
         } catch {
         }
@@ -7501,9 +7510,11 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     sigmaRef = sigma;
+    const labelDensityBase = labelDensityForCount;
     updateLabelZoomThreshold = () => {
       const r = sigma.getCamera().getState().ratio;
       labelRatioThreshold = r * LABEL_ZOOM_OVER_FIT;
+      syncSigmaLabelDensityForZoom();
     };
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);

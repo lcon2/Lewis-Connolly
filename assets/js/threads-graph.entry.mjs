@@ -36,8 +36,11 @@ const EDGE_REPULSE_STRENGTH = 0.11;
 const DRAG_CONSTELLATION_ORBIT = 0.00095;
 /** While dragging: pull non-dragged nodes toward cursor (very small). */
 const DRAG_CONSTELLATION_PULL = 0.022;
-/** Idle bulk labels when ratio ≥ last fit × this; re-synced after every fitSigmaViewport (settle refit). */
-const LABEL_ZOOM_OVER_FIT = 1;
+/**
+ * Idle bulk labels when camera ratio ≥ fit ratio × this (re-synced after fitSigmaViewport).
+ * Slightly above 1 avoids a full wall of text at the initial fit while staying monotonic in ratio.
+ */
+const LABEL_ZOOM_OVER_FIT = 1.06;
 /** Simulation ticks per frame while dragging (higher = snappier separation). */
 const DRAG_SIM_TICKS = 9;
 
@@ -62,8 +65,8 @@ const EDGE_SIZE_THREAD = 3.4;
 /** Alternating calendar bands: very subtle grey (elegant, barely visible). */
 const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.038)";
 const TIME_BAND_STEPS = 72;
-/** Draw 2D annulus underlay (even bands only); layout uses same calendar band model. */
-const DRAW_QUARTERLY_BAND_UNDERLAY = true;
+/** When false, calendar bands affect layout/forces only; no grey annulus underlay in the UI. */
+const DRAW_QUARTERLY_BAND_UNDERLAY = false;
 
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
@@ -1211,9 +1214,24 @@ function runGraph(container, dataEl) {
     });
     sigmaRef = sigma;
 
+    /** Base grid density from post count; scaled by ratio² each frame so Sigma's ceil(d/r²) stays stable when zooming in. */
+    const labelDensityBase = labelDensityForCount;
+
+    function syncSigmaLabelDensityForZoom() {
+      const r = sigma.getCamera().getState().ratio;
+      if (typeof r === "number" && Number.isFinite(r) && r > 0) {
+        /* LabelGrid uses ceil(settings.labelDensity / ratio²); compensate so zoom-in does not cull more labels. */
+        sigma.settings.labelDensity = Math.max(
+          labelDensityBase * r * r,
+          labelDensityBase * 0.04,
+        );
+      }
+    }
+
     updateLabelZoomThreshold = () => {
       const r = sigma.getCamera().getState().ratio;
       labelRatioThreshold = r * LABEL_ZOOM_OVER_FIT;
+      syncSigmaLabelDensityForZoom();
     };
 
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
@@ -1229,6 +1247,7 @@ function runGraph(container, dataEl) {
       labelRefreshRaf = requestAnimationFrame(() => {
         labelRefreshRaf = 0;
         try {
+          syncSigmaLabelDensityForZoom();
           sigma.refresh();
         } catch {
           /* ignore */
