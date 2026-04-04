@@ -26,6 +26,22 @@ Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 
 Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year per PR). Small PRs are easier to review than one huge diff.
 
+### Tranche checklist (repeat per batch)
+
+1. Run `bundle exec jekyll build`.
+2. Run `npm run inventory:thread-posts > scratch-urls.txt` (optional) to list every post URL that exists in `_site/`—use exact strings for `source` / `target`.
+3. Draft edges in `_data/post_thread_edges.staging.json` (or a branch-only copy).
+4. Run `npm run validate:thread-edges` after copying reviewed edges into `post_thread_edges.json`.
+5. Open `/threads/` locally and skim density and band layout.
+6. Merge PR when satisfied.
+
+### Commands
+
+| Command | Purpose |
+|---------|--------|
+| `npm run inventory:thread-posts` | Print all post URLs (stderr shows count) |
+| `npm run validate:thread-edges` | Validate production JSON vs `_site/` |
+
 ## Automation vs manual
 
 | Task | Owner |

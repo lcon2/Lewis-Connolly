@@ -6530,60 +6530,22 @@ function manyBody_default() {
   return force;
 }
 
-// node_modules/d3-force/src/radial.js
-function radial_default(radius, x3, y3) {
-  var nodes, strength = constant_default(0.1), strengths, radiuses;
-  if (typeof radius !== "function") radius = constant_default(+radius);
-  if (x3 == null) x3 = 0;
-  if (y3 == null) y3 = 0;
-  function force(alpha) {
-    for (var i = 0, n = nodes.length; i < n; ++i) {
-      var node = nodes[i], dx = node.x - x3 || 1e-6, dy = node.y - y3 || 1e-6, r = Math.sqrt(dx * dx + dy * dy), k = (radiuses[i] - r) * strengths[i] * alpha / r;
-      node.vx += dx * k;
-      node.vy += dy * k;
-    }
-  }
-  function initialize() {
-    if (!nodes) return;
-    var i, n = nodes.length;
-    strengths = new Array(n);
-    radiuses = new Array(n);
-    for (i = 0; i < n; ++i) {
-      radiuses[i] = +radius(nodes[i], i, nodes);
-      strengths[i] = isNaN(radiuses[i]) ? 0 : +strength(nodes[i], i, nodes);
-    }
-  }
-  force.initialize = function(_) {
-    nodes = _, initialize();
-  };
-  force.strength = function(_) {
-    return arguments.length ? (strength = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : strength;
-  };
-  force.radius = function(_) {
-    return arguments.length ? (radius = typeof _ === "function" ? _ : constant_default(+_), initialize(), force) : radius;
-  };
-  force.x = function(_) {
-    return arguments.length ? (x3 = +_, force) : x3;
-  };
-  force.y = function(_) {
-    return arguments.length ? (y3 = +_, force) : y3;
-  };
-  return force;
-}
-
 // assets/js/threads-graph.entry.mjs
 var import_sigma = __toESM(require_sigma2(), 1);
 var NODE_DEFAULT_SIZE = 12;
-var POSITIONS_KEY = "threads-graph-positions-v3";
+var POSITIONS_KEY = "threads-graph-positions-v4";
 var CLICK_PX = 6;
 var LERP_K = 0.52;
 var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
 var TIME_BAND_DAYS = 90;
 var MS_PER_DAY = 864e5;
-var RADIAL_STRENGTH = 0.052;
-var CHARGE_STRENGTH = -38;
+var CHARGE_STRENGTH = -24;
+var MIN_BAND_SHELL_DR = 28;
+var MIN_BAND_VISUAL_EXTRA_DR = 10;
+var BAND_SHELL_PUSH_OUT = 0.78;
+var BAND_SHELL_CENTER = 0.068;
 var EDGE_REPULSE_MARGIN = 26;
-var EDGE_REPULSE_STRENGTH = 0.15;
+var EDGE_REPULSE_STRENGTH = 0.11;
 var DRAG_CONSTELLATION_ORBIT = 95e-5;
 var DRAG_CONSTELLATION_PULL = 0.022;
 var DRAG_SIM_TICKS = 9;
@@ -6600,7 +6562,7 @@ var EDGE_CONCEPTUAL_DIM = "#3d4a52";
 var EDGE_SIZE_REL = 1.2;
 var EDGE_SIZE_CONCEPTUAL = 2.3;
 var EDGE_SIZE_THREAD = 3.4;
-var TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.045)";
+var TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.062)";
 var TIME_BAND_STEPS = 72;
 function isThreadEdgeKind(kind) {
   return kind === "thread" || kind === "precursor";
@@ -6650,6 +6612,78 @@ function radialExtentForPostCount(nodeCount) {
   const n = Math.max(1, nodeCount);
   const rMax = Math.min(560, 240 + Math.sqrt(n) * 26);
   return { rMin, rMax };
+}
+function buildTargetRArray(model) {
+  const R = [];
+  for (let b = 0; b <= model.maxBand; b++) {
+    R.push(model.targetRForBand(b));
+  }
+  return R;
+}
+function annulusForBand(b, R, maxBand, minDr) {
+  let lo = b === 0 ? 0 : (R[b - 1] + R[b]) / 2;
+  let hi = b === maxBand ? R[b] + Math.max(32, maxBand > 0 ? (R[b] - R[b - 1]) / 2 : 36) : (R[b] + R[b + 1]) / 2;
+  const w = hi - lo;
+  if (w < minDr) {
+    const pad = (minDr - w) / 2;
+    lo = Math.max(0, lo - pad);
+    hi = hi + pad;
+  }
+  return { lo, hi };
+}
+function forceBandShell() {
+  let nodes;
+  function force(alpha) {
+    const kOut = BAND_SHELL_PUSH_OUT * alpha;
+    const kIn = BAND_SHELL_CENTER * alpha;
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      const lo = node.rBandMin;
+      const hi = node.rBandMax;
+      const tr = node.targetR;
+      if (typeof lo !== "number" || typeof hi !== "number" || !Number.isFinite(lo) || !Number.isFinite(hi)) {
+        continue;
+      }
+      const r = Math.hypot(node.x, node.y) || 1e-6;
+      const ux = node.x / r;
+      const uy = node.y / r;
+      if (r < lo) {
+        const k = (lo - r) * kOut;
+        node.vx += ux * k;
+        node.vy += uy * k;
+      } else if (r > hi) {
+        const k = (r - hi) * kOut;
+        node.vx -= ux * k;
+        node.vy -= uy * k;
+      } else if (typeof tr === "number" && Number.isFinite(tr)) {
+        const k = (tr - r) * kIn;
+        node.vx += ux * k;
+        node.vy += uy * k;
+      }
+    }
+  }
+  force.initialize = (_) => {
+    nodes = _;
+  };
+  return force;
+}
+function linkBaseDistanceFromChord(sa, ta, kind) {
+  const ra = typeof sa.targetR === "number" && Number.isFinite(sa.targetR) ? sa.targetR : Math.hypot(sa.x, sa.y) || 1;
+  const rb = typeof ta.targetR === "number" && Number.isFinite(ta.targetR) ? ta.targetR : Math.hypot(ta.x, ta.y) || 1;
+  const angA = Math.atan2(sa.y, sa.x);
+  const angB = Math.atan2(ta.y, ta.x);
+  const ax = ra * Math.cos(angA);
+  const ay = ra * Math.sin(angA);
+  const bx = rb * Math.cos(angB);
+  const by = rb * Math.sin(angB);
+  const chord = Math.hypot(bx - ax, by - ay);
+  if (isThreadEdgeKind(kind)) {
+    return Math.max(34, chord * 0.58);
+  }
+  if (kind === "conceptual_bridge") {
+    return Math.max(46, chord * 0.82);
+  }
+  return Math.max(40, chord * 0.72);
 }
 function buildQuarterlyTimeModel(sortedAsc) {
   const n = sortedAsc.length;
@@ -6713,19 +6747,30 @@ function layoutTimeBandsQuarterly(sortedAsc) {
       const t = rank / (n - 1);
       const r = rMin + t * (rMax - rMin);
       const angle = 2 * Math.PI * rank / n - Math.PI / 2;
+      const half = Math.max(16, r * 0.07);
       positions.set(node.id, {
         x: Math.cos(angle) * r,
         y: Math.sin(angle) * r,
-        targetR: r
+        targetR: r,
+        rBandMin: Math.max(0, r - half),
+        rBandMax: r + half
       });
     });
     return positions;
   }
   if (n === 1) {
-    positions.set(sortedAsc[0].id, { x: 0, y: 0, targetR: rMin });
+    const half = Math.max(20, rMin * 0.35);
+    positions.set(sortedAsc[0].id, {
+      x: 0,
+      y: 0,
+      targetR: rMin,
+      rBandMin: Math.max(0, rMin - half),
+      rBandMax: rMin + half
+    });
     return positions;
   }
-  const { bandById, targetRForBand } = model;
+  const { bandById, targetRForBand, maxBand } = model;
+  const R = buildTargetRArray(model);
   const byBand = /* @__PURE__ */ new Map();
   for (const node of sortedAsc) {
     const b = bandById.get(node.id) ?? 0;
@@ -6737,6 +6782,7 @@ function layoutTimeBandsQuarterly(sortedAsc) {
   for (const b of bandKeys) {
     const group = byBand.get(b).slice().sort((a2, c2) => String(a2.date).localeCompare(String(c2.date)));
     const tr = targetRForBand(b);
+    const { lo, hi } = annulusForBand(b, R, maxBand, MIN_BAND_SHELL_DR);
     const k = group.length;
     for (let j = 0; j < k; j++) {
       const node = group[j];
@@ -6744,7 +6790,9 @@ function layoutTimeBandsQuarterly(sortedAsc) {
       positions.set(node.id, {
         x: Math.cos(theta) * tr,
         y: Math.sin(theta) * tr,
-        targetR: tr
+        targetR: tr,
+        rBandMin: lo,
+        rBandMax: hi
       });
     }
     bandPhase += Math.PI / 7;
@@ -6755,16 +6803,13 @@ function drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc, cssW, cssH) {
   ctx.clearRect(0, 0, cssW, cssH);
   const model = buildQuarterlyTimeModel(sortedAsc);
   if (!model.dateMode) return;
-  const { maxBand, targetRForBand } = model;
-  const R = [];
-  for (let b = 0; b <= maxBand; b++) {
-    R.push(targetRForBand(b));
-  }
+  const { maxBand } = model;
+  const R = buildTargetRArray(model);
+  const visualMinDr = MIN_BAND_SHELL_DR + MIN_BAND_VISUAL_EXTRA_DR;
   const steps = TIME_BAND_STEPS;
   for (let b = 0; b <= maxBand; b++) {
     if (b % 2 !== 0) continue;
-    const rLo = b === 0 ? 0 : (R[b - 1] + R[b]) / 2;
-    const rHi = b === maxBand ? R[b] + Math.max(32, maxBand > 0 ? (R[b] - R[b - 1]) / 2 : 32) : (R[b] + R[b + 1]) / 2;
+    let { lo: rLo, hi: rHi } = annulusForBand(b, R, maxBand, visualMinDr);
     if (rHi <= rLo + 2) continue;
     ctx.beginPath();
     for (let i = 0; i <= steps; i++) {
@@ -6871,7 +6916,9 @@ function forceEdgeRepulse(links) {
   };
   return force;
 }
-function fitSigmaViewport(sigma, graph, padding = 88) {
+function fitSigmaViewport(sigma, graph, padding, nodeCount) {
+  const n = typeof nodeCount === "number" && nodeCount > 0 ? nodeCount : 24;
+  const pad = typeof padding === "number" ? padding : 96 + Math.min(88, Math.max(0, n - 18) * 1.05);
   let minX = Infinity;
   let maxX = -Infinity;
   let minY = Infinity;
@@ -6885,10 +6932,11 @@ function fitSigmaViewport(sigma, graph, padding = 88) {
   });
   if (!Number.isFinite(minX)) return;
   sigma.setCustomBBox({
-    x: [minX - padding, maxX + padding],
-    y: [minY - padding, maxY + padding]
+    x: [minX - pad, maxX + pad],
+    y: [minY - pad, maxY + pad]
   });
-  sigma.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+  const ratio = n > 72 ? 1.14 : n > 42 ? 1.08 : n > 28 ? 1.04 : 1;
+  sigma.getCamera().setState({ x: 0.5, y: 0.5, ratio, angle: 0 });
   sigma.refresh();
 }
 function mergeSavedPositions(graph) {
@@ -6976,6 +7024,8 @@ function runGraph(container, dataEl) {
     showGraphError(container, "No posts to display in this map.");
     return;
   }
+  const graphNodeCount = nodes.length;
+  const labelDensityForCount = graphNodeCount > 72 ? 0.08 : graphNodeCount > 44 ? 0.11 : graphNodeCount > 28 ? 0.14 : 0.18;
   if (!isWebglAvailable()) {
     showGraphError(
       container,
@@ -7035,6 +7085,8 @@ function runGraph(container, dataEl) {
         x: p.x,
         y: p.y,
         targetR: p.targetR,
+        rBandMin: p.rBandMin,
+        rBandMax: p.rBandMax,
         label: node.title || "",
         size: NODE_DEFAULT_SIZE,
         color: NODE_BASE
@@ -7084,51 +7136,48 @@ function runGraph(container, dataEl) {
   const simNodes = [];
   graph.forEachNode((id, a2) => {
     const tr = typeof a2.targetR === "number" && Number.isFinite(a2.targetR) ? a2.targetR : 120;
+    const r0 = Math.hypot(a2.x, a2.y) || tr;
+    const lo = typeof a2.rBandMin === "number" && Number.isFinite(a2.rBandMin) ? a2.rBandMin : Math.max(0, r0 - 28);
+    const hi = typeof a2.rBandMax === "number" && Number.isFinite(a2.rBandMax) ? a2.rBandMax : r0 + 28;
     const o = {
       id,
       x: a2.x,
       y: a2.y,
-      targetR: tr
+      targetR: tr,
+      rBandMin: lo,
+      rBandMax: hi
     };
     simNodes.push(o);
     idToSim.set(id, o);
   });
   const simLinks = [];
   graph.forEachEdge((_edge, attr, s, t) => {
-    const sx = graph.getNodeAttribute(s, "x");
-    const sy = graph.getNodeAttribute(s, "y");
-    const tx = graph.getNodeAttribute(t, "x");
-    const ty = graph.getNodeAttribute(t, "y");
-    const d = Math.hypot(tx - sx, ty - sy);
     const kind = attr.kind || "related";
+    const sa = idToSim.get(s);
+    const ta = idToSim.get(t);
+    if (!sa || !ta) return;
     simLinks.push({
-      source: idToSim.get(s),
-      target: idToSim.get(t),
+      source: sa,
+      target: ta,
       kind,
-      baseDist: Math.max(28, d * 0.92)
+      baseDist: linkBaseDistanceFromChord(sa, ta, kind)
     });
   });
   function linkIdealDistance(link) {
-    const b = link.baseDist;
-    if (isThreadEdgeKind(link.kind)) return b * 0.72;
-    if (link.kind === "conceptual_bridge") return b * 1.22;
-    return b;
+    return link.baseDist;
   }
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.84;
-    if (link.kind === "conceptual_bridge") return 0.24;
-    return 0.52;
+    if (isThreadEdgeKind(link.kind)) return 0.76;
+    if (link.kind === "conceptual_bridge") return 0.2;
+    return 0.44;
   }
   const simulation = simulation_default(simNodes).force(
     "link",
     link_default(simLinks).distance(linkIdealDistance).strength(linkStrength)
   ).force("charge", manyBody_default().strength(CHARGE_STRENGTH)).force(
     "collide",
-    collide_default().radius(() => COLLIDE_RADIUS).strength(0.92)
-  ).force(
-    "radial",
-    radial_default((d) => d.targetR, 0, 0).strength(RADIAL_STRENGTH)
-  ).force("edgeRepulse", forceEdgeRepulse(simLinks)).alphaTarget(0).stop();
+    collide_default().radius(() => COLLIDE_RADIUS).strength(0.9)
+  ).force("bandShell", forceBandShell()).force("edgeRepulse", forceEdgeRepulse(simLinks)).alphaTarget(0).stop();
   let pointerInsideContainer = false;
   let dragActive = false;
   let hoverFocus = null;
@@ -7246,7 +7295,7 @@ function runGraph(container, dataEl) {
         settleRaf = 0;
         persistPositions(graph);
         if (refitWhenDone) {
-          fitSigmaViewport(sigma, graph);
+          fitSigmaViewport(sigma, graph, void 0, graphNodeCount);
         }
         return;
       }
@@ -7349,7 +7398,7 @@ function runGraph(container, dataEl) {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
       defaultEdgeColor: EDGE_REL,
-      labelDensity: 0.22,
+      labelDensity: labelDensityForCount,
       labelSize: 13,
       labelFont: "Georgia, 'Times New Roman', serif",
       labelWeight: "normal",
@@ -7359,7 +7408,7 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
-    fitSigmaViewport(sigma, graph);
+    fitSigmaViewport(sigma, graph, void 0, graphNodeCount);
     runSettle(0.78, 1500, true);
     const POINTER_OPTS = { capture: true };
     container.addEventListener("pointerenter", onContainerPointerEnter, POINTER_OPTS);

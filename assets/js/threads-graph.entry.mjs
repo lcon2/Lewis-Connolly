@@ -7,14 +7,13 @@ import {
   forceCollide,
   forceLink,
   forceManyBody,
-  forceRadial,
   forceSimulation,
 } from "d3-force";
 import { Sigma } from "sigma";
 
 const NODE_DEFAULT_SIZE = 12;
 
-const POSITIONS_KEY = "threads-graph-positions-v3";
+const POSITIONS_KEY = "threads-graph-positions-v4";
 const CLICK_PX = 6;
 /** Lerp toward cursor while dragging (higher = snappier). */
 const LERP_K = 0.52;
@@ -23,12 +22,19 @@ const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
 /** ~3-month bands from oldest post in the set (days). */
 const TIME_BAND_DAYS = 90;
 const MS_PER_DAY = 86400000;
-/** Pull toward time ring (higher = stickier radius). */
-const RADIAL_STRENGTH = 0.052;
-const CHARGE_STRENGTH = -38;
+/** Global repulsion (softer so band shells and links win). */
+const CHARGE_STRENGTH = -24;
+/** Min radial thickness of each time band (graph units) for shell + visuals. */
+const MIN_BAND_SHELL_DR = 28;
+/** Visual-only extra width for annulus fill (can exceed shell). */
+const MIN_BAND_VISUAL_EXTRA_DR = 10;
+/** Push back when outside [rBandMin, rBandMax]. */
+const BAND_SHELL_PUSH_OUT = 0.78;
+/** Weak pull toward targetR when inside the shell. */
+const BAND_SHELL_CENTER = 0.068;
 /** Min distance from non-incident edges (graph units). */
 const EDGE_REPULSE_MARGIN = 26;
-const EDGE_REPULSE_STRENGTH = 0.15;
+const EDGE_REPULSE_STRENGTH = 0.11;
 /** While dragging: orbit scale around barycenter toward cursor (radians, scaled by influence). */
 const DRAG_CONSTELLATION_ORBIT = 0.00095;
 /** While dragging: pull non-dragged nodes toward cursor (very small). */
@@ -55,7 +61,7 @@ const EDGE_SIZE_CONCEPTUAL = 2.3;
 const EDGE_SIZE_THREAD = 3.4;
 
 /** Subtle fill for alternating quarterly bands (viewport canvas, graph-space annuli). */
-const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.045)";
+const TIME_BAND_FILL_EVEN = "rgba(200, 200, 210, 0.062)";
 const TIME_BAND_STEPS = 72;
 
 function isThreadEdgeKind(kind) {
@@ -115,6 +121,105 @@ function radialExtentForPostCount(nodeCount) {
   const n = Math.max(1, nodeCount);
   const rMax = Math.min(560, 240 + Math.sqrt(n) * 26);
   return { rMin, rMax };
+}
+
+/** Discrete target radius per band index (same as layout / underlay). */
+function buildTargetRArray(model) {
+  const R = [];
+  for (let b = 0; b <= model.maxBand; b++) {
+    R.push(model.targetRForBand(b));
+  }
+  return R;
+}
+
+/**
+ * Radial shell for band b in graph space; widened to at least minDr thick.
+ */
+function annulusForBand(b, R, maxBand, minDr) {
+  let lo = b === 0 ? 0 : (R[b - 1] + R[b]) / 2;
+  let hi =
+    b === maxBand
+      ? R[b] +
+        Math.max(32, maxBand > 0 ? (R[b] - R[b - 1]) / 2 : 36)
+      : (R[b] + R[b + 1]) / 2;
+  const w = hi - lo;
+  if (w < minDr) {
+    const pad = (minDr - w) / 2;
+    lo = Math.max(0, lo - pad);
+    hi = hi + pad;
+  }
+  return { lo, hi };
+}
+
+/** Keep nodes inside [rBandMin, rBandMax] with weak drift toward targetR. */
+function forceBandShell() {
+  let nodes;
+  function force(alpha) {
+    const kOut = BAND_SHELL_PUSH_OUT * alpha;
+    const kIn = BAND_SHELL_CENTER * alpha;
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
+      const lo = node.rBandMin;
+      const hi = node.rBandMax;
+      const tr = node.targetR;
+      if (
+        typeof lo !== "number" ||
+        typeof hi !== "number" ||
+        !Number.isFinite(lo) ||
+        !Number.isFinite(hi)
+      ) {
+        continue;
+      }
+      const r = Math.hypot(node.x, node.y) || 1e-6;
+      const ux = node.x / r;
+      const uy = node.y / r;
+      if (r < lo) {
+        const k = (lo - r) * kOut;
+        node.vx += ux * k;
+        node.vy += uy * k;
+      } else if (r > hi) {
+        const k = (r - hi) * kOut;
+        node.vx -= ux * k;
+        node.vy -= uy * k;
+      } else if (typeof tr === "number" && Number.isFinite(tr)) {
+        const k = (tr - r) * kIn;
+        node.vx += ux * k;
+        node.vy += uy * k;
+      }
+    }
+  }
+  force.initialize = (_) => {
+    nodes = _;
+  };
+  return force;
+}
+
+/**
+ * Ideal link length from band geometry (chord at target radii + current angles).
+ */
+function linkBaseDistanceFromChord(sa, ta, kind) {
+  const ra =
+    typeof sa.targetR === "number" && Number.isFinite(sa.targetR)
+      ? sa.targetR
+      : Math.hypot(sa.x, sa.y) || 1;
+  const rb =
+    typeof ta.targetR === "number" && Number.isFinite(ta.targetR)
+      ? ta.targetR
+      : Math.hypot(ta.x, ta.y) || 1;
+  const angA = Math.atan2(sa.y, sa.x);
+  const angB = Math.atan2(ta.y, ta.x);
+  const ax = ra * Math.cos(angA);
+  const ay = ra * Math.sin(angA);
+  const bx = rb * Math.cos(angB);
+  const by = rb * Math.sin(angB);
+  const chord = Math.hypot(bx - ax, by - ay);
+  if (isThreadEdgeKind(kind)) {
+    return Math.max(34, chord * 0.58);
+  }
+  if (kind === "conceptual_bridge") {
+    return Math.max(46, chord * 0.82);
+  }
+  return Math.max(40, chord * 0.72);
 }
 
 /**
@@ -194,21 +299,32 @@ function layoutTimeBandsQuarterly(sortedAsc) {
       const t = rank / (n - 1);
       const r = rMin + t * (rMax - rMin);
       const angle = (2 * Math.PI * rank) / n - Math.PI / 2;
+      const half = Math.max(16, r * 0.07);
       positions.set(node.id, {
         x: Math.cos(angle) * r,
         y: Math.sin(angle) * r,
         targetR: r,
+        rBandMin: Math.max(0, r - half),
+        rBandMax: r + half,
       });
     });
     return positions;
   }
 
   if (n === 1) {
-    positions.set(sortedAsc[0].id, { x: 0, y: 0, targetR: rMin });
+    const half = Math.max(20, rMin * 0.35);
+    positions.set(sortedAsc[0].id, {
+      x: 0,
+      y: 0,
+      targetR: rMin,
+      rBandMin: Math.max(0, rMin - half),
+      rBandMax: rMin + half,
+    });
     return positions;
   }
 
-  const { bandById, targetRForBand } = model;
+  const { bandById, targetRForBand, maxBand } = model;
+  const R = buildTargetRArray(model);
   const byBand = new Map();
   for (const node of sortedAsc) {
     const b = bandById.get(node.id) ?? 0;
@@ -224,6 +340,7 @@ function layoutTimeBandsQuarterly(sortedAsc) {
       .slice()
       .sort((a, c) => String(a.date).localeCompare(String(c.date)));
     const tr = targetRForBand(b);
+    const { lo, hi } = annulusForBand(b, R, maxBand, MIN_BAND_SHELL_DR);
     const k = group.length;
     for (let j = 0; j < k; j++) {
       const node = group[j];
@@ -232,6 +349,8 @@ function layoutTimeBandsQuarterly(sortedAsc) {
         x: Math.cos(theta) * tr,
         y: Math.sin(theta) * tr,
         targetR: tr,
+        rBandMin: lo,
+        rBandMax: hi,
       });
     }
     bandPhase += Math.PI / 7;
@@ -253,21 +372,14 @@ function drawQuarterlyBandUnderlay(sigma, ctx, sortedAsc, cssW, cssH) {
   const model = buildQuarterlyTimeModel(sortedAsc);
   if (!model.dateMode) return;
 
-  const { maxBand, targetRForBand } = model;
-  const R = [];
-  for (let b = 0; b <= maxBand; b++) {
-    R.push(targetRForBand(b));
-  }
+  const { maxBand } = model;
+  const R = buildTargetRArray(model);
+  const visualMinDr = MIN_BAND_SHELL_DR + MIN_BAND_VISUAL_EXTRA_DR;
 
   const steps = TIME_BAND_STEPS;
   for (let b = 0; b <= maxBand; b++) {
     if (b % 2 !== 0) continue;
-    const rLo = b === 0 ? 0 : (R[b - 1] + R[b]) / 2;
-    const rHi =
-      b === maxBand
-        ? R[b] +
-          Math.max(32, maxBand > 0 ? (R[b] - R[b - 1]) / 2 : 32)
-        : (R[b] + R[b + 1]) / 2;
+    let { lo: rLo, hi: rHi } = annulusForBand(b, R, maxBand, visualMinDr);
     if (rHi <= rLo + 2) continue;
 
     ctx.beginPath();
@@ -391,7 +503,12 @@ function forceEdgeRepulse(links) {
   return force;
 }
 
-function fitSigmaViewport(sigma, graph, padding = 88) {
+function fitSigmaViewport(sigma, graph, padding, nodeCount) {
+  const n = typeof nodeCount === "number" && nodeCount > 0 ? nodeCount : 24;
+  const pad =
+    typeof padding === "number"
+      ? padding
+      : 96 + Math.min(88, Math.max(0, n - 18) * 1.05);
   let minX = Infinity;
   let maxX = -Infinity;
   let minY = Infinity;
@@ -405,10 +522,11 @@ function fitSigmaViewport(sigma, graph, padding = 88) {
   });
   if (!Number.isFinite(minX)) return;
   sigma.setCustomBBox({
-    x: [minX - padding, maxX + padding],
-    y: [minY - padding, maxY + padding],
+    x: [minX - pad, maxX + pad],
+    y: [minY - pad, maxY + pad],
   });
-  sigma.getCamera().setState({ x: 0.5, y: 0.5, ratio: 1, angle: 0 });
+  const ratio = n > 72 ? 1.14 : n > 42 ? 1.08 : n > 28 ? 1.04 : 1;
+  sigma.getCamera().setState({ x: 0.5, y: 0.5, ratio, angle: 0 });
   sigma.refresh();
 }
 
@@ -517,6 +635,10 @@ function runGraph(container, dataEl) {
     return;
   }
 
+  const graphNodeCount = nodes.length;
+  const labelDensityForCount =
+    graphNodeCount > 72 ? 0.08 : graphNodeCount > 44 ? 0.11 : graphNodeCount > 28 ? 0.14 : 0.18;
+
   if (!isWebglAvailable()) {
     showGraphError(
       container,
@@ -587,6 +709,8 @@ function runGraph(container, dataEl) {
         x: p.x,
         y: p.y,
         targetR: p.targetR,
+        rBandMin: p.rBandMin,
+        rBandMax: p.rBandMax,
         label: node.title || "",
         size: NODE_DEFAULT_SIZE,
         color: NODE_BASE,
@@ -644,11 +768,22 @@ function runGraph(container, dataEl) {
       typeof a.targetR === "number" && Number.isFinite(a.targetR)
         ? a.targetR
         : 120;
+    const r0 = Math.hypot(a.x, a.y) || tr;
+    const lo =
+      typeof a.rBandMin === "number" && Number.isFinite(a.rBandMin)
+        ? a.rBandMin
+        : Math.max(0, r0 - 28);
+    const hi =
+      typeof a.rBandMax === "number" && Number.isFinite(a.rBandMax)
+        ? a.rBandMax
+        : r0 + 28;
     const o = {
       id,
       x: a.x,
       y: a.y,
       targetR: tr,
+      rBandMin: lo,
+      rBandMax: hi,
     };
     simNodes.push(o);
     idToSim.set(id, o);
@@ -656,31 +791,26 @@ function runGraph(container, dataEl) {
 
   const simLinks = [];
   graph.forEachEdge((_edge, attr, s, t) => {
-    const sx = graph.getNodeAttribute(s, "x");
-    const sy = graph.getNodeAttribute(s, "y");
-    const tx = graph.getNodeAttribute(t, "x");
-    const ty = graph.getNodeAttribute(t, "y");
-    const d = Math.hypot(tx - sx, ty - sy);
     const kind = attr.kind || "related";
+    const sa = idToSim.get(s);
+    const ta = idToSim.get(t);
+    if (!sa || !ta) return;
     simLinks.push({
-      source: idToSim.get(s),
-      target: idToSim.get(t),
+      source: sa,
+      target: ta,
       kind,
-      baseDist: Math.max(28, d * 0.92),
+      baseDist: linkBaseDistanceFromChord(sa, ta, kind),
     });
   });
 
   function linkIdealDistance(link) {
-    const b = link.baseDist;
-    if (isThreadEdgeKind(link.kind)) return b * 0.72;
-    if (link.kind === "conceptual_bridge") return b * 1.22;
-    return b;
+    return link.baseDist;
   }
 
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.84;
-    if (link.kind === "conceptual_bridge") return 0.24;
-    return 0.52;
+    if (isThreadEdgeKind(link.kind)) return 0.76;
+    if (link.kind === "conceptual_bridge") return 0.2;
+    return 0.44;
   }
 
   const simulation = forceSimulation(simNodes)
@@ -695,12 +825,9 @@ function runGraph(container, dataEl) {
       "collide",
       forceCollide()
         .radius(() => COLLIDE_RADIUS)
-        .strength(0.92),
+        .strength(0.9),
     )
-    .force(
-      "radial",
-      forceRadial((d) => d.targetR, 0, 0).strength(RADIAL_STRENGTH),
-    )
+    .force("bandShell", forceBandShell())
     .force("edgeRepulse", forceEdgeRepulse(simLinks))
     .alphaTarget(0)
     .stop();
@@ -841,7 +968,7 @@ function runGraph(container, dataEl) {
         settleRaf = 0;
         persistPositions(graph);
         if (refitWhenDone) {
-          fitSigmaViewport(sigma, graph);
+          fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
         }
         return;
       }
@@ -950,7 +1077,7 @@ function runGraph(container, dataEl) {
       renderLabels: true,
       defaultNodeColor: NODE_BASE,
       defaultEdgeColor: EDGE_REL,
-      labelDensity: 0.22,
+      labelDensity: labelDensityForCount,
       labelSize: 13,
       labelFont: "Georgia, 'Times New Roman', serif",
       labelWeight: "normal",
@@ -962,7 +1089,7 @@ function runGraph(container, dataEl) {
 
     bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
 
-    fitSigmaViewport(sigma, graph);
+    fitSigmaViewport(sigma, graph, undefined, graphNodeCount);
     runSettle(0.78, 1500, true);
 
     const POINTER_OPTS = { capture: true };

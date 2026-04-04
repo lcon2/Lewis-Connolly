@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build:threads-graph": "esbuild assets/js/threads-graph.entry.mjs --bundle --format=esm --platform=browser --outfile=assets/js/threads-graph.bundle.js --legal-comments=none",
-    "validate:thread-edges": "node scripts/validate-post-thread-edges.mjs"
+    "validate:thread-edges": "node scripts/validate-post-thread-edges.mjs",
+    "inventory:thread-posts": "node scripts/list-post-urls-for-graph.mjs"
   },
   "devDependencies": {
     "d3-force": "^3.0.0",
