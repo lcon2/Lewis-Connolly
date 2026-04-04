@@ -39,7 +39,7 @@ For Jung, the ego is the centre of consciousness, while the Self is the totality
 
 In Jung's account, the ego is the seat of ordinary awareness - the mediating function that juggles outer reality, conscious thought, and surfaced unconscious material. The Self, by contrast, is both the totality of the psyche and its centering principle. It includes everything conscious and unconscious, and the movement toward wholeness, or what Jung calls individuation, is a process of grasping after the totality of who you are.
 
-Sense data may arrive from outside the body, but our experience of it is always psychically mediated, and thus falls within the totality that the Self encompasses. For Jung, there is therefore no absolute split, at the level of conscious experience, between what is *external* and what is *internal*, since both are encountered only as they are taken up and rendered by the psyche. By way of illustration, one might think of the homunculus—that distorted map of the body in which the hands, tongue, and eyes loom disproportionately large—as a useful image of how the body is not experienced evenly, but according to degrees of psychic and conscious salience. The best distinction we can make, therefore, is between content primarily given by present external perception and content generated within the psyche itself.
+Sense data may arrive from outside the body, but our experience of it is always psychically mediated, and thus falls within the totality that the Self encompasses. For Jung, there is therefore no absolute split, at the level of conscious experience, between what is *external* and what is *internal*, since both are encountered only as they are taken up and rendered by the psyche. By way of illustration, one might think of the homunculus - that distorted map of the body in which the hands, tongue, and eyes loom disproportionately large - as a useful image of how the body is not experienced evenly, but according to degrees of psychic and conscious salience. The best distinction we can make, therefore, is between content primarily given by present external perception and content generated within the psyche itself.
 
 This distinction matters when imagining AI-type implants, because one can picture at least two distinct possibilities: exogenous vs. endogenous.
 
@@ -119,6 +119,7 @@ But it may be here in that hesitation, that uncertainty, and that struggle, that
 So I suspect the question is not whether AI will enter more deeply into human life. It obviously is and will. The question is whether we can admit it without surrendering the inward conditions under which genuine reflection, symbolic life, and moral seriousness remain possible. If there is to be a sane path through all this, it will likely depend upon keeping the machine powerful, useful, and near at hand, while resisting the wish to let it become indistinguishable from the voice by which we inwardly live.
 
 That, finally, is the real caution. We may be on the verge of building tools that help us immensely. But if they begin to occupy the seat from which we experience ourselves, then we will not merely have gained a new instrument. We will have invited a new principle into the psyche, and one which may not serve the same ends as the soul.
+
 
 📚 Bibliography
 
