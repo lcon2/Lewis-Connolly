@@ -9,18 +9,17 @@ Do not add edges to “fill” the graph. If no genuine relation exists, omit bo
 
 ## Where data lives
 
-- **Production:** `_data/post_thread_edges.json` (loaded by `_layouts/threads.html`).
-- **Drafts:** `_data/post_thread_edges.staging.json` — not loaded by the site; use for work in progress, then merge reviewed edges into the production file.
+- **Canonical:** `_data/post_thread_edges.json` — loaded by `_layouts/threads.html` for `/threads/`. Edit this file directly for all new or revised edges.
 
 Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 
-## Review checkpoints (before merging edge changes)
+## Review checkpoints (before committing edge changes)
 
 1. **Inventory** — URLs match live permalinks (`/:year/:month/:day/:title/`).
 2. **Direction** — Each arrow reads the way you intend (earlier/framing → later/developed, per your convention).
 3. **Sparsity** — Remove weak or purely thematic “cosmetic” links.
 4. **Validation** — After `bundle exec jekyll build`, run `npm run validate:thread-edges` (requires `_site/`).
-5. **Visual check** — Build the site and open `/threads/`; confirm density and legibility.
+5. **Visual check (Phase 5)** — Open `/threads/` on the built site or after deploy (`https://lewisconnolly.com/threads/`); confirm density, legibility, and that new edges read as intended.
 
 ## Suggested pace
 
@@ -30,10 +29,10 @@ Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year 
 
 1. Run `bundle exec jekyll build`.
 2. Run `npm run inventory:thread-posts > scratch-urls.txt` (optional) to list every post URL that exists in `_site/`—use exact strings for `source` / `target`.
-3. Draft edges in `_data/post_thread_edges.staging.json` (or a branch-only copy).
-4. Run `npm run validate:thread-edges` after copying reviewed edges into `post_thread_edges.json`.
-5. Open `/threads/` locally and skim density and band layout.
-6. Merge PR when satisfied.
+3. Edit `_data/post_thread_edges.json` (add or revise `edges`; each edge is `source`, `target`, `kind` only).
+4. Run `npm run validate:thread-edges`.
+5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, band layout, and arrow clarity.
+6. Commit when satisfied.
 
 ### Commands
 

@@ -1,5 +1,5 @@
 {
-  "about": "Edges use post.url as id (leading slash). kind \"thread\": same line of thought continues or develops; arrow #801f22; direction is meaningful (source → target). kind \"conceptual_bridge\": frames or illuminates without being the same thread; line #5f7583. Legacy \"precursor\" is accepted as an alias for thread. Only edges whose endpoints exist in the Threads page node list are drawn. Keep the graph sparse: add a link only when the relation is genuine. Review workflow: see docs/threads-graph-workflow.md. Staging copy for drafts: post_thread_edges.staging.json (not loaded by the site).",
+  "about": "Edges use post.url as id (leading slash). kind \"thread\": same line of thought continues or develops; arrow #801f22; direction is meaningful (source → target). kind \"conceptual_bridge\": frames or illuminates without being the same thread; line #5f7583. Legacy \"precursor\" is accepted as an alias for thread. Only edges whose endpoints exist in the Threads page node list are drawn. Keep the graph sparse: add a link only when the relation is genuine. Canonical source: edit this file directly. Review workflow: see docs/threads-graph-workflow.md.",
   "edges": [
     {
       "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
@@ -115,6 +115,131 @@
       "source": "/2025/05/12/Frankl-and-the-Horizon-of-Meaning/",
       "target": "/2025/11/27/the-self-evident/",
       "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2015/06/06/christian-non-realism/",
+      "target": "/2015/11/22/rejecting-medievalist-christianity/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2015/06/06/christian-non-realism/",
+      "target": "/2017/02/21/unitarians-think-quaker/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2015/11/01/david-and-goliath/",
+      "target": "/2016/04/11/beatrix-and-her-animals/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2015/11/01/david-and-goliath/",
+      "target": "/2018/03/05/rev-phillip-hewett-a-personal-memorial/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2016/12/14/bodhi-sunday-in-advent/",
+      "target": "/2017/02/21/unitarians-think-quaker/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/02/21/unitarians-think-quaker/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/04/03/so-is-truth-dead/",
+      "target": "/2017/05/15/the-biographers-eye/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2017/05/15/the-biographers-eye/",
+      "target": "/2017/07/04/redemption/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/02/28/alchemy-of-the-soul/",
+      "target": "/2018/03/12/hogwarts-and-the-black-madonna/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/02/28/alchemy-of-the-soul/",
+      "target": "/2019/04/08/western-esotericism-lineage/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/03/21/descending-to-the-underworld/",
+      "target": "/2018/03/28/palm-sunday-the-golden-gate/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/03/28/palm-sunday-the-golden-gate/",
+      "target": "/2018/04/02/resurrection-and-the-nature-of-truth/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/04/02/resurrection-and-the-nature-of-truth/",
+      "target": "/2018/05/14/reflecting-on-william-james/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/04/09/facing-cucumbers/",
+      "target": "/2018/04/24/carve-space/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/04/24/carve-space/",
+      "target": "/2018/04/30/fairfax-inaugural-sermon-reflection/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/05/07/a-personal-apocalypse/",
+      "target": "/2018/05/22/this-is-america/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/05/14/reflecting-on-william-james/",
+      "target": "/2018/05/14/the-tree-of-life-2011-a-review/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/06/03/the-giving-tree/",
+      "target": "/2018/06/18/falling-upward/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/06/11/the-writings-on-the-wall/",
+      "target": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/06/18/falling-upward/",
+      "target": "/2018/06/25/to-be-a-contrarian/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/06/25/to-be-a-contrarian/",
+      "target": "/2018/07/23/pale-fire-lunar-light/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/07/16/my-closed-right-eye/",
+      "target": "/2018/07/30/lammas-address/",
+      "kind": "thread"
+    },
+    {
+      "source": "/2018/07/23/pale-fire-lunar-light/",
+      "target": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/07/23/parker-and-the-permanent-in-christianity/",
+      "target": "/2018/08/06/understanding-the-loaves/",
+      "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2018/07/30/lammas-address/",
+      "target": "/2018/08/06/understanding-the-loaves/",
+      "kind": "thread"
     }
   ]
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Lists built post URLs under _site (same shape as edge ids). Use after `bundle exec jekyll build`.
- * Helps editorial tranches: copy URLs when adding edges to post_thread_edges.staging.json.
+ * Helps editorial tranches: copy URLs when adding edges to post_thread_edges.json.
  */
 import { existsSync, readdirSync, statSync } from "fs";
 import { join, dirname } from "path";

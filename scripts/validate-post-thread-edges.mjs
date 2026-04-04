@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Validates _data/post_thread_edges.json against built post URLs in _site.
+ * Validates thread edge JSON against built post URLs in _site.
+ * Default file: _data/post_thread_edges.json
+ * Optional: node scripts/validate-post-thread-edges.mjs _data/other-edges.json
  * Run: bundle exec jekyll build && npm run validate:thread-edges
  */
 import { readFileSync, existsSync, readdirSync, statSync } from "fs";
