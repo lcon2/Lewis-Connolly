@@ -13,14 +13,14 @@ import { Sigma } from "sigma";
 
 const NODE_DEFAULT_SIZE = 12;
 
-const POSITIONS_KEY = "threads-graph-positions-v6";
+const POSITIONS_KEY = "threads-graph-positions-v7";
 const CLICK_PX = 6;
 /** Lerp toward cursor while dragging (higher = snappier). */
 const LERP_K = 0.52;
 /** Graph-space collision radius around each node (Sigma coords). */
-const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 12;
+const COLLIDE_RADIUS = 26;
 /** Global repulsion (softer so band shells and links win). */
-const CHARGE_STRENGTH = -32;
+const CHARGE_STRENGTH = -36;
 /** Min radial thickness of each time band (graph units); wider shells = softer time bias. */
 const MIN_BAND_SHELL_DR = 64;
 /** Visual-only extra width for annulus fill (can exceed shell). */
@@ -253,7 +253,7 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(32, chord * 0.34);
+    return Math.max(32, chord * 0.38);
   }
   if (kind === "conceptual_bridge") {
     return Math.max(48, chord * 0.62);
@@ -929,7 +929,7 @@ function runGraph(container, dataEl) {
   }
 
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.96;
+    if (isThreadEdgeKind(link.kind)) return 0.9;
     if (link.kind === "conceptual_bridge") return 0.28;
     return 0.42;
   }

@@ -32,110 +32,118 @@
         </div>
     </nav>
     {% include mobile-nav-overlay.html panel_id='archive-mobile-menu-panel' %}
-    <div style="display: flex; max-width: 1200px; margin: 0 auto; align-items: flex-start;">
-        <!-- Sidebar -->
-        {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-        {% assign posts_by_year = sorted_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-        <nav class="sidebar sidebar--archive-years" aria-label="Archive by year">
-            <ul class="archive-sidebar-years">
-                {% for year_group in posts_by_year %}
-                    {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
-                    <li class="archive-sidebar-year" data-year="{{ year_group.name }}">
-                        <div class="archive-sidebar-year__header">
-                            <button type="button" class="archive-sidebar-year__toggle" id="archive-toggle-{{ year_group.name }}" aria-expanded="false" aria-controls="archive-year-{{ year_group.name }}-months" aria-label="Toggle months for {{ year_group.name }}">
-                                <span class="archive-sidebar-year__chevron" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" focusable="false"><path d="M2.5 1.5 L7.5 5 L2.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                            </button>
-                            <a class="archive-sidebar-year__link" href="#year-{{ year_group.name }}">{{ year_group.name }}</a>
-                        </div>
-                        <ul class="archive-sidebar-year__months" id="archive-year-{{ year_group.name }}-months" hidden>
-                            {% if year_group.name == "2020" %}
-                                <li>
-                                    <a href="#month-2020-September">September</a>
-                                </li>
-                            {% endif %}
-                            {% for month_group in posts_by_month %}
-                                <li>
-                                    <a href="#month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">{{ month_group.name }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
-        <!-- Main Content -->
-        <main style="width: 75%; padding: 20px; line-height: 1.6; font-size: 18px; color: #f0f0f0;">
-            {% assign abide_tooltip_page = site.pages | where_exp: "p", "p.path == 'abide.md'" | first %}
+
+    {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+    {% assign posts_by_year = sorted_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% assign thread_posts = sorted_posts %}
+
+    <div class="archive-page__inner">
+        <header class="archive-page__header">
             <h1>{{ page.title }}</h1>
-            <section class="connolly-archives-cta threads-archive-cta" aria-label="Thematic threads map">
-                <a
-                    class="connolly-archives-button"
-                    href="{{ '/threads/' | relative_url }}"
-                    aria-label="View thematic threads between recent posts">
-                    Threads
-                </a>
-            </section>
-            <div class="archive-content">
-                {% for year_group in posts_by_year %}
-                    <div class="year-group" id="year-{{ year_group.name }}">
-                        <div class="year-title">
-                            <span>{{ year_group.name }}</span>
-                            <hr class="year-underline">
-                        </div>
-                        {% if year_group.name == "2020" %}
-                            <div class="month-category" id="month-2020-September">
-                                <h3>September 2020</h3>
-                                <ul>
-                                    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                                        <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                        <a href="{{ '/proustian-temporality/' | relative_url }}" data-summary="This paper explores how time functions in Marcel Proust&rsquo;s &Agrave; la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust&rsquo;s &ldquo;privileged moments&rdquo; of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.">Proustian Temporality (MA Dissertation)</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        {% endif %}
+            {% assign intro_text = content | strip %}
+            {% if intro_text != "" %}
+            <div class="archive-page__intro">
+                {{ content }}
+            </div>
+            {% endif %}
+        </header>
+
+        {% include archive-threads-graph.html %}
+
+        <div class="archive-page__below-map">
+            <nav class="sidebar sidebar--archive-years archive-page__sidebar" aria-label="Archive by year">
+                <ul class="archive-sidebar-years">
+                    {% for year_group in posts_by_year %}
                         {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
-                        {% for month_group in posts_by_month %}
-                            <div class="month-category" id="month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">
-                                <h3>{{ month_group.name }} {{ year_group.name }}</h3>
-                                <ul>
-                                    {% for post in month_group.items %}
+                        <li class="archive-sidebar-year" data-year="{{ year_group.name }}">
+                            <div class="archive-sidebar-year__header">
+                                <button type="button" class="archive-sidebar-year__toggle" id="archive-toggle-{{ year_group.name }}" aria-expanded="false" aria-controls="archive-year-{{ year_group.name }}-months" aria-label="Toggle months for {{ year_group.name }}">
+                                    <span class="archive-sidebar-year__chevron" aria-hidden="true">
+                                        <svg width="10" height="10" viewBox="0 0 10 10" focusable="false"><path d="M2.5 1.5 L7.5 5 L2.5 8.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </span>
+                                </button>
+                                <a class="archive-sidebar-year__link" href="#year-{{ year_group.name }}">{{ year_group.name }}</a>
+                            </div>
+                            <ul class="archive-sidebar-year__months" id="archive-year-{{ year_group.name }}-months" hidden>
+                                {% if year_group.name == "2020" %}
+                                    <li>
+                                        <a href="#month-2020-September">September</a>
+                                    </li>
+                                {% endif %}
+                                {% for month_group in posts_by_month %}
+                                    <li>
+                                        <a href="#month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">{{ month_group.name }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <main class="archive-page__main">
+                {% assign abide_tooltip_page = site.pages | where_exp: "p", "p.path == 'abide.md'" | first %}
+                <div class="archive-content">
+                    {% for year_group in posts_by_year %}
+                        <div class="year-group" id="year-{{ year_group.name }}">
+                            <div class="year-title">
+                                <span>{{ year_group.name }}</span>
+                                <hr class="year-underline">
+                            </div>
+                            {% if year_group.name == "2020" %}
+                                <div class="month-category" id="month-2020-September">
+                                    <h3>September 2020</h3>
+                                    <ul>
                                         <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                            <a href="{{ post.url | relative_url }}" data-summary="{{ post.description | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
+                                            <a href="{{ '/proustian-temporality/' | relative_url }}" data-summary="This paper explores how time functions in Marcel Proust&rsquo;s &Agrave; la recherche du temps perdu through the philosophical lenses of Henri Bergson and Carl Jung. Focusing on Proust&rsquo;s &ldquo;privileged moments&rdquo; of memory and perception, it argues that Bergsonian duration and Jungian concepts of synchronicity and the timeless unconscious offer a powerful framework for understanding Proustian temporality. In doing so, the essay reveals a shared challenge to linear, mechanistic time and proposes an alternative, more humane vision of lived experience.">Proustian Temporality (MA Dissertation)</a>
                                         </li>
-                                        {% if year_group.name == "2026" and month_group.name == "January" and post.title == "Wage Labor and the Meaning Crisis" %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            {% assign posts_by_month = year_group.items | group_by_exp: "post", "post.date | date: '%B'" %}
+                            {% for month_group in posts_by_month %}
+                                <div class="month-category" id="month-{{ year_group.name }}-{{ month_group.name | replace: ' ', '-' }}">
+                                    <h3>{{ month_group.name }} {{ year_group.name }}</h3>
+                                    <ul>
+                                        {% for post in month_group.items %}
                                             <li style="display: flex; align-items: center; margin-bottom: 10px;">
                                                 <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                                <a href="{{ '/abide' | relative_url }}" data-summary="A scroll-driven meditation experience, inviting intention, peace, and quiet into our lives. Nothing to achieve, nothing to complete."{% if abide_tooltip_page.date %} data-date="{{ abide_tooltip_page.date | date: '%d/%m/%Y' }}"{% endif %}>Abide</a>
+                                                <a href="{{ post.url | relative_url }}" data-summary="{{ post.description | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title }}</a>
                                             </li>
-                                        {% endif %}
-                                    {% endfor %}
-                                    {% for item in site.data.archive_extras %}
-                                        {% if item.year == year_group.name and item.month == month_group.name %}
-                                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                                                <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
-                                                <a href="{{ item.url | relative_url }}" data-summary="{{ item.summary | escape }}">{{ item.title }}</a>
-                                            </li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-            </div>
-            <section class="connolly-archives-cta" aria-label="Private archives">
-                <a
-                    class="connolly-archives-button"
-                    href="{{ '/connolly-archives/' | relative_url }}">
-                    Connolly Archives
-                </a>
-            </section>
-        </main>
+                                            {% if year_group.name == "2026" and month_group.name == "January" and post.title == "Wage Labor and the Meaning Crisis" %}
+                                                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                    <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                                                    <a href="{{ '/abide' | relative_url }}" data-summary="A scroll-driven meditation experience, inviting intention, peace, and quiet into our lives. Nothing to achieve, nothing to complete."{% if abide_tooltip_page.date %} data-date="{{ abide_tooltip_page.date | date: '%d/%m/%Y' }}"{% endif %}>Abide</a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                        {% for item in site.data.archive_extras %}
+                                            {% if item.year == year_group.name and item.month == month_group.name %}
+                                                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                                    <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="Bullet" style="width: 16px; height: 16px; margin-right: 10px;">
+                                                    <a href="{{ item.url | relative_url }}" data-summary="{{ item.summary | escape }}">{{ item.title }}</a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <section class="connolly-archives-cta" aria-label="Private archives">
+                    <a
+                        class="connolly-archives-button"
+                        href="{{ '/connolly-archives/' | relative_url }}">
+                        Connolly Archives
+                    </a>
+                </section>
+            </main>
+        </div>
     </div>
-    <footer style="text-align: center; margin-top: 20px; width: 100%; border-top: 1px solid #ccc; padding: 10px 0;">
+
+    <footer class="archive-page__footer">
         <p>© Lewis Connolly. 2015 - <script>document.write(new Date().getFullYear());</script> All Rights Reserved ┃ Copyright</p>
     </footer>
     <script src="{{ '/assets/js/mobile-nav.js' | relative_url }}"></script>
@@ -143,5 +151,6 @@
     <script src="{{ '/assets/js/summary-tooltips.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-manifest.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/image-lazyload.js' | relative_url }}"></script>
+    <script type="module" src="{{ '/assets/js/threads-graph.bundle.js' | relative_url }}"></script>
 </body>
 </html>

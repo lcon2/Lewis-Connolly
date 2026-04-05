@@ -6533,11 +6533,11 @@ function manyBody_default() {
 // assets/js/threads-graph.entry.mjs
 var import_sigma = __toESM(require_sigma2(), 1);
 var NODE_DEFAULT_SIZE = 12;
-var POSITIONS_KEY = "threads-graph-positions-v6";
+var POSITIONS_KEY = "threads-graph-positions-v7";
 var CLICK_PX = 6;
 var LERP_K = 0.52;
-var COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 12;
-var CHARGE_STRENGTH = -32;
+var COLLIDE_RADIUS = 26;
+var CHARGE_STRENGTH = -36;
 var MIN_BAND_SHELL_DR = 64;
 var MIN_BAND_VISUAL_EXTRA_DR = 16;
 var BAND_SHELL_PUSH_OUT = 0.18;
@@ -6711,7 +6711,7 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(32, chord * 0.34);
+    return Math.max(32, chord * 0.38);
   }
   if (kind === "conceptual_bridge") {
     return Math.max(48, chord * 0.62);
@@ -7267,7 +7267,7 @@ function runGraph(container, dataEl) {
     return link.baseDist;
   }
   function linkStrength(link) {
-    if (isThreadEdgeKind(link.kind)) return 0.96;
+    if (isThreadEdgeKind(link.kind)) return 0.9;
     if (link.kind === "conceptual_bridge") return 0.28;
     return 0.42;
   }

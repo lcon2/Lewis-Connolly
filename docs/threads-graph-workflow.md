@@ -9,7 +9,7 @@ Do not add edges to “fill” the graph. If no genuine relation exists, omit bo
 
 ## Where data lives
 
-- **Canonical:** `_data/post_thread_edges.json` — loaded by `_layouts/threads.html` for `/threads/`. Edit this file directly for all new or revised edges.
+- **Canonical:** `_data/post_thread_edges.json` — embedded on `/archive/` via `_includes/archive-threads-graph.html`. Edit this file directly for all new or revised edges.
 
 Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 
@@ -19,10 +19,10 @@ Legacy `kind: "precursor"` is still accepted in JSON and behaves like `thread`.
 2. **Direction** — Each arrow reads the way you intend (earlier/framing → later/developed, per your convention).
 3. **Sparsity** — Remove weak or purely thematic “cosmetic” links.
 4. **Validation** — After `bundle exec jekyll build`, run `npm run validate:thread-edges` (requires `_site/`).
-5. **Visual check (Phase 5)** — Open `/threads/` on the built site or after deploy (`https://lewisconnolly.com/threads/`); confirm density, legibility, and that new edges read as intended.
-6. **Ship (Phase 6)** — Commit and push (or open a PR). After deploy, spot-check `/threads/` once more so production matches what you validated locally.
-7. **Graph UI chrome (Phase 7)** — After changing the threads layout, graph CSS, or `threads-graph.entry.mjs` (fullscreen control, labels, bands, etc.), run `npm run build:threads-graph`, commit the updated `threads-graph.bundle.js`, and smoke-test `/threads/` including full screen (toggle, Esc), hover labels, and pan/zoom.
-8. **Layout / forces (Phase 8)** — If you tune time-band vs link behavior in `threads-graph.entry.mjs` (shell strength, link strength, `MIN_BAND_SHELL_DR`, chord distances, etc.), rebuild the bundle, commit it, and re-check `/threads/` for cluster shape, cross-band threads, and readability.
+5. **Visual check (Phase 5)** — Open `/archive/` on the built site or after deploy (`https://lewisconnolly.com/archive/`); confirm density, legibility, and that new edges read as intended.
+6. **Ship (Phase 6)** — Commit and push (or open a PR). After deploy, spot-check `/archive/` once more so production matches what you validated locally.
+7. **Graph UI chrome (Phase 7)** — After changing the archive graph include, graph CSS, or `threads-graph.entry.mjs` (fullscreen control, labels, bands, etc.), run `npm run build:threads-graph`, commit the updated `threads-graph.bundle.js`, and smoke-test `/archive/` including full screen (toggle, Esc), hover labels, and pan/zoom.
+8. **Layout / forces (Phase 8)** — If you tune time-band vs link behavior in `threads-graph.entry.mjs` (shell strength, link strength, `MIN_BAND_SHELL_DR`, chord distances, etc.), rebuild the bundle, commit it, and re-check `/archive/` for cluster shape, cross-band threads, and readability.
 
 ## Suggested pace
 
@@ -34,10 +34,10 @@ Work **by article** (outgoing edges only) or **by time tranche** (e.g. one year 
 2. Run `npm run inventory:thread-posts > scratch-urls.txt` (optional) to list every post URL that exists in `_site/`—use exact strings for `source` / `target`.
 3. Edit `_data/post_thread_edges.json` (add or revise `edges`; each edge is `source`, `target`, `kind` only).
 4. Run `npm run validate:thread-edges`.
-5. **Phase 5:** Open `/threads/` locally or on the live site; skim density, layout, arrow clarity, labels (pointer inside the graph frame for bulk titles; highlighted nodes stay titled even when zoomed out; hover thins idle titles to the highlight set), and legibility.
-6. **Phase 6:** Commit and push; after deploy, quick confirm on the live `/threads/` page.
-7. **Phase 7:** If graph JS or chrome changed, rebuild the bundle and re-check fullscreen and core interactions on `/threads/`.
-8. **Phase 8:** If simulation or time-bias constants changed, rebuild the bundle and eyeball layout on `/threads/` (threads vs time rings).
+5. **Phase 5:** Open `/archive/` locally or on the live site; skim density, layout, arrow clarity, labels (pointer inside the graph frame for bulk titles; highlighted nodes stay titled even when zoomed out; hover thins idle titles to the highlight set), and legibility.
+6. **Phase 6:** Commit and push; after deploy, quick confirm on the live `/archive/` page (graph section).
+7. **Phase 7:** If graph JS or chrome changed, rebuild the bundle and re-check fullscreen and core interactions on `/archive/`.
+8. **Phase 8:** If simulation or time-bias constants changed, rebuild the bundle and eyeball layout on `/archive/` (threads vs time rings).
 
 ### Commands
 

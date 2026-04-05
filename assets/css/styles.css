@@ -3429,6 +3429,98 @@ footer {
     margin: 12px 0 28px;
 }
 
+/* Archive index: threads map above list; sticky year/month sidebar beside entries */
+.archive-page__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px 32px;
+    box-sizing: border-box;
+}
+
+.archive-page__header {
+    margin-bottom: 16px;
+}
+
+.archive-page__header h1 {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #f0f0f0;
+}
+
+.archive-page__intro {
+    max-width: 48rem;
+    margin: 0 auto 12px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.archive-threads-map {
+    margin: 0 0 8px;
+}
+
+.archive-page__below-map {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.archive-page__sidebar {
+    flex: 0 0 22%;
+    max-width: 260px;
+    min-width: 0;
+    position: sticky;
+    top: 14px;
+    align-self: flex-start;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.archive-page__main {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 12px 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+.archive-page__footer {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.archive-page__footer p {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+    .archive-page__below-map {
+        flex-direction: column;
+    }
+
+    .archive-page__sidebar {
+        position: static;
+        max-height: none;
+        flex: none;
+        width: 100%;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .archive-page__main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .connolly-archives-lock {
     overflow: hidden;
 }
