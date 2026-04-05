@@ -10,12 +10,12 @@ categories:
   - Narrative
   - Culture
   - Meaning
-description: "After British schooling and American life, the author sets a single house style for the site: American spelling and practical conventions, double quotation marks with singles for nesting and certain titles, restrained capitalization, Chicago footnotes, and prose that stays reflective without turning bureaucratic. Quoted sources keep their original spelling; italics and em dashes are declined on principle."
-tagline: "American conventions, a British-educated ear, and rules meant to be kept at last."
+description: "A writing style guide shaped by British schooling and American life, setting the house style for the site: American spelling and conventions, double quotation marks with singles for nesting and titles, restrained capitalization, Chicago footnotes, and prose that stays reflective without turning bureaucratic. Quoted sources keep their original spelling; italics and em dashes are declined on principle."
+tagline: "American mechanics, a British cadence, and rules meant to be kept at last."
 og_image: /assets/images/style-guide-index.png
 og_image_width: 1536
 og_image_height: 1024
-image_alt: "Index-style lettering for the LewisConnolly.com house style guide."
+image_alt: "An antique card catalog labeled ‘Lewis Connolly’ in a library."
 read_next:
   - title: "The Geometrics of Taste"
     description: "An essay on design, interior space, and digital aesthetics that examines how taste shapes identity, aspiration, and persuasion. Moving from Art Deco to contemporary branding, it asks whether good design clarifies life or merely sells desire, and how geometry, texture, and proportion quietly train our habits of attention."
@@ -32,9 +32,9 @@ read_next:
 
 <img src="{{ '/assets/images/style-guide-index.png' | relative_url }}" alt="LewisConnolly.com Style Guide" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
-Every time I write something, I find myself returning to the same debates about formatting: whether to use single or double quotation marks, how to handle quotations and citations, and so on. This higgledy-piggledy state of affairs is partly the result of my education: I was taught three different ways to format essays at the 'London School of Theology', at Cambridge, and at 'Essex University'. On top of that, I now live in America and write predominantly for American readers. My kids are Americans! More important than which style one adopts, I think, is consistency, and I have definitely not been consistent.
+Every writer eventually ends up having the same arguments with himself over and over: whether to use single or double quotation marks, how to handle quotations and citations, whether to follow British habits or American ones, and so on. My own higgledy-piggledy state of affairs is partly the result of my education. I was taught three different ways to format essays at the 'London School of Theology', at Cambridge, and at ‘The University of Essex'. On top of that, I now live in America and write predominantly for American readers. My kids are Americans! More important than which style one adopts, I think, is consistency, and I have definitely not been consistent.
 
-So this is going to be my own in-house style guide, which I shall endeavor to follow from now on. As you will see, it is a blend of British academic practice and American usage and conventions, basically, everything that feels intuitively correct to me. And if it sounds wrong to you, it's you that's wrong.
+So this is going to be my own in-house writing style guide, which I intend to follow from now on. It is a blend of British academic practice and American spelling and conventions, in other words, everything that feels intuitively correct to me. And if it sounds wrong to you, it's you that's wrong.
 
 ## 1. General Principle
 
@@ -50,11 +50,23 @@ Although this site follows American spelling and generally American usage conven
 
 Good prose here should sound like a person thinking carefully and seeing clearly. It should feel intelligent, inward, and aesthetically alert, without becoming obscure, mannered, or overworked.
 
-## 3. Spelling
+## 3. Typography, Asterism, and Layout
+
+<img src="{{ '/assets/images/eb-garamond.png' | relative_url }}" alt="EB Garamond type specimen" style="float: right; max-width: min(42%, 320px); width: auto; height: auto; margin: 0.2em 0 1em 1.25em; border-radius: 8px; display: block;">
+
+This site uses EB Garamond as its principal serif typeface. It is a digital revival of the Garamond tradition, based closely on the 1592 ‘Berner specimen’, which gives it a distinctly literary, elegant, and old-world character. It suits essays especially well because it feels bookish and serious rather than corporate.
+
+Asterisms are used sparingly as section breaks. In older typography, the asterism functioned as a type of dinkus, marking a minor break or subchapter within a text; here it should serve as a quiet signal of transition rather than mere decoration.
+
+Layout should favor a narrow, centered reading column with generous margins and vertical breathing room.
+
+<div style="clear: both;"></div>
+
+## 4. Spelling
 
 This site uses American spelling by default. Quoted material, however, should retain the spelling of the original.
 
-## 4. Dates, Weights, Measures, and Other Conventions
+## 5. Dates, Weights, Measures, and Other Conventions
 
 This site broadly follows American usage and conventions in matters such as date format, weights and measures, punctuation, and other practical standards of presentation.
 
@@ -65,7 +77,11 @@ Examples:
 
 Date formatting is the convention that pains me most, as it strikes me as less logical than the British form. Even so, I think it is simply too confusing to do otherwise. Throughout my schooling in the UK, official documentation kept insisting that my birthday was March 5th, 1988, because of my time in Texas.
 
-## 5. Capitalization
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
+
+## 6. Capitalization
 
 Capitalization should be conventional and restrained. Words should not be capitalized merely to make them seem more important.
 
@@ -74,7 +90,7 @@ In ordinary prose, generic terms should remain lowercase. This includes words su
 Examples:
 
 - He had a fragile ego.
-- The self is not always transparent to itself.
+- The self is rarely as unified as it appears.
 - She spoke about the church as a social institution.
 
 Capital letters may be used where a term is being employed in a specific technical, philosophical, theological, or psychological sense.
@@ -87,7 +103,7 @@ Examples:
 
 Where such terms are used in a specialized sense, capitalization should be applied consistently throughout the piece.
 
-## 6. Quotation Marks
+## 7. Quotation Marks
 
 Double quotation marks are the standard form for ordinary quotations.
 
@@ -108,11 +124,15 @@ Examples:
 
 For proper names of this kind, the quotation marks usually need only be established on first mention.
 
-## 7. Italics
+## 8. Italics
 
 I don't like italics and won't be using them.
 
-## 8. Titles and Dates of Works
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
+
+## 9. Titles and Dates of Works
 
 When giving the year of a work, the preferred form is:
 
@@ -120,7 +140,7 @@ When giving the year of a work, the preferred form is:
 
 This should be the standard format when referring to books, films, or other works.
 
-## 9. References and Bibliography
+## 10. References and Bibliography
 
 References should follow a modified Chicago notes-and-bibliography style. Citations will appear in numbered footnotes rather than parenthetical in-text references. In bibliographic citations, standard Chicago formatting may be retained even where it differs slightly from my prose conventions.
 
@@ -128,11 +148,11 @@ Example:
 
 4. Hannah Arendt, "No Longer and Not Yet," in Reflections on Literature and Culture, ed. Susannah Young-ah Gottlieb (Stanford, CA: Stanford University Press, 2007), 120-25.
 
-## 10. Links
+## 11. Links
 
 Hyperlinks should usually be embedded naturally in prose rather than pasted as bare URLs. Naked URLs should be avoided unless there is a specific reason to show the address itself.
 
-## 11. Never use em dashes
+## 12. Never use em dashes
 
 The use of em dashes has been entirely co-opted by large language models, and as such they now read immediately as AI slop.
 
