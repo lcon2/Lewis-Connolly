@@ -923,6 +923,9 @@ function runGraph(container, dataEl) {
   let hoverFocus = null;
   let hoverHighlightSet = null;
 
+  /** When true, show all node titles while the pointer is inside the graph frame (no hover). */
+  let labelsBulkEnabled = true;
+
   /** Set after Sigma exists; nodeReducer reads for frame-gated labels. */
   let sigmaRef = null;
   let pointerInsideContainer = false;
@@ -942,11 +945,13 @@ function runGraph(container, dataEl) {
 
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
-    /** Hover: only focus + edge-neighbors titled. Idle inside frame: all titles. Outside frame: none (until hover). */
+    /** Hover: only focus + edge-neighbors titled. Idle: all titles only if toggle ON and pointer inside frame. */
     const inHighlight =
       hoverHighlightSet && hoverHighlightSet.has(node);
     const idleAllInFrame =
-      !hoverHighlightSet && pointerInsideContainer;
+      !hoverHighlightSet &&
+      pointerInsideContainer &&
+      labelsBulkEnabled;
     const showTitle =
       !dragActive &&
       data.label &&
@@ -1204,6 +1209,56 @@ function runGraph(container, dataEl) {
     });
     sigmaRef = sigma;
 
+    const assetRoot =
+      typeof baseurl === "string" && baseurl.length > 0
+        ? baseurl.replace(/\/$/, "")
+        : "";
+    const labelToggleOnSrc = `${assetRoot}/assets/images/threads-label-toggle-on.svg`;
+    const labelToggleOffSrc = `${assetRoot}/assets/images/threads-label-toggle-off.svg`;
+
+    const labelToggleBtn = document.createElement("button");
+    labelToggleBtn.type = "button";
+    labelToggleBtn.className = "threads-label-toggle-btn";
+    labelToggleBtn.id = "threads-label-toggle-btn";
+    labelToggleBtn.setAttribute("aria-pressed", "true");
+    labelToggleBtn.setAttribute(
+      "aria-label",
+      "Default titles on map when the pointer is over the graph: on. Click to toggle.",
+    );
+    const labelToggleImg = document.createElement("img");
+    labelToggleImg.alt = "";
+    labelToggleImg.width = 22;
+    labelToggleImg.height = 22;
+    labelToggleImg.decoding = "async";
+    labelToggleImg.src = labelToggleOnSrc;
+
+    function syncLabelToggleUi() {
+      labelToggleBtn.setAttribute(
+        "aria-pressed",
+        labelsBulkEnabled ? "true" : "false",
+      );
+      labelToggleImg.src = labelsBulkEnabled
+        ? labelToggleOnSrc
+        : labelToggleOffSrc;
+      labelToggleBtn.title = labelsBulkEnabled
+        ? "Default titles in frame: on (click to hide until hover)"
+        : "Default titles in frame: off (click to show when pointer is over map)";
+    }
+    syncLabelToggleUi();
+
+    labelToggleBtn.appendChild(labelToggleImg);
+    container.appendChild(labelToggleBtn);
+
+    labelToggleBtn.addEventListener("click", () => {
+      labelsBulkEnabled = !labelsBulkEnabled;
+      syncLabelToggleUi();
+      try {
+        sigma.refresh();
+      } catch {
+        /* ignore */
+      }
+    });
+
     function applyLabelGridNoCap() {
       sigma.settings.labelDensity = LABEL_GRID_DENSITY_NO_CAP;
     }
@@ -1262,6 +1317,8 @@ function runGraph(container, dataEl) {
     });
 
     sigma.on("kill", () => {
+      const lt = container.querySelector("#threads-label-toggle-btn");
+      if (lt) lt.remove();
       if (labelRefreshRaf) {
         cancelAnimationFrame(labelRefreshRaf);
         labelRefreshRaf = 0;

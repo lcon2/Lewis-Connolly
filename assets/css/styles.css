@@ -4433,6 +4433,46 @@ footer {
     height: 23px;
 }
 
+/* Bottom-left: default bulk labels on/off (hover titles unaffected). */
+.threads-label-toggle-btn {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: rgba(231, 226, 220, 0.38);
+    cursor: pointer;
+    opacity: 0.35;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    pointer-events: auto;
+}
+
+.threads-label-toggle-btn:hover,
+.threads-label-toggle-btn:focus-visible {
+    opacity: 1;
+    color: rgba(231, 226, 220, 0.78);
+}
+
+.threads-label-toggle-btn:focus-visible {
+    outline: 2px solid rgba(240, 237, 232, 0.55);
+    outline-offset: 2px;
+}
+
+.threads-label-toggle-btn img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
 .threads-sigma-container canvas {
     display: block;
     border-radius: 5px;
@@ -4453,10 +4493,10 @@ footer {
     z-index: 1;
 }
 
-/* Bottom-left hover panel — matches homepage .summary-tooltip treatment */
+/* Bottom-left hover panel — inset to clear label toggle */
 .threads-sigma-container .threads-node-panel {
     position: absolute;
-    left: 14px;
+    left: 56px;
     bottom: 14px;
     z-index: 5;
     max-width: min(360px, calc(100% - 28px));

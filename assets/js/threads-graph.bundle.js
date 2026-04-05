@@ -7248,6 +7248,7 @@ function runGraph(container, dataEl) {
   let dragActive = false;
   let hoverFocus = null;
   let hoverHighlightSet = null;
+  let labelsBulkEnabled = true;
   let sigmaRef = null;
   let pointerInsideContainer = false;
   function rebuildHighlightSet(nodeId) {
@@ -7265,7 +7266,7 @@ function runGraph(container, dataEl) {
   const nodeReducer = (node, data) => {
     const attr = Object.assign({}, data);
     const inHighlight = hoverHighlightSet && hoverHighlightSet.has(node);
-    const idleAllInFrame = !hoverHighlightSet && pointerInsideContainer;
+    const idleAllInFrame = !hoverHighlightSet && pointerInsideContainer && labelsBulkEnabled;
     const showTitle = !dragActive && data.label && (inHighlight || idleAllInFrame);
     attr.label = showTitle ? String(data.label) : null;
     if (!hoverHighlightSet) {
@@ -7469,7 +7470,14 @@ function runGraph(container, dataEl) {
   window.addEventListener("pointerup", onGlobalPointerUp);
   window.addEventListener("pointercancel", onGlobalPointerUp);
   try {
-    let applyLabelGridNoCap = function() {
+    let syncLabelToggleUi = function() {
+      labelToggleBtn.setAttribute(
+        "aria-pressed",
+        labelsBulkEnabled ? "true" : "false"
+      );
+      labelToggleImg.src = labelsBulkEnabled ? labelToggleOnSrc : labelToggleOffSrc;
+      labelToggleBtn.title = labelsBulkEnabled ? "Default titles in frame: on (click to hide until hover)" : "Default titles in frame: off (click to show when pointer is over map)";
+    }, applyLabelGridNoCap = function() {
       sigma.settings.labelDensity = LABEL_GRID_DENSITY_NO_CAP;
     }, requestLabelRefreshFromCamera = function() {
       if (labelRefreshRaf) return;
@@ -7496,6 +7504,35 @@ function runGraph(container, dataEl) {
       edgeReducer
     });
     sigmaRef = sigma;
+    const assetRoot = typeof baseurl === "string" && baseurl.length > 0 ? baseurl.replace(/\/$/, "") : "";
+    const labelToggleOnSrc = `${assetRoot}/assets/images/threads-label-toggle-on.svg`;
+    const labelToggleOffSrc = `${assetRoot}/assets/images/threads-label-toggle-off.svg`;
+    const labelToggleBtn = document.createElement("button");
+    labelToggleBtn.type = "button";
+    labelToggleBtn.className = "threads-label-toggle-btn";
+    labelToggleBtn.id = "threads-label-toggle-btn";
+    labelToggleBtn.setAttribute("aria-pressed", "true");
+    labelToggleBtn.setAttribute(
+      "aria-label",
+      "Default titles on map when the pointer is over the graph: on. Click to toggle."
+    );
+    const labelToggleImg = document.createElement("img");
+    labelToggleImg.alt = "";
+    labelToggleImg.width = 22;
+    labelToggleImg.height = 22;
+    labelToggleImg.decoding = "async";
+    labelToggleImg.src = labelToggleOnSrc;
+    syncLabelToggleUi();
+    labelToggleBtn.appendChild(labelToggleImg);
+    container.appendChild(labelToggleBtn);
+    labelToggleBtn.addEventListener("click", () => {
+      labelsBulkEnabled = !labelsBulkEnabled;
+      syncLabelToggleUi();
+      try {
+        sigma.refresh();
+      } catch {
+      }
+    });
     if (DRAW_QUARTERLY_BAND_UNDERLAY) {
       bandUnderlay = attachQuarterlyBandUnderlay(container, sigma, sortedAsc);
     }
@@ -7531,6 +7568,8 @@ function runGraph(container, dataEl) {
       lerpRaf = requestAnimationFrame(lerpStep);
     });
     sigma.on("kill", () => {
+      const lt = container.querySelector("#threads-label-toggle-btn");
+      if (lt) lt.remove();
       if (labelRefreshRaf) {
         cancelAnimationFrame(labelRefreshRaf);
         labelRefreshRaf = 0;
