@@ -4442,12 +4442,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin: 0;
     padding: 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     background: transparent;
     color: rgba(231, 226, 220, 0.38);
     cursor: pointer;
@@ -4464,13 +4464,13 @@ footer {
 
 .threads-label-toggle-btn:focus-visible {
     outline: 2px solid rgba(240, 237, 232, 0.55);
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 .threads-label-toggle-btn img {
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 33px;
+    height: 33px;
 }
 
 .threads-sigma-container canvas {
@@ -4496,10 +4496,10 @@ footer {
 /* Bottom-left hover panel — inset to clear label toggle */
 .threads-sigma-container .threads-node-panel {
     position: absolute;
-    left: 56px;
+    left: 80px;
     bottom: 14px;
     z-index: 5;
-    max-width: min(360px, calc(100% - 28px));
+    max-width: min(360px, calc(100% - 96px));
     padding: 12px 14px 14px;
     background: #1a1a1a;
     border: 1px solid #3a3a3a;

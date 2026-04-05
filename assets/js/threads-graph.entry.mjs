@@ -1227,8 +1227,8 @@ function runGraph(container, dataEl) {
     );
     const labelToggleImg = document.createElement("img");
     labelToggleImg.alt = "";
-    labelToggleImg.width = 22;
-    labelToggleImg.height = 22;
+    labelToggleImg.width = 33;
+    labelToggleImg.height = 33;
     labelToggleImg.decoding = "async";
     labelToggleImg.src = labelToggleOnSrc;
 
