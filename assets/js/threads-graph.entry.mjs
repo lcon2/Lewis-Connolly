@@ -13,14 +13,14 @@ import { Sigma } from "sigma";
 
 const NODE_DEFAULT_SIZE = 12;
 
-const POSITIONS_KEY = "threads-graph-positions-v5";
+const POSITIONS_KEY = "threads-graph-positions-v6";
 const CLICK_PX = 6;
 /** Lerp toward cursor while dragging (higher = snappier). */
 const LERP_K = 0.52;
 /** Graph-space collision radius around each node (Sigma coords). */
-const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 8;
+const COLLIDE_RADIUS = NODE_DEFAULT_SIZE + 12;
 /** Global repulsion (softer so band shells and links win). */
-const CHARGE_STRENGTH = -24;
+const CHARGE_STRENGTH = -32;
 /** Min radial thickness of each time band (graph units); wider shells = softer time bias. */
 const MIN_BAND_SHELL_DR = 64;
 /** Visual-only extra width for annulus fill (can exceed shell). */
@@ -112,6 +112,41 @@ function threadsLightLabelRenderer(context, data, settings) {
   context.fillStyle = "#e8e8e8";
   context.font = `${weight} ${size}px ${font}`;
   context.fillText(data.label, data.x + data.size + 4, data.y + size / 3);
+}
+
+/** Midpoint edge captions on hover; light fill + outline for readability on the map background. */
+function threadsEdgeLabelRenderer(context, edgeData, sourceData, targetData, settings) {
+  const label = edgeData.label;
+  if (!label) return;
+  const size = settings.edgeLabelSize;
+  const font = settings.edgeLabelFont;
+  const weight = settings.edgeLabelWeight;
+  context.font = `${weight} ${size}px ${font}`;
+  const textWidth = context.measureText(label).width;
+  const cx = (sourceData.x + targetData.x) / 2;
+  const cy = (sourceData.y + targetData.y) / 2;
+  const dx = targetData.x - sourceData.x;
+  const dy = targetData.y - sourceData.y;
+  const d = Math.hypot(dx, dy) || 1;
+  let angle;
+  if (dx > 0) {
+    angle = dy > 0 ? Math.acos(dx / d) : Math.asin(dy / d);
+  } else if (dy > 0) {
+    angle = Math.acos(dx / d) + Math.PI;
+  } else {
+    angle = Math.asin(dx / d) + Math.PI / 2;
+  }
+  const yOff = edgeData.size / 2 + size;
+  context.save();
+  context.translate(cx, cy);
+  context.rotate(angle);
+  context.lineWidth = 3;
+  context.strokeStyle = "rgba(12, 12, 14, 0.92)";
+  context.lineJoin = "round";
+  context.strokeText(label, -textWidth / 2, yOff);
+  context.fillStyle = "#e8e8e8";
+  context.fillText(label, -textWidth / 2, yOff);
+  context.restore();
 }
 
 function parsePostDateMs(iso) {
@@ -218,12 +253,12 @@ function linkBaseDistanceFromChord(sa, ta, kind) {
   const by = rb * Math.sin(angB);
   const chord = Math.hypot(bx - ax, by - ay);
   if (isThreadEdgeKind(kind)) {
-    return Math.max(24, chord * 0.32);
+    return Math.max(32, chord * 0.34);
   }
   if (kind === "conceptual_bridge") {
-    return Math.max(38, chord * 0.6);
+    return Math.max(48, chord * 0.62);
   }
-  return Math.max(34, chord * 0.5);
+  return Math.max(40, chord * 0.52);
 }
 
 /** Sort key → period start (UTC ms) for stable chronological band ordering. */
@@ -1000,6 +1035,7 @@ function runGraph(container, dataEl) {
       const st = edgeStyleForKind(k, false);
       attr.color = st.color;
       attr.size = st.size;
+      attr.label = "";
       return attr;
     }
     const [s, t] = graph.extremities(edge);
@@ -1007,12 +1043,20 @@ function runGraph(container, dataEl) {
     if (incident) {
       const st = edgeStyleForKind(k, false);
       attr.color = st.color;
-      attr.size = st.size;
+      attr.size = st.size * 1.5;
+      if (isThreadEdgeKind(k)) {
+        attr.label = "Direct Thread";
+      } else if (k === "conceptual_bridge") {
+        attr.label = "Conceptual Bridge";
+      } else {
+        attr.label = "";
+      }
       return attr;
     }
     const st = edgeStyleForKind(k, true);
     attr.color = st.color;
     attr.size = st.size * 0.75;
+    attr.label = "";
     return attr;
   };
 
@@ -1196,6 +1240,7 @@ function runGraph(container, dataEl) {
   try {
     sigma = new Sigma(graph, container, {
       renderLabels: true,
+      renderEdgeLabels: true,
       defaultNodeColor: NODE_BASE,
       defaultEdgeColor: EDGE_REL,
       labelDensity: LABEL_GRID_DENSITY_NO_CAP,
@@ -1203,6 +1248,10 @@ function runGraph(container, dataEl) {
       labelFont: "Georgia, 'Times New Roman', serif",
       labelWeight: "normal",
       labelRenderer: threadsLightLabelRenderer,
+      edgeLabelSize: 11,
+      edgeLabelFont: "Georgia, 'Times New Roman', serif",
+      edgeLabelWeight: "normal",
+      edgeLabelRenderer: threadsEdgeLabelRenderer,
       defaultEdgeType: "line",
       nodeReducer,
       edgeReducer,
