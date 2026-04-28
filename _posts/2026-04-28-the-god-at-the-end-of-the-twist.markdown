@@ -6,7 +6,7 @@ date: 2026-04-28
 author: "Lewis Connolly"
 author_url: "/about/"
 categories:
-  - Culture
+  - Film
   - Technology
   - Theology
 description: "An essay on twist endings, Death of God theology, deep atheism, and AI as a possible artificial providence. Moving from 'Arlington Road' to Carlsmith, Altizer, and Tipler, it asks what happens when a culture no longer trusts hidden order, but begins to imagine building one."
@@ -23,7 +23,7 @@ image_alt: "A lone figure in a dark cinema-like chamber facing a broken, cosmic 
 
 It used to be easier to say what a thriller ending was for. You set the machinery in motion, tighten the screws, and then, in the final movement, the truth appears and order returns. Even when the ending is bleak, it still offers legibility. We know what happened, who did what, and why.
 
-That expectation has not disappeared, but it has weakened. More viewers now seem open to endings that leave residue instead of release. If there is a generational divide, it may be that older audiences remain more attached to the contractual closure of classical narrative, while younger audiences are more habituated to unresolved, unstable, and recursively mediated forms.
+That expectation has not disappeared, but it has weakened. More viewers now seem open to endings that leave residue instead of release. I notice this partly because these endings can irritate me even when I admire them. Some part of me still wants the old contract: the revelation that wounds, but also clarifies. If there is a generational divide, it may be that older audiences remain more attached to the contractual closure of classical narrative, while younger audiences are more habituated to unresolved, unstable, and recursively mediated forms.
 
 By anti-providential, I mean an ending in which revelation occurs without reconciliation. The truth appears, but it does not heal, justify, redeem, or restore order. That is the controlling category of this essay.
 
@@ -67,10 +67,7 @@ Conspiracy thinking is, in a strange way, a theological consolation. It says: th
 
 But this consolation is poisoned. Conspiracy is providence after moral inversion.
 
-Providence says hidden order is real and good.
-Conspiracy says hidden order is real and evil.
-Deep atheism says hidden order may not exist.
-AI futurism says hidden order may be constructible.
+Providence says hidden order is real and good. Conspiracy says hidden order is real and evil. Deep atheism says hidden order may not exist. AI futurism says hidden order may be constructible.
 
 'Arlington Road' lives exactly in this fallen-providence register. Its terror is not pure chaos. Its terror is captured order.
 
