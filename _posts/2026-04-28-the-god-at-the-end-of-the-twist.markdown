@@ -21,8 +21,6 @@ image_alt: "A lone figure in a dark cinema-like chamber facing a broken, cosmic 
 
 <img src="{{ '/assets/images/the-god-at-the-end-of-the-twist.png' | relative_url }}" alt="The God at the End of the Twist" style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
-Spoilers follow for 'Arlington Road' and 'Relay', with only general discussion of 'Bugonia'.
-
 It used to be easier to say what a thriller ending was for. You set the machinery in motion, tighten the screws, and then, in the final movement, the truth appears and order returns. Even when the ending is bleak, it still offers legibility. We know what happened, who did what, and why.
 
 That expectation has not disappeared, but it has weakened. More viewers now seem open to endings that leave residue instead of release. If there is a generational divide, it may be that older audiences remain more attached to the contractual closure of classical narrative, while younger audiences are more habituated to unresolved, unstable, and recursively mediated forms.
@@ -55,7 +53,7 @@ The old ending reassured us that reality had been authored. The contemporary twi
 
 That suspicion now runs through everything: media, politics, institutions, and technology. We inhabit a world of algorithmic curation, synthetic images, strategic narrative management, and permanent epistemic contest. Facts appear inside frames already optimized for constituency, persuasion, and control. Under such conditions, a too-neat ending can feel less like truth than messaging.
 
-At this point Joe Carlsmith's account of deep atheism is clarifying. In his essay 'Deep Atheism and AI Risk', he describes a stance deeper than ordinary disbelief: a fundamental mistrust not only toward God, but toward Nature and intelligence itself. This is not merely atheism as a negation claim. It is an existential orientation. Perhaps there is no hidden parent beneath reality. No final guarantor. No benevolent mind ensuring that greater intelligence will converge with the good.
+At this point Joe Carlsmith's account of deep atheism is clarifying. In his essay 'Deep Atheism and AI Risk', he describes a stance deeper than ordinary disbelief: a fundamental mistrust not only toward God, but toward Nature and intelligence itself.<img src="/assets/images/footnote/no1.png" alt="Footnote 1" style="width: 15px; height: 15px; margin: 0; padding: 0; position: relative; top: -7px; vertical-align: middle; display: inline; border: none;"> This is not merely atheism as a negation claim. It is an existential orientation. Perhaps there is no hidden parent beneath reality. No final guarantor. No benevolent mind ensuring that greater intelligence will converge with the good.
 
 The anti-providential ending stages this orientation in miniature. It lets truth appear, then denies the old expectation that truth will save.
 
@@ -78,7 +76,7 @@ AI futurism says hidden order may be constructible.
 
 Thomas J. J. Altizer pushes the argument into sharper theological territory. Altizer's scandal is not atheism as simple denial. It is Christianity without retreat. The sacred does not vanish into nothing. It enters the profane so completely that there is no clean elsewhere from which rescue can come.
 
-Altizer's claim that God dies in history is therefore more dangerous than modern disbelief. It removes the metaphysical escape hatch. No untouched heaven. No stable vertical guarantee. No easy transcendence waiting above the wreckage. If one takes him seriously, Christianity becomes a religion after the collapse of supernatural distance: not secular banality, but sacred immanence under conditions of risk.
+Altizer's claim that God dies in history is therefore more dangerous than modern disbelief.<img src="/assets/images/footnote/no2.png" alt="Footnote 2" style="width: 15px; height: 15px; margin: 0; padding: 0; position: relative; top: -7px; vertical-align: middle; display: inline; border: none;"> It removes the metaphysical escape hatch. No untouched heaven. No stable vertical guarantee. No easy transcendence waiting above the wreckage. If one takes him seriously, Christianity becomes a religion after the collapse of supernatural distance: not secular banality, but sacred immanence under conditions of risk.
 
 From here, a useful triangle emerges. Carlsmith: perhaps there was never any hidden order. Altizer: perhaps hidden order emptied itself irreversibly into history. Tipler: perhaps hidden order can be generated at the end.
 
@@ -92,7 +90,7 @@ If Altizer's God dies into history, AI begins as history trying to assemble some
 
 That is why alignment discourse feels quasi-theological. We are not just discussing engineering reliability. We are asking whether intelligence can be made trustworthy in the absence of inherited guarantees about truth, goodness, and authority.
 
-Frank J. Tipler names the extreme edge of this impulse. In 'The Physics of Immortality' (1994), he links cosmology, computation, eschatology, and resurrection through the Omega Point. The argument is speculative to the point of excess, but that excess is diagnostic. Tipler imagines authorship emerging at the end of time. Not God as first cause, but God as final computational culmination, capable in principle of retroactive redemption.
+Frank J. Tipler names the extreme edge of this impulse. In 'The Physics of Immortality' (1994), he links cosmology, computation, eschatology, and resurrection through the Omega Point.<img src="/assets/images/footnote/no3.png" alt="Footnote 3" style="width: 15px; height: 15px; margin: 0; padding: 0; position: relative; top: -7px; vertical-align: middle; display: inline; border: none;"> The argument is speculative to the point of excess, but that excess is diagnostic. Tipler imagines authorship emerging at the end of time. Not God as first cause, but God as final computational culmination, capable in principle of retroactive redemption.
 
 He is useful not because he is obviously correct, but because he makes explicit a latent desire within technological modernity: that intelligence might one day gather all fragments, recover all lost information, and close history as meaningful totality.
 
