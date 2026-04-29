@@ -15,6 +15,16 @@ og_image: /assets/images/the-god-at-the-end-of-the-twist.png
 og_image_width: 1024
 og_image_height: 576
 image_alt: "A lone figure in a dark cinema-like chamber facing a broken, cosmic aperture."
+read_next:
+  - title: "The End of Shared Reality"
+    description: "AI, personalization, and the gradual fraying of a single shared world."
+    url: "/2026/03/20/the-end-of-shared-reality/"
+  - title: "The Synthetic Shadow"
+    description: "What we project onto machines when disowned psychic material meets fluent, patient interfaces."
+    url: "/2026/04/01/the-synthetic-shadow/"
+  - title: "The Shapes Beneath Thought"
+    description: "Jung, archetypes, AI, and the recurring forms beneath intelligence."
+    url: "/2026/03/24/the-shapes-beneath-thought/"
 ---
 
 {::options smart_quotes="apos,apos,quot,quot" /}
@@ -107,10 +117,11 @@ Meaning becomes less like discovery and more like stewardship. We do not receive
 
 The anti-providential ending belongs to this interval. It names a culture that no longer trusts old guarantees, yet cannot cease searching for an order worthy of trust.
 
-📚 Bibliography
-
-1. Carlsmith, Joe. "Deep Atheism and AI Risk." Joe Carlsmith, January 4, 2024. https://joecarlsmith.com/2024/01/04/deep-atheism-and-ai-risk.
-
-2. Altizer, Thomas J. J. *The Gospel of Christian Atheism*. Philadelphia: Westminster Press, 1966.
-
-3. Tipler, Frank J. *The Physics of Immortality: Modern Cosmology, God and the Resurrection of the Dead*. New York: Doubleday, 1994.
+<div style="text-align: left; overflow-wrap: anywhere;">
+<p>📚 Bibliography</p>
+<ol>
+<li>Carlsmith, Joe. "Deep Atheism and AI Risk." Joe Carlsmith, January 4, 2024. <a href="https://joecarlsmith.com/2024/01/04/deep-atheism-and-ai-risk">https://joecarlsmith.com/2024/01/04/deep-atheism-and-ai-risk</a>.</li>
+<li>Altizer, Thomas J. J. <em>The Gospel of Christian Atheism</em>. Philadelphia: Westminster Press, 1966.</li>
+<li>Tipler, Frank J. <em>The Physics of Immortality: Modern Cosmology, God and the Resurrection of the Dead</em>. New York: Doubleday, 1994.</li>
+</ol>
+</div>
