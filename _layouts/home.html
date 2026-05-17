@@ -102,7 +102,7 @@
                             <img src="{{ '/assets/images/bullet.png' | relative_url }}" alt="" class="bullet-icon bullet-base">
                             <img src="{{ '/assets/images/bullet2.png' | relative_url }}" alt="" class="bullet-icon bullet-hover">
                         </span>
-                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.description | escape }}" data-date="{{ post.date | date: '%d/%m/%Y' }}">{{ post.title | truncate: 45 }}</a>
+                        <a href="{{ post.url | relative_url }}" class="bullet-link" data-summary="{{ post.description | escape }}" data-date="{% include human-date.html date=post.date format='compact' %}">{{ post.title | truncate: 45 }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -146,16 +146,18 @@
 
         var allPosts = [
           {% for post in site.posts %}
-          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }}, summary: {{ post.description | jsonify }}, dateFormatted: {{ post.date | date: '%d/%m/%Y' | jsonify }} }{% if forloop.last == false %},{% endif %}
+          {%- capture post_date_compact -%}{% include human-date.html date=post.date format='compact' %}{%- endcapture -%}
+          { title: {{ post.title | jsonify }}, url: {{ post.url | relative_url | jsonify }}, summary: {{ post.description | jsonify }}, dateFormatted: {{ post_date_compact | strip | jsonify }} }{% if forloop.last == false %},{% endif %}
           {% endfor %}
         ];
         {% for page in site.pages %}
         {% if page.description and page.url %}
+        {%- capture page_date_compact -%}{% include human-date.html date=page.date format='compact' %}{%- endcapture -%}
         allPosts.push({
           title: {{ page.title | default: page.url | jsonify }},
           url: {{ page.url | relative_url | jsonify }},
           summary: {{ page.description | jsonify }}{% if page.date %},
-          dateFormatted: {{ page.date | date: '%d/%m/%Y' | jsonify }}{% endif %}
+          dateFormatted: {{ page_date_compact | strip | jsonify }}{% endif %}
         });
         {% endif %}
         {% endfor %}

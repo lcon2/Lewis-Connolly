@@ -1,7 +1,7 @@
 {% comment %}Expects `thread_posts` assigned (reverse chronological). Used on Archive.{% endcomment %}
 <section class="archive-threads-map" aria-label="Thematic threads between posts">
     <script type="application/json" id="threads-graph-data">
-{"baseurl":{{ site.baseurl | default: "" | jsonify }},"nodes":[{% for post in thread_posts %}{"id":{{ post.url | jsonify }},"title":{{ post.title | jsonify }},"date":{{ post.date | date: "%Y-%m-%d" | jsonify }},"dateDisplay":{{ post.date | date: "%d/%m/%Y" | jsonify }},"description":{{ post.description | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"edges":{% if site.data.post_thread_edges.edges %}{{ site.data.post_thread_edges.edges | jsonify }}{% else %}[]{% endif %}}
+{"baseurl":{{ site.baseurl | default: "" | jsonify }},"nodes":[{% for post in thread_posts %}{%- capture post_date_compact -%}{% include human-date.html date=post.date format='compact' %}{%- endcapture -%}{"id":{{ post.url | jsonify }},"title":{{ post.title | jsonify }},"date":{{ post.date | date: "%Y-%m-%d" | jsonify }},"dateDisplay":{{ post_date_compact | strip | jsonify }},"description":{{ post.description | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"edges":{% if site.data.post_thread_edges.edges %}{{ site.data.post_thread_edges.edges | jsonify }}{% else %}[]{% endif %}}
     </script>
 
     <div

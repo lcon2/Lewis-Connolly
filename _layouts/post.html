@@ -30,7 +30,7 @@
         <article>
             <h2>{{ page.title }}</h2>
             <p class="post-meta" style="margin-bottom: 8px;">
-                {{ page.date | date: "%B %d, %Y" }} 
+                {% include human-date.html date=page.date format='long' %}
                     <span class="author-meta">
                         By <a href="{{ page.author_url | relative_url }}" class="author-link">{{ page.author }}</a>
                     </span>

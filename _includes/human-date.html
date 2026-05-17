@@ -1,0 +1,9 @@
+{%- assign date_value = include.date -%}
+{%- assign format = include.format | default: "long" -%}
+{%- if date_value -%}
+  {%- if format == "compact" -%}
+    {{- date_value | date: "%m/%d/%Y" -}}
+  {%- else -%}
+    {{- date_value | date: "%B %-d, %Y" -}}
+  {%- endif -%}
+{%- endif -%}
