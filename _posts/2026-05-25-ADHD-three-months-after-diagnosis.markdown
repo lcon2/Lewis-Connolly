@@ -33,7 +33,7 @@ read_next:
 
 This article follows on from [‘ADHD, Vyvanse, and Taste,’]({{ '/2026/03/28/ADHD-Vyvanse-and-Taste/' | relative_url }}) my thoughts one month into being diagnosed and prescribed medication. These are my reflections three months in. I have a lot to say, because the diagnosis has begun to change how I understand my childhood, my habits, my social instincts, and even parts of my temperament.
 
-There has been an unsettling part to all this: the growing sense of how omnipresent this condition has been in my life. Diagnosis has not felt like discovering one new fact about myself. It has felt more like watching an old explanation give way to a larger one. I was diagnosed with dyslexia very early, around the age of six. It was actually my dad who “diagnosed” me first, trying to reconcile two facts: a son who was clearly intelligent, and teachers who placed me at the bottom of my primary school class.
+There has been an unsettling part to all this: the growing sense of how omnipresent this condition has been in my life. Diagnosis has not felt like discovering one new fact about myself. It has felt more like watching an old explanation give way to a larger one. I was diagnosed with dyslexia very early, around the age of six. It was actually my dad who "diagnosed" me first, trying to reconcile two facts: a son who was clearly intelligent, and teachers who placed me at the bottom of my primary school class.
 
 For two decades after that, dyslexia was the planet my life orbited. Special schools, phonics, sounding out words, reading comprehension, word searches, audiobooks, early text-to-speech software, extra time, the use of a word processor in my exams, and on and on it went. But alongside all that, I also had the symptoms I now recognize as undiagnosed ADHD: drifting attention, weak follow-through, poor working memory, unfinished tasks, lost instructions, emotional dysregulation, and the constant stressor of trying to look as though I was coping.
 
@@ -59,7 +59,7 @@ This is one of the crueler social tricks of ADHD. The very effort to manage your
 
 One memory keeps coming back to me. I am sitting at a breakfast table in Houston, Texas, in 1997. My computer is upstairs, a Macintosh with ‘SimTower’ on it, a game I had been waiting months to play. Through the window I can see the pool and the diving board. In front of me is one of the word searches I was so often given as homework.
 
-I cannot do it. Or rather, I cannot make myself do it. The task is not intellectually difficult in any grand sense. It is simply unbearable. Somewhere upstairs, a whole little world of elevators, tenants, commercial zones, and hotel rooms is waiting for me. Downstairs, I am being asked to find “butterfly” in a grid of letters.
+I cannot do it. Or rather, I cannot make myself do it. The task is not intellectually difficult in any grand sense. It is simply unbearable. Somewhere upstairs, a whole little world of elevators, tenants, commercial zones, and hotel rooms is waiting for me. Downstairs, I am being asked to find "butterfly" in a grid of letters.
 
 For most of my life, I understood this scene through the lens of dyslexia. I thought: this is a reading task, reading tasks are hard for me, therefore I avoid them. That was not wholly false. But in retrospect, it now seems that ADHD may have been the main problem all along. Dyslexia explained part of the difficulty, but not the strange unevenness of it: the inability to attend to a word search at the kitchen table, followed by hours of intense concentration upstairs on a computer game that required a nine-year-old to think, with a kind of effortless intensity, about elevator placement, zoning, population density, cash flow, and the internal logic of a functioning skyscraper. The issue was not simply words. It was the inability to summon attention for something that did not grip me.
 
@@ -113,9 +113,9 @@ Again, this is where ADHD becomes difficult to separate from character. If you s
 
 Narratives are doing a tremendous amount of work in all this. Fifteen-odd years ago, while I was training for the priesthood, I did a placement at an Episcopal church in Tennessee. As part of becoming familiar with the life of the congregation, I was encouraged to spend time with the various groups connected to the church. One evening, I went along to an Alcoholics Anonymous meeting that gathered weekly in the church hall.
 
-Afterward, I found myself talking with an older man. He told me that he had never, in his entire life, had a single drop of alcohol. And yet he knew he was an alcoholic. He had grown up around alcoholism, I inferred that he had probably experienced firsthand abuse from an alcoholic, and I think he mentioned his father. As he understood it, he had the “disease.” That was his word. In a moment of desperation as a teenager, he had made his way to a meeting, and he had been going ever since.
+Afterward, I found myself talking with an older man. He told me that he had never, in his entire life, had a single drop of alcohol. And yet he knew he was an alcoholic. He had grown up around alcoholism, I inferred that he had probably experienced firsthand abuse from an alcoholic, and I think he mentioned his father. As he understood it, he had the "disease." That was his word. In a moment of desperation as a teenager, he had made his way to a meeting, and he had been going ever since.
 
-I have thought about that conversation many times since. It became one of the ways I began to understand the intersection between belief, narrative, identity, and self-understanding. In what sense is it meaningful to think of this man as an alcoholic? Is that an absurd question? It feels almost impossible to push a wedge between this self-narrative and “reality.” Clearly, this had become his lifelong reality.
+I have thought about that conversation many times since. It became one of the ways I began to understand the intersection between belief, narrative, identity, and self-understanding. In what sense is it meaningful to think of this man as an alcoholic? Is that an absurd question? It feels almost impossible to push a wedge between this self-narrative and "reality." Clearly, this had become his lifelong reality.
 
 Of course, I am not suggesting that ADHD and alcoholism are the same kind of thing. Nor am I saying that diagnoses are merely stories. But the distinction is not as clean as we might like. In some respects, an ADHD diagnosis involves testing whether your subjective account of yourself comports with a recognized diagnostic pattern. You describe your attention, your restlessness, your failures of organization, your habits of delay, your history of effort and collapse, and the clinician listens for a shape within it.
 
@@ -123,9 +123,13 @@ And now, in this strange new period, you can rehearse that self-account with a l
 
 In some sense, I am choosing to have this label applied to me. Not because I think it explains everything, or because I imagine it names some fixed object inside me, but because it has proved helpful and self-clarifying. It gathers things that had previously felt scattered. It gives a shape to difficulties I had learned to explain in other ways.
 
-But could someone with a very similar brain to mine decline the label altogether? I think certainly they could. They might call it temperament, anxiety, laziness, intensity, creativity, immaturity, or simply “the way I am.” They might distrust the language of diagnosis entirely. They might prefer an older moral vocabulary, or a less medicalized one. They might even live decently under that description.
+But could someone with a very similar brain to mine decline the label altogether? I think certainly they could. They might call it temperament, anxiety, laziness, intensity, creativity, immaturity, or simply "the way I am." They might distrust the language of diagnosis entirely. They might prefer an older moral vocabulary, or a less medicalized one. They might even live decently under that description.
 
 So what, then, is the reality? I am not sure it is the sort of thing that can be cleanly separated from the words we use for it. ADHD is not an object sitting somewhere inside me, waiting to be discovered like a stone in a field. It seems closer to a recognizable pattern: of attention, motivation, memory, emotion, inhibition, behavior, and consequence. The label is not the thing itself, but neither is it merely invented.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 ## Not a Final Explanation
 
