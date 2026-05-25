@@ -775,6 +775,11 @@
       "source": "/2026/03/28/ADHD-Vyvanse-and-Taste/",
       "target": "/2026/04/01/the-synthetic-shadow/",
       "kind": "conceptual_bridge"
+    },
+    {
+      "source": "/2026/03/28/ADHD-Vyvanse-and-Taste/",
+      "target": "/2026/05/25/ADHD-three-months-after-diagnosis/",
+      "kind": "thread"
     }
   ]
 }

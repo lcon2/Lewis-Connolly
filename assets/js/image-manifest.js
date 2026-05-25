@@ -418,5 +418,10 @@ window.IMAGE_MANIFEST = {
     "placeholder": "/assets/images/placeholders/void-placeholder.jpg",
     "srcset": "/assets/images/void-800.png 800w, /assets/images/void.png 1024w",
     "webp_srcset": "/assets/images/void-800.webp 800w, /assets/images/void.webp 1024w"
+  },
+  "/assets/images/wordsearch.png": {
+    "placeholder": "/assets/images/placeholders/wordsearch-placeholder.jpg",
+    "srcset": "/assets/images/wordsearch-800.png 800w, /assets/images/wordsearch.png 1448w",
+    "webp_srcset": "/assets/images/wordsearch-800.webp 800w, /assets/images/wordsearch.webp 1448w"
   }
 };
