@@ -1817,7 +1817,7 @@ header {
     border-radius: 8px; /* Adds rounded corners */
 }
 
-.post article img.post-float-image {
+.post article .post-float-media {
     float: right;
     display: block;
     width: min(38%, 330px);
@@ -1825,12 +1825,21 @@ header {
     margin: 0.25em 0 1em 1.35em;
 }
 
-.post article a[data-post-lightbox-trigger] {
+.post article .post-float-media a {
+    display: block;
     border-bottom: 0;
     cursor: zoom-in;
 }
 
-.post article img.post-float-image.post-float-image--genealogy {
+.post article .post-float-media img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.post article .post-float-media--genealogy {
     width: min(36%, 330px);
     max-width: 330px;
     margin: 0.25em -70px 1em 1.35em;
@@ -3169,13 +3178,7 @@ footer {
         height: auto !important;
     }
 
-    .post article img.post-float-image {
-        float: none;
-        width: min(100%, 360px);
-        margin: 20px auto;
-    }
-
-    .post article img.post-float-image.post-float-image--genealogy {
+    .post article .post-float-media {
         float: none;
         width: min(100%, 360px);
         max-width: 100%;
