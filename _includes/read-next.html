@@ -2,9 +2,18 @@
 {% capture recommendations_markup %}
 {% if page.read_next and page.read_next.size > 0 %}
     {% for item in page.read_next limit: 3 %}
+        {% assign linked_post = nil %}
+        {% for post_lookup in site.posts %}
+            {% if post_lookup.url == item.url %}
+                {% assign linked_post = post_lookup %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        {% assign item_title = linked_post.title | default: item.title %}
+        {% assign item_summary = linked_post.description | default: item.description | default: item.tagline %}
         {% assign recommendation_count = recommendation_count | plus: 1 %}
             <li class="post-read-next__item">
-                <a class="post-read-next__link" href="{{ item.url | relative_url }}">
+                <a class="post-read-next__link" href="{{ item.url | relative_url }}"{% if item_summary %} data-summary="{{ item_summary | escape }}"{% endif %} data-title="{{ item_title | escape }}"{% if linked_post.date %} data-date="{% include human-date.html date=linked_post.date format='compact' %}"{% endif %}>
                     <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
                     <span class="post-read-next__content">
                         <span class="post-read-next__item-title">{{ item.title }}</span>
@@ -25,7 +34,7 @@
             {% unless seen_urls contains candidate_key %}
                 {% assign recommendation_count = recommendation_count | plus: 1 %}
             <li class="post-read-next__item">
-                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}">
+                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}" data-summary="{{ candidate.description | default: candidate.tagline | escape }}" data-title="{{ candidate.title | escape }}" data-date="{% include human-date.html date=candidate.date format='compact' %}">
                     <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
                     <span class="post-read-next__content">
                         <span class="post-read-next__item-title">{{ candidate.title }}</span>
@@ -51,7 +60,7 @@
             {% unless seen_urls contains candidate_key %}
                 {% assign recommendation_count = recommendation_count | plus: 1 %}
             <li class="post-read-next__item">
-                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}">
+                <a class="post-read-next__link" href="{{ candidate.url | relative_url }}" data-summary="{{ candidate.description | default: candidate.tagline | escape }}" data-title="{{ candidate.title | escape }}" data-date="{% include human-date.html date=candidate.date format='compact' %}">
                     <span class="post-read-next__number">{% if recommendation_count < 10 %}0{% endif %}{{ recommendation_count }}</span>
                     <span class="post-read-next__content">
                         <span class="post-read-next__item-title">{{ candidate.title }}</span>
