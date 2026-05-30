@@ -1839,6 +1839,24 @@ header {
     margin: 0;
 }
 
+.post article .post-float-media__note {
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border: 1px solid rgba(209, 174, 122, 0.45);
+    border-left: 3px solid #d1ae7a;
+    border-radius: 6px;
+    background: rgba(24, 24, 24, 0.94);
+    color: #d8d0c6;
+    font-size: 0.74em;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.post article .post-float-media__note strong {
+    color: #f0e8dc;
+    font-weight: 700;
+}
+
 .post article .post-float-media--genealogy {
     width: min(36%, 330px);
     max-width: 330px;
