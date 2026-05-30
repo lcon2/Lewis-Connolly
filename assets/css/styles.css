@@ -1817,6 +1817,18 @@ header {
     border-radius: 8px; /* Adds rounded corners */
 }
 
+.post article img.post-float-image {
+    float: right;
+    display: block;
+    width: min(38%, 330px);
+    max-width: 100%;
+    margin: 0.25em 0 1em 1.35em;
+}
+
+.post-clear-float {
+    clear: both;
+}
+
 img.blur-up {
     filter: blur(12px);
     transform: scale(1.02);
@@ -3075,6 +3087,12 @@ footer {
     .post article img {
         max-width: 100% !important; /* Beats inline max-width: 600px on narrow viewports */
         height: auto !important;
+    }
+
+    .post article img.post-float-image {
+        float: none;
+        width: min(100%, 360px);
+        margin: 20px auto;
     }
 
     .post article img[style*="max-width: 85px"] {

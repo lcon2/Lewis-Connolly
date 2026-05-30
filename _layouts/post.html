@@ -28,7 +28,7 @@
     {% include mobile-nav-overlay.html panel_id='post-mobile-menu-panel' %}
     <main>
         <article>
-            <h2>{{ page.title }}</h2>
+            <h2>{{ page.display_title | default: page.title }}</h2>
             <p class="post-meta" style="margin-bottom: 8px;">
                 {% include human-date.html date=page.date format='long' %}
                     <span class="author-meta">

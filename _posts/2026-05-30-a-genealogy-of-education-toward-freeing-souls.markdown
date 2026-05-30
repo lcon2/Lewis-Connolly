@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "A Genealogy of Education Toward Freeing Souls"
+title: "The Education of Free Souls"
+display_title: "A Genealogy of Education Toward Freeing Souls"
 seo_title: "A Genealogy of Education Toward Freeing Souls"
 date: 2026-05-30
 author: "Lewis Connolly"
@@ -11,9 +12,15 @@ categories:
   - Technology
 description: "A parental meditation on education after usefulness, tracing four generations from limited schooling and industrial work to liberal study and AI-era uncertainty. The essay argues that the trivium - grammar, logic, and rhetoric - matters less as antiquarian curriculum than as formation for freedom, judgment, truthful speech, and higher pleasures."
 tagline: "The trivium as formation for freedom once usefulness loses its crown."
+og_image: /assets/images/education.png
+og_image_width: 1672
+og_image_height: 941
+image_alt: "Generational education scene moving from industrial labor and family instruction toward liberal study and AI-era imagination."
 ---
 
 {::options smart_quotes="apos,apos,quot,quot" /}
+
+<img src="{{ '/assets/images/education.png' | relative_url }}" alt="Generational education scene moving from industrial labor and family instruction toward liberal study and AI-era imagination." style="display: block; margin: 20px auto; max-width: 700px; height: auto;">
 
 Our daughter is nearly three, and we are just reaching the stage when teaching begins to feel more deliberate. Every parent teaches from the beginning: by gesture, tone, repetition, affection, correction, and example. But there is a new kind of teaching that begins when a child can sit with you and start to grasp letters, sounds, and numbers, when you can begin to show her that the world is not only encountered, but named, ordered, and understood.
 
@@ -27,7 +34,11 @@ My grandfather, Terrence Connolly, was born in South Wales in 1913. I think he p
 
 My father, Patrick Connolly, was born in Eastbourne in 1956. Toward the end of his primary school education, he took what was called the 11-plus, an exam used to determine the kind of secondary school a child would attend. Children who did well, as my father did, won a place at a grammar school, which offered a more academic education. He went on to study physics at Birmingham University, joined the oil industry, and lived in various places. By the late 1980s, he was working in Glasgow, Scotland.
 
+<img class="post-float-image post-float-image--genealogy" src="{{ '/assets/images/geneology2.png' | relative_url }}" alt="Genealogy chart tracing the Connolly and McCarthy family line toward Terrence Connolly." loading="lazy" decoding="async">
+
 I was born in Glasgow in 1988. I am not going to go through my entire educational history again. It is covered on the [About Me]({{ '/about/' | relative_url }}) page, and I discussed some of it in my previous article ['ADHD: Three Months After Diagnosis']({{ '/2026/05/25/ADHD-three-months-after-diagnosis/' | relative_url }}). But I hold several degrees, including postgraduate qualifications in theology and psychology, fields that belong broadly to the liberal arts: forms of study concerned less with technical utility than with meaning, interpretation, and the formation of the human person. Like the generations before me, I have also moved more than once, and have ended up in the United States, in Charlotte, North Carolina. My first daughter was born in Charlotte in 2023.
+
+<div class="post-clear-float" aria-hidden="true"></div>
 
 ## School as Social Formation
 
