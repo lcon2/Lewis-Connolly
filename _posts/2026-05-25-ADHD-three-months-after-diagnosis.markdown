@@ -39,6 +39,10 @@ For two decades after that, dyslexia was the planet my life orbited. Special sch
 
 I think many of these signs can easily be mistaken for the burden of dyslexia taking its toll. The fatigue, avoidance, missed instructions, and slow work all sound a lot like a child really struggling with dyslexia, hence the understandable lack of a childhood diagnosis.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
 Narratives are doing a tremendous amount of work in all this. We are always thinking in terms of narratives. Dyslexia is a kind of explanatory narrative: it allows others to contextualize who you are and weigh their expectations accordingly, for better or worse. ‘Dyslexia’ has been tremendously useful to me as such a narrative, affording me all the tools and support I mentioned above. But of course, there is a sense in which it is not really true, not in any final sense. It is a crude diagnostic approximation for what it is like to have my brain. It is an interpretive category imposed on a much messier reality.
 
 But in life as actually lived, diagnostic criteria matter far less than the vague cloud of associations that gather around the word. What matters is what people think dyslexia means. The word carries a story with it. It suggests certain struggles, certain allowances, certain limits, certain expectations. It gives people a way of making sense of you before they have really understood you.
@@ -51,10 +55,6 @@ So, it might not be obvious yet, but I am still talking about ADHD. Not ADHD as 
 
 This is one of the crueler social tricks of ADHD. The very effort to manage yourself can make you appear more self-involved than you are. From the inside, you are watching your tone, your timing, your memory, your next sentence, your last mistake. You may also be trying to explain the larger pattern of your life, the thing you are trying to unfold. From the outside, I fear it can simply look like self-absorption, which is difficult to deny while producing, as evidence, an essay about myself.
 
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
-
 ## The Word Search and the Tower
 
 One memory keeps coming back to me. I am sitting at a breakfast table in Houston, Texas, in 1997. My computer is upstairs, a Macintosh with ‘SimTower’ on it, a game I had been waiting months to play. Through the window I can see the pool and the diving board. In front of me is one of the word searches I was so often given as homework.
@@ -63,11 +63,11 @@ I cannot do it. Or rather, I cannot make myself do it. The task is not intellect
 
 For most of my life, I understood this scene through the lens of dyslexia. I thought: this is a reading task, reading tasks are hard for me, therefore I avoid them. That was not wholly false. But in retrospect, it now seems that ADHD may have been the main problem all along. Dyslexia explained part of the difficulty, but not the strange unevenness of it: the inability to attend to a word search at the kitchen table, followed by hours of intense concentration upstairs on a computer game that required a nine-year-old to think, with a kind of effortless intensity, about elevator placement, zoning, population density, cash flow, and the internal logic of a functioning skyscraper. The issue was not simply words. It was the inability to summon attention for something that did not grip me.
 
-In retrospect, there is something almost funny about the idea that the main intellectual work was supposed to be happening at the kitchen table. That was where the homework was, so that was where the learning was presumed to be. But I am not sure that was true. Much of my interior life was being formed elsewhere: in games, films, stories, maps, systems, and imagined worlds. What looked from the outside like avoidance may also have been a displaced form of intelligence, looking for a world complex enough to hold it. I think the line from those things to my later interests in philosophy, theology, psychology, and the structure of human experience is much straighter than it might appear. The important continuity was not subject matter. It was the kind of attention involved: entering a world, learning its rules, sensing the hidden mechanics at play, and trying to understand what sort of life could be lived inside it.
-
 <div style="margin-top: 30px;"></div>
 <img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
 <div style="margin-bottom: 40px;"></div>
+
+In retrospect, there is something almost funny about the idea that the main intellectual work was supposed to be happening at the kitchen table. That was where the homework was, so that was where the learning was presumed to be. But I am not sure that was true. Much of my interior life was being formed elsewhere: in games, films, stories, maps, systems, and imagined worlds. What looked from the outside like avoidance may also have been a displaced form of intelligence, looking for a world complex enough to hold it. I think the line from those things to my later interests in philosophy, theology, psychology, and the structure of human experience is much straighter than it might appear. The important continuity was not subject matter. It was the kind of attention involved: entering a world, learning its rules, sensing the hidden mechanics at play, and trying to understand what sort of life could be lived inside it.
 
 ## The Shape of a Day
 
@@ -77,6 +77,10 @@ There is also a strange moral pressure that comes with being able to do more. Be
 
 The other thing worth saying is that Vyvanse does not make attention wise. It makes attention more available. That is a different thing. I can work longer, stay with a task more patiently, and return to it with less internal resistance, but I still have to decide what deserves that attention. In some ways, that makes distraction more serious, not less. If I give the day to the wrong thing, I may now give it with much greater efficiency.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
 It would feel slightly absurd to say that I have become more productive and then leave no evidence of that productivity behind. So I will say this much: I am working, quietly and quite seriously, on a historical computer game set among old streets, churches, ledgers, parlors, and decaying Southern grandeur. I am not ready to say much more about it yet, except that I think it may be the most substantial thing I have made to date.
 
 There is also a physical side to it. The medication seems to increase a certain muscular tension in me, and because it helps me work with greater focus, I can remain stationary at a computer for much longer than I could, or probably should. The result is not dramatic, but it is real: more backache, more bodily tightness, more need to remember that a focused mind is still attached to a body.
@@ -84,10 +88,6 @@ There is also a physical side to it. The medication seems to increase a certain 
 I have had very few days off Vyvanse since I began taking it on March 2, 2026, and I increasingly dislike them. I am far more conscious of my limitations than I was before. I can think of things I ought to do, but the old difficulty of beginning returns, now sharpened by comparison. As a result, I tend to feel shit. This is compounded by the slightly dangerous knowledge that I can simply do the thing when I am back on the medication. So the lethargy I felt before, if anything, is intensified by contrast.
 
 I was asked after my first article what the main negatives were, and honestly, they are pretty limited. Vyvanse has been, overall, a very positive experience for me. I found that it was tailing off a bit later in the day, so after the first month I had my dose increased to 40 mg. Everything else I have described here covers the drawbacks. And obviously I am describing my own experience here, not offering advice about medication.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
 
 ## A Bygone Temper
 
@@ -99,15 +99,15 @@ I do not care to excuse anything. It makes no difference now. But I do think ADH
 
 I am cautious about this, because I do not want ADHD to become too convenient an explanation. There is something distasteful to me about using a diagnosis as a standing pardon for one’s own worst habits. I am cynical about people hiding too readily behind labels, especially when the label becomes not only a way of understanding oneself, but a way of compelling others to accept one’s preferred account of events. At that point, the diagnosis stops being an explanation and becomes a demand: you must understand me this way, and no other reading is permitted. That seems false to me, and faintly coercive. But neither do I think skepticism should harden into blindness. The point is not that anger, impatience, or oversensitivity were never really mine. They were mine. The point is that I now understand more clearly what I was trying, often clumsily, to manage.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
 Since being diagnosed, I have read more about emotional dysregulation in ADHD, and about rejection sensitivity: the way perceived criticism, disappointment, exclusion, or disapproval can land with absurd force. That has been one of the more uncomfortable recognitions, because it does not feel like learning something new. It feels like finding a name for something I have known intimately for decades.
 
 What comes back to me now is not only the times I reacted badly. It is also the times when anger almost got the better of me and, somehow, did not. I remember moments when a reaction rose in me too quickly and too fiercely, when I came close to saying or doing something I would not have been able to take back. And yet some last restraint held. The sentence remained unsaid. The damage did not happen.
 
 Again, this is where ADHD becomes difficult to separate from character. If you spend years being intense, impatient, reactive, or oversensitive, at some point people stop seeing those things as symptoms of anything. They become you. And, in a practical sense, they are you. But a diagnosis complicates that. It suggests that some of what I took to be temperament may also have been dysregulation; some of what looked like anger may have been overwhelm; some of what looked like certainty may have been hurt moving faster than thought. That is a useful revelation, but not exactly a comforting one.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
 
 ## Believing in ADHD
 
@@ -121,15 +121,15 @@ Of course, I am not suggesting that ADHD and alcoholism are the same kind of thi
 
 And now, in this strange new period, you can rehearse that self-account with a large language model before ever speaking to a doctor. You can ask whether your experience sounds like ADHD, whether the pattern coheres, whether the words you are using are likely to clarify or confuse. There is something slightly unsettling about that. It can feel like trying on different beliefs until one begins to feel true.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
 In some sense, I am choosing to have this label applied to me. Not because I think it explains everything, or because I imagine it names some fixed object inside me, but because it has proved helpful and self-clarifying. It gathers things that had previously felt scattered. It gives a shape to difficulties I had learned to explain in other ways.
 
 But could someone with a very similar brain to mine decline the label altogether? I think certainly they could. They might call it temperament, anxiety, laziness, intensity, creativity, immaturity, or simply "the way I am." They might distrust the language of diagnosis entirely. They might prefer an older moral vocabulary, or a less medicalized one. They might even live decently under that description.
 
 So what, then, is the reality? I am not sure it is the sort of thing that can be cleanly separated from the words we use for it. ADHD is not an object sitting somewhere inside me, waiting to be discovered like a stone in a field. It seems closer to a recognizable pattern: of attention, motivation, memory, emotion, inhibition, behavior, and consequence. The label is not the thing itself, but neither is it merely invented.
-
-<div style="margin-top: 30px;"></div>
-<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
-<div style="margin-bottom: 40px;"></div>
 
 ## Not a Final Explanation
 

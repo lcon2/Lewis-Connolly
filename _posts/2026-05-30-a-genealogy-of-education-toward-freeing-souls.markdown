@@ -35,6 +35,10 @@ In the wake of industrialization, education increasingly became a technology of 
 
 That question is now collapsing. If AI continues on its present course, human usefulness in the old economic sense is finished. The machine will write, calculate, design, manage, advise, and produce. It will do the useful things. If education is only preparation for usefulness, then education has lost its governing purpose.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
+
 Recently I have been reading Sister Miriam Joseph's *The Trivium: The Liberal Arts of Logic, Grammar, and Rhetoric*. Early in the book, she draws a distinction that feels especially important now. The liberal arts are not primarily useful in the ordinary economic sense. They are not like carpentry, banking, law, medicine, or any other art by which one produces something external and earns a living. Their work happens within the person. They train the faculties. They deepen perception. They order thought.
 
 This is the sense in which a liberal education is ordered toward freedom. It makes a person free by forming the powers by which he can know, judge, speak, and act. The classic trivium of grammar, logic, and rhetoric is therefore not a set of decorative subjects from a lost world. It is a discipline of awakening: the arts by which the mind becomes capable of truth, and by which a child begins to rise above mere usefulness into a fuller life of imagination, judgment, connection, inward abundance, and the apprehension of the good and the beautiful.
@@ -50,6 +54,10 @@ But what happens when usefulness is no longer the governing measure? What happen
 This is where the trivium begins to look less like an antiquated curriculum and more like a preparation for human fullness. Even in a post-scarcity world, even in a world of elaborate simulations and artificial environments, a person would still need to read the world, judge the world, and answer the world. Grammar, logic, and rhetoric would remain the arts by which a person could live more widely, more consciously, and more freely.
 
 The point would not be usefulness in the old economic sense. It would be something closer to elevation. A person formed by the trivium would not simply consume experience. He would perceive patterns, understand symbols, test appearances, make connections, ask better questions, and speak more truthfully. This is close to John Stuart Mill's distinction between lower and higher pleasures: not all satisfactions are equal, because not all of them awaken the same powers of the soul.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 40px;"></div>
 
 For my daughter, this would not mean an antiquarian education, as if we were cosplaying the Middle Ages. A new trivium would begin very simply: with stories, songs, names, poems, numbers, and the slow acquisition of words.
 
