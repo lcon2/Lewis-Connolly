@@ -31,6 +31,18 @@ read_next:
 
 <img src="{{ '/assets/images/grief-woman.png' | relative_url }}" alt="A nineteenth-century woman in mourning reads a letter in a sepia parlor, with portraits and keepsakes nearby." style="display: block; margin: 20px auto; max-width: 600px; height: auto;">
 
+There is an interesting relationship between Spiritualism, death, and the American Civil War. The war forced a new kind of relationship to death, whereas one might imagine a prior ideal, the "good death": a bedside, a body, a grave, a minister standing by. Now there is just a message carried home by another soldier. There is far less closure, no last words, probably not even a body, just a word carried: "he's gone."
+
+Of course, a preoccupation with the afterlife was nothing new. The older Protestant world had never treated death as merely a biological event. Death was theological. It belonged to the drama of salvation, judgment, providence, heaven, and hell. The dying person was not only leaving the household. He or she was approaching eternity. But the Civil War changed the grammar around death.
+
+That is why the manner of dying mattered so much. The "good death" was not simply peaceful. It was legible. It allowed the family to read death spiritually. Last words mattered because they offered evidence. A calm face, a prayer, a blessing, a final assurance of faith, all these helped the living believe that the soul had passed safely into God's keeping.
+
+The older religious imagination carried real severity. Hell was not a metaphor in much of American Christianity. Judgment was, for most believers, a very real potential waiting beyond death. This of course shaped everything in the present: how they lived, what they feared, what they hoped for, and how they understood the moral meaning of ordinary life.
+
+And yet, through the nineteenth century, something was changing. Heaven did not cease to be theological, but it became more domestic. It was increasingly imagined not only as glory, worship, or reward, but as reunion. The dead would know one another. Parents would find children. Husbands and wives would meet again. The family circle, broken on earth, might be restored in eternity.
+
+This was not a simple decline from stern doctrine into sentimentality. That would be too crude. Hell did not vanish. Judgment did not disappear. Conservative churches retained the older terrors, and many Americans still believed that eternity involved terrible moral stakes. But alongside these older ideas there grew a warmer heaven, a more intimate heaven, a heaven with faces in it.
+
 The afterlife became, increasingly, a home.
 
 This shift prepared the ground for Spiritualism. Spiritualism did not invent the longing for reunion. It radicalized it. It took the hope of meeting the dead later and made a more startling claim: the dead might be reachable now.
