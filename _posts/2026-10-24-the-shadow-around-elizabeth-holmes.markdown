@@ -30,7 +30,7 @@ read_next:
 
 <img src="{{ '/assets/images/the-shadow-around-elizabeth-holmes.png' | relative_url }}" alt="A close-up of Elizabeth Holmes with the words ‘You Can See Everything’ across the image." width="335" height="597" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
 
-I just got back from seeing 'You Can See Everything' (2026), the new documentary about Elizabeth Holmes. I had avoided watching or reading anything about it beforehand, but knew it had provoked a great deal of discussion, and likewise feel compelled to offer some thoughts of my own. It is an emotionally powerful and psychologically complex piece of art, and as such, very open to interpretation. Here are some of my thoughts.
+I just got back from seeing 'You Can See Everything' (2026), the new documentary about Elizabeth Holmes. I had avoided watching or reading anything about it beforehand, but knew it had provoked a great deal of discussion, and feel compelled to offer some thoughts of my own. It is an emotionally powerful and psychologically complex piece of art, and as such, very open to interpretation.
 
 Depending on where you place the emphasis, you could come away with quite different understandings of the people involved. I found Holmes's emotional pain very affecting. There is a sense in which I understand her better, while remaining uncertain about the extent to which she is consciously manipulating those around her. Her suffering and her capacity for manipulation seem entirely capable of existing together.
 
@@ -42,13 +42,13 @@ Holmes seems deeply attached to an understanding of herself as someone whose int
 <img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
 <div style="margin-bottom: 30px;"></div>
 
-This is where Billy Evans becomes especially interesting. He comes across as intensely disagreeable, almost so strongly that I found myself resisting the simplicity of that reading. There is something strangely convenient about having such an obvious villain in the room. His presence makes it easier to feel protective of Elizabeth, even as we know there are reasons to distrust her.
+This is where Billy Evans becomes especially interesting. He comes across as intensely disagreeable, almost so strongly that I found myself resisting the simplicity of that reading. There is something strangely convenient about having such an obvious villain in the room. His presence makes it easier to feel protective of Elizabeth, even knowing that she was convicted of defrauding investors.
 
 I wonder whether the men around her become, in different ways, carriers of this disowned material. They can be aggressive, controlling, and confrontational on her behalf. She can benefit from what they do while remaining identified with vulnerability and innocence. The conflict that might otherwise require an inward confrontation instead plays out between people.
 
 This is a possible reading of the relationships presented by the film, with all the limitations that implies. It doesn't establish what Holmes knows about herself, nor does it turn the men into passive instruments. Their own desires matter. Billy may protect her from confronting herself while also finding something deeply gratifying in being the person who protects her.
 
-There is an archetypal pattern here: the protector and the person who needs protecting. I have the impression that Holmes evokes this pattern in the men within her orbit. To become the person who understands a woman whom everyone else has condemned offers its own sense of significance. Her innocence and his heroism might come to depend upon one another.
+There is an archetypal pattern here: the protector and the person who needs protecting. I have the impression that Holmes evokes this pattern in the men within her orbit. To become the person who understands a woman whom everyone else has condemned offers its own sense of significance. Her sense of innocence and his heroism might come to depend upon one another.
 
 Nathan Fielder seems susceptible to something of this as well. His attempts to understand her appear to draw him toward a protective position. That is part of what makes his involvement so compelling. Even skepticism may coexist with a desire to rescue. He can question her account while also becoming invested in the possibility that he sees something in her that others have missed.
 
