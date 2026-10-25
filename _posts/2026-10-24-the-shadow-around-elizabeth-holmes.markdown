@@ -38,6 +38,10 @@ Through a Jungian lens, I wonder whether we are seeing someone unable to confron
 
 Holmes seems deeply attached to an understanding of herself as someone whose intentions were fundamentally good. What happens to the parts of her that cannot be accommodated within that understanding? One possibility is that they find expression through her relationships, allowing her to remain at a distance from qualities she cannot acknowledge as her own.
 
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism1.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
+
 This is where Billy Evans becomes especially interesting. He comes across as intensely disagreeable, almost so strongly that I found myself resisting the simplicity of that reading. There is something strangely convenient about having such an obvious villain in the room. His presence makes it easier to feel protective of Elizabeth, even as we know there are reasons to distrust her.
 
 I wonder whether the men around her become, in different ways, carriers of this disowned material. They can be aggressive, controlling, and confrontational on her behalf. She can benefit from what they do while remaining identified with vulnerability and innocence. The conflict that might otherwise require an inward confrontation instead plays out between people.
@@ -49,6 +53,10 @@ There is an archetypal pattern here: the protector and the person who needs prot
 Nathan Fielder seems susceptible to something of this as well. His attempts to understand her appear to draw him toward a protective position. That is part of what makes his involvement so compelling. Even skepticism may coexist with a desire to rescue. He can question her account while also becoming invested in the possibility that he sees something in her that others have missed.
 
 And I think the audience is invited into the same arrangement. The more objectionable Billy becomes, the more readily Elizabeth can appear to be the person who needs defending. Our judgment of him may relieve us of the difficulty of holding her vulnerability and her responsibility together. We begin to distribute innocence and darkness between people, making each easier to understand.
+
+<div style="margin-top: 30px;"></div>
+<img src="{{ '/assets/images/asterism2.png' | relative_url }}" alt="Asterism" style="display: block; margin: 20px auto; max-width: 85px; height: auto;">
+<div style="margin-bottom: 30px;"></div>
 
 Of course, that distribution may also be an effect of the filmmaking. We are encountering people through an edited work, and my wish to resist the obvious villain may itself be one of its intended effects. A Jungian reading shouldn't become another means of imagining that we can see everything.
 
