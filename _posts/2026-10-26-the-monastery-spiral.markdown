@@ -33,6 +33,24 @@ image_alt: "An overhead view of the modelled Priory of Saint Cuthbert at Alderbe
     margin: 0;
 }
 
+.post article .monastery-image-link {
+    display: block;
+    min-width: 0;
+    border-bottom: 0;
+    cursor: zoom-in;
+}
+
+.post article .monastery-image-link:focus-visible {
+    outline: 2px solid #d1ae7a;
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+.post .post-image-lightbox__figure img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
 @media (max-width: 600px) {
     .post article .monastery-image-pair {
         grid-template-columns: 1fr;
@@ -44,7 +62,7 @@ I wanted to try creating a 3D model of a monastery using AI. I had no end goal i
 
 So, a few prompts later, I had the basic layout.
 
-<img src="{{ '/assets/images/monastery-spiral-layout.png' | relative_url }}" alt="An overhead view of the modelled Priory of Saint Cuthbert at Alderbeck, enclosed by walls and woodland." width="1646" height="956" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
+<a class="monastery-image-link" href="{{ '/assets/images/monastery-spiral-layout.png' | relative_url }}" data-post-lightbox-trigger data-lightbox-alt="An overhead view of the modelled Priory of Saint Cuthbert at Alderbeck, enclosed by walls and woodland." aria-haspopup="dialog"><img src="{{ '/assets/images/monastery-spiral-layout.png' | relative_url }}" alt="An overhead view of the modelled Priory of Saint Cuthbert at Alderbeck, enclosed by walls and woodland." width="1646" height="956" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;"></a>
 
 English? They were using Latin, of course, for liturgy and formal study, and for everyday speech they were using late Middle English. The monks may have sounded a bit like this…
 
@@ -65,13 +83,13 @@ Now that I had an actual place, I settled on a more precise date. I thought the 
 I was able to download the actual topographic data for the region and model it. And then I went down the astronomical rabbit hole. I modeled the sun, moon, and stars for the time and place.
 
 <div class="monastery-image-pair">
-    <img src="{{ '/assets/images/monastery-spiral-moon.png' | relative_url }}" alt="The priory and surrounding valley in daylight, with an arrow marking the moon above the rooftops." width="1692" height="930" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/monastery-spiral-sunset.png' | relative_url }}" alt="The modelled sun at the horizon above the valley and its winding stream." width="1692" height="930" loading="lazy" decoding="async">
+    <a class="monastery-image-link" href="{{ '/assets/images/monastery-spiral-moon.png' | relative_url }}" data-post-lightbox-trigger data-lightbox-alt="The priory and surrounding valley in daylight, with an arrow marking the moon above the rooftops." aria-haspopup="dialog"><img src="{{ '/assets/images/monastery-spiral-moon.png' | relative_url }}" alt="The priory and surrounding valley in daylight, with an arrow marking the moon above the rooftops." width="1692" height="930" loading="lazy" decoding="async"></a>
+    <a class="monastery-image-link" href="{{ '/assets/images/monastery-spiral-sunset.png' | relative_url }}" data-post-lightbox-trigger data-lightbox-alt="The modelled sun at the horizon above the valley and its winding stream." aria-haspopup="dialog"><img src="{{ '/assets/images/monastery-spiral-sunset.png' | relative_url }}" alt="The modelled sun at the horizon above the valley and its winding stream." width="1692" height="930" loading="lazy" decoding="async"></a>
 </div>
 
 I haven't quite got the terrain textures right yet, but I have the sun's timings and angles modeled (sunrise 04:40, sunset 19:24). I also downloaded star data from NASA. In 1495, with almost no artificial light pollution and much less atmospheric pollution, the stars would have been remarkably clear on cloudless nights. And in the evening, with the monks having only candlelight, their eyes would have been much better adapted to the darkness.
 
 <div class="monastery-image-pair">
-    <img src="{{ '/assets/images/monastery-spiral-night-sky.png' | relative_url }}" alt="A field of stars in the modelled night sky above Alderbeck." width="2245" height="1198" loading="lazy" decoding="async">
-    <img src="{{ '/assets/images/monastery-spiral-constellations.png' | relative_url }}" alt="The modelled night sky annotated with stars in Ursa Major, Ursa Minor, and Gemini, including Polaris." width="1717" height="916" loading="lazy" decoding="async">
+    <a class="monastery-image-link" href="{{ '/assets/images/monastery-spiral-night-sky.png' | relative_url }}" data-post-lightbox-trigger data-lightbox-alt="A field of stars in the modelled night sky above Alderbeck." aria-haspopup="dialog"><img src="{{ '/assets/images/monastery-spiral-night-sky.png' | relative_url }}" alt="A field of stars in the modelled night sky above Alderbeck." width="2245" height="1198" loading="lazy" decoding="async"></a>
+    <a class="monastery-image-link" href="{{ '/assets/images/monastery-spiral-constellations.png' | relative_url }}" data-post-lightbox-trigger data-lightbox-alt="The modelled night sky annotated with stars in Ursa Major, Ursa Minor, and Gemini, including Polaris." aria-haspopup="dialog"><img src="{{ '/assets/images/monastery-spiral-constellations.png' | relative_url }}" alt="The modelled night sky annotated with stars in Ursa Major, Ursa Minor, and Gemini, including Polaris." width="1717" height="916" loading="lazy" decoding="async"></a>
 </div>
