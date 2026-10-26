@@ -18,6 +18,28 @@ image_alt: "An overhead view of the modelled Priory of Saint Cuthbert at Alderbe
 
 {::options smart_quotes="apos,apos,quot,quot" /}
 
+<style>
+.post article .monastery-image-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+    align-items: start;
+}
+
+.post article .monastery-image-pair img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .post article .monastery-image-pair {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
 I wanted to try creating a 3D model of a monastery using AI. I had no end goal in mind. Where should I base it? I wanted it to feel old, and I wanted it to be English-speaking. That meant setting it before the Dissolution of the Monasteries. But I also wanted to avoid even the faintest hint of the upheaval to come, so I settled on 1495. Henry VII was on the throne, the first of the Tudor kings, with the Wars of the Roses still a recent memory.
 
 So, a few prompts later, I had the basic layout.
@@ -42,12 +64,14 @@ Now that I had an actual place, I settled on a more precise date. I thought the 
 
 I was able to download the actual topographic data for the region and model it. And then I went down the astronomical rabbit hole. I modeled the sun, moon, and stars for the time and place.
 
-<img src="{{ '/assets/images/monastery-spiral-moon.png' | relative_url }}" alt="The priory and surrounding valley in daylight, with an arrow marking the moon above the rooftops." width="1692" height="930" loading="lazy" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
-
-<img src="{{ '/assets/images/monastery-spiral-sunset.png' | relative_url }}" alt="The modelled sun at the horizon above the valley and its winding stream." width="1692" height="930" loading="lazy" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
+<div class="monastery-image-pair">
+    <img src="{{ '/assets/images/monastery-spiral-moon.png' | relative_url }}" alt="The priory and surrounding valley in daylight, with an arrow marking the moon above the rooftops." width="1692" height="930" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/monastery-spiral-sunset.png' | relative_url }}" alt="The modelled sun at the horizon above the valley and its winding stream." width="1692" height="930" loading="lazy" decoding="async">
+</div>
 
 I haven't quite got the terrain textures right yet, but I have the sun's timings and angles modeled (sunrise 04:40, sunset 19:24). I also downloaded star data from NASA. In 1495, with almost no artificial light pollution and much less atmospheric pollution, the stars would have been remarkably clear on cloudless nights. And in the evening, with the monks having only candlelight, their eyes would have been much better adapted to the darkness.
 
-<img src="{{ '/assets/images/monastery-spiral-night-sky.png' | relative_url }}" alt="A field of stars in the modelled night sky above Alderbeck." width="2245" height="1198" loading="lazy" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
-
-<img src="{{ '/assets/images/monastery-spiral-constellations.png' | relative_url }}" alt="The modelled night sky annotated with stars in Ursa Major, Ursa Minor, and Gemini, including Polaris." width="1717" height="916" loading="lazy" decoding="async" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
+<div class="monastery-image-pair">
+    <img src="{{ '/assets/images/monastery-spiral-night-sky.png' | relative_url }}" alt="A field of stars in the modelled night sky above Alderbeck." width="2245" height="1198" loading="lazy" decoding="async">
+    <img src="{{ '/assets/images/monastery-spiral-constellations.png' | relative_url }}" alt="The modelled night sky annotated with stars in Ursa Major, Ursa Minor, and Gemini, including Polaris." width="1717" height="916" loading="lazy" decoding="async">
+</div>
