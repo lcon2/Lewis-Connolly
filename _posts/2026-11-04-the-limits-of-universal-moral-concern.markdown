@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The Limits of Universal Moral Concern"
-seo_title: "The Limits of Universal Moral Concern"
+title: "Limits of Universal Moral Concern"
+seo_title: "Limits of Universal Moral Concern"
 date: 2026-11-04
 author: "Lewis Connolly"
 author_url: "/about/"
